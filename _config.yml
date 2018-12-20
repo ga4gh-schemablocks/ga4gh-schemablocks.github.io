@@ -1,0 +1,48 @@
+title: 'GA4GH SchemaBlocks'
+label: 'GA4GH SchemaBlocks'
+name: Beacon
+site_header: |
+  <h2>GA4GH::SchemaBlocks</h2>
+  <div>A Project of the Global Alliance for Genomics and Health</div>
+site_domain_name: ga4gh-schemablocks.github.io
+baseurl: ""
+site_download_link: 'http://ga4gh-schemablocks.github.io/assets'
+site_parent_link: 'https://ga4gh.org'
+github_organisation: ga4gh-schemablocks
+show_downloads: true
+future: true
+include:
+  - 'categories'
+  - 'tags'
+plugins:
+ - jekyll-seo-tag
+type: website
+description: |
+  SchemaBlocks is a cross-workstream project of the Global Alliance for Genomics & Health
+keywords: genomics, cloud, Beacon, DNA, sharing, GA4GH
+nav_cat_blocks:
+  General: 'General,categories,hide'
+#  Products: 'Workstream Products,categories,show'
+  related_sites: 'Related Sites,related_sites,show'
+General:
+  news: News
+  team: Participants
+  formats: 'Data Formats'
+  schemas: 'Data Schemas'
+  howto: 'Examples, Guides & FAQ'
+  minutes: 'Meeting minutes'
+  contact: Contacts
+Products:
+  beacon: 'Beacon'
+  discovery_networks: 'Discovery Networks'
+  schemablocks: 'GA4GH SchemaBlocks'
+  search_api: 'Search API'
+navigation_max_items: 4
+related_sites:
+  'GA4GH::Discovery': 'ga4gh-discovery.github.io'
+  'GA4GH::CLP': 'ga4gh-cp.github.io'
+  'GA4GH::GKS': 'ga4gh-gks.github.io'
+  'ELIXIR beacon': 'ga4gh-beacon.github.io'
+  Phenopackets: 'https://github.com/phenopackets'
+  GA4GH: 'www.ga4gh.org'
+  'Beacon<span style="vertical-align: super; color: red; font-weight: 800;">+</span>': 'beacon.progenetix.org'

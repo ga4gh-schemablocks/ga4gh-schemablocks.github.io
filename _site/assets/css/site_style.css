@@ -1,0 +1,36 @@
+/**
+SCHEMABLOCKS colors:
+ * orange: #F47D1F
+ * light blue: rgb(67,159,211)
+**/
+a {
+  color: rgb(67,159,211);
+  text-decoration: none;
+}
+
+td ul {
+    padding: 0px;
+    list-style: inside;
+
+}
+
+td li {
+    margin-left: 0px;
+    padding: 0px;
+}
+
+code {
+  font-size: 11px;
+}
+
+#header h4  {
+  margin-top: 0px;
+  margin-bottom: 0x;
+}
+
+#header h5  {
+  margin-top: 12px;
+  margin-bottom: -5x;
+  color: #ccc;
+}
+
