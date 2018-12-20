@@ -42,6 +42,7 @@ related_sites:
   'GA4GH::Discovery': 'ga4gh-discovery.github.io'
   'GA4GH::CLP': 'ga4gh-cp.github.io'
   'GA4GH::GKS': 'ga4gh-gks.github.io'
+  'SchemaBlocks at Metadata': 'ga4gh-metadata.github.io/SchemaBlocks/'
   'ELIXIR beacon': 'ga4gh-beacon.github.io'
   Phenopackets: 'https://github.com/phenopackets'
   GA4GH: 'www.ga4gh.org'
