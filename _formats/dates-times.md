@@ -28,7 +28,6 @@ attributes' documentations.
 </p>
 
 
-
 #### Units of time
 
 * *Y* = year

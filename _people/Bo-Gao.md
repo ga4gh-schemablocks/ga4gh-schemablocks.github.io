@@ -2,6 +2,7 @@
 title: "Bo Gao"
 layout: default
 excerpt_separator: <!--more-->
+image_file: bgao.png
 category:
   - team
 tags:
@@ -9,9 +10,13 @@ tags:
   - developers
 ---
 
-<img style="float: right; width: 100px;" src="{{ 'assets/img/team/bgao.png' | relative_url}}" />
+{% for static_file in site.static_files %}
+  {% if static_file.path contains page.image_file %}
+<img style="float: right; width: 100px;" src="{{ static_file.path | relative_url}}" />
+  {% endif %}
+{% endfor %}
 
-## Bo Gao
+## {{ page.title }}
 
 Developer, Beacon project  
 PhD candidate in Bioinformatics  

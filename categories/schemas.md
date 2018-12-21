@@ -44,10 +44,9 @@ layout: default
 <div class="excerpt">
     {{ post.excerpt }}
 <p class="footnote">
-    {%if post.author %}
-      {{post.author}}, 
-    {% endif %}
-  {{ post.date | date: "%Y-%m-%d" }}: <a href="{{ post.url | relative_url }}">more ...</a>
+    {%if post.author %}{{post.author}}, {% endif %}
+    {%if post.date %}{{ post.date | date: "%Y-%m-%d" }}: {% endif %}
+ <a href="{{ post.url | relative_url }}">more ...</a>
   </p>
 </div>
   {% endunless %}
