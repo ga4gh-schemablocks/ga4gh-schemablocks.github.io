@@ -6,20 +6,19 @@
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
 <!-- Begin Jekyll SEO tag v2.4.0 -->
-<title>GA4GH SchemaBlocks | SchemaBlocks is a cross-workstream project of the Global Alliance for Genomics &amp; Health</title>
+<title>Dates &amp; Times | GA4GH SchemaBlocks</title>
 <meta name="generator" content="Jekyll v3.8.3" />
-<meta property="og:title" content="GA4GH SchemaBlocks" />
-<meta name="author" content="mbaudis" />
+<meta property="og:title" content="Dates &amp; Times" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="SchemaBlocks is a cross-workstream project of the Global Alliance for Genomics &amp; Health" />
-<meta property="og:description" content="SchemaBlocks is a cross-workstream project of the Global Alliance for Genomics &amp; Health" />
-<link rel="canonical" href="http://localhost:4000/" />
-<meta property="og:url" content="http://localhost:4000/" />
+<meta name="description" content="Dates &amp; Times Date and time formats are specified as ISO8601 compatible strings, both for time points as well as for intervals and durations. An optional required granularity may be specified as part of the respective attributes’ documentations." />
+<meta property="og:description" content="Dates &amp; Times Date and time formats are specified as ISO8601 compatible strings, both for time points as well as for intervals and durations. An optional required granularity may be specified as part of the respective attributes’ documentations." />
+<link rel="canonical" href="http://localhost:4000/formats/dates-times/" />
+<meta property="og:url" content="http://localhost:4000/formats/dates-times/" />
 <meta property="og:site_name" content="GA4GH SchemaBlocks" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-12-20T00:00:00+01:00" />
+<meta property="article:published_time" content="2018-12-21T00:00:00+01:00" />
 <script type="application/ld+json">
-{"name":"GA4GH SchemaBlocks","description":"SchemaBlocks is a cross-workstream project of the Global Alliance for Genomics &amp; Health","author":{"@type":"Person","name":"mbaudis"},"@type":"WebSite","url":"http://localhost:4000/","headline":"GA4GH SchemaBlocks","dateModified":"2018-12-20T00:00:00+01:00","datePublished":"2018-12-20T00:00:00+01:00","@context":"http://schema.org"}</script>
+{"description":"Dates &amp; Times Date and time formats are specified as ISO8601 compatible strings, both for time points as well as for intervals and durations. An optional required granularity may be specified as part of the respective attributes’ documentations.","@type":"BlogPosting","url":"http://localhost:4000/formats/dates-times/","headline":"Dates &amp; Times","dateModified":"2018-12-21T00:00:00+01:00","datePublished":"2018-12-21T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/formats/dates-times/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -93,6 +92,12 @@
     differ in their name (=> category)
 -->
       
+      
+        
+        
+        
+<!-- link to the category collecting page, if more -->
+        
       
     
       
@@ -290,7 +295,7 @@
 
     <div class="navboxleft">
       <div class="header_sublink" style="margin-left: 0px; margin-top: 10px; color: #ccc; ">
-        <a href="/blob/master/index.md" style="text-decoration: none; color: #ccc;">Edit this page</a>
+        <a href="/blob/master/_formats/dates-times.md" style="text-decoration: none; color: #ccc;">Edit this page</a>
       </div>
     </div>
 
@@ -306,16 +311,145 @@
 
     <section>
 
-<h2 id="ga4gh-schemablocks">GA4GH SchemaBlocks</h2>
+<h2 id="dates--times">Dates &amp; Times</h2>
 
-<p>Welcome to the homepage for the GA4GH SchemaBlocks project.</p>
+<p>Date and time formats are specified as ISO8601 compatible strings, both for
+time points as well as for intervals and durations.
+An optional required granularity may be specified as part of the respective
+attributes’ documentations.</p>
 
-<p>SchemaBlocks represents a cross work stream, cross driver project attempt to document object standards and prototypes, as well as common data formats and semantics. While products and implementation may be completely based on SchemaBlocks models, this project does not attempt to develop a rigid, complete schema but rather to provide the object vocabulary and semantics for a large range of developments.</p>
+<!--more-->
 
-<p>The SchemaBlocks site can be accessed though the permanent link <a href="http://schemablocks.org">schemablocks.org</a>.</p>
+<ul>
+  <li>external information: <a href="https://www.w3.org/TR/NOTE-datetime">ISO8601</a></li>
+  <li><a href="https://xkcd.com/1179/">xkcd</a>:</li>
+</ul>
 
-<p>For more information on GA4GH, please visit the <a href="https://ga4gh.org">GA4GH Website</a>.</p>
+<p align="center">
+  <img src="https://imgs.xkcd.com/comics/iso_8601.png" />
+</p>
 
+<h4 id="units-of-time">Units of time</h4>
+
+<ul>
+  <li><em>Y</em> = year</li>
+  <li><em>M</em> = month</li>
+  <li><em>D</em> = day</li>
+  <li><em>H</em> = hour</li>
+  <li><em>M</em> = minute</li>
+  <li><em>S</em> = second</li>
+  <li><em>.S</em> = decimal fraction of a second</li>
+</ul>
+
+<h4 id="time-points">Time points</h4>
+
+<p>The specification of a time point is given through the concatenation of</p>
+
+<ul>
+  <li>a date in YYYY-MM-DD</li>
+  <li>the designator “T” indicating a following time description</li>
+  <li>the time of day in HH:MM:SS.SSS form, where “SSS” represents a decimal
+fraction of a second</li>
+  <li>a time zone offset in relation to UTC</li>
+</ul>
+
+<p><strong>Examples</strong></p>
+
+<ul>
+  <li>year (YYYY)
+    <ul>
+      <li><em>2015</em></li>
+      <li>Time points with <em>year</em> granularity are both common for obfuscated personal data as well as technical metadata (e.g. year of publication of an analysis).</li>
+    </ul>
+  </li>
+  <li>date (e.g. date of birth) in YYYY-MM-DD
+    <ul>
+      <li><em>2015-02-10</em></li>
+      <li>This represents the standard way of representing a specific day, e.g. a date of birth.</li>
+    </ul>
+  </li>
+  <li>time stamp in milliseconds in YYYY-MM-DDTHH:MM:SS.SSS
+    <ul>
+      <li><em>2015-02-10T00:03:42.123Z</em></li>
+      <li>Timepoints with millisecond granularity are typical use cases for timing computer generated entries, e.g. the time of a record’s update (“updateTime”).</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Implementations</strong></p>
+
+<ul>
+  <li>updated (ubiquitous object time stamp)</li>
+  <li>created (ubiquitous object time stamp)</li>
+</ul>
+
+<h4 id="durations">Durations</h4>
+
+<p>Durations are the most common form of time intervals. They do not refer to
+(e.g. start or end) time points.
+They are indicated with a leading “P”, followed by unit delimited
+quantifiers. A leading “T” is required before the start of the time components.
+Durations do not have to be normalized; “PT50H” is equally valid as “P2T2H”.
+A frequent use of durations in biomedical data resources are <em>age</em> values,
+e.g. “age at diagnosis”; but also “progression free survival”, “followup” or “time to recurrence” (these are descriptive labels, which do not necessarily represent GA4GH schema use).</p>
+
+<p><strong>Examples</strong></p>
+
+<ul>
+  <li>age in years in PnY
+    <ul>
+      <li><em>P44Y</em></li>
+      <li>This would be the standard annotation for the commonly used age in years, without relation to a date of birth.</li>
+    </ul>
+  </li>
+  <li>age in years and months in PnYnM
+    <ul>
+      <li><em>P43Y08M</em></li>
+      <li>This represents an age with added months specification.</li>
+    </ul>
+  </li>
+  <li>short time interval (e.g. 30min in experimental time series) in PTnM
+    <ul>
+      <li><em>PT30M</em></li>
+      <li>A common use for durations is the recording of time points in time series,
+e.g. experimental interventions and observations (collections of cells from
+an in vitro treatment experiment; recurring drug doses in a chemotherapy
+treatment).</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="time-intervals">Time intervals</h4>
+
+<p>Time intervals consist of a combination of two time designators. These can be
+either two time points for start and end, or one time point and a leading
+(time point indicates end) or trailing (time point indicates start) duration.
+The time elements are separated by a forward slash “/”.</p>
+
+<p>While such anchored time intervals represent an option to capture different time features in a single value and to avoid disconnected references, in the context of the data schema, <em>anchored intervals</em> will presumably be used less frequently, with a qualitative anchor (“date of diagnosis”, “time of sampling”) representing the point of reference.</p>
+
+<p><strong>Examples</strong></p>
+
+<ul>
+  <li>age with date of birth in YYYY-MM-DD/PnYnMnD
+    <ul>
+      <li>1967-11-21/P40Y10M05D</li>
+      <li>This value captures both the date of birth (here November 21, 1967)and the age (here 40ys, 10 months and 5 days) at a given time point, e.g. at the date of a medical diagnosis.</li>
+    </ul>
+  </li>
+  <li>anchored 3 month interval, e.g. a therapy cycle in YYYY-MM-DD/YYYY-MM-DD
+    <ul>
+      <li>2015-04-18/2015-07-17</li>
+      <li>This example demonstrates use of an calendar anchored interval, with given start and end date. A typical example would be the use in medical records, e.g. for a treatment cycle; however, use for data exchange and mining purposes would be less common and usually served with a “duration” (see above).</li>
+    </ul>
+  </li>
+  <li>experimental intervention of 30min in YYYY-MM-DDTHH:MM/PTnM
+    <ul>
+      <li>2014-12-31T23H45M/PT30M</li>
+      <li>Here is an example for a short term intervention of a 30 minutes duration, e.g. the celebratory exposure to a diluted sample of EtOH with various organic trace compounds, to celebrate the arrival of the new year.</li>
+    </ul>
+  </li>
+</ul>
 
 
 <!-- Links based on front matter -->
@@ -328,14 +462,7 @@
     <div class="pagestamp">
       <hr />
   
-    
-    
-      
-mbaudis, 
-      
-    
-  
-2018-12-20
+2018-12-21
     </div>
 
     </section>
