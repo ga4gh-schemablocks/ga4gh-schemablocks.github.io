@@ -9,8 +9,10 @@ category:
 tags:
   - contacts
   - team
-  - admin
+  - admins
   - GA4GH
+  - GKS
+  - CP
 ---
 
 {% for static_file in site.static_files %}

@@ -40,7 +40,7 @@ layout: default
 {% endfor %}
 
 {% for post in these_posts %}
-  {% unless post.tags contains '.featured' or post.tags contains '.sticky' %} 
+  {% unless post.tags contains '.featured' or post.tags contains '.prepend' %} 
 <div class="excerpt">
     {{ post.excerpt }}
 <p class="footnote">

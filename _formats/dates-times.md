@@ -7,8 +7,8 @@ excerpt_separator: <!--more-->
 category:
   - formats
 tags:
-  - time
-  - date
+  - times
+  - dates
 ---
 
 ## {{ page.title }}

@@ -10,7 +10,7 @@ tags:
   - contacts
   - team
   - leads
-  - CLP
+  - CP
 ---
 
 {% for static_file in site.static_files %}

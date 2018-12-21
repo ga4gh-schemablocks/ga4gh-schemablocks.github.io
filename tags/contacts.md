@@ -11,7 +11,8 @@ layout: default
 {% assign today = site.time | date: '%Y%m%d' %}
 {% assign page_tag = this_tag | downcase %}
 
-{% for post in site.posts %}
+
+{% for post in site.documents %}
   {% assign post_tags = post.tags | sort %}
   {% assign post_author = post.author | downcase %}
   {% for tag in post_tags %}

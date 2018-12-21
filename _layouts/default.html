@@ -134,11 +134,27 @@
 
       <div class="navboxleft" style="text-align:center;">
 
-{% assign tags = site.tags | sort %}
-{% for tag in tags %}
-  {% unless tag[0] contains '.' %}
+{% assign tags = site.emptyArray %}
+{% for this_post in site.documents %}
+  {% if this_post.tags %}
+    {% assign tags = tags | concat: this_post.tags %}
+  {% endif %}
+{% endfor %}
+  
+{% assign tags_unique = tags | uniq | sort %}
+
+{% for tag in tags_unique %}
+
+  {% assign counter = 0 %}
+  {% for this_tag in tags %}
+    {% if this_tag == tag %}
+      {% assign counter = counter | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+ 
+   {% unless tag contains '.' %}
         <div class="site-tag">
-          <a href="{{ '/tags' | relative_url }}/{{ tag | first }}.html" style="font-size: {{ tag | last | size | times: 3 | plus: 60 }}%">{{ tag[0] | replace: "--", "::" }}</a>
+          <a href="{{ '/tags' | relative_url }}/{{ tag }}.html" style="font-size: {{ counter | times: 3 | plus: 60 }}%">{{ tag | replace: "--", "::" }}</a>
         </div>
   {% endunless %}
 {% endfor %}

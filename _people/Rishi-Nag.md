@@ -11,8 +11,9 @@ tags:
   - team
   - leads
   - developers
-  - admin
+  - admins
   - GA4GH
+  - Discovery
 ---
 
 {% for static_file in site.static_files %}
