@@ -1,5 +1,6 @@
 ---
-title: 'First Meeting to Set the Scope'
+title: 'First Meeting - Setting the Scope'
+date: 2018-12-20
 layout: default
 author: mbaudis
 excerpt_separator: <!--more-->
