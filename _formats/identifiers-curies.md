@@ -2,7 +2,6 @@
 title: "Identifiers and CURIEs"
 layout: default
 date: 2018-12-24
-permalink: '/formats/genome-coordinates.html'
 author: mbaudis
 excerpt_separator: <!--more-->
 category:

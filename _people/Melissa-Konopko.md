@@ -4,11 +4,11 @@ layout: default
 excerpt_separator: <!--more-->
 image_file: 
 category:
-  - team
+  - contributors
   - contact
 tags:
   - contacts
-  - team
+  - contributors
   - admins
   - GA4GH
   - GKS

@@ -5,10 +5,10 @@ date: 1967-11-11
 excerpt_separator: <!--more-->
 image_file: 'Ion_Tichy.png'
 category:
-  - team
+  - contributors
 tags: # please delete unneeded options
   - contacts
-  - team
+  - contributors
   - leads
   - developers
 ---

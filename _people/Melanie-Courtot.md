@@ -4,11 +4,11 @@ layout: default
 excerpt_separator: <!--more-->
 image_file: 'courtot_melanie_web_2015_2.jpg'
 category:
-  - team
+  - contributors
   - contact
 tags:
   - contacts
-  - team
+  - contributors
   - leads
   - CP
 ---

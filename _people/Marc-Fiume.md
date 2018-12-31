@@ -4,11 +4,11 @@ layout: default
 excerpt_separator: <!--more-->
 image_file: mfiume.jpg
 category:
-  - team
+  - contributors
   - contact
 tags:
   - contacts
-  - team
+  - contributors
   - Discovery
   - Beacon
 ---

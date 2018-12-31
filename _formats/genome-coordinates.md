@@ -2,8 +2,7 @@
 title: "Genome Coordinates"
 layout: default
 date: 2018-12-21
-permalink: '/formats/genome-coordinates.html'
-author: 
+author: mbaudis
 excerpt_separator: <!--more-->
 category:
   - formats

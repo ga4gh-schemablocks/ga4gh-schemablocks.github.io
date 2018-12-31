@@ -3,7 +3,7 @@ label: 'GA4GH SchemaBlocks'
 name: Beacon
 site_header: |
   <h2>GA4GH::SchemaBlocks</h2>
-  <div>A Project of the Global Alliance for Genomics and Health</div>
+  <div style="font-size: 0.9em; margin-top: -10px;">An Initiative by Members of the Global Alliance for Genomics and Health</div>
 site_domain_name: ga4gh-schemablocks.github.io
 baseurl: ""
 site_download_link: 'http://ga4gh-schemablocks.github.io/assets'

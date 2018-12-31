@@ -4,9 +4,9 @@ layout: default
 excerpt_separator: <!--more-->
 image_file: bgao.png
 category:
-  - team
+  - contributors
 tags:
-  - team
+  - contributors
   - developers
 ---
 
