@@ -2,13 +2,15 @@
 title: "Ben Hutton"
 layout: default
 excerpt_separator: <!--more-->
-image_file: 
+image_file: bhutton.jpg
 category:
   - contributors
 tags:
   - contributors
+  - leads
   - developers
   - Discovery
+  - MME
 ---
 
 {% for static_file in site.static_files %}
@@ -20,10 +22,11 @@ tags:
 ## {{ page.title }}
 
 Lead, Discovery Search API
-European Bioinformatics Institute, Hinxton  
+Senior Web Developer, Wellome Sanger Institute, Hinxton
+Primary work: [DECIPHER](https://www.sanger.ac.uk/science/tools/decipher-mapping-clinical-genome)
 
 <!--more-->
 
-email []()
-web []()
+github: [https://github.com/Relequestual](https://github.com/Relequestual)
+twitter: [https://twitter.com/relequestual](https://twitter.com/relequestual)
 
