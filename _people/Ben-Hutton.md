@@ -21,12 +21,12 @@ tags:
 
 ## {{ page.title }}
 
-Lead, Discovery Search API
-Senior Web Developer, Wellome Sanger Institute, Hinxton
-Primary work: [DECIPHER](https://www.sanger.ac.uk/science/tools/decipher-mapping-clinical-genome)
+Lead, Discovery Search API  
+Senior Web Developer, Wellome Sanger Institute, Hinxton  
+Primary work: [DECIPHER](https://www.sanger.ac.uk/science/tools/decipher-mapping-clinical-genome)  
 
 <!--more-->
 
-github: [https://github.com/Relequestual](https://github.com/Relequestual)
-twitter: [https://twitter.com/relequestual](https://twitter.com/relequestual)
+github: [https://github.com/Relequestual](https://github.com/Relequestual)  
+twitter: [https://twitter.com/relequestual](https://twitter.com/relequestual)  
 
