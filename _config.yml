@@ -14,8 +14,8 @@ future: true
 # instructions for processing specific directories
 
 include:
-  - 'categories'  # contains landing pages for each category
-  - 'tags'        # contains landing pages for each tag
+  - categories  # contains landing pages for each category
+  - tags        # contains landing pages for each tag
 collections_dir: pages
 collections:
   schemas:
@@ -44,6 +44,7 @@ nav_cat_blocks:
   General: 'General,categories,hide'
 #  Products: 'Workstream Products,categories,show'
   related_sites: 'Related Sites,related_sites,show'
+
 General:
   news: News
   people: Participants
@@ -52,20 +53,22 @@ General:
   howto: 'Examples, Guides & FAQ'
   minutes: 'Meeting minutes'
   contact: Contacts
+
 #Products:
 #  beacon: 'Beacon'
 #  discovery_networks: 'Discovery Networks'
 #  schemablocks: 'GA4GH SchemaBlocks'
 #  search_api: 'Search API'
-related_sites:
-  'GA4GH::Discovery': 'ga4gh-discovery.github.io'
-  'GA4GH::CLP': 'ga4gh-cp.github.io'
-  'GA4GH::GKS': 'ga4gh-gks.github.io'
-  'SchemaBlocks at Metadata': 'ga4gh-metadata.github.io/SchemaBlocks/'
-  'ELIXIR beacon': 'ga4gh-beacon.github.io'
-  Phenopackets: 'https://github.com/phenopackets'
-  GA4GH: 'www.ga4gh.org'
-  'Beacon<span style="color: red; font-weight: 800;">+</span>': 'beacon.progenetix.org'
+
+related_sites: 
+  'GA4GH::Discovery': 'http://ga4gh-discovery.github.io'
+  'GA4GH::CLP': 'http://ga4gh-cp.github.io'
+  'GA4GH::GKS': 'http://ga4gh-gks.github.io'
+  'SchemaBlocks at Metadata': 'http://ga4gh-metadata.github.io/SchemaBlocks/'
+  'ELIXIR beacon': 'http://ga4gh-beacon.github.io'
+  Phenopackets: 'http://github.com/phenopackets'
+  GA4GH: 'http://www.ga4gh.org'
+  'Beacon<span style="color: red; font-weight: 800;">+</span>': 'http://beacon.progenetix.org'
   
 # tag_cloud items
 
