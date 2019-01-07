@@ -240,7 +240,7 @@
       {% assign github_link = github_link | append: site.collections_dir  | append: '/' %}
     {% endif %}
 
-  <a href="{{github_link}}{{page.path}}" style="text-decoration: none; color: #ccc;"><img src="/assets/img/clippy.svg" width="15px" alt="Edit on Github..." /></a>
+  <a href="{{github_link}}{{page.path}}" style="text-decoration: none; color: #ccc;"><img src="{{ 'assets/img/icons8-edit-file-26.png' | relative_url }}" alt="Edit on Github..."  style="position: absolute; bottom: 15px; right: 15px;" /></a>
   {% endunless %}
 {% endif %}
 
