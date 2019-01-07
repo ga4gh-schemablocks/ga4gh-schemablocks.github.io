@@ -1,18 +1,19 @@
 ---
-title: "Melissa Konopko"
+title: "Rishi Nag"
 layout: default
 excerpt_separator: <!--more-->
-image_file: 
+image_file: rnag.jpg
 category:
-  - contributors
+  - people
   - contact
 tags:
   - contacts
   - contributors
+  - leads
+  - developers
   - admins
   - GA4GH
-  - GKS
-  - CP
+  - Discovery
 ---
 
 {% for static_file in site.static_files %}
@@ -23,10 +24,11 @@ tags:
 
 ## {{ page.title }}
 
-Coordinator, GA4GH GLS & CP Workstreams  
+Coordinator, GA4GH Discovery Workstream  
 Global Alliance for Genomics and Health  
 
 <!--more-->
 
-email [melissa.konopko@ga4gh.org](mailto:melissa.konopko@ga4gh.org)  
+email []()  
 web []()  
+

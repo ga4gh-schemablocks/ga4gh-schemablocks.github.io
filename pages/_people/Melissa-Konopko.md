@@ -1,14 +1,18 @@
 ---
-title: "Miro Cupak"
+title: "Melissa Konopko"
 layout: default
 excerpt_separator: <!--more-->
-image_file: mcupak.jpg
+image_file: 
 category:
-  - contributors
+  - people
+  - contact
 tags:
+  - contacts
   - contributors
-  - developers
-  - Discovery
+  - admins
+  - GA4GH
+  - GKS
+  - CP
 ---
 
 {% for static_file in site.static_files %}
@@ -19,11 +23,10 @@ tags:
 
 ## {{ page.title }}
 
-Developer  
-DNAstack  
+Coordinator, GA4GH GLS & CP Workstreams  
+Global Alliance for Genomics and Health  
 
 <!--more-->
 
-email []()  
-web [DNAstack](http://dnastack.com)  
-
+email [melissa.konopko@ga4gh.org](mailto:melissa.konopko@ga4gh.org)  
+web []()  

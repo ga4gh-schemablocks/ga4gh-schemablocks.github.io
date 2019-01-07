@@ -12,11 +12,13 @@ category:
 
 Welcome to the homepage for the GA4GH SchemaBlocks project. 
 
-SchemaBlocks is a "__cross-workstreams, cross-drivers__" initiative to document GA4GH object standards and prototypes, as well as common data formats and semantics. Launched in December 2018, this project is still in an "orientation phase", with developing participation, leadership and governance structures.
+SchemaBlocks is a "__cross-workstreams, cross-drivers__" initiative to document GA4GH object standards and prototypes, as well as common data formats and semantics.
 
-While products and implementation may be completely based on SchemaBlocks models, this project does not attempt to develop a rigid, complete schema but rather to provide the object vocabulary and semantics for a large range of developments.
+Launched in December 2018, this project is still in an "orientation phase", with developing participation, leadership and governance structures.
 
-The SchemaBlocks site can be accessed though the permanent link [schemablocks.org](http://schemablocks.org).
+While products and implementation may be completely based on SchemaBlocks models, this project does not attempt to develop a rigid, complete data schema but rather to provide the object vocabulary and semantics for a large range of developments.
+
+The SchemaBlocks site can be accessed though the permanent link [schemablocks.org](http://schemablocks.org). More information about the different products & formats can be found on the workstream sites. During the current setup phase, some of the original information about recommended formats and object hierarchies are kept in the [GA4GH Metadata repositories](http://ga4gh-metadata.github.io).
 
 For more information on GA4GH, please visit the [GA4GH Website](https://ga4gh.org).
 

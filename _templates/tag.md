@@ -2,19 +2,21 @@
 layout: default
 ---
 
-<h2 class="post_title">Pages tagged "{{ page.title }}"</h2>
+{% assign this_name = page.name | split: "." %}
+{% assign this_tag = this_name[0] %}
+{% assign this_pagetitle = this_tag  | capitalize | replace: '_', ' ' %}
 
-<!-- Split into future and past, based on date versus today -->
+<h2 class="page_title">Pages tagged "{{ this_pagetitle  }}"</h2>
 
 {% assign today = site.time | date: '%Y%m%d' %}
-{% assign page_tag = page.tag | downcase %}
+{% assign page_tag = this_tag | downcase %}
 
-{% for post in site.posts %}
+{% for post in site.documents %}
   {% assign post_tags = post.tags | sort %}
   {% assign post_author = post.author | downcase %}
   {% for tag in post_tags %}
     {% assign tag_lower = tag | downcase %}
-    {% if tag_lower == page_tag or post_author == page_tag %}
+   {% if tag_lower == page_tag %}
       {% assign post_day = post.date | date: '%Y%m%d' %}
       {% assign post_year = post.date | date: '%Y' %}
       {% if post_day > today %}
@@ -28,12 +30,11 @@ layout: default
       {% if post_day > today %}
   <h3 style="color: red">{{ post.date | date: "%Y-%m-%d" }}</h3>
       {% endif %}
-{{ post.excerpt }}
-      {%if post.author %}
+    {{ post.excerpt }}
   <p class="footnote">
-{{post.author}}, 
-      {% endif %}
-{{ post.date | date: "%Y-%m-%d" }}: <a href="{{ post.url | relative_url }}">more ...</a>
+    {%if post.author %}{{post.author}}, {% endif %}
+    {%if post.date %}{{ post.date | date: "%Y-%m-%d" }}: {% endif %}
+    <a href="{{ post.url | relative_url }}">more ...</a>
   </p>
 </div>
       {% break %}

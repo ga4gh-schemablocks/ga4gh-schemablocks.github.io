@@ -1,13 +1,16 @@
 ---
-title: "Bo Gao"
+title: "Marc Fiume"
 layout: default
 excerpt_separator: <!--more-->
-image_file: bgao.png
+image_file: mfiume.jpg
 category:
-  - contributors
+  - people
+  - contact
 tags:
+  - contacts
   - contributors
-  - developers
+  - Discovery
+  - Beacon
 ---
 
 {% for static_file in site.static_files %}
@@ -18,17 +21,14 @@ tags:
 
 ## {{ page.title }}
 
-Developer, Beacon project  
-PhD candidate in Bioinformatics  
-University of Zurich  
+Co-chair GA4GH Discovery    
+Assistant Professor, OICR  
+CEO, DNAstack  
 
 <!--more-->
 
-#### Developer:
+email [Marc@dnastack.com](mailto:Marc@dnastack.com)
 
-* Beacon
-* data compatibility & integration
-
-email [bo@progenetix.org](mailto:bo@progenetix.org)  
-web [Bo Gao @ UZH](http://info.baudisgroup.org/group/Bo_Gao/)  
+web [DNAstack](http://dnastack.com)  
+web [OICR](https://oicr.on.ca/investigators/marc-fiume/)  
 

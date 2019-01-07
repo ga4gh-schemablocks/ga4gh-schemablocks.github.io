@@ -1,16 +1,14 @@
 ---
-title: "Marc Fiume"
+title: "Miro Cupak"
 layout: default
 excerpt_separator: <!--more-->
-image_file: mfiume.jpg
+image_file: mcupak.jpg
 category:
-  - contributors
-  - contact
+  - people
 tags:
-  - contacts
   - contributors
+  - developers
   - Discovery
-  - Beacon
 ---
 
 {% for static_file in site.static_files %}
@@ -21,14 +19,11 @@ tags:
 
 ## {{ page.title }}
 
-Co-chair GA4GH Discovery    
-Assistant Professor, OICR  
-CEO, DNAstack  
+Developer  
+DNAstack  
 
 <!--more-->
 
-email [Marc@dnastack.com](mailto:Marc@dnastack.com)
-
+email []()  
 web [DNAstack](http://dnastack.com)  
-web [OICR](https://oicr.on.ca/investigators/marc-fiume/)  
 

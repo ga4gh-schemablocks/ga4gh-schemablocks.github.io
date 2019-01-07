@@ -4,7 +4,7 @@ layout: default
 excerpt_separator: <!--more-->
 image_file: bhutton.jpg
 category:
-  - contributors
+  - people
 tags:
   - contributors
   - leads

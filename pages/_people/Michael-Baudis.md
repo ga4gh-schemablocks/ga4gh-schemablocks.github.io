@@ -4,7 +4,7 @@ layout: default
 excerpt_separator: <!--more-->
 image_file: 'mbaudis.jpg'
 category:
-  - contributors
+  - people
   - contact
 tags:
   - contacts

@@ -1,19 +1,13 @@
 ---
-title: "Rishi Nag"
+title: "Bo Gao"
 layout: default
 excerpt_separator: <!--more-->
-image_file: rnag.jpg
+image_file: bgao.png
 category:
-  - contributors
-  - contact
+  - people
 tags:
-  - contacts
   - contributors
-  - leads
   - developers
-  - admins
-  - GA4GH
-  - Discovery
 ---
 
 {% for static_file in site.static_files %}
@@ -24,11 +18,17 @@ tags:
 
 ## {{ page.title }}
 
-Coordinator, GA4GH Discovery Workstream  
-Global Alliance for Genomics and Health  
+Developer, Beacon project  
+PhD candidate in Bioinformatics  
+University of Zurich  
 
 <!--more-->
 
-email []()  
-web []()  
+#### Developer:
+
+* Beacon
+* data compatibility & integration
+
+email [bo@progenetix.org](mailto:bo@progenetix.org)  
+web [Bo Gao @ UZH](http://info.baudisgroup.org/group/Bo_Gao/)  
 

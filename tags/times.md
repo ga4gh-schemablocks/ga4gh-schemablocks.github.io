@@ -6,7 +6,7 @@ layout: default
 {% assign this_tag = this_name[0] %}
 {% assign this_pagetitle = this_tag  | capitalize | replace: '_', ' ' %}
 
-## Pages tagged {{ this_pagetitle  }}
+<h2 class="page_title">Pages tagged "{{ this_pagetitle  }}"</h2>
 
 {% assign today = site.time | date: '%Y%m%d' %}
 {% assign page_tag = this_tag | downcase %}
@@ -30,12 +30,11 @@ layout: default
       {% if post_day > today %}
   <h3 style="color: red">{{ post.date | date: "%Y-%m-%d" }}</h3>
       {% endif %}
-{{ post.excerpt }}
+    {{ post.excerpt }}
   <p class="footnote">
-      {%if post.author %}
-{{post.author}}, 
-      {% endif %}
-{{ post.date | date: "%Y-%m-%d" }}: <a href="{{ post.url | relative_url }}">more ...</a>
+    {%if post.author %}{{post.author}}, {% endif %}
+    {%if post.date %}{{ post.date | date: "%Y-%m-%d" }}: {% endif %}
+    <a href="{{ post.url | relative_url }}">more ...</a>
   </p>
 </div>
       {% break %}

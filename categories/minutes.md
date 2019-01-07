@@ -5,19 +5,21 @@ layout: default
 {% assign this_name = page.name | split: "." %}
 {% assign this_category = this_name[0] %}
 
-## {{ this_category | capitalize }}
+<h2 class="page_title">{{ this_category | capitalize }}</h2>
 
-<!-- pages from both _posts and collections are parsed over -->
-{% assign these_posts = site.emptyArray %}
+<!--        pages from both _posts and collections are parsed over           -->
+{% assign cat_posts = site.emptyArray %}
 {% if site.categories[this_category] %}
-  {% assign these_posts = these_posts | concat: site.categories[this_category] | sort %}
+  {% assign cat_posts = cat_posts | concat: site.categories[this_category] %}
 {% endif %}
 {% if site[this_category] %}
-  {% assign these_posts = these_posts | concat: site[this_category] | sort %}
+  {% assign cat_posts = cat_posts | concat: site[this_category] %}
 {% endif %}
 
-<!-- there are special posts for prepending content to the listing pages -->
-{% for post in these_posts %}
+<!--        special posts for prepending content to the listing pages        -->
+<!--        they are processed first, so separate loops are needed           -->
+
+{% for post in cat_posts %}
   {% if post.tags contains '.prepend' %}
 <div style="margin-bottom: 20px;">
 {{ post.content | markdownify }}
@@ -25,28 +27,31 @@ layout: default
   {% endif %}
 {% endfor %}
 
-{% for post in these_posts %}
+<!--        featured posts on top, so new loop                               -->
+
+{% for post in cat_posts %}
   {% if post.tags contains '.featured' %}
 <div class="excerpt">
     {{ post.excerpt }}
-<p class="footnote">
-    {%if post.author %}
-      {{post.author}}, 
-    {% endif %}
-  {{ post.date | date: "%Y-%m-%d" }}: <a href="{{ post.url | relative_url }}">more ...</a>
+  <p class="footnote">
+    {%if post.author %}{{post.author}}, {% endif %}
+    {%if post.date %}{{ post.date | date: "%Y-%m-%d" }}: {% endif %}
+    <a href="{{ post.url | relative_url }}">more ...</a>
   </p>
 </div>
   {% endif %}
 {% endfor %}
 
-{% for post in these_posts %}
-  {% unless post.tags contains '.featured' or post.tags contains '.sticky' %} 
+<!--        remaining posts                                                  -->
+
+{% for post in cat_posts %}
+  {% unless post.tags contains '.featured' or post.tags contains '.prepend' %} 
 <div class="excerpt">
     {{ post.excerpt }}
-<p class="footnote">
+  <p class="footnote">
     {%if post.author %}{{post.author}}, {% endif %}
     {%if post.date %}{{ post.date | date: "%Y-%m-%d" }}: {% endif %}
- <a href="{{ post.url | relative_url }}">more ...</a>
+    <a href="{{ post.url | relative_url }}">more ...</a>
   </p>
 </div>
   {% endunless %}

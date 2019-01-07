@@ -14,14 +14,15 @@
 </head>
 
 <body>
-  <div style="display: block; background-color: rgb(169,36,32); position: fixed; top: 0; left: 0; width: 100%; height: 25px; clear: both;">
+  <div id="headband">
     <img src="{{ 'assets/img/ga4gh_circle_42x42.png' | relative_url }}" style="float: right; margin-top: 10px; margin-right: 10px;" />
     <img src="{{ 'assets/img/logo-schemablocks-50x50.png' | relative_url }}" style="float: left; margin-top: 10px; margin-left: 10px;" /></div>
   <div class="wrapper" style="margin-top: 20px">
     <header id="header">
 
 <a href="{{ '/' | relative_url }}">
-{{ site.site_header }}
+<h2>{{ site.label }}</h2>
+  <div style="font-size: 0.9em; margin-top: -10px;">{{ site.tagline }}</div>
 </a>
       <div class="navboxleft" style="margin-top: 15px;">
 
@@ -41,7 +42,7 @@
     {% unless block_label_type[2] == 'hide' %}
         <h5>{{block_label_type[0]}}</h5>
     {% endunless %}   
-   {% for this_category in site[block_key] %}
+    {% for this_category in site[block_key] %}
       {% assign cat_label = this_category[1] %}
       {% assign cat_key = this_category[0] %}
       {% assign cat_page = cat_key | append: '.html' %}
@@ -54,7 +55,7 @@
 -->
       {% assign this_name = page.name | split: "." %}
       {% if page.category contains cat_key or this_name[0] == cat_key %}
-        {% assign cat_posts = site.posts | where: 'category', cat_key %}
+        {% assign cat_posts = site.documents | where: 'category', cat_key %}
         {% for post in cat_posts %}
 <!-- first .sticky/featured posts -->
           {% if post.tags contains '.featured' %}
@@ -88,7 +89,7 @@
 <!-- ######################################################################  -->
 
 <!-- ######################################################################  -->
-<!--          Static Links from _config_common.yml                           -->
+<!--          Static Links from _config.yml                           -->
 <!-- ######################################################################  -->
 
   {% if site.related_sites %}
@@ -141,7 +142,7 @@
   {% endif %}
 {% endfor %}
   
-{% assign tags_unique = tags | uniq | sort %}
+{% assign tags_unique = site.cloud_tags | uniq | sort %}
 
 {% for tag in tags_unique %}
 

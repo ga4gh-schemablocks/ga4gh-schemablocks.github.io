@@ -1,16 +1,16 @@
 ---
-title: "Melanie Courtot"
+title: "Ion Tichy, ST"
 layout: default
+date: 1967-11-11
 excerpt_separator: <!--more-->
-image_file: 'courtot_melanie_web_2015_2.jpg'
+image_file: 'Ion_Tichy.png'
 category:
-  - contributors
-  - contact
-tags:
+  - people
+tags: # please delete unneeded options
   - contacts
   - contributors
   - leads
-  - CP
+  - developers
 ---
 
 {% for static_file in site.static_files %}
@@ -21,11 +21,17 @@ tags:
 
 ## {{ page.title }}
 
-European Bioinformatics Institute
-Samples, Phenotypes and Ontologies  
-BioSamples/GA4GH Project Lead   
+Beacon Explorer  
+Arkturius Space University  
+
+email [itichy@cc.arsu.arkturius](mailto:itichy@cc.arkturius)  
+web [ARSU](https://sww.arsu.arkturius)  
 
 <!--more-->
 
-email [courtot@ebi.ac.uk](mailto:courtot@ebi.ac.uk)  
-web [EBI](https://www.ebi.ac.uk/about/people/melanie-courtot)  
+Ion Tichy is a character in the works of Stanislaw Lem.
+
+
+
+
+

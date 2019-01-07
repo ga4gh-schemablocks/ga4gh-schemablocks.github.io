@@ -1,16 +1,16 @@
 ---
-title: "Ion Tichy, ST"
+title: "Melanie Courtot"
 layout: default
-date: 1967-11-11
 excerpt_separator: <!--more-->
-image_file: 'Ion_Tichy.png'
+image_file: 'courtot_melanie_web_2015_2.jpg'
 category:
-  - contributors
-tags: # please delete unneeded options
+  - people
+  - contact
+tags:
   - contacts
   - contributors
   - leads
-  - developers
+  - CP
 ---
 
 {% for static_file in site.static_files %}
@@ -21,13 +21,11 @@ tags: # please delete unneeded options
 
 ## {{ page.title }}
 
-Beacon Explorer  
-Arkturius Space University  
-
-email [itichy@cc.arsu.arkturius](mailto:itichy@cc.arkturius)  
-web [ARSU](https://sww.arsu.arkturius)  
+European Bioinformatics Institute
+Samples, Phenotypes and Ontologies  
+BioSamples/GA4GH Project Lead   
 
 <!--more-->
 
-
-
+email [courtot@ebi.ac.uk](mailto:courtot@ebi.ac.uk)  
+web [EBI](https://www.ebi.ac.uk/about/people/melanie-courtot)  

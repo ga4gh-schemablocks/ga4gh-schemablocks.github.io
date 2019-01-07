@@ -15,6 +15,7 @@ tags:
 ## {{ page.title }}
 
 Just before the holiday season, a first telecon brought together people form different areas of GA4GH to have a first discussion about the scope, concepts and technical ground rules of SchemaBlocks as a potential GA4GH project.
+
 <!--more-->
 
 ##### Participants

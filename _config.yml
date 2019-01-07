@@ -1,20 +1,22 @@
-title: 'GA4GH SchemaBlocks'
-label: 'GA4GH SchemaBlocks'
-name: Beacon
-site_header: |
-  <h2>GA4GH::SchemaBlocks</h2>
-  <div style="font-size: 0.9em; margin-top: -10px;">An Initiative by Members of the Global Alliance for Genomics and Health</div>
-site_domain_name: ga4gh-schemablocks.github.io
+label: 'GA4GH::SchemaBlocks'
+tagline: 'An Initiative by Members of the Global Alliance for Genomics and Health'
+description: |
+  SchemaBlocks is a cross-workstream project of the Global Alliance for Genomics & Health
+keywords: genomics, cloud, Beacon, DNA, sharing, GA4GH
+site_domain_name: schemablocks.org
 url: 'https://schemablocks.org'
 baseurl: ""
-site_download_link: 'http://ga4gh-schemablocks.github.io/assets'
 site_parent_link: 'https://ga4gh.org'
 github_organisation: ga4gh-schemablocks
 show_downloads: true
 future: true
+
+# instructions for processing specific directories
+
 include:
-  - 'categories'
-  - 'tags'
+  - 'categories'  # contains landing pages for each category
+  - 'tags'        # contains landing pages for each tag
+collections_dir: pages
 collections:
   schemas:
     output: true
@@ -28,12 +30,16 @@ collections:
   howto:
     output: true
     permalink: /howto/:path/
-plugins:
- - jekyll-seo-tag
-type: website
-description: |
-  SchemaBlocks is a cross-workstream project of the Global Alliance for Genomics & Health
-keywords: genomics, cloud, Beacon, DNA, sharing, GA4GH
+  minutes:
+    output: true
+    permalink: /minutes/:path/
+  news:
+    output: true
+    permalink: /news/:path/
+
+# navigation blocks can be used to separate different categories and add e.g. 
+# external link block(s), in combination with a properly modified layout
+
 nav_cat_blocks:
   General: 'General,categories,hide'
 #  Products: 'Workstream Products,categories,show'
@@ -46,12 +52,11 @@ General:
   howto: 'Examples, Guides & FAQ'
   minutes: 'Meeting minutes'
   contact: Contacts
-Products:
-  beacon: 'Beacon'
-  discovery_networks: 'Discovery Networks'
-  schemablocks: 'GA4GH SchemaBlocks'
-  search_api: 'Search API'
-navigation_max_items: 4
+#Products:
+#  beacon: 'Beacon'
+#  discovery_networks: 'Discovery Networks'
+#  schemablocks: 'GA4GH SchemaBlocks'
+#  search_api: 'Search API'
 related_sites:
   'GA4GH::Discovery': 'ga4gh-discovery.github.io'
   'GA4GH::CLP': 'ga4gh-cp.github.io'
@@ -61,5 +66,31 @@ related_sites:
   Phenopackets: 'https://github.com/phenopackets'
   GA4GH: 'www.ga4gh.org'
   'Beacon<span style="vertical-align: super; color: red; font-weight: 800;">+</span>': 'beacon.progenetix.org'
-emptyArray: []
+  
+# tag_cloud items
 
+cloud_tags:
+  - Beacon
+  - CP
+  - Discovery
+  - GA4GH
+  - GKS
+  - MME
+  - admins
+  - contacts
+  - contributors
+  - coordinates
+  - dates
+  - developers
+  - identifiers
+  - leads
+  - press
+  - times
+
+# additional Jekyll instructions
+
+plugins:
+ - jekyll-seo-tag
+type: website
+navigation_max_items: 4 # number of shown links in current category
+emptyArray: []          # dummy element for array initialisation
