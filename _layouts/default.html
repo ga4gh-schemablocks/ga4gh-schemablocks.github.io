@@ -158,9 +158,17 @@
 <!--                            Github Edit                                  -->
 <!-- ######################################################################  -->
 
+{% if site.github.repository_url contains '/' %}
+  {% unless page.path contains 'categories/' or page.path contains 'tags/' %}  
+    {% assign github_link = site.github.repository_url | append: '/blob/master/' %}
+    {% if page.path contains '/' %}
+      {% assign github_link = github_link | append: site.collections_dir  | append: '/' %}
+    {% endif %}
       <h5>
-        <a href="{{site.github.repository_url}}/blob/master/{{page.relative_path}}" style="text-decoration: none; color: #ccc;">Edit this page</a>
+        <a href="{{github_link}}{{page.path}}" style="text-decoration: none; color: #ccc;">Edit this page</a>
       </h5>
+  {% endunless %}
+{% endif %}
 
 <!-- ######################################################################  -->
 <!--                           / Github Edit                                 -->
