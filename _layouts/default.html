@@ -154,26 +154,6 @@
 <!-- ##########################    / Tags   ###############################  -->
 <!-- ######################################################################  -->
 
-<!-- ######################################################################  -->
-<!--                            Github Edit                                  -->
-<!-- ######################################################################  -->
-
-{% if site.github.repository_url contains '/' %}
-  {% unless page.path contains 'categories/' or page.path contains 'tags/' %}  
-    {% assign github_link = site.github.repository_url | append: '/blob/master/' %}
-    {% if page.path contains '/' %}
-      {% assign github_link = github_link | append: site.collections_dir  | append: '/' %}
-    {% endif %}
-      <h5>
-        <a href="{{github_link}}{{page.path}}" style="text-decoration: none; color: #ccc;">Edit this page</a>
-      </h5>
-  {% endunless %}
-{% endif %}
-
-<!-- ######################################################################  -->
-<!--                           / Github Edit                                 -->
-<!-- ######################################################################  -->
-
     </header>
 
 <!-- ######################################################################  -->
@@ -248,6 +228,25 @@
 <!-- next </div> closes the wrapper -->
 
   </div>
+
+<!-- ######################################################################  -->
+<!--                            Github Edit                                  -->
+<!-- ######################################################################  -->
+
+{% if site.github.repository_url contains '/' %}
+  {% unless page.path contains 'categories/' or page.path contains 'tags/' %}  
+    {% assign github_link = site.github.repository_url | append: '/blob/master/' %}
+    {% if page.path contains '/' %}
+      {% assign github_link = github_link | append: site.collections_dir  | append: '/' %}
+    {% endif %}
+
+  <a href="{{github_link}}{{page.path}}" style="text-decoration: none; color: #ccc;"><img src="/assets/img/clippy.svg" width="15px" alt="Edit on Github..." /></a>
+  {% endunless %}
+{% endif %}
+
+<!-- ######################################################################  -->
+<!--                           / Github Edit                                 -->
+<!-- ######################################################################  -->
 
 <script src="{{ 'assets/js/scale.fix.js' | relative_url }}"></script>
 
