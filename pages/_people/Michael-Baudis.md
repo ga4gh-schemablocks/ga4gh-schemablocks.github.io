@@ -13,6 +13,7 @@ tags:
   - developers
   - Discovery
   - Beacon
+  - .featured
 ---
 
 {% for static_file in site.static_files %}

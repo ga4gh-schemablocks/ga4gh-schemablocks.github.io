@@ -11,6 +11,7 @@ tags:
   - contributors
   - leads
   - CP
+  - .featured
 ---
 
 {% for static_file in site.static_files %}
@@ -21,7 +22,7 @@ tags:
 
 ## {{ page.title }}
 
-European Bioinformatics Institute
+European Bioinformatics Institute  
 Samples, Phenotypes and Ontologies  
 BioSamples/GA4GH Project Lead   
 
