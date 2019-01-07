@@ -1,4 +1,6 @@
 ---
+category:
+  - formats
 tags:
   - .prepend
   - .sticky

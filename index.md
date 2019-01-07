@@ -3,7 +3,7 @@ title: GA4GH SchemaBlocks
 layout: default
 date: 2018-12-20
 permalink: /index.html
-author: mbaudis
+author: "@mbaudis"
 category:
   - about
 ---

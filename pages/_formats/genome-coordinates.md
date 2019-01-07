@@ -2,7 +2,7 @@
 title: "Genome Coordinates"
 layout: default
 date: 2018-12-21
-author: mbaudis
+author: "@mbaudis"
 excerpt_separator: <!--more-->
 category:
   - formats

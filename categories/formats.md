@@ -7,14 +7,13 @@ layout: default
 
 <h2 class="page_title">{{ this_category | capitalize }}</h2>
 
-<!--        pages from both _posts and collections are parsed over           -->
+<!--        collecting the pages                                             -->
 {% assign cat_posts = site.emptyArray %}
-{% if site.categories[this_category] %}
-  {% assign cat_posts = cat_posts | concat: site.categories[this_category] %}
-{% endif %}
-{% if site[this_category] %}
-  {% assign cat_posts = cat_posts | concat: site[this_category] %}
-{% endif %}
+{% for post in site.documents %}
+  {% if post.categories contains this_category %}
+    {% assign cat_posts = cat_posts | push: post %}
+  {% endif %}
+{% endfor %}
 
 <!--        special posts for prepending content to the listing pages        -->
 <!--        they are processed first, so separate loops are needed           -->
@@ -49,7 +48,7 @@ layout: default
 <div class="excerpt">
     {{ post.excerpt }}
   <p class="footnote">
-    {%if post.author %}{{post.author}}, {% endif %}
+    {%if post.author %}{{ post.author | remove: "@" }}, {% endif %}
     {%if post.date %}{{ post.date | date: "%Y-%m-%d" }}: {% endif %}
     <a href="{{ post.url | relative_url }}">more ...</a>
   </p>

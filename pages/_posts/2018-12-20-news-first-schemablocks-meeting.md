@@ -2,7 +2,7 @@
 title: 'First Meeting - Setting the Scope'
 date: 2018-12-20
 layout: default
-author: mbaudis
+author: "@mbaudis"
 excerpt_separator: <!--more-->
 www_link: https://docs.google.com/document/d/1t0WINn-8zw5ZohF2TAGelSKX7xSDR7nBl9iZWk44NWM/edit#heading=h.lurwgc2rlzlh
 category:

@@ -65,7 +65,7 @@ related_sites:
   'ELIXIR beacon': 'ga4gh-beacon.github.io'
   Phenopackets: 'https://github.com/phenopackets'
   GA4GH: 'www.ga4gh.org'
-  'Beacon<span style="vertical-align: super; color: red; font-weight: 800;">+</span>': 'beacon.progenetix.org'
+  'Beacon<span style="color: red; font-weight: 800;">+</span>': 'beacon.progenetix.org'
   
 # tag_cloud items
 

@@ -1,6 +1,4 @@
 ---
-layout: default
-author: mbaudis
 category:
   - schemas
 tags:

@@ -2,7 +2,7 @@
 title: "Identifiers and CURIEs"
 layout: default
 date: 2018-12-24
-author: mbaudis
+author: "@mbaudis"
 excerpt_separator: <!--more-->
 category:
   - formats
