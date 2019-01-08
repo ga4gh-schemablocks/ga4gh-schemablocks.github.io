@@ -15,8 +15,9 @@
 
 <body>
   <div id="headband">
-    <img src="{{ 'assets/img/ga4gh_circle_42x42.png' | relative_url }}" style="float: right; margin-top: 10px; margin-right: 10px;" />
-    <img src="{{ 'assets/img/logo-schemablocks-50x50.png' | relative_url }}" style="float: left; margin-top: 10px; margin-left: 10px;" /></div>
+    <img src="{{ 'assets/img' | relative_url }}/logo_topleft_{{ site.site_domain_name }}.png" id="logo_topleft" />
+    <img src="{{ 'assets/img' | relative_url }}/logo_topright_{{ site.site_domain_name }}.png" id="logo_topright" />
+  </div>
   <div class="wrapper" style="margin-top: 20px">
     <header id="header">
 
@@ -54,9 +55,9 @@
 -->
       {% assign this_name = page.name | split: "." %}
       {% if page.category contains cat_key or this_name[0] == cat_key %}
-        {% assign cat_posts = site.documents | where: 'category', cat_key %}
+        {% assign cat_posts = site.documents | where: 'category', cat_key | sort: 'date' | reverse %}
         {% for post in cat_posts %}
-<!-- first .sticky/featured posts -->
+<!-- first featured posts -->
           {% if post.tags contains '.featured' %}
         <div class="sublink">
           <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
@@ -66,8 +67,8 @@
           {% endif %}
         {% endfor %}
         {% for post in cat_posts limit: nav_itemno %}
-<!-- others than the .sticky/featured posts -->
-          {% unless post.tags contains '.featured' or post.tags contains '.sticky' %}
+<!-- others than the featured posts -->
+          {% unless post.tags contains '.featured' or post.tags contains '.prepend' or post.tags contains '.append' %}
         <div class="sublink" >
           <a href="{{ post.url  | relative_url }}">{{ post.title }}</a>
         </div>
@@ -242,10 +243,36 @@
 
   <a href="{{github_link}}{{page.path}}" style="text-decoration: none; color: #ccc;"><img src="{{ 'assets/img/icons8-edit-file-26.png' | relative_url }}" alt="Edit on Github..."  style="position: absolute; bottom: 15px; right: 15px;" /></a>
   {% endunless %}
+
+<!-- ######################################################################  -->
+<!--                            Local Edit                                   -->
+<!-- ######################################################################  -->
+
+{% elsif site.source_path contains '/' %}
+
+<!-- Code from https://clipboardjs.com -->
+
+  <button style="position: absolute; bottom: 15px; right: 15px;" class="btn" data-clipboard-text="open {{site.source_path}}/{{ page.path }}">
+    <img src="{{ 'assets/img/clippy.svg' | relative_url }}" width="15px" alt="Copy local path to clipboard for pasting into terminal - only works for site editors...">
+  </button>
+
+<script src="{{ 'assets/js/clipboard.min.js' | relative_url }}"></script>
+<script>
+  var clipboard = new ClipboardJS('.btn');
+  clipboard.on('success', function(e) {
+      console.log(e);
+  });
+  clipboard.on('error', function(e) {
+      console.log(e);
+  });
+</script>
+
+<!-- / clipboardjs -->
+
 {% endif %}
 
 <!-- ######################################################################  -->
-<!--                           / Github Edit                                 -->
+<!--                           / Edits                                       -->
 <!-- ######################################################################  -->
 
 <script src="{{ 'assets/js/scale.fix.js' | relative_url }}"></script>

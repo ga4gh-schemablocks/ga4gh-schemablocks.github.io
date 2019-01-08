@@ -6,6 +6,18 @@
   background-color: var(--site-color);
 }
 
+#logo_topleft {
+  float: left;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#logo_topright {
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
 #header h4  {
   margin-top: 0px;
   margin-bottom: 0x;

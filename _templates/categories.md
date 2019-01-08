@@ -7,14 +7,15 @@ layout: default
 
 <h2 class="page_title">{{ this_category | capitalize }}</h2>
 
-<!--        pages from both _posts and collections are parsed over           -->
+<!--        collecting the pages                                             -->
 {% assign cat_posts = site.emptyArray %}
-{% if site.categories[this_category] %}
-  {% assign cat_posts = cat_posts | concat: site.categories[this_category] %}
-{% endif %}
-{% if site[this_category] %}
-  {% assign cat_posts = cat_posts | concat: site[this_category] %}
-{% endif %}
+{% for post in site.documents %}
+  {% if post.categories contains this_category %}
+    {% assign cat_posts = cat_posts | push: post %}
+  {% endif %}
+{% endfor %}
+
+{% assign cat_posts = cat_posts | sort: 'date' | reverse %}
 
 <!--        special posts for prepending content to the listing pages        -->
 <!--        they are processed first, so separate loops are needed           -->
@@ -42,10 +43,10 @@ layout: default
   {% endif %}
 {% endfor %}
 
-<!--        remaining posts                                                  -->
+<!--        remaining normal posts                                           -->
 
 {% for post in cat_posts %}
-  {% unless post.tags contains '.featured' or post.tags contains '.prepend' %} 
+  {% unless post.tags contains '.featured' or post.tags contains '.prepend' or post.tags contains '.append' %} 
 <div class="excerpt">
     {{ post.excerpt }}
   <p class="footnote">
@@ -56,3 +57,14 @@ layout: default
 </div>
   {% endunless %}
 {% endfor %}
+
+<!--        special posts for appending content to the listing pages         -->
+
+{% for post in cat_posts %}
+  {% if post.tags contains '.append' %}
+<div style="margin-top: 20px;">
+{{ post.content | markdownify }}
+</div>
+  {% endif %}
+{% endfor %}
+

@@ -42,7 +42,6 @@ collections:
 
 nav_cat_blocks:
   General: 'General,categories,hide'
-#  Products: 'Workstream Products,categories,show'
   related_sites: 'Related Sites,related_sites,show'
 
 General:
@@ -53,12 +52,6 @@ General:
   howto: 'Examples, Guides & FAQ'
   minutes: 'Meeting minutes'
   contact: Contacts
-
-#Products:
-#  beacon: 'Beacon'
-#  discovery_networks: 'Discovery Networks'
-#  schemablocks: 'GA4GH SchemaBlocks'
-#  search_api: 'Search API'
 
 related_sites: 
   'GA4GH::Discovery': 'http://ga4gh-discovery.github.io'
