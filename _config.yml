@@ -18,6 +18,9 @@ include:
   - tags        # contains landing pages for each tag
 collections_dir: pages
 collections:
+  news:
+    output: true
+    permalink: /news/:path/
   schemas:
     output: true
     permalink: /schemas/:path/
@@ -33,10 +36,7 @@ collections:
   minutes:
     output: true
     permalink: /minutes/:path/
-  news:
-    output: true
-    permalink: /news/:path/
-
+    
 # navigation blocks can be used to separate different categories and add e.g. 
 # external link block(s), in combination with a properly modified layout
 
