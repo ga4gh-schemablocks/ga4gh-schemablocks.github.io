@@ -1,10 +1,12 @@
---------------------------------------------------------------------------------  
-title:  'Ontology_term'
+---
+title: 'ontology_term'
 layout: default
 excerpt_separator: <!--more-->
 category:
   - schemas
---------------------------------------------------------------------------------  
+tags:
+  - code
+---
 ## GA4GH SchemaBlocks - Ontology_term
 
 
@@ -50,41 +52,39 @@ inconsistently followed.
 
 ```
 {
-   "label" : "no restriction",
-   "id" : "DUO:0000004"
+   "id" : "DUO:0000004",
+   "label" : "no restriction"
 }
 ```
 ```
 {
-   "id" : "HP:0003621",
-   "label" : "Juvenile onset"
+   "label" : "Juvenile onset",
+   "id" : "HP:0003621"
 }
 ```
 ```
 {
-   "id" : "ncit:C3058",
-   "label" : "Glioblastoma"
+   "label" : "Glioblastoma",
+   "id" : "ncit:C3058"
 }
 ```
 --------------------------------------------------------------------------------
 
 <h4>Extended notes and examples on the <i>Ontology_term</i> properties</h4>
 
-### id
+##### id
 
-properly prefixed CURIE of the ontology term
-
-##### Example
+* properly prefixed CURIE of the ontology term  
+* example:  
 
 ```
 'id' : "ncit:C8294"
 ```
 
-### label
+##### label
 
-the text label associated with the term
-
-##### Example
+* the text label associated with the term  
+* example:  
 
 ```
 'label' : "Pancreatic Adenocarcinoma"
