@@ -1,5 +1,5 @@
 ---
-title: 'ontology_term'
+title: 'Ontology_term'
 layout: default
 excerpt_separator: <!--more-->
 category:
@@ -7,16 +7,11 @@ category:
 tags:
   - code
 ---
-## GA4GH SchemaBlocks - Ontology_term
+## Ontology_term
 
-
-Prototype objects definitions.
-
-
-The original schema definitions are provided in the [YAML file](http://ga4gh-schemablocks.github.io/blocks/blob/master/ontology_term.yaml).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/ontology_term.yaml).
 
 <!--more-->
-### Ontology_term
 
 <h4>Properties of the <i>Ontology_term</i> class</h4>
 
@@ -27,12 +22,6 @@ The original schema definitions are provided in the [YAML file](http://ga4gh-sch
     <th>Format</th>
     <th>Description</th>
   </tr>
-Ontology_term represents the core object used to reference domain-specific 
-entities, as well as to identify their domains through the appropriate
-prefix.
-CURIES are case sensitive, although for prefixes this practice is 
-inconsistently followed.
-
   <tr>
     <td>id</td>
     <td>string</td>
@@ -45,7 +34,13 @@ inconsistently followed.
     <td></td>
     <td>the text label associated with the term</td>
   </tr>
-</table>
+
+</table>Ontology_term represents the core object used to reference domain-specific 
+entities, as well as to identify their domains through the appropriate
+prefix.
+CURIES are case sensitive, although for prefixes this practice is 
+inconsistently followed.
+
 
 
 #### Examples
@@ -64,13 +59,13 @@ inconsistently followed.
 ```
 ```
 {
-   "label" : "Glioblastoma",
-   "id" : "ncit:C3058"
+   "id" : "ncit:C3058",
+   "label" : "Glioblastoma"
 }
 ```
 --------------------------------------------------------------------------------
 
-<h4>Extended notes and examples on the <i>Ontology_term</i> properties</h4>
+<h4>Notes and examples on the <i>Ontology_term</i> properties</h4>
 
 ##### id
 
