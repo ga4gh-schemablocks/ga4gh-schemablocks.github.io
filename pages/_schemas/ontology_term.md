@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------------  
-title:  ontology_term
+title:  'Ontology_term'
 layout: default
 excerpt_separator: <!--more-->
 category:
