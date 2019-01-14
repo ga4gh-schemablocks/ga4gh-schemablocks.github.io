@@ -14,10 +14,11 @@ tags:
 
 ## {{ page.title }}
 
-Date and time formats are specified as [ISO8601](https://www.w3.org/TR/NOTE-datetime) compatible strings 
+Date and time formats are specified as [ISO8601](https://www.w3.org/TR/NOTE-datetime) compatible strings, both for time points as well as for intervals and durations.
+
 <!--more-->
+
 <a href="https://xkcd.com/1179/" target="_blank"><img src="https://imgs.xkcd.com/comics/iso_8601.png" style="float: right; margin 20px 0px 30px 20px; width: 200px;" /></a>
-, both for time points as well as for intervals and durations.
 
 An optionally required granularity may be specified as part of the respective
 attributes' documentations.
