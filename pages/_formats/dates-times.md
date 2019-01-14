@@ -12,6 +12,8 @@ tags:
   - dates
 ---
 
+<a href="https://xkcd.com/1179/" target="_blank"><img src="https://imgs.xkcd.com/comics/iso_8601.png" style="float: right; margin 0px 0px 20px 20px; width: 280px;" /></a>
+
 ## {{ page.title }}
 
 Date and time formats are specified as ISO8601 compatible strings, both for
@@ -22,12 +24,7 @@ attributes' documentations.
 <!--more-->
 
 * external information: [ISO8601](https://www.w3.org/TR/NOTE-datetime)
-* [xkcd](https://xkcd.com/1179/):
-
-<p align="center">
-  <img src="https://imgs.xkcd.com/comics/iso_8601.png" />
-</p>
-
+* [xkcd](https://xkcd.com/1179/)
 
 #### Units of time
 
