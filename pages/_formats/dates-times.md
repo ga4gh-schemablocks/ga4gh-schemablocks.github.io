@@ -12,19 +12,16 @@ tags:
   - dates
 ---
 
-<a href="https://xkcd.com/1179/" target="_blank"><img src="https://imgs.xkcd.com/comics/iso_8601.png" style="float: right; margin 0px 0px 20px 20px; width: 280px;" /></a>
-
 ## {{ page.title }}
 
-Date and time formats are specified as ISO8601 compatible strings, both for
-time points as well as for intervals and durations.
+Date and time formats are specified as [ISO8601](https://www.w3.org/TR/NOTE-datetime) compatible strings, 
+<!--more-->
+<a href="https://xkcd.com/1179/" target="_blank"><img src="https://imgs.xkcd.com/comics/iso_8601.png" style="float: right; margin -40px 0px 30px 20px; width: 200px;" /></a>
+both for time points as well as for intervals and durations.
 An optional required granularity may be specified as part of the respective
 attributes' documentations.
 
-<!--more-->
-
 * external information: [ISO8601](https://www.w3.org/TR/NOTE-datetime)
-* [xkcd](https://xkcd.com/1179/)
 
 #### Units of time
 
@@ -35,7 +32,6 @@ attributes' documentations.
 * *M* = minute
 * *S* = second
 * *.S* = decimal fraction of a second
-
 
 #### Time points
 
