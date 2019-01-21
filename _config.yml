@@ -8,15 +8,17 @@ url: 'https://schemablocks.org'
 baseurl: ""
 site_parent_link: 'https://ga4gh.org'
 github_organisation: ga4gh-schemablocks
-show_downloads: true
-future: true
 
 # instructions for processing specific directories
 
-include:
+include:        # usually only pages in / and /_posts are "seen" => processed
   - categories  # contains landing pages for each category
   - tags        # contains landing pages for each tag
-collections_dir: pages
+
+# Collections are used to organise pages into logical groups; these do not need 
+# to have a relation to the "categories", though this is highly recommended
+# Collection directories reside in "/collections_dir/_(collection name)".
+
 collections:
   news:
     output: true
@@ -36,11 +38,12 @@ collections:
   minutes:
     output: true
     permalink: /minutes/:path/
+collections_dir: pages  # optional; here, all collections are inside "/pages"
     
 # navigation blocks can be used to separate different categories and add e.g. 
 # external link block(s), in combination with a properly modified layout
 
-nav_cat_blocks:
+nav_cat_blocks: # comma-separated "label,type,label_visibility"
   General: 'General,categories,hide'
   related_sites: 'Related Sites,related_sites,show'
 
@@ -58,7 +61,7 @@ related_sites:
   'GA4GH::CLP': 'http://ga4gh-cp.github.io'
   'GA4GH::GKS': 'http://ga4gh-gks.github.io'
   'SchemaBlocks at Metadata': 'http://ga4gh-metadata.github.io/SchemaBlocks/'
-  'ELIXIR beacon': 'http://ga4gh-beacon.github.io'
+  'ELIXIR Beacon': 'http://ga4gh-beacon.github.io'
   Phenopackets: 'http://github.com/phenopackets'
   GA4GH: 'http://www.ga4gh.org'
   'Beacon<span style="color: red; font-weight: 800;">+</span>': 'http://beacon.progenetix.org'
@@ -89,5 +92,8 @@ cloud_tags:
 plugins:
  - jekyll-seo-tag
 type: website
+show_downloads: true
+future: true
+safe: false
 navigation_max_items: 4 # number of shown links in current category
 emptyArray: []          # dummy element for array initialisation
