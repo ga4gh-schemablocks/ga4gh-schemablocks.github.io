@@ -2,14 +2,9 @@ label: 'GA4GH::SchemaBlocks'
 tagline: 'An Initiative by Members of the Global Alliance for Genomics and Health'
 description: |
   SchemaBlocks is a cross-workstream project of the Global Alliance for Genomics & Health
-keywords:
-  - genomics
-  - Beacon
-  - DNA
-  - GA4GH
+keywords: genomics, cloud, Beacon, DNA, sharing, GA4GH
 site_domain_name: schemablocks.org
 url: 'https://schemablocks.org'
-email: ""
 baseurl: ""
 site_parent_link: 'https://ga4gh.org'
 github_organisation: ga4gh-schemablocks
@@ -43,9 +38,7 @@ collections:
   minutes:
     output: true
     permalink: /minutes/:path/
-# optional; here, all collections are inside "/pages"
-# if used, also the standard "_posts" directory has to be moved there!
-collections_dir: pages  
+collections_dir: pages  # optional; here, all collections are inside "/pages"
     
 # navigation blocks can be used to separate different categories and add e.g. 
 # external link block(s), in combination with a properly modified layout
