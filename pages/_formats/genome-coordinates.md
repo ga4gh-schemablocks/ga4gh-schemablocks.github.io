@@ -2,7 +2,9 @@
 title: "Genome Coordinates"
 layout: default
 date: 2019-01-08
-author: "@jmarshall"
+author:
+  - "@jmarshall"
+  - "@andrewyatz"
 description: >
   Recommendations to use 0-based positions and 0-based half-open intervals
   when representing genome coordinates and regions in APIs.
@@ -27,10 +29,10 @@ Consider a subsequence `GAGTGC` of a larger sequence of bases (which might be a 
 ![Sequence data with 1-based coordinates](1-based.svg)
 
 When a human is working with this subsequence, or it is being discussed amongst humans, we might refer to it as spanning coordinates 5--10 on the larger sequence.
-Formally, this is 1-based inclusive/closed-at-both-ends reckoning, and it's natural and convenient for humans as it's what we're used to.
+Formally, this is 1-based inclusive/closed-at-both-ends reckoning, also known as "biological" or "Ensembl-style" coordinates, and it's natural and convenient for humans as it's what we're used to.
 
 However this is not the best coordinate representation for doing arithmetic with.
-Interval arithmetic and the representation of edge cases are more straightforward and unambiguous using a 0-based half-open representation:
+Interval arithmetic and the representation of edge cases are more straightforward and unambiguous using a 0-based half-open representation, also known as "UCSC-style":
 
 ![Sequence data with 0-based coordinates](0-based.svg)
 
@@ -40,7 +42,7 @@ An alternative and equivalent way to look at this is to think of the bases as ly
 
 ![Sequence data with interbase coordinates](interbase.svg)
 
-In these **interbase** coordinates, we would say the subsequence lies between positions 4 and 10.
+In these **interbase** coordinates (also known as "Chado-style"), we would say the subsequence lies between positions 4 and 10.
 
 Similarly, we would describe the `T` within this subsequence as spanning the interval \[7,8) or lying between positions 7 and 8.
 When using a single coordinate to refer to positions rather than intervals, using a 0-based coordinate is consistent with this recommended interval representation; thus this `T` is at position 7.
@@ -92,6 +94,14 @@ Similarly to finding the length of a subsequence in an inclusive notation, in 1�
 When strandedness comes into play and the feature's exon-coordinates are perhaps reversed, tracking the appropriate places to add and subtract 1 becomes harder.
 Thus 1-based coordinates are more susceptible to _off-by-one_ programming errors.
 
+### Existing GA4GH products
+
+The SAM/BAM/CRAM sequencing data formats and VCF/BCF variant call formats primarily store positions and various lengths, so don't represent intervals directly.
+SAM and VCF are human-readable text formats and use 1-based positions, while BAM, CRAM, and BCF are binary machine-orientated formats using 0-based positions.
+
+The htsget, refget, and Beacon protocols all use 0-based half-open or interbase intervals.
+The Variation Modelling Collaboration recommends the interbase approach.
+
 ### Conclusion
 
 User interfaces will likely continue to use familiar "human-readable" 1-based positions and inclusive interval notation (perhaps with special notation for indels where applicable).
@@ -107,3 +117,9 @@ and the discussions that led to it:
 [#49](https://github.com/ga4gh/ga4gh-schemas/pull/49#issuecomment-44503976)
 and [#121](https://github.com/ga4gh/ga4gh-schemas/issues/121).
 * a [nice explanation of coordinate systems](https://www.biostars.org/p/84686/) at _Biostars.org_ by Obi Griffith
+* Chado Interbase documentation http://gmod.org/wiki/Introduction_to_Chado#Interbase_Coordinates
+* Interbase primer http://bergmanlab.genetics.uga.edu/?p=36 
+* Beacon’s support for coordinate systems https://github.com/ga4gh-beacon/specification/issues/251
+* Refget’s support for coordinate systems https://github.com/samtools/hts-specs/pull/327#issuecomment-411458808
+* UCSC information on “0-start, half-open” http://genome.ucsc.edu/blog/the-ucsc-genome-browser-coordinate-counting-systems/
+* Transforming between coordinates in “0-start, half open” http://genomewiki.ucsc.edu/index.php/Coordinate_Transforms
