@@ -43,6 +43,8 @@ foreach my $type (qw(tags categories)) {
 }
 
 mkdir $base_path.'/'.$config->{collections_dir};
-foreach my $coll (keys %{ %{ $config->{collections} } }) {
-  mkdir $base_path.'/'.$config->{collections_dir}.'/_'.$coll }
+foreach my $coll (keys %{ $config->{collections} }) {
+  mkdir $base_path.'/'.$config->{collections_dir}.'/_'.$coll;
+  print $base_path.'/'.$config->{collections_dir}.'/_'.$coll."\n";
+}
 
