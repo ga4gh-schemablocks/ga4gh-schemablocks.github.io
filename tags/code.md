@@ -10,14 +10,15 @@ layout: default
 
 {% assign today = site.time | date: '%Y%m%d' %}
 {% assign page_tag = this_tag | downcase %}
+{% assign posts_all = site.documents | sort: 'date' | reverse %}
 
-{% for post in site.documents %}
+{% for post in posts_all %}
   {% if post.tags %}
     {% assign post_tags = post.tags | sort %}
     {% assign post_author = post.author | downcase %}
     {% for tag in post_tags %}
       {% assign tag_lower = tag | downcase %}
-     {% if tag_lower == page_tag %}
+      {% if tag_lower == page_tag %}
         {% assign post_day = post.date | date: '%Y%m%d' %}
         {% assign post_year = post.date | date: '%Y' %}
         {% if post_day > today %}
