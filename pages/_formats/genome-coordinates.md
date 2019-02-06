@@ -12,7 +12,7 @@ tags:
 
 ## {{ page.title }}
 
-This documentation needs to be edited, to represent the GA4GH convention of using "... 0-based, inclusive coordinates".
+This documentation needs to be edited, to represent the GA4GH convention of using "... 0-based, half open coordinates [.,.) ".
 
 For now please see 
 
