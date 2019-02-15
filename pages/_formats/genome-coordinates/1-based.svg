@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 40">
+<g transform="translate(0,35)" style="font-family: sans-serif; font-size: 8; text-anchor: middle">
+<path d="M20,-10h380 M20,-12v5 m20,0v-5 m20,0v5 m20,0v-5 m20,0v5 m20,0v-5 m20,0v5 m20,0v-5 m20,0v5 m20,0v-5 m20,0v5 m20,0v-5 m20,0v5 m20,0v-5 m20,0v5 m20,0v-5 m20,0v5 m20,0v-5 m20,0v5 m20,0v-5" stroke="silver" />
+<text x="20,40,60,80,100,120,140,160,180">123456789</text>
+<text x="200">10</text>
+<text x="220">11</text>
+<text x="240">12</text>
+<text x="260">13</text>
+<text x="280">14</text>
+<text x="300">15</text>
+<text x="320">16</text>
+<text x="340">17</text>
+<text x="360">18</text>
+<text x="380">19</text>
+<text x="400">20</text>
+</g>
+<g transform="translate(0,4)" style="font-family: Courier, fixed; font-size: 14; text-anchor: middle">
+<rect x="90" y="0" width="120" height="21" stroke="black" fill="silver" />
+<text x="20,40,60,80,100,120,140,160,180,200,220,240,260,280,300,320,340,360,380,400" y="15">GGTGGAGTGCGCCGCCATGG</text>
+</g>
+</svg>
