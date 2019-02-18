@@ -1,6 +1,7 @@
 ---
 title: "Michael Baudis"
 layout: default
+date: 2018-12-11
 excerpt_separator: <!--more-->
 image_file: 'mbaudis.jpg'
 category:
