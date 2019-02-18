@@ -26,9 +26,9 @@ Similarly, represent positions in APIs using 0‑based coordinates.
 
 <!--more-->
 
-#### Contributors
+### Contributors
 
-{%- if page.author -%}
+{% if page.author %}
   {%- for this_author in page.author -%}
     {%- if this_author contains "@" -%}
       {% assign this_g_author = this_author | remove: "@" %}
@@ -37,7 +37,8 @@ Similarly, represent positions in APIs using 0‑based coordinates.
 * {{this_author}}
     {%- endif -%}
   {% endfor %}
-{%- endif -%}
+{% endif %}
+
 
 ### Summary
 
