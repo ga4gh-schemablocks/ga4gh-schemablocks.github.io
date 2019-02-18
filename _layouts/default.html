@@ -214,24 +214,27 @@
   * formatted as github link if @author style
 {%- endcomment -%}
 
-{%- if page.date -%}
+{%- if page.date or page.author -%}
   <div class="pagestamp">
   <hr />
   {%- if page.author -%}
-    {%- assign this_author = page.author -%}
-    {%- if this_author contains "@" -%}
-      {% assign this_author = this_author | remove: "@" %}
-<a href="https://github.com/{{this_author}}/" target="_blank">{{this_author}}</a>,
-    {%- else -%}
-      {% if page.author_link contains "http" %}
-<a href="{{page.author_link}}" target="_blank">{{this_author}}</a>,
-      {% else %}
-{{this_author}}, 
-      {% endif %}
-    {%- endif -%}
+    {%- for this_author in page.author -%}
+      {%- if this_author contains "@" -%}
+        {% assign this_g_author = this_author | remove: "@" %}
+<a href="https://github.com/{{this_g_author}}/" target="_blank">{{this_author}}</a>&nbsp;
+      {%- else -%}
+        {% if page.author_link contains "http" %}
+<a href="{{page.author_link}}" target="_blank">{{this_author}}</a>&nbsp;
+        {% else %}
+{{this_author}}&nbsp;
+        {% endif %}
+      {%- endif -%}
+    {% endfor %}
   {%- endif -%}
+  {%- if page.date -%}
 {{ page.date | date: "%Y-%m-%d" }}
   </div>
+  {%- endif -%}
 {%- endif -%}
 </section>
 
