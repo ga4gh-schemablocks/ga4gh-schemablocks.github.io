@@ -23,7 +23,7 @@ While standards and products in the GA4GH ecosystem use different methods to ref
 
 #### Contributors
 
-{%- if page.author -%}
+{% if page.author %}
   {%- for this_author in page.author -%}
     {%- if this_author contains "@" -%}
       {% assign this_g_author = this_author | remove: "@" %}
@@ -32,7 +32,8 @@ While standards and products in the GA4GH ecosystem use different methods to ref
 * {{this_author}}
     {%- endif -%}
   {% endfor %}
-{%- endif -%}
+{% endif %}  
+
 
 #### Definition
 
