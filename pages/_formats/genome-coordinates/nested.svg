@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 60">
+<path transform="translate(0,47)" d="M10,0h410 M20,-2v4 m10,0v-4 m10,0v4 m10,0v-4 m10,0v4 m10,0v-4 m10,0v4 m10,0v-4 m10,0v4 m10,0v-4 m10,0v4 m10,0v-4 m10,0v4 m10,0v-4 m10,0v4 m10,0v-4 m10,0v4 m10,0v-4 m10,0v4 m10,0v-4 m10,0v4 m10,0v-4 m10,0v4 m10,0v-4 m10,0v4 m10,0v-4 m10,0v4 m10,0v-4 m10,0v4 m10,0v-4 m10,0v4 m10,0v-4 m10,0v4 m10,0v-4 m10,0v4 m10,0v-4 m10,0v4 m10,0v-4 m10,0v4 m10,0v-4" stroke="silver" />
+<rect x="90" y="26" width="220" height="21" stroke="black" fill="silver" />
+<path transform="translate(90,26)" d="M0,-2v4 m10,0v-4 m10,0v4 m10,0v-4 m10,0v4 m10,0v-4 m10,0v4 m10,0v-4 m10,0v4 m10,0v-4 m10,0v4 m10,0v-4 m10,0v4 m10,0v-4 m10,0v4 m10,0v-4 m10,0v4 m10,0v-4 m10,0v4 m10,0v-4 m10,0v4 m10,0v-4 m10,0v4" stroke="grey" />
+<rect x="150" y="5" width="60" height="21" stroke="black" fill="silver" />
+<g style="font-family: sans-serif; font-size: 10; text-anchor: middle">
+<text x="152" y="37">fs</text>
+<text x="212" y="37">fe</text>
+<text x="93" y="58">es</text>
+<text x="313" y="58">ee</text>
+</g>
+<g style="font-family: sans-serif; font-style: italic; font-size: 8; text-anchor: left">
+<text x="152" y="18">Feature</text>
+<text x="93" y="39">Exon</text>
+</g>
+</svg>

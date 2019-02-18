@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 435 53">
+<defs>
+<g id="ins" style="stroke: #a92420; fill: none">
+  <path d="M-15,-22 c3,15 10,0 15,18 c5,-18 12,-3 15,-18" />
+</g>
+</defs>
+<g transform="translate(0,47)" style="font-family: sans-serif; font-size: 8; text-anchor: middle">
+<path d="M20,-10h400 M20,-14v7 m20,0v-7 m20,0v7 m20,0v-7 m20,0v7 m20,0v-7 m20,0v7 m20,0v-7 m20,0v7 m20,0v-7 m20,0v7 m20,0v-7 m20,0v7 m20,0v-7 m20,0v7 m20,0v-7 m20,0v7 m20,0v-7 m20,0v7 m20,0v-7 m20,0v7" stroke="grey" />
+<text x="20,40,60,80,100,120,140,160,180,200">0123456789</text>
+<text x="220">10</text>
+<text x="240">11</text>
+<text x="260">12</text>
+<text x="280">13</text>
+<text x="300">14</text>
+<text x="320">15</text>
+<text x="340">16</text>
+<text x="360">17</text>
+<text x="380">18</text>
+<text x="400">19</text>
+<text x="420">20</text>
+</g>
+<g transform="translate(0,33)" style="font-family: Courier, fixed; font-size: 14; text-anchor: middle">
+<text x="30,50,70,90">GGTG</text>
+<text x="110,130,150,170,190,210,270" style="fill: #a92420">GAGTGCC</text>
+<text x="230,250">GC</text>
+<text x="290,310,330,350,370,390,410">GCCATGG</text>
+<path d="M102,-4 h116 M265,1 l10,-10 m0,10 l-10,-10" style="stroke: #a92420" />
+<text x="270" y="-10">T</text>
+<use xlink:href="#ins" x="20"  /><text x="20"  y="-20">AAA</text>
+<use xlink:href="#ins" x="340" /><text x="340" y="-20">TTT</text>
+<use xlink:href="#ins" x="420" /><text x="420" y="-20">GGG</text>
+</g>
+</svg>
