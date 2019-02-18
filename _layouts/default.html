@@ -222,12 +222,10 @@
       {%- if this_author contains "@" -%}
         {% assign this_g_author = this_author | remove: "@" %}
 <a href="https://github.com/{{this_g_author}}/" target="_blank">{{this_author}}</a>&nbsp;
-      {%- else -%}
-        {% if page.author_link contains "http" %}
+      {%- elsif page.author_link contains "http" %}
 <a href="{{page.author_link}}" target="_blank">{{this_author}}</a>&nbsp;
-        {% else %}
+      {% else %}
 {{this_author}}&nbsp;
-        {% endif %}
       {%- endif -%}
     {% endfor %}
   {%- endif -%}
