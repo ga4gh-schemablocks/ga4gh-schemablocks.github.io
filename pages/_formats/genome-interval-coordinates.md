@@ -22,6 +22,8 @@ tags:
 
 Two integers that define the start and end positions of a range of residues, possibly with length zero, and specified using interbase coordinates. Coordinates are assumed to be positioned on a non-circular sequence.
 
+<!--more-->
+
 #### Model
 
 * start (uint64) start position >= 0 (required)
