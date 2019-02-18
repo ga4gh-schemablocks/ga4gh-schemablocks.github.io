@@ -2,7 +2,11 @@
 title: "Interbase Genome Coordinates"
 layout: default
 date: 2019-01-08
-author: "@jmarshall"
+author: 
+  - "@jmarshall"
+  - "@andrewyatz"
+  - "@mbaudis"
+permalink: /categories/formats/genome-interbase-coordinates.html
 description: >
   Recommendations to use 0-based positions and 0-based half-open intervals
   when representing genome coordinates and regions in APIs.
@@ -15,12 +19,25 @@ tags:
 
 ## {{ page.title }}
 
-### Recommendation
+### Recommendation (_DRAFT_)
 
 Represent intervals in APIs using **0-based half-open** coordinates, also referred to as **interbase** representation.
 Similarly, represent positions in APIs using 0‑based coordinates.
 
 <!--more-->
+
+#### Contributors
+
+{%- if page.author -%}
+  {%- for this_author in page.author -%}
+    {%- if this_author contains "@" -%}
+      {% assign this_g_author = this_author | remove: "@" %}
+* [{{this_author}}](https://github.com/{{this_g_author}}/)
+    {% else %}
+* {{this_author}}
+    {%- endif -%}
+  {% endfor %}
+{%- endif -%}
 
 ### Summary
 
