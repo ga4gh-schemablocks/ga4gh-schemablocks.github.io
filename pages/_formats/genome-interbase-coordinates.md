@@ -1,5 +1,5 @@
 ---
-title: "Genome Coordinates"
+title: "Interbase Genome Coordinates"
 layout: default
 date: 2019-01-08
 author: "@jmarshall"
@@ -20,11 +20,13 @@ tags:
 Represent intervals in APIs using **0-based half-open** coordinates, also referred to as **interbase** representation.
 Similarly, represent positions in APIs using 0‑based coordinates.
 
+<!--more-->
+
 ### Summary
 
 Consider a subsequence `GAGTGC` of a larger sequence of bases (which might be a reference chromosome, for example):
 
-![Sequence data with 1-based coordinates](1-based.svg)
+<img src="{{ 'assets' | relative_url }}/img/genome-coordinates-img/1-based.svg" alt="Sequence data with 1-based coordinates" />
 
 When a human is working with this subsequence, or it is being discussed amongst humans, we might refer to it as spanning coordinates 5--10 on the larger sequence.
 Formally, this is 1-based inclusive/closed-at-both-ends reckoning, and it's natural and convenient for humans as it's what we're used to.
@@ -32,13 +34,13 @@ Formally, this is 1-based inclusive/closed-at-both-ends reckoning, and it's natu
 However this is not the best coordinate representation for doing arithmetic with.
 Interval arithmetic and the representation of edge cases are more straightforward and unambiguous using a 0-based half-open representation:
 
-![Sequence data with 0-based coordinates](0-based.svg)
+<img src="{{ 'assets' | relative_url }}/img/genome-coordinates-img/0-based.svg" alt="Sequence data with 0-based coordinates" />
 
 In this representation we would write the subsequence as spanning the interval \[4,10) --- i.e., starting at (zero-based) position 4, and continuing up to but not including position 10.
 
 An alternative and equivalent way to look at this is to think of the bases as lying _between_ the coordinate positions:
 
-![Sequence data with interbase coordinates](interbase.svg)
+<img src="{{ 'assets' | relative_url }}/img/genome-coordinates-img/interbase.svg" alt="Sequence data with interbase coordinates" />
 
 In these **interbase** coordinates, we would say the subsequence lies between positions 4 and 10.
 
@@ -58,7 +60,7 @@ Further advantages include in particular the unambiguous representation of indel
 The interbase interpretation is a particularly effective way of thinking about insertions and other events that occur between bases.
 Consider again this twenty base reference sequence:
 
-![Insertions and deletions](indels.svg)
+<img src="{{ 'assets' | relative_url }}/img/genome-coordinates-img/indels.svg" alt="Insertions and deletions" />
 
 These insertions are unambiguously at between-bases positions 0, 16, and 20.
 By interpreting the position as between the bases, 16 clearly indicates that the `TTT` is inserted between `C` and `A`, and the `AAA` and `GGG` are clearly inserted at the start or end of the sequence.
@@ -84,7 +86,7 @@ Using fully-inclusive human-readable notation leads to inferior representations 
 Consider some feature lying on an exon, whose location is represented as \[fs,fe) relative to the start of the exon.
 In turn, the exon is located at coordinates \[es,ee) on a reference chromosome:
 
-![Feature nested on an exon](nested.svg)
+<img src="{{ 'assets' | relative_url }}/img/genome-coordinates-img/nested.svg" alt="Feature nested on an exon" />
 
 With 0-based coordinates, calculating the feature's location on the chromosome is simple: \[fs+es,fe+es).
 
