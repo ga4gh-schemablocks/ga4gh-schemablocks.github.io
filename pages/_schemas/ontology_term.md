@@ -1,6 +1,8 @@
 ---
 title: 'Ontology_term'
 layout: default
+author:
+  - "@mbaudis"
 excerpt_separator: <!--more-->
 category:
   - schemas
@@ -35,7 +37,9 @@ The original schema definitions are provided in the [YAML file](https://github.c
     <td>the text label associated with the term</td>
   </tr>
 
-</table>Ontology_term represents the core object used to reference domain-specific 
+</table>
+
+Ontology_term represents the core object used to reference domain-specific 
 entities, as well as to identify their domains through the appropriate
 prefix.
 CURIES are case sensitive, although for prefixes this practice is 
