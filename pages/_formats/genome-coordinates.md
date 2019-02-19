@@ -128,14 +128,12 @@ GA4GH APIs facilitate the external communication of internal data representation
 
 ### Further Reading
 
-* the [documentation](https://ga4gh-schemas.readthedocs.io/en/latest/schemas/variants.proto.html#protobuf.Variant) of the `Variant` object for the original [_GA4GH schema_](https://github.com/ga4gh/ga4gh-schemas)
+* The [Variant object](https://ga4gh-schemas.readthedocs.io/en/latest/schemas/variants.proto.html#protobuf.Variant) from the original [_GA4GH schema_](https://github.com/ga4gh/ga4gh-schemas)
 and the discussions that led to it:
 [#49](https://github.com/ga4gh/ga4gh-schemas/pull/49#issuecomment-44503976)
 and [#121](https://github.com/ga4gh/ga4gh-schemas/issues/121).
-* a [nice explanation of coordinate systems](https://www.biostars.org/p/84686/) at _Biostars.org_ by Obi Griffith
-* [Chado Interbase documentation](http://gmod.org/wiki/Introduction_to_Chado#Interbase_Coordinates)
-* [Interbase primer](http://bergmanlab.genetics.uga.edu/?p=36) 
-* [Beacon’s support for coordinate systems](https://github.com/ga4gh-beacon/specification/issues/251)
-* [Refget’s support for coordinate systems](https://github.com/samtools/hts-specs/pull/327#issuecomment-411458808)
-* [UCSC information on “0-start, half-open”](http://genome.ucsc.edu/blog/the-ucsc-genome-browser-coordinate-counting-systems/)
-* [Transforming between coordinates in “0-start, half open”](http://genomewiki.ucsc.edu/index.php/Coordinate_Transforms)
+* Obi Griffith's [tutorial on one-based vs zero-based indel representations](https://www.biostars.org/p/84686/) and the ensuing discussion of corner cases on _Biostars.org_.
+* Chado's [description of interbase coordinates](http://gmod.org/wiki/Introduction_to_Chado#Interbase_Coordinates).
+* The Bergman Lab's discussion of [interbase coordinates and transposable element annotation](http://bergmanlab.genetics.uga.edu/?p=36).
+* UCSC Genome Browser discussion of [1-start fully-closed and 0-start half-open coordinate systems](http://genome.ucsc.edu/blog/the-ucsc-genome-browser-coordinate-counting-systems/) and [transforming between the two](http://genomewiki.ucsc.edu/index.php/Coordinate_Transforms).
+* The [GA4GH Variation Modelling Collaboration](https://github.com/ga4gh/vmc).
