@@ -17,16 +17,32 @@ tags:
 
 ## {{ page.title }}
 
-### Recommendation
+### Recommendation (_DRAFT_)
 
 Represent intervals in APIs using **0-based half-open** coordinates, also referred to as **interbase** representation.
 Similarly, represent positions in APIs using 0‑based coordinates.
+
+<!--more-->
+
+### Contributors
+
+{% if page.author %}
+  {%- for this_author in page.author -%}
+    {%- if this_author contains "@" -%}
+      {% assign this_g_author = this_author | remove: "@" %}
+* [{{this_author}}](https://github.com/{{this_g_author}}/)
+    {% else %}
+* {{this_author}}
+    {%- endif -%}
+  {% endfor %}
+{% endif %}
+
 
 ### Summary
 
 Consider a subsequence `GAGTGC` of a larger sequence of bases (which might be a reference chromosome, for example):
 
-![Sequence data with 1-based coordinates](1-based.svg)
+![Sequence data with 1-based coordinates](/assets/img/genome-coordinates-img/1-based.svg)
 
 When a human is working with this subsequence, or it is being discussed amongst humans, we might refer to it as spanning coordinates 5--10 on the larger sequence.
 Formally, this is 1-based inclusive/closed-at-both-ends reckoning, also known as "biological" or "Ensembl-style" coordinates, and it's natural and convenient for humans as it's what we're used to.
@@ -34,13 +50,13 @@ Formally, this is 1-based inclusive/closed-at-both-ends reckoning, also known as
 However this is not the best coordinate representation for doing arithmetic with.
 Interval arithmetic and the representation of edge cases are more straightforward and unambiguous using a 0-based half-open representation, also known as "UCSC-style":
 
-![Sequence data with 0-based coordinates](0-based.svg)
+![Sequence data with 0-based coordinates](/assets/img/genome-coordinates-img/0-based.svg)
 
 In this representation we would write the subsequence as spanning the interval \[4,10) --- i.e., starting at (zero-based) position 4, and continuing up to but not including position 10.
 
 An alternative and equivalent way to look at this is to think of the bases as lying _between_ the coordinate positions:
 
-![Sequence data with interbase coordinates](interbase.svg)
+![Sequence data with interbase coordinates](/assets/img/genome-coordinates-img/interbase.svg)
 
 In these **interbase** coordinates (also known as "Chado-style"), we would say the subsequence lies between positions 4 and 10.
 
@@ -60,7 +76,7 @@ Further advantages include in particular the unambiguous representation of indel
 The interbase interpretation is a particularly effective way of thinking about insertions and other events that occur between bases.
 Consider again this twenty base reference sequence:
 
-![Insertions and deletions](indels.svg)
+![Insertions and deletions](/assets/img/genome-coordinates-img/indels.svg)
 
 These insertions are unambiguously at between-bases positions 0, 16, and 20.
 By interpreting the position as between the bases, 16 clearly indicates that the `TTT` is inserted between `C` and `A`, and the `AAA` and `GGG` are clearly inserted at the start or end of the sequence.
@@ -86,7 +102,7 @@ Using fully-inclusive human-readable notation leads to inferior representations 
 Consider some feature lying on an exon, whose location is represented as \[fs,fe) relative to the start of the exon.
 In turn, the exon is located at coordinates \[es,ee) on a reference chromosome:
 
-![Feature nested on an exon](nested.svg)
+![Feature nested on an exon](/assets/img/genome-coordinates-img/nested.svg)
 
 With 0-based coordinates, calculating the feature's location on the chromosome is simple: \[fs+es,fe+es).
 
@@ -117,9 +133,9 @@ and the discussions that led to it:
 [#49](https://github.com/ga4gh/ga4gh-schemas/pull/49#issuecomment-44503976)
 and [#121](https://github.com/ga4gh/ga4gh-schemas/issues/121).
 * a [nice explanation of coordinate systems](https://www.biostars.org/p/84686/) at _Biostars.org_ by Obi Griffith
-* Chado Interbase documentation http://gmod.org/wiki/Introduction_to_Chado#Interbase_Coordinates
-* Interbase primer http://bergmanlab.genetics.uga.edu/?p=36 
-* Beacon’s support for coordinate systems https://github.com/ga4gh-beacon/specification/issues/251
-* Refget’s support for coordinate systems https://github.com/samtools/hts-specs/pull/327#issuecomment-411458808
-* UCSC information on “0-start, half-open” http://genome.ucsc.edu/blog/the-ucsc-genome-browser-coordinate-counting-systems/
-* Transforming between coordinates in “0-start, half open” http://genomewiki.ucsc.edu/index.php/Coordinate_Transforms
+* [Chado Interbase documentation](http://gmod.org/wiki/Introduction_to_Chado#Interbase_Coordinates)
+* [Interbase primer](http://bergmanlab.genetics.uga.edu/?p=36) 
+* [Beacon’s support for coordinate systems](https://github.com/ga4gh-beacon/specification/issues/251)
+* [Refget’s support for coordinate systems](https://github.com/samtools/hts-specs/pull/327#issuecomment-411458808)
+* [UCSC information on “0-start, half-open”](http://genome.ucsc.edu/blog/the-ucsc-genome-browser-coordinate-counting-systems/)
+* [Transforming between coordinates in “0-start, half open”](http://genomewiki.ucsc.edu/index.php/Coordinate_Transforms)
