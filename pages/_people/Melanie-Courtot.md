@@ -1,6 +1,7 @@
 ---
 title: "Melanie Courtot"
 layout: default
+date: 2018-12-12
 excerpt_separator: <!--more-->
 image_file: 'courtot_melanie_web_2015_2.jpg'
 category:
