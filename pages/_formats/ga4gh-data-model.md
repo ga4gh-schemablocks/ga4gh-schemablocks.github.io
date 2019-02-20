@@ -25,7 +25,9 @@ The GA4GH data model recommends the use of a default object hierarchy in standar
 <!--more-->
 
 <div style="display: block; float: right; width: 260px; margin: 0px 0px 15px 15px; ">
+  
 ![GA4GH core object model](/assets/img/ga4gh-object-model.png)
+  
   <div style="display: block; width: 260px; text-align: justify; font-size: 0.8em; color: #03c; background-color: #eee; padding: 5px;">
 A graph showing recommended basic objects and their relationships. The names and attributes are examples and may diverge in count and specific wording (e.g. "subject" instead of "individual") in specific implementations.
   </div>
