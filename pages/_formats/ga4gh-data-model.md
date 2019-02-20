@@ -72,4 +72,6 @@ For a consistant API design, it is important to relate observations and measurem
 
 ### Further Reading
 
-* original [GA4GH schema](https://github.com/ga4gh/ga4gh-schemas/)
+* [GA4GH schema documentation](https://ga4gh-schemas.readthedocs.io/en/latest/api/metadata.html)
+    - deprecated but informative
+* original [GA4GH schema](https://github.com/ga4gh/ga4gh-schemas/) code repository
