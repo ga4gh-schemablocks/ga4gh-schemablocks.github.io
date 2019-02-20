@@ -1,13 +1,12 @@
 ---
-title: "Genome Interval Use in GA4GH Products"
+title: "Genome Coordinate Use in GA4GH"
 layout: default
-permalink: /formats/genome-interval-coordinate-use.html
-date: 2019-01-23
+permalink: /categories/formats/genome-coordinate-use.html
+date: 2019-02-20
 author: 
-  - "@andrewyatz"
   - "@mbaudis"
+  - "@andrewyatz"
   - "@jmarshall"
-  - "@reece"
 excerpt_separator: <!--more-->
 category:
   - formats
@@ -17,9 +16,9 @@ tags:
 
 ## {{ page.title }}
 
-### Recommendation (_DRAFT_)
+For product and standard development, GA4GH recommends to represent genome intervals in APIs using **0-based half-open** coordinates, also referred to as **interbase** representation. Similarly, positions in APIs should be represented using **0‑based** coordinates.
 
-While standards and products in the GA4GH ecosystem use different methods to reference genome coordinates, for future standard definitions GA4GH recommends the adoption of __"0-based, half-open"__ coordinates.
+The details of the format are found in the [__GA4GH Genome Coordinates__](/categories/formats/recommendation-genome-coordinates.html) document.
 
 <!--more-->
 
@@ -34,48 +33,22 @@ While standards and products in the GA4GH ecosystem use different methods to ref
 * {{this_author}}
     {%- endif -%}
   {% endfor %}
-{% endif %}  
-
-
-### Definition
-
-Two integers that define the start and end positions of a range of residues, possibly with length zero, and specified using interbase coordinates. Coordinates are assumed to be positioned on a non-circular sequence.
-
-### Model
-
-* start (uint64) start position >= 0 (required)
-* end (uint64) end position >= start (required)
-
-### Background
-
-When humans refer to a range of residues within a sequence, the most common convention is to use an interval of ordinal residue positions in the sequence i.e. start counting residues from 1. This system is also referred to as "1-start, fully-closed", biological coordinates and "Ensembl style". While natural for humans, this convention has several shortcomings for data modelling and programming.
-
-GA4GH prefers the use of interbase or "0-based, half-open" coordinates (also known as Chado or "UCSC style") and strongly advises that all future products prefer their use for future products unless the product visually displays data to a human.
-
-Interbase coordinates refer to the zero-width points before and after residues. An interval of interbase coordinates permits referring to any span, including an empty span, before, within, or after a sequence.
-
-### The Interbase Coordinate System
-
-* A detailed description of the interbase coordinate system is being [provided on a separate page](/categories/formats/genome-interbase-coordinates.html).
-
-While interbase is numerically equivalent to "0-start, half-open", they are _semantically_ different. Interbase does not refer to residues and therefore can model events occurring between residues, the start and end of a sequence. For non-circular sequences the following holds true.
-
-* Interbase coordinates start at 0
-* Start must be >= 0
-* End must be >= start 
-* The length of an interval is (end - start)
-* The reverse start is (sequence length - end)
-* The reverse end is (sequence length - (start-1))
-* A zero-length interval (start == end) is a point between two residues
-* An interval of length 1 is a residue position
-* Two intervals are equal if their start and end are equal
-* Two intervals intersect if start or end occurs between the start and end of the other
-* Two intervals coincide if they intersect or if they are equal
+{% endif %} 
 
 ### GA4GH Products and Their Supported Interval Systems
 
+Due to the adoption of pre-established community standards and projects, throughout the GA4GH ecosystem a variety of genome coordinate systems are still being used.
+
+The SAM/BAM/CRAM sequencing data formats and VCF/BCF variant call formats primarily store positions and various lengths, so don't represent intervals directly.
+SAM and VCF are human-readable text formats and use 1-based positions, while BAM, CRAM, and BCF are binary machine-orientated formats using 0-based positions.
+
+The htsget, refget, and Beacon protocols all use 0-based half-open or interbase intervals.
+The Variation Modelling Collaboration recommends the interbase approach.
+
+The table below provides an overview.
+
 | Product | Interbase | 0-start, half-open | 1-start, fully-closed |
- | --- | :---: | :---: | :---: |
+| --- | :---: | :---: | :---: |
 | BAM/CRAM |  | X |  | 
 | SAM |  |  | X | 
 | VCF |  |  | X | 
@@ -86,12 +59,10 @@ While interbase is numerically equivalent to "0-start, half-open", they are _sem
 | VMC | X |  |  | 
 
 
-### Circular Regions
-Circular regions are not considered to be part of GA4GH and not covered here, since human genome data is handled as linear sequence. APIs may choose to support a circular location but must still support interbase coordinates.
-
 ### Additional Links
 
-* [Detailed description of the interbase coordinate system](/categories/formats/genome-interbase-coordinates.html)
+* [Detailed description of the interbase coordinate system](/categories/formats/recommendation-genome-coordinates.html)
+    - This is the document describing the recommended format for GA4GH products and standards development.
 * [Chado Interbase documentation](http://gmod.org/wiki/Introduction_to_Chado#Interbase_Coordinates)
 * [Interbase primer](http://bergmanlab.genetics.uga.edu/?p=36) 
 * [Beacon’s support for coordinate systems](https://github.com/ga4gh-beacon/specification/issues/251)
