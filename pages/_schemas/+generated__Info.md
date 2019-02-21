@@ -58,8 +58,8 @@ tags:
 ```
 {
    "type" : "number",
-   "format" : "int64",
    "value" : 1503320,
+   "format" : "int64",
    "description" : "The base length of the called segment"
 }
 ```
@@ -76,7 +76,7 @@ tags:
 'description' : "The base length of the called segment."
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/info.yaml).
 ##### format
 
 * format of the value; optional
@@ -86,7 +86,7 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 'format' : "int64"
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/info.yaml).
 ##### type
 
 * type of the value; optional
@@ -96,7 +96,7 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 'type' : "number"
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/info.yaml).
 ##### value
 
 * the value in a format correstponding to type
@@ -106,4 +106,4 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 'value' : "1503320"
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/info.yaml).

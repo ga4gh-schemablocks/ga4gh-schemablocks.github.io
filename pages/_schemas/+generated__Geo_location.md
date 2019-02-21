@@ -79,12 +79,12 @@ and avoids optional representation in non-standard units.
 
 ```
 {
+   "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
    "longitude" : 8.54,
    "country" : "Romania",
-   "city" : "Timisoara",
+   "latitude" : 47.37,
    "altitude" : 8848,
-   "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
-   "latitude" : 47.37
+   "city" : "Timisoara"
 }
 ```
 --------------------------------------------------------------------------------
@@ -100,7 +100,7 @@ and avoids optional representation in non-standard units.
 'altitude' : "8848"
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/geo_location.yaml).
 ##### city
 
 * 
@@ -110,7 +110,7 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 'city' : "Timisoara"
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/geo_location.yaml).
 ##### country
 
 * 
@@ -120,7 +120,7 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 'country' : "Romania"
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/geo_location.yaml).
 ##### label
 
 * A text representation, preferably using standard geographic identification elements,
@@ -134,7 +134,7 @@ of the corresponding latitude, longitude(, altitude). This representation serves
 'label' : "Str Marasesti 5, 300077 Timisoara, Romania"
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/geo_location.yaml).
 ##### latitude
 
 * signed decimal degrees (North, relative to Equator)
@@ -144,7 +144,7 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 'latitude' : "47.37"
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/geo_location.yaml).
 ##### longitude
 
 * signed decimal degrees (East, relative to IERS Reference Meridian)
@@ -154,4 +154,4 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 'longitude' : "8.54"
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/geo_location.yaml).

@@ -126,54 +126,54 @@ Examples would be a tissue biopsy, a single cell from a culture for single cell 
 
 ```
 {
-   "created" : "2017-10-25T07:06:03Z",
-   "project_id" : "ind-cnhl-1293347-004",
-   "updated" : "2017-10-25T07:06:03Z",
-   "description" : "Burkitt lymphoma, cell line Namalwa",
-   "geo_provenance" : {
-      "longitude" : 21.23,
-      "country" : "Romania",
-      "city" : "Timisoara",
-      "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
-      "latitude" : 45.75,
-      "altitude" : 94
-   },
    "id" : "AM_BS__NCBISKYCGH-1993",
-   "age_at_collection" : {
-      "age_class" : {
-         "label" : "Juvenile onset",
-         "id" : "HP:0003621"
-      },
-      "age" : "P56Y"
-   },
-   "external_references" : [
-      {
-         "description" : "Cellosaurus cell line identifier",
-         "type" : {
-            "label" : "HOS",
-            "id" : "cellosaurus:CVCL_0312"
-         },
-         "relation" : "provenance"
-      }
-   ],
-   "name" : "Sample BRCA-00429, 2nd replicate",
    "biocharacteristics" : [
       {
+         "description" : "Pancreatic Adenocarcinoma",
          "type" : {
             "id" : "icdot:C25.9",
             "label" : "Pancreas, NOS"
-         },
-         "description" : "Pancreatic Adenocarcinoma"
+         }
+      }
+   ],
+   "name" : "Sample BRCA-00429, 2nd replicate",
+   "geo_provenance" : {
+      "altitude" : 94,
+      "city" : "Timisoara",
+      "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
+      "longitude" : 21.23,
+      "country" : "Romania",
+      "latitude" : 45.75
+   },
+   "data_use_conditions" : {
+      "id" : "DUO:0000004",
+      "label" : "no restriction"
+   },
+   "individual_id" : "ind-cnhl-1293347-004",
+   "description" : "Burkitt lymphoma, cell line Namalwa",
+   "age_at_collection" : {
+      "age" : "P56Y",
+      "age_class" : {
+         "id" : "HP:0003621",
+         "label" : "Juvenile onset"
+      }
+   },
+   "project_id" : "ind-cnhl-1293347-004",
+   "created" : "2017-10-25T07:06:03Z",
+   "updated" : "2017-10-25T07:06:03Z",
+   "external_references" : [
+      {
+         "description" : "Cellosaurus cell line identifier",
+         "relation" : "provenance",
+         "type" : {
+            "label" : "HOS",
+            "id" : "cellosaurus:CVCL_0312"
+         }
       }
    ],
    "info" : {
       "death" : 1,
       "followup_time" : "P14M"
-   },
-   "individual_id" : "ind-cnhl-1293347-004",
-   "data_use_conditions" : {
-      "id" : "DUO:0000004",
-      "label" : "no restriction"
    }
 }
 ```
@@ -189,15 +189,15 @@ Examples would be a tissue biopsy, a single cell from a culture for single cell 
 
 ```
 'age_at_collection' : {
-  'age' => 'P56Y',
   'age_class' => {
-                   'id' => 'HP:0003621',
-                   'label' => 'Juvenile onset'
-                 }
+                   'label' => 'Juvenile onset',
+                   'id' => 'HP:0003621'
+                 },
+  'age' => 'P56Y'
 }
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/biosample.yaml).
 ##### biocharacteristics
 
 * biocharacteristics represents a wrapper list of "Phenotype" objects with properly prefixed term ids, describing features of the biosample.
@@ -210,8 +210,8 @@ Examples would be phenotypes, disease codes or other ontology classes specific t
   {
     'description' => 'Pancreatic Adenocarcinoma',
     'type' => {
-                'label' => 'Pancreas, NOS',
-                'id' => 'icdot:C25.9'
+                'id' => 'icdot:C25.9',
+                'label' => 'Pancreas, NOS'
               }
   },
   {
@@ -224,8 +224,8 @@ Examples would be phenotypes, disease codes or other ontology classes specific t
   {
     'description' => 'Pancreatic Adenocarcinoma',
     'type' => {
-                'id' => 'ncit:C8294',
-                'label' => 'Pancreatic Adenocarcinoma'
+                'label' => 'Pancreatic Adenocarcinoma',
+                'id' => 'ncit:C8294'
               }
   }
 ]
@@ -242,7 +242,7 @@ This call to the distinct funcion will return *all* bioterms ids for samples hav
 db.biosamples.distinct( "biocharacteristics.type.id", { "biocharacteristics.type.id" : { $regex : /ncit/ } } )
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/biosample.yaml).
 ##### created
 
 * The creation time of this record, in ISO8601
@@ -253,7 +253,7 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 'created' : "2017-10-25T07:06:03Z"
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/biosample.yaml).
 ##### data_use_conditions
 
 * Data use conditions applying to data from this biosample, as ontology object (e.g. DUO).
@@ -267,7 +267,7 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 }
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/biosample.yaml).
 ##### description
 
 * A free text description of the biosample. This should not contain any structured data.
@@ -277,7 +277,7 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 'description' : "Burkitt lymphoma, cell line Namalwa"
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/biosample.yaml).
 ##### external_references
 
 * list of reference_class objects with properly (e.g. identifiers.org) prefixed external identifiers and a term describing the relationship
@@ -287,20 +287,20 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 ```
 'external_references' : [
   {
-    'relation' => 'provenance',
     'type' => {
-                'id' => 'cellosaurus:CVCL_0312',
-                'label' => 'HOS'
+                'label' => 'HOS',
+                'id' => 'cellosaurus:CVCL_0312'
               },
+    'relation' => 'provenance',
     'description' => 'Cellosaurus cell line identifier'
   },
   {
     'relation' => 'report',
+    'description' => 'PubMed reference',
     'type' => {
-                'label' => 'Rearrangement of the p53 gene in human osteogenic sarcomas.',
-                'id' => 'pubmed:2823272'
-              },
-    'description' => 'PubMed reference'
+                'id' => 'pubmed:2823272',
+                'label' => 'Rearrangement of the p53 gene in human osteogenic sarcomas.'
+              }
   }
 ]
 ```
@@ -311,7 +311,7 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 db.biosamples.find( { "external_references.type.id" : "pubmed:17440070" } )
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/biosample.yaml).
 ##### geo_provenance
 
 * This geo_class attribute ideally describes the geographic location of where the sample was extracted.
@@ -321,16 +321,16 @@ Frequently this value may reflect either the place of the laboratory where the a
 
 ```
 'geo_provenance' : {
-  'longitude' => '21.23',
+  'latitude' => '45.75',
   'country' => 'Romania',
-  'city' => 'Timisoara',
-  'altitude' => 94,
+  'longitude' => '21.23',
   'label' => 'Str Marasesti 5, 300077 Timisoara, Romania',
-  'latitude' => '45.75'
+  'city' => 'Timisoara',
+  'altitude' => 94
 }
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/biosample.yaml).
 ##### id
 
 * The local-unique identifier of this biosample (referenced as "biosample_id"). This is unique in the context of the server instance.
@@ -340,7 +340,7 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 'id' : "AM_BS__NCBISKYCGH-1993"
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/biosample.yaml).
 ##### individual_id
 
 * In a complete data model "individual_id" points to the "id" of the individual ("donor") this <i>biosample</i> was derived from.
@@ -352,7 +352,7 @@ In a local context this could be the <code>id</code> attribute in a correspondin
 'individual_id' : "ind-cnhl-1293347-004"
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/biosample.yaml).
 ##### info
 
 * This is a wrapper for objects without further specification in the schema.
@@ -361,8 +361,8 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 
 ```
 'info' : {
-  'death' => 1,
-  'followup_time' => 'P14M'
+  'followup_time' => 'P14M',
+  'death' => 1
 }
 ```
 
@@ -372,7 +372,7 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 db.biosamples.find( {"info" : { $elemMatch: { "followup_time.value" : { $regex : /\P/ }, "death.value" : true } } } )
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/biosample.yaml).
 ##### name
 
 * A short descriptive name for sample which should be sufficient to distinguish it from other samples in the project or collection. This is a label or symbolic identifier for the biosample.
@@ -383,7 +383,7 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 'name' : "Sample BRCA-00429, 2nd replicate"
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/biosample.yaml).
 ##### project_id
 
 * The id attribute of the project that this biosample was collected in.
@@ -394,7 +394,7 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 'project_id' : "ind-cnhl-1293347-004"
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/biosample.yaml).
 ##### updated
 
 * The time of the last edit of this record, in ISO8601
@@ -405,4 +405,4 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 'updated' : "2022-11-11T09:45:13Z"
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/biosample.yaml).

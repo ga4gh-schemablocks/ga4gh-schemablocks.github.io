@@ -88,23 +88,23 @@ and is a shared identifier for all variants detected in this experiment, attribu
 
 ```
 {
-   "data_use_conditions" : {
-      "label" : "no restriction",
-      "id" : "DUO:0000004"
-   },
-   "info" : "no restriction",
-   "created" : "2017-10-25T07:06:03Z",
    "id" : "GSM264198",
-   "description" : "SNP6 array of cancer sample BRCA-0893",
+   "data_use_conditions" : {
+      "id" : "DUO:0000004",
+      "label" : "no restriction"
+   },
    "geo_provenance" : {
       "city" : "Timisoara",
       "longitude" : 21.23,
       "country" : "Romania",
-      "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
-      "latitude" : 45.75
+      "latitude" : 45.75,
+      "label" : "Str Marasesti 5, 300077 Timisoara, Romania"
    },
-   "biosample_id" : "SAMEA1234",
-   "updated" : "2017-10-25T07:06:03Z"
+   "description" : "SNP6 array of cancer sample BRCA-0893",
+   "updated" : "2017-10-25T07:06:03Z",
+   "created" : "2017-10-25T07:06:03Z",
+   "info" : "no restriction",
+   "biosample_id" : "SAMEA1234"
 }
 ```
 --------------------------------------------------------------------------------
@@ -121,7 +121,7 @@ and is a shared identifier for all variants detected in this experiment, attribu
 'biosample_id' : "pgx-bs-987647"
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/callset.yaml).
 ##### created
 
 * The creation time of this record, in ISO8601
@@ -132,7 +132,7 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 'created' : "2017-10-25T07:06:03Z"
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/callset.yaml).
 ##### data_use_conditions
 
 * Data use conditions applying to data from this callset, as ontology object (e.g. DUO).
@@ -141,12 +141,12 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 
 ```
 'data_use_conditions' : {
-  'id' => 'DUO:0000004',
-  'label' => 'no restriction'
+  'label' => 'no restriction',
+  'id' => 'DUO:0000004'
 }
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/callset.yaml).
 ##### description
 
 * A free text description of the callset.
@@ -157,7 +157,7 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 'description' : "SNP6 array of cancer sample BRCA-0893"
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/callset.yaml).
 ##### geo_provenance
 
 * This geo_class attribute ideally describes the geographic location of where this callset was analysed.
@@ -166,15 +166,15 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 
 ```
 'geo_provenance' : {
-  'latitude' => '45.75',
-  'label' => 'Str Marasesti 5, 300077 Timisoara, Romania',
   'city' => 'Timisoara',
+  'longitude' => '21.23',
   'country' => 'Romania',
-  'longitude' => '21.23'
+  'latitude' => '45.75',
+  'label' => 'Str Marasesti 5, 300077 Timisoara, Romania'
 }
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/callset.yaml).
 ##### id
 
 * The local-unique identifier of this callset (referenced as "callset_id").
@@ -184,7 +184,7 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 'id' : "GSM264198"
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/callset.yaml).
 ##### info
 
 * additional variant information, as defined in the example and accompanying documentation
@@ -193,14 +193,10 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 ```
 'info' : {
   'statusmaps' => {
-                    'ref' => './Info',
+                    'description' => 'The cnv_maps object is a wrapper for genomic interval mapped status information. In Progenetix and arrayMap, this is used to indictate - for fixed 1MB genome intervals - the status (dup_map => "DUP" or "", del_map => "DEL" or ""), or the maximum / minimum positive / negative value encountered in the segment, as far as it has been called to contain DUP or DEL.
+With a standard binning of 1MB, the arrays would contain ~3000 values each (depending on genome edition).
+',
                     'value' => {
-                                 'binning' => {
-                                                'description' => 'interval size in bases for the binning, when creating the cnv_maps',
-                                                'value' => 1000000,
-                                                'format' => 'int64',
-                                                'type' => 'number'
-                                              },
                                  'dupmap' => {
                                                'type' => 'array',
                                                'value' => [
@@ -218,16 +214,20 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
                                                           ],
                                                'description' => 'gain cnv status for the corresponding genome intervals
 '
-                                             }
+                                             },
+                                 'binning' => {
+                                                'value' => 1000000,
+                                                'description' => 'interval size in bases for the binning, when creating the cnv_maps',
+                                                'format' => 'int64',
+                                                'type' => 'number'
+                                              }
                                },
-                    'description' => 'The cnv_maps object is a wrapper for genomic interval mapped status information. In Progenetix and arrayMap, this is used to indictate - for fixed 1MB genome intervals - the status (dup_map => "DUP" or "", del_map => "DEL" or ""), or the maximum / minimum positive / negative value encountered in the segment, as far as it has been called to contain DUP or DEL.
-With a standard binning of 1MB, the arrays would contain ~3000 values each (depending on genome edition).
-'
+                    'ref' => './Info'
                   }
 }
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/callset.yaml).
 ##### updated
 
 * The time of the last edit of this record, in ISO8601
@@ -238,4 +238,4 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 'updated' : "2022-11-11T09:45:13Z"
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/callset.yaml).

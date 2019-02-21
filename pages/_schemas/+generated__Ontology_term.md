@@ -49,8 +49,8 @@ inconsistently followed.
 
 ```
 {
-   "id" : "DUO:0000004",
-   "label" : "no restriction"
+   "label" : "no restriction",
+   "id" : "DUO:0000004"
 }
 ```
 ```
@@ -61,8 +61,8 @@ inconsistently followed.
 ```
 ```
 {
-   "label" : "Glioblastoma",
-   "id" : "ncit:C3058"
+   "id" : "ncit:C3058",
+   "label" : "Glioblastoma"
 }
 ```
 --------------------------------------------------------------------------------
@@ -78,7 +78,7 @@ inconsistently followed.
 'id' : "ncit:C8294"
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/ontology_term.yaml).
 ##### label
 
 * the text label associated with the term
@@ -88,4 +88,4 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 'label' : "Pancreatic Adenocarcinoma"
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/ontology_term.yaml).

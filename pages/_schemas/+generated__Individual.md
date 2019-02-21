@@ -116,60 +116,60 @@ For resources where there may be more than one organism being studied it is advi
 
 ```
 {
-   "created" : "2017-10-25T07:06:03Z",
-   "organism" : {
-      "id" : "NCBITaxon:9606",
-      "label" : "Homo sapiens"
-   },
-   "updated" : "2017-10-25T07:06:03Z",
-   "id" : "AM_BS__NCBISKYCGH-1993",
    "description" : "patient with lung cancer, male smoker",
-   "geo_provenance" : {
-      "latitude" : 45.75,
-      "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
-      "altitude" : 94,
-      "country" : "Romania",
-      "longitude" : 21.23,
-      "city" : "Timisoara"
+   "data_use_conditions" : {
+      "label" : "no restriction",
+      "id" : "DUO:0000004"
    },
-   "external_references" : [
-      {
-         "relation" : "provenance",
-         "type" : {
-            "label" : "HOS",
-            "id" : "cellosaurus:CVCL_0312"
-         },
-         "description" : "Cellosaurus cell line identifier"
-      }
-   ],
-   "name" : "Ion Tichy, space explorer",
+   "geo_provenance" : {
+      "city" : "Timisoara",
+      "altitude" : 94,
+      "latitude" : 45.75,
+      "longitude" : 21.23,
+      "country" : "Romania",
+      "label" : "Str Marasesti 5, 300077 Timisoara, Romania"
+   },
    "biocharacteristics" : [
       {
+         "description" : "Patient with Down syndrome",
          "type" : {
             "label" : "Genetic anticipation",
             "id" : "HP:0003745"
-         },
-         "description" : "Patient with Down syndrome"
+         }
       }
    ],
+   "name" : "Ion Tichy, space explorer",
+   "id" : "AM_BS__NCBISKYCGH-1993",
    "sex" : {
-      "id" : "PATO:0020000",
-      "label" : "female genetic sex"
+      "label" : "female genetic sex",
+      "id" : "PATO:0020000"
    },
    "info" : {
       "last_name" : {
-         "value" : "Tichy",
-         "type" : "string"
+         "type" : "string",
+         "value" : "Tichy"
       },
       "first_name" : {
          "value" : "Ion",
          "type" : "string"
       }
    },
-   "data_use_conditions" : {
-      "id" : "DUO:0000004",
-      "label" : "no restriction"
-   }
+   "external_references" : [
+      {
+         "type" : {
+            "label" : "HOS",
+            "id" : "cellosaurus:CVCL_0312"
+         },
+         "relation" : "provenance",
+         "description" : "Cellosaurus cell line identifier"
+      }
+   ],
+   "organism" : {
+      "id" : "NCBITaxon:9606",
+      "label" : "Homo sapiens"
+   },
+   "updated" : "2017-10-25T07:06:03Z",
+   "created" : "2017-10-25T07:06:03Z"
 }
 ```
 --------------------------------------------------------------------------------
@@ -185,11 +185,11 @@ For resources where there may be more than one organism being studied it is advi
 ```
 'biocharacteristics' : [
   {
-    'description' => 'Patient with Down syndrome',
     'type' => {
-                'label' => 'Genetic anticipation',
-                'id' => 'HP:0003745'
-              }
+                'id' => 'HP:0003745',
+                'label' => 'Genetic anticipation'
+              },
+    'description' => 'Patient with Down syndrome'
   }
 ]
 ```
@@ -203,7 +203,7 @@ this call to the distinct funcion will return *all* HPO annotated classes
 db.biosamples.distinct( { "biocharacteristics.type.id", "biocharacteristics.type.id" : { $regex : /HP\:/i } } )
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/individual.yaml).
 ##### created
 
 * The creation time of this record, in ISO8601
@@ -214,7 +214,7 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 'created' : "2017-10-25T07:06:03Z"
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/individual.yaml).
 ##### data_use_conditions
 
 * Data use conditions applying to data from this individual, as ontology object (e.g. DUO).
@@ -223,12 +223,12 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 
 ```
 'data_use_conditions' : {
-  'label' => 'no restriction',
-  'id' => 'DUO:0000004'
+  'id' => 'DUO:0000004',
+  'label' => 'no restriction'
 }
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/individual.yaml).
 ##### description
 
 * A free text description of the individual.
@@ -238,7 +238,7 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 'description' : "patient with lung cancer, male smoker"
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/individual.yaml).
 ##### external_references
 
 * Different representations of the same record, not different records in relation with this individual
@@ -248,12 +248,12 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 ```
 'external_references' : [
   {
-    'description' => 'Cellosaurus cell line identifier',
-    'relation' => 'provenance',
     'type' => {
                 'id' => 'cellosaurus:CVCL_0312',
                 'label' => 'HOS'
-              }
+              },
+    'relation' => 'provenance',
+    'description' => 'Cellosaurus cell line identifier'
   }
 ]
 ```
@@ -264,7 +264,7 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 db.individuals.find( { "external_references.type.id" : "pubmed:17440070" } )
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/individual.yaml).
 ##### geo_provenance
 
 * This geo_class attribute ideally describes the geographic location of where this individual originates from.
@@ -274,16 +274,16 @@ This value may reflect either the place of birth or residence, but frequently ma
 
 ```
 'geo_provenance' : {
+  'altitude' => 94,
   'city' => 'Timisoara',
-  'country' => 'Romania',
-  'longitude' => '21.23',
-  'latitude' => '45.75',
   'label' => 'Str Marasesti 5, 300077 Timisoara, Romania',
-  'altitude' => 94
+  'latitude' => '45.75',
+  'longitude' => '21.23',
+  'country' => 'Romania'
 }
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/individual.yaml).
 ##### id
 
 * The local-unique identifier of this individual (referenced as "individual_id").
@@ -293,7 +293,7 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 'id' : "AM_BS__NCBISKYCGH-1993"
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/individual.yaml).
 ##### info
 
 * additional variant information, as defined in the example and accompanying documentation TODO this should be its own class
@@ -301,18 +301,18 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 
 ```
 'info' : {
-  'last_name' => {
-                   'value' => 'Tichy',
-                   'type' => 'string'
-                 },
   'first_name' => {
                     'type' => 'string',
                     'value' => 'Ion'
-                  }
+                  },
+  'last_name' => {
+                   'type' => 'string',
+                   'value' => 'Tichy'
+                 }
 }
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/individual.yaml).
 ##### name
 
 * A short descriptive "name" for the individual, which may or may not correspond to a "real name". Unstructured text.
@@ -323,7 +323,7 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 'name' : "Ion Tichy, space explorer"
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/individual.yaml).
 ##### organism
 
 * An NCBI taxonomy term describing the species of the individual.
@@ -333,12 +333,12 @@ For resources where there may be more than one organism being studied it is advi
 
 ```
 'organism' : {
-  'label' => 'Homo sapiens',
-  'id' => 'NCBITaxon:9606'
+  'id' => 'NCBITaxon:9606',
+  'label' => 'Homo sapiens'
 }
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/individual.yaml).
 ##### sex
 
 * A PATO term describing the biological sex of the individual
@@ -352,7 +352,7 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 }
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/individual.yaml).
 ##### updated
 
 * The time of the last edit of this record, in ISO8601
@@ -363,4 +363,4 @@ The original schema definitions are provided in the [YAML file]($yaml_src_web_li
 'updated' : "2022-11-11T09:45:13Z"
 ```
   
-The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
+The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/individual.yaml).
