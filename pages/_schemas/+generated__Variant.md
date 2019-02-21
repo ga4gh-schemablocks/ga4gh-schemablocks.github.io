@@ -12,7 +12,6 @@ tags:
 
 #### Status: __proposed__
 
-
 The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/variant.yaml).
 
 <!--more-->
@@ -129,32 +128,32 @@ This format may be superseeded or augmented based on current developments in the
 
 ```
 {
-   "created" : "2017-10-25T07:06:03Z",
-   "start" : [
-      "20867740"
-   ],
-   "reference_bases" : "G",
-   "id" : "id",
-   "updated" : "2017-10-25T07:06:03Z",
-   "mate_name" : 14,
    "genotype" : [
       "1",
       "."
    ],
-   "biosample_id" : "biosample_id",
-   "reference_name" : 8,
-   "alternate_bases" : "AC",
-   "digest" : "digest",
-   "info" : {
-      "cnv_value" : "-0.294",
-      "cnv_length" : 1205290
-   },
-   "variant_type" : "DEL",
-   "callset_id" : "callset_id",
    "end" : [
       "21977798",
       "21978106"
-   ]
+   ],
+   "reference_name" : 8,
+   "reference_bases" : "G",
+   "mate_name" : 14,
+   "biosample_id" : "biosample_id",
+   "info" : {
+      "cnv_length" : 1205290,
+      "cnv_value" : "-0.294"
+   },
+   "updated" : "2017-10-25T07:06:03Z",
+   "digest" : "digest",
+   "alternate_bases" : "AC",
+   "created" : "2017-10-25T07:06:03Z",
+   "variant_type" : "DEL",
+   "start" : [
+      "20867740"
+   ],
+   "id" : "id",
+   "callset_id" : "callset_id"
 }
 ```
 --------------------------------------------------------------------------------
@@ -252,8 +251,8 @@ db.variants.find( { "reference_name" : "9",  "variant_type" : "DEL", "start" : {
 
 ```
 'info' : {
-  'cnv_value' => '-0.294',
-  'cnv_length' => 1205290
+  'cnv_length' => 1205290,
+  'cnv_value' => '-0.294'
 }
 ```
 

@@ -12,7 +12,6 @@ tags:
 
 #### Status: __proposed__
 
-
 The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/ontology_term.yaml).
 
 <!--more-->
@@ -51,8 +50,8 @@ inconsistently followed.
 
 ```
 {
-   "id" : "DUO:0000004",
-   "label" : "no restriction"
+   "label" : "no restriction",
+   "id" : "DUO:0000004"
 }
 ```
 ```
@@ -63,8 +62,8 @@ inconsistently followed.
 ```
 ```
 {
-   "id" : "ncit:C3058",
-   "label" : "Glioblastoma"
+   "label" : "Glioblastoma",
+   "id" : "ncit:C3058"
 }
 ```
 --------------------------------------------------------------------------------

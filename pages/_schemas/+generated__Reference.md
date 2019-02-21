@@ -12,7 +12,6 @@ tags:
 
 #### Status: __proposed__
 
-
 The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/reference.yaml).
 
 <!--more-->
@@ -56,12 +55,12 @@ Using these references, the resources combine to build a web of information.
 
 ```
 {
-   "type" : {
-      "label" : "HOS",
-      "id" : "cellosaurus:CVCL_0312"
-   },
+   "description" : "Cellosaurus cell line identifier",
    "relation" : "provenance",
-   "description" : "Cellosaurus cell line identifier"
+   "type" : {
+      "id" : "cellosaurus:CVCL_0312",
+      "label" : "HOS"
+   }
 }
 ```
 --------------------------------------------------------------------------------

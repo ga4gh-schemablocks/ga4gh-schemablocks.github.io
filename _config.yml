@@ -46,6 +46,7 @@ collections_dir: pages  # optional; here, all collections are inside "/pages"
 nav_cat_blocks: # comma-separated "label,type,label_visibility"
   General: 'General,categories,hide'
   related_sites: 'Related Sites,related_sites,show'
+  github_projects: 'Github Projects,github_projects,show'
 
 General:
   news: News
@@ -69,6 +70,10 @@ related_sites:
   Phenopackets: 'http://github.com/phenopackets'
   GA4GH: 'http://www.ga4gh.org'
   'Beacon<span style="color: red; font-weight: 800;">+</span>': 'http://beacon.progenetix.org'
+
+github_projects:
+  'SchemaBlocks': 'http://github.com/ga4gh-schemablocks/'
+  'ELIXIR Beacon': 'http://github.com/beacon-project/'
   
 # tag_cloud items
 

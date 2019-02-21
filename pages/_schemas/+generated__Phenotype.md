@@ -12,7 +12,6 @@ tags:
 
 #### Status: __proposed__
 
-
 The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/phenotype.yaml).
 
 <!--more-->
@@ -72,22 +71,22 @@ FHIR mapping: Condition (https://www.hl7.org/fhir/condition.html) or Observation
 
 ```
 {
-   "severity" : {
-      "id" : "HP:0012825",
-      "label" : "Mild"
-   },
-   "type" : {
-      "id" : "ncit:C8294",
-      "label" : "Pancreatic Adenocarcinoma"
-   },
    "description" : "DUO:0000004",
-   "negated" : "",
    "evidence" : [
       {
-         "id" : "",
-         "label" : ""
+         "label" : "",
+         "id" : ""
       }
-   ]
+   ],
+   "negated" : "",
+   "severity" : {
+      "label" : "Mild",
+      "id" : "HP:0012825"
+   },
+   "type" : {
+      "label" : "Pancreatic Adenocarcinoma",
+      "id" : "ncit:C8294"
+   }
 }
 ```
 --------------------------------------------------------------------------------
@@ -151,8 +150,8 @@ FHIR mapping: Condition.severity
 
 ```
 'type' : {
-  'label' => 'Pancreatic Adenocarcinoma',
-  'id' => 'ncit:C8294'
+  'id' => 'ncit:C8294',
+  'label' => 'Pancreatic Adenocarcinoma'
 }
 ```
 

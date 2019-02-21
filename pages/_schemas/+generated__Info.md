@@ -12,7 +12,6 @@ tags:
 
 #### Status: __proposed__
 
-
 The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/info.yaml).
 
 <!--more-->
@@ -60,9 +59,9 @@ The original schema definitions are provided in the [YAML file](https://github.c
 ```
 {
    "type" : "number",
-   "value" : 1503320,
+   "format" : "int64",
    "description" : "The base length of the called segment",
-   "format" : "int64"
+   "value" : 1503320
 }
 ```
 --------------------------------------------------------------------------------

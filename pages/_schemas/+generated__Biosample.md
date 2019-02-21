@@ -12,7 +12,6 @@ tags:
 
 #### Status: __proposed__
 
-
 The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/biosample.yaml).
 
 <!--more-->
@@ -128,55 +127,55 @@ Examples would be a tissue biopsy, a single cell from a culture for single cell 
 
 ```
 {
-   "description" : "Burkitt lymphoma, cell line Namalwa",
-   "name" : "Sample BRCA-00429, 2nd replicate",
    "id" : "AM_BS__NCBISKYCGH-1993",
-   "project_id" : "ind-cnhl-1293347-004",
-   "data_use_conditions" : {
-      "id" : "DUO:0000004",
-      "label" : "no restriction"
-   },
+   "individual_id" : "ind-cnhl-1293347-004",
    "geo_provenance" : {
-      "longitude" : 21.23,
-      "latitude" : 45.75,
+      "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
       "city" : "Timisoara",
       "country" : "Romania",
-      "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
-      "altitude" : 94
+      "altitude" : 94,
+      "longitude" : 21.23,
+      "latitude" : 45.75
    },
-   "biocharacteristics" : [
-      {
-         "description" : "Pancreatic Adenocarcinoma",
-         "type" : {
-            "id" : "icdot:C25.9",
-            "label" : "Pancreas, NOS"
-         }
-      }
-   ],
    "external_references" : [
       {
          "type" : {
-            "label" : "HOS",
-            "id" : "cellosaurus:CVCL_0312"
+            "id" : "cellosaurus:CVCL_0312",
+            "label" : "HOS"
          },
          "relation" : "provenance",
          "description" : "Cellosaurus cell line identifier"
       }
    ],
    "created" : "2017-10-25T07:06:03Z",
+   "updated" : "2017-10-25T07:06:03Z",
    "age_at_collection" : {
       "age" : "P56Y",
       "age_class" : {
-         "id" : "HP:0003621",
-         "label" : "Juvenile onset"
+         "label" : "Juvenile onset",
+         "id" : "HP:0003621"
       }
    },
-   "individual_id" : "ind-cnhl-1293347-004",
    "info" : {
-      "followup_time" : "P14M",
-      "death" : 1
+      "death" : 1,
+      "followup_time" : "P14M"
    },
-   "updated" : "2017-10-25T07:06:03Z"
+   "biocharacteristics" : [
+      {
+         "description" : "Pancreatic Adenocarcinoma",
+         "type" : {
+            "label" : "Pancreas, NOS",
+            "id" : "icdot:C25.9"
+         }
+      }
+   ],
+   "data_use_conditions" : {
+      "label" : "no restriction",
+      "id" : "DUO:0000004"
+   },
+   "description" : "Burkitt lymphoma, cell line Namalwa",
+   "name" : "Sample BRCA-00429, 2nd replicate",
+   "project_id" : "ind-cnhl-1293347-004"
 }
 ```
 --------------------------------------------------------------------------------
@@ -192,8 +191,8 @@ Examples would be a tissue biopsy, a single cell from a culture for single cell 
 ```
 'age_at_collection' : {
   'age_class' => {
-                   'id' => 'HP:0003621',
-                   'label' => 'Juvenile onset'
+                   'label' => 'Juvenile onset',
+                   'id' => 'HP:0003621'
                  },
   'age' => 'P56Y'
 }
@@ -209,18 +208,18 @@ Examples would be phenotypes, disease codes or other ontology classes specific t
 ```
 'biocharacteristics' : [
   {
+    'description' => 'Pancreatic Adenocarcinoma',
     'type' => {
-                'id' => 'icdot:C25.9',
-                'label' => 'Pancreas, NOS'
-              },
-    'description' => 'Pancreatic Adenocarcinoma'
+                'label' => 'Pancreas, NOS',
+                'id' => 'icdot:C25.9'
+              }
   },
   {
-    'description' => 'Pancreatic Adenocarcinoma',
     'type' => {
                 'id' => 'icdom:81403',
                 'label' => 'Adenocarcinoma, NOS'
-              }
+              },
+    'description' => 'Pancreatic Adenocarcinoma'
   },
   {
     'type' => {
@@ -284,20 +283,20 @@ db.biosamples.distinct( "biocharacteristics.type.id", { "biocharacteristics.type
 ```
 'external_references' : [
   {
-    'description' => 'Cellosaurus cell line identifier',
     'relation' => 'provenance',
+    'description' => 'Cellosaurus cell line identifier',
     'type' => {
                 'id' => 'cellosaurus:CVCL_0312',
                 'label' => 'HOS'
               }
   },
   {
-    'description' => 'PubMed reference',
     'type' => {
                 'id' => 'pubmed:2823272',
                 'label' => 'Rearrangement of the p53 gene in human osteogenic sarcomas.'
               },
-    'relation' => 'report'
+    'relation' => 'report',
+    'description' => 'PubMed reference'
   }
 ]
 ```
@@ -317,12 +316,12 @@ Frequently this value may reflect either the place of the laboratory where the a
 
 ```
 'geo_provenance' : {
-  'label' => 'Str Marasesti 5, 300077 Timisoara, Romania',
   'altitude' => 94,
-  'country' => 'Romania',
-  'city' => 'Timisoara',
+  'longitude' => '21.23',
   'latitude' => '45.75',
-  'longitude' => '21.23'
+  'city' => 'Timisoara',
+  'country' => 'Romania',
+  'label' => 'Str Marasesti 5, 300077 Timisoara, Romania'
 }
 ```
 
@@ -354,8 +353,8 @@ In a local context this could be the <code>id</code> attribute in a correspondin
 
 ```
 'info' : {
-  'followup_time' => 'P14M',
-  'death' => 1
+  'death' => 1,
+  'followup_time' => 'P14M'
 }
 ```
 

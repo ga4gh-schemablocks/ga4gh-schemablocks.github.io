@@ -12,7 +12,6 @@ tags:
 
 #### Status: __proposed__
 
-
 The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/individual.yaml).
 
 <!--more-->
@@ -118,60 +117,60 @@ For resources where there may be more than one organism being studied it is advi
 
 ```
 {
-   "info" : {
-      "last_name" : {
-         "value" : "Tichy",
-         "type" : "string"
-      },
-      "first_name" : {
-         "value" : "Ion",
-         "type" : "string"
-      }
-   },
-   "sex" : {
-      "id" : "PATO:0020000",
-      "label" : "female genetic sex"
-   },
-   "updated" : "2017-10-25T07:06:03Z",
-   "organism" : {
-      "id" : "NCBITaxon:9606",
-      "label" : "Homo sapiens"
-   },
-   "geo_provenance" : {
-      "country" : "Romania",
-      "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
-      "altitude" : 94,
-      "longitude" : 21.23,
-      "latitude" : 45.75,
-      "city" : "Timisoara"
-   },
-   "biocharacteristics" : [
-      {
-         "description" : "Patient with Down syndrome",
-         "type" : {
-            "label" : "Genetic anticipation",
-            "id" : "HP:0003745"
-         }
-      }
-   ],
    "external_references" : [
       {
          "relation" : "provenance",
+         "description" : "Cellosaurus cell line identifier",
          "type" : {
-            "id" : "cellosaurus:CVCL_0312",
-            "label" : "HOS"
-         },
-         "description" : "Cellosaurus cell line identifier"
+            "label" : "HOS",
+            "id" : "cellosaurus:CVCL_0312"
+         }
       }
    ],
-   "created" : "2017-10-25T07:06:03Z",
-   "description" : "patient with lung cancer, male smoker",
+   "geo_provenance" : {
+      "longitude" : 21.23,
+      "altitude" : 94,
+      "latitude" : 45.75,
+      "city" : "Timisoara",
+      "country" : "Romania",
+      "label" : "Str Marasesti 5, 300077 Timisoara, Romania"
+   },
    "id" : "AM_BS__NCBISKYCGH-1993",
-   "name" : "Ion Tichy, space explorer",
+   "organism" : {
+      "label" : "Homo sapiens",
+      "id" : "NCBITaxon:9606"
+   },
+   "description" : "patient with lung cancer, male smoker",
+   "biocharacteristics" : [
+      {
+         "type" : {
+            "label" : "Genetic anticipation",
+            "id" : "HP:0003745"
+         },
+         "description" : "Patient with Down syndrome"
+      }
+   ],
    "data_use_conditions" : {
       "id" : "DUO:0000004",
       "label" : "no restriction"
-   }
+   },
+   "name" : "Ion Tichy, space explorer",
+   "info" : {
+      "first_name" : {
+         "type" : "string",
+         "value" : "Ion"
+      },
+      "last_name" : {
+         "type" : "string",
+         "value" : "Tichy"
+      }
+   },
+   "updated" : "2017-10-25T07:06:03Z",
+   "sex" : {
+      "label" : "female genetic sex",
+      "id" : "PATO:0020000"
+   },
+   "created" : "2017-10-25T07:06:03Z"
 }
 ```
 --------------------------------------------------------------------------------
@@ -188,8 +187,8 @@ For resources where there may be more than one organism being studied it is advi
 'biocharacteristics' : [
   {
     'type' => {
-                'id' => 'HP:0003745',
-                'label' => 'Genetic anticipation'
+                'label' => 'Genetic anticipation',
+                'id' => 'HP:0003745'
               },
     'description' => 'Patient with Down syndrome'
   }
@@ -223,8 +222,8 @@ db.biosamples.distinct( { "biocharacteristics.type.id", "biocharacteristics.type
 
 ```
 'data_use_conditions' : {
-  'id' => 'DUO:0000004',
-  'label' => 'no restriction'
+  'label' => 'no restriction',
+  'id' => 'DUO:0000004'
 }
 ```
 
@@ -272,11 +271,11 @@ This value may reflect either the place of birth or residence, but frequently ma
 ```
 'geo_provenance' : {
   'label' => 'Str Marasesti 5, 300077 Timisoara, Romania',
-  'altitude' => 94,
   'country' => 'Romania',
+  'city' => 'Timisoara',
   'latitude' => '45.75',
   'longitude' => '21.23',
-  'city' => 'Timisoara'
+  'altitude' => 94
 }
 ```
 
@@ -296,14 +295,14 @@ This value may reflect either the place of birth or residence, but frequently ma
 
 ```
 'info' : {
-  'last_name' => {
-                   'type' => 'string',
-                   'value' => 'Tichy'
-                 },
   'first_name' => {
-                    'value' => 'Ion',
-                    'type' => 'string'
-                  }
+                    'type' => 'string',
+                    'value' => 'Ion'
+                  },
+  'last_name' => {
+                   'value' => 'Tichy',
+                   'type' => 'string'
+                 }
 }
 ```
 
@@ -339,8 +338,8 @@ For resources where there may be more than one organism being studied it is advi
 
 ```
 'sex' : {
-  'label' => 'female genetic sex',
-  'id' => 'PATO:0020000'
+  'id' => 'PATO:0020000',
+  'label' => 'female genetic sex'
 }
 ```
 

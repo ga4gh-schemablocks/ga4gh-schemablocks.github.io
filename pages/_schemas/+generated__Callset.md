@@ -12,7 +12,6 @@ tags:
 
 #### Status: __proposed__
 
-
 The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/callset.yaml).
 
 <!--more-->
@@ -91,22 +90,22 @@ and is a shared identifier for all variants detected in this experiment, attribu
 ```
 {
    "description" : "SNP6 array of cancer sample BRCA-0893",
-   "id" : "GSM264198",
    "data_use_conditions" : {
-      "label" : "no restriction",
-      "id" : "DUO:0000004"
+      "id" : "DUO:0000004",
+      "label" : "no restriction"
    },
+   "biosample_id" : "SAMEA1234",
+   "updated" : "2017-10-25T07:06:03Z",
+   "info" : "no restriction",
+   "created" : "2017-10-25T07:06:03Z",
    "geo_provenance" : {
+      "longitude" : 21.23,
+      "latitude" : 45.75,
       "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
       "country" : "Romania",
-      "city" : "Timisoara",
-      "latitude" : 45.75,
-      "longitude" : 21.23
+      "city" : "Timisoara"
    },
-   "created" : "2017-10-25T07:06:03Z",
-   "info" : "no restriction",
-   "biosample_id" : "SAMEA1234",
-   "updated" : "2017-10-25T07:06:03Z"
+   "id" : "GSM264198"
 }
 ```
 --------------------------------------------------------------------------------
@@ -164,8 +163,8 @@ and is a shared identifier for all variants detected in this experiment, attribu
 
 ```
 'geo_provenance' : {
-  'longitude' => '21.23',
   'latitude' => '45.75',
+  'longitude' => '21.23',
   'city' => 'Timisoara',
   'country' => 'Romania',
   'label' => 'Str Marasesti 5, 300077 Timisoara, Romania'
@@ -189,12 +188,16 @@ and is a shared identifier for all variants detected in this experiment, attribu
 ```
 'info' : {
   'statusmaps' => {
+                    'description' => 'The cnv_maps object is a wrapper for genomic interval mapped status information. In Progenetix and arrayMap, this is used to indictate - for fixed 1MB genome intervals - the status (dup_map => "DUP" or "", del_map => "DEL" or ""), or the maximum / minimum positive / negative value encountered in the segment, as far as it has been called to contain DUP or DEL.
+With a standard binning of 1MB, the arrays would contain ~3000 values each (depending on genome edition).
+',
+                    'ref' => './Info',
                     'value' => {
                                  'binning' => {
+                                                'value' => 1000000,
                                                 'description' => 'interval size in bases for the binning, when creating the cnv_maps',
                                                 'format' => 'int64',
-                                                'type' => 'number',
-                                                'value' => 1000000
+                                                'type' => 'number'
                                               },
                                  'dupmap' => {
                                                'description' => 'gain cnv status for the corresponding genome intervals
@@ -214,11 +217,7 @@ and is a shared identifier for all variants detected in this experiment, attribu
                                                           ],
                                                'type' => 'array'
                                              }
-                               },
-                    'ref' => './Info',
-                    'description' => 'The cnv_maps object is a wrapper for genomic interval mapped status information. In Progenetix and arrayMap, this is used to indictate - for fixed 1MB genome intervals - the status (dup_map => "DUP" or "", del_map => "DEL" or ""), or the maximum / minimum positive / negative value encountered in the segment, as far as it has been called to contain DUP or DEL.
-With a standard binning of 1MB, the arrays would contain ~3000 values each (depending on genome edition).
-'
+                               }
                   }
 }
 ```

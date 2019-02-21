@@ -12,7 +12,6 @@ tags:
 
 #### Status: __proposed__
 
-
 The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/geo_location.yaml).
 
 <!--more-->
@@ -81,12 +80,12 @@ and avoids optional representation in non-standard units.
 
 ```
 {
-   "country" : "Romania",
    "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
-   "altitude" : 8848,
-   "longitude" : 8.54,
+   "city" : "Timisoara",
+   "country" : "Romania",
    "latitude" : 47.37,
-   "city" : "Timisoara"
+   "longitude" : 8.54,
+   "altitude" : 8848
 }
 ```
 --------------------------------------------------------------------------------
