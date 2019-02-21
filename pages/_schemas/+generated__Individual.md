@@ -1,6 +1,7 @@
 ---
 title: 'Individual'
 layout: default
+permalink: "/schemas/blocks/Individual.html"
 excerpt_separator: <!--more-->
 category:
   - schemas
@@ -8,6 +9,9 @@ tags:
   - code
 ---
 ## Individual
+
+#### Status: __proposed__
+
 
 The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/individual.yaml).
 
@@ -114,59 +118,59 @@ For resources where there may be more than one organism being studied it is advi
 
 ```
 {
-   "created" : "2017-10-25T07:06:03Z",
-   "id" : "AM_BS__NCBISKYCGH-1993",
-   "geo_provenance" : {
-      "city" : "Timisoara",
-      "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
-      "altitude" : 94,
-      "latitude" : 45.75,
-      "country" : "Romania",
-      "longitude" : 21.23
-   },
-   "external_references" : [
-      {
-         "relation" : "provenance",
-         "description" : "Cellosaurus cell line identifier",
-         "type" : {
-            "label" : "HOS",
-            "id" : "cellosaurus:CVCL_0312"
-         }
+   "info" : {
+      "last_name" : {
+         "value" : "Tichy",
+         "type" : "string"
+      },
+      "first_name" : {
+         "value" : "Ion",
+         "type" : "string"
       }
-   ],
+   },
    "sex" : {
       "id" : "PATO:0020000",
       "label" : "female genetic sex"
+   },
+   "updated" : "2017-10-25T07:06:03Z",
+   "organism" : {
+      "id" : "NCBITaxon:9606",
+      "label" : "Homo sapiens"
+   },
+   "geo_provenance" : {
+      "country" : "Romania",
+      "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
+      "altitude" : 94,
+      "longitude" : 21.23,
+      "latitude" : 45.75,
+      "city" : "Timisoara"
    },
    "biocharacteristics" : [
       {
          "description" : "Patient with Down syndrome",
          "type" : {
-            "id" : "HP:0003745",
-            "label" : "Genetic anticipation"
+            "label" : "Genetic anticipation",
+            "id" : "HP:0003745"
          }
       }
    ],
+   "external_references" : [
+      {
+         "relation" : "provenance",
+         "type" : {
+            "id" : "cellosaurus:CVCL_0312",
+            "label" : "HOS"
+         },
+         "description" : "Cellosaurus cell line identifier"
+      }
+   ],
+   "created" : "2017-10-25T07:06:03Z",
+   "description" : "patient with lung cancer, male smoker",
+   "id" : "AM_BS__NCBISKYCGH-1993",
+   "name" : "Ion Tichy, space explorer",
    "data_use_conditions" : {
       "id" : "DUO:0000004",
       "label" : "no restriction"
-   },
-   "info" : {
-      "first_name" : {
-         "value" : "Ion",
-         "type" : "string"
-      },
-      "last_name" : {
-         "type" : "string",
-         "value" : "Tichy"
-      }
-   },
-   "description" : "patient with lung cancer, male smoker",
-   "updated" : "2017-10-25T07:06:03Z",
-   "name" : "Ion Tichy, space explorer",
-   "organism" : {
-      "id" : "NCBITaxon:9606",
-      "label" : "Homo sapiens"
    }
 }
 ```
@@ -177,17 +181,17 @@ For resources where there may be more than one organism being studied it is advi
 ##### biocharacteristics
 
 * list of Phenotype objects with properly prefixed term ids, describing features of the individual which are not specific to the reported biosample(s); typical examples here are sex, species and "systemic" phenotypes and diseases
-  
-* example:  
+
+* example:
 
 ```
 'biocharacteristics' : [
   {
-    'description' => 'Patient with Down syndrome',
     'type' => {
                 'id' => 'HP:0003745',
                 'label' => 'Genetic anticipation'
-              }
+              },
+    'description' => 'Patient with Down syndrome'
   }
 ]
 ```
@@ -204,8 +208,8 @@ db.biosamples.distinct( { "biocharacteristics.type.id", "biocharacteristics.type
 ##### created
 
 * The creation time of this record, in ISO8601
-  
-* example:  
+
+* example:
 
 ```
 'created' : "2017-10-25T07:06:03Z"
@@ -214,8 +218,8 @@ db.biosamples.distinct( { "biocharacteristics.type.id", "biocharacteristics.type
 ##### data_use_conditions
 
 * Data use conditions applying to data from this individual, as ontology object (e.g. DUO).
-  
-* example:  
+
+* example:
 
 ```
 'data_use_conditions' : {
@@ -226,8 +230,8 @@ db.biosamples.distinct( { "biocharacteristics.type.id", "biocharacteristics.type
 
 ##### description
 
-* A free text description of the individual.  
-* example:  
+* A free text description of the individual.
+* example:
 
 ```
 'description' : "patient with lung cancer, male smoker"
@@ -236,18 +240,18 @@ db.biosamples.distinct( { "biocharacteristics.type.id", "biocharacteristics.type
 ##### external_references
 
 * Different representations of the same record, not different records in relation with this individual
-  
-* example:  
+
+* example:
 
 ```
 'external_references' : [
   {
-    'relation' => 'provenance',
-    'description' => 'Cellosaurus cell line identifier',
     'type' => {
-                'label' => 'HOS',
-                'id' => 'cellosaurus:CVCL_0312'
-              }
+                'id' => 'cellosaurus:CVCL_0312',
+                'label' => 'HOS'
+              },
+    'relation' => 'provenance',
+    'description' => 'Cellosaurus cell line identifier'
   }
 ]
 ```
@@ -262,24 +266,24 @@ db.individuals.find( { "external_references.type.id" : "pubmed:17440070" } )
 
 * This geo_class attribute ideally describes the geographic location of where this individual originates from.
 This value may reflect either the place of birth or residence, but frequently may correspond to the place the study was performed.
-  
-* example:  
+
+* example:
 
 ```
 'geo_provenance' : {
-  'longitude' => '21.23',
+  'label' => 'Str Marasesti 5, 300077 Timisoara, Romania',
+  'altitude' => 94,
   'country' => 'Romania',
   'latitude' => '45.75',
-  'altitude' => 94,
-  'label' => 'Str Marasesti 5, 300077 Timisoara, Romania',
+  'longitude' => '21.23',
   'city' => 'Timisoara'
 }
 ```
 
 ##### id
 
-* The local-unique identifier of this individual (referenced as "individual_id").  
-* example:  
+* The local-unique identifier of this individual (referenced as "individual_id").
+* example:
 
 ```
 'id' : "AM_BS__NCBISKYCGH-1993"
@@ -287,8 +291,8 @@ This value may reflect either the place of birth or residence, but frequently ma
 
 ##### info
 
-* additional variant information, as defined in the example and accompanying documentation TODO this should be its own class  
-* example:  
+* additional variant information, as defined in the example and accompanying documentation TODO this should be its own class
+* example:
 
 ```
 'info' : {
@@ -306,8 +310,8 @@ This value may reflect either the place of birth or residence, but frequently ma
 ##### name
 
 * A short descriptive "name" for the individual, which may or may not correspond to a "real name". Unstructured text.
-  
-* example:  
+
+* example:
 
 ```
 'name' : "Ion Tichy, space explorer"
@@ -317,8 +321,8 @@ This value may reflect either the place of birth or residence, but frequently ma
 
 * An NCBI taxonomy term describing the species of the individual.
 For resources where there may be more than one organism being studied it is advisable to indicate the taxonomic identifier of that organism, to it's most specific level
-  
-* example:  
+
+* example:
 
 ```
 'organism' : {
@@ -330,21 +334,21 @@ For resources where there may be more than one organism being studied it is advi
 ##### sex
 
 * A PATO term describing the biological sex of the individual
-  
-* example:  
+
+* example:
 
 ```
 'sex' : {
-  'id' => 'PATO:0020000',
-  'label' => 'female genetic sex'
+  'label' => 'female genetic sex',
+  'id' => 'PATO:0020000'
 }
 ```
 
 ##### updated
 
 * The time of the last edit of this record, in ISO8601
-  
-* example:  
+
+* example:
 
 ```
 'updated' : "2022-11-11T09:45:13Z"

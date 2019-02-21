@@ -1,8 +1,7 @@
 ---
 title: 'Ontology_term'
 layout: default
-author:
-  - "@mbaudis"
+permalink: "/schemas/blocks/Ontology_term.html"
 excerpt_separator: <!--more-->
 category:
   - schemas
@@ -10,6 +9,9 @@ tags:
   - code
 ---
 ## Ontology_term
+
+#### Status: __proposed__
+
 
 The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/ontology_term.yaml).
 
@@ -37,9 +39,7 @@ The original schema definitions are provided in the [YAML file](https://github.c
     <td>the text label associated with the term</td>
   </tr>
 
-</table>
-
-Ontology_term represents the core object used to reference domain-specific 
+</table>Ontology_term represents the core object used to reference domain-specific 
 entities, as well as to identify their domains through the appropriate
 prefix.
 CURIES are case sensitive, although for prefixes this practice is 
@@ -57,8 +57,8 @@ inconsistently followed.
 ```
 ```
 {
-   "label" : "Juvenile onset",
-   "id" : "HP:0003621"
+   "id" : "HP:0003621",
+   "label" : "Juvenile onset"
 }
 ```
 ```
@@ -73,8 +73,8 @@ inconsistently followed.
 
 ##### id
 
-* properly prefixed CURIE of the ontology term  
-* example:  
+* properly prefixed CURIE of the ontology term
+* example:
 
 ```
 'id' : "ncit:C8294"
@@ -82,8 +82,8 @@ inconsistently followed.
 
 ##### label
 
-* the text label associated with the term  
-* example:  
+* the text label associated with the term
+* example:
 
 ```
 'label' : "Pancreatic Adenocarcinoma"

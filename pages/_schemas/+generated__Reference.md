@@ -1,6 +1,7 @@
 ---
 title: 'Reference'
 layout: default
+permalink: "/schemas/blocks/Reference.html"
 excerpt_separator: <!--more-->
 category:
   - schemas
@@ -8,6 +9,9 @@ tags:
   - code
 ---
 ## Reference
+
+#### Status: __proposed__
+
 
 The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/reference.yaml).
 
@@ -53,11 +57,11 @@ Using these references, the resources combine to build a web of information.
 ```
 {
    "type" : {
-      "id" : "cellosaurus:CVCL_0312",
-      "label" : "HOS"
+      "label" : "HOS",
+      "id" : "cellosaurus:CVCL_0312"
    },
-   "description" : "Cellosaurus cell line identifier",
-   "relation" : "provenance"
+   "relation" : "provenance",
+   "description" : "Cellosaurus cell line identifier"
 }
 ```
 --------------------------------------------------------------------------------
@@ -66,8 +70,8 @@ Using these references, the resources combine to build a web of information.
 
 ##### description
 
-* Free text about the external reference  
-* example:  
+* Free text about the external reference
+* example:
 
 ```
 'description' : "Cellosaurus cell line identifier"
@@ -75,8 +79,8 @@ Using these references, the resources combine to build a web of information.
 
 ##### relation
 
-* the relation of the external reference to the object it was pointed from  
-* example:  
+* the relation of the external reference to the object it was pointed from
+* example:
 
 ```
 'relation' : "provenance"
@@ -86,8 +90,8 @@ Using these references, the resources combine to build a web of information.
 
 * A properly prefixed CURIE of the external reference and an associated label,
 represented as Ontoloyg_term object.
-  
-* example:  
+
+* example:
 
 ```
 'type' : {

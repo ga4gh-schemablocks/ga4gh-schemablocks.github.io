@@ -1,6 +1,7 @@
 ---
 title: 'Variant'
 layout: default
+permalink: "/schemas/blocks/Variant.html"
 excerpt_separator: <!--more-->
 category:
   - schemas
@@ -8,6 +9,9 @@ tags:
   - code
 ---
 ## Variant
+
+#### Status: __proposed__
+
 
 The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/variant.yaml).
 
@@ -125,32 +129,32 @@ This format may be superseeded or augmented based on current developments in the
 
 ```
 {
-   "variant_type" : "DEL",
+   "created" : "2017-10-25T07:06:03Z",
+   "start" : [
+      "20867740"
+   ],
+   "reference_bases" : "G",
+   "id" : "id",
    "updated" : "2017-10-25T07:06:03Z",
+   "mate_name" : 14,
    "genotype" : [
       "1",
       "."
    ],
-   "mate_name" : 14,
-   "end" : [
-      "21977798",
-      "21978106"
-   ],
+   "biosample_id" : "biosample_id",
+   "reference_name" : 8,
+   "alternate_bases" : "AC",
    "digest" : "digest",
    "info" : {
       "cnv_value" : "-0.294",
       "cnv_length" : 1205290
    },
-   "start" : [
-      "20867740"
-   ],
-   "reference_bases" : "G",
-   "biosample_id" : "biosample_id",
-   "reference_name" : 8,
-   "alternate_bases" : "AC",
-   "created" : "2017-10-25T07:06:03Z",
-   "id" : "id",
-   "callset_id" : "callset_id"
+   "variant_type" : "DEL",
+   "callset_id" : "callset_id",
+   "end" : [
+      "21977798",
+      "21978106"
+   ]
 }
 ```
 --------------------------------------------------------------------------------
@@ -159,8 +163,8 @@ This format may be superseeded or augmented based on current developments in the
 
 ##### alternate_bases
 
-* one or more bases relative to start position of the reference genome,replacing the reference_bases value; for precise variants  
-* example:  
+* one or more bases relative to start position of the reference genome,replacing the reference_bases value; for precise variants
+* example:
 
 ```
 'alternate_bases' : "AC"
@@ -168,8 +172,8 @@ This format may be superseeded or augmented based on current developments in the
 
 ##### biosample_id
 
-* The identifier ("biosample.id") of the biosample this variant was reported from. This is a shortcut to using the variant -> callset -> biosample chaining.  
-* example:  
+* The identifier ("biosample.id") of the biosample this variant was reported from. This is a shortcut to using the variant -> callset -> biosample chaining.
+* example:
 
 ```
 'biosample_id' : "pgx-bs-987647"
@@ -177,8 +181,8 @@ This format may be superseeded or augmented based on current developments in the
 
 ##### callset_id
 
-* The identifier ("callset.id") of the callset this variant is part of.  
-* example:  
+* The identifier ("callset.id") of the callset this variant is part of.
+* example:
 
 ```
 'callset_id' : "PGX_AM_CS_GSM1690424"
@@ -187,8 +191,8 @@ This format may be superseeded or augmented based on current developments in the
 ##### created
 
 * The creation time of this record, in ISO8601
-  
-* example:  
+
+* example:
 
 ```
 'created' : "2017-10-25T07:06:03Z"
@@ -196,8 +200,8 @@ This format may be superseeded or augmented based on current developments in the
 
 ##### digest
 
-* concatenated unique specific elements of the variant  
-* example:  
+* concatenated unique specific elements of the variant
+* example:
 
 ```
 'digest' : "4:12282-46465:DEL"
@@ -205,8 +209,8 @@ This format may be superseeded or augmented based on current developments in the
 
 ##### end
 
-* array of 0 (for presise sequence variants), 1 or 2 (for imprecise end position of structural variant) integers  
-* example:  
+* array of 0 (for presise sequence variants), 1 or 2 (for imprecise end position of structural variant) integers
+* example:
 
 ```
 'end' : [
@@ -222,8 +226,8 @@ db.variants.find( { "reference_name" : "9",  "variant_type" : "DEL", "start" : {
 
 ##### genotype
 
-* list of strings, which represent the (phased) alleles in which the variant was being observed  
-* example:  
+* list of strings, which represent the (phased) alleles in which the variant was being observed
+* example:
 
 ```
 'genotype' : [
@@ -234,8 +238,8 @@ db.variants.find( { "reference_name" : "9",  "variant_type" : "DEL", "start" : {
 
 ##### id
 
-* The local-unique identifier of this variant (referenced as "variant_id").  
-* example:  
+* The local-unique identifier of this variant (referenced as "variant_id").
+* example:
 
 ```
 'id' : "amvar-8754-7751-1119-8539"
@@ -243,8 +247,8 @@ db.variants.find( { "reference_name" : "9",  "variant_type" : "DEL", "start" : {
 
 ##### info
 
-* additional variant information, as defined in the example and accompanying documentation  
-* example:  
+* additional variant information, as defined in the example and accompanying documentation
+* example:
 
 ```
 'info' : {
@@ -256,8 +260,8 @@ db.variants.find( { "reference_name" : "9",  "variant_type" : "DEL", "start" : {
 ##### mate_name
 
 * Mate name (chromosome) for fusion (BRK) events; otherwise left empty. Accepting values 1-22, X, Y.
-  
-* example:  
+
+* example:
 
 ```
 'mate_name' : "14"
@@ -265,8 +269,8 @@ db.variants.find( { "reference_name" : "9",  "variant_type" : "DEL", "start" : {
 
 ##### reference_bases
 
-* one or more bases at start position in the reference genome, which have been replaced by the alternate_bases value; for precise variants  
-* example:  
+* one or more bases at start position in the reference genome, which have been replaced by the alternate_bases value; for precise variants
+* example:
 
 ```
 'reference_bases' : "G"
@@ -274,8 +278,8 @@ db.variants.find( { "reference_name" : "9",  "variant_type" : "DEL", "start" : {
 
 ##### reference_name
 
-* Reference name (chromosome). Accepting values 1-22, X, Y.  
-* example:  
+* Reference name (chromosome). Accepting values 1-22, X, Y.
+* example:
 
 ```
 'reference_name' : "8"
@@ -283,8 +287,8 @@ db.variants.find( { "reference_name" : "9",  "variant_type" : "DEL", "start" : {
 
 ##### start
 
-* array of 1 or 2 (for imprecise end position of structural variant) integers  
-* example:  
+* array of 1 or 2 (for imprecise end position of structural variant) integers
+* example:
 
 ```
 'start' : [
@@ -295,8 +299,8 @@ db.variants.find( { "reference_name" : "9",  "variant_type" : "DEL", "start" : {
 ##### updated
 
 * The time of the last edit of this record, in ISO8601
-  
-* example:  
+
+* example:
 
 ```
 'updated' : "2022-11-11T09:45:13Z"
@@ -304,8 +308,8 @@ db.variants.find( { "reference_name" : "9",  "variant_type" : "DEL", "start" : {
 
 ##### variant_type
 
-* the variant type in case of a named (structural) variant (e.g. DUP, DEL, BRK ...)  
-* example:  
+* the variant type in case of a named (structural) variant (e.g. DUP, DEL, BRK ...)
+* example:
 
 ```
 'variant_type' : "DEL"

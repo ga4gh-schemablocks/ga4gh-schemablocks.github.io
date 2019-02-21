@@ -1,6 +1,7 @@
 ---
 title: 'Phenotype'
 layout: default
+permalink: "/schemas/blocks/Phenotype.html"
 excerpt_separator: <!--more-->
 category:
   - schemas
@@ -8,6 +9,9 @@ tags:
   - code
 ---
 ## Phenotype
+
+#### Status: __proposed__
+
 
 The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/phenotype.yaml).
 
@@ -72,12 +76,12 @@ FHIR mapping: Condition (https://www.hl7.org/fhir/condition.html) or Observation
       "id" : "HP:0012825",
       "label" : "Mild"
    },
-   "negated" : "",
    "type" : {
-      "label" : "Pancreatic Adenocarcinoma",
-      "id" : "ncit:C8294"
+      "id" : "ncit:C8294",
+      "label" : "Pancreatic Adenocarcinoma"
    },
    "description" : "DUO:0000004",
+   "negated" : "",
    "evidence" : [
       {
          "id" : "",
@@ -94,8 +98,8 @@ FHIR mapping: Condition (https://www.hl7.org/fhir/condition.html) or Observation
 
 * Free-text description of the phenotype.
 Note this is not a acceptable place to document/describe the phenotype the type and onset etc... fields should be used for this purpose.
-  
-* example:  
+
+* example:
 
 ```
 'description' : "Pancreatic Adenocarcinoma"
@@ -103,8 +107,8 @@ Note this is not a acceptable place to document/describe the phenotype the type 
 
 ##### evidence
 
-* Evidences for how the phenotype was determined  
-* example:  
+* Evidences for how the phenotype was determined
+* example:
 
 ```
 'evidence' : [
@@ -119,8 +123,8 @@ Note this is not a acceptable place to document/describe the phenotype the type 
 
 * Flag to indicate whether the phenotype was observed or not. Default is 'false', in other words the phenotype was observed.
 It is only required in cases to indicate that the phenotype was looked for, but __not__ observed.
-  
-* example:  
+
+* example:
 
 ```
 'negated' : ""
@@ -130,8 +134,8 @@ It is only required in cases to indicate that the phenotype was looked for, but 
 
 * Severity of the condition e.g. subclasses of HP:0012824-Severity or SNOMED:272141005-Severities.
 FHIR mapping: Condition.severity
-  
-* example:  
+
+* example:
 
 ```
 'severity' : {
@@ -142,8 +146,8 @@ FHIR mapping: Condition.severity
 
 ##### type
 
-* The ontology term as Ontology_term. The primary ontology class which describes the phenotype.  
-* example:  
+* The ontology term as Ontology_term. The primary ontology class which describes the phenotype.
+* example:
 
 ```
 'type' : {

@@ -1,6 +1,7 @@
 ---
 title: 'Info'
 layout: default
+permalink: "/schemas/blocks/Info.html"
 excerpt_separator: <!--more-->
 category:
   - schemas
@@ -8,6 +9,9 @@ tags:
   - code
 ---
 ## Info
+
+#### Status: __proposed__
+
 
 The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/info.yaml).
 
@@ -55,10 +59,10 @@ The original schema definitions are provided in the [YAML file](https://github.c
 
 ```
 {
-   "format" : "int64",
+   "type" : "number",
    "value" : 1503320,
    "description" : "The base length of the called segment",
-   "type" : "number"
+   "format" : "int64"
 }
 ```
 --------------------------------------------------------------------------------
@@ -67,8 +71,8 @@ The original schema definitions are provided in the [YAML file](https://github.c
 
 ##### description
 
-* an optional free-text annotation about the object  
-* example:  
+* an optional free-text annotation about the object
+* example:
 
 ```
 'description' : "The base length of the called segment."
@@ -76,8 +80,8 @@ The original schema definitions are provided in the [YAML file](https://github.c
 
 ##### format
 
-* format of the value; optional  
-* example:  
+* format of the value; optional
+* example:
 
 ```
 'format' : "int64"
@@ -85,8 +89,8 @@ The original schema definitions are provided in the [YAML file](https://github.c
 
 ##### type
 
-* type of the value; optional  
-* example:  
+* type of the value; optional
+* example:
 
 ```
 'type' : "number"
@@ -94,8 +98,8 @@ The original schema definitions are provided in the [YAML file](https://github.c
 
 ##### value
 
-* the value in a format correstponding to type  
-* example:  
+* the value in a format correstponding to type
+* example:
 
 ```
 'value' : "1503320"

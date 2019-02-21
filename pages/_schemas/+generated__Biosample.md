@@ -1,6 +1,7 @@
 ---
 title: 'Biosample'
 layout: default
+permalink: "/schemas/blocks/Biosample.html"
 excerpt_separator: <!--more-->
 category:
   - schemas
@@ -8,6 +9,9 @@ tags:
   - code
 ---
 ## Biosample
+
+#### Status: __proposed__
+
 
 The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/biosample.yaml).
 
@@ -124,55 +128,55 @@ Examples would be a tissue biopsy, a single cell from a culture for single cell 
 
 ```
 {
-   "project_id" : "ind-cnhl-1293347-004",
-   "age_at_collection" : {
-      "age_class" : {
-         "id" : "HP:0003621",
-         "label" : "Juvenile onset"
-      },
-      "age" : "P56Y"
-   },
+   "description" : "Burkitt lymphoma, cell line Namalwa",
    "name" : "Sample BRCA-00429, 2nd replicate",
-   "updated" : "2017-10-25T07:06:03Z",
-   "biocharacteristics" : [
-      {
-         "description" : "Pancreatic Adenocarcinoma",
-         "type" : {
-            "label" : "Pancreas, NOS",
-            "id" : "icdot:C25.9"
-         }
-      }
-   ],
-   "individual_id" : "ind-cnhl-1293347-004",
+   "id" : "AM_BS__NCBISKYCGH-1993",
+   "project_id" : "ind-cnhl-1293347-004",
    "data_use_conditions" : {
       "id" : "DUO:0000004",
       "label" : "no restriction"
    },
-   "info" : {
-      "followup_time" : "P14M",
-      "death" : 1
-   },
-   "description" : "Burkitt lymphoma, cell line Namalwa",
    "geo_provenance" : {
       "longitude" : 21.23,
+      "latitude" : 45.75,
+      "city" : "Timisoara",
       "country" : "Romania",
       "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
-      "altitude" : 94,
-      "city" : "Timisoara",
-      "latitude" : 45.75
+      "altitude" : 94
    },
+   "biocharacteristics" : [
+      {
+         "description" : "Pancreatic Adenocarcinoma",
+         "type" : {
+            "id" : "icdot:C25.9",
+            "label" : "Pancreas, NOS"
+         }
+      }
+   ],
    "external_references" : [
       {
-         "description" : "Cellosaurus cell line identifier",
          "type" : {
             "label" : "HOS",
             "id" : "cellosaurus:CVCL_0312"
          },
-         "relation" : "provenance"
+         "relation" : "provenance",
+         "description" : "Cellosaurus cell line identifier"
       }
    ],
-   "id" : "AM_BS__NCBISKYCGH-1993",
-   "created" : "2017-10-25T07:06:03Z"
+   "created" : "2017-10-25T07:06:03Z",
+   "age_at_collection" : {
+      "age" : "P56Y",
+      "age_class" : {
+         "id" : "HP:0003621",
+         "label" : "Juvenile onset"
+      }
+   },
+   "individual_id" : "ind-cnhl-1293347-004",
+   "info" : {
+      "followup_time" : "P14M",
+      "death" : 1
+   },
+   "updated" : "2017-10-25T07:06:03Z"
 }
 ```
 --------------------------------------------------------------------------------
@@ -182,14 +186,14 @@ Examples would be a tissue biopsy, a single cell from a culture for single cell 
 ##### age_at_collection
 
 * The age of the individual at time of biosample collection, as Age object.
-  
-* example:  
+
+* example:
 
 ```
 'age_at_collection' : {
   'age_class' => {
-                   'label' => 'Juvenile onset',
-                   'id' => 'HP:0003621'
+                   'id' => 'HP:0003621',
+                   'label' => 'Juvenile onset'
                  },
   'age' => 'P56Y'
 }
@@ -199,8 +203,8 @@ Examples would be a tissue biopsy, a single cell from a culture for single cell 
 
 * biocharacteristics represents a wrapper list of "Phenotype" objects with properly prefixed term ids, describing features of the biosample.
 Examples would be phenotypes, disease codes or other ontology classes specific to this biosample. In a complete data model (variants - (callsets) - biosamples - individuals), characteristics applying to the individual (e.g. sex, most phenotypes) should be annotated there.
-  
-* example:  
+
+* example:
 
 ```
 'biocharacteristics' : [
@@ -214,14 +218,14 @@ Examples would be phenotypes, disease codes or other ontology classes specific t
   {
     'description' => 'Pancreatic Adenocarcinoma',
     'type' => {
-                'label' => 'Adenocarcinoma, NOS',
-                'id' => 'icdom:81403'
+                'id' => 'icdom:81403',
+                'label' => 'Adenocarcinoma, NOS'
               }
   },
   {
     'type' => {
-                'label' => 'Pancreatic Adenocarcinoma',
-                'id' => 'ncit:C8294'
+                'id' => 'ncit:C8294',
+                'label' => 'Pancreatic Adenocarcinoma'
               },
     'description' => 'Pancreatic Adenocarcinoma'
   }
@@ -242,8 +246,8 @@ db.biosamples.distinct( "biocharacteristics.type.id", { "biocharacteristics.type
 ##### created
 
 * The creation time of this record, in ISO8601
-  
-* example:  
+
+* example:
 
 ```
 'created' : "2017-10-25T07:06:03Z"
@@ -252,8 +256,8 @@ db.biosamples.distinct( "biocharacteristics.type.id", { "biocharacteristics.type
 ##### data_use_conditions
 
 * Data use conditions applying to data from this biosample, as ontology object (e.g. DUO).
-  
-* example:  
+
+* example:
 
 ```
 'data_use_conditions' : {
@@ -264,8 +268,8 @@ db.biosamples.distinct( "biocharacteristics.type.id", { "biocharacteristics.type
 
 ##### description
 
-* A free text description of the biosample. This should not contain any structured data.  
-* example:  
+* A free text description of the biosample. This should not contain any structured data.
+* example:
 
 ```
 'description' : "Burkitt lymphoma, cell line Namalwa"
@@ -274,26 +278,26 @@ db.biosamples.distinct( "biocharacteristics.type.id", { "biocharacteristics.type
 ##### external_references
 
 * list of reference_class objects with properly (e.g. identifiers.org) prefixed external identifiers and a term describing the relationship
-  
-* example:  
+
+* example:
 
 ```
 'external_references' : [
   {
-    'type' => {
-                'label' => 'HOS',
-                'id' => 'cellosaurus:CVCL_0312'
-              },
     'description' => 'Cellosaurus cell line identifier',
-    'relation' => 'provenance'
+    'relation' => 'provenance',
+    'type' => {
+                'id' => 'cellosaurus:CVCL_0312',
+                'label' => 'HOS'
+              }
   },
   {
-    'relation' => 'report',
     'description' => 'PubMed reference',
     'type' => {
                 'id' => 'pubmed:2823272',
                 'label' => 'Rearrangement of the p53 gene in human osteogenic sarcomas.'
-              }
+              },
+    'relation' => 'report'
   }
 ]
 ```
@@ -308,24 +312,24 @@ db.biosamples.find( { "external_references.type.id" : "pubmed:17440070" } )
 
 * This geo_class attribute ideally describes the geographic location of where the sample was extracted.
 Frequently this value may reflect either the place of the laboratory where the analysis was performed, or correspond to the corresponding author's institution.
-  
-* example:  
+
+* example:
 
 ```
 'geo_provenance' : {
-  'longitude' => '21.23',
-  'country' => 'Romania',
-  'latitude' => '45.75',
-  'altitude' => 94,
   'label' => 'Str Marasesti 5, 300077 Timisoara, Romania',
-  'city' => 'Timisoara'
+  'altitude' => 94,
+  'country' => 'Romania',
+  'city' => 'Timisoara',
+  'latitude' => '45.75',
+  'longitude' => '21.23'
 }
 ```
 
 ##### id
 
-* The local-unique identifier of this biosample (referenced as "biosample_id"). This is unique in the context of the server instance.  
-* example:  
+* The local-unique identifier of this biosample (referenced as "biosample_id"). This is unique in the context of the server instance.
+* example:
 
 ```
 'id' : "AM_BS__NCBISKYCGH-1993"
@@ -335,8 +339,8 @@ Frequently this value may reflect either the place of the laboratory where the a
 
 * In a complete data model "individual_id" points to the "id" of the individual ("donor") this <i>biosample</i> was derived from.
 In a local context this could be the <code>id</code> attribute in a corresponding "individuals" collection.
-  
-* example:  
+
+* example:
 
 ```
 'individual_id' : "ind-cnhl-1293347-004"
@@ -345,8 +349,8 @@ In a local context this could be the <code>id</code> attribute in a correspondin
 ##### info
 
 * This is a wrapper for objects without further specification in the schema.
-  
-* example:  
+
+* example:
 
 ```
 'info' : {
@@ -364,8 +368,8 @@ db.biosamples.find( {"info" : { $elemMatch: { "followup_time.value" : { $regex :
 ##### name
 
 * A short descriptive name for sample which should be sufficient to distinguish it from other samples in the project or collection. This is a label or symbolic identifier for the biosample.
-  
-* example:  
+
+* example:
 
 ```
 'name' : "Sample BRCA-00429, 2nd replicate"
@@ -374,8 +378,8 @@ db.biosamples.find( {"info" : { $elemMatch: { "followup_time.value" : { $regex :
 ##### project_id
 
 * The id attribute of the project that this biosample was collected in.
-  
-* example:  
+
+* example:
 
 ```
 'project_id' : "ind-cnhl-1293347-004"
@@ -384,8 +388,8 @@ db.biosamples.find( {"info" : { $elemMatch: { "followup_time.value" : { $regex :
 ##### updated
 
 * The time of the last edit of this record, in ISO8601
-  
-* example:  
+
+* example:
 
 ```
 'updated' : "2022-11-11T09:45:13Z"

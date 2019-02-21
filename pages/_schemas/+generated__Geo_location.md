@@ -1,6 +1,7 @@
 ---
 title: 'Geo_location'
 layout: default
+permalink: "/schemas/blocks/Geo_location.html"
 excerpt_separator: <!--more-->
 category:
   - schemas
@@ -8,6 +9,9 @@ tags:
   - code
 ---
 ## Geo_location
+
+#### Status: __proposed__
+
 
 The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/geo_location.yaml).
 
@@ -77,11 +81,11 @@ and avoids optional representation in non-standard units.
 
 ```
 {
-   "longitude" : 8.54,
    "country" : "Romania",
-   "latitude" : 47.37,
-   "altitude" : 8848,
    "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
+   "altitude" : 8848,
+   "longitude" : 8.54,
+   "latitude" : 47.37,
    "city" : "Timisoara"
 }
 ```
@@ -91,8 +95,8 @@ and avoids optional representation in non-standard units.
 
 ##### altitude
 
-* height in meters above the WGS 84 reference ellipsoid; optional  
-* example:  
+* height in meters above the WGS 84 reference ellipsoid; optional
+* example:
 
 ```
 'altitude' : "8848"
@@ -100,8 +104,8 @@ and avoids optional representation in non-standard units.
 
 ##### city
 
-*   
-* example:  
+* 
+* example:
 
 ```
 'city' : "Timisoara"
@@ -109,8 +113,8 @@ and avoids optional representation in non-standard units.
 
 ##### country
 
-*   
-* example:  
+* 
+* example:
 
 ```
 'country' : "Romania"
@@ -122,8 +126,8 @@ and avoids optional representation in non-standard units.
 of the corresponding latitude, longitude(, altitude). This representation serves the purposes to
   - capture standard data entry parameters
   - provide a sanity check for latitude,longitude values
-  
-* example:  
+
+* example:
 
 ```
 'label' : "Str Marasesti 5, 300077 Timisoara, Romania"
@@ -131,8 +135,8 @@ of the corresponding latitude, longitude(, altitude). This representation serves
 
 ##### latitude
 
-* signed decimal degrees (North, relative to Equator)  
-* example:  
+* signed decimal degrees (North, relative to Equator)
+* example:
 
 ```
 'latitude' : "47.37"
@@ -140,8 +144,8 @@ of the corresponding latitude, longitude(, altitude). This representation serves
 
 ##### longitude
 
-* signed decimal degrees (East, relative to IERS Reference Meridian)  
-* example:  
+* signed decimal degrees (East, relative to IERS Reference Meridian)
+* example:
 
 ```
 'longitude' : "8.54"

@@ -1,6 +1,7 @@
 ---
 title: 'Age'
 layout: default
+permalink: "/schemas/blocks/Age.html"
 excerpt_separator: <!--more-->
 category:
   - schemas
@@ -8,6 +9,9 @@ tags:
   - code
 ---
 ## Age
+
+#### Status: __proposed__
+
 
 The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/age.yaml).
 
@@ -46,8 +50,8 @@ Corresponding to the use of "age of onset" in HPO.
 {
    "age" : "P56Y",
    "age_class" : {
-      "id" : "HP:0003621",
-      "label" : "Juvenile onset"
+      "label" : "Juvenile onset",
+      "id" : "HP:0003621"
    }
 }
 ```
@@ -57,8 +61,8 @@ Corresponding to the use of "age of onset" in HPO.
 
 ##### age
 
-* The age as ISO8601 string.  
-* example:  
+* The age as ISO8601 string.
+* example:
 
 ```
 'age' : "P56Y"
@@ -68,13 +72,13 @@ Corresponding to the use of "age of onset" in HPO.
 
 * The age of the object (e.g. individual at tome of a biosample collection), as Ontology_class.
 Corresponding to the use of "age of onset" in HPO.
-  
-* example:  
+
+* example:
 
 ```
 'age_class' : {
-  'label' => 'Juvenile onset',
-  'id' => 'HP:0003621'
+  'id' => 'HP:0003621',
+  'label' => 'Juvenile onset'
 }
 ```
 
