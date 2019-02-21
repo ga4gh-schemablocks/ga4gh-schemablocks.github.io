@@ -12,8 +12,6 @@ tags:
 
 #### Status: __proposed__
 
-The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/variant.yaml).
-
 <!--more-->
 
   
@@ -129,32 +127,32 @@ This format may be superseeded or augmented based on current developments in the
 
 ```
 {
+   "alternate_bases" : "AC",
+   "variant_type" : "DEL",
+   "info" : {
+      "cnv_length" : 1205290,
+      "cnv_value" : "-0.294"
+   },
    "id" : "id",
+   "reference_bases" : "G",
+   "updated" : "2017-10-25T07:06:03Z",
+   "genotype" : [
+      "1",
+      "."
+   ],
+   "biosample_id" : "biosample_id",
+   "start" : [
+      "20867740"
+   ],
    "callset_id" : "callset_id",
    "end" : [
       "21977798",
       "21978106"
    ],
-   "reference_name" : 8,
-   "start" : [
-      "20867740"
-   ],
-   "created" : "2017-10-25T07:06:03Z",
-   "digest" : "digest",
-   "variant_type" : "DEL",
-   "genotype" : [
-      "1",
-      "."
-   ],
-   "alternate_bases" : "AC",
    "mate_name" : 14,
-   "info" : {
-      "cnv_length" : 1205290,
-      "cnv_value" : "-0.294"
-   },
-   "updated" : "2017-10-25T07:06:03Z",
-   "reference_bases" : "G",
-   "biosample_id" : "biosample_id"
+   "digest" : "digest",
+   "reference_name" : 8,
+   "created" : "2017-10-25T07:06:03Z"
 }
 ```
 --------------------------------------------------------------------------------
@@ -169,7 +167,8 @@ This format may be superseeded or augmented based on current developments in the
 ```
 'alternate_bases' : "AC"
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### biosample_id
 
 * The identifier ("biosample.id") of the biosample this variant was reported from. This is a shortcut to using the variant -> callset -> biosample chaining.
@@ -178,7 +177,8 @@ This format may be superseeded or augmented based on current developments in the
 ```
 'biosample_id' : "pgx-bs-987647"
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### callset_id
 
 * The identifier ("callset.id") of the callset this variant is part of.
@@ -187,7 +187,8 @@ This format may be superseeded or augmented based on current developments in the
 ```
 'callset_id' : "PGX_AM_CS_GSM1690424"
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### created
 
 * The creation time of this record, in ISO8601
@@ -197,7 +198,8 @@ This format may be superseeded or augmented based on current developments in the
 ```
 'created' : "2017-10-25T07:06:03Z"
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### digest
 
 * concatenated unique specific elements of the variant
@@ -206,7 +208,8 @@ This format may be superseeded or augmented based on current developments in the
 ```
 'digest' : "4:12282-46465:DEL"
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### end
 
 * array of 0 (for presise sequence variants), 1 or 2 (for imprecise end position of structural variant) integers
@@ -223,7 +226,8 @@ This format may be superseeded or augmented based on current developments in the
 ```
 db.variants.find( { "reference_name" : "9",  "variant_type" : "DEL", "start" : { $lteq : 21975098 }, "end" : { $gteq : 21967753 } } )
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### genotype
 
 * list of strings, which represent the (phased) alleles in which the variant was being observed
@@ -235,7 +239,8 @@ db.variants.find( { "reference_name" : "9",  "variant_type" : "DEL", "start" : {
   '.'
 ]
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### id
 
 * The local-unique identifier of this variant (referenced as "variant_id").
@@ -244,7 +249,8 @@ db.variants.find( { "reference_name" : "9",  "variant_type" : "DEL", "start" : {
 ```
 'id' : "amvar-8754-7751-1119-8539"
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### info
 
 * additional variant information, as defined in the example and accompanying documentation
@@ -256,7 +262,8 @@ db.variants.find( { "reference_name" : "9",  "variant_type" : "DEL", "start" : {
   'cnv_value' => '-0.294'
 }
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### mate_name
 
 * Mate name (chromosome) for fusion (BRK) events; otherwise left empty. Accepting values 1-22, X, Y.
@@ -266,7 +273,8 @@ db.variants.find( { "reference_name" : "9",  "variant_type" : "DEL", "start" : {
 ```
 'mate_name' : "14"
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### reference_bases
 
 * one or more bases at start position in the reference genome, which have been replaced by the alternate_bases value; for precise variants
@@ -275,7 +283,8 @@ db.variants.find( { "reference_name" : "9",  "variant_type" : "DEL", "start" : {
 ```
 'reference_bases' : "G"
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### reference_name
 
 * Reference name (chromosome). Accepting values 1-22, X, Y.
@@ -284,7 +293,8 @@ db.variants.find( { "reference_name" : "9",  "variant_type" : "DEL", "start" : {
 ```
 'reference_name' : "8"
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### start
 
 * array of 1 or 2 (for imprecise end position of structural variant) integers
@@ -295,7 +305,8 @@ db.variants.find( { "reference_name" : "9",  "variant_type" : "DEL", "start" : {
   20867740
 ]
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### updated
 
 * The time of the last edit of this record, in ISO8601
@@ -305,7 +316,8 @@ db.variants.find( { "reference_name" : "9",  "variant_type" : "DEL", "start" : {
 ```
 'updated' : "2022-11-11T09:45:13Z"
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### variant_type
 
 * the variant type in case of a named (structural) variant (e.g. DUP, DEL, BRK ...)
@@ -314,4 +326,5 @@ db.variants.find( { "reference_name" : "9",  "variant_type" : "DEL", "start" : {
 ```
 'variant_type' : "DEL"
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).

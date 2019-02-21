@@ -12,8 +12,6 @@ tags:
 
 #### Status: __proposed__
 
-The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/phenotype.yaml).
-
 <!--more-->
 
   
@@ -73,21 +71,21 @@ FHIR mapping: Condition (https://www.hl7.org/fhir/condition.html) or Observation
 ```
 {
    "description" : "DUO:0000004",
-   "evidence" : [
-      {
-         "id" : "",
-         "label" : ""
-      }
-   ],
    "severity" : {
       "label" : "Mild",
       "id" : "HP:0012825"
    },
    "negated" : "",
    "type" : {
-      "id" : "ncit:C8294",
-      "label" : "Pancreatic Adenocarcinoma"
-   }
+      "label" : "Pancreatic Adenocarcinoma",
+      "id" : "ncit:C8294"
+   },
+   "evidence" : [
+      {
+         "id" : "",
+         "label" : ""
+      }
+   ]
 }
 ```
 --------------------------------------------------------------------------------
@@ -104,7 +102,8 @@ Note this is not a acceptable place to document/describe the phenotype the type 
 ```
 'description' : "Pancreatic Adenocarcinoma"
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### evidence
 
 * Evidences for how the phenotype was determined
@@ -113,12 +112,13 @@ Note this is not a acceptable place to document/describe the phenotype the type 
 ```
 'evidence' : [
   {
-    'id' => '',
-    'label' => ''
+    'label' => '',
+    'id' => ''
   }
 ]
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### negated
 
 * Flag to indicate whether the phenotype was observed or not. Default is 'false', in other words the phenotype was observed.
@@ -129,7 +129,8 @@ It is only required in cases to indicate that the phenotype was looked for, but 
 ```
 'negated' : ""
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### severity
 
 * Severity of the condition e.g. subclasses of HP:0012824-Severity or SNOMED:272141005-Severities.
@@ -139,11 +140,12 @@ FHIR mapping: Condition.severity
 
 ```
 'severity' : {
-  'id' => 'HP:0012825',
-  'label' => 'Mild'
+  'label' => 'Mild',
+  'id' => 'HP:0012825'
 }
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### type
 
 * The ontology term as Ontology_term. The primary ontology class which describes the phenotype.
@@ -151,8 +153,9 @@ FHIR mapping: Condition.severity
 
 ```
 'type' : {
-  'id' => 'ncit:C8294',
-  'label' => 'Pancreatic Adenocarcinoma'
+  'label' => 'Pancreatic Adenocarcinoma',
+  'id' => 'ncit:C8294'
 }
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).

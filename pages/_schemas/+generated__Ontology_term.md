@@ -12,8 +12,6 @@ tags:
 
 #### Status: __proposed__
 
-The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/ontology_term.yaml).
-
 <!--more-->
 
   
@@ -51,14 +49,14 @@ inconsistently followed.
 
 ```
 {
-   "label" : "no restriction",
-   "id" : "DUO:0000004"
+   "id" : "DUO:0000004",
+   "label" : "no restriction"
 }
 ```
 ```
 {
-   "id" : "HP:0003621",
-   "label" : "Juvenile onset"
+   "label" : "Juvenile onset",
+   "id" : "HP:0003621"
 }
 ```
 ```
@@ -79,7 +77,8 @@ inconsistently followed.
 ```
 'id' : "ncit:C8294"
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### label
 
 * the text label associated with the term
@@ -88,4 +87,5 @@ inconsistently followed.
 ```
 'label' : "Pancreatic Adenocarcinoma"
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).

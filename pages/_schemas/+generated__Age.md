@@ -12,8 +12,6 @@ tags:
 
 #### Status: __proposed__
 
-The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/age.yaml).
-
 <!--more-->
 
 
@@ -63,11 +61,11 @@ Corresponding to the use of "age of onset" in HPO.
 
 ```
 {
-   "age" : "P56Y",
    "age_class" : {
-      "id" : "HP:0003621",
-      "label" : "Juvenile onset"
-   }
+      "label" : "Juvenile onset",
+      "id" : "HP:0003621"
+   },
+   "age" : "P56Y"
 }
 ```
 --------------------------------------------------------------------------------
@@ -82,7 +80,8 @@ Corresponding to the use of "age of onset" in HPO.
 ```
 'age' : "P56Y"
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### age_class
 
 * The age of the object (e.g. individual at tome of a biosample collection), as Ontology_class.
@@ -96,4 +95,5 @@ Corresponding to the use of "age of onset" in HPO.
   'id' => 'HP:0003621'
 }
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).

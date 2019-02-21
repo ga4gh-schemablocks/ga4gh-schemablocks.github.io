@@ -12,8 +12,6 @@ tags:
 
 #### Status: __proposed__
 
-The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/callset.yaml).
-
 <!--more-->
 
   
@@ -90,23 +88,23 @@ and is a shared identifier for all variants detected in this experiment, attribu
 
 ```
 {
-   "created" : "2017-10-25T07:06:03Z",
-   "description" : "SNP6 array of cancer sample BRCA-0893",
-   "geo_provenance" : {
-      "longitude" : 21.23,
-      "latitude" : 45.75,
-      "city" : "Timisoara",
-      "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
-      "country" : "Romania"
-   },
-   "id" : "GSM264198",
    "data_use_conditions" : {
       "label" : "no restriction",
       "id" : "DUO:0000004"
    },
-   "updated" : "2017-10-25T07:06:03Z",
+   "info" : "no restriction",
+   "created" : "2017-10-25T07:06:03Z",
+   "id" : "GSM264198",
+   "description" : "SNP6 array of cancer sample BRCA-0893",
+   "geo_provenance" : {
+      "city" : "Timisoara",
+      "longitude" : 21.23,
+      "country" : "Romania",
+      "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
+      "latitude" : 45.75
+   },
    "biosample_id" : "SAMEA1234",
-   "info" : "no restriction"
+   "updated" : "2017-10-25T07:06:03Z"
 }
 ```
 --------------------------------------------------------------------------------
@@ -122,7 +120,8 @@ and is a shared identifier for all variants detected in this experiment, attribu
 ```
 'biosample_id' : "pgx-bs-987647"
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### created
 
 * The creation time of this record, in ISO8601
@@ -132,7 +131,8 @@ and is a shared identifier for all variants detected in this experiment, attribu
 ```
 'created' : "2017-10-25T07:06:03Z"
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### data_use_conditions
 
 * Data use conditions applying to data from this callset, as ontology object (e.g. DUO).
@@ -145,7 +145,8 @@ and is a shared identifier for all variants detected in this experiment, attribu
   'label' => 'no restriction'
 }
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### description
 
 * A free text description of the callset.
@@ -155,7 +156,8 @@ and is a shared identifier for all variants detected in this experiment, attribu
 ```
 'description' : "SNP6 array of cancer sample BRCA-0893"
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### geo_provenance
 
 * This geo_class attribute ideally describes the geographic location of where this callset was analysed.
@@ -164,14 +166,15 @@ and is a shared identifier for all variants detected in this experiment, attribu
 
 ```
 'geo_provenance' : {
-  'country' => 'Romania',
   'latitude' => '45.75',
-  'longitude' => '21.23',
   'label' => 'Str Marasesti 5, 300077 Timisoara, Romania',
-  'city' => 'Timisoara'
+  'city' => 'Timisoara',
+  'country' => 'Romania',
+  'longitude' => '21.23'
 }
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### id
 
 * The local-unique identifier of this callset (referenced as "callset_id").
@@ -180,7 +183,8 @@ and is a shared identifier for all variants detected in this experiment, attribu
 ```
 'id' : "GSM264198"
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### info
 
 * additional variant information, as defined in the example and accompanying documentation
@@ -192,12 +196,13 @@ and is a shared identifier for all variants detected in this experiment, attribu
                     'ref' => './Info',
                     'value' => {
                                  'binning' => {
-                                                'format' => 'int64',
                                                 'description' => 'interval size in bases for the binning, when creating the cnv_maps',
                                                 'value' => 1000000,
+                                                'format' => 'int64',
                                                 'type' => 'number'
                                               },
                                  'dupmap' => {
+                                               'type' => 'array',
                                                'value' => [
                                                             '',
                                                             '',
@@ -211,7 +216,6 @@ and is a shared identifier for all variants detected in this experiment, attribu
                                                             '',
                                                             ''
                                                           ],
-                                               'type' => 'array',
                                                'description' => 'gain cnv status for the corresponding genome intervals
 '
                                              }
@@ -222,7 +226,8 @@ With a standard binning of 1MB, the arrays would contain ~3000 values each (depe
                   }
 }
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### updated
 
 * The time of the last edit of this record, in ISO8601
@@ -232,4 +237,5 @@ With a standard binning of 1MB, the arrays would contain ~3000 values each (depe
 ```
 'updated' : "2022-11-11T09:45:13Z"
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).

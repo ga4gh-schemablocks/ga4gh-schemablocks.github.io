@@ -12,8 +12,6 @@ tags:
 
 #### Status: __proposed__
 
-The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/geo_location.yaml).
-
 <!--more-->
 
   
@@ -81,12 +79,12 @@ and avoids optional representation in non-standard units.
 
 ```
 {
-   "country" : "Romania",
    "longitude" : 8.54,
-   "latitude" : 47.37,
-   "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
+   "country" : "Romania",
+   "city" : "Timisoara",
    "altitude" : 8848,
-   "city" : "Timisoara"
+   "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
+   "latitude" : 47.37
 }
 ```
 --------------------------------------------------------------------------------
@@ -101,7 +99,8 @@ and avoids optional representation in non-standard units.
 ```
 'altitude' : "8848"
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### city
 
 * 
@@ -110,7 +109,8 @@ and avoids optional representation in non-standard units.
 ```
 'city' : "Timisoara"
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### country
 
 * 
@@ -119,7 +119,8 @@ and avoids optional representation in non-standard units.
 ```
 'country' : "Romania"
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### label
 
 * A text representation, preferably using standard geographic identification elements,
@@ -132,7 +133,8 @@ of the corresponding latitude, longitude(, altitude). This representation serves
 ```
 'label' : "Str Marasesti 5, 300077 Timisoara, Romania"
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### latitude
 
 * signed decimal degrees (North, relative to Equator)
@@ -141,7 +143,8 @@ of the corresponding latitude, longitude(, altitude). This representation serves
 ```
 'latitude' : "47.37"
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### longitude
 
 * signed decimal degrees (East, relative to IERS Reference Meridian)
@@ -150,4 +153,5 @@ of the corresponding latitude, longitude(, altitude). This representation serves
 ```
 'longitude' : "8.54"
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).

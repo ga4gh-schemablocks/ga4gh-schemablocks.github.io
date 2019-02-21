@@ -12,8 +12,6 @@ tags:
 
 #### Status: __proposed__
 
-The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/individual.yaml).
-
 <!--more-->
 
   
@@ -118,21 +116,33 @@ For resources where there may be more than one organism being studied it is advi
 
 ```
 {
-   "data_use_conditions" : {
-      "id" : "DUO:0000004",
-      "label" : "no restriction"
-   },
-   "id" : "AM_BS__NCBISKYCGH-1993",
-   "geo_provenance" : {
-      "country" : "Romania",
-      "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
-      "city" : "Timisoara",
-      "altitude" : 94,
-      "longitude" : 21.23,
-      "latitude" : 45.75
-   },
    "created" : "2017-10-25T07:06:03Z",
+   "organism" : {
+      "id" : "NCBITaxon:9606",
+      "label" : "Homo sapiens"
+   },
+   "updated" : "2017-10-25T07:06:03Z",
+   "id" : "AM_BS__NCBISKYCGH-1993",
    "description" : "patient with lung cancer, male smoker",
+   "geo_provenance" : {
+      "latitude" : 45.75,
+      "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
+      "altitude" : 94,
+      "country" : "Romania",
+      "longitude" : 21.23,
+      "city" : "Timisoara"
+   },
+   "external_references" : [
+      {
+         "relation" : "provenance",
+         "type" : {
+            "label" : "HOS",
+            "id" : "cellosaurus:CVCL_0312"
+         },
+         "description" : "Cellosaurus cell line identifier"
+      }
+   ],
+   "name" : "Ion Tichy, space explorer",
    "biocharacteristics" : [
       {
          "type" : {
@@ -142,36 +152,24 @@ For resources where there may be more than one organism being studied it is advi
          "description" : "Patient with Down syndrome"
       }
    ],
-   "name" : "Ion Tichy, space explorer",
    "sex" : {
       "id" : "PATO:0020000",
       "label" : "female genetic sex"
    },
-   "external_references" : [
-      {
-         "description" : "Cellosaurus cell line identifier",
-         "type" : {
-            "id" : "cellosaurus:CVCL_0312",
-            "label" : "HOS"
-         },
-         "relation" : "provenance"
-      }
-   ],
    "info" : {
+      "last_name" : {
+         "value" : "Tichy",
+         "type" : "string"
+      },
       "first_name" : {
          "value" : "Ion",
          "type" : "string"
-      },
-      "last_name" : {
-         "type" : "string",
-         "value" : "Tichy"
       }
    },
-   "organism" : {
-      "id" : "NCBITaxon:9606",
-      "label" : "Homo sapiens"
-   },
-   "updated" : "2017-10-25T07:06:03Z"
+   "data_use_conditions" : {
+      "id" : "DUO:0000004",
+      "label" : "no restriction"
+   }
 }
 ```
 --------------------------------------------------------------------------------
@@ -187,11 +185,11 @@ For resources where there may be more than one organism being studied it is advi
 ```
 'biocharacteristics' : [
   {
+    'description' => 'Patient with Down syndrome',
     'type' => {
                 'label' => 'Genetic anticipation',
                 'id' => 'HP:0003745'
-              },
-    'description' => 'Patient with Down syndrome'
+              }
   }
 ]
 ```
@@ -204,7 +202,8 @@ this call to the distinct funcion will return *all* HPO annotated classes
 ```
 db.biosamples.distinct( { "biocharacteristics.type.id", "biocharacteristics.type.id" : { $regex : /HP\:/i } } )
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### created
 
 * The creation time of this record, in ISO8601
@@ -214,7 +213,8 @@ db.biosamples.distinct( { "biocharacteristics.type.id", "biocharacteristics.type
 ```
 'created' : "2017-10-25T07:06:03Z"
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### data_use_conditions
 
 * Data use conditions applying to data from this individual, as ontology object (e.g. DUO).
@@ -227,7 +227,8 @@ db.biosamples.distinct( { "biocharacteristics.type.id", "biocharacteristics.type
   'id' => 'DUO:0000004'
 }
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### description
 
 * A free text description of the individual.
@@ -236,7 +237,8 @@ db.biosamples.distinct( { "biocharacteristics.type.id", "biocharacteristics.type
 ```
 'description' : "patient with lung cancer, male smoker"
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### external_references
 
 * Different representations of the same record, not different records in relation with this individual
@@ -247,11 +249,11 @@ db.biosamples.distinct( { "biocharacteristics.type.id", "biocharacteristics.type
 'external_references' : [
   {
     'description' => 'Cellosaurus cell line identifier',
+    'relation' => 'provenance',
     'type' => {
-                'label' => 'HOS',
-                'id' => 'cellosaurus:CVCL_0312'
-              },
-    'relation' => 'provenance'
+                'id' => 'cellosaurus:CVCL_0312',
+                'label' => 'HOS'
+              }
   }
 ]
 ```
@@ -261,7 +263,8 @@ db.biosamples.distinct( { "biocharacteristics.type.id", "biocharacteristics.type
 ```
 db.individuals.find( { "external_references.type.id" : "pubmed:17440070" } )
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### geo_provenance
 
 * This geo_class attribute ideally describes the geographic location of where this individual originates from.
@@ -271,15 +274,16 @@ This value may reflect either the place of birth or residence, but frequently ma
 
 ```
 'geo_provenance' : {
-  'label' => 'Str Marasesti 5, 300077 Timisoara, Romania',
-  'altitude' => 94,
   'city' => 'Timisoara',
+  'country' => 'Romania',
   'longitude' => '21.23',
   'latitude' => '45.75',
-  'country' => 'Romania'
+  'label' => 'Str Marasesti 5, 300077 Timisoara, Romania',
+  'altitude' => 94
 }
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### id
 
 * The local-unique identifier of this individual (referenced as "individual_id").
@@ -288,7 +292,8 @@ This value may reflect either the place of birth or residence, but frequently ma
 ```
 'id' : "AM_BS__NCBISKYCGH-1993"
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### info
 
 * additional variant information, as defined in the example and accompanying documentation TODO this should be its own class
@@ -301,12 +306,13 @@ This value may reflect either the place of birth or residence, but frequently ma
                    'type' => 'string'
                  },
   'first_name' => {
-                    'value' => 'Ion',
-                    'type' => 'string'
+                    'type' => 'string',
+                    'value' => 'Ion'
                   }
 }
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### name
 
 * A short descriptive "name" for the individual, which may or may not correspond to a "real name". Unstructured text.
@@ -316,7 +322,8 @@ This value may reflect either the place of birth or residence, but frequently ma
 ```
 'name' : "Ion Tichy, space explorer"
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### organism
 
 * An NCBI taxonomy term describing the species of the individual.
@@ -326,11 +333,12 @@ For resources where there may be more than one organism being studied it is advi
 
 ```
 'organism' : {
-  'id' => 'NCBITaxon:9606',
-  'label' => 'Homo sapiens'
+  'label' => 'Homo sapiens',
+  'id' => 'NCBITaxon:9606'
 }
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### sex
 
 * A PATO term describing the biological sex of the individual
@@ -339,11 +347,12 @@ For resources where there may be more than one organism being studied it is advi
 
 ```
 'sex' : {
-  'id' => 'PATO:0020000',
-  'label' => 'female genetic sex'
+  'label' => 'female genetic sex',
+  'id' => 'PATO:0020000'
 }
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
 ##### updated
 
 * The time of the last edit of this record, in ISO8601
@@ -353,4 +362,5 @@ For resources where there may be more than one organism being studied it is advi
 ```
 'updated' : "2022-11-11T09:45:13Z"
 ```
-
+  
+The original schema definitions are provided in the [YAML file]($yaml_src_web_link).
