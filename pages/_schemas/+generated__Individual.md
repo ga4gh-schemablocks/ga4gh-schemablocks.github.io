@@ -16,6 +16,7 @@ The original schema definitions are provided in the [YAML file](https://github.c
 
 <!--more-->
 
+  
 <h4>Properties of the <i>Individual</i> class</h4>
 
 <table>
@@ -117,29 +118,20 @@ For resources where there may be more than one organism being studied it is advi
 
 ```
 {
-   "external_references" : [
-      {
-         "relation" : "provenance",
-         "description" : "Cellosaurus cell line identifier",
-         "type" : {
-            "label" : "HOS",
-            "id" : "cellosaurus:CVCL_0312"
-         }
-      }
-   ],
-   "geo_provenance" : {
-      "longitude" : 21.23,
-      "altitude" : 94,
-      "latitude" : 45.75,
-      "city" : "Timisoara",
-      "country" : "Romania",
-      "label" : "Str Marasesti 5, 300077 Timisoara, Romania"
+   "data_use_conditions" : {
+      "id" : "DUO:0000004",
+      "label" : "no restriction"
    },
    "id" : "AM_BS__NCBISKYCGH-1993",
-   "organism" : {
-      "label" : "Homo sapiens",
-      "id" : "NCBITaxon:9606"
+   "geo_provenance" : {
+      "country" : "Romania",
+      "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
+      "city" : "Timisoara",
+      "altitude" : 94,
+      "longitude" : 21.23,
+      "latitude" : 45.75
    },
+   "created" : "2017-10-25T07:06:03Z",
    "description" : "patient with lung cancer, male smoker",
    "biocharacteristics" : [
       {
@@ -150,27 +142,36 @@ For resources where there may be more than one organism being studied it is advi
          "description" : "Patient with Down syndrome"
       }
    ],
-   "data_use_conditions" : {
-      "id" : "DUO:0000004",
-      "label" : "no restriction"
-   },
    "name" : "Ion Tichy, space explorer",
+   "sex" : {
+      "id" : "PATO:0020000",
+      "label" : "female genetic sex"
+   },
+   "external_references" : [
+      {
+         "description" : "Cellosaurus cell line identifier",
+         "type" : {
+            "id" : "cellosaurus:CVCL_0312",
+            "label" : "HOS"
+         },
+         "relation" : "provenance"
+      }
+   ],
    "info" : {
       "first_name" : {
-         "type" : "string",
-         "value" : "Ion"
+         "value" : "Ion",
+         "type" : "string"
       },
       "last_name" : {
          "type" : "string",
          "value" : "Tichy"
       }
    },
-   "updated" : "2017-10-25T07:06:03Z",
-   "sex" : {
-      "label" : "female genetic sex",
-      "id" : "PATO:0020000"
+   "organism" : {
+      "id" : "NCBITaxon:9606",
+      "label" : "Homo sapiens"
    },
-   "created" : "2017-10-25T07:06:03Z"
+   "updated" : "2017-10-25T07:06:03Z"
 }
 ```
 --------------------------------------------------------------------------------
@@ -245,12 +246,12 @@ db.biosamples.distinct( { "biocharacteristics.type.id", "biocharacteristics.type
 ```
 'external_references' : [
   {
+    'description' => 'Cellosaurus cell line identifier',
     'type' => {
-                'id' => 'cellosaurus:CVCL_0312',
-                'label' => 'HOS'
+                'label' => 'HOS',
+                'id' => 'cellosaurus:CVCL_0312'
               },
-    'relation' => 'provenance',
-    'description' => 'Cellosaurus cell line identifier'
+    'relation' => 'provenance'
   }
 ]
 ```
@@ -271,11 +272,11 @@ This value may reflect either the place of birth or residence, but frequently ma
 ```
 'geo_provenance' : {
   'label' => 'Str Marasesti 5, 300077 Timisoara, Romania',
-  'country' => 'Romania',
+  'altitude' => 94,
   'city' => 'Timisoara',
-  'latitude' => '45.75',
   'longitude' => '21.23',
-  'altitude' => 94
+  'latitude' => '45.75',
+  'country' => 'Romania'
 }
 ```
 
@@ -295,14 +296,14 @@ This value may reflect either the place of birth or residence, but frequently ma
 
 ```
 'info' : {
-  'first_name' => {
-                    'type' => 'string',
-                    'value' => 'Ion'
-                  },
   'last_name' => {
                    'value' => 'Tichy',
                    'type' => 'string'
-                 }
+                 },
+  'first_name' => {
+                    'value' => 'Ion',
+                    'type' => 'string'
+                  }
 }
 ```
 

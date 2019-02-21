@@ -31,7 +31,8 @@ The original schema definitions are provided in the [YAML file](https://github.c
 #### Used by  
 
 * [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/age.rst)  
-* [Progenetix database schema (Beacon+ backend)](https://github.com/progenetix/schemas/tree/master/main/yaml)  <h4>Properties of the <i>Age</i> class</h4>
+* [Progenetix database schema (Beacon+ backend)](https://github.com/progenetix/schemas/tree/master/main/yaml)    
+<h4>Properties of the <i>Age</i> class</h4>
 
 <table>
   <tr>
@@ -62,11 +63,11 @@ Corresponding to the use of "age of onset" in HPO.
 
 ```
 {
+   "age" : "P56Y",
    "age_class" : {
       "id" : "HP:0003621",
       "label" : "Juvenile onset"
-   },
-   "age" : "P56Y"
+   }
 }
 ```
 --------------------------------------------------------------------------------

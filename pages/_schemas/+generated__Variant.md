@@ -16,6 +16,7 @@ The original schema definitions are provided in the [YAML file](https://github.c
 
 <!--more-->
 
+  
 <h4>Properties of the <i>Variant</i> class</h4>
 
 <table>
@@ -128,32 +129,32 @@ This format may be superseeded or augmented based on current developments in the
 
 ```
 {
-   "genotype" : [
-      "1",
-      "."
-   ],
+   "id" : "id",
+   "callset_id" : "callset_id",
    "end" : [
       "21977798",
       "21978106"
    ],
    "reference_name" : 8,
-   "reference_bases" : "G",
+   "start" : [
+      "20867740"
+   ],
+   "created" : "2017-10-25T07:06:03Z",
+   "digest" : "digest",
+   "variant_type" : "DEL",
+   "genotype" : [
+      "1",
+      "."
+   ],
+   "alternate_bases" : "AC",
    "mate_name" : 14,
-   "biosample_id" : "biosample_id",
    "info" : {
       "cnv_length" : 1205290,
       "cnv_value" : "-0.294"
    },
    "updated" : "2017-10-25T07:06:03Z",
-   "digest" : "digest",
-   "alternate_bases" : "AC",
-   "created" : "2017-10-25T07:06:03Z",
-   "variant_type" : "DEL",
-   "start" : [
-      "20867740"
-   ],
-   "id" : "id",
-   "callset_id" : "callset_id"
+   "reference_bases" : "G",
+   "biosample_id" : "biosample_id"
 }
 ```
 --------------------------------------------------------------------------------

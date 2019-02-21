@@ -16,6 +16,7 @@ The original schema definitions are provided in the [YAML file](https://github.c
 
 <!--more-->
 
+  
 <h4>Properties of the <i>Info</i> class</h4>
 
 <table>
@@ -59,9 +60,9 @@ The original schema definitions are provided in the [YAML file](https://github.c
 ```
 {
    "type" : "number",
+   "value" : 1503320,
    "format" : "int64",
-   "description" : "The base length of the called segment",
-   "value" : 1503320
+   "description" : "The base length of the called segment"
 }
 ```
 --------------------------------------------------------------------------------

@@ -16,6 +16,7 @@ The original schema definitions are provided in the [YAML file](https://github.c
 
 <!--more-->
 
+  
 <h4>Properties of the <i>Geo_location</i> class</h4>
 
 <table>
@@ -80,12 +81,12 @@ and avoids optional representation in non-standard units.
 
 ```
 {
-   "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
-   "city" : "Timisoara",
    "country" : "Romania",
-   "latitude" : 47.37,
    "longitude" : 8.54,
-   "altitude" : 8848
+   "latitude" : 47.37,
+   "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
+   "altitude" : 8848,
+   "city" : "Timisoara"
 }
 ```
 --------------------------------------------------------------------------------

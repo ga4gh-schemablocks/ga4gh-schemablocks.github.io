@@ -16,6 +16,7 @@ The original schema definitions are provided in the [YAML file](https://github.c
 
 <!--more-->
 
+  
 <h4>Properties of the <i>Phenotype</i> class</h4>
 
 <table>
@@ -74,18 +75,18 @@ FHIR mapping: Condition (https://www.hl7.org/fhir/condition.html) or Observation
    "description" : "DUO:0000004",
    "evidence" : [
       {
-         "label" : "",
-         "id" : ""
+         "id" : "",
+         "label" : ""
       }
    ],
-   "negated" : "",
    "severity" : {
       "label" : "Mild",
       "id" : "HP:0012825"
    },
+   "negated" : "",
    "type" : {
-      "label" : "Pancreatic Adenocarcinoma",
-      "id" : "ncit:C8294"
+      "id" : "ncit:C8294",
+      "label" : "Pancreatic Adenocarcinoma"
    }
 }
 ```
