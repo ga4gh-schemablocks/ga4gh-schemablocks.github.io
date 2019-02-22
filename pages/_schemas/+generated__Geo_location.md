@@ -30,8 +30,10 @@ tags:
 
 * GA4GH Metadata Task Team  
 * @mbaudis  
-* @theisuru    
-<h4>Properties of the <i>Geo_location</i> class</h4>
+* @theisuru  
+
+#### Schema source: [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/geo_location.yaml)    
+#### Properties of the _Geo_location_ class    
 
 <table>
   <tr>
@@ -90,7 +92,11 @@ of the corresponding latitude, longitude(, altitude). This representation serves
 </td>
   </tr>
 
-</table>Geo_location provides information about a geographic position related to a record. Examples could be:
+</table>
+
+
+#### Description 
+Geo_location provides information about a geographic position related to a record. Examples could be:
 
 - an address, e.g. of a lab performing an analysis
 - provenance of an individual, obfuscated to a larger order administrative entity (Suffolk, U.K.)
@@ -105,18 +111,18 @@ The geographic point object uses the default units from the [DCMI point scheme](
 ```
 {
    "latitude" : 47.37,
-   "city" : "Timisoara",
-   "longitude" : 8.54,
-   "country" : "Romania",
    "altitude" : 8848,
-   "label" : "Str Marasesti 5, 300077 Timisoara, Romania"
+   "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
+   "country" : "Romania",
+   "longitude" : 8.54,
+   "city" : "Timisoara"
 }
 ```
 ```
 {
-   "latitude" : 47.39792,
    "precision" : "room",
    "longitude" : 8.54913,
+   "latitude" : 47.39792,
    "label" : "Office at Institute of Molecular Life Sciences, University of Zurich"
 }
 ```
@@ -193,5 +199,4 @@ of the corresponding latitude, longitude(, altitude). This representation serves
 ```
 'precision' : "address"
 ```
-  
-The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/geo_location.yaml).
+

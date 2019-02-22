@@ -30,8 +30,10 @@ tags:
 
 * GA4GH Metadata Task Team  
 * @mbaudis  
-* @theisuru    
-<h4>Properties of the <i>Age</i> class</h4>
+* @theisuru  
+
+#### Schema source: [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/age.yaml)    
+#### Properties of the _Age_ class    
 
 <table>
   <tr>
@@ -55,18 +57,22 @@ Corresponding to the use of "age of onset" in HPO.
 </td>
   </tr>
 
-</table>Age of the object
+</table>
+
+
+#### Description 
+Age of the object
 
 
 #### Examples
 
 ```
 {
+   "age" : "P56Y",
    "age_class" : {
-      "id" : "HP:0003621",
-      "label" : "Juvenile onset"
-   },
-   "age" : "P56Y"
+      "label" : "Juvenile onset",
+      "id" : "HP:0003621"
+   }
 }
 ```
 --------------------------------------------------------------------------------
@@ -91,9 +97,8 @@ Corresponding to the use of "age of onset" in HPO.
 
 ```
 'age_class' : {
-  'id' => 'HP:0003621',
-  'label' => 'Juvenile onset'
+  'label' => 'Juvenile onset',
+  'id' => 'HP:0003621'
 }
 ```
-  
-The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/age.yaml).
+

@@ -18,8 +18,10 @@ tags:
 
 
 #### Provenance  
-  
-<h4>Properties of the <i>Individual</i> class</h4>
+
+
+#### Schema source: [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/individual.yaml)    
+#### Properties of the _Individual_ class    
 
 <table>
   <tr>
@@ -112,7 +114,11 @@ For resources where there may be more than one organism being studied it is advi
 </td>
   </tr>
 
-</table>An individual is a single organism (here typically a human).
+</table>
+
+
+#### Description 
+An individual is a single organism (here typically a human).
 
 
 
@@ -121,21 +127,49 @@ For resources where there may be more than one organism being studied it is advi
 ```
 {
    "sex" : {
-      "id" : "PATO:0020000",
-      "label" : "female genetic sex"
+      "label" : "female genetic sex",
+      "id" : "PATO:0020000"
+   },
+   "data_use_conditions" : {
+      "label" : "no restriction",
+      "id" : "DUO:0000004"
+   },
+   "name" : "Ion Tichy, space explorer",
+   "description" : "patient with lung cancer, male smoker",
+   "info" : {
+      "last_name" : {
+         "value" : "Tichy",
+         "type" : "string"
+      },
+      "first_name" : {
+         "value" : "Ion",
+         "type" : "string"
+      }
    },
    "updated" : "2017-10-25T07:06:03Z",
    "external_references" : [
       {
          "relation" : "provenance",
          "type" : {
-            "id" : "cellosaurus:CVCL_0312",
-            "label" : "HOS"
+            "label" : "HOS",
+            "id" : "cellosaurus:CVCL_0312"
          },
          "description" : "Cellosaurus cell line identifier"
       }
    ],
-   "description" : "patient with lung cancer, male smoker",
+   "id" : "AM_BS__NCBISKYCGH-1993",
+   "geo_provenance" : {
+      "altitude" : 94,
+      "country" : "Romania",
+      "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
+      "latitude" : 45.75,
+      "longitude" : 21.23,
+      "city" : "Timisoara"
+   },
+   "organism" : {
+      "id" : "NCBITaxon:9606",
+      "label" : "Homo sapiens"
+   },
    "biocharacteristics" : [
       {
          "description" : "Patient with Down syndrome",
@@ -145,35 +179,7 @@ For resources where there may be more than one organism being studied it is advi
          }
       }
    ],
-   "name" : "Ion Tichy, space explorer",
-   "geo_provenance" : {
-      "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
-      "altitude" : 94,
-      "latitude" : 45.75,
-      "city" : "Timisoara",
-      "longitude" : 21.23,
-      "country" : "Romania"
-   },
-   "created" : "2017-10-25T07:06:03Z",
-   "info" : {
-      "last_name" : {
-         "value" : "Tichy",
-         "type" : "string"
-      },
-      "first_name" : {
-         "type" : "string",
-         "value" : "Ion"
-      }
-   },
-   "organism" : {
-      "label" : "Homo sapiens",
-      "id" : "NCBITaxon:9606"
-   },
-   "id" : "AM_BS__NCBISKYCGH-1993",
-   "data_use_conditions" : {
-      "label" : "no restriction",
-      "id" : "DUO:0000004"
-   }
+   "created" : "2017-10-25T07:06:03Z"
 }
 ```
 --------------------------------------------------------------------------------
@@ -191,8 +197,8 @@ For resources where there may be more than one organism being studied it is advi
   {
     'description' => 'Patient with Down syndrome',
     'type' => {
-                'label' => 'Genetic anticipation',
-                'id' => 'HP:0003745'
+                'id' => 'HP:0003745',
+                'label' => 'Genetic anticipation'
               }
   }
 ]
@@ -273,12 +279,12 @@ This value may reflect either the place of birth or residence, but frequently ma
 
 ```
 'geo_provenance' : {
-  'label' => 'Str Marasesti 5, 300077 Timisoara, Romania',
-  'altitude' => 94,
-  'latitude' => '45.75',
+  'city' => 'Timisoara',
   'longitude' => '21.23',
+  'altitude' => 94,
   'country' => 'Romania',
-  'city' => 'Timisoara'
+  'label' => 'Str Marasesti 5, 300077 Timisoara, Romania',
+  'latitude' => '45.75'
 }
 ```
 
@@ -298,14 +304,14 @@ This value may reflect either the place of birth or residence, but frequently ma
 
 ```
 'info' : {
-  'first_name' => {
-                    'type' => 'string',
-                    'value' => 'Ion'
-                  },
   'last_name' => {
                    'value' => 'Tichy',
                    'type' => 'string'
-                 }
+                 },
+  'first_name' => {
+                    'type' => 'string',
+                    'value' => 'Ion'
+                  }
 }
 ```
 
@@ -355,5 +361,4 @@ For resources where there may be more than one organism being studied it is advi
 ```
 'updated' : "2022-11-11T09:45:13Z"
 ```
-  
-The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/individual.yaml).
+

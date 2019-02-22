@@ -18,8 +18,10 @@ tags:
 
 
 #### Provenance  
-  
-<h4>Properties of the <i>Variant</i> class</h4>
+
+
+#### Schema source: [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/variant.yaml)    
+#### Properties of the _Variant_ class    
 
 <table>
   <tr>
@@ -122,7 +124,11 @@ tags:
     <td>the variant type in case of a named (structural) variant (e.g. DUP, DEL, BRK ...)</td>
   </tr>
 
-</table>The document describes attributes of the _variant_ object. In its current implementation, _valiant_ (and related genomic objects such as _callset_) represent extended versions of the original, VCF-derived GA4GH schema.
+</table>
+
+
+#### Description 
+The document describes attributes of the _variant_ object. In its current implementation, _valiant_ (and related genomic objects such as _callset_) represent extended versions of the original, VCF-derived GA4GH schema.
 This format may be superseeded or augmented based on current developments in the GA4GH::GKS work stream.
 
 
@@ -131,32 +137,32 @@ This format may be superseeded or augmented based on current developments in the
 
 ```
 {
-   "mate_name" : 14,
-   "id" : "id",
-   "variant_type" : "DEL",
-   "end" : [
-      "21977798",
-      "21978106"
+   "alternate_bases" : "AC",
+   "start" : [
+      "20867740"
    ],
-   "biosample_id" : "biosample_id",
-   "created" : "2017-10-25T07:06:03Z",
-   "callset_id" : "callset_id",
    "info" : {
       "cnv_value" : "-0.294",
       "cnv_length" : 1205290
    },
+   "reference_name" : 8,
+   "mate_name" : 14,
+   "digest" : "digest",
+   "variant_type" : "DEL",
+   "callset_id" : "callset_id",
    "reference_bases" : "G",
+   "created" : "2017-10-25T07:06:03Z",
    "genotype" : [
       "1",
       "."
    ],
+   "end" : [
+      "21977798",
+      "21978106"
+   ],
    "updated" : "2017-10-25T07:06:03Z",
-   "digest" : "digest",
-   "reference_name" : 8,
-   "alternate_bases" : "AC",
-   "start" : [
-      "20867740"
-   ]
+   "biosample_id" : "biosample_id",
+   "id" : "id"
 }
 ```
 --------------------------------------------------------------------------------
@@ -316,5 +322,4 @@ db.variants.find( { "reference_name" : "9",  "variant_type" : "DEL", "start" : {
 ```
 'variant_type' : "DEL"
 ```
-  
-The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/variant.yaml).
+

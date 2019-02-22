@@ -18,8 +18,10 @@ tags:
 
 
 #### Provenance  
-  
-<h4>Properties of the <i>Reference</i> class</h4>
+
+
+#### Schema source: [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/reference.yaml)    
+#### Properties of the _Reference_ class    
 
 <table>
   <tr>
@@ -49,7 +51,11 @@ represented as Ontoloyg_term object.
 </td>
   </tr>
 
-</table>Many of the defined elements in a resource are references to other resources.
+</table>
+
+
+#### Description 
+Many of the defined elements in a resource are references to other resources.
 Using these references, the resources combine to build a web of information.
 
 
@@ -58,11 +64,11 @@ Using these references, the resources combine to build a web of information.
 
 ```
 {
-   "type" : {
-      "label" : "HOS",
-      "id" : "cellosaurus:CVCL_0312"
-   },
    "relation" : "provenance",
+   "type" : {
+      "id" : "cellosaurus:CVCL_0312",
+      "label" : "HOS"
+   },
    "description" : "Cellosaurus cell line identifier"
 }
 ```
@@ -101,5 +107,4 @@ represented as Ontoloyg_term object.
   'label' => 'arrayMap 2014'
 }
 ```
-  
-The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/reference.yaml).
+

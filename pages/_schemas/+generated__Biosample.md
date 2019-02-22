@@ -30,8 +30,10 @@ tags:
 * GA4GH Metadata Task Team  
 * @mbaudis  
 * @mcourtot  
-* @theisuru    
-<h4>Properties of the <i>Biosample</i> class</h4>
+* @theisuru  
+
+#### Schema source: [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/biosample.yaml)    
+#### Properties of the _Biosample_ class    
 
 <table>
   <tr>
@@ -134,7 +136,11 @@ In a local context this could be the <code>id</code> attribute in a correspondin
 </td>
   </tr>
 
-</table>A Biosample refers to a unit of biological material from which the substrate molecules (e.g. genomic DNA, RNA, proteins) for molecular analyses (e.g. sequencing, array hybridisation, mass-spectrometry) are extracted.
+</table>
+
+
+#### Description 
+A Biosample refers to a unit of biological material from which the substrate molecules (e.g. genomic DNA, RNA, proteins) for molecular analyses (e.g. sequencing, array hybridisation, mass-spectrometry) are extracted.
 Examples would be a tissue biopsy, a single cell from a culture for single cell genome sequencing or a protein fraction from a gradient centrifugation. Several instances (e.g. technical replicates) or types of experiments (e.g. genomic array as well as RNA-seq experiments) may refer to the same Biosample. FHIR mapping: Specimen (http://www.hl7.org/fhir/specimen.html).
 
 
@@ -143,55 +149,55 @@ Examples would be a tissue biopsy, a single cell from a culture for single cell 
 
 ```
 {
-   "project_id" : "ind-cnhl-1293347-004",
-   "info" : {
-      "followup_time" : "P14M",
-      "death" : 1
-   },
-   "created" : "2017-10-25T07:06:03Z",
    "individual_id" : "ind-cnhl-1293347-004",
+   "biocharacteristics" : [
+      {
+         "type" : {
+            "id" : "icdot:C25.9",
+            "label" : "Pancreas, NOS"
+         },
+         "description" : "Pancreatic Adenocarcinoma"
+      }
+   ],
+   "created" : "2017-10-25T07:06:03Z",
    "id" : "AM_BS__NCBISKYCGH-1993",
-   "data_use_conditions" : {
-      "id" : "DUO:0000004",
-      "label" : "no restriction"
+   "geo_provenance" : {
+      "longitude" : 21.23,
+      "city" : "Timisoara",
+      "latitude" : 45.75,
+      "altitude" : 94,
+      "country" : "Romania",
+      "label" : "Str Marasesti 5, 300077 Timisoara, Romania"
    },
-   "updated" : "2017-10-25T07:06:03Z",
-   "description" : "Burkitt lymphoma, cell line Namalwa",
    "external_references" : [
       {
+         "description" : "Cellosaurus cell line identifier",
          "type" : {
             "label" : "HOS",
             "id" : "cellosaurus:CVCL_0312"
          },
-         "relation" : "provenance",
-         "description" : "Cellosaurus cell line identifier"
+         "relation" : "provenance"
       }
    ],
-   "name" : "Sample BRCA-00429, 2nd replicate",
-   "geo_provenance" : {
-      "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
-      "altitude" : 94,
-      "longitude" : 21.23,
-      "country" : "Romania",
-      "city" : "Timisoara",
-      "latitude" : 45.75
+   "project_id" : "ind-cnhl-1293347-004",
+   "updated" : "2017-10-25T07:06:03Z",
+   "info" : {
+      "death" : 1,
+      "followup_time" : "P14M"
    },
+   "description" : "Burkitt lymphoma, cell line Namalwa",
    "age_at_collection" : {
+      "age" : "P56Y",
       "age_class" : {
          "label" : "Juvenile onset",
          "id" : "HP:0003621"
-      },
-      "age" : "P56Y"
-   },
-   "biocharacteristics" : [
-      {
-         "description" : "Pancreatic Adenocarcinoma",
-         "type" : {
-            "label" : "Pancreas, NOS",
-            "id" : "icdot:C25.9"
-         }
       }
-   ]
+   },
+   "name" : "Sample BRCA-00429, 2nd replicate",
+   "data_use_conditions" : {
+      "id" : "DUO:0000004",
+      "label" : "no restriction"
+   }
 }
 ```
 --------------------------------------------------------------------------------
@@ -207,8 +213,8 @@ Examples would be a tissue biopsy, a single cell from a culture for single cell 
 ```
 'age_at_collection' : {
   'age_class' => {
-                   'label' => 'Juvenile onset',
-                   'id' => 'HP:0003621'
+                   'id' => 'HP:0003621',
+                   'label' => 'Juvenile onset'
                  },
   'age' => 'P56Y'
 }
@@ -231,16 +237,16 @@ Examples would be phenotypes, disease codes or other ontology classes specific t
     'description' => 'Pancreatic Adenocarcinoma'
   },
   {
+    'description' => 'Pancreatic Adenocarcinoma',
     'type' => {
                 'id' => 'icdom:81403',
                 'label' => 'Adenocarcinoma, NOS'
-              },
-    'description' => 'Pancreatic Adenocarcinoma'
+              }
   },
   {
     'type' => {
-                'label' => 'Pancreatic Adenocarcinoma',
-                'id' => 'ncit:C8294'
+                'id' => 'ncit:C8294',
+                'label' => 'Pancreatic Adenocarcinoma'
               },
     'description' => 'Pancreatic Adenocarcinoma'
   }
@@ -308,11 +314,11 @@ db.biosamples.distinct( "biocharacteristics.type.id", { "biocharacteristics.type
     'description' => 'Cellosaurus cell line identifier'
   },
   {
-    'relation' => 'report',
     'type' => {
                 'label' => 'Rearrangement of the p53 gene in human osteogenic sarcomas.',
                 'id' => 'pubmed:2823272'
               },
+    'relation' => 'report',
     'description' => 'PubMed reference'
   }
 ]
@@ -333,12 +339,12 @@ Frequently, this value may reflect either the place of the laboratory where the 
 
 ```
 'geo_provenance' : {
-  'label' => 'Str Marasesti 5, 300077 Timisoara, Romania',
-  'altitude' => 94,
-  'country' => 'Romania',
   'longitude' => '21.23',
   'city' => 'Timisoara',
   'precision' => 'address',
+  'country' => 'Romania',
+  'altitude' => 94,
+  'label' => 'Str Marasesti 5, 300077 Timisoara, Romania',
   'latitude' => '45.75'
 }
 ```
@@ -411,5 +417,4 @@ db.biosamples.find( {"info" : { $elemMatch: { "followup_time.value" : { $regex :
 ```
 'updated' : "2022-11-11T09:45:13Z"
 ```
-  
-The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/biosample.yaml).
+

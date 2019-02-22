@@ -30,8 +30,10 @@ tags:
 * Phenopacket developers  
 * @julesjacobsen  
 * @pnrobinson  
-* @mbaudis    
-<h4>Properties of the <i>Phenotype</i> class</h4>
+* @mbaudis  
+
+#### Schema source: [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/phenotype.yaml)    
+#### Properties of the _Phenotype_ class    
 
 <table>
   <tr>
@@ -84,7 +86,11 @@ FHIR mapping: Condition.severity
     <td>The ontology term as Ontology_term. The primary ontology class which describes the phenotype.</td>
   </tr>
 
-</table>An individual phenotypic feature, observed as either present or absent (negated), with possible onset, modifiers and frequency.
+</table>
+
+
+#### Description 
+An individual phenotypic feature, observed as either present or absent (negated), with possible onset, modifiers and frequency.
 FHIR mapping: Condition (https://www.hl7.org/fhir/condition.html) or Observation (https://www.hl7.org/fhir/observation.html)
 
 
@@ -93,22 +99,22 @@ FHIR mapping: Condition (https://www.hl7.org/fhir/condition.html) or Observation
 
 ```
 {
-   "negated" : "",
+   "description" : "DUO:0000004",
+   "evidence" : [
+      {
+         "label" : "",
+         "id" : ""
+      }
+   ],
    "severity" : {
       "label" : "Mild",
       "id" : "HP:0012825"
    },
-   "description" : "DUO:0000004",
+   "negated" : "",
    "type" : {
       "id" : "ncit:C8294",
       "label" : "Pancreatic Adenocarcinoma"
-   },
-   "evidence" : [
-      {
-         "id" : "",
-         "label" : ""
-      }
-   ]
+   }
 }
 ```
 --------------------------------------------------------------------------------
@@ -134,8 +140,8 @@ Note this is not a acceptable place to document/describe the phenotype the type 
 ```
 'evidence' : [
   {
-    'id' => '',
-    'label' => ''
+    'label' => '',
+    'id' => ''
   }
 ]
 ```
@@ -159,11 +165,11 @@ It is only required in cases to indicate that the phenotype was looked for, but 
 
 ```
 'onset' : {
-  'age' => 'P12Y',
   'age_class' => {
                    'label' => 'Juvenile onset',
                    'id' => 'HP:0003621'
-                 }
+                 },
+  'age' => 'P12Y'
 }
 ```
 
@@ -176,8 +182,8 @@ FHIR mapping: Condition.severity
 
 ```
 'severity' : {
-  'label' => 'Mild',
-  'id' => 'HP:0012825'
+  'id' => 'HP:0012825',
+  'label' => 'Mild'
 }
 ```
 
@@ -192,5 +198,4 @@ FHIR mapping: Condition.severity
   'label' => 'Pancreatic Adenocarcinoma'
 }
 ```
-  
-The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/phenotype.yaml).
+

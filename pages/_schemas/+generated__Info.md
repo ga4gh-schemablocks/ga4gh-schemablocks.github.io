@@ -18,8 +18,10 @@ tags:
 
 
 #### Provenance  
-  
-<h4>Properties of the <i>Info</i> class</h4>
+
+
+#### Schema source: [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/info.yaml)    
+#### Properties of the _Info_ class    
 
 <table>
   <tr>
@@ -53,7 +55,11 @@ tags:
     <td>the value in a format correstponding to type</td>
   </tr>
 
-</table>Additional information regarding the object in reference.
+</table>
+
+
+#### Description 
+Additional information regarding the object in reference.
 
 
 
@@ -62,9 +68,9 @@ tags:
 ```
 {
    "format" : "int64",
+   "type" : "number",
    "description" : "The base length of the called segment",
-   "value" : 1503320,
-   "type" : "number"
+   "value" : 1503320
 }
 ```
 --------------------------------------------------------------------------------
@@ -106,5 +112,4 @@ tags:
 ```
 'value' : "1503320"
 ```
-  
-The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/info.yaml).
+
