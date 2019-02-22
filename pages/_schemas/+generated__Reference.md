@@ -10,10 +10,14 @@ tags:
 ---
 ## Reference
 
+
 #### Status: __proposed__
 
 <!--more-->
 
+
+
+#### Provenance  
   
 <h4>Properties of the <i>Reference</i> class</h4>
 
@@ -54,12 +58,12 @@ Using these references, the resources combine to build a web of information.
 
 ```
 {
-   "description" : "Cellosaurus cell line identifier",
-   "relation" : "provenance",
    "type" : {
-      "id" : "cellosaurus:CVCL_0312",
-      "label" : "HOS"
-   }
+      "label" : "HOS",
+      "id" : "cellosaurus:CVCL_0312"
+   },
+   "relation" : "provenance",
+   "description" : "Cellosaurus cell line identifier"
 }
 ```
 --------------------------------------------------------------------------------
@@ -74,8 +78,7 @@ Using these references, the resources combine to build a web of information.
 ```
 'description' : "Cellosaurus cell line identifier"
 ```
-  
-The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/reference.yaml).
+
 ##### relation
 
 * the relation of the external reference to the object it was pointed from
@@ -84,8 +87,7 @@ The original schema definitions are provided in the [YAML file](https://github.c
 ```
 'relation' : "provenance"
 ```
-  
-The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/reference.yaml).
+
 ##### type
 
 * A properly prefixed CURIE of the external reference and an associated label,

@@ -10,10 +10,14 @@ tags:
 ---
 ## Info
 
+
 #### Status: __proposed__
 
 <!--more-->
 
+
+
+#### Provenance  
   
 <h4>Properties of the <i>Info</i> class</h4>
 
@@ -57,10 +61,10 @@ tags:
 
 ```
 {
-   "type" : "number",
-   "value" : 1503320,
    "format" : "int64",
-   "description" : "The base length of the called segment"
+   "description" : "The base length of the called segment",
+   "value" : 1503320,
+   "type" : "number"
 }
 ```
 --------------------------------------------------------------------------------
@@ -75,8 +79,7 @@ tags:
 ```
 'description' : "The base length of the called segment."
 ```
-  
-The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/info.yaml).
+
 ##### format
 
 * format of the value; optional
@@ -85,8 +88,7 @@ The original schema definitions are provided in the [YAML file](https://github.c
 ```
 'format' : "int64"
 ```
-  
-The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/info.yaml).
+
 ##### type
 
 * type of the value; optional
@@ -95,8 +97,7 @@ The original schema definitions are provided in the [YAML file](https://github.c
 ```
 'type' : "number"
 ```
-  
-The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/info.yaml).
+
 ##### value
 
 * the value in a format correstponding to type

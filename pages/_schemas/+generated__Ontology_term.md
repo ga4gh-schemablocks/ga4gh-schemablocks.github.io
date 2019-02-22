@@ -10,10 +10,14 @@ tags:
 ---
 ## Ontology_term
 
+
 #### Status: __proposed__
 
 <!--more-->
 
+
+
+#### Provenance  
   
 <h4>Properties of the <i>Ontology_term</i> class</h4>
 
@@ -61,8 +65,8 @@ inconsistently followed.
 ```
 ```
 {
-   "id" : "ncit:C3058",
-   "label" : "Glioblastoma"
+   "label" : "Glioblastoma",
+   "id" : "ncit:C3058"
 }
 ```
 --------------------------------------------------------------------------------
@@ -77,8 +81,7 @@ inconsistently followed.
 ```
 'id' : "ncit:C8294"
 ```
-  
-The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/ontology_term.yaml).
+
 ##### label
 
 * the text label associated with the term

@@ -9,18 +9,13 @@ tags:
   - code
 ---
 ## Age
+##### From Original GA4GH schema
 
 #### Status: __proposed__
 
 <!--more-->
 
 
-
-#### Authors  
-
-* GA4GH Metadata Task Team  
-* @mbaudis  
-* @theisuru  
 
 #### Provenance  
 
@@ -29,7 +24,13 @@ tags:
 #### Used by  
 
 * [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/age.rst)  
-* [Progenetix database schema (Beacon+ backend)](https://github.com/progenetix/schemas/tree/master/main/yaml)    
+* [Progenetix database schema (Beacon+ backend)](https://github.com/progenetix/schemas/tree/master/main/yaml)  
+
+#### Authors  
+
+* GA4GH Metadata Task Team  
+* @mbaudis  
+* @theisuru    
 <h4>Properties of the <i>Age</i> class</h4>
 
 <table>
@@ -61,11 +62,11 @@ Corresponding to the use of "age of onset" in HPO.
 
 ```
 {
-   "age" : "P56Y",
    "age_class" : {
       "id" : "HP:0003621",
       "label" : "Juvenile onset"
-   }
+   },
+   "age" : "P56Y"
 }
 ```
 --------------------------------------------------------------------------------
@@ -80,8 +81,7 @@ Corresponding to the use of "age of onset" in HPO.
 ```
 'age' : "P56Y"
 ```
-  
-The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/age.yaml).
+
 ##### age_class
 
 * The age of the object (e.g. individual at tome of a biosample collection), as Ontology_class.

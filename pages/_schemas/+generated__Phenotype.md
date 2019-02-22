@@ -9,12 +9,28 @@ tags:
   - code
 ---
 ## Phenotype
+##### From Phenopacket schema
 
 #### Status: __proposed__
 
 <!--more-->
 
-  
+
+
+#### Provenance  
+
+* [Phenopacket schema](https://github.com/ga4gh/ga4gh-schemas/blob/master/src/main/proto/ga4gh/bio_metadata.proto#L111)  
+
+#### Used by  
+
+* [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/phenotype.rst)  
+
+#### Authors  
+
+* Phenopacket developers  
+* @julesjacobsen  
+* @pnrobinson  
+* @mbaudis    
 <h4>Properties of the <i>Phenotype</i> class</h4>
 
 <table>
@@ -29,7 +45,7 @@ tags:
     <td>string</td>
     <td></td>
     <td>Free-text description of the phenotype.
-Note this is not a acceptable place to document/describe the phenotype the type and onset etc... fields should be used for this purpose.
+Note this is not a acceptable place to document/describe the phenotype the type and onset etc... Other fields should be used for this purpose.
 </td>
   </tr>
   <tr>
@@ -44,6 +60,13 @@ Note this is not a acceptable place to document/describe the phenotype the type 
     <td></td>
     <td>Flag to indicate whether the phenotype was observed or not. Default is 'false', in other words the phenotype was observed.
 It is only required in cases to indicate that the phenotype was looked for, but __not__ observed.
+</td>
+  </tr>
+  <tr>
+    <td>onset</td>
+    <td></td>
+    <td></td>
+    <td>The age of the individual at time of biosample collection, as Age object. In the <i>Phenopacket</i> implementation, alternatives to the "Age" class may be used to describe "onset". 
 </td>
   </tr>
   <tr>
@@ -70,22 +93,22 @@ FHIR mapping: Condition (https://www.hl7.org/fhir/condition.html) or Observation
 
 ```
 {
+   "negated" : "",
+   "severity" : {
+      "label" : "Mild",
+      "id" : "HP:0012825"
+   },
+   "description" : "DUO:0000004",
+   "type" : {
+      "id" : "ncit:C8294",
+      "label" : "Pancreatic Adenocarcinoma"
+   },
    "evidence" : [
       {
          "id" : "",
          "label" : ""
       }
-   ],
-   "type" : {
-      "label" : "Pancreatic Adenocarcinoma",
-      "id" : "ncit:C8294"
-   },
-   "severity" : {
-      "id" : "HP:0012825",
-      "label" : "Mild"
-   },
-   "description" : "DUO:0000004",
-   "negated" : ""
+   ]
 }
 ```
 --------------------------------------------------------------------------------
@@ -95,15 +118,14 @@ FHIR mapping: Condition (https://www.hl7.org/fhir/condition.html) or Observation
 ##### description
 
 * Free-text description of the phenotype.
-Note this is not a acceptable place to document/describe the phenotype the type and onset etc... fields should be used for this purpose.
+Note this is not a acceptable place to document/describe the phenotype the type and onset etc... Other fields should be used for this purpose.
 
 * example:
 
 ```
 'description' : "Pancreatic Adenocarcinoma"
 ```
-  
-The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/phenotype.yaml).
+
 ##### evidence
 
 * Evidences for how the phenotype was determined
@@ -117,8 +139,7 @@ The original schema definitions are provided in the [YAML file](https://github.c
   }
 ]
 ```
-  
-The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/phenotype.yaml).
+
 ##### negated
 
 * Flag to indicate whether the phenotype was observed or not. Default is 'false', in other words the phenotype was observed.
@@ -129,8 +150,23 @@ It is only required in cases to indicate that the phenotype was looked for, but 
 ```
 'negated' : ""
 ```
-  
-The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/phenotype.yaml).
+
+##### onset
+
+* The age of the individual at time of biosample collection, as Age object. In the <i>Phenopacket</i> implementation, alternatives to the "Age" class may be used to describe "onset". 
+
+* example:
+
+```
+'onset' : {
+  'age' => 'P12Y',
+  'age_class' => {
+                   'label' => 'Juvenile onset',
+                   'id' => 'HP:0003621'
+                 }
+}
+```
+
 ##### severity
 
 * Severity of the condition e.g. subclasses of HP:0012824-Severity or SNOMED:272141005-Severities.
@@ -140,12 +176,11 @@ FHIR mapping: Condition.severity
 
 ```
 'severity' : {
-  'id' => 'HP:0012825',
-  'label' => 'Mild'
+  'label' => 'Mild',
+  'id' => 'HP:0012825'
 }
 ```
-  
-The original schema definitions are provided in the [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/phenotype.yaml).
+
 ##### type
 
 * The ontology term as Ontology_term. The primary ontology class which describes the phenotype.
