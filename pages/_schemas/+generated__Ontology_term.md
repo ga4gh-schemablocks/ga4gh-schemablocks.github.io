@@ -20,6 +20,10 @@ tags:
 #### Provenance  
 
 
+#### Authors
+
+* 
+
 #### Schema source: [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/ontology_term.yaml)    
 #### Properties of the _Ontology_term_ class    
 
@@ -71,8 +75,8 @@ inconsistently followed.
 ```
 ```
 {
-   "label" : "Glioblastoma",
-   "id" : "ncit:C3058"
+   "id" : "ncit:C3058",
+   "label" : "Glioblastoma"
 }
 ```
 --------------------------------------------------------------------------------

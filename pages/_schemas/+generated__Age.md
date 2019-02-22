@@ -26,11 +26,9 @@ tags:
 * [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/age.rst)  
 * [Progenetix database schema (Beacon+ backend)](https://github.com/progenetix/schemas/tree/master/main/yaml)  
 
-#### Authors  
+#### Authors
 
-* GA4GH Metadata Task Team  
-* @mbaudis  
-* @theisuru  
+* GA4GH Metadata Task Team, @mbaudis, @theisuru
 
 #### Schema source: [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/age.yaml)    
 #### Properties of the _Age_ class    
@@ -70,8 +68,8 @@ Age of the object
 {
    "age" : "P56Y",
    "age_class" : {
-      "label" : "Juvenile onset",
-      "id" : "HP:0003621"
+      "id" : "HP:0003621",
+      "label" : "Juvenile onset"
    }
 }
 ```
@@ -97,8 +95,8 @@ Corresponding to the use of "age of onset" in HPO.
 
 ```
 'age_class' : {
-  'label' => 'Juvenile onset',
-  'id' => 'HP:0003621'
+  'id' => 'HP:0003621',
+  'label' => 'Juvenile onset'
 }
 ```
 

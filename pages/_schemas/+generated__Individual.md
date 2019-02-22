@@ -20,6 +20,10 @@ tags:
 #### Provenance  
 
 
+#### Authors
+
+* 
+
 #### Schema source: [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/individual.yaml)    
 #### Properties of the _Individual_ class    
 
@@ -127,15 +131,48 @@ An individual is a single organism (here typically a human).
 ```
 {
    "sex" : {
-      "label" : "female genetic sex",
-      "id" : "PATO:0020000"
+      "id" : "PATO:0020000",
+      "label" : "female genetic sex"
    },
-   "data_use_conditions" : {
-      "label" : "no restriction",
-      "id" : "DUO:0000004"
+   "biocharacteristics" : [
+      {
+         "type" : {
+            "id" : "HP:0003745",
+            "label" : "Genetic anticipation"
+         },
+         "description" : "Patient with Down syndrome"
+      }
+   ],
+   "organism" : {
+      "id" : "NCBITaxon:9606",
+      "label" : "Homo sapiens"
    },
-   "name" : "Ion Tichy, space explorer",
+   "created" : "2017-10-25T07:06:03Z",
    "description" : "patient with lung cancer, male smoker",
+   "updated" : "2017-10-25T07:06:03Z",
+   "id" : "AM_BS__NCBISKYCGH-1993",
+   "data_use_conditions" : {
+      "id" : "DUO:0000004",
+      "label" : "no restriction"
+   },
+   "external_references" : [
+      {
+         "relation" : "provenance",
+         "description" : "Cellosaurus cell line identifier",
+         "type" : {
+            "id" : "cellosaurus:CVCL_0312",
+            "label" : "HOS"
+         }
+      }
+   ],
+   "geo_provenance" : {
+      "city" : "Timisoara",
+      "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
+      "longitude" : 21.23,
+      "country" : "Romania",
+      "altitude" : 94,
+      "latitude" : 45.75
+   },
    "info" : {
       "last_name" : {
          "value" : "Tichy",
@@ -146,40 +183,7 @@ An individual is a single organism (here typically a human).
          "type" : "string"
       }
    },
-   "updated" : "2017-10-25T07:06:03Z",
-   "external_references" : [
-      {
-         "relation" : "provenance",
-         "type" : {
-            "label" : "HOS",
-            "id" : "cellosaurus:CVCL_0312"
-         },
-         "description" : "Cellosaurus cell line identifier"
-      }
-   ],
-   "id" : "AM_BS__NCBISKYCGH-1993",
-   "geo_provenance" : {
-      "altitude" : 94,
-      "country" : "Romania",
-      "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
-      "latitude" : 45.75,
-      "longitude" : 21.23,
-      "city" : "Timisoara"
-   },
-   "organism" : {
-      "id" : "NCBITaxon:9606",
-      "label" : "Homo sapiens"
-   },
-   "biocharacteristics" : [
-      {
-         "description" : "Patient with Down syndrome",
-         "type" : {
-            "id" : "HP:0003745",
-            "label" : "Genetic anticipation"
-         }
-      }
-   ],
-   "created" : "2017-10-25T07:06:03Z"
+   "name" : "Ion Tichy, space explorer"
 }
 ```
 --------------------------------------------------------------------------------
@@ -231,8 +235,8 @@ db.biosamples.distinct( { "biocharacteristics.type.id", "biocharacteristics.type
 
 ```
 'data_use_conditions' : {
-  'id' => 'DUO:0000004',
-  'label' => 'no restriction'
+  'label' => 'no restriction',
+  'id' => 'DUO:0000004'
 }
 ```
 
@@ -254,11 +258,11 @@ db.biosamples.distinct( { "biocharacteristics.type.id", "biocharacteristics.type
 ```
 'external_references' : [
   {
-    'relation' => 'provenance',
     'type' => {
-                'id' => 'cellosaurus:CVCL_0312',
-                'label' => 'HOS'
+                'label' => 'HOS',
+                'id' => 'cellosaurus:CVCL_0312'
               },
+    'relation' => 'provenance',
     'description' => 'Cellosaurus cell line identifier'
   }
 ]
@@ -280,11 +284,11 @@ This value may reflect either the place of birth or residence, but frequently ma
 ```
 'geo_provenance' : {
   'city' => 'Timisoara',
-  'longitude' => '21.23',
+  'latitude' => '45.75',
   'altitude' => 94,
   'country' => 'Romania',
   'label' => 'Str Marasesti 5, 300077 Timisoara, Romania',
-  'latitude' => '45.75'
+  'longitude' => '21.23'
 }
 ```
 

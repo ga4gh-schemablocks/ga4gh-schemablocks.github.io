@@ -20,6 +20,10 @@ tags:
 #### Provenance  
 
 
+#### Authors
+
+* 
+
 #### Schema source: [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/callset.yaml)    
 #### Properties of the _Callset_ class    
 
@@ -98,23 +102,23 @@ and is a shared identifier for all variants detected in this experiment, attribu
 
 ```
 {
-   "geo_provenance" : {
-      "city" : "Timisoara",
-      "longitude" : 21.23,
-      "latitude" : 45.75,
-      "country" : "Romania",
-      "label" : "Str Marasesti 5, 300077 Timisoara, Romania"
-   },
-   "id" : "GSM264198",
+   "info" : "no restriction",
    "biosample_id" : "SAMEA1234",
-   "updated" : "2017-10-25T07:06:03Z",
-   "created" : "2017-10-25T07:06:03Z",
-   "data_use_conditions" : {
-      "id" : "DUO:0000004",
-      "label" : "no restriction"
-   },
    "description" : "SNP6 array of cancer sample BRCA-0893",
-   "info" : "no restriction"
+   "created" : "2017-10-25T07:06:03Z",
+   "id" : "GSM264198",
+   "updated" : "2017-10-25T07:06:03Z",
+   "data_use_conditions" : {
+      "label" : "no restriction",
+      "id" : "DUO:0000004"
+   },
+   "geo_provenance" : {
+      "country" : "Romania",
+      "latitude" : 45.75,
+      "longitude" : 21.23,
+      "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
+      "city" : "Timisoara"
+   }
 }
 ```
 --------------------------------------------------------------------------------
@@ -149,8 +153,8 @@ and is a shared identifier for all variants detected in this experiment, attribu
 
 ```
 'data_use_conditions' : {
-  'label' => 'no restriction',
-  'id' => 'DUO:0000004'
+  'id' => 'DUO:0000004',
+  'label' => 'no restriction'
 }
 ```
 
@@ -172,11 +176,11 @@ and is a shared identifier for all variants detected in this experiment, attribu
 
 ```
 'geo_provenance' : {
-  'city' => 'Timisoara',
-  'longitude' => '21.23',
-  'label' => 'Str Marasesti 5, 300077 Timisoara, Romania',
+  'latitude' => '45.75',
   'country' => 'Romania',
-  'latitude' => '45.75'
+  'label' => 'Str Marasesti 5, 300077 Timisoara, Romania',
+  'longitude' => '21.23',
+  'city' => 'Timisoara'
 }
 ```
 
@@ -202,7 +206,14 @@ and is a shared identifier for all variants detected in this experiment, attribu
 With a standard binning of 1MB, the arrays would contain ~3000 values each (depending on genome edition).
 ',
                     'value' => {
+                                 'binning' => {
+                                                'format' => 'int64',
+                                                'type' => 'number',
+                                                'value' => 1000000,
+                                                'description' => 'interval size in bases for the binning, when creating the cnv_maps'
+                                              },
                                  'dupmap' => {
+                                               'type' => 'array',
                                                'value' => [
                                                             '',
                                                             '',
@@ -217,15 +228,8 @@ With a standard binning of 1MB, the arrays would contain ~3000 values each (depe
                                                             ''
                                                           ],
                                                'description' => 'gain cnv status for the corresponding genome intervals
-',
-                                               'type' => 'array'
-                                             },
-                                 'binning' => {
-                                                'type' => 'number',
-                                                'format' => 'int64',
-                                                'value' => 1000000,
-                                                'description' => 'interval size in bases for the binning, when creating the cnv_maps'
-                                              }
+'
+                                             }
                                }
                   }
 }

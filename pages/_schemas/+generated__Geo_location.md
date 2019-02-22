@@ -26,11 +26,9 @@ tags:
 * [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/geolocation.rst)  
 * [Progenetix database schema (Beacon+ backend)](https://github.com/progenetix/schemas/tree/master/main/yaml)  
 
-#### Authors  
+#### Authors
 
-* GA4GH Metadata Task Team  
-* @mbaudis  
-* @theisuru  
+* GA4GH Metadata Task Team, @mbaudis, @theisuru
 
 #### Schema source: [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/geo_location.yaml)    
 #### Properties of the _Geo_location_ class    
@@ -110,19 +108,19 @@ The geographic point object uses the default units from the [DCMI point scheme](
 
 ```
 {
-   "latitude" : 47.37,
-   "altitude" : 8848,
    "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
-   "country" : "Romania",
    "longitude" : 8.54,
+   "altitude" : 8848,
+   "country" : "Romania",
+   "latitude" : 47.37,
    "city" : "Timisoara"
 }
 ```
 ```
 {
    "precision" : "room",
-   "longitude" : 8.54913,
    "latitude" : 47.39792,
+   "longitude" : 8.54913,
    "label" : "Office at Institute of Molecular Life Sciences, University of Zurich"
 }
 ```

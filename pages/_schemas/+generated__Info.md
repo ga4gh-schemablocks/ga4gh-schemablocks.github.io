@@ -20,6 +20,10 @@ tags:
 #### Provenance  
 
 
+#### Authors
+
+* 
+
 #### Schema source: [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/info.yaml)    
 #### Properties of the _Info_ class    
 
@@ -67,10 +71,10 @@ Additional information regarding the object in reference.
 
 ```
 {
-   "format" : "int64",
-   "type" : "number",
    "description" : "The base length of the called segment",
-   "value" : 1503320
+   "value" : 1503320,
+   "type" : "number",
+   "format" : "int64"
 }
 ```
 --------------------------------------------------------------------------------

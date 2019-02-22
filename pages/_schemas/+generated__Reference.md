@@ -20,6 +20,10 @@ tags:
 #### Provenance  
 
 
+#### Authors
+
+* 
+
 #### Schema source: [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/reference.yaml)    
 #### Properties of the _Reference_ class    
 
@@ -64,11 +68,11 @@ Using these references, the resources combine to build a web of information.
 
 ```
 {
-   "relation" : "provenance",
    "type" : {
       "id" : "cellosaurus:CVCL_0312",
       "label" : "HOS"
    },
+   "relation" : "provenance",
    "description" : "Cellosaurus cell line identifier"
 }
 ```
@@ -103,8 +107,8 @@ represented as Ontoloyg_term object.
 
 ```
 'type' : {
-  'id' => 'pubmed:25428357',
-  'label' => 'arrayMap 2014'
+  'label' => 'arrayMap 2014',
+  'id' => 'pubmed:25428357'
 }
 ```
 

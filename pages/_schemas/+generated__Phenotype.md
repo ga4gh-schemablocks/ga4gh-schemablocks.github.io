@@ -25,12 +25,9 @@ tags:
 
 * [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/phenotype.rst)  
 
-#### Authors  
+#### Authors
 
-* Phenopacket developers  
-* @julesjacobsen  
-* @pnrobinson  
-* @mbaudis  
+* Phenopacket developers, @julesjacobsen, @pnrobinson, @mbaudis
 
 #### Schema source: [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/phenotype.yaml)    
 #### Properties of the _Phenotype_ class    
@@ -99,13 +96,13 @@ FHIR mapping: Condition (https://www.hl7.org/fhir/condition.html) or Observation
 
 ```
 {
-   "description" : "DUO:0000004",
    "evidence" : [
       {
-         "label" : "",
-         "id" : ""
+         "id" : "",
+         "label" : ""
       }
    ],
+   "description" : "DUO:0000004",
    "severity" : {
       "label" : "Mild",
       "id" : "HP:0012825"
@@ -140,8 +137,8 @@ Note this is not a acceptable place to document/describe the phenotype the type 
 ```
 'evidence' : [
   {
-    'label' => '',
-    'id' => ''
+    'id' => '',
+    'label' => ''
   }
 ]
 ```
@@ -165,11 +162,11 @@ It is only required in cases to indicate that the phenotype was looked for, but 
 
 ```
 'onset' : {
+  'age' => 'P12Y',
   'age_class' => {
-                   'label' => 'Juvenile onset',
-                   'id' => 'HP:0003621'
-                 },
-  'age' => 'P12Y'
+                   'id' => 'HP:0003621',
+                   'label' => 'Juvenile onset'
+                 }
 }
 ```
 
@@ -182,8 +179,8 @@ FHIR mapping: Condition.severity
 
 ```
 'severity' : {
-  'id' => 'HP:0012825',
-  'label' => 'Mild'
+  'label' => 'Mild',
+  'id' => 'HP:0012825'
 }
 ```
 
@@ -194,8 +191,8 @@ FHIR mapping: Condition.severity
 
 ```
 'type' : {
-  'id' => 'ncit:C8294',
-  'label' => 'Pancreatic Adenocarcinoma'
+  'label' => 'Pancreatic Adenocarcinoma',
+  'id' => 'ncit:C8294'
 }
 ```
 

@@ -20,6 +20,10 @@ tags:
 #### Provenance  
 
 
+#### Authors
+
+* 
+
 #### Schema source: [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/variant.yaml)    
 #### Properties of the _Variant_ class    
 
@@ -137,32 +141,32 @@ This format may be superseeded or augmented based on current developments in the
 
 ```
 {
-   "alternate_bases" : "AC",
    "start" : [
       "20867740"
    ],
-   "info" : {
-      "cnv_value" : "-0.294",
-      "cnv_length" : 1205290
-   },
-   "reference_name" : 8,
-   "mate_name" : 14,
-   "digest" : "digest",
    "variant_type" : "DEL",
-   "callset_id" : "callset_id",
+   "biosample_id" : "biosample_id",
+   "info" : {
+      "cnv_length" : 1205290,
+      "cnv_value" : "-0.294"
+   },
    "reference_bases" : "G",
-   "created" : "2017-10-25T07:06:03Z",
-   "genotype" : [
-      "1",
-      "."
-   ],
+   "digest" : "digest",
    "end" : [
       "21977798",
       "21978106"
    ],
+   "mate_name" : 14,
+   "reference_name" : 8,
+   "alternate_bases" : "AC",
+   "callset_id" : "callset_id",
    "updated" : "2017-10-25T07:06:03Z",
-   "biosample_id" : "biosample_id",
-   "id" : "id"
+   "genotype" : [
+      "1",
+      "."
+   ],
+   "id" : "id",
+   "created" : "2017-10-25T07:06:03Z"
 }
 ```
 --------------------------------------------------------------------------------
@@ -260,8 +264,8 @@ db.variants.find( { "reference_name" : "9",  "variant_type" : "DEL", "start" : {
 
 ```
 'info' : {
-  'cnv_value' => '-0.294',
-  'cnv_length' => 1205290
+  'cnv_length' => 1205290,
+  'cnv_value' => '-0.294'
 }
 ```
 
