@@ -69,8 +69,8 @@ inconsistently followed.
 
 ```
 {
-   "label" : "no restriction",
-   "id" : "DUO:0000004"
+   "id" : "DUO:0000004",
+   "label" : "no restriction"
 }
 ```
 ```
@@ -81,8 +81,8 @@ inconsistently followed.
 ```
 ```
 {
-   "id" : "ncit:C3058",
-   "label" : "Glioblastoma"
+   "label" : "Glioblastoma",
+   "id" : "ncit:C3058"
 }
 ```
 --------------------------------------------------------------------------------

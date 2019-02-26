@@ -72,11 +72,11 @@ or the age of the individual at the collection of a biosample.
 ```
 {
    "onset" : {
+      "age" : "P12Y",
       "age_class" : {
          "label" : "Juvenile onset",
          "id" : "HP:0003621"
-      },
-      "age" : "P12Y"
+      }
    }
 }
 ```
@@ -111,8 +111,8 @@ Corresponding to the use of "age of onset" in HPO.
 
 ```
 'age_class' : {
-  'label' => 'Juvenile onset',
-  'id' => 'HP:0003621'
+  'id' => 'HP:0003621',
+  'label' => 'Juvenile onset'
 }
 ```
 

@@ -9,7 +9,7 @@ tags:
   - code
 ---
 ## Variant
-
+##### From Original GA4GH schema, with modifications
 
 #### Status: __proposed__
 
@@ -19,10 +19,16 @@ tags:
 
 #### Provenance  
 
+* [Original GA4GH schema, with modifications](https://github.com/ga4gh-metadata/metadata-schemas/blob/master/schemas/shared.proto#L39)  
+
+#### Used by  
+
+* [Beacon (for the allele request, with adjustments)](https://github.com/ga4gh-beacon/specification/blob/master/beacon.yaml)  
+* [Progenetix database schema (Beacon+ backend)](https://github.com/progenetix/schemas/tree/master/main/yaml)  
 
 #### Authors
 
-* 
+* GA4GH Data Working Group, @mbaudis
 
 #### Schema source: [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/variant.yaml)    
 #### Properties of the _Variant_ class    
@@ -69,7 +75,10 @@ tags:
     <td>end</td>
     <td>array</td>
     <td>int64</td>
-    <td>array of 0 (for presise sequence variants), 1 or 2 (for imprecise end position of structural variant) integers</td>
+    <td>* array of 0 (for presise sequence variants), 1 or 2 (for imprecise end position of structural variant) integers
+* this corresponds to the end position and [CIEND] interval in VCF
+* some implementations express this concept in a modified form (e.g. Beacon v1.0 uses separate values instead of an array for position bracketing)
+</td>
   </tr>
   <tr>
     <td>genotype</td>
@@ -112,7 +121,10 @@ tags:
     <td>start</td>
     <td>array</td>
     <td>int64</td>
-    <td>array of 1 or 2 (for imprecise end position of structural variant) integers</td>
+    <td>* array of 1 or 2 (for imprecise end position of structural variant) integers
+* this corresponds to the position and [CIPOS] interval in VCF
+* some implementations express this concept in a modified form (e.g. Beacon v1.0 uses separate values instead of an array for position bracketing)
+</td>
   </tr>
   <tr>
     <td>updated</td>
@@ -132,8 +144,11 @@ tags:
 
 
 #### Description 
-The document describes attributes of the _variant_ object. In its current implementation, _valiant_ (and related genomic objects such as _callset_) represent extended versions of the original, VCF-derived GA4GH schema.
-This format may be superseeded or augmented based on current developments in the GA4GH::GKS work stream.
+The document describes attributes of the _variant_ object. In its current 
+implementation, _variant_ (and related genomic objects such as _callset_) 
+represent extended versions of the original, VCF-derived GA4GH schema.
+This format may be superseeded or augmented based on current developments 
+in the GA4GH::GKS work stream.
 
 
 
@@ -141,32 +156,32 @@ This format may be superseeded or augmented based on current developments in the
 
 ```
 {
-   "info" : {
-      "cnv_value" : "-0.294",
-      "cnv_length" : 1205290
-   },
-   "start" : [
-      "20867740"
-   ],
-   "id" : "id",
-   "end" : [
-      "21977798",
-      "21978106"
-   ],
-   "variant_type" : "DEL",
-   "callset_id" : "callset_id",
-   "reference_name" : 8,
-   "alternate_bases" : "AC",
-   "mate_name" : 14,
-   "created" : "2017-10-25T07:06:03Z",
-   "biosample_id" : "biosample_id",
    "updated" : "2017-10-25T07:06:03Z",
-   "digest" : "digest",
+   "reference_name" : 8,
+   "id" : "id",
+   "info" : {
+      "cnv_length" : 1205290,
+      "cnv_value" : "-0.294"
+   },
+   "mate_name" : 14,
+   "variant_type" : "DEL",
+   "alternate_bases" : "AC",
    "genotype" : [
       "1",
       "."
    ],
-   "reference_bases" : "G"
+   "callset_id" : "callset_id",
+   "start" : [
+      "20867740"
+   ],
+   "digest" : "digest",
+   "reference_bases" : "G",
+   "biosample_id" : "biosample_id",
+   "created" : "2017-10-25T07:06:03Z",
+   "end" : [
+      "21977798",
+      "21978106"
+   ]
 }
 ```
 --------------------------------------------------------------------------------
@@ -221,7 +236,10 @@ This format may be superseeded or augmented based on current developments in the
 
 ##### end
 
-* array of 0 (for presise sequence variants), 1 or 2 (for imprecise end position of structural variant) integers
+* * array of 0 (for presise sequence variants), 1 or 2 (for imprecise end position of structural variant) integers
+* this corresponds to the end position and [CIEND] interval in VCF
+* some implementations express this concept in a modified form (e.g. Beacon v1.0 uses separate values instead of an array for position bracketing)
+
 * example:
 
 ```
@@ -264,8 +282,8 @@ db.variants.find( { "reference_name" : "9",  "variant_type" : "DEL", "start" : {
 
 ```
 'info' : {
-  'cnv_length' => 1205290,
-  'cnv_value' => '-0.294'
+  'cnv_value' => '-0.294',
+  'cnv_length' => 1205290
 }
 ```
 
@@ -299,7 +317,10 @@ db.variants.find( { "reference_name" : "9",  "variant_type" : "DEL", "start" : {
 
 ##### start
 
-* array of 1 or 2 (for imprecise end position of structural variant) integers
+* * array of 1 or 2 (for imprecise end position of structural variant) integers
+* this corresponds to the position and [CIPOS] interval in VCF
+* some implementations express this concept in a modified form (e.g. Beacon v1.0 uses separate values instead of an array for position bracketing)
+
 * example:
 
 ```

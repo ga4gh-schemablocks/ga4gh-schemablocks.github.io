@@ -146,7 +146,6 @@ Examples would be a tissue biopsy, a single cell from a culture for single cell 
 
 ```
 {
-   "name" : "Sample BRCA-00429, 2nd replicate",
    "biocharacteristics" : [
       {
          "description" : "Pancreatic Adenocarcinoma",
@@ -156,45 +155,46 @@ Examples would be a tissue biopsy, a single cell from a culture for single cell 
          }
       }
    ],
-   "updated" : "2017-10-25T07:06:03Z",
-   "created" : "2017-10-25T07:06:03Z",
-   "project_id" : "ind-cnhl-1293347-004",
-   "description" : "Burkitt lymphoma, cell line Namalwa",
    "data_use_conditions" : {
       "label" : "no restriction",
       "id" : "DUO:0000004"
    },
-   "individual_id" : "ind-cnhl-1293347-004",
    "info" : {
       "death" : 1,
       "followup_time" : "P14M"
    },
-   "age_at_collection" : {
-      "age" : "P56Y",
-      "age_class" : {
-         "label" : "Juvenile onset",
-         "id" : "HP:0003621"
-      }
-   },
-   "geo_provenance" : {
-      "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
-      "city" : "Timisoara",
-      "altitude" : 94,
-      "longitude" : 21.23,
-      "country" : "Romania",
-      "latitude" : 45.75
-   },
+   "individual_id" : "ind-cnhl-1293347-004",
    "id" : "AM_BS__NCBISKYCGH-1993",
+   "updated" : "2017-10-25T07:06:03Z",
+   "age_at_collection" : {
+      "age_class" : {
+         "id" : "HP:0003621",
+         "label" : "Juvenile onset"
+      },
+      "age" : "P56Y"
+   },
+   "project_id" : "ind-cnhl-1293347-004",
    "external_references" : [
       {
          "type" : {
-            "label" : "HOS",
-            "id" : "cellosaurus:CVCL_0312"
+            "id" : "cellosaurus:CVCL_0312",
+            "label" : "HOS"
          },
-         "relation" : "provenance",
-         "description" : "Cellosaurus cell line identifier"
+         "description" : "Cellosaurus cell line identifier",
+         "relation" : "provenance"
       }
-   ]
+   ],
+   "name" : "Sample BRCA-00429, 2nd replicate",
+   "created" : "2017-10-25T07:06:03Z",
+   "geo_provenance" : {
+      "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
+      "country" : "Romania",
+      "longitude" : 21.23,
+      "altitude" : 94,
+      "city" : "Timisoara",
+      "latitude" : 45.75
+   },
+   "description" : "Burkitt lymphoma, cell line Namalwa"
 }
 ```
 --------------------------------------------------------------------------------
@@ -209,11 +209,11 @@ Examples would be a tissue biopsy, a single cell from a culture for single cell 
 
 ```
 'age_at_collection' : {
+  'age' => 'P56Y',
   'age_class' => {
                    'label' => 'Juvenile onset',
                    'id' => 'HP:0003621'
-                 },
-  'age' => 'P56Y'
+                 }
 }
 ```
 
@@ -227,25 +227,25 @@ Examples would be phenotypes, disease codes or other ontology classes specific t
 ```
 'biocharacteristics' : [
   {
+    'description' => 'Pancreatic Adenocarcinoma',
     'type' => {
                 'label' => 'Pancreas, NOS',
                 'id' => 'icdot:C25.9'
+              }
+  },
+  {
+    'description' => 'Pancreatic Adenocarcinoma',
+    'type' => {
+                'id' => 'icdom:81403',
+                'label' => 'Adenocarcinoma, NOS'
+              }
+  },
+  {
+    'type' => {
+                'id' => 'ncit:C8294',
+                'label' => 'Pancreatic Adenocarcinoma'
               },
     'description' => 'Pancreatic Adenocarcinoma'
-  },
-  {
-    'description' => 'Pancreatic Adenocarcinoma',
-    'type' => {
-                'label' => 'Adenocarcinoma, NOS',
-                'id' => 'icdom:81403'
-              }
-  },
-  {
-    'description' => 'Pancreatic Adenocarcinoma',
-    'type' => {
-                'label' => 'Pancreatic Adenocarcinoma',
-                'id' => 'ncit:C8294'
-              }
   }
 ]
 ```
@@ -303,12 +303,12 @@ db.biosamples.distinct( "biocharacteristics.type.id", { "biocharacteristics.type
 ```
 'external_references' : [
   {
-    'relation' => 'provenance',
+    'description' => 'Cellosaurus cell line identifier',
     'type' => {
                 'label' => 'HOS',
                 'id' => 'cellosaurus:CVCL_0312'
               },
-    'description' => 'Cellosaurus cell line identifier'
+    'relation' => 'provenance'
   },
   {
     'description' => 'PubMed reference',
@@ -336,13 +336,13 @@ Frequently, this value may reflect either the place of the laboratory where the 
 
 ```
 'geo_provenance' : {
+  'altitude' => 94,
+  'city' => 'Timisoara',
   'latitude' => '45.75',
   'precision' => 'address',
+  'label' => 'Str Marasesti 5, 300077 Timisoara, Romania',
   'country' => 'Romania',
-  'longitude' => '21.23',
-  'city' => 'Timisoara',
-  'altitude' => 94,
-  'label' => 'Str Marasesti 5, 300077 Timisoara, Romania'
+  'longitude' => '21.23'
 }
 ```
 
@@ -374,8 +374,8 @@ In a local context this could be the <code>id</code> attribute in a correspondin
 
 ```
 'info' : {
-  'followup_time' => 'P14M',
-  'death' => 1
+  'death' => 1,
+  'followup_time' => 'P14M'
 }
 ```
 

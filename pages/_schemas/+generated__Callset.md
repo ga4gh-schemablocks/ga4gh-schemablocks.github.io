@@ -102,22 +102,22 @@ and is a shared identifier for all variants detected in this experiment, attribu
 
 ```
 {
+   "created" : "2017-10-25T07:06:03Z",
    "geo_provenance" : {
-      "city" : "Timisoara",
-      "longitude" : 21.23,
-      "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
       "latitude" : 45.75,
-      "country" : "Romania"
+      "city" : "Timisoara",
+      "country" : "Romania",
+      "longitude" : 21.23,
+      "label" : "Str Marasesti 5, 300077 Timisoara, Romania"
    },
-   "info" : "no restriction",
-   "id" : "GSM264198",
+   "biosample_id" : "SAMEA1234",
+   "description" : "SNP6 array of cancer sample BRCA-0893",
    "data_use_conditions" : {
       "label" : "no restriction",
       "id" : "DUO:0000004"
    },
-   "description" : "SNP6 array of cancer sample BRCA-0893",
-   "created" : "2017-10-25T07:06:03Z",
-   "biosample_id" : "SAMEA1234",
+   "info" : "no restriction",
+   "id" : "GSM264198",
    "updated" : "2017-10-25T07:06:03Z"
 }
 ```
@@ -176,11 +176,11 @@ and is a shared identifier for all variants detected in this experiment, attribu
 
 ```
 'geo_provenance' : {
+  'country' => 'Romania',
   'longitude' => '21.23',
-  'city' => 'Timisoara',
   'label' => 'Str Marasesti 5, 300077 Timisoara, Romania',
   'latitude' => '45.75',
-  'country' => 'Romania'
+  'city' => 'Timisoara'
 }
 ```
 
@@ -201,20 +201,8 @@ and is a shared identifier for all variants detected in this experiment, attribu
 ```
 'info' : {
   'statusmaps' => {
-                    'description' => 'The cnv_maps object is a wrapper for genomic interval mapped status information. In Progenetix and arrayMap, this is used to indictate - for fixed 1MB genome intervals - the status (dup_map => "DUP" or "", del_map => "DEL" or ""), or the maximum / minimum positive / negative value encountered in the segment, as far as it has been called to contain DUP or DEL.
-With a standard binning of 1MB, the arrays would contain ~3000 values each (depending on genome edition).
-',
                     'value' => {
-                                 'binning' => {
-                                                'type' => 'number',
-                                                'format' => 'int64',
-                                                'value' => 1000000,
-                                                'description' => 'interval size in bases for the binning, when creating the cnv_maps'
-                                              },
                                  'dupmap' => {
-                                               'type' => 'array',
-                                               'description' => 'gain cnv status for the corresponding genome intervals
-',
                                                'value' => [
                                                             '',
                                                             '',
@@ -227,9 +215,21 @@ With a standard binning of 1MB, the arrays would contain ~3000 values each (depe
                                                             '',
                                                             '',
                                                             ''
-                                                          ]
-                                             }
+                                                          ],
+                                               'description' => 'gain cnv status for the corresponding genome intervals
+',
+                                               'type' => 'array'
+                                             },
+                                 'binning' => {
+                                                'value' => 1000000,
+                                                'description' => 'interval size in bases for the binning, when creating the cnv_maps',
+                                                'type' => 'number',
+                                                'format' => 'int64'
+                                              }
                                },
+                    'description' => 'The cnv_maps object is a wrapper for genomic interval mapped status information. In Progenetix and arrayMap, this is used to indictate - for fixed 1MB genome intervals - the status (dup_map => "DUP" or "", del_map => "DEL" or ""), or the maximum / minimum positive / negative value encountered in the segment, as far as it has been called to contain DUP or DEL.
+With a standard binning of 1MB, the arrays would contain ~3000 values each (depending on genome edition).
+',
                     'ref' => './Info'
                   }
 }
