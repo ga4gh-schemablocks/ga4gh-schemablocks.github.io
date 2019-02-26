@@ -9,7 +9,7 @@ tags:
   - code
 ---
 ## Ontology_term
-
+##### From Original GA4GH schema
 
 #### Status: __proposed__
 
@@ -19,10 +19,16 @@ tags:
 
 #### Provenance  
 
+* [Original GA4GH schema](https://github.com/ga4gh-metadata/metadata-schemas/blob/master/schemas/shared.proto#L39)  
+
+#### Used by  
+
+* [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/geolocation.rst)  
+* [Progenetix database schema (Beacon+ backend)](https://github.com/progenetix/schemas/tree/master/main/yaml)  
 
 #### Authors
 
-* 
+* GA4GH Metadata Task Team, @mbaudis, @cmungall
 
 #### Schema source: [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/ontology_term.yaml)    
 #### Properties of the _Ontology_term_ class    
@@ -38,7 +44,7 @@ tags:
     <td>id</td>
     <td>string</td>
     <td></td>
-    <td>properly prefixed CURIE of the ontology term</td>
+    <td>properly prefixed CURIE of the ontology term / class</td>
   </tr>
   <tr>
     <td>label</td>
@@ -63,8 +69,8 @@ inconsistently followed.
 
 ```
 {
-   "id" : "DUO:0000004",
-   "label" : "no restriction"
+   "label" : "no restriction",
+   "id" : "DUO:0000004"
 }
 ```
 ```
@@ -85,7 +91,7 @@ inconsistently followed.
 
 ##### id
 
-* properly prefixed CURIE of the ontology term
+* properly prefixed CURIE of the ontology term / class
 * example:
 
 ```

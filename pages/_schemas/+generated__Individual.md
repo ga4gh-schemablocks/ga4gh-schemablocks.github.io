@@ -130,60 +130,60 @@ An individual is a single organism (here typically a human).
 
 ```
 {
-   "sex" : {
-      "id" : "PATO:0020000",
-      "label" : "female genetic sex"
-   },
-   "biocharacteristics" : [
-      {
-         "type" : {
-            "id" : "HP:0003745",
-            "label" : "Genetic anticipation"
-         },
-         "description" : "Patient with Down syndrome"
+   "info" : {
+      "last_name" : {
+         "type" : "string",
+         "value" : "Tichy"
+      },
+      "first_name" : {
+         "type" : "string",
+         "value" : "Ion"
       }
-   ],
-   "organism" : {
-      "id" : "NCBITaxon:9606",
-      "label" : "Homo sapiens"
    },
-   "created" : "2017-10-25T07:06:03Z",
-   "description" : "patient with lung cancer, male smoker",
-   "updated" : "2017-10-25T07:06:03Z",
+   "geo_provenance" : {
+      "longitude" : 21.23,
+      "city" : "Timisoara",
+      "altitude" : 94,
+      "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
+      "latitude" : 45.75,
+      "country" : "Romania"
+   },
    "id" : "AM_BS__NCBISKYCGH-1993",
-   "data_use_conditions" : {
-      "id" : "DUO:0000004",
-      "label" : "no restriction"
-   },
    "external_references" : [
       {
-         "relation" : "provenance",
          "description" : "Cellosaurus cell line identifier",
+         "relation" : "provenance",
          "type" : {
             "id" : "cellosaurus:CVCL_0312",
             "label" : "HOS"
          }
       }
    ],
-   "geo_provenance" : {
-      "city" : "Timisoara",
-      "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
-      "longitude" : 21.23,
-      "country" : "Romania",
-      "altitude" : 94,
-      "latitude" : 45.75
+   "description" : "patient with lung cancer, male smoker",
+   "sex" : {
+      "label" : "female genetic sex",
+      "id" : "PATO:0020000"
    },
-   "info" : {
-      "last_name" : {
-         "value" : "Tichy",
-         "type" : "string"
-      },
-      "first_name" : {
-         "value" : "Ion",
-         "type" : "string"
+   "data_use_conditions" : {
+      "label" : "no restriction",
+      "id" : "DUO:0000004"
+   },
+   "organism" : {
+      "label" : "Homo sapiens",
+      "id" : "NCBITaxon:9606"
+   },
+   "created" : "2017-10-25T07:06:03Z",
+   "name" : "Ion Tichy, space explorer",
+   "updated" : "2017-10-25T07:06:03Z",
+   "biocharacteristics" : [
+      {
+         "description" : "Patient with Down syndrome",
+         "type" : {
+            "id" : "HP:0003745",
+            "label" : "Genetic anticipation"
+         }
       }
-   },
-   "name" : "Ion Tichy, space explorer"
+   ]
 }
 ```
 --------------------------------------------------------------------------------
@@ -199,11 +199,11 @@ An individual is a single organism (here typically a human).
 ```
 'biocharacteristics' : [
   {
-    'description' => 'Patient with Down syndrome',
     'type' => {
                 'id' => 'HP:0003745',
                 'label' => 'Genetic anticipation'
-              }
+              },
+    'description' => 'Patient with Down syndrome'
   }
 ]
 ```
@@ -235,8 +235,8 @@ db.biosamples.distinct( { "biocharacteristics.type.id", "biocharacteristics.type
 
 ```
 'data_use_conditions' : {
-  'label' => 'no restriction',
-  'id' => 'DUO:0000004'
+  'id' => 'DUO:0000004',
+  'label' => 'no restriction'
 }
 ```
 
@@ -258,12 +258,12 @@ db.biosamples.distinct( { "biocharacteristics.type.id", "biocharacteristics.type
 ```
 'external_references' : [
   {
+    'description' => 'Cellosaurus cell line identifier',
     'type' => {
                 'label' => 'HOS',
                 'id' => 'cellosaurus:CVCL_0312'
               },
-    'relation' => 'provenance',
-    'description' => 'Cellosaurus cell line identifier'
+    'relation' => 'provenance'
   }
 ]
 ```
@@ -283,12 +283,12 @@ This value may reflect either the place of birth or residence, but frequently ma
 
 ```
 'geo_provenance' : {
-  'city' => 'Timisoara',
-  'latitude' => '45.75',
+  'longitude' => '21.23',
   'altitude' => 94,
-  'country' => 'Romania',
+  'city' => 'Timisoara',
   'label' => 'Str Marasesti 5, 300077 Timisoara, Romania',
-  'longitude' => '21.23'
+  'latitude' => '45.75',
+  'country' => 'Romania'
 }
 ```
 
@@ -309,8 +309,8 @@ This value may reflect either the place of birth or residence, but frequently ma
 ```
 'info' : {
   'last_name' => {
-                   'value' => 'Tichy',
-                   'type' => 'string'
+                   'type' => 'string',
+                   'value' => 'Tichy'
                  },
   'first_name' => {
                     'type' => 'string',

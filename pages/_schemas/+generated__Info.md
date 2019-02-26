@@ -71,8 +71,8 @@ Additional information regarding the object in reference.
 
 ```
 {
-   "description" : "The base length of the called segment",
    "value" : 1503320,
+   "description" : "The base length of the called segment",
    "type" : "number",
    "format" : "int64"
 }

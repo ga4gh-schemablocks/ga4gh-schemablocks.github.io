@@ -96,22 +96,22 @@ FHIR mapping: Condition (https://www.hl7.org/fhir/condition.html) or Observation
 
 ```
 {
+   "type" : {
+      "label" : "Pancreatic Adenocarcinoma",
+      "id" : "ncit:C8294"
+   },
    "evidence" : [
       {
-         "id" : "",
-         "label" : ""
+         "label" : "",
+         "id" : ""
       }
    ],
-   "description" : "DUO:0000004",
-   "severity" : {
-      "label" : "Mild",
-      "id" : "HP:0012825"
-   },
    "negated" : "",
-   "type" : {
-      "id" : "ncit:C8294",
-      "label" : "Pancreatic Adenocarcinoma"
-   }
+   "severity" : {
+      "id" : "HP:0012825",
+      "label" : "Mild"
+   },
+   "description" : "DUO:0000004"
 }
 ```
 --------------------------------------------------------------------------------
@@ -164,8 +164,8 @@ It is only required in cases to indicate that the phenotype was looked for, but 
 'onset' : {
   'age' => 'P12Y',
   'age_class' => {
-                   'id' => 'HP:0003621',
-                   'label' => 'Juvenile onset'
+                   'label' => 'Juvenile onset',
+                   'id' => 'HP:0003621'
                  }
 }
 ```
@@ -191,8 +191,8 @@ FHIR mapping: Condition.severity
 
 ```
 'type' : {
-  'label' => 'Pancreatic Adenocarcinoma',
-  'id' => 'ncit:C8294'
+  'id' => 'ncit:C8294',
+  'label' => 'Pancreatic Adenocarcinoma'
 }
 ```
 

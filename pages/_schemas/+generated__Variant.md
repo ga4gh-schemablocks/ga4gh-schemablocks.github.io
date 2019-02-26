@@ -141,32 +141,32 @@ This format may be superseeded or augmented based on current developments in the
 
 ```
 {
+   "info" : {
+      "cnv_value" : "-0.294",
+      "cnv_length" : 1205290
+   },
    "start" : [
       "20867740"
    ],
-   "variant_type" : "DEL",
-   "biosample_id" : "biosample_id",
-   "info" : {
-      "cnv_length" : 1205290,
-      "cnv_value" : "-0.294"
-   },
-   "reference_bases" : "G",
-   "digest" : "digest",
+   "id" : "id",
    "end" : [
       "21977798",
       "21978106"
    ],
-   "mate_name" : 14,
+   "variant_type" : "DEL",
+   "callset_id" : "callset_id",
    "reference_name" : 8,
    "alternate_bases" : "AC",
-   "callset_id" : "callset_id",
+   "mate_name" : 14,
+   "created" : "2017-10-25T07:06:03Z",
+   "biosample_id" : "biosample_id",
    "updated" : "2017-10-25T07:06:03Z",
+   "digest" : "digest",
    "genotype" : [
       "1",
       "."
    ],
-   "id" : "id",
-   "created" : "2017-10-25T07:06:03Z"
+   "reference_bases" : "G"
 }
 ```
 --------------------------------------------------------------------------------

@@ -108,20 +108,20 @@ The geographic point object uses the default units from the [DCMI point scheme](
 
 ```
 {
-   "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
    "longitude" : 8.54,
+   "city" : "Timisoara",
    "altitude" : 8848,
-   "country" : "Romania",
+   "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
    "latitude" : 47.37,
-   "city" : "Timisoara"
+   "country" : "Romania"
 }
 ```
 ```
 {
-   "precision" : "room",
-   "latitude" : 47.39792,
+   "label" : "Office at Institute of Molecular Life Sciences, University of Zurich",
    "longitude" : 8.54913,
-   "label" : "Office at Institute of Molecular Life Sciences, University of Zurich"
+   "latitude" : 47.39792,
+   "precision" : "room"
 }
 ```
 --------------------------------------------------------------------------------

@@ -44,13 +44,15 @@ tags:
     <td>age</td>
     <td>string</td>
     <td></td>
-    <td>The age as ISO8601 string.</td>
+    <td>The age as ISO8601 string.
+</td>
   </tr>
   <tr>
     <td>age_class</td>
     <td></td>
     <td></td>
-    <td>The age of the object (e.g. individual at tome of a biosample collection), as Ontology_class.
+    <td>The age of the subject (e.g. individual at the onset of a phenotype), 
+as Ontology_class.
 Corresponding to the use of "age of onset" in HPO.
 </td>
   </tr>
@@ -59,17 +61,29 @@ Corresponding to the use of "age of onset" in HPO.
 
 
 #### Description 
-Age of the object
+Age of the individual/subject at a specified time point or event.
+Use cases her could be e.g. the use for "onset" of a disease or phenotype, 
+or the age of the individual at the collection of a biosample.
+
 
 
 #### Examples
 
 ```
 {
-   "age" : "P56Y",
-   "age_class" : {
-      "id" : "HP:0003621",
-      "label" : "Juvenile onset"
+   "onset" : {
+      "age_class" : {
+         "label" : "Juvenile onset",
+         "id" : "HP:0003621"
+      },
+      "age" : "P12Y"
+   }
+}
+```
+```
+{
+   "age_at_collection" : {
+      "age" : "P56Y3M"
    }
 }
 ```
@@ -80,23 +94,25 @@ Age of the object
 ##### age
 
 * The age as ISO8601 string.
+
 * example:
 
 ```
-'age' : "P56Y"
+'age' : "P12Y"
 ```
 
 ##### age_class
 
-* The age of the object (e.g. individual at tome of a biosample collection), as Ontology_class.
+* The age of the subject (e.g. individual at the onset of a phenotype), 
+as Ontology_class.
 Corresponding to the use of "age of onset" in HPO.
 
 * example:
 
 ```
 'age_class' : {
-  'id' => 'HP:0003621',
-  'label' => 'Juvenile onset'
+  'label' => 'Juvenile onset',
+  'id' => 'HP:0003621'
 }
 ```
 
