@@ -20,9 +20,6 @@ include:        # usually only pages in / and /_posts are "seen" => processed
 # Collection directories reside in "/collections_dir/_(collection name)".
 
 collections:
-  news:
-    output: true
-    permalink: /news/:path/
   schemas:
     output: true
     permalink: /schemas/:path/
@@ -32,9 +29,9 @@ collections:
   people:
     output: true
     permalink: /people/:path/
-  howto:
+  general:
     output: true
-    permalink: /howto/:path/
+    permalink: /general/:path/
   minutes:
     output: true
     permalink: /minutes/:path/
@@ -92,9 +89,12 @@ cloud_tags:
   - dates
   - developers
   - identifiers
+  - faq
+  - howto
   - leads
   - press
   - times
+  - website
 
 # additional Jekyll instructions
 
