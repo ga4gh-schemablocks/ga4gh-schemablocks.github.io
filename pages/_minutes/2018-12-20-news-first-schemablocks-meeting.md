@@ -21,9 +21,8 @@ On 2019-03-05, members involved in the SchemaBlocks initiative and the Phenopack
 
 The basic outcome of the call (as summarised by @MKonopko and agreed upon by @pnrobinson & @mbaudis):
 
-    Phenopackets is the output of the Clinical and Phenotypic Data Capture workstream which will implement the official structure of a GA4GH phenotype.  Schemablocks wishes to form concensus across workstreams and will, thus would create a universal phenotype schema based on Phenopackets. Other products, such as SearchAPI can use these schema.
-
-    There will be plenty of opportunities for cross collaboration and both teams have the ability to contribute.  We will focus on the use of GitHub for best collaboration and tracking.
+> Phenopackets is the output of the Clinical and Phenotypic Data Capture workstream which will implement the official structure of a GA4GH phenotype.  Schemablocks wishes to form concensus across workstreams and will, thus would create a universal phenotype schema based on Phenopackets. Other products, such as SearchAPI can use these schema.
+There will be plenty of opportunities for cross collaboration and both teams have the ability to contribute.  We will focus on the use of GitHub for best collaboration and tracking.
     
 More information for now can be found in the linked transcript.
 
