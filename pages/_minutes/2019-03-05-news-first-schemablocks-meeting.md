@@ -1,5 +1,5 @@
 ---
-title: 'Phenopackets/SchemaBlocks Alignment Meeting'
+title: 'Phenopackets - SchemaBlocks Alignment Meeting'
 layout: default
 author: ["@mbaudis", "@MKonopko"]
 excerpt_separator: <!--more-->
