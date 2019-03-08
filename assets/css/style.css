@@ -42,9 +42,9 @@ h3,h4,h5,h6 { color: #494949; }
   clear: both;
 }
 
-a { color: #267CB9; text-decoration: none; }
+a { text-decoration: none; }
 a:hover, a:focus {  text-decoration: underline ; }
-a small { font-size: 11px; color: #777; margin-top: -0.3em; display: block; }
+a small { font-size: 11px; margin-top: -0.3em; display: block; }
 
 .wrapper { width: 825px; margin: 0 auto; }
 
