@@ -7,11 +7,11 @@ author: "@mbaudis"
 excerpt_link: https://baudisgroup.github.io/progenetix-site-template/howto/templatefiles/
 excerpt_separator: <!--more-->
 category:
-  - howto
 tags:
   - Jekyll
   - Markdown
   - documentation
+  - website
 ---
 
 ## {{page.title}}

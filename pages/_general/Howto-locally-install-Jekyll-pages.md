@@ -7,10 +7,10 @@ author: "@mbaudis"
 excerpt_link: https://baudisgroup.github.io/progenetix-site-template/howto/jekyllinstallation/
 excerpt_separator: <!--more-->
 category:
-  - howto
 tags:
   - Jekyll
   - documentation
+  - website
 ---
 
 ## Local Jekyll based website generation
