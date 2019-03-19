@@ -58,6 +58,10 @@ categories_year_sorted:
   - news
   - minutes
 
+tags_year_sorted:
+  - news
+  - minutes
+
 related_sites: 
   'GA4GH::Discovery': 'http://ga4gh-discovery.github.io'
   'GA4GH::CLP': 'http://ga4gh-cp.github.io'

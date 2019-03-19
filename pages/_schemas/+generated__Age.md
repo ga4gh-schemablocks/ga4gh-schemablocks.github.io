@@ -56,6 +56,16 @@ as Ontology_class.
 Corresponding to the use of "age of onset" in HPO.
 </td>
   </tr>
+  <tr>
+    <td>age_range</td>
+    <td>array</td>
+    <td>string</td>
+    <td>The age as an array of 1 or 2 ordered ISO8601 strings. This can be 
+used either for a specific age or to express a known age range - e.g.
+the minimum and maximum age of patients included in a study.
+The format corresponds to the general "Range" type in FHIR.
+</td>
+  </tr>
 
 </table>
 
@@ -74,8 +84,8 @@ or the age of the individual at the collection of a biosample.
    "onset" : {
       "age" : "P12Y",
       "age_class" : {
-         "label" : "Juvenile onset",
-         "id" : "HP:0003621"
+         "id" : "HP:0003621",
+         "label" : "Juvenile onset"
       }
    }
 }
@@ -111,8 +121,24 @@ Corresponding to the use of "age of onset" in HPO.
 
 ```
 'age_class' : {
-  'id' => 'HP:0003621',
-  'label' => 'Juvenile onset'
+  'label' => 'Juvenile onset',
+  'id' => 'HP:0003621'
 }
+```
+
+##### age_range
+
+* The age as an array of 1 or 2 ordered ISO8601 strings. This can be 
+used either for a specific age or to express a known age range - e.g.
+the minimum and maximum age of patients included in a study.
+The format corresponds to the general "Range" type in FHIR.
+
+* example:
+
+```
+'age_range' : [
+  'P13Y',
+  'P18Y'
+]
 ```
 

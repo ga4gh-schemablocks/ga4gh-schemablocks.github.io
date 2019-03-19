@@ -69,11 +69,11 @@ Using these references, the resources combine to build a web of information.
 ```
 {
    "description" : "Cellosaurus cell line identifier",
+   "relation" : "provenance",
    "type" : {
-      "label" : "HOS",
-      "id" : "cellosaurus:CVCL_0312"
-   },
-   "relation" : "provenance"
+      "id" : "cellosaurus:CVCL_0312",
+      "label" : "HOS"
+   }
 }
 ```
 --------------------------------------------------------------------------------

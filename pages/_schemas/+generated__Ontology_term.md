@@ -75,14 +75,14 @@ inconsistently followed.
 ```
 ```
 {
-   "label" : "Juvenile onset",
-   "id" : "HP:0003621"
+   "id" : "HP:0003621",
+   "label" : "Juvenile onset"
 }
 ```
 ```
 {
-   "label" : "Glioblastoma",
-   "id" : "ncit:C3058"
+   "id" : "ncit:C3058",
+   "label" : "Glioblastoma"
 }
 ```
 --------------------------------------------------------------------------------

@@ -102,7 +102,7 @@ tags:
     <td>mate_name</td>
     <td>string</td>
     <td></td>
-    <td>Mate name (chromosome) for fusion (BRK) events; otherwise left empty. Accepting values 1-22, X, Y.
+    <td>Mate name (chromosome) for fusion (BND) events; otherwise left empty. Accepting values 1-22, X, Y.
 </td>
   </tr>
   <tr>
@@ -137,7 +137,7 @@ tags:
     <td>variant_type</td>
     <td>string</td>
     <td></td>
-    <td>the variant type in case of a named (structural) variant (e.g. DUP, DEL, BRK ...)</td>
+    <td>the variant type in case of a named (structural) variant (e.g. DUP, DEL, BND ...)</td>
   </tr>
 
 </table>
@@ -156,32 +156,32 @@ in the GA4GH::GKS work stream.
 
 ```
 {
-   "updated" : "2017-10-25T07:06:03Z",
-   "reference_name" : 8,
+   "alternate_bases" : "AC",
+   "biosample_id" : "biosample_id",
+   "callset_id" : "callset_id",
+   "created" : "2017-10-25T07:06:03Z",
+   "digest" : "digest",
+   "end" : [
+      "21977798",
+      "21978106"
+   ],
+   "genotype" : [
+      "1",
+      "."
+   ],
    "id" : "id",
    "info" : {
       "cnv_length" : 1205290,
       "cnv_value" : "-0.294"
    },
    "mate_name" : 14,
-   "variant_type" : "DEL",
-   "alternate_bases" : "AC",
-   "genotype" : [
-      "1",
-      "."
-   ],
-   "callset_id" : "callset_id",
+   "reference_bases" : "G",
+   "reference_name" : 8,
    "start" : [
       "20867740"
    ],
-   "digest" : "digest",
-   "reference_bases" : "G",
-   "biosample_id" : "biosample_id",
-   "created" : "2017-10-25T07:06:03Z",
-   "end" : [
-      "21977798",
-      "21978106"
-   ]
+   "updated" : "2017-10-25T07:06:03Z",
+   "variant_type" : "DEL"
 }
 ```
 --------------------------------------------------------------------------------
@@ -282,14 +282,14 @@ db.variants.find( { "reference_name" : "9",  "variant_type" : "DEL", "start" : {
 
 ```
 'info' : {
-  'cnv_value' => '-0.294',
-  'cnv_length' => 1205290
+  'cnv_length' => 1205290,
+  'cnv_value' => '-0.294'
 }
 ```
 
 ##### mate_name
 
-* Mate name (chromosome) for fusion (BRK) events; otherwise left empty. Accepting values 1-22, X, Y.
+* Mate name (chromosome) for fusion (BND) events; otherwise left empty. Accepting values 1-22, X, Y.
 
 * example:
 
@@ -341,7 +341,7 @@ db.variants.find( { "reference_name" : "9",  "variant_type" : "DEL", "start" : {
 
 ##### variant_type
 
-* the variant type in case of a named (structural) variant (e.g. DUP, DEL, BRK ...)
+* the variant type in case of a named (structural) variant (e.g. DUP, DEL, BND ...)
 * example:
 
 ```
