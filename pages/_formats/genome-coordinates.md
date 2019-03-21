@@ -1,5 +1,5 @@
 ---
-title: "Recommendation - Genome Coordinates"
+title: "Genome Coordinates"
 layout: default
 date: 2019-02-20
 author:
@@ -7,8 +7,7 @@ author:
   - "@andrewyatz"
 permalink: /categories/formats/genome-coordinates.html
 description: >
-  Recommendations to use 0-based positions and 0-based half-open intervals
-  when representing genome coordinates and regions in APIs.
+  Use "0-start, half-open" intervals when representing coordinates in all systems bar when data is displayed to a human.
 excerpt_separator: <!--more-->
 category:
   - formats
@@ -21,8 +20,9 @@ tags:
 
 ### Recommendation (_DRAFT_)
 
-* Represent intervals in APIs using **0-based half-open** coordinates, also referred to as **interbase** representation.
-* Similarly, represent positions in APIs using 0‑based coordinates.
+* We recommends the use of __"0-start, half-open"__ (interbase) coordinate system in all systems
+* This is not a retrospective recommendation for existing standards and products
+* __"1-start, fully-closed"__ should be used when displaying coordinates through a GUI or report
 
 <!--more-->
 
@@ -39,94 +39,80 @@ tags:
   {% endfor %}
 {% endif %}
 
+### Definition
 
-### Summary
+Two integers that define the start and end positions of a range of residues, possibly with length zero, and specified using "0-start, half-open" coordinates.
 
-Consider a subsequence `GAGTGC` of a larger sequence of bases (which might be a reference chromosome, for example):
+The following also applies to coordinates:
 
-![Sequence data with 1-based coordinates]({{ "/assets/img/genome-coordinates-img/1-based.svg" | relative_url }})
+* Coordinates start at 0 and finish at the length of the sequence
+* Start must be greater than 0
+* End must be greater than the start
+* The length of an interval is (end - start)
+* The reverse start is (sequence length - end)
+* The reverse end is (sequence length - (start-1))
+* A zero-length interval (start == end) is a point between two residues
+* An interval of length 1 is a residue position
+* Two intervals are equal if their start and end are equal
+* Two intervals intersect if start or end occurs between the start and end of the other
+* Two intervals coincide if they intersect or if they are equal
 
-When a human is working with this subsequence, or it is being discussed amongst humans, we might refer to it as spanning coordinates 5--10 on the larger sequence.
-Formally, this is 1-based inclusive/closed-at-both-ends reckoning, also known as "biological" or "Ensembl-style" coordinates, and it's natural and convenient for humans as it's what we're used to.
+#### Model
 
-However this is not the best coordinate representation for doing arithmetic with.
-Interval arithmetic and the representation of edge cases are more straightforward and unambiguous using a 0-based half-open representation, also known as "UCSC-style":
+* start (int): start position >= 0 (required)
+* end (int): end position >= start (required)
 
-![Sequence data with 0-based coordinates]({{ "/assets/img/genome-coordinates-img/0-based.svg" | relative_url }})
+#### Circular coordinates
 
-In this representation we would write the subsequence as spanning the interval \[4,10) --- i.e., starting at (zero-based) position 4, and continuing up to but not including position 10.
+Circular regions are not considered to be part of GA4GH and not covered here, since human genome data is handled as linear sequence. APIs may choose to support a circular location but must still support "0-start, half-open" coordinates.
 
-An alternative and equivalent way to look at this is to think of the bases as lying _between_ the coordinate positions:
+#### Alternative names
 
-![Sequence data with interbase coordinates]({{ "/assets/img/genome-coordinates-img/interbase.svg" | relative_url }})
+The "0-start, half-open" scheme is also know by the following names:
 
-In these **interbase** coordinates (also known as "Chado-style"), we would say the subsequence lies between positions 4 and 10.
+* "0-based, half-open"
+* Interbase
+* UCSC style
+* Chado style
 
-Similarly, we would describe the `T` within this subsequence as spanning the interval \[7,8) or lying between positions 7 and 8.
-When using a single coordinate to refer to positions rather than intervals, using a 0-based coordinate is consistent with this recommended interval representation; thus this `T` is at position 7.
+All of these names refer to identical representations of coordinates. Interbase has a different interpretation of the representation useful when considering insertion events. Care should be taken when using these alterative names as they combine representation and interpretation.
 
-### Details
+### How "0-start, half-open" works
 
-The length of this `GAGTGC` subsequence can be calculated from the recommended representation as 10 -- 4 = 6.
-Starting from the human-readable representation the calculation is slightly more complicated: 10 -- 5 + 1 = 6.
-Avoiding the need to add or subtract 1 throughout calculations reduces an entire category of programming error and is the most obvious advantage of the recommended representation.
+![Sequence data with "0-start, half-open" coordinates]({{ "/assets/img/genome-coordinates-img/interbase.svg" | relative_url }})
 
-Further advantages include in particular the unambiguous representation of indels (due to the interbase / half-open coordinates) and simpler conversions between relative coordinate systems (due to the zero-based coordinates).
+"0-start, half-open" breaks down into two integer positions. The first, "0-start", refers to the start coordinate and uses an indexing scheme starting at 0 to refer to bases within a sequence, similar to array indexes in most C based programming languages. The second, "half-open", refers to the end coordinate and is one higher than the start (effectively using an indexing system starting at 1).
 
-#### Insertions and deletions
+This scheme makes sub-sequences very easy to define. In the above example we have highlighted the subsequence `GAGTGC`, which starts at position 4 and ends at position 10. Calculating the length of this subsequence is easily done by subtracting start from end e.g. (10-4) = 6. Other transformations are less prone to programming errors than the alternative system "1-start, fully-closed".
 
-The interbase interpretation is a particularly effective way of thinking about insertions and other events that occur between bases.
-Consider again this twenty base reference sequence:
+This same coordinate system can be used to flag insertions and deletions as a start and an end which equal each other refers to a space between two residues e.g. 4,4 would flag an event occurring between `GGTG` and `GAGTGC`.
 
-![Insertions and deletions]({{ "/assets/img/genome-coordinates-img/indels.svg" | relative_url }})
+### What is "1-start, fully-closed"?
 
-These insertions are unambiguously at between-bases positions 0, 16, and 20.
-By interpreting the position as between the bases, 16 clearly indicates that the `TTT` is inserted between `C` and `A`, and the `AAA` and `GGG` are clearly inserted at the start or end of the sequence.
+![Sequence data with "1-start, fully-closed" coordinates]({{ "/assets/img/genome-coordinates-img/1-based.svg" | relative_url }})
 
-Similarly deletion of the `GAGTGC` sequence would be recorded as a deletion between 4 and 10, and the `C` to `T` substitution shown would be recorded as a substitution between 12 and 13.
+"1-start, fully-closed" is the human readable coordinate system used in all genomic data displays and reports. It indexes sequences starting at 1. This system should be used when displaying genomic data to a human because it is the correct way to refer to positions. The subsequence `GAGTGC` in "1-start, fully-closed" starts at position 5 and ends at position 10. Length is calculated by subtracting start from end plus one e.g. ((10+1)-5) = 6.
 
-By describing the insertion positions as 0-length intervals --- \[16,16) being the empty interval between the `C` and `A` bases, etc --- this becomes a representation that clearly describes the locations of insertions, deletions, and base changes with the coordinates being interpreted in the same way in all cases:
+### GA4GH Products and their coordinate systems
 
-* replace \[0,0) with `AAA`
-* replace \[4,10) with nothing
-* replace \[12,13) with `T`
-* replace \[16,16) with `TTT`
-* replace \[20,20) with `GGG`
+Not all GA4GH related products, specifications and APIs use the same system for their coordinates. Refer to the table below for full details.
 
-and that can also describe complex indels in the same way, e.g., the same `GAGTGC` deletion combined with an insertion in the same place:
-
-* replace \[4,10) with `TCGT`.
-
-Using fully-inclusive human-readable notation leads to inferior representations of these events, as "insert `TTT` at 17" is unclear whether the insertion is between `C-A` or `A-T`, while mentioning both flanking bases as per "insert `TTT` at 16/17" must be interpreted differently from the corresponding deletion notation.
-
-#### Converting between coordinate systems
-
-Consider some feature lying on an exon, whose location is represented as \[fs,fe) relative to the start of the exon.
-In turn, the exon is located at coordinates \[es,ee) on a reference chromosome:
-
-![Feature nested on an exon]({{ "/assets/img/genome-coordinates-img/nested.svg" | relative_url }})
-
-With 0-based coordinates, calculating the feature's location on the chromosome is simple: \[fs+es,fe+es).
-
-Similarly to finding the length of a subsequence in an inclusive notation, in 1‑based coordinates this calculation would require carefully subtracting 1 as appropriate.
-When strandedness comes into play and the feature's exon-coordinates are perhaps reversed, tracking the appropriate places to add and subtract 1 becomes harder.
-Thus 1-based coordinates are more susceptible to _off-by-one_ programming errors.
-
-### Existing GA4GH products
-
-The SAM/BAM/CRAM sequencing data formats and VCF/BCF variant call formats primarily store positions and various lengths, so don't represent intervals directly.
-SAM and VCF are human-readable text formats and use 1-based positions, while BAM, CRAM, and BCF are binary machine-orientated formats using 0-based positions.
-
-The htsget, refget, and Beacon protocols all use 0-based half-open or interbase intervals.
-The Variation Modelling Collaboration recommends the interbase approach.
+| Product | "0-start, half-open" | "1-start, fully-closed" | Interbase |
+| --- | :---: | :---: | :---: |
+| BAM/CRAM | X |  |  |
+| SAM |  | X |  |
+| VCF |  | X |  |
+| BCF | X |  |  |
+| htsget | X |  |  |
+| refget | X |  |  |
+| Beacon | X |  |  |
+| VMC |  |  | X |
 
 ### Conclusion
 
-User interfaces will likely continue to use familiar "human-readable" 1-based positions and inclusive interval notation (perhaps with special notation for indels where applicable).
-This is entirely appropriate.
+User interfaces will likely continue to use familiar "human-readable" 1-based positions and inclusive interval notation. This is entirely appropriate.
 
-However for internal purposes, where consistent unambiguous notation and ease of arithmetic are paramount, 0-based half-open / interbase notation is the better choice.
-GA4GH APIs facilitate the external communication of internal data representations; thus the same advantages are paramount, and they, in general, use the interval and position representations described here.
+However for internal purposes, where consistent unambiguous notation and ease of arithmetic are paramount, "0-start, half-open" notation is the better choice. GA4GH APIs facilitate the external communication of internal data representations; thus the same advantages are paramount and, in general, use the interval and position representations described here.
 
 ### Further Reading
 
