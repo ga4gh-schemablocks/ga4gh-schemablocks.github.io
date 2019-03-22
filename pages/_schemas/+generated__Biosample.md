@@ -209,11 +209,11 @@ Examples would be a tissue biopsy, a single cell from a culture for single cell 
 
 ```
 'age_at_collection' : {
+  'age' => 'P56Y',
   'age_class' => {
                    'id' => 'HP:0003621',
                    'label' => 'Juvenile onset'
-                 },
-  'age' => 'P56Y'
+                 }
 }
 ```
 
@@ -227,11 +227,11 @@ Examples would be phenotypes, disease codes or other ontology classes specific t
 ```
 'biocharacteristics' : [
   {
+    'description' => 'Pancreatic Adenocarcinoma',
     'type' => {
                 'id' => 'pgx:81403',
                 'label' => 'Adenocarcinoma, NOS'
-              },
-    'description' => 'Pancreatic Adenocarcinoma'
+              }
   },
   {
     'description' => 'Pancreatic Adenocarcinoma',
@@ -272,8 +272,8 @@ db.biosamples.distinct( "biocharacteristics.type.id", { "biocharacteristics.type
 
 ```
 'data_use_conditions' : {
-  'label' => 'no restriction',
-  'id' => 'DUO:0000004'
+  'id' => 'DUO:0000004',
+  'label' => 'no restriction'
 }
 ```
 
@@ -296,20 +296,20 @@ db.biosamples.distinct( "biocharacteristics.type.id", { "biocharacteristics.type
 ```
 'external_references' : [
   {
+    'description' => 'Cellosaurus cell line identifier',
+    'relation' => 'provenance',
     'type' => {
                 'id' => 'cellosaurus:CVCL_0312',
                 'label' => 'HOS'
-              },
-    'description' => 'Cellosaurus cell line identifier',
-    'relation' => 'provenance'
+              }
   },
   {
+    'description' => 'PubMed reference',
+    'relation' => 'report',
     'type' => {
                 'id' => 'pubmed:2823272',
                 'label' => 'Rearrangement of the p53 gene in human osteogenic sarcomas.'
-              },
-    'relation' => 'report',
-    'description' => 'PubMed reference'
+              }
   }
 ]
 ```
@@ -329,13 +329,13 @@ Frequently, this value may reflect either the place of the laboratory where the 
 
 ```
 'geo_provenance' : {
-  'label' => 'Str Marasesti 5, 300077 Timisoara, Romania',
-  'precision' => 'address',
-  'latitude' => '45.75',
+  'altitude' => 94,
   'city' => 'Timisoara',
   'country' => 'Romania',
-  'altitude' => 94,
-  'longitude' => '21.23'
+  'label' => 'Str Marasesti 5, 300077 Timisoara, Romania',
+  'latitude' => '45.75',
+  'longitude' => '21.23',
+  'precision' => 'address'
 }
 ```
 
@@ -367,8 +367,8 @@ In a local context this could be the <code>id</code> attribute in a correspondin
 
 ```
 'info' : {
-  'followup_time' => 'P14M',
-  'death' => 1
+  'death' => 1,
+  'followup_time' => 'P14M'
 }
 ```
 
