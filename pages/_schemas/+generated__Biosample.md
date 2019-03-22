@@ -155,10 +155,10 @@ Examples would be a tissue biopsy, a single cell from a culture for single cell 
    },
    "biocharacteristics" : [
       {
-         "description" : "Pancreatic Adenocarcinoma",
+         "description" : "Lobular Breast Carcinoma In Situ, study sample",
          "type" : {
-            "id" : "icdot:C25.9",
-            "label" : "Pancreas, NOS"
+            "id" : "ncit:C4018",
+            "label" : "Lobular Breast Carcinoma In Situ"
          }
       }
    ],
@@ -227,7 +227,7 @@ Examples would be phenotypes, disease codes or other ontology classes specific t
 ```
 'biocharacteristics' : [
   {
-    'description' => 'Pancreatic Adenocarcinoma',
+    'description' => 'Adenocarcinoma of the pancreas',
     'type' => {
                 'id' => 'pgx:81403',
                 'label' => 'Adenocarcinoma, NOS'
