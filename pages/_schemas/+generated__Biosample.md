@@ -209,11 +209,11 @@ Examples would be a tissue biopsy, a single cell from a culture for single cell 
 
 ```
 'age_at_collection' : {
-  'age' => 'P56Y',
   'age_class' => {
                    'id' => 'HP:0003621',
                    'label' => 'Juvenile onset'
-                 }
+                 },
+  'age' => 'P56Y'
 }
 ```
 
@@ -227,33 +227,26 @@ Examples would be phenotypes, disease codes or other ontology classes specific t
 ```
 'biocharacteristics' : [
   {
-    'description' => 'Pancreatic Adenocarcinoma',
     'type' => {
-                'label' => 'Pancreas, NOS',
-                'id' => 'icdot:C25.9'
-              }
+                'id' => 'pgx:81403',
+                'label' => 'Adenocarcinoma, NOS'
+              },
+    'description' => 'Pancreatic Adenocarcinoma'
   },
   {
     'description' => 'Pancreatic Adenocarcinoma',
-    'type' => {
-                'label' => 'Adenocarcinoma, NOS',
-                'id' => 'icdom:81403'
-              }
-  },
-  {
     'type' => {
                 'id' => 'ncit:C8294',
                 'label' => 'Pancreatic Adenocarcinoma'
-              },
-    'description' => 'Pancreatic Adenocarcinoma'
+              }
   }
 ]
 ```
 
-* Queries:  The query will return all biosamples with an (exact) class.id of "icdom:81403" in their "biocharacteristics" object list.
+* Queries:  The query will return all biosamples with an (exact) class.id of "ncit:C8294" in their "biocharacteristics" object list.
 
 ```
-db.biosamples.find( { "biocharacteristics.type.id" : "icdom:81403" } )
+db.biosamples.find( { "biocharacteristics.type.id" : "ncit:C8294" } )
 ```
 This call to the distinct funcion will return *all* bioterms ids for samples having some ncit id; to retrive only the ncit ids, this has to be followed by a regex filter (/^ncit/).
 
@@ -279,8 +272,8 @@ db.biosamples.distinct( "biocharacteristics.type.id", { "biocharacteristics.type
 
 ```
 'data_use_conditions' : {
-  'id' => 'DUO:0000004',
-  'label' => 'no restriction'
+  'label' => 'no restriction',
+  'id' => 'DUO:0000004'
 }
 ```
 
@@ -303,19 +296,19 @@ db.biosamples.distinct( "biocharacteristics.type.id", { "biocharacteristics.type
 ```
 'external_references' : [
   {
-    'description' => 'Cellosaurus cell line identifier',
     'type' => {
                 'id' => 'cellosaurus:CVCL_0312',
                 'label' => 'HOS'
               },
+    'description' => 'Cellosaurus cell line identifier',
     'relation' => 'provenance'
   },
   {
-    'relation' => 'report',
     'type' => {
                 'id' => 'pubmed:2823272',
                 'label' => 'Rearrangement of the p53 gene in human osteogenic sarcomas.'
               },
+    'relation' => 'report',
     'description' => 'PubMed reference'
   }
 ]
@@ -336,13 +329,13 @@ Frequently, this value may reflect either the place of the laboratory where the 
 
 ```
 'geo_provenance' : {
-  'country' => 'Romania',
+  'label' => 'Str Marasesti 5, 300077 Timisoara, Romania',
+  'precision' => 'address',
   'latitude' => '45.75',
   'city' => 'Timisoara',
+  'country' => 'Romania',
   'altitude' => 94,
-  'longitude' => '21.23',
-  'precision' => 'address',
-  'label' => 'Str Marasesti 5, 300077 Timisoara, Romania'
+  'longitude' => '21.23'
 }
 ```
 

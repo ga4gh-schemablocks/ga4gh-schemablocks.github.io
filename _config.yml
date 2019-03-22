@@ -59,8 +59,8 @@ categories_year_sorted:
   - minutes
 
 tags_year_sorted:
+  - press
   - news
-  - minutes
 
 related_sites: 
   'GA4GH::Discovery': 'http://ga4gh-discovery.github.io'
