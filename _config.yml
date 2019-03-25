@@ -32,6 +32,9 @@ collections:
   general:
     output: true
     permalink: /general/:path/
+  howto:
+    output: true
+    permalink: /howto/:path/
   minutes:
     output: true
     permalink: /minutes/:path/
@@ -93,7 +96,7 @@ cloud_tags:
   - dates
   - developers
   - identifiers
-  - faq
+  - FAQ
   - howto
   - leads
   - press
