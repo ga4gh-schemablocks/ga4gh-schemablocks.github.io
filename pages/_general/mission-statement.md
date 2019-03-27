@@ -18,7 +18,7 @@ tags: # please adjust; see tags -n _config.yml (or extend them there, too)
   - .featured
 ---
 
-## SchemaBlocks{S}[B] Mission Statement
+<h2>SchemaBlocks<span style="position: relative; top: -0.6em; font-size: 0.6em; color: var(--site-color);">{S}[B]</span> Mission Statement</h2>
 
 SchemaBlocks aims to translate the work of the workstreams into data models that:
 
