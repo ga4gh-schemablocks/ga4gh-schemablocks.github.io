@@ -15,7 +15,7 @@ tags: # please adjust; see tags -n _config.yml (or extend them there, too)
   - FAQ
   - howto
   - issues
-  - featured
+  - .featured
 ---
 
 ## SchemaBlocks{S}[B] Mission Statement
@@ -54,7 +54,7 @@ Driver Projects, including ELIXIR Beacon, GeL, EGA, and HCA have requested sever
 
 On the technical side, SchemaBlocks does not intend to produce a single, complete schema specification for universal use. Representations of schema “blocks” will be implemented using _JSON Schema_ - including inline documentation and examples - as well as tooling for integrity checks and transformations.
 
-A light-weight process (at minimum JSON Schema conformity checks using a dedicated linter) will be used to ensure consistent quality across all Blocks. The technical level of schema maturity as well as its adoption in GA4GH ecosystem products and standards and will be documented.
+A light-weight process (at minimum JSON Schema conformity checks using a [dedicated linter](https://github.com/ga4gh-schemablocks/blocks/issues/10)) will be used to ensure consistent quality across all Blocks. The technical level of schema maturity as well as its adoption in GA4GH ecosystem products and standards and will be documented.
 
 These Blocks can then be used by other work streams to ensure alignment across products.  For example, Beacon or Search API could use the phenotype Blocks to allow searching of phenotypic information; a group wanting to create a storage format for large amounts of phenotypic information could use the same Blocks. Driver Projects may use Blocks to develop data exchange formats, or in other parts of their development processes to ease adoption of GA4GH community standards. Since product teams may rely on different programming languages and schema description formats, we expect that the structure of {S}[B] Blocks may have to be translated between implementations, either manually or - increasingly - using automatic conversions.
 
