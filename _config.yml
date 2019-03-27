@@ -20,6 +20,9 @@ include:        # usually only pages in / and /_posts are "seen" => processed
 # Collection directories reside in "/collections_dir/_(collection name)".
 
 collections:
+  general:
+    output: true
+    permalink: /general/:path/
   schemas:
     output: true
     permalink: /schemas/:path/
@@ -29,9 +32,6 @@ collections:
   people:
     output: true
     permalink: /people/:path/
-  general:
-    output: true
-    permalink: /general/:path/
   howto:
     output: true
     permalink: /howto/:path/
@@ -49,6 +49,7 @@ nav_cat_blocks: # comma-separated "label,type,label_visibility"
   github_projects: 'Github Projects,github_projects,show'
 
 General:
+  about: 'About {S}[B]'
   news: News
   people: Participants
   formats: 'Data Formats'
@@ -96,6 +97,7 @@ cloud_tags:
   - dates
   - developers
   - identifiers
+  - issues
   - FAQ
   - howto
   - leads
