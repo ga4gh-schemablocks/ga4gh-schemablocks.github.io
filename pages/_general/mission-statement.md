@@ -8,7 +8,7 @@ www_link: # a simple web address related to the post, e.g. https://www.ga4gh.org
 www_links_formatted:  # one or multiple complete links
   - '<a href="https://docs.google.com/document/d/11fZpCFv2tO7xSXqJVAXvNDMpUxZ4wCkgvzjsgEI_8Ek/edit?ts=5c9b6c2cg" target="_blank">[Draft doc this page was based on]</a>'
 pdf_file_name: # the name of a PDF (no path) somewhere in "assets", which will be auto-linked
-permalink: '/about/repositories.html'
+permalink: '/about/mission.html'
 category: # please adjust
   - about
 tags: # please adjust; see tags -n _config.yml (or extend them there, too)
@@ -26,6 +26,8 @@ SchemaBlocks aims to translate the work of the workstreams into data models that
 * Are usable by Driver Projects as an exchange format.
 * Aid in aligning the work streams across GA4GH.
 * Do not create a hindrance in development work by other work streams. 
+
+<!--more-->
 
 After discussions with stakeholders from GA4GH work streams and driver projects who create data models (such as Phenopackets, Search API) or who would use SchemaBlocks for the development of their APIs and data exchange formats (Beacon, EGA, GeL), the SchemaBlocks team has come up with the following principles for this initiative:
 
@@ -58,7 +60,7 @@ These Blocks can then be used by other work streams to ensure alignment across p
 
 This process was designed to be simple while providing a solution to many existing needs within GA4GH and its community.  We welcome your thoughts and feedback. Ideas should preferably lead to issues in one of the “Github Issues” trackers:
 
-* Standards documentation, website and general issues
+* Standards documentation, website and general issues  
     - [schemablocks.github.io](https://github.com/ga4gh-schemablocks/ga4gh-schemablocks.github.io/issues) repository issues
-* Code refinements and schema proposals
-    - [blocks](https://github.com/ga4gh-schemablocks/blocks/issues) repository issues 
+* Code refinements and schema proposals  
+    - [blocks](https://github.com/ga4gh-schemablocks/blocks/issues) repository issues  
