@@ -52,8 +52,12 @@ tags:
     <td></td>
     <td></td>
     <td>The age of the subject (e.g. individual at the onset of a phenotype), 
-as Ontology_class.
-Corresponding to the use of "age of onset" in HPO.
+as Ontology_class. An example ontology here is HsapDv (Human 
+Developmental Stages).
+This does not exactly correspond to the use of "age of onset" in HPO,
+since this specifically codes the "onset" of a phenotype, not just any
+age as a timepoint. So when coding onset, implementations may choose 
+to either use an "age of onset" ontology or an "Age" class.
 </td>
   </tr>
   <tr>
@@ -114,15 +118,19 @@ or the age of the individual at the collection of a biosample.
 ##### age_class
 
 * The age of the subject (e.g. individual at the onset of a phenotype), 
-as Ontology_class.
-Corresponding to the use of "age of onset" in HPO.
+as Ontology_class. An example ontology here is HsapDv (Human 
+Developmental Stages).
+This does not exactly correspond to the use of "age of onset" in HPO,
+since this specifically codes the "onset" of a phenotype, not just any
+age as a timepoint. So when coding onset, implementations may choose 
+to either use an "age of onset" ontology or an "Age" class.
 
 * example:
 
 ```
 'age_class' : {
-  'label' => 'Juvenile onset',
-  'id' => 'HP:0003621'
+  'id' => 'HsapDv:0000083',
+  'label' => 'infant stage'
 }
 ```
 

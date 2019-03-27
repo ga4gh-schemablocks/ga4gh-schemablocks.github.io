@@ -107,8 +107,8 @@ represented as Ontoloyg_term object.
 
 ```
 'type' : {
-  'label' => 'arrayMap 2014',
-  'id' => 'pubmed:25428357'
+  'id' => 'pubmed:25428357',
+  'label' => 'arrayMap 2014'
 }
 ```
 

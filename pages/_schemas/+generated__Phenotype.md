@@ -164,8 +164,8 @@ It is only required in cases to indicate that the phenotype was looked for, but 
 'onset' : {
   'age' => 'P12Y',
   'age_class' => {
-                   'label' => 'Juvenile onset',
-                   'id' => 'HP:0003621'
+                   'id' => 'HP:0003621',
+                   'label' => 'Juvenile onset'
                  }
 }
 ```
@@ -179,8 +179,8 @@ FHIR mapping: Condition.severity
 
 ```
 'severity' : {
-  'label' => 'Mild',
-  'id' => 'HP:0012825'
+  'id' => 'HP:0012825',
+  'label' => 'Mild'
 }
 ```
 

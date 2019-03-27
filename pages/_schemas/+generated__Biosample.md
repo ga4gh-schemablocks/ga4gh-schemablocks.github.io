@@ -155,10 +155,10 @@ Examples would be a tissue biopsy, a single cell from a culture for single cell 
    },
    "biocharacteristics" : [
       {
-         "description" : "Lobular Breast Carcinoma In Situ, study sample",
+         "description" : "Pancreatic Adenocarcinoma",
          "type" : {
-            "id" : "ncit:C4018",
-            "label" : "Lobular Breast Carcinoma In Situ"
+            "id" : "icdot:C25.9",
+            "label" : "Pancreas, NOS"
          }
       }
    ],
@@ -227,9 +227,16 @@ Examples would be phenotypes, disease codes or other ontology classes specific t
 ```
 'biocharacteristics' : [
   {
-    'description' => 'Adenocarcinoma of the pancreas',
+    'description' => 'Pancreatic Adenocarcinoma',
     'type' => {
-                'id' => 'pgx:81403',
+                'id' => 'icdot:C25.9',
+                'label' => 'Pancreas, NOS'
+              }
+  },
+  {
+    'description' => 'Pancreatic Adenocarcinoma',
+    'type' => {
+                'id' => 'icdom:81403',
                 'label' => 'Adenocarcinoma, NOS'
               }
   },
@@ -243,10 +250,10 @@ Examples would be phenotypes, disease codes or other ontology classes specific t
 ]
 ```
 
-* Queries:  The query will return all biosamples with an (exact) class.id of "ncit:C8294" in their "biocharacteristics" object list.
+* Queries:  The query will return all biosamples with an (exact) class.id of "icdom:81403" in their "biocharacteristics" object list.
 
 ```
-db.biosamples.find( { "biocharacteristics.type.id" : "ncit:C8294" } )
+db.biosamples.find( { "biocharacteristics.type.id" : "icdom:81403" } )
 ```
 This call to the distinct funcion will return *all* bioterms ids for samples having some ncit id; to retrive only the ncit ids, this has to be followed by a regex filter (/^ncit/).
 
