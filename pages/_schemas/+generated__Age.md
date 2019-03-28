@@ -60,16 +60,6 @@ age as a timepoint. So when coding onset, implementations may choose
 to either use an "age of onset" ontology or an "Age" class.
 </td>
   </tr>
-  <tr>
-    <td>age_range</td>
-    <td></td>
-    <td></td>
-    <td>The age as an array of 1 or 2 ordered ISO8601 strings. This can be 
-used either for a specific age or to express a known age range - e.g.
-the minimum and maximum age of patients included in a study.
-The format corresponds to the general "Range" type in FHIR.
-</td>
-  </tr>
 
 </table>
 
@@ -86,10 +76,10 @@ or the age of the individual at the collection of a biosample.
 ```
 {
    "onset" : {
-      "age" : "P12Y",
+      "age" : "P14Y",
       "age_class" : {
-         "id" : "HP:0003621",
-         "label" : "Juvenile onset"
+         "id" : "HsapDv:0000086",
+         "label" : "adolescent stage"
       }
    }
 }
@@ -132,18 +122,5 @@ to either use an "age of onset" ontology or an "Age" class.
   'id' => 'HsapDv:0000083',
   'label' => 'infant stage'
 }
-```
-
-##### age_range
-
-* The age as an array of 1 or 2 ordered ISO8601 strings. This can be 
-used either for a specific age or to express a known age range - e.g.
-the minimum and maximum age of patients included in a study.
-The format corresponds to the general "Range" type in FHIR.
-
-* example:
-
-```
-'age_range' : "undef"
 ```
 

@@ -65,7 +65,7 @@ It is only required in cases to indicate that the phenotype was looked for, but 
     <td>onset</td>
     <td>:&nbsp;<a href="./Age.html">./Age</a></td>
     <td></td>
-    <td>The age of the individual at time of biosample collection, as Age object. In the <i>Phenopacket</i> implementation, alternatives to the "Age" class may be used to describe "onset". 
+    <td>The age of onset, as Age object. In the <i>Phenopacket</i> implementation, alternatives to the "Age" class may be used to describe "onset". 
 </td>
   </tr>
   <tr>
@@ -156,7 +156,7 @@ It is only required in cases to indicate that the phenotype was looked for, but 
 
 ##### onset
 
-* The age of the individual at time of biosample collection, as Age object. In the <i>Phenopacket</i> implementation, alternatives to the "Age" class may be used to describe "onset". 
+* The age of onset, as Age object. In the <i>Phenopacket</i> implementation, alternatives to the "Age" class may be used to describe "onset". 
 
 * example:
 
