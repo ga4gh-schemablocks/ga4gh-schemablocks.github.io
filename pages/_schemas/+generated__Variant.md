@@ -85,7 +85,7 @@ tags:
   </tr>
   <tr>
     <td>info</td>
-    <td></td>
+    <td>:&nbsp;<a href="./Info.html">./Info</a></td>
     <td></td>
     <td>additional variant information, as defined in the example and accompanying documentation</td>
   </tr>

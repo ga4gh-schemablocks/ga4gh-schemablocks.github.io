@@ -50,7 +50,7 @@ tags:
   </tr>
   <tr>
     <td>data_use_conditions</td>
-    <td></td>
+    <td>:&nbsp;<a href="./Ontology_term.html">./Ontology_term</a></td>
     <td></td>
     <td>Data use conditions applying to data from this callset, as ontology object (e.g. DUO).
 </td>
@@ -64,7 +64,7 @@ tags:
   </tr>
   <tr>
     <td>geo_provenance</td>
-    <td></td>
+    <td>:&nbsp;<a href="./Geo_location.html">./Geo_location</a></td>
     <td></td>
     <td>This geo_class attribute ideally describes the geographic location of where this callset was analysed.
 </td>
@@ -77,7 +77,7 @@ tags:
   </tr>
   <tr>
     <td>info</td>
-    <td></td>
+    <td>:&nbsp;<a href="./Info.html">./Info</a></td>
     <td></td>
     <td>additional variant information, as defined in the example and accompanying documentation</td>
   </tr>

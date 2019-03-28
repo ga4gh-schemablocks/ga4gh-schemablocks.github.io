@@ -49,7 +49,7 @@ tags:
   </tr>
   <tr>
     <td>age_class</td>
-    <td></td>
+    <td>:&nbsp;<a href="./Ontology_term.html">./Ontology_term</a></td>
     <td></td>
     <td>The age of the subject (e.g. individual at the onset of a phenotype), 
 as Ontology_class. An example ontology here is HsapDv (Human 
@@ -62,8 +62,8 @@ to either use an "age of onset" ontology or an "Age" class.
   </tr>
   <tr>
     <td>age_range</td>
-    <td>array</td>
-    <td>string</td>
+    <td></td>
+    <td></td>
     <td>The age as an array of 1 or 2 ordered ISO8601 strings. This can be 
 used either for a specific age or to express a known age range - e.g.
 the minimum and maximum age of patients included in a study.
@@ -144,9 +144,6 @@ The format corresponds to the general "Range" type in FHIR.
 * example:
 
 ```
-'age_range' : [
-  'P13Y',
-  'P18Y'
-]
+'age_range' : "undef"
 ```
 
