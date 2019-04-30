@@ -32,7 +32,7 @@ Peter Goodhand suggested to proceed over the next months, to work on the content
 * convert existing schema examples to JSON Schema
     - documentation pages from available tools (?) and additionally adapted custom scripting (i.e. modification of current Perl tool) for website
 
-<img src="/assets/img/2019-04-29-sb-flipchart.jpg" style="width: 400px;" alt="" />
+<img src="/assets/img/2019-04-29-sb-flipchart.jpg" width="200" alt="" />
 
 ##### Participants
 
