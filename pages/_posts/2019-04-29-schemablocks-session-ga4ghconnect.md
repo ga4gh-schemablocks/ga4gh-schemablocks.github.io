@@ -24,6 +24,14 @@ Peter Goodhand suggested to proceed over the next months, to work on the content
 
 #### Next Steps
 
+* establish a meeting schedule & reach out to participants
+* create a "3 level" schema of quality levels, e.g.
+    - approved standard (used by GA4GH products after approval process)
+    - external, accepted standard
+    - playground
+* convert existing schema examples to JSON Schema
+    - documentation pages from available tools (?) and additionally adapted custom scripting (i.e. modification of current Perl tool) for website
+
 <img src="/assets/img/2019-04-29-sb-flipchart.jpg" style="width: 400px;" alt="" />
 
 ##### Participants
@@ -36,3 +44,4 @@ Peter Goodhand suggested to proceed over the next months, to work on the content
 * Melissa Haendel
 * Ben Hutton
 * Melissa Konopko
+* Marco Roos
