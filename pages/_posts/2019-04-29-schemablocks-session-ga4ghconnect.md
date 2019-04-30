@@ -26,6 +26,8 @@ Peter Goodhand suggested to proceed over the next months, to work on the content
 
 
 
+<img src="/assets/img/2019-04-29-sb-flipchart.jpg" style="width: 400px;" alt="" />
+
 ##### Participants
 
 * Michael Baudis
