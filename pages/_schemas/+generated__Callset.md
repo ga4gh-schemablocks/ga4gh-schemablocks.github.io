@@ -50,7 +50,7 @@ tags:
   </tr>
   <tr>
     <td>data_use_conditions</td>
-    <td></td>
+    <td>:&nbsp;<a href="./Ontology_term.html">./Ontology_term</a></td>
     <td></td>
     <td>Data use conditions applying to data from this callset, as ontology object (e.g. DUO).
 </td>
@@ -64,7 +64,7 @@ tags:
   </tr>
   <tr>
     <td>geo_provenance</td>
-    <td></td>
+    <td>:&nbsp;<a href="./Geo_location.html">./Geo_location</a></td>
     <td></td>
     <td>This geo_class attribute ideally describes the geographic location of where this callset was analysed.
 </td>
@@ -77,7 +77,7 @@ tags:
   </tr>
   <tr>
     <td>info</td>
-    <td></td>
+    <td>:&nbsp;<a href="./Info.html">./Info</a></td>
     <td></td>
     <td>additional variant information, as defined in the example and accompanying documentation</td>
   </tr>
@@ -153,8 +153,8 @@ and is a shared identifier for all variants detected in this experiment, attribu
 
 ```
 'data_use_conditions' : {
-  'label' => 'no restriction',
-  'id' => 'DUO:0000004'
+  'id' => 'DUO:0000004',
+  'label' => 'no restriction'
 }
 ```
 
@@ -176,11 +176,11 @@ and is a shared identifier for all variants detected in this experiment, attribu
 
 ```
 'geo_provenance' : {
-  'latitude' => '45.75',
-  'country' => 'Romania',
   'city' => 'Timisoara',
-  'longitude' => '21.23',
-  'label' => 'Str Marasesti 5, 300077 Timisoara, Romania'
+  'country' => 'Romania',
+  'label' => 'Str Marasesti 5, 300077 Timisoara, Romania',
+  'latitude' => '45.75',
+  'longitude' => '21.23'
 }
 ```
 
@@ -204,8 +204,18 @@ and is a shared identifier for all variants detected in this experiment, attribu
                     'description' => 'The cnv_maps object is a wrapper for genomic interval mapped status information. In Progenetix and arrayMap, this is used to indictate - for fixed 1MB genome intervals - the status (dup_map => "DUP" or "", del_map => "DEL" or ""), or the maximum / minimum positive / negative value encountered in the segment, as far as it has been called to contain DUP or DEL.
 With a standard binning of 1MB, the arrays would contain ~3000 values each (depending on genome edition).
 ',
+                    'ref' => './Info',
                     'value' => {
+                                 'binning' => {
+                                                'description' => 'interval size in bases for the binning, when creating the cnv_maps',
+                                                'format' => 'int64',
+                                                'type' => 'number',
+                                                'value' => 1000000
+                                              },
                                  'dupmap' => {
+                                               'description' => 'gain cnv status for the corresponding genome intervals
+',
+                                               'type' => 'array',
                                                'value' => [
                                                             '',
                                                             '',
@@ -218,19 +228,9 @@ With a standard binning of 1MB, the arrays would contain ~3000 values each (depe
                                                             '',
                                                             '',
                                                             ''
-                                                          ],
-                                               'description' => 'gain cnv status for the corresponding genome intervals
-',
-                                               'type' => 'array'
-                                             },
-                                 'binning' => {
-                                                'value' => 1000000,
-                                                'type' => 'number',
-                                                'format' => 'int64',
-                                                'description' => 'interval size in bases for the binning, when creating the cnv_maps'
-                                              }
-                               },
-                    'ref' => './Info'
+                                                          ]
+                                             }
+                               }
                   }
 }
 ```

@@ -20,6 +20,9 @@ include:        # usually only pages in / and /_posts are "seen" => processed
 # Collection directories reside in "/collections_dir/_(collection name)".
 
 collections:
+  general:
+    output: true
+    permalink: /general/:path/
   schemas:
     output: true
     permalink: /schemas/:path/
@@ -29,12 +32,9 @@ collections:
   people:
     output: true
     permalink: /people/:path/
-  general:
+  howto:
     output: true
-    permalink: /general/:path/
-  minutes:
-    output: true
-    permalink: /minutes/:path/
+    permalink: /howto/:path/
 collections_dir: pages  # optional; here, all collections are inside "/pages"
     
 # navigation blocks can be used to separate different categories and add e.g. 
@@ -46,6 +46,7 @@ nav_cat_blocks: # comma-separated "label,type,label_visibility"
   github_projects: 'Github Projects,github_projects,show'
 
 General:
+  about: 'About {S}[B]'
   news: News
   people: Participants
   formats: 'Data Formats'
@@ -59,8 +60,8 @@ categories_year_sorted:
   - minutes
 
 tags_year_sorted:
+  - press
   - news
-  - minutes
 
 related_sites: 
   'GA4GH::Discovery': 'http://ga4gh-discovery.github.io'
@@ -93,7 +94,8 @@ cloud_tags:
   - dates
   - developers
   - identifiers
-  - faq
+  - issues
+  - FAQ
   - howto
   - leads
   - press

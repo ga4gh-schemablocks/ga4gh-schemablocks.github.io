@@ -1,5 +1,5 @@
 ---
-title:  "Directories and File Structure"
+title:  "Website: Directories and Files"
 permalink: /howto/templatefiles/
 layout: default
 date:   2019-03-14
@@ -7,11 +7,13 @@ author: "@mbaudis"
 excerpt_link: https://baudisgroup.github.io/progenetix-site-template/howto/templatefiles/
 excerpt_separator: <!--more-->
 category:
+  - howto
 tags:
   - Jekyll
-  - Markdown
   - documentation
   - website
+  - FAQ
+  - Markdown
 ---
 
 ## {{page.title}}

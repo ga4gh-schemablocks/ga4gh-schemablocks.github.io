@@ -26,6 +26,7 @@ tags:
 European Bioinformatics Institute  
 Samples, Phenotypes and Ontologies  
 BioSamples/GA4GH Project Lead   
+Co-lead SchemaBlocks initiative  
 
 <!--more-->
 

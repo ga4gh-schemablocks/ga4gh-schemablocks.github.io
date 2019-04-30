@@ -48,7 +48,7 @@ tags:
   </tr>
   <tr>
     <td>type</td>
-    <td></td>
+    <td>:&nbsp;<a href="./Ontology_term.html">./Ontology_term</a></td>
     <td></td>
     <td>A properly prefixed CURIE of the external reference and an associated label,
 represented as Ontoloyg_term object.
@@ -107,8 +107,8 @@ represented as Ontoloyg_term object.
 
 ```
 'type' : {
-  'label' => 'arrayMap 2014',
-  'id' => 'pubmed:25428357'
+  'id' => 'pubmed:25428357',
+  'label' => 'arrayMap 2014'
 }
 ```
 

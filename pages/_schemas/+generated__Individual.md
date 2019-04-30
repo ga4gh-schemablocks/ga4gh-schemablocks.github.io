@@ -37,7 +37,7 @@ tags:
   <tr>
     <td>biocharacteristics</td>
     <td>array</td>
-    <td></td>
+    <td>:&nbsp;<a href="./Phenotype.html">./Phenotype</a></td>
     <td>list of Phenotype objects with properly prefixed term ids, describing features of the individual which are not specific to the reported biosample(s); typical examples here are sex, species and "systemic" phenotypes and diseases
 </td>
   </tr>
@@ -50,7 +50,7 @@ tags:
   </tr>
   <tr>
     <td>data_use_conditions</td>
-    <td></td>
+    <td>:&nbsp;<a href="./Ontology_term.html">./Ontology_term</a></td>
     <td></td>
     <td>Data use conditions applying to data from this individual, as ontology object (e.g. DUO).
 </td>
@@ -64,13 +64,13 @@ tags:
   <tr>
     <td>external_references</td>
     <td>array</td>
-    <td></td>
+    <td>:&nbsp;<a href="./Reference.html">./Reference</a></td>
     <td>Different representations of the same record, not different records in relation with this individual
 </td>
   </tr>
   <tr>
     <td>geo_provenance</td>
-    <td></td>
+    <td>:&nbsp;<a href="./Geo_location.html">./Geo_location</a></td>
     <td></td>
     <td>This geo_class attribute ideally describes the geographic location of where this individual originates from.
 This value may reflect either the place of birth or residence, but frequently may correspond to the place the study was performed.
@@ -84,7 +84,7 @@ This value may reflect either the place of birth or residence, but frequently ma
   </tr>
   <tr>
     <td>info</td>
-    <td></td>
+    <td>:&nbsp;<a href="./Info.html">./Info</a></td>
     <td></td>
     <td>additional variant information, as defined in the example and accompanying documentation TODO this should be its own class</td>
   </tr>
@@ -97,7 +97,7 @@ This value may reflect either the place of birth or residence, but frequently ma
   </tr>
   <tr>
     <td>organism</td>
-    <td></td>
+    <td>:&nbsp;<a href="./Ontology_term.html">./Ontology_term</a></td>
     <td></td>
     <td>An NCBI taxonomy term describing the species of the individual.
 For resources where there may be more than one organism being studied it is advisable to indicate the taxonomic identifier of that organism, to it's most specific level
@@ -105,7 +105,7 @@ For resources where there may be more than one organism being studied it is advi
   </tr>
   <tr>
     <td>sex</td>
-    <td></td>
+    <td>:&nbsp;<a href="./Ontology_term.html">./Ontology_term</a></td>
     <td></td>
     <td>A PATO term describing the biological sex of the individual
 </td>
@@ -199,11 +199,11 @@ An individual is a single organism (here typically a human).
 ```
 'biocharacteristics' : [
   {
+    'description' => 'Patient with Down syndrome',
     'type' => {
-                'label' => 'Genetic anticipation',
-                'id' => 'HP:0003745'
-              },
-    'description' => 'Patient with Down syndrome'
+                'id' => 'HP:0003745',
+                'label' => 'Genetic anticipation'
+              }
   }
 ]
 ```
@@ -258,12 +258,12 @@ db.biosamples.distinct( { "biocharacteristics.type.id", "biocharacteristics.type
 ```
 'external_references' : [
   {
+    'description' => 'Cellosaurus cell line identifier',
+    'relation' => 'provenance',
     'type' => {
                 'id' => 'cellosaurus:CVCL_0312',
                 'label' => 'HOS'
-              },
-    'description' => 'Cellosaurus cell line identifier',
-    'relation' => 'provenance'
+              }
   }
 ]
 ```
@@ -283,12 +283,12 @@ This value may reflect either the place of birth or residence, but frequently ma
 
 ```
 'geo_provenance' : {
+  'altitude' => 94,
   'city' => 'Timisoara',
   'country' => 'Romania',
+  'label' => 'Str Marasesti 5, 300077 Timisoara, Romania',
   'latitude' => '45.75',
-  'longitude' => '21.23',
-  'altitude' => 94,
-  'label' => 'Str Marasesti 5, 300077 Timisoara, Romania'
+  'longitude' => '21.23'
 }
 ```
 
@@ -308,14 +308,14 @@ This value may reflect either the place of birth or residence, but frequently ma
 
 ```
 'info' : {
-  'last_name' => {
-                   'type' => 'string',
-                   'value' => 'Tichy'
-                 },
   'first_name' => {
                     'type' => 'string',
                     'value' => 'Ion'
-                  }
+                  },
+  'last_name' => {
+                   'type' => 'string',
+                   'value' => 'Tichy'
+                 }
 }
 ```
 
@@ -338,8 +338,8 @@ For resources where there may be more than one organism being studied it is advi
 
 ```
 'organism' : {
-  'label' => 'Homo sapiens',
-  'id' => 'NCBITaxon:9606'
+  'id' => 'NCBITaxon:9606',
+  'label' => 'Homo sapiens'
 }
 ```
 

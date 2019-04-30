@@ -50,7 +50,7 @@ Note this is not a acceptable place to document/describe the phenotype the type 
   <tr>
     <td>evidence</td>
     <td>array</td>
-    <td></td>
+    <td>:&nbsp;<a href="./Ontology_term.html">./Ontology_term</a></td>
     <td>Evidences for how the phenotype was determined</td>
   </tr>
   <tr>
@@ -63,14 +63,14 @@ It is only required in cases to indicate that the phenotype was looked for, but 
   </tr>
   <tr>
     <td>onset</td>
+    <td>:&nbsp;<a href="./Age.html">./Age</a></td>
     <td></td>
-    <td></td>
-    <td>The age of the individual at time of biosample collection, as Age object. In the <i>Phenopacket</i> implementation, alternatives to the "Age" class may be used to describe "onset". 
+    <td>The age of onset, as Age object. In the <i>Phenopacket</i> implementation, alternatives to the "Age" class may be used to describe "onset". 
 </td>
   </tr>
   <tr>
     <td>severity</td>
-    <td></td>
+    <td>:&nbsp;<a href="./Ontology_term.html">./Ontology_term</a></td>
     <td></td>
     <td>Severity of the condition e.g. subclasses of HP:0012824-Severity or SNOMED:272141005-Severities.
 FHIR mapping: Condition.severity
@@ -78,7 +78,7 @@ FHIR mapping: Condition.severity
   </tr>
   <tr>
     <td>type</td>
-    <td></td>
+    <td>:&nbsp;<a href="./Ontology_term.html">./Ontology_term</a></td>
     <td></td>
     <td>The ontology term as Ontology_term. The primary ontology class which describes the phenotype.</td>
   </tr>
@@ -156,7 +156,7 @@ It is only required in cases to indicate that the phenotype was looked for, but 
 
 ##### onset
 
-* The age of the individual at time of biosample collection, as Age object. In the <i>Phenopacket</i> implementation, alternatives to the "Age" class may be used to describe "onset". 
+* The age of onset, as Age object. In the <i>Phenopacket</i> implementation, alternatives to the "Age" class may be used to describe "onset". 
 
 * example:
 
@@ -164,8 +164,8 @@ It is only required in cases to indicate that the phenotype was looked for, but 
 'onset' : {
   'age' => 'P12Y',
   'age_class' => {
-                   'label' => 'Juvenile onset',
-                   'id' => 'HP:0003621'
+                   'id' => 'HP:0003621',
+                   'label' => 'Juvenile onset'
                  }
 }
 ```
@@ -179,8 +179,8 @@ FHIR mapping: Condition.severity
 
 ```
 'severity' : {
-  'label' => 'Mild',
-  'id' => 'HP:0012825'
+  'id' => 'HP:0012825',
+  'label' => 'Mild'
 }
 ```
 

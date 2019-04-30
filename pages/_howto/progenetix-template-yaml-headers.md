@@ -1,5 +1,5 @@
 ---
-title:  "Format of the YAML Header"
+title:  "Website: Header for Web Pages"
 permalink: "/howto/yamlheader/"
 layout: default
 date:   2019-03-14
@@ -7,11 +7,13 @@ author: "@mbaudis"
 excerpt_link: "https://baudisgroup.github.io/progenetix-site-template/howto/yamlheader/"
 excerpt_separator: <!--more-->
 category:
+  - howto
 tags:
   - Jekyll
-  - Markdown
   - documentation
   - website
+  - FAQ
+  - Markdown
 ---
 
 ## {{page.title}}

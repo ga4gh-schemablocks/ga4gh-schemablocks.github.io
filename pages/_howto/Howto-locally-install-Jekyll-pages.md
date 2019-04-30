@@ -1,5 +1,5 @@
 ---
-title:  "Howto: Local Jekyll site creation"
+title:  "Website - Non-Github Hosting"
 permalink: /howto/jekyllinstallation/
 layout: default
 date:   2019-03-14
@@ -7,10 +7,12 @@ author: "@mbaudis"
 excerpt_link: https://baudisgroup.github.io/progenetix-site-template/howto/jekyllinstallation/
 excerpt_separator: <!--more-->
 category:
+  - howto
 tags:
   - Jekyll
   - documentation
   - website
+  - FAQ
 ---
 
 ## Local Jekyll based website generation

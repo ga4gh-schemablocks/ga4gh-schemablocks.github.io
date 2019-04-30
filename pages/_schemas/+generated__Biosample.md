@@ -41,7 +41,7 @@ tags:
   </tr>
   <tr>
     <td>age_at_collection</td>
-    <td></td>
+    <td>:&nbsp;<a href="./Age.html">./Age</a></td>
     <td></td>
     <td>The age of the individual at time of biosample collection, as Age object.
 </td>
@@ -49,7 +49,7 @@ tags:
   <tr>
     <td>biocharacteristics</td>
     <td>array</td>
-    <td></td>
+    <td>:&nbsp;<a href="./Phenotype.html">./Phenotype</a></td>
     <td>biocharacteristics represents a wrapper list of "Phenotype" objects with properly prefixed term ids, describing features of the biosample.
 Examples would be phenotypes, disease codes or other ontology classes specific to this biosample. In a complete data model (variants - (callsets) - biosamples - individuals), characteristics applying to the individual (e.g. sex, most phenotypes) should be annotated there.
 </td>
@@ -63,7 +63,7 @@ Examples would be phenotypes, disease codes or other ontology classes specific t
   </tr>
   <tr>
     <td>data_use_conditions</td>
-    <td></td>
+    <td>:&nbsp;<a href="./Ontology_term.html">./Ontology_term</a></td>
     <td></td>
     <td>Data use conditions applying to data from this biosample, as ontology object (e.g. DUO).
 </td>
@@ -78,13 +78,13 @@ Examples would be phenotypes, disease codes or other ontology classes specific t
   <tr>
     <td>external_references</td>
     <td>array</td>
-    <td></td>
+    <td>:&nbsp;<a href="./Reference.html">./Reference</a></td>
     <td>list of reference_class objects with properly (e.g. identifiers.org) prefixed external identifiers and a term describing the relationship
 </td>
   </tr>
   <tr>
     <td>geo_provenance</td>
-    <td></td>
+    <td>:&nbsp;<a href="./Geo_location.html">./Geo_location</a></td>
     <td></td>
     <td>This geo_class attribute ideally describes the geographic location of where the sample was extracted.
 Frequently, this value may reflect either the place of the laboratory where the analysis was performed, or correspond to the corresponding author's institution.
@@ -106,7 +106,7 @@ In a local context this could be the <code>id</code> attribute in a correspondin
   </tr>
   <tr>
     <td>info</td>
-    <td></td>
+    <td>:&nbsp;<a href="./Info.html">./Info</a></td>
     <td></td>
     <td>This is a wrapper for objects without further specification in the schema.
 </td>
@@ -155,10 +155,10 @@ Examples would be a tissue biopsy, a single cell from a culture for single cell 
    },
    "biocharacteristics" : [
       {
-         "description" : "Pancreatic Adenocarcinoma",
+         "description" : "Lobular Breast Carcinoma In Situ, study sample",
          "type" : {
-            "id" : "icdot:C25.9",
-            "label" : "Pancreas, NOS"
+            "id" : "ncit:C4018",
+            "label" : "Lobular Breast Carcinoma In Situ"
          }
       }
    ],
@@ -227,33 +227,26 @@ Examples would be phenotypes, disease codes or other ontology classes specific t
 ```
 'biocharacteristics' : [
   {
-    'description' => 'Pancreatic Adenocarcinoma',
+    'description' => 'Adenocarcinoma of the pancreas',
     'type' => {
-                'label' => 'Pancreas, NOS',
-                'id' => 'icdot:C25.9'
+                'id' => 'pgx:81403',
+                'label' => 'Adenocarcinoma, NOS'
               }
   },
   {
     'description' => 'Pancreatic Adenocarcinoma',
-    'type' => {
-                'label' => 'Adenocarcinoma, NOS',
-                'id' => 'icdom:81403'
-              }
-  },
-  {
     'type' => {
                 'id' => 'ncit:C8294',
                 'label' => 'Pancreatic Adenocarcinoma'
-              },
-    'description' => 'Pancreatic Adenocarcinoma'
+              }
   }
 ]
 ```
 
-* Queries:  The query will return all biosamples with an (exact) class.id of "icdom:81403" in their "biocharacteristics" object list.
+* Queries:  The query will return all biosamples with an (exact) class.id of "ncit:C8294" in their "biocharacteristics" object list.
 
 ```
-db.biosamples.find( { "biocharacteristics.type.id" : "icdom:81403" } )
+db.biosamples.find( { "biocharacteristics.type.id" : "ncit:C8294" } )
 ```
 This call to the distinct funcion will return *all* bioterms ids for samples having some ncit id; to retrive only the ncit ids, this has to be followed by a regex filter (/^ncit/).
 
@@ -304,19 +297,19 @@ db.biosamples.distinct( "biocharacteristics.type.id", { "biocharacteristics.type
 'external_references' : [
   {
     'description' => 'Cellosaurus cell line identifier',
+    'relation' => 'provenance',
     'type' => {
                 'id' => 'cellosaurus:CVCL_0312',
                 'label' => 'HOS'
-              },
-    'relation' => 'provenance'
+              }
   },
   {
+    'description' => 'PubMed reference',
     'relation' => 'report',
     'type' => {
                 'id' => 'pubmed:2823272',
                 'label' => 'Rearrangement of the p53 gene in human osteogenic sarcomas.'
-              },
-    'description' => 'PubMed reference'
+              }
   }
 ]
 ```
@@ -336,13 +329,13 @@ Frequently, this value may reflect either the place of the laboratory where the 
 
 ```
 'geo_provenance' : {
-  'country' => 'Romania',
-  'latitude' => '45.75',
-  'city' => 'Timisoara',
   'altitude' => 94,
+  'city' => 'Timisoara',
+  'country' => 'Romania',
+  'label' => 'Str Marasesti 5, 300077 Timisoara, Romania',
+  'latitude' => '45.75',
   'longitude' => '21.23',
-  'precision' => 'address',
-  'label' => 'Str Marasesti 5, 300077 Timisoara, Romania'
+  'precision' => 'address'
 }
 ```
 
@@ -374,8 +367,8 @@ In a local context this could be the <code>id</code> attribute in a correspondin
 
 ```
 'info' : {
-  'followup_time' => 'P14M',
-  'death' => 1
+  'death' => 1,
+  'followup_time' => 'P14M'
 }
 ```
 

@@ -9,7 +9,7 @@ tags:
   - code
 ---
 ## Variant
-##### From Original GA4GH schema, with modifications
+
 
 #### Status: __proposed__
 
@@ -19,16 +19,10 @@ tags:
 
 #### Provenance  
 
-* [Original GA4GH schema, with modifications](https://github.com/ga4gh-metadata/metadata-schemas/blob/master/schemas/shared.proto#L39)  
-
-#### Used by  
-
-* [Beacon (for the allele request, with adjustments)](https://github.com/ga4gh-beacon/specification/blob/master/beacon.yaml)  
-* [Progenetix database schema (Beacon+ backend)](https://github.com/progenetix/schemas/tree/master/main/yaml)  
 
 #### Authors
 
-* GA4GH Data Working Group, @mbaudis
+* 
 
 #### Schema source: [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/variant.yaml)    
 #### Properties of the _Variant_ class    
@@ -75,10 +69,7 @@ tags:
     <td>end</td>
     <td>array</td>
     <td>int64</td>
-    <td>* array of 0 (for presise sequence variants), 1 or 2 (for imprecise end position of structural variant) integers
-* this corresponds to the end position and [CIEND] interval in VCF
-* some implementations express this concept in a modified form (e.g. Beacon v1.0 uses separate values instead of an array for position bracketing)
-</td>
+    <td>array of 0 (for presise sequence variants), 1 or 2 (for imprecise end position of structural variant) integers</td>
   </tr>
   <tr>
     <td>genotype</td>
@@ -94,7 +85,7 @@ tags:
   </tr>
   <tr>
     <td>info</td>
-    <td></td>
+    <td>:&nbsp;<a href="./Info.html">./Info</a></td>
     <td></td>
     <td>additional variant information, as defined in the example and accompanying documentation</td>
   </tr>
@@ -102,7 +93,7 @@ tags:
     <td>mate_name</td>
     <td>string</td>
     <td></td>
-    <td>Mate name (chromosome) for fusion (BND) events; otherwise left empty. Accepting values 1-22, X, Y.
+    <td>Mate name (chromosome) for fusion (BRK) events; otherwise left empty. Accepting values 1-22, X, Y.
 </td>
   </tr>
   <tr>
@@ -121,10 +112,7 @@ tags:
     <td>start</td>
     <td>array</td>
     <td>int64</td>
-    <td>* array of 1 or 2 (for imprecise end position of structural variant) integers
-* this corresponds to the position and [CIPOS] interval in VCF
-* some implementations express this concept in a modified form (e.g. Beacon v1.0 uses separate values instead of an array for position bracketing)
-</td>
+    <td>array of 1 or 2 (for imprecise end position of structural variant) integers</td>
   </tr>
   <tr>
     <td>updated</td>
@@ -137,18 +125,15 @@ tags:
     <td>variant_type</td>
     <td>string</td>
     <td></td>
-    <td>the variant type in case of a named (structural) variant (e.g. DUP, DEL, BND ...)</td>
+    <td>the variant type in case of a named (structural) variant (e.g. DUP, DEL, BRK ...)</td>
   </tr>
 
 </table>
 
 
 #### Description 
-The document describes attributes of the _variant_ object. In its current 
-implementation, _variant_ (and related genomic objects such as _callset_) 
-represent extended versions of the original, VCF-derived GA4GH schema.
-This format may be superseeded or augmented based on current developments 
-in the GA4GH::GKS work stream.
+The document describes attributes of the _variant_ object. In its current implementation, _valiant_ (and related genomic objects such as _callset_) represent extended versions of the original, VCF-derived GA4GH schema.
+This format may be superseeded or augmented based on current developments in the GA4GH::GKS work stream.
 
 
 
@@ -236,10 +221,7 @@ in the GA4GH::GKS work stream.
 
 ##### end
 
-* * array of 0 (for presise sequence variants), 1 or 2 (for imprecise end position of structural variant) integers
-* this corresponds to the end position and [CIEND] interval in VCF
-* some implementations express this concept in a modified form (e.g. Beacon v1.0 uses separate values instead of an array for position bracketing)
-
+* array of 0 (for presise sequence variants), 1 or 2 (for imprecise end position of structural variant) integers
 * example:
 
 ```
@@ -289,7 +271,7 @@ db.variants.find( { "reference_name" : "9",  "variant_type" : "DEL", "start" : {
 
 ##### mate_name
 
-* Mate name (chromosome) for fusion (BND) events; otherwise left empty. Accepting values 1-22, X, Y.
+* Mate name (chromosome) for fusion (BRK) events; otherwise left empty. Accepting values 1-22, X, Y.
 
 * example:
 
@@ -317,10 +299,7 @@ db.variants.find( { "reference_name" : "9",  "variant_type" : "DEL", "start" : {
 
 ##### start
 
-* * array of 1 or 2 (for imprecise end position of structural variant) integers
-* this corresponds to the position and [CIPOS] interval in VCF
-* some implementations express this concept in a modified form (e.g. Beacon v1.0 uses separate values instead of an array for position bracketing)
-
+* array of 1 or 2 (for imprecise end position of structural variant) integers
 * example:
 
 ```
@@ -341,7 +320,7 @@ db.variants.find( { "reference_name" : "9",  "variant_type" : "DEL", "start" : {
 
 ##### variant_type
 
-* the variant type in case of a named (structural) variant (e.g. DUP, DEL, BND ...)
+* the variant type in case of a named (structural) variant (e.g. DUP, DEL, BRK ...)
 * example:
 
 ```
