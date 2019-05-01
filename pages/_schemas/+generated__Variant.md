@@ -43,19 +43,23 @@ tags:
     <td>alternate_bases</td>
     <td>string</td>
     <td></td>
-    <td>one or more bases relative to start position of the reference genome,replacing the reference_bases value; for precise variants</td>
+    <td>* one or more bases relative to start position of the reference genome, replacing the reference_bases value
+* for precise variants; normally not used for structural (e.g. DUP, DEL) alterations
+</td>
   </tr>
   <tr>
     <td>biosample_id</td>
     <td></td>
     <td></td>
-    <td>The identifier ("biosample.id") of the biosample this variant was reported from. This is a shortcut to using the variant -> callset -> biosample chaining.</td>
+    <td>The optional identifier ("biosample.id") of the biosample this variant was reported from. This is a shortcut to using the variant -> callset -> biosample chaining.</td>
   </tr>
   <tr>
     <td>callset_id</td>
     <td>string</td>
     <td></td>
-    <td>The identifier ("callset.id") of the callset this variant is part of.</td>
+    <td>* The identifier ("callset.id") of the callset this variant is part of.
+* Optional, if another provenance method is provided (e.g. if variants are nested with the parental object as in a Phenopacket)
+</td>
   </tr>
   <tr>
     <td>created</td>
@@ -88,7 +92,9 @@ tags:
     <td>id</td>
     <td>string</td>
     <td></td>
-    <td>The local-unique identifier of this variant (referenced as "variant_id").</td>
+    <td>* The local-unique identifier of this variant (referenced as "variant_id").
+* Optional
+</td>
   </tr>
   <tr>
     <td>info</td>
@@ -107,7 +113,8 @@ tags:
     <td>reference_bases</td>
     <td>string</td>
     <td></td>
-    <td>one or more bases at start position in the reference genome, which have been replaced by the alternate_bases value; for precise variants</td>
+    <td>one or more bases at start position in the reference genome, which have been replaced by the `alternate_bases` value
+</td>
   </tr>
   <tr>
     <td>reference_name</td>
@@ -132,7 +139,7 @@ tags:
     <td>variant_type</td>
     <td>string</td>
     <td></td>
-    <td>the variant type in case of a named (structural) variant (e.g. DUP, DEL, BRK ...)</td>
+    <td>the variant type in case of a named (structural) variant (e.g. DUP, DEL, BND ...)</td>
   </tr>
 
 </table>
@@ -148,32 +155,67 @@ This format may be superseeded or augmented based on current developments in the
 
 ```
 {
-   "alternate_bases" : "AC",
-   "biosample_id" : "biosample_id",
-   "callset_id" : "callset_id",
+   "biosample_id" : "fcl-bs-0099615",
+   "callset_id" : "structdb-cs-nhl-0009876",
    "created" : "2017-10-25T07:06:03Z",
-   "digest" : "digest",
+   "digest" : "8,14:20867740-21977798,21978106:BND",
    "end" : [
       "21977798",
       "21978106"
    ],
-   "genotype" : [
-      "1",
-      "."
-   ],
-   "id" : "id",
-   "info" : {
-      "cnv_length" : 1205290,
-      "cnv_value" : "-0.294"
-   },
+   "id" : "structdb-var-123456789",
    "mate_name" : 14,
-   "reference_bases" : "G",
+   "reference_bases" : "N",
    "reference_name" : 8,
    "start" : [
       "20867740"
    ],
    "updated" : "2017-10-25T07:06:03Z",
+   "variant_type" : "BND"
+}
+```
+```
+{
+   "biosample_id" : "structdb-bs-nhl-0009876",
+   "callset_id" : "structdb-cs-nhl-0009876",
+   "created" : "2019-01-22T03:06:45Z",
+   "digest" : "6:63450000,63550000-63450000,63550000:DEL",
+   "end" : [
+      "63450000",
+      "63550000"
+   ],
+   "id" : "structdb-var-123456790",
+   "info" : {
+      "cnv_length" : 85500000,
+      "cnv_value" : "-0.294"
+   },
+   "reference_bases" : "N",
+   "reference_name" : 6,
+   "start" : [
+      "63450000",
+      "63550000"
+   ],
+   "updated" : "2019-02-01T12:40:21Z",
    "variant_type" : "DEL"
+}
+```
+```
+{
+   "alternate_bases" : "AC",
+   "callset_id" : "DIPG_CS_0290",
+   "created" : "2018-11-06T11:46:30.028Z",
+   "digest" : "2:203420136:A>AC",
+   "genotype" : [
+      "1",
+      "."
+   ],
+   "id" : "5be1840772798347f0ed9e8b",
+   "reference_bases" : "A",
+   "reference_name" : 2,
+   "start" : [
+      "203420136"
+   ],
+   "updated" : "2018-11-06T11:46:30.028Z"
 }
 ```
 --------------------------------------------------------------------------------
@@ -182,7 +224,9 @@ This format may be superseeded or augmented based on current developments in the
 
 ##### alternate_bases
 
-* one or more bases relative to start position of the reference genome,replacing the reference_bases value; for precise variants
+* * one or more bases relative to start position of the reference genome, replacing the reference_bases value
+* for precise variants; normally not used for structural (e.g. DUP, DEL) alterations
+
 * example:
 
 ```
@@ -191,7 +235,7 @@ This format may be superseeded or augmented based on current developments in the
 
 ##### biosample_id
 
-* The identifier ("biosample.id") of the biosample this variant was reported from. This is a shortcut to using the variant -> callset -> biosample chaining.
+* The optional identifier ("biosample.id") of the biosample this variant was reported from. This is a shortcut to using the variant -> callset -> biosample chaining.
 * example:
 
 ```
@@ -200,7 +244,9 @@ This format may be superseeded or augmented based on current developments in the
 
 ##### callset_id
 
-* The identifier ("callset.id") of the callset this variant is part of.
+* * The identifier ("callset.id") of the callset this variant is part of.
+* Optional, if another provenance method is provided (e.g. if variants are nested with the parental object as in a Phenopacket)
+
 * example:
 
 ```
@@ -240,7 +286,8 @@ This format may be superseeded or augmented based on current developments in the
 ]
 ```
 
-* Queries:  the query will return all variants with any overlap of the CDKN2A CDR
+* Queries:  This example query will return all deletion variants with any overlap of the CDKN2A CDR (GRCh38 positions).
+
 ```
 db.variants.find( { "reference_name" : "9",  "variant_type" : "DEL", "start" : { $lteq : 21975098 }, "end" : { $gteq : 21967753 } } )
 ```
@@ -259,7 +306,9 @@ db.variants.find( { "reference_name" : "9",  "variant_type" : "DEL", "start" : {
 
 ##### id
 
-* The local-unique identifier of this variant (referenced as "variant_id").
+* * The local-unique identifier of this variant (referenced as "variant_id").
+* Optional
+
 * example:
 
 ```
@@ -290,7 +339,8 @@ db.variants.find( { "reference_name" : "9",  "variant_type" : "DEL", "start" : {
 
 ##### reference_bases
 
-* one or more bases at start position in the reference genome, which have been replaced by the alternate_bases value; for precise variants
+* one or more bases at start position in the reference genome, which have been replaced by the `alternate_bases` value
+
 * example:
 
 ```
@@ -329,7 +379,7 @@ db.variants.find( { "reference_name" : "9",  "variant_type" : "DEL", "start" : {
 
 ##### variant_type
 
-* the variant type in case of a named (structural) variant (e.g. DUP, DEL, BRK ...)
+* the variant type in case of a named (structural) variant (e.g. DUP, DEL, BND ...)
 * example:
 
 ```
