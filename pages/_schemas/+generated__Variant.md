@@ -9,7 +9,7 @@ tags:
   - code
 ---
 ## Variant
-
+##### From Original GA4GH schema
 
 #### Status: __proposed__
 
@@ -19,10 +19,15 @@ tags:
 
 #### Provenance  
 
+* [Original GA4GH schema](https://github.com/ga4gh/ga4gh-schemas/blob/master/src/main/proto/ga4gh/variants.proto#L145)  
+
+#### Used by  
+
+* [Beacon, in modified form as basis for query model](https://github.com/ga4gh-beacon/specification/blob/master/beacon.yaml#L345)  
 
 #### Authors
 
-* 
+* GA4GH Metadata Task Team, GA4GH Variant Task Team, @mbaudis
 
 #### Schema source: [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/variant.yaml)    
 #### Properties of the _Variant_ class    
@@ -63,7 +68,9 @@ tags:
     <td>digest</td>
     <td>string</td>
     <td></td>
-    <td>concatenated unique specific elements of the variant</td>
+    <td>* Concatenated unique specific elements of the variant.
+* Optional, convenience element to derive unique variants in "individual variant from callset" storage systems
+</td>
   </tr>
   <tr>
     <td>end</td>
@@ -212,7 +219,9 @@ This format may be superseeded or augmented based on current developments in the
 
 ##### digest
 
-* concatenated unique specific elements of the variant
+* * Concatenated unique specific elements of the variant.
+* Optional, convenience element to derive unique variants in "individual variant from callset" storage systems
+
 * example:
 
 ```

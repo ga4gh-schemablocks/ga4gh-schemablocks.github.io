@@ -37,6 +37,7 @@ Peter Goodhand suggested to proceed over the next months, to work on the content
 ##### Participants
 
 * Michael Baudis
+* Tony Burdett
 * Melanie Courtot
 * Miro Cupak
 * Ian Fore
