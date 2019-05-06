@@ -3,7 +3,6 @@ title: "Genome Coordinates"
 layout: default
 date: 2019-02-20
 author:
-  - "@jmarshall"
   - "@andrewyatz"
 permalink: /categories/formats/genome-coordinates.html
 description: >
@@ -79,7 +78,12 @@ All of these names refer to identical representations of coordinates. Interbase 
 
 ### How "0-start, half-open" works
 
-![Sequence data with "0-start, half-open" coordinates]({{ "/assets/img/genome-coordinates-img/interbase.svg" | relative_url }})
+```
+         G A G T G C
+ G G T G G A G T G C G C C G C C A T G G
+                    1 1 1 1 1 1 1 1 1 1 2
+0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0
+```
 
 "0-start, half-open" breaks down into two integer positions. The first, "0-start", refers to the start coordinate and uses an indexing scheme starting at 0 to refer to bases within a sequence, similar to array indexes in most C based programming languages. The second, "half-open", refers to the end coordinate and is one higher than the start (effectively using an indexing system starting at 1).
 
@@ -89,7 +93,12 @@ This same coordinate system can be used to flag insertions and deletions as a st
 
 ### What is "1-start, fully-closed"?
 
-![Sequence data with "1-start, fully-closed" coordinates]({{ "/assets/img/genome-coordinates-img/1-based.svg" | relative_url }})
+```
+    GAGTGC
+GGTGGAGTGCGCCGCCATGG
+         11111111112
+12345678901234567890
+```
 
 "1-start, fully-closed" is the human readable coordinate system used in all genomic data displays and reports. It indexes sequences starting at 1. This system should be used when displaying genomic data to a human because it is the correct way to refer to positions. The subsequence `GAGTGC` in "1-start, fully-closed" starts at position 5 and ends at position 10. Length is calculated by subtracting start from end plus one e.g. ((10+1)-5) = 6.
 
@@ -108,20 +117,16 @@ Not all GA4GH related products, specifications and APIs use the same system for 
 | Beacon | X |  |  |
 | VMC |  |  | X |
 
-### Conclusion
-
-User interfaces will likely continue to use familiar "human-readable" 1-based positions and inclusive interval notation. This is entirely appropriate.
-
-However for internal purposes, where consistent unambiguous notation and ease of arithmetic are paramount, "0-start, half-open" notation is the better choice. GA4GH APIs facilitate the external communication of internal data representations; thus the same advantages are paramount and, in general, use the interval and position representations described here.
-
 ### Further Reading
 
-* The [Variant object](https://ga4gh-schemas.readthedocs.io/en/latest/schemas/variants.proto.html#protobuf.Variant) from the original [_GA4GH schema_](https://github.com/ga4gh/ga4gh-schemas)
+* the [documentation](https://ga4gh-schemas.readthedocs.io/en/latest/schemas/variants.proto.html#protobuf.Variant) of the `Variant` object for the original [_GA4GH schema_](https://github.com/ga4gh/ga4gh-schemas)
 and the discussions that led to it:
 [#49](https://github.com/ga4gh/ga4gh-schemas/pull/49#issuecomment-44503976)
 and [#121](https://github.com/ga4gh/ga4gh-schemas/issues/121).
-* Obi Griffith's [tutorial on one-based vs zero-based indel representations](https://www.biostars.org/p/84686/) and the ensuing discussion of corner cases on _Biostars.org_.
-* Chado's [description of interbase coordinates](http://gmod.org/wiki/Introduction_to_Chado#Interbase_Coordinates).
-* The Bergman Lab's discussion of [interbase coordinates and transposable element annotation](http://bergmanlab.genetics.uga.edu/?p=36).
-* UCSC Genome Browser discussion of [1-start fully-closed and 0-start half-open coordinate systems](http://genome.ucsc.edu/blog/the-ucsc-genome-browser-coordinate-counting-systems/) and [transforming between the two](http://genomewiki.ucsc.edu/index.php/Coordinate_Transforms).
-* The [GA4GH Variation Modelling Collaboration](https://github.com/ga4gh/vmc).
+* a [nice explanation of coordinate systems](https://www.biostars.org/p/84686/) at _Biostars.org_ by Obi Griffith
+* [Chado Interbase documentation](http://gmod.org/wiki/Introduction_to_Chado#Interbase_Coordinates)
+* [Interbase primer](http://bergmanlab.genetics.uga.edu/?p=36) 
+* [Beacon’s support for coordinate systems](https://github.com/ga4gh-beacon/specification/issues/251)
+* [Refget’s support for coordinate systems](https://github.com/samtools/hts-specs/pull/327#issuecomment-411458808)
+* [UCSC information on “0-start, half-open”](http://genome.ucsc.edu/blog/the-ucsc-genome-browser-coordinate-counting-systems/)
+* [Transforming between coordinates in “0-start, half open”](http://genomewiki.ucsc.edu/index.php/Coordinate_Transforms)
