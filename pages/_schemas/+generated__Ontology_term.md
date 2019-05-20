@@ -9,7 +9,7 @@ tags:
   - code
 ---
 ## Ontology_term
-
+##### From Original GA4GH schema and additional discussions with @cmungall and other phenopackets developers
 
 #### Status: __proposed__
 
@@ -19,10 +19,15 @@ tags:
 
 #### Provenance  
 
+* [Original GA4GH schema and additional discussions with @cmungall and other phenopackets developers](https://github.com/ga4gh/ga4gh-schemas/blob/master/src/main/proto/ga4gh/common.proto#L152)  
+
+#### Used by  
+
+* [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/ontologyclass.rst)  
 
 #### Authors
 
-* 
+* GA4GH Metadata Task Team, @cmungall, @mcourtot, @mbaudis
 
 #### Schema source: [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/ontology_term.yaml)    
 #### Properties of the _Ontology_term_ class    
@@ -38,7 +43,8 @@ tags:
     <td>id</td>
     <td>string</td>
     <td></td>
-    <td>properly prefixed CURIE of the ontology term</td>
+    <td>properly prefixed CURIE of the ontology term/class
+</td>
   </tr>
   <tr>
     <td>label</td>
@@ -56,6 +62,7 @@ entities, as well as to identify their domains through the appropriate
 prefix.
 CURIES are case sensitive, although for prefixes this practice is 
 inconsistently followed.
+This is a mature core object, where the naming of the object itself still may change (i.e. Phenopackets uses `OntologyClass`).
 
 
 
@@ -85,7 +92,8 @@ inconsistently followed.
 
 ##### id
 
-* properly prefixed CURIE of the ontology term
+* properly prefixed CURIE of the ontology term/class
+
 * example:
 
 ```
