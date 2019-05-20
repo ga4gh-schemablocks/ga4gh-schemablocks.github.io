@@ -24,6 +24,7 @@ tags:
 #### Used by  
 
 * [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/ontologyclass.rst)  
+* [Progenetix data schema](http://progenetix.org)  
 
 #### Authors
 
