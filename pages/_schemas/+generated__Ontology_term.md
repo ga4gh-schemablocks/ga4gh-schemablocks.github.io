@@ -9,7 +9,7 @@ tags:
   - code
 ---
 ## Ontology_term
-##### From Original GA4GH schema & 
+##### From Original GA4GH schema & additional discussions with @cmungall and phenopackets developers
 
 #### Status: __proposed__
 
@@ -20,7 +20,7 @@ tags:
 #### Provenance  
 
 * [Original GA4GH schema](https://github.com/ga4gh/ga4gh-schemas/blob/master/src/main/proto/ga4gh/common.proto#L152)  
-*   
+* additional discussions with @cmungall and phenopackets developers  
 
 #### Used by  
 
