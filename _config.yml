@@ -67,7 +67,6 @@ related_sites:
   'GA4GH::Discovery': 'http://ga4gh-discovery.github.io'
   'GA4GH::CLP': 'http://ga4gh-cp.github.io'
   'GA4GH::GKS': 'http://ga4gh-gks.github.io'
-  'SchemaBlocks at Metadata': 'http://ga4gh-metadata.github.io/SchemaBlocks/'
   'ELIXIR Beacon': 'http://ga4gh-beacon.github.io'
   Phenopackets: 'http://github.com/phenopackets'
   GA4GH: 'http://www.ga4gh.org'
@@ -98,6 +97,7 @@ cloud_tags:
   - FAQ
   - howto
   - leads
+  - news
   - press
   - times
   - website

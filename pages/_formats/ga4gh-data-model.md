@@ -25,7 +25,7 @@ The GA4GH data model recommends the use of a default object hierarchy in standar
 <!--more-->
 
 
-<div style="display: block; float: right; width: 300px; margin: 0px -20px 15px 15px; ">
+<div style="display: block; float: right; width: 300px; margin: 0px 0px 15px 15px; ">
   
   
   <a href="/assets/img/ga4gh-core-object-model.png" target="_BLANK"><img src="/assets/img/ga4gh-core-object-model.png" style="width: 300px;" alt="GA4GH core object model" /></a>
