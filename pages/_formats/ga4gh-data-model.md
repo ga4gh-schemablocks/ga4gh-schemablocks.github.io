@@ -25,13 +25,11 @@ The GA4GH data model recommends the use of a default object hierarchy in standar
 <!--more-->
 
 
-
-
-<div style="display: block; float: right; width: 260px; margin: 0px 0px 15px 15px; ">
+<div style="display: block; float: right; width: 300px; margin: 0px -20px 15px 15px; ">
   
   
-  <img src="/assets/img/ga4gh-object-model.png" alt="GA4GH core object model" />
-  <div style="display: block; width: 260px; text-align: justify; font-size: 0.8em; color: #03c; background-color: #eee; padding: 5px;">
+  <a href="/assets/img/ga4gh-core-object-model.png" target="_BLANK"><img src="/assets/img/ga4gh-core-object-model.png" style="width: 300px;" alt="GA4GH core object model" /></a>
+  <div style="display: block; width: 300px; text-align: justify; font-size: 0.8em; color: #03c; background-color: #eee; padding: 5px;">
 A graph showing recommended basic objects and their relationships. The names and attributes are examples and may diverge in count and specific wording (e.g. "subject" instead of "individual") in specific implementations.
   </div>
 </div>
@@ -58,6 +56,8 @@ The GA4GH data model for genomics recommends the use of a principle object hiera
     - a single molecular observation, e.g. a genomic variant observed in the analysis of the DNA from a biosample
 * __callset__
     - the entirety of all variants, observed in a single experiment on a single sample
+    - a _callset_ can be compared to a data column in a __VCF__ variant annotation file 
+    - _callset_ has an optional position in the object hierarchy, since _variants_ describe biological observations in a biosample
 * __biosample__
     - a reference to a physical biological specimen on which analyses are performed
 * __individual__
@@ -65,7 +65,7 @@ The GA4GH data model for genomics recommends the use of a principle object hiera
 
 These basic definitions will be detailed further on.
 
-Additional concepts (e.g. _dataset_, _experiment_) may be added in the future.
+Additional concepts (e.g. _dataset_, _study_ ...) may be added in the future.
 
 ### Details
 
