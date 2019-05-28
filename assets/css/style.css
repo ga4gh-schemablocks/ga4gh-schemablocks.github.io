@@ -17,13 +17,13 @@ h1 { color: #222; font-size: 28px; }
 h2 { color: #393939; }
 h3,h4,h5,h6 { color: #494949; }
 
-#header h4  {
+header h4  {
   margin-top: 0px;
   margin-bottom: 0px;
   vertical-align: bottom;
 }
 
-#header h5  {
+header h5  {
   margin-top: 12px;
   margin-bottom: -5x;
   color: #ccc;
@@ -167,29 +167,44 @@ section div.excerpt:hover { box-shadow: 2px 2px 5px 0 #999; }
   margin-right: -0.15em;
 }
 
-header { width: 270px;  float: left; z-index: 8; position: fixed; background-color: transparent; }
-section { width: 560px; float: right; background: none; }
-footer { width: 270px; float: left; position: fixed; bottom: 20px; }
-.wrapper { width: 840px; margin: 0 auto; }
-
-@media screen and (min-width: 920px) { 
-	.wrapper { width: 1000px; }
-	section { width: 720px; }
-}
-
-/*
-@media screen and (max-width:790px) { 
-	.wrapper { width: 790px; }
-	header { width: 250px; }
-	section { width: 490px; }	
-}
+/* 
+classes for 12 part grid; from bijou CSS framework
+http://andhart.github.io/bijou/
 */
 
-@media screen and (max-width: 640px) { 
-	.wrapper { width: 100%; }
-	.tagcloud { padding-top: 20px; }
-	#header h4 { float: left; margin-right: 0px; margin-left: 10px; padding: 0px }
-	.sublink { display: none; }
-	#header h5 { clear: both; display: none; }
-	header, section, footer { float: none; position: static; width: auto; }
+.one{width:8%}
+.two{width:16%}
+.three{width:24%}
+.four{width:32%}
+.five{width:40%}
+.six{width:48%}
+.seven{width:56%}
+.eight{width:64%}
+.nine{width:72%}
+.ten{width:80%}
+.eleven{width:88%}
+.twelve{width:100%}
+
+.container{ width:1000px; margin:0 auto }
+.container:after{content:"\0020"; display:block; height:0; clear:both; visibility:hidden}
+
+header {width:24%; max-width: 270px; float: left; z-index: 8; background-color: transparent; }
+section { width:72%; float: right; background: none; }
+footer { width:24%; float: left; position: fixed; bottom: 20px; }
+
+@media only screen and (min-width: 768px) and (max-width: 999px){
+	.container{width:768px}
+}
+
+@media only screen and (max-width: 767px){
+	.container{ width:300px; }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px){
+	.container{width:100%}
+	header, footer { text-align: center; margin: 0 auto; }
+	header h4 { padding: 10px; display: inline-block;}
+	header .sublink { display: none; }
+	header h5 { display: none; }
+	header, section, footer { float: none; position: static; width: 100%; }
 }

@@ -14,23 +14,26 @@
 </head>
 
 <body>
-  <div id="headband">
+
+<div id="headband">
 {%- for static_file in site.static_files -%}{%- if static_file.path contains 'site-specific/site-logo-topleft.png' -%}
     <img src="{{ 'assets' | relative_url }}/img/site-specific/site-logo-topleft.png" id="logo_topleft" />
 {%- endif -%}{%- endfor -%}
 {%- for static_file in site.static_files -%}{%- if static_file.path contains 'site-specific/site-logo-topright.png' -%}
     <img src="{{ 'assets' | relative_url }}/img/site-specific/site-logo-topright.png" id="logo_topright" />
 {%- endif -%}{%- endfor -%}
-  </div>
-  <div class="wrapper" style="margin-top: 20px">
-    <header id="header">
+</div>
+
+<div class="container" style="margin-top: 20px">
+
+<header>
 
 <a href="{{ '/' | relative_url }}">
 <h2>{{ site.label }}</h2>
   <div style="font-size: 0.9em; margin-top: -10px; margin-bottom: 15px;">{{ site.tagline }}</div>
 </a>
 
-  <div class="catlinks">
+  <div id="catlinks">
 
 {%- comment -%}
   * categories from _config.yaml
@@ -139,7 +142,7 @@
   * begin related_sites from _config.yml
 {%- endcomment -%}
 
-  <div class="outlinks">
+  <div id="outlinks">
 
   {%- assign nav_cat_blocks_cat = block_label_type[1] -%}
   {%- if site[nav_cat_blocks_cat] -%}
@@ -172,7 +175,7 @@
 
 	</div>
 
-  <div class="tagcloud">
+  <div id="tagcloud">
 
   <h5>Tags</h5>
 
@@ -280,9 +283,10 @@
 {%- comment -%}
   * / page content
   * begin footer
-{%- endcomment -%}
+{% endcomment %}
 
 <footer>
+
 {%- if page.name contains 'news' or page.category contains 'news' or page.category contains 'events' -%}
   {% if site.tweetfeed contains 'twitter' %}  
   <div id="tweetfeed" style="display: block; margin-top: 25px;">
@@ -292,17 +296,20 @@
   {% endif %}
 {%- endif -%}
 
-{%- for static_file in site.static_files -%}{%- if static_file.path contains 'site-specific/site-logo-main.png' -%}
+{%- for static_file in site.static_files -%}
+	{% if static_file.path contains 'site-specific/site-logo-main.png' %}
   <a href="{{ site.site_parent_link }}">
-    <img style="margin-top:15px; float: left;" src="{{ 'assets' | relative_url }}/img/site-specific/site-logo-main.png" />
+    <img style="margin-top:15px; margin-left: auto; margin-right: auto;" src="{{ 'assets' | relative_url }}/img/site-specific/site-logo-main.png" />
   </a>
-{%- endif -%}{%- endfor -%}
+	{% endif %}
+{%- endfor -%}
+
 </footer>
 
 {%- comment -%}
   * / footer
-  * next </div> closes the page wrapper
-{%- endcomment -%}
+  * next </div> closes the page container
+{% endcomment %}
 
 </div>
 
