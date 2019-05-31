@@ -1,5 +1,5 @@
 # ga4gh-schemablocks.github.io
-#### Website repository of the [schemablocks.org](GA4GH SchemaBlocks Project)
+#### Website repository of the [GA4GH SchemaBlocks Project](http://schemablocks.org)
 
 This repository contains documentation and general information pages of the SchemaBlocks project:
 
