@@ -55,11 +55,11 @@ General:
   minutes: 'Meeting minutes'
   contact: Contacts
 
-categories_year_sorted:
+categories-date-sorted:
   - news
   - minutes
 
-tags_year_sorted:
+tags-date-sorted:
   - press
   - news
 
