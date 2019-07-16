@@ -146,7 +146,18 @@ tags:
 
 
 #### Description 
-The document describes attributes of the _variant_ object. In its current implementation, _valiant_ (and related genomic objects such as _callset_) represent extended versions of the original, VCF-derived GA4GH schema.
+The document describes attributes of the _variant_ object. In its current implementation, _variant_ (and related genomic objects such as _callset_) represent extended versions of the original, VCF-derived GA4GH schema.
+Compared to the VCF model it was derived from, this schema includes some
+changes:
+  * the definition of an optional `end` position, to support e.g.
+    structural variants w/o definition of the sequence
+  * the use of arrays for `start` and `end` positions, to describe
+    positions with uncertain exact location (again, important for
+    structural variants and data derived from array based experiments)
+      - this corresponds to the use of `CIPOS` and `CIEND` intervals
+        around `pos` and `END` positions ibn VCF, where the begin of
+        e.g. the `pos` interval is given by `pos - CIPOS[0]` and the
+        end of the `pos` estimate by `pos + CIPOS[0]`
 This format may be superseeded or augmented based on current developments in the GA4GH::GKS work stream.
 
 
