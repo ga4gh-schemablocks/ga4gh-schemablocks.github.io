@@ -26,7 +26,7 @@ tags:
 
 ##### {S}[B] Status  
 
-* playground  
+* [playground](https://schemablocks.org/about/sb-status-levels.html)  
 
 <!--more-->
 
@@ -104,7 +104,7 @@ levels is:
   - early development or import stage, of any quality
   - no recommendation; existence does not mean any current or future
   {S}[B] support
-* proposed
+* `proposed`
   - at least some {S}[B] contributors are in favour of such a block
   - the code may undergo considerable maturation
   - not recommended for integration into products w/o close tracking
