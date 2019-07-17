@@ -28,6 +28,8 @@ tags:
 
 * playground  
 
+<!--more-->
+
 ### Properties
 
 <table>
@@ -37,11 +39,11 @@ tags:
   </tr>
   <tr>
     <td>contributors</td>
-    <td>array of [$ref](https://schemablocks.org/schemas/ga4gh/ExternalReference/v0.0.1)</td>
+    <td>array of $ref: <a href="./ExternalReference.html" target="_BLANK">./ExternalReference.html</a></td>
   </tr>
   <tr>
     <td>provenance</td>
-    <td>array of [$ref](https://schemablocks.org/schemas/ga4gh/ExternalReference/v0.0.1)</td>
+    <td>array of $ref: <a href="./ExternalReference.html" target="_BLANK">./ExternalReference.html</a></td>
   </tr>
   <tr>
     <td>sb_status</td>
@@ -49,7 +51,7 @@ tags:
   </tr>
   <tr>
     <td>use_cases</td>
-    <td>array of [$ref](https://schemablocks.org/schemas/ga4gh/ExternalReference/v0.0.1)</td>
+    <td>array of $ref: <a href="./ExternalReference.html" target="_BLANK">./ExternalReference.html</a></td>
   </tr>
 
 </table>
@@ -57,7 +59,7 @@ tags:
     
 #### contributors
 
-* type: array of $ref: [https://schemablocks.org/schemas/ga4gh/ExternalReference/v0.0.1](https://schemablocks.org/schemas/ga4gh/ExternalReference/v0.0.1)
+* type: array of $ref: [./ExternalReference.html](./ExternalReference.html)
 
 The `contributors` attribute provides a list of one or more contributors
 which had been involved in the block's definition or support its format.
@@ -74,7 +76,7 @@ which had been involved in the block's definition or support its format.
     
 #### provenance
 
-* type: array of $ref: [https://schemablocks.org/schemas/ga4gh/ExternalReference/v0.0.1](https://schemablocks.org/schemas/ga4gh/ExternalReference/v0.0.1)
+* type: array of $ref: [./ExternalReference.html](./ExternalReference.html)
 
 The `provenance` attribute provides a list of pointers to e.g. external
 schemas, predecessors of the current schema or external documentation
@@ -135,7 +137,7 @@ levels is:
     
 #### use_cases
 
-* type: array of $ref: [https://schemablocks.org/schemas/ga4gh/ExternalReference/v0.0.1](https://schemablocks.org/schemas/ga4gh/ExternalReference/v0.0.1)
+* type: array of $ref: [./ExternalReference.html](./ExternalReference.html)
 
 With the `use_cases` attribute one can provide links and descriptions
 for the use of a given block in an external implementation.
