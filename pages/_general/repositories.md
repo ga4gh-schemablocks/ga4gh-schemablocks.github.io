@@ -39,6 +39,16 @@ repositories. Please use the relevant _Github Issues_ to and/or GH pull requests
 * contains the [source code](https://github.com/ga4gh-schemablocks/blocks/tree/master/src/yaml) as well as rendered representations and example data
 * main repository to create code specific pull requests and issues
 
+#### [playground](https://github.com/ga4gh-schemablocks/playground)
+
+* repository for suggeting & testing possible additions to the {S}[B] environment
+* items there should be considered "experimental", with no reliable endorsement by the {S}[B] community
+
+#### [blocks-json-schema](https://github.com/ga4gh-schemablocks/blocks-json-schema)
+
+* working repository for the conversion of existing / external schema blocks into the JSON Schema format used throughout {S}[B]
+* as a working repository not to be considered authoritive; however, place for commenting on code etc.
+
 #### TODO: "implementations"
 
 * example implementations repository
