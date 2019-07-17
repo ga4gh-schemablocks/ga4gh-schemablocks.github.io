@@ -8,6 +8,7 @@ category:
 tags:
   - code
 ---
+
 ## ExternalReference
 
 ### SchemaBlocks Metadata
@@ -56,7 +57,7 @@ tags:
 
 Free text about the external reference
 
-##### description Examples
+##### `description` Value Examples  
 
 ```
 "Cellosaurus cell line identifier"
@@ -73,7 +74,7 @@ Identifer of the external reference. The format should be in the form
 of a URI (CURIE or URL recommended).
 
 
-##### id Examples
+##### `id` Value Examples  
 
 ```
 "cellosaurus:CVCL_0312"
@@ -82,18 +83,18 @@ of a URI (CURIE or URL recommended).
 "pubmed:22824167"
 ```
 
-### ExternalReference Examples  
+### `ExternalReference` Value Examples  
 
 ```
 {
-  'description' => 'Cellosaurus cell line identifier',
-  'id' => 'cellosaurus:CVCL_0312'
+   "description" : "Cellosaurus cell line identifier",
+   "id" : "cellosaurus:CVCL_0312"
 }
 ```
 ```
 {
-  'description' => 'Heterozygous Fbn1 C1039G mutation. Judge DP, et al. Evidence for a critical contribution of haploinsufficiency in the complex pathogenesis of Marfan syndrome. J Clin Invest. 2004114(2):172-81.',
-  'id' => 'pubmed:15254584'
+   "description" : "Heterozygous Fbn1 C1039G mutation. Judge DP, et al. Evidence for a critical contribution of haploinsufficiency in the complex pathogenesis of Marfan syndrome. J Clin Invest. 2004;114(2):172-81.",
+   "id" : "pubmed:15254584"
 }
 ```
 
