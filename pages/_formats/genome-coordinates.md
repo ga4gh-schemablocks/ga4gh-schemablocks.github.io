@@ -130,3 +130,4 @@ and [#121](https://github.com/ga4gh/ga4gh-schemas/issues/121).
 * [Refget’s support for coordinate systems](https://github.com/samtools/hts-specs/pull/327#issuecomment-411458808)
 * [UCSC information on “0-start, half-open”](http://genome.ucsc.edu/blog/the-ucsc-genome-browser-coordinate-counting-systems/)
 * [Transforming between coordinates in “0-start, half open”](http://genomewiki.ucsc.edu/index.php/Coordinate_Transforms)
+* [*Why numbering should start at zero*](http://www.cs.utexas.edu/users/EWD/ewd08xx/EWD831.PDF), by Edsger Dijkstra (1982)
