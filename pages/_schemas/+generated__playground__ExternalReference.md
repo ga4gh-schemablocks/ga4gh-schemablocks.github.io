@@ -23,7 +23,7 @@ tags:
 
 ##### Contributors  
 
-* Jules Jacobsen  
+* [Jules Jacobsen](https://orcid.org/0000-0002-3265-1591)  
 * [Peter Robinson](https://orcid.org/0000-0002-0736-91998)  
 * [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
 
@@ -79,7 +79,10 @@ of a URI (CURIE or URL recommended).
 "cellosaurus:CVCL_0312"
 ```
 ```
-"pubmed:22824167"
+"PMID:22824167"
+```
+```
+"https://orcid.org/0000-0002-6601-2165"
 ```
 
 ### `ExternalReference` Value Examples  
