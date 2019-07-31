@@ -13,12 +13,6 @@ tags:
 
 ### SchemaBlocks Metadata
 
-##### Contributors  
-
-* Jules Jacobsen  
-* Peter Robinson (orcid:0000-0002-0736-91998)  
-* Michael Baudis (orcid:0000-0002-9903-4248)  
-
 ##### Provenance  
 
 * [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/age.rst)  
@@ -27,9 +21,15 @@ tags:
 
 * [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/age.rst)  
 
-##### {S}[B] Status  
+##### Contributors  
 
-* [implemented](https://schemablocks.org/about/sb-status-levels.html)  
+* Jules Jacobsen  
+* [Peter Robinson](https://orcid.org/0000-0002-0736-91998)  
+* [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
+
+##### {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
+
+* __implemented__  
 
 <!--more-->
 
@@ -81,8 +81,8 @@ to either use an "age of onset" ontology or an "Age" class.
 
 ```
 {
-   "id" : "HsapDv:0000083",
-   "label" : "infant stage"
+   "label" : "infant stage",
+   "id" : "HsapDv:0000083"
 }
 ```
 
@@ -90,11 +90,11 @@ to either use an "age of onset" ontology or an "Age" class.
 
 ```
 {
+   "age" : "P14Y",
    "ageClass" : {
       "label" : "adolescent stage",
       "id" : "HsapDv:0000086"
-   },
-   "age" : "P14Y"
+   }
 }
 ```
 ```
