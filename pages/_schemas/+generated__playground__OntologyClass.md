@@ -15,14 +15,14 @@ tags:
 
 ##### Provenance  
 
-* Original GA4GH schema  
+* [Original GA4GH schema](https://github.com/ga4gh/ga4gh-schemas/blob/master/src/main/proto/ga4gh/common.proto)  
 * additional discussions with @cmungall and phenopackets developers  
 * Phenopackets alignment  
 
 ##### Used by  
 
-* Phenopackets  
-* Progenetix database schema (Beacon+ backend)  
+* [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/ontologyclass.rst)  
+* [Progenetix database schema (Beacon+ backend)](https://github.com/progenetix/schemas/tree/master/main/yaml)  
 
 ##### Contributors  
 
@@ -59,8 +59,7 @@ tags:
 #### id
 
 * type: string
-
-properly prefixed CURIE of the ontology term
+* CURIE of the ontology class
 
 ##### `id` Value Example  
 
@@ -71,8 +70,7 @@ properly prefixed CURIE of the ontology term
 #### label
 
 * type: string
-
-the text label associated with the term
+* the text label associated with the ontology class
 
 ##### `label` Value Example  
 

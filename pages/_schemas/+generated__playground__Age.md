@@ -55,8 +55,7 @@ tags:
 #### age
 
 * type: string
-
-Age as ISO8601 period
+* Age as ISO8601 period
 
 ##### `age` Value Example  
 
@@ -67,8 +66,7 @@ Age as ISO8601 period
 #### ageClass
 
 * type: 
-
-The age of the subject (e.g. individual at the onset of a phenotype),
+* The age of the subject (e.g. individual at the onset of a phenotype),
 as OntologyClass. An example ontology here is HsapDv (Human
 Developmental Stages).
 This does not exactly correspond to the use of "age of onset" in HPO,

@@ -55,8 +55,7 @@ tags:
 #### description
 
 * type: string
-
-Free text about the external reference
+* Free text about the external reference
 
 ##### `description` Value Examples  
 
@@ -70,8 +69,7 @@ Free text about the external reference
 #### id
 
 * type: string
-
-Identifer of the external reference. The format should be in the form
+* Identifer of the external reference. The format should be in the form
 of a URI (CURIE or URL recommended).
 
 

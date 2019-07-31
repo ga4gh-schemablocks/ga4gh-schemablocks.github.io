@@ -61,8 +61,7 @@ tags:
 #### contributors
 
 * type: array of $ref: [./ExternalReference.html](./ExternalReference.html)
-
-The `contributors` attribute provides a list of one or more contributors
+* The `contributors` attribute provides a list of one or more contributors
 which had been involved in the block's definition or support its format.
 
 
@@ -78,8 +77,7 @@ which had been involved in the block's definition or support its format.
 #### provenance
 
 * type: array of $ref: [./ExternalReference.html](./ExternalReference.html)
-
-The `provenance` attribute provides a list of pointers to e.g. external
+* The `provenance` attribute provides a list of pointers to e.g. external
 schemas, predecessors of the current schema or external documentation
 describing the schema's genesis.
 
@@ -96,8 +94,7 @@ describing the schema's genesis.
 #### sb_status
 
 * type: string
-
-With `sb_status` the current support level of the schema block inside
+* With `sb_status` the current support level of the schema block inside
 the {S}[B] ecosystem has to be demonstrated. A first recommendation of
 levels is:
 
@@ -139,8 +136,7 @@ levels is:
 #### use_cases
 
 * type: array of $ref: [./ExternalReference.html](./ExternalReference.html)
-
-With the `use_cases` attribute one can provide links and descriptions
+* With the `use_cases` attribute one can provide links and descriptions
 for the use of a given block in an external implementation.
 This is not intended to provide a catalogue of all known implementations
 of the schema.
