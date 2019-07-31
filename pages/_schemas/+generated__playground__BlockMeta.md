@@ -11,7 +11,13 @@ tags:
 
 ## BlockMeta
 
-### SchemaBlocks Metadata
+### {S}[B] Metadata  
+
+##### Status [[i]](https://schemablocks.org/about/sb-status-levels.html)
+
+* __playground__  
+  
+
 
 ##### Provenance  
 
@@ -23,13 +29,7 @@ tags:
 
 ##### Contributors  
 
-* [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
-
-##### {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
-
-* __playground__  
-
-<!--more-->
+* [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  <!--more-->
 
 ### Properties
 

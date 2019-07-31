@@ -11,7 +11,13 @@ tags:
 
 ## OntologyClass
 
-### SchemaBlocks Metadata
+### {S}[B] Metadata  
+
+##### Status [[i]](https://schemablocks.org/about/sb-status-levels.html)
+
+* __implemented__  
+  
+
 
 ##### Provenance  
 
@@ -29,13 +35,7 @@ tags:
 * GA4GH Metadata Task Team  
 * [Christopher Mungall](https://orcid.org/0000-0002-6601-2165)  
 * [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
-* [Melanie Courtot](https://orcid.org/0000-0002-9551-6370)  
-
-##### {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
-
-* __implemented__  
-
-<!--more-->
+* [Melanie Courtot](https://orcid.org/0000-0002-9551-6370)  <!--more-->
 
 ### Properties
 
