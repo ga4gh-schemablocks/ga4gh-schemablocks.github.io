@@ -81,8 +81,8 @@ to either use an "age of onset" ontology or an "Age" class.
 
 ```
 {
-   "label" : "infant stage",
-   "id" : "HsapDv:0000083"
+   "id" : "HsapDv:0000083",
+   "label" : "infant stage"
 }
 ```
 
@@ -92,8 +92,8 @@ to either use an "age of onset" ontology or an "Age" class.
 {
    "age" : "P14Y",
    "ageClass" : {
-      "label" : "adolescent stage",
-      "id" : "HsapDv:0000086"
+      "id" : "HsapDv:0000086",
+      "label" : "adolescent stage"
    }
 }
 ```

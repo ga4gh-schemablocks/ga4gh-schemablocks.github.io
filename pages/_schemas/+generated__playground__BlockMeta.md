@@ -156,8 +156,8 @@ of the schema.
 ```
 ```
 {
-   "id" : "https://github.com/progenetix/schemas/tree/master/main/yaml",
-   "description" : "Progenetix database schema (Beacon+ backend)"
+   "description" : "Progenetix database schema (Beacon+ backend)",
+   "id" : "https://github.com/progenetix/schemas/tree/master/main/yaml"
 }
 ```
 
@@ -165,31 +165,31 @@ of the schema.
 
 ```
 {
-   "sb_status" : "playground",
+   "contributors" : [
+      {
+         "description" : "Michael Baudis",
+         "id" : "orcid:0000-0002-9903-4248"
+      },
+      {
+         "description" : "Ben Hutton",
+         "id" : "https://github.com/Relequestual"
+      }
+   ],
    "provenance" : [
       {
          "description" : "Developer branch of original GA4GH schema",
          "id" : "https://github.com/ga4gh-metadata/metadata-schemas/blob/master/schemas/shared.proto#L60"
       }
    ],
-   "contributors" : [
-      {
-         "id" : "orcid:0000-0002-9903-4248",
-         "description" : "Michael Baudis"
-      },
-      {
-         "id" : "https://github.com/Relequestual",
-         "description" : "Ben Hutton"
-      }
-   ],
+   "sb_status" : "playground",
    "used_by" : [
       {
-         "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/geolocation.rst",
-         "description" : "Phenopackets"
+         "description" : "Phenopackets",
+         "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/geolocation.rst"
       },
       {
-         "id" : "https://github.com/progenetix/schemas/tree/master/main/yaml",
-         "description" : "Progenetix database schema (Beacon+ backend)"
+         "description" : "Progenetix database schema (Beacon+ backend)",
+         "id" : "https://github.com/progenetix/schemas/tree/master/main/yaml"
       }
    ]
 }

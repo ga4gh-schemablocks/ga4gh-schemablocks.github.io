@@ -24,6 +24,13 @@ tags:
 * Phenopackets  
 * Progenetix database schema (Beacon+ backend)  
 
+##### Contributors  
+
+*   
+* [Christopher Mungall](https://orcid.org/0000-0002-6601-2165)  
+* [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
+* [Mélanie Courtot](https://orcid.org/0000-0002-9551-6370)  
+
 ##### {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
 
 * __implemented__  

@@ -88,8 +88,8 @@ of a URI (CURIE or URL recommended).
 
 ```
 {
-   "id" : "cellosaurus:CVCL_0312",
-   "description" : "Cellosaurus cell line identifier"
+   "description" : "Cellosaurus cell line identifier",
+   "id" : "cellosaurus:CVCL_0312"
 }
 ```
 ```
