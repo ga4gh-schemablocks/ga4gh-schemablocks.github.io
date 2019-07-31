@@ -16,6 +16,7 @@ tags:
 ##### Contributors  
 
 * Jules Jacobsen  
+* Peter Robinson (orcid:0000-0002-0736-91998)  
 * Michael Baudis (orcid:0000-0002-9903-4248)  
 
 ##### Provenance  
@@ -87,8 +88,8 @@ of a URI (CURIE or URL recommended).
 
 ```
 {
-   "description" : "Cellosaurus cell line identifier",
-   "id" : "cellosaurus:CVCL_0312"
+   "id" : "cellosaurus:CVCL_0312",
+   "description" : "Cellosaurus cell line identifier"
 }
 ```
 ```
