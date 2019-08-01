@@ -11,27 +11,20 @@ tags:
 
 ## ExternalReference
 
-### {S}[B] Metadata  
+### SchemaBlocks Metadata
 
-##### Status [[i]](https://schemablocks.org/about/sb-status-levels.html)
+* {S}[B] Status [[i]](https://schemablocks.org/about/sb-status-levels.html)
 
-* __implemented__  
-  
+    - __implemented__   
 
-
-##### Provenance  
-
-* [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/externalreference.rst)  
-
-##### Used by  
-
-* [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/externalreference.rst)  
-
-##### Contributors  
-
-* [Jules Jacobsen](https://orcid.org/0000-0002-3265-1591)  
-* [Peter Robinson](https://orcid.org/0000-0002-0736-91998)  
-* [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  <!--more-->
+* Provenance
+    - Phenopackets]()
+* Used by
+    - Phenopackets]()
+* Contributors
+    - Jules Jacobsen]()
+    - Peter Robinson]()
+    - Michael Baudis]()<!--more-->
 
 ### Properties
 
