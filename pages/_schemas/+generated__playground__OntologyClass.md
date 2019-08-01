@@ -18,14 +18,15 @@ tags:
     - __implemented__   
 
 * Provenance
-    - [Original GA4GH schema](https://github.com/ga4gh/ga4gh-schemas/blob/master/src/main/proto/ga4gh/common.proto)
+    - [Original GA4GH schema](https://github.com/ga4gh/ga4gh-schemas/blob/master/src/main/proto/ga4gh/common.proto)  
 * Used by
-    - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/ontologyclass.rst)
-    - [Progenetix database schema (Beacon+ backend)](https://github.com/progenetix/schemas/tree/master/main/yaml)
+    - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/ontologyclass.rst)  
+    - [Progenetix database schema (Beacon+ backend)](https://github.com/progenetix/schemas/tree/master/main/yaml)  
 * Contributors
-    - Christopher Mungall]()
-    - Michael Baudis]()
-    - Melanie Courtot]()<!--more-->
+    - [Christopher Mungall](https://orcid.org/0000-0002-6601-2165)  
+    - [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
+    - [Melanie Courtot](https://orcid.org/0000-0002-9551-6370)  
+<!--more-->
 
 ### Properties
 

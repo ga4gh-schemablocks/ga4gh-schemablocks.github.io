@@ -18,11 +18,12 @@ tags:
     - __playground__   
 
 * Provenance
-    - Original development for SchemaBlocks project]()
+    - [Original development for SchemaBlocks project](https://schemablocks.org)  
 * Used by
-    - SchemaBlocks]()
+    - [SchemaBlocks](https://schemablocks.org)  
 * Contributors
-    - Michael Baudis]()<!--more-->
+    - [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
+<!--more-->
 
 ### Properties
 

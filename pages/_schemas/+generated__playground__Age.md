@@ -18,13 +18,14 @@ tags:
     - __implemented__   
 
 * Provenance
-    - Phenopackets]()
+    - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/age.rst)  
 * Used by
-    - Phenopackets]()
+    - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/age.rst)  
 * Contributors
-    - Jules Jacobsen]()
-    - Peter Robinson]()
-    - Michael Baudis]()<!--more-->
+    - [Jules Jacobsen](https://orcid.org/0000-0002-3265-1591)  
+    - [Peter Robinson](https://orcid.org/0000-0002-0736-91998)  
+    - [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
+<!--more-->
 
 ### Properties
 
@@ -39,7 +40,7 @@ tags:
   </tr>
   <tr>
     <td>ageClass</td>
-    <td></td>
+    <td>$ref: : <a href="https://schemablocks.org/schemas/ga4gh/Age/v0.0.1" target="_BLANK">https://schemablocks.org/schemas/ga4gh/Age/v0.0.1</a></td>
   </tr>
 
 </table>
