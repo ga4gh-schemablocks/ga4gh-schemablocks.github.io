@@ -13,10 +13,6 @@ tags:
 
 ### SchemaBlocks Metadata
 
-##### Contributors  
-
-* Michael Baudis (orcid:0000-0002-9903-4248)  
-
 ##### Provenance  
 
 * [Original development for SchemaBlocks project](https://schemablocks.org)  
@@ -25,9 +21,13 @@ tags:
 
 * [SchemaBlocks](https://schemablocks.org)  
 
-##### {S}[B] Status  
+##### Contributors  
 
-* [playground](https://schemablocks.org/about/sb-status-levels.html)  
+* [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
+
+##### {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
+
+* __playground__  
 
 <!--more-->
 
@@ -70,8 +70,8 @@ which had been involved in the block's definition or support its format.
 
 ```
 {
-   "id" : "orcid:0000-0002-9903-4248",
-   "description" : "Michael Baudis"
+   "description" : "Michael Baudis",
+   "id" : "orcid:0000-0002-9903-4248"
 }
 ```
     
@@ -88,8 +88,8 @@ describing the schema's genesis.
 
 ```
 {
-   "id" : "https://github.com/ga4gh/ga4gh-schemas/blob/master/src/main/proto/ga4gh/bio_metadata.proto#L111",
-   "description" : "Original GA4GH schema"
+   "description" : "Original GA4GH schema",
+   "id" : "https://github.com/ga4gh/ga4gh-schemas/blob/master/src/main/proto/ga4gh/bio_metadata.proto#L111"
 }
 ```
     
@@ -156,8 +156,8 @@ of the schema.
 ```
 ```
 {
-   "id" : "https://github.com/progenetix/schemas/tree/master/main/yaml",
-   "description" : "Progenetix database schema (Beacon+ backend)"
+   "description" : "Progenetix database schema (Beacon+ backend)",
+   "id" : "https://github.com/progenetix/schemas/tree/master/main/yaml"
 }
 ```
 
@@ -165,31 +165,31 @@ of the schema.
 
 ```
 {
-   "used_by" : [
-      {
-         "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/geolocation.rst",
-         "description" : "Phenopackets"
-      },
-      {
-         "id" : "https://github.com/progenetix/schemas/tree/master/main/yaml",
-         "description" : "Progenetix database schema (Beacon+ backend)"
-      }
-   ],
-   "sb_status" : "playground",
-   "provenance" : [
-      {
-         "id" : "https://github.com/ga4gh-metadata/metadata-schemas/blob/master/schemas/shared.proto#L60",
-         "description" : "Developer branch of original GA4GH schema"
-      }
-   ],
    "contributors" : [
       {
          "description" : "Michael Baudis",
          "id" : "orcid:0000-0002-9903-4248"
       },
       {
-         "id" : "https://github.com/Relequestual",
-         "description" : "Ben Hutton"
+         "description" : "Ben Hutton",
+         "id" : "https://github.com/Relequestual"
+      }
+   ],
+   "provenance" : [
+      {
+         "description" : "Developer branch of original GA4GH schema",
+         "id" : "https://github.com/ga4gh-metadata/metadata-schemas/blob/master/schemas/shared.proto#L60"
+      }
+   ],
+   "sb_status" : "playground",
+   "used_by" : [
+      {
+         "description" : "Phenopackets",
+         "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/geolocation.rst"
+      },
+      {
+         "description" : "Progenetix database schema (Beacon+ backend)",
+         "id" : "https://github.com/progenetix/schemas/tree/master/main/yaml"
       }
    ]
 }
