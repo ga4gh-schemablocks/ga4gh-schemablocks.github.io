@@ -13,6 +13,11 @@ tags:
 
 ### SchemaBlocks Metadata
 
+##### Contributors  
+
+* Jules Jacobsen  
+* Michael Baudis (orcid:0000-0002-9903-4248)  
+
 ##### Provenance  
 
 * [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/externalreference.rst)  
@@ -21,15 +26,9 @@ tags:
 
 * [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/externalreference.rst)  
 
-##### Contributors  
+##### {S}[B] Status  
 
-* [Jules Jacobsen](https://orcid.org/0000-0002-3265-15918)  
-* [Peter Robinson](https://orcid.org/0000-0002-0736-91998)  
-* [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
-
-##### {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
-
-* __implemented__  
+* [implemented](https://schemablocks.org/about/sb-status-levels.html)  
 
 <!--more-->
 
