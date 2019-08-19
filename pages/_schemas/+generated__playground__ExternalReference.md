@@ -13,23 +13,18 @@ tags:
 
 ### SchemaBlocks Metadata
 
-##### Contributors  
+* {S}[B] Status [[i]](https://schemablocks.org/about/sb-status-levels.html)
 
-* Jules Jacobsen  
-* Michael Baudis (orcid:0000-0002-9903-4248)  
+    - __implemented__   
 
-##### Provenance  
-
-* [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/externalreference.rst)  
-
-##### Used by  
-
-* [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/externalreference.rst)  
-
-##### {S}[B] Status  
-
-* [implemented](https://schemablocks.org/about/sb-status-levels.html)  
-
+* Provenance
+    - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/externalreference.rst)  
+* Used by
+    - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/externalreference.rst)  
+* Contributors
+    - [Jules Jacobsen](https://orcid.org/0000-0002-3265-1591)  
+    - [Peter Robinson](https://orcid.org/0000-0002-0736-91998)  
+    - [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
 <!--more-->
 
 ### Properties
@@ -54,8 +49,7 @@ tags:
 #### description
 
 * type: string
-
-Free text about the external reference
+* Free text about the external reference
 
 ##### `description` Value Examples  
 
@@ -69,8 +63,7 @@ Free text about the external reference
 #### id
 
 * type: string
-
-Identifer of the external reference. The format should be in the form
+* Identifer of the external reference. The format should be in the form
 of a URI (CURIE or URL recommended).
 
 
@@ -80,7 +73,10 @@ of a URI (CURIE or URL recommended).
 "cellosaurus:CVCL_0312"
 ```
 ```
-"pubmed:22824167"
+"PMID:22824167"
+```
+```
+"https://orcid.org/0000-0002-6601-2165"
 ```
 
 ### `ExternalReference` Value Examples  
