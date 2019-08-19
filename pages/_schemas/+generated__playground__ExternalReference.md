@@ -9,20 +9,27 @@ tags:
   - code
 ---
 
+
 ## ExternalReference
 
 ### SchemaBlocks Metadata
 
-* {S}[B] Status [[i]](https://schemablocks.org/about/sb-status-levels.html)
+* {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
 
-    - __implemented__   
+    - __implemented__
 
-* Provenance
+
+* Provenance  
+
     - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/externalreference.rst)  
-* Used by
+
+* Used by  
+
     - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/externalreference.rst)  
-* Contributors
-    - [Jules Jacobsen](https://orcid.org/0000-0002-3265-1591)  
+
+* Contributors  
+
+    - [Jules Jacobsen](https://orcid.org/0000-0002-3265-15918)  
     - [Peter Robinson](https://orcid.org/0000-0002-0736-91998)  
     - [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
 <!--more-->
@@ -49,7 +56,8 @@ tags:
 #### description
 
 * type: string
-* Free text about the external reference
+
+Free text about the external reference
 
 ##### `description` Value Examples  
 
@@ -63,7 +71,8 @@ tags:
 #### id
 
 * type: string
-* Identifer of the external reference. The format should be in the form
+
+Identifer of the external reference. The format should be in the form
 of a URI (CURIE or URL recommended).
 
 
@@ -73,10 +82,7 @@ of a URI (CURIE or URL recommended).
 "cellosaurus:CVCL_0312"
 ```
 ```
-"PMID:22824167"
-```
-```
-"https://orcid.org/0000-0002-6601-2165"
+"pubmed:22824167"
 ```
 
 ### `ExternalReference` Value Examples  

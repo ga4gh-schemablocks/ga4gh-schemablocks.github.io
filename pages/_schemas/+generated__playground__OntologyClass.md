@@ -9,20 +9,30 @@ tags:
   - code
 ---
 
+
 ## OntologyClass
 
 ### SchemaBlocks Metadata
 
-* {S}[B] Status [[i]](https://schemablocks.org/about/sb-status-levels.html)
+* {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
 
-    - __implemented__   
+    - __implemented__
 
-* Provenance
-    - [Original GA4GH schema](https://github.com/ga4gh/ga4gh-schemas/blob/master/src/main/proto/ga4gh/common.proto)  
-* Used by
-    - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/ontologyclass.rst)  
-    - [Progenetix database schema (Beacon+ backend)](https://github.com/progenetix/schemas/tree/master/main/yaml)  
-* Contributors
+
+* Provenance  
+
+    - Original GA4GH schema  
+    - additional discussions with @cmungall and phenopackets developers  
+    - Phenopackets alignment  
+
+* Used by  
+
+    - Phenopackets  
+    - Progenetix database schema (Beacon+ backend)  
+
+* Contributors  
+
+    - GA4GH Metadata Task Team  
     - [Christopher Mungall](https://orcid.org/0000-0002-6601-2165)  
     - [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
     - [Melanie Courtot](https://orcid.org/0000-0002-9551-6370)  
@@ -50,7 +60,8 @@ tags:
 #### id
 
 * type: string
-* CURIE of the ontology class
+
+properly prefixed CURIE of the ontology term
 
 ##### `id` Value Example  
 
@@ -61,7 +72,8 @@ tags:
 #### label
 
 * type: string
-* the text label associated with the ontology class
+
+the text label associated with the term
 
 ##### `label` Value Example  
 

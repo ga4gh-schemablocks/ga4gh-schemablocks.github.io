@@ -9,20 +9,27 @@ tags:
   - code
 ---
 
+
 ## Age
 
 ### SchemaBlocks Metadata
 
-* {S}[B] Status [[i]](https://schemablocks.org/about/sb-status-levels.html)
+* {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
 
-    - __implemented__   
+    - __implemented__
 
-* Provenance
+
+* Provenance  
+
     - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/age.rst)  
-* Used by
+
+* Used by  
+
     - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/age.rst)  
-* Contributors
-    - [Jules Jacobsen](https://orcid.org/0000-0002-3265-1591)  
+
+* Contributors  
+
+    - [Jules Jacobsen](https://orcid.org/0000-0002-3265-15918)  
     - [Peter Robinson](https://orcid.org/0000-0002-0736-91998)  
     - [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
 <!--more-->
@@ -40,7 +47,7 @@ tags:
   </tr>
   <tr>
     <td>ageClass</td>
-    <td>$ref: : <a href="https://schemablocks.org/schemas/ga4gh/Age/v0.0.1" target="_BLANK">https://schemablocks.org/schemas/ga4gh/Age/v0.0.1</a></td>
+    <td></td>
   </tr>
 
 </table>
@@ -49,7 +56,8 @@ tags:
 #### age
 
 * type: string
-* Age as ISO8601 period
+
+Age as ISO8601 period
 
 ##### `age` Value Example  
 
@@ -60,7 +68,8 @@ tags:
 #### ageClass
 
 * type: 
-* The age of the subject (e.g. individual at the onset of a phenotype),
+
+The age of the subject (e.g. individual at the onset of a phenotype),
 as OntologyClass. An example ontology here is HsapDv (Human
 Developmental Stages).
 This does not exactly correspond to the use of "age of onset" in HPO,
