@@ -14,6 +14,7 @@ github_organisation: ga4gh-schemablocks
 include:        # usually only pages in / and /_posts are "seen" => processed
   - categories  # contains landing pages for each category
   - tags        # contains landing pages for each tag
+  - schemas
 
 # Collections are used to organise pages into logical groups; these do not need 
 # to have a relation to the "categories", though this is highly recommended

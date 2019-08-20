@@ -1,7 +1,7 @@
 ---
 title: 'ExternalReference'
 layout: default
-permalink: "/schemas/blocks/ExternalReference.html"
+permalink: "/schemas/ga4gh/ExternalReference.html"
 excerpt_separator: <!--more-->
 category:
   - schemas
@@ -15,7 +15,6 @@ tags:
 ### SchemaBlocks Metadata
 
 * {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
-
     - __implemented__
 
 
@@ -99,4 +98,10 @@ of a URI (CURIE or URL recommended).
    "id" : "pubmed:15254584"
 }
 ```
+    
+#### Source
+
+* [raw data](./ExternalReference.yaml)
+* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/ExternalReference.yaml)
+
 

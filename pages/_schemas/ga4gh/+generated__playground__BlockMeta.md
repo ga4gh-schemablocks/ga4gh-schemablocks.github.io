@@ -1,7 +1,7 @@
 ---
 title: 'BlockMeta'
 layout: default
-permalink: "/schemas/blocks/BlockMeta.html"
+permalink: "/schemas/ga4gh/BlockMeta.html"
 excerpt_separator: <!--more-->
 category:
   - schemas
@@ -15,7 +15,6 @@ tags:
 ### SchemaBlocks Metadata
 
 * {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
-
     - __playground__
 
 
@@ -195,4 +194,10 @@ of the schema.
    ]
 }
 ```
+    
+#### Source
+
+* [raw data](./BlockMeta.yaml)
+* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/BlockMeta.yaml)
+
 
