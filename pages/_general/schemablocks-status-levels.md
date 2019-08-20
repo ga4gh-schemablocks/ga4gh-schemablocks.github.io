@@ -49,4 +49,4 @@ The current status level of thiose recommendations is "proposed".
 * `core`
 	- a schema block with recommended use
 	- stable through minor version changes
-	- has to be used in at least 2 GA4GH Steering Committee approved GA4GH standards
+	- has to be used in at least 2 standards/products approved by the GA4GH Steering Committee 
