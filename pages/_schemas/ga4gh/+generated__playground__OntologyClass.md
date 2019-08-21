@@ -37,6 +37,11 @@ tags:
     - [Melanie Courtot](https://orcid.org/0000-0002-9551-6370)  
 <!--more-->
 
+#### Source
+
+* [raw data](./OntologyClass.yaml)
+* [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/sb-meta/OntologyClass.yaml)
+
 ### Properties
 
 <table>
@@ -94,10 +99,4 @@ the text label associated with the term
    "label" : "Juvenile onset"
 }
 ```
-    
-#### Source
-
-* [raw data](./OntologyClass.yaml)
-* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/OntologyClass.yaml)
-
 

@@ -33,6 +33,11 @@ tags:
     - [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
 <!--more-->
 
+#### Source
+
+* [raw data](./Age.yaml)
+* [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/sb-meta/Age.yaml)
+
 ### Properties
 
 <table>
@@ -102,10 +107,4 @@ to either use an "age of onset" ontology or an "Age" class.
    "age" : "P56Y3M"
 }
 ```
-    
-#### Source
-
-* [raw data](./Age.yaml)
-* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/Age.yaml)
-
 

@@ -33,6 +33,11 @@ tags:
     - [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
 <!--more-->
 
+#### Source
+
+* [raw data](./ExternalReference.yaml)
+* [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/sb-meta/ExternalReference.yaml)
+
 ### Properties
 
 <table>
@@ -98,10 +103,4 @@ of a URI (CURIE or URL recommended).
    "id" : "PMID:15254584"
 }
 ```
-    
-#### Source
-
-* [raw data](./ExternalReference.yaml)
-* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/ExternalReference.yaml)
-
 
