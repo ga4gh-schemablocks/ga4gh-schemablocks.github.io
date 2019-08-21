@@ -28,7 +28,7 @@ properties:
     type: string
     examples:
       - 'cellosaurus:CVCL_0312'
-      - 'pubmed:22824167'
+      - 'PMID:22824167'
   description:
     description: Free text about the external reference
     type: string
@@ -43,7 +43,7 @@ required:
 examples:
   - id: 'cellosaurus:CVCL_0312'
     description: 'Cellosaurus cell line identifier'
-  - id: 'pubmed:15254584'
+  - id: 'PMID:15254584'
     description: 'Heterozygous Fbn1 C1039G mutation. Judge DP, et al.
       Evidence for a critical contribution of haploinsufficiency in the complex
       pathogenesis of Marfan syndrome. J Clin Invest. 2004;114(2):172-81.'

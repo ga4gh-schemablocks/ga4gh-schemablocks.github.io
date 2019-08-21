@@ -33,7 +33,7 @@ properties:
       since this specifically codes the "onset" of a phenotype, not just any
       age as a timepoint. So when coding onset, implementations may choose
       to either use an "age of onset" ontology or an "Age" class.
-    "$ref": https://schemablocks.org/schemas/ga4gh/Age/v0.0.1
+    "$ref": https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml
     examples:
       - id: 'HsapDv:0000083'
         label: 'infant stage'

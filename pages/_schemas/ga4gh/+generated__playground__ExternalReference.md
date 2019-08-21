@@ -81,7 +81,7 @@ of a URI (CURIE or URL recommended).
 "cellosaurus:CVCL_0312"
 ```
 ```
-"pubmed:22824167"
+"PMID:22824167"
 ```
 
 ### `ExternalReference` Value Examples  
@@ -95,7 +95,7 @@ of a URI (CURIE or URL recommended).
 ```
 {
    "description" : "Heterozygous Fbn1 C1039G mutation. Judge DP, et al. Evidence for a critical contribution of haploinsufficiency in the complex pathogenesis of Marfan syndrome. J Clin Invest. 2004;114(2):172-81.",
-   "id" : "pubmed:15254584"
+   "id" : "PMID:15254584"
 }
 ```
     
