@@ -31,9 +31,9 @@ tags:
     - [Jules Jacobsen](https://orcid.org/0000-0002-3265-15918)  
 <!--more-->
 
-#### Source
+### Source
 
-* [raw data](./File.yaml)
+* raw source [[YAML](./File.yaml)] [[JSON](./File.json)] 
 * [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/sb-meta/File.yaml)
 
 ### Properties

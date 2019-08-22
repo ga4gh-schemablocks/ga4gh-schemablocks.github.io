@@ -33,9 +33,9 @@ tags:
     - [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
 <!--more-->
 
-#### Source
+### Source
 
-* [raw data](./Age.yaml)
+* raw source [[YAML](./Age.yaml)] [[JSON](./Age.json)] 
 * [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/sb-meta/Age.yaml)
 
 ### Properties

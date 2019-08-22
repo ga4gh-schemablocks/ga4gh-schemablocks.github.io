@@ -37,9 +37,9 @@ tags:
     - [Melanie Courtot](https://orcid.org/0000-0002-9551-6370)  
 <!--more-->
 
-#### Source
+### Source
 
-* [raw data](./OntologyClass.yaml)
+* raw source [[YAML](./OntologyClass.yaml)] [[JSON](./OntologyClass.json)] 
 * [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/sb-meta/OntologyClass.yaml)
 
 ### Properties
