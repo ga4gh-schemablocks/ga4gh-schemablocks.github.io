@@ -1,18 +1,6 @@
 {
    "$id" : "https://schemablocks.org/schemas/ga4gh/AgeRange/v0.0.1",
    "$schema" : "http://json-schema.org/draft-07/schema#",
-   "anyof" : [
-      {
-         "required" : [
-            "start"
-         ]
-      },
-      {
-         "required" : [
-            "end"
-         ]
-      }
-   ],
    "description" : "Age range",
    "examples" : [
       {
@@ -63,43 +51,35 @@
    },
    "properties" : {
       "end" : {
-         "allof" : [
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/Age.yaml",
+         "description" : "Age as ISO8601 string or OntologyClass",
+         "examples" : [
             {
-               "$ref" : "https://schemablocks.org/schemas/ga4gh/Age/v0.0.1"
+               "ageClass" : {
+                  "id" : "HsapDv:0000086",
+                  "label" : "adolescent stage"
+               }
             },
             {
-               "description" : "Age as ISO8601 string or OntologyClass",
-               "examples" : [
-                  {
-                     "ageClass" : {
-                        "id" : "HsapDv:0000086",
-                        "label" : "adolescent stage"
-                     }
-                  },
-                  {
-                     "age" : "P16Y6M"
-                  }
-               ]
+               "age" : "P16Y6M"
             }
-         ],
-         "examples" : []
+         ]
       },
       "start" : {
-         "allof" : [
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/Age.yaml",
+         "description" : "Age as ISO8601 string or OntologyClass",
+         "examples" : [
             {
-               "$ref" : "https://schemablocks.org/schemas/ga4gh/Age/v0.0.1"
-            },
-            {
-               "description" : "Age as ISO8601 string or OntologyClass",
-               "examples" : [
-                  {
-                     "age" : "P12Y"
-                  }
-               ]
+               "age" : "P12Y"
             }
-         ],
-         "examples" : []
+         ]
       }
+   },
+   "required" : {
+      "anyof" : [
+         "start",
+         "end"
+      ]
    },
    "title" : "AgeRange",
    "type" : "object"

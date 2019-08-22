@@ -48,11 +48,11 @@ tags:
   </tr>
   <tr>
     <td>end</td>
-    <td></td>
+    <td>https://schemablocks.org/schemas/ga4gh/Age.yaml [<a href="https://schemablocks.org/schemas/ga4gh/Age.yaml" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
     <td>start</td>
-    <td></td>
+    <td>https://schemablocks.org/schemas/ga4gh/Age.yaml [<a href="https://schemablocks.org/schemas/ga4gh/Age.yaml" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]</td>
   </tr>
 
 </table>
@@ -60,21 +60,39 @@ tags:
     
 #### end
 
-* type: 
+* type: https://schemablocks.org/schemas/ga4gh/Age.yaml [<a href="https://schemablocks.org/schemas/ga4gh/Age.yaml" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]
 
+Age as ISO8601 string or OntologyClass
 
+##### `end` Value Examples  
 
-##### `end` Value Example  
-
+```
+{
+   "ageClass" : {
+      "id" : "HsapDv:0000086",
+      "label" : "adolescent stage"
+   }
+}
+```
+```
+{
+   "age" : "P16Y6M"
+}
+```
     
 #### start
 
-* type: 
+* type: https://schemablocks.org/schemas/ga4gh/Age.yaml [<a href="https://schemablocks.org/schemas/ga4gh/Age.yaml" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]
 
-
+Age as ISO8601 string or OntologyClass
 
 ##### `start` Value Example  
 
+```
+{
+   "age" : "P12Y"
+}
+```
 
 ### `AgeRange` Value Example  
 

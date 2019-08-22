@@ -4,7 +4,7 @@ title: Curie
 meta:
   contributors:
     - description: "Reece Hart"
-      id: "0000-0003-3463-0775"
+      id: "orcid:0000-0003-3463-0775"
     - description: "Michael Baudis"
       id: "orcid:0000-0002-9903-4248"
     - description: "Isuru Liyanage"
@@ -21,4 +21,6 @@ description: |
 type: string
 pattern: '^\w[^:]+:.+$'
 examples:
-  - 'DUO:0000004'
+  - "DUO:0000004"
+  - "orcid:0000-0003-3463-0775"
+  - "PMID:15254584"

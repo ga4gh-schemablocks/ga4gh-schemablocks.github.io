@@ -3,13 +3,15 @@
    "$schema" : "http://json-schema.org/draft-07/schema#",
    "description" : "Compact URI or Abbreviated syntax for expressing Uniform Resource Identifiers (URIs)\n",
    "examples" : [
-      "DUO:0000004"
+      "DUO:0000004",
+      "orcid:0000-0003-3463-0775",
+      "PMID:15254584"
    ],
    "meta" : {
       "contributors" : [
          {
             "description" : "Reece Hart",
-            "id" : "0000-0003-3463-0775"
+            "id" : "orcid:0000-0003-3463-0775"
          },
          {
             "description" : "Michael Baudis",

@@ -22,25 +22,22 @@ meta:
   sb_status: implemented
 properties:
   start:
-    allof:
-      - "$ref": https://schemablocks.org/schemas/ga4gh/Age/v0.0.1
-      - description: Age as ISO8601 string or OntologyClass
-        examples:
-          - age: 'P12Y'
+    "$ref": https://schemablocks.org/schemas/ga4gh/Age.yaml
+    description: Age as ISO8601 string or OntologyClass
+    examples:
+      - age: 'P12Y'
   end:
-    allof:
-      - "$ref": https://schemablocks.org/schemas/ga4gh/Age/v0.0.1
-      - description: Age as ISO8601 string or OntologyClass
-        examples:
-          - ageClass:
-              id: 'HsapDv:0000086'
-              label: 'adolescent stage'
-          - age: 'P16Y6M'
-anyof:
-  - required:
-      - start
-  - required:
-      - end
+    "$ref": https://schemablocks.org/schemas/ga4gh/Age.yaml
+    description: Age as ISO8601 string or OntologyClass
+    examples:
+      - ageClass:
+          id: 'HsapDv:0000086'
+          label: 'adolescent stage'
+      - age: 'P16Y6M'
+required:
+  anyof:
+    - start
+    - end
 examples:
   - start:
       age: 'P12Y'
