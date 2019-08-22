@@ -1,0 +1,51 @@
+"$schema": http://json-schema.org/draft-07/schema#
+"$id": https://schemablocks.org/schemas/ga4gh/Procedure/v0.0.1
+title: Procedure
+description: |
+  A clinical procedure performed on a subject. By preference a single concept to indicate both the procedure and the
+  body site should be used. In cases where this is not possible, the body site should be indicated using a separate
+  ontology class.
+type: object
+meta:
+  contributors:
+    - description: "Jules Jacobsen"
+      id: "orcid:0000-0002-3265-15918"
+    - description: "Peter Robinson"
+      id: "orcid:0000-0002-0736-91998"
+    - description: "Michael Baudis"
+      id: "orcid:0000-0002-9903-4248"
+    - description: "Isuru Liyanage"
+      id: "orcid:0000-0002-4839-5158"
+  provenance:
+    - description: Phenopackets
+      id: 'https://github.com/phenopackets/phenopacket-schema/blob/master/docs/procedure.rst'
+  used_by:
+    - description: Phenopackets
+      id: 'https://github.com/phenopackets/phenopacket-schema/blob/master/docs/procedure.rst'
+  sb_status: implemented
+properties:
+  code:
+    allof:
+      - "$ref": https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml
+      - description: |
+          FHIR mapping - Procedure.code
+        examples:
+          - id: 'NCIT:C28743'
+            label: 'Funch Biopsy'
+  bodySite:
+    allof:
+      - "$ref": https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml
+      - description: |
+          FHIR mapping - Procedure.bodySite
+        examples:
+          - id: 'UBERON:0003403'
+            label: 'skin of forearm'
+required:
+  - code
+examples:
+  - code:
+      id: 'NCIT:C28743'
+      label: 'Funch Biopsy'
+    bodySite:
+      id: 'UBERON:0003403'
+      label: 'skin of forearm'
