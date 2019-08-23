@@ -10,7 +10,7 @@
          },
          "code" : {
             "id" : "NCIT:C28743",
-            "label" : "Funch Biopsy"
+            "label" : "Punch Biopsy"
          }
       }
    ],
@@ -23,14 +23,6 @@
          {
             "description" : "Peter Robinson",
             "id" : "orcid:0000-0002-0736-91998"
-         },
-         {
-            "description" : "Michael Baudis",
-            "id" : "orcid:0000-0002-9903-4248"
-         },
-         {
-            "description" : "Isuru Liyanage",
-            "id" : "orcid:0000-0002-4839-5158"
          }
       ],
       "provenance" : [
@@ -49,38 +41,24 @@
    },
    "properties" : {
       "bodySite" : {
-         "allof" : [
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml",
+         "description" : "FHIR mapping - Procedure.bodySite\n",
+         "examples" : [
             {
-               "$ref" : "https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml"
-            },
-            {
-               "description" : "FHIR mapping - Procedure.bodySite\n",
-               "examples" : [
-                  {
-                     "id" : "UBERON:0003403",
-                     "label" : "skin of forearm"
-                  }
-               ]
+               "id" : "UBERON:0003403",
+               "label" : "skin of forearm"
             }
-         ],
-         "examples" : []
+         ]
       },
       "code" : {
-         "allof" : [
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml",
+         "description" : "FHIR mapping - Procedure.code\n",
+         "examples" : [
             {
-               "$ref" : "https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml"
-            },
-            {
-               "description" : "FHIR mapping - Procedure.code\n",
-               "examples" : [
-                  {
-                     "id" : "NCIT:C28743",
-                     "label" : "Funch Biopsy"
-                  }
-               ]
+               "id" : "NCIT:C28743",
+               "label" : "Punch Biopsy"
             }
-         ],
-         "examples" : []
+         ]
       }
    },
    "required" : [

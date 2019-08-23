@@ -12,10 +12,6 @@ meta:
       id: "orcid:0000-0002-3265-15918"
     - description: "Peter Robinson"
       id: "orcid:0000-0002-0736-91998"
-    - description: "Michael Baudis"
-      id: "orcid:0000-0002-9903-4248"
-    - description: "Isuru Liyanage"
-      id: "orcid:0000-0002-4839-5158"
   provenance:
     - description: Phenopackets
       id: 'https://github.com/phenopackets/phenopacket-schema/blob/master/docs/procedure.rst'
@@ -25,27 +21,25 @@ meta:
   sb_status: implemented
 properties:
   code:
-    allof:
-      - "$ref": https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml
-      - description: |
-          FHIR mapping - Procedure.code
-        examples:
-          - id: 'NCIT:C28743'
-            label: 'Funch Biopsy'
+    "$ref": https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml
+    description: |
+      FHIR mapping - Procedure.code
+    examples:
+      - id: 'NCIT:C28743'
+        label: 'Punch Biopsy'
   bodySite:
-    allof:
-      - "$ref": https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml
-      - description: |
-          FHIR mapping - Procedure.bodySite
-        examples:
-          - id: 'UBERON:0003403'
-            label: 'skin of forearm'
+      "$ref": https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml
+      description: |
+        FHIR mapping - Procedure.bodySite
+      examples:
+        - id: 'UBERON:0003403'
+          label: 'skin of forearm'
 required:
   - code
 examples:
   - code:
       id: 'NCIT:C28743'
-      label: 'Funch Biopsy'
+      label: 'Punch Biopsy'
     bodySite:
       id: 'UBERON:0003403'
       label: 'skin of forearm'

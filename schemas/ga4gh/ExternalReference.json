@@ -15,16 +15,16 @@
    "meta" : {
       "contributors" : [
          {
+            "description" : "Michael Baudis",
+            "id" : "orcid:0000-0002-9903-4248"
+         },
+         {
             "description" : "Jules Jacobsen",
             "id" : "orcid:0000-0002-3265-15918"
          },
          {
             "description" : "Peter Robinson",
             "id" : "orcid:0000-0002-0736-91998"
-         },
-         {
-            "description" : "Michael Baudis",
-            "id" : "orcid:0000-0002-9903-4248"
          }
       ],
       "provenance" : [
@@ -54,7 +54,7 @@
          "description" : "Identifer of the external reference. The format should be in the form\nof a URI (CURIE or URL recommended).\n",
          "examples" : [
             "cellosaurus:CVCL_0312",
-            "PMID:22824167"
+            "PMID:15254584"
          ],
          "type" : "string"
       }

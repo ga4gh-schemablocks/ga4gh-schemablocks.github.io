@@ -30,8 +30,6 @@ tags:
 
     - [Jules Jacobsen](https://orcid.org/0000-0002-3265-15918)  
     - [Peter Robinson](https://orcid.org/0000-0002-0736-91998)  
-    - [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
-    - [Isuru Liyanage](https://orcid.org/0000-0002-4839-5158)  
 <!--more-->
 
 ### Source
@@ -56,11 +54,11 @@ ontology class.
   </tr>
   <tr>
     <td>bodySite</td>
-    <td></td>
+    <td>https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
     <td>code</td>
-    <td></td>
+    <td>https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]</td>
   </tr>
 
 </table>
@@ -68,21 +66,35 @@ ontology class.
     
 #### bodySite
 
-* type: 
+* type: https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
 
+FHIR mapping - Procedure.bodySite
 
 
 ##### `bodySite` Value Example  
 
+```
+{
+   "id" : "UBERON:0003403",
+   "label" : "skin of forearm"
+}
+```
     
 #### code
 
-* type: 
+* type: https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
 
+FHIR mapping - Procedure.code
 
 
 ##### `code` Value Example  
 
+```
+{
+   "id" : "NCIT:C28743",
+   "label" : "Punch Biopsy"
+}
+```
 
 
 ### `Procedure` Value Example  
@@ -95,7 +107,7 @@ ontology class.
    },
    "code" : {
       "id" : "NCIT:C28743",
-      "label" : "Funch Biopsy"
+      "label" : "Punch Biopsy"
    }
 }
 ```

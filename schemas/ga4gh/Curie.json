@@ -25,14 +25,14 @@
       "provenance" : [
          {
             "description" : "vr-spec",
-            "url" : "https://github.com/ga4gh/vr-spec/blob/master/schema/vr.yaml"
+            "id" : "https://github.com/ga4gh/vr-spec/blob/master/schema/vr.yaml"
          }
       ],
       "sb_status" : "implemented",
       "used_by" : [
          {
             "description" : "vr-spec",
-            "url" : "https://github.com/ga4gh/vr-spec/blob/master/schema/vr.yaml"
+            "id" : "https://github.com/ga4gh/vr-spec/blob/master/schema/vr.yaml"
          }
       ]
    },

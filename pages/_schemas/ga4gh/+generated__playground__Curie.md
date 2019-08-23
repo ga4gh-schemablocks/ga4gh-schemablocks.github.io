@@ -20,11 +20,11 @@ tags:
 
 * Provenance  
 
-    - vr-spec  
+    - [vr-spec](https://github.com/ga4gh/vr-spec/blob/master/schema/vr.yaml)  
 
 * Used by  
 
-    - vr-spec  
+    - [vr-spec](https://github.com/ga4gh/vr-spec/blob/master/schema/vr.yaml)  
 
 * Contributors  
 

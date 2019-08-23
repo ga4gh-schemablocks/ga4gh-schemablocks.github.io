@@ -11,10 +11,10 @@ meta:
       id: "orcid:0000-0002-4839-5158"
   provenance:
     - description: 'vr-spec'
-      url: 'https://github.com/ga4gh/vr-spec/blob/master/schema/vr.yaml'
+      id: 'https://github.com/ga4gh/vr-spec/blob/master/schema/vr.yaml'
   used_by:
     - description: vr-spec
-      url: 'https://github.com/ga4gh/vr-spec/blob/master/schema/vr.yaml'
+      id: 'https://github.com/ga4gh/vr-spec/blob/master/schema/vr.yaml'
   sb_status: implemented
 description: |
   A CURIE constitutes a "Compact URI" or Abbreviated syntax for expressing 
