@@ -25,20 +25,20 @@ meta:
 properties:
   description:
     description: |
-      Free-text description of the phenotype. Note this is not a acceptable place to document/describe the
-      phenotype - the type and onset etc... fields should be used for this purpose.
+      Free-text description of the phenotype. Note this is not a acceptable 
+      place to document/describe the phenotype - the type and onset etc... 
+      fields should be used for this purpose.
     type: string
     examples:
       - 'Pancreatic Adenocarcinoma'
   type:
-    allof:
-      - "$ref": https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml
-      - description: |
-          The primary ontology class which describes the phenotype.
-          FHIR mapping: Condition.identifier
-        examples:
-          - id: 'add example'
-            label: 'Craniosynostosis'
+    "$ref": https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml
+    description: |
+      The primary ontology class which describes the phenotype.
+      FHIR mapping: Condition.identifier
+    examples:
+      - id: 'add example'
+        label: 'Craniosynostosis'
   negated:
     description: |
       Flag to indicate whether the phenotype was observed or not. Default is 'false',
@@ -50,17 +50,18 @@ properties:
     examples:
       - 'false'
   severity:
-    allof:
-      - "$ref": https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml
-      - description: |
-          Severity of the condition e.g. subclasses of HP:0012824-Severity or SNOMED:272141005-Severities
-          FHIR mapping: Condition.severity
-        examples:
-          - id: 'HP:0012825'
-            label: 'Mild'
+    "$ref": https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml
+    description: |
+      Severity of the condition e.g. subclasses of HP:0012824-Severity or 
+      SNOMED:272141005-Severities.
+      FHIR mapping: Condition.severity
+    examples:
+      - id: 'HP:0012825'
+        label: 'Mild'
   modifiers:
     description: |
-      subclasses of HP:0012823 ! Clinical modifier apart from Severity HP:0012824 - Severity
+      Subclasses of HP:0012823 ! Clinical modifier apart from Severity 
+      HP:0012824 - Severity.
     type: array
     items:
       "$ref": https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml
@@ -68,57 +69,56 @@ properties:
       - id: 'HP:0025282'
         label: 'Dull'
   ageOfOnset:
-    items:
-      "$ref": https://schemablocks.org/schemas/ga4gh/Age.yaml
-      description: |
-        the values of this will come from the HPO onset hierarchy i.e. subclasses of HP:0003674
-        FHIR mapping: Condition.onset
-      examples:
-        - age: 'P35Y'
+    "$ref": https://schemablocks.org/schemas/ga4gh/Age.yaml
+    description: |
+      The values of this will come from the HPO onset hierarchy i.e. subclasses 
+      of HP:0003674.
+      FHIR mapping: Condition.onset
+    examples:
+      - age: 'P35Y'
+        ageClass:
+          id: 'HP:0003596'
+          label: 'Middle age onset'
+  ageRangeOfOnset:
+    "$ref": https://schemablocks.org/schemas/ga4gh/AgeRange.yaml
+    description: |
+      The values of this will come from the HPO onset hierarchy i.e. subclasses 
+      of HP:0003674.
+      FHIR mapping: Condition.onset
+    examples:
+      - start:
+          age: 'P35Y'
           ageClass:
             id: 'HP:0003596'
             label: 'Middle age onset'
-  ageRangeOfOnset:
-    items:
-      "$ref": https://schemablocks.org/schemas/ga4gh/AgeRange.yaml
-      description: |
-        the values of this will come from the HPO onset hierarchy i.e. subclasses of HP:0003674
-        FHIR mapping: Condition.onset
-      examples:
-        - start:
-            age: 'P35Y'
-            ageClass:
-              id: 'HP:0003596'
-              label: 'Middle age onset'
+        end:
+          age: 'P60Y'
   classOfOnset:
-    items:
-      "$ref": https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml
-      description: |
-        the values of this will come from the HPO onset hierarchy i.e. subclasses of HP:0003674
-        FHIR mapping: Condition.onset
-      examples:
-        - id: 'HP:0003596'
-          label: 'Middle age onset'
+    "$ref": https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml
+    description: |
+      the values of this will come from the HPO onset hierarchy i.e. subclasses of HP:0003674
+      FHIR mapping: Condition.onset
+    examples:
+      - id: 'HP:0003596'
+        label: 'Middle age onset'
   evidence:
+    type: array
     items:
       "$ref": https://schemablocks.org/schemas/ga4gh/Evidence.yaml
-      description: Evidences for how the phenotype was determined.
-      examples:
-        - evidenceCode:
-            id: 'add example'
-            label: 'add example'
-          reference:
-            id: 'add example'
-            description: 'add example'
+    description: Evidences for how the phenotype was determined.
+    examples:
+      - evidenceCode:
+          id: 'add example'
+          label: 'add example'
+        reference:
+          id: 'add example'
+          description: 'add example'
 required:
   - type
-oneof:
-  - properties:
-      - ageOfOnset
-  - properties:
-      - ageRangeOfOnset
-  - properties:
-      - classOfOnset
+  - oneof:
+    - ageOfOnset
+    - ageRangeOfOnset
+    - classOfOnset
 examples:
   - description: 'add example'
     type:

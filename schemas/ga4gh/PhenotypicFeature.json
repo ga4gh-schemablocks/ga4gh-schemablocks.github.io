@@ -65,99 +65,76 @@
          }
       ]
    },
-   "oneof" : [
-      {
-         "properties" : [
-            "ageOfOnset"
-         ]
-      },
-      {
-         "properties" : [
-            "ageRangeOfOnset"
-         ]
-      },
-      {
-         "properties" : [
-            "classOfOnset"
-         ]
-      }
-   ],
    "properties" : {
       "ageOfOnset" : {
-         "examples" : [],
-         "items" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/Age.yaml",
-            "description" : "the values of this will come from the HPO onset hierarchy i.e. subclasses of HP:0003674\nFHIR mapping: Condition.onset\n",
-            "examples" : [
-               {
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/Age.yaml",
+         "description" : "The values of this will come from the HPO onset hierarchy i.e. subclasses \nof HP:0003674.\nFHIR mapping: Condition.onset\n",
+         "examples" : [
+            {
+               "age" : "P35Y",
+               "ageClass" : {
+                  "id" : "HP:0003596",
+                  "label" : "Middle age onset"
+               }
+            }
+         ]
+      },
+      "ageRangeOfOnset" : {
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/AgeRange.yaml",
+         "description" : "The values of this will come from the HPO onset hierarchy i.e. subclasses \nof HP:0003674.\nFHIR mapping: Condition.onset\n",
+         "examples" : [
+            {
+               "end" : {
+                  "age" : "P60Y"
+               },
+               "start" : {
                   "age" : "P35Y",
                   "ageClass" : {
                      "id" : "HP:0003596",
                      "label" : "Middle age onset"
                   }
                }
-            ]
-         }
-      },
-      "ageRangeOfOnset" : {
-         "examples" : [],
-         "items" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/AgeRange.yaml",
-            "description" : "the values of this will come from the HPO onset hierarchy i.e. subclasses of HP:0003674\nFHIR mapping: Condition.onset\n",
-            "examples" : [
-               {
-                  "start" : {
-                     "age" : "P35Y",
-                     "ageClass" : {
-                        "id" : "HP:0003596",
-                        "label" : "Middle age onset"
-                     }
-                  }
-               }
-            ]
-         }
+            }
+         ]
       },
       "classOfOnset" : {
-         "examples" : [],
-         "items" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml",
-            "description" : "the values of this will come from the HPO onset hierarchy i.e. subclasses of HP:0003674\nFHIR mapping: Condition.onset\n",
-            "examples" : [
-               {
-                  "id" : "HP:0003596",
-                  "label" : "Middle age onset"
-               }
-            ]
-         }
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml",
+         "description" : "the values of this will come from the HPO onset hierarchy i.e. subclasses of HP:0003674\nFHIR mapping: Condition.onset\n",
+         "examples" : [
+            {
+               "id" : "HP:0003596",
+               "label" : "Middle age onset"
+            }
+         ]
       },
       "description" : {
-         "description" : "Free-text description of the phenotype. Note this is not a acceptable place to document/describe the\nphenotype - the type and onset etc... fields should be used for this purpose.\n",
+         "description" : "Free-text description of the phenotype. Note this is not a acceptable \nplace to document/describe the phenotype - the type and onset etc... \nfields should be used for this purpose.\n",
          "examples" : [
             "Pancreatic Adenocarcinoma"
          ],
          "type" : "string"
       },
       "evidence" : {
-         "examples" : [],
-         "items" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/Evidence.yaml",
-            "description" : "Evidences for how the phenotype was determined.",
-            "examples" : [
-               {
-                  "evidenceCode" : {
-                     "id" : "add example",
-                     "label" : "add example"
-                  },
-                  "reference" : {
-                     "description" : "add example",
-                     "id" : "add example"
-                  }
+         "description" : "Evidences for how the phenotype was determined.",
+         "examples" : [
+            {
+               "evidenceCode" : {
+                  "id" : "add example",
+                  "label" : "add example"
+               },
+               "reference" : {
+                  "description" : "add example",
+                  "id" : "add example"
                }
-            ]
-         }
+            }
+         ],
+         "items" : {
+            "$ref" : "https://schemablocks.org/schemas/ga4gh/Evidence.yaml"
+         },
+         "type" : "array"
       },
       "modifiers" : {
-         "description" : "subclasses of HP:0012823 ! Clinical modifier apart from Severity HP:0012824 - Severity\n",
+         "description" : "Subclasses of HP:0012823 ! Clinical modifier apart from Severity \nHP:0012824 - Severity.\n",
          "examples" : [
             {
                "id" : "HP:0025282",
@@ -177,42 +154,35 @@
          "type" : "boolean"
       },
       "severity" : {
-         "allof" : [
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml",
+         "description" : "Severity of the condition e.g. subclasses of HP:0012824-Severity or \nSNOMED:272141005-Severities.\nFHIR mapping: Condition.severity\n",
+         "examples" : [
             {
-               "$ref" : "https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml"
-            },
-            {
-               "description" : "Severity of the condition e.g. subclasses of HP:0012824-Severity or SNOMED:272141005-Severities\nFHIR mapping: Condition.severity\n",
-               "examples" : [
-                  {
-                     "id" : "HP:0012825",
-                     "label" : "Mild"
-                  }
-               ]
+               "id" : "HP:0012825",
+               "label" : "Mild"
             }
-         ],
-         "examples" : []
+         ]
       },
       "type" : {
-         "allof" : [
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml",
+         "description" : "The primary ontology class which describes the phenotype.\nFHIR mapping: Condition.identifier\n",
+         "examples" : [
             {
-               "$ref" : "https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml"
-            },
-            {
-               "description" : "The primary ontology class which describes the phenotype.\nFHIR mapping: Condition.identifier\n",
-               "examples" : [
-                  {
-                     "id" : "add example",
-                     "label" : "Craniosynostosis"
-                  }
-               ]
+               "id" : "add example",
+               "label" : "Craniosynostosis"
             }
-         ],
-         "examples" : []
+         ]
       }
    },
    "required" : [
-      "type"
+      "type",
+      {
+         "oneof" : [
+            "ageOfOnset",
+            "ageRangeOfOnset",
+            "classOfOnset"
+         ]
+      }
    ],
    "title" : "PhenotypicFeature",
    "type" : "object"

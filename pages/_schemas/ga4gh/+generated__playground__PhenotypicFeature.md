@@ -52,15 +52,15 @@ tags:
   </tr>
   <tr>
     <td>ageOfOnset</td>
-    <td></td>
+    <td>https://schemablocks.org/schemas/ga4gh/Age.yaml [<a href="https://schemablocks.org/schemas/ga4gh/Age.yaml" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
     <td>ageRangeOfOnset</td>
-    <td></td>
+    <td>https://schemablocks.org/schemas/ga4gh/AgeRange.yaml [<a href="https://schemablocks.org/schemas/ga4gh/AgeRange.yaml" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/AgeRange.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
     <td>classOfOnset</td>
-    <td></td>
+    <td>https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
     <td>description</td>
@@ -68,7 +68,7 @@ tags:
   </tr>
   <tr>
     <td>evidence</td>
-    <td></td>
+    <td>array of https://schemablocks.org/schemas/ga4gh/Evidence.yaml [<a href="https://schemablocks.org/schemas/ga4gh/Evidence.yaml" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Evidence.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
     <td>modifiers</td>
@@ -80,11 +80,11 @@ tags:
   </tr>
   <tr>
     <td>severity</td>
-    <td></td>
+    <td>https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
     <td>type</td>
-    <td></td>
+    <td>https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]</td>
   </tr>
 
 </table>
@@ -92,37 +92,75 @@ tags:
     
 #### ageOfOnset
 
-* type: 
+* type: https://schemablocks.org/schemas/ga4gh/Age.yaml [<a href="https://schemablocks.org/schemas/ga4gh/Age.yaml" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]
 
+The values of this will come from the HPO onset hierarchy i.e. subclasses 
+of HP:0003674.
+FHIR mapping: Condition.onset
 
 
 ##### `ageOfOnset` Value Example  
 
+```
+{
+   "age" : "P35Y",
+   "ageClass" : {
+      "id" : "HP:0003596",
+      "label" : "Middle age onset"
+   }
+}
+```
     
 #### ageRangeOfOnset
 
-* type: 
+* type: https://schemablocks.org/schemas/ga4gh/AgeRange.yaml [<a href="https://schemablocks.org/schemas/ga4gh/AgeRange.yaml" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/AgeRange.html" target="_BLANK">HTML</a>]
 
+The values of this will come from the HPO onset hierarchy i.e. subclasses 
+of HP:0003674.
+FHIR mapping: Condition.onset
 
 
 ##### `ageRangeOfOnset` Value Example  
 
+```
+{
+   "end" : {
+      "age" : "P60Y"
+   },
+   "start" : {
+      "age" : "P35Y",
+      "ageClass" : {
+         "id" : "HP:0003596",
+         "label" : "Middle age onset"
+      }
+   }
+}
+```
     
 #### classOfOnset
 
-* type: 
+* type: https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
 
+the values of this will come from the HPO onset hierarchy i.e. subclasses of HP:0003674
+FHIR mapping: Condition.onset
 
 
 ##### `classOfOnset` Value Example  
 
+```
+{
+   "id" : "HP:0003596",
+   "label" : "Middle age onset"
+}
+```
     
 #### description
 
 * type: string
 
-Free-text description of the phenotype. Note this is not a acceptable place to document/describe the
-phenotype - the type and onset etc... fields should be used for this purpose.
+Free-text description of the phenotype. Note this is not a acceptable 
+place to document/describe the phenotype - the type and onset etc... 
+fields should be used for this purpose.
 
 
 ##### `description` Value Example  
@@ -133,18 +171,31 @@ phenotype - the type and onset etc... fields should be used for this purpose.
     
 #### evidence
 
-* type: 
+* type: array of https://schemablocks.org/schemas/ga4gh/Evidence.yaml [<a href="https://schemablocks.org/schemas/ga4gh/Evidence.yaml" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Evidence.html" target="_BLANK">HTML</a>]
 
-
+Evidences for how the phenotype was determined.
 
 ##### `evidence` Value Example  
 
+```
+{
+   "evidenceCode" : {
+      "id" : "add example",
+      "label" : "add example"
+   },
+   "reference" : {
+      "description" : "add example",
+      "id" : "add example"
+   }
+}
+```
     
 #### modifiers
 
 * type: array of https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
 
-subclasses of HP:0012823 ! Clinical modifier apart from Severity HP:0012824 - Severity
+Subclasses of HP:0012823 ! Clinical modifier apart from Severity 
+HP:0012824 - Severity.
 
 
 ##### `modifiers` Value Example  
@@ -175,21 +226,38 @@ the logical negation of the OntologyClass used in the 'type' field.
     
 #### severity
 
-* type: 
+* type: https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
 
+Severity of the condition e.g. subclasses of HP:0012824-Severity or 
+SNOMED:272141005-Severities.
+FHIR mapping: Condition.severity
 
 
 ##### `severity` Value Example  
 
+```
+{
+   "id" : "HP:0012825",
+   "label" : "Mild"
+}
+```
     
 #### type
 
-* type: 
+* type: https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
 
+The primary ontology class which describes the phenotype.
+FHIR mapping: Condition.identifier
 
 
 ##### `type` Value Example  
 
+```
+{
+   "id" : "add example",
+   "label" : "Craniosynostosis"
+}
+```
 
 
 ### `PhenotypicFeature` Value Example  
