@@ -37,7 +37,6 @@
       ]
    },
    "pattern" : "^\\w[^:]+:.+$",
-   "properties" : {},
    "title" : "Curie",
    "type" : "string"
 }

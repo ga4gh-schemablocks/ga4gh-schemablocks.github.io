@@ -39,6 +39,11 @@ tags:
 * raw source [[YAML](./HtsFile.yaml)] [[JSON](./HtsFile.json)] 
 * [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/sb-meta/HtsFile.yaml)
 
+### Attributes
+
+* Type: 
+    - object
+
 ### Properties
 
 <table>
@@ -142,6 +147,7 @@ URI for the file
 ```
 "https://opensnp.org/data/60.23andme-exome-vcf.231?1341012444"
 ```
+
 
 ### `HtsFile` Value Example  
 

@@ -38,6 +38,11 @@ tags:
 * raw source [[YAML](./PhenotypicFeature.yaml)] [[JSON](./PhenotypicFeature.json)] 
 * [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/sb-meta/PhenotypicFeature.yaml)
 
+### Attributes
+
+* Type: 
+    - object
+
 ### Properties
 
 <table>
@@ -184,6 +189,7 @@ the logical negation of the OntologyClass used in the 'type' field.
 
 
 ##### `type` Value Example  
+
 
 
 ### `PhenotypicFeature` Value Example  

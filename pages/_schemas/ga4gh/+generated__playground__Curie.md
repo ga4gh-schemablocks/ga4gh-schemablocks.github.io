@@ -38,16 +38,12 @@ tags:
 * raw source [[YAML](./Curie.yaml)] [[JSON](./Curie.json)] 
 * [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/sb-meta/Curie.yaml)
 
-### Properties
+### Attributes
 
-<table>
-  <tr>
-    <th>Property</th>
-    <th>Type</th>
-  </tr>
-
-</table>
-
+* Type: 
+    - string
+* Pattern: 
+    - `^\w[^:]+:.+$`
 
 ### `Curie` Value Examples  
 

@@ -39,6 +39,11 @@ tags:
 * raw source [[YAML](./AgeRange.yaml)] [[JSON](./AgeRange.json)] 
 * [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/sb-meta/AgeRange.yaml)
 
+### Attributes
+
+* Type: 
+    - object
+
 ### Properties
 
 <table>
@@ -93,6 +98,7 @@ Age as ISO8601 string or OntologyClass
    "age" : "P12Y"
 }
 ```
+
 
 ### `AgeRange` Value Example  
 
