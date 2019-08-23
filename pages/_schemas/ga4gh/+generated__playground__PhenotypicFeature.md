@@ -12,8 +12,6 @@ tags:
 
 ## PhenotypicFeature
 
-### SchemaBlocks Metadata
-
 * {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
     - __implemented__
 
