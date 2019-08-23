@@ -1,0 +1,113 @@
+{
+   "$id" : "https://schemablocks.org/schemas/ga4gh/GeoLocation/v0.0.1",
+   "$schema\"" : "http://json-schema.org/draft-07/schema#",
+   "description" : "Geo_location provides information about a geographic position related to \na record. Examples could be:  \n\n* an address, e.g. of a lab performing an analysis\n* provenance of an individual, obfuscated to a larger order \nadministrative entity (Suffolk, U.K.)\n* a lat/long/alt position where an environmental sample was collected  \n\nThe geographic point object uses the default units from the \n[DCMI point scheme](http://dublincore.org/documents/dcmi-point/) \nand avoids optional representation in non-standard units.\n",
+   "examples" : [
+      {
+         "altitude" : "47",
+         "city" : "Timisoara",
+         "country" : "Romania",
+         "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
+         "latitude" : "47.37",
+         "longitude" : "8.54"
+      },
+      {
+         "label" : "Office at Institute of Molecular Life Sciences, University of Zurich",
+         "latitude" : "47.39792",
+         "longitude" : "8.54913",
+         "precision" : "room"
+      }
+   ],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "GA4GH Metadata Task Team"
+         },
+         {
+            "description" : "Michael Baudis",
+            "id" : "orcid:0000-0002-9903-4248"
+         },
+         {
+            "description" : "Isuru Liyanage",
+            "id" : "orcid:0000-0002-4839-5158"
+         },
+         {
+            "description" : "Melanie Courtot",
+            "id" : "orcid:0000-0002-9551-6370"
+         }
+      ],
+      "provenance" : [
+         {
+            "description" : "Developer branch of original GA4GH schema",
+            "id" : "https://github.com/ga4gh-metadata/metadata-schemas/blob/master/schemas/shared.proto#L60"
+         }
+      ],
+      "sb_status" : "proposed",
+      "used_by" : [
+         {
+            "description" : "Progenetix database schema (Beacon+ backend)",
+            "id" : "https://github.com/progenetix/schemas/tree/master/main/yaml"
+         }
+      ]
+   },
+   "properties" : {
+      "altitude" : {
+         "description" : "height in meters above the WGS 84 reference ellipsoid; optional",
+         "examples" : [
+            "8848"
+         ],
+         "format" : "float",
+         "type" : "number"
+      },
+      "city" : {
+         "description" : "The optional name of the city the point location maps to. While this is \na commonly used attribute and can save as sanity check for interpreting \nthe point location, it should be considered secondary to the location \nvalues in interpreting the geographic location.\n",
+         "examples" : [
+            "Timisoara",
+            "Heidelberg",
+            "Zurich"
+         ],
+         "type" : "string"
+      },
+      "country" : {
+         "description" : "The optional name of the country the location maps to, for sanity checks \nand procedural convenience (see notes for \"city\").\n",
+         "examples" : [
+            "Romania",
+            "Albania"
+         ],
+         "type" : "string"
+      },
+      "label" : {
+         "description" : "A text representation, preferably using standard geographic \nidentification elements, of the corresponding latitude, longitude, \n(altitude). This representation serves the purposes to\n- capture standard data entry parameters  \n- provide a sanity check for latitude,longitude values\n",
+         "examples" : [
+            "Str Marasesti 5, 300077 Timisoara, Romania"
+         ],
+         "type" : "string"
+      },
+      "latitude" : {
+         "description" : "signed decimal degrees (North, relative to Equator)",
+         "examples" : [
+            "47.37"
+         ],
+         "format" : "float",
+         "type" : "number"
+      },
+      "longitude" : {
+         "description" : "signed decimal degrees (East, relative to IERS Reference Meridian)",
+         "examples" : [
+            "8.54"
+         ],
+         "format" : "float",
+         "type" : "number"
+      },
+      "precision" : {
+         "description" : "Used together with coordinate annotation, precision represents an \noptional label describing the precision that can be inferred from the \ncoordinates. For a precision level of \"city\"\", coordinates would have to \nbe interpreted as representing any possible location within the city's \nadministrative boundaries, not necessarily at the exact position of the \npoint coordinates.\n",
+         "examples" : [
+            "address"
+         ],
+         "type" : "string"
+      }
+   },
+   "title" : "GeoLocation",
+   "type" : "object"
+}
+

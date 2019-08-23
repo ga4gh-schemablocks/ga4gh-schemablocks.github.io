@@ -1,0 +1,109 @@
+$schema": http://json-schema.org/draft-07/schema#
+"$id": https://schemablocks.org/schemas/ga4gh/Callset/v0.0.1
+title: Callset
+meta:
+  contributors:
+    - description: "GA4GH Data Working Group"
+    - description: "Michael Baudis"
+      id: "orcid:0000-0002-9903-4248"
+  provenance:
+    - description: "Original GA4GH schema"
+      id: 'https://github.com/ga4gh/ga4gh-schemas/blob/master/src/main/proto/ga4gh/variants.proto#L65'
+  used_by:
+    - description: "Progenetix database schema (Beacon+ backend)"
+      id: 'https://github.com/progenetix/schemas/tree/master/main/yaml'
+  sb_status: proposed
+description: |
+  The callset object contains information about an experiment performed on 
+  material from a single biosample and provides a shared identifier for all 
+  variants detected in this experiment, attributed to the referenced biosample.
+type: object
+properties:
+  id:
+    description: |
+      The local-unique identifier of this callset (referenced as "callset_id").
+    type: string
+    examples:
+      - 'GSM264198'
+  biosample_id:
+    description: |
+      The identifier ("biosample.id") of the biosample this variant was 
+      reported from. This attribute provides an alternative to an implicit 
+      variant -> callset -> biosample chaining.
+    type: string
+    examples:
+      - 'pgx-bs-987647'
+  description:
+    description: |
+      A free text description about the callset.
+    type: string
+    examples:
+      - 'SNP6 array of cancer sample BRCA-0893'
+  data_use_conditions:
+    "$ref": https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml
+    description: |
+      Data use conditions applying to data from this callset, as ontology class 
+      (e.g. DUO).
+    examples:
+      - id: 'DUO:0000004'
+        label: 'no restriction'
+  geo_provenance:
+    description: |
+      This geo_class attribute ideally describes the geographic location of 
+      where this callset was analysed.
+    "$ref": https://schemablocks.org/schemas/ga4gh/GeoLocation.yaml
+    examples:
+      - label: 'Str Marasesti 5, 300077 Timisoara, Romania'
+        city: 'Timisoara'
+        country: 'Romania'
+        latitude: 45.75
+        longitude: 21.23
+  info:
+    description: |
+      Additional information object, in a format defined in examples and 
+      accompanying documentation of the specific implementation.
+    type: object
+    examples:
+      - statusmaps:
+          description: |
+            The cnv_maps object is a wrapper for genomic interval mapped status 
+            information. In Progenetix and arrayMap, this is used to indictate 
+            for fixed 1MB genome intervals - the status
+            - dupmap => "DUP" or ""
+            - delmap => "DEL" or ""  
+            or the maximum / minimum positive / negative value encountered in 
+            the segment, as far as it has been called to contain DUP or DEL.
+          dupmap: ["", "", "DUP", "DUP", "DUP", "", "", "", "", "", ""]
+          binning: 1000000
+  created:
+    description: |
+      The creation time of this record, as ISO8601 string. System-specific 
+      implementations may transfer this to a date object.
+    type: string
+    example: '2017-10-25T07:06:03Z'
+  updated:
+    description: |
+      The update time of this record's content, as ISO8601 string.
+      System-specific implementations may transfer this to a date object.
+    type: string
+    example: '2022-11-11T09:45:13Z'
+examples:
+  - id: 'GSM264198'
+    biosample_id: 'SAMEA1234'
+    description: 'SNP6 array of cancer sample BRCA-0893'
+    data_use_conditions:
+      id: 'DUO:0000004'
+      label: 'no restriction'
+    geo_provenance:
+      label: 'Str Marasesti 5, 300077 Timisoara, Romania'
+      city: 'Timisoara'
+      country: 'Romania'
+      latitude: 45.75
+      longitude: 21.23
+    info:
+      technology: "Affymetrix SNP6 genotyping array"
+      statusmaps:
+        dupmap: ["", "", "DUP", "DUP", "DUP", "", "", "", "", "", ""]
+        binning: 1000000
+    created: '2017-10-25T07:06:03Z'
+    updated: '2017-10-25T07:06:03Z'
