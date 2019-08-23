@@ -37,9 +37,10 @@ tags:
 * [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/sb-meta/File.yaml)
 
 ### Attributes
+  
+__Type:__ object  
+__Description:__ A file of an unspecified type.
 
-* Type: 
-    - object
 
 ### Properties
 

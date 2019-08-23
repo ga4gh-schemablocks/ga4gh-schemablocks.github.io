@@ -39,9 +39,11 @@ tags:
 * [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/sb-meta/ExternalReference.yaml)
 
 ### Attributes
+  
+__Type:__ object  
+__Description:__ Many of the defined elements in a resource are references to other resources.
+Using these references, the resources combine to build a web of information.
 
-* Type: 
-    - object
 
 ### Properties
 

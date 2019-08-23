@@ -37,9 +37,11 @@ tags:
 * [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/sb-meta/BlockMeta.yaml)
 
 ### Attributes
+  
+__Type:__ object  
+__Description:__ BlockMeta defines the format of the SchemaBlocks metadata, used to describe
+e.g. the given block's provenance, scope, external usage.
 
-* Type: 
-    - object
 
 ### Properties
 

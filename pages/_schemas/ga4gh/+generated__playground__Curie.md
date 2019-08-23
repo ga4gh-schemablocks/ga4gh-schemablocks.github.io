@@ -39,11 +39,23 @@ tags:
 * [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/sb-meta/Curie.yaml)
 
 ### Attributes
+  
+__Type:__ string  
+__Pattern:__ ^\w[^:]+:.+$  
+__Description:__ A CURIE constitutes a "Compact URI" or Abbreviated syntax for expressing 
+Uniform Resource Identifiers (URIs). CURIEs consist of a prefix and a private 
+ID part, separated by a colon.
 
-* Type: 
-    - string
-* Pattern: 
-    - `^\w[^:]+:.+$`
+Some design considerations:    
+
+* Prefixes should *not* be concatenated; there should only be a single colon 
+in the CURIE.
+* While the underscore `_` character is considered a "safe" character in all 
+computing environments and is a "word character" in regular expression 
+matching, it nevertheless should be _avoided_ as part of the private portion 
+of a CURIE, since in some environments it has been used as replacement for 
+the prefix separation (in replacement for the colon character `:`).
+
 
 ### `Curie` Value Examples  
 

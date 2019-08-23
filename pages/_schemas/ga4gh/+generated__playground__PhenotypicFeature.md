@@ -39,9 +39,13 @@ tags:
 * [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/sb-meta/PhenotypicFeature.yaml)
 
 ### Attributes
+  
+__Type:__ object  
+__Description:__ An individual phenotypic feature, observed as either present or absent (negated),
+with possible onset, modifiers and frequency.
+FHIR mapping: Condition (https://www.hl7.org/fhir/condition.html) or
+Observation (https://www.hl7.org/fhir/observation.html)
 
-* Type: 
-    - object
 
 ### Properties
 

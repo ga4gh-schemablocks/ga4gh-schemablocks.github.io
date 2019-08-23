@@ -40,9 +40,12 @@ tags:
 * [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/sb-meta/Procedure.yaml)
 
 ### Attributes
+  
+__Type:__ object  
+__Description:__ A clinical procedure performed on a subject. By preference a single concept to indicate both the procedure and the
+body site should be used. In cases where this is not possible, the body site should be indicated using a separate
+ontology class.
 
-* Type: 
-    - object
 
 ### Properties
 

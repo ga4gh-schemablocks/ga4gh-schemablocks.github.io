@@ -39,9 +39,9 @@ tags:
 * [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/sb-meta/Age.yaml)
 
 ### Attributes
-
-* Type: 
-    - object
+  
+__Type:__ object  
+__Description:__ Age
 
 ### Properties
 

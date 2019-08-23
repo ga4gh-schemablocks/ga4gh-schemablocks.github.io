@@ -43,9 +43,14 @@ tags:
 * [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/sb-meta/OntologyClass.yaml)
 
 ### Attributes
+  
+__Type:__ object  
+__Description:__ OntologyClass represents the core object used to reference domain-specific
+entities, as well as to identify their domains through the appropriate
+prefix.
+CURIES are case sensitive, although for prefixes this practice is
+inconsistently followed.
 
-* Type: 
-    - object
 
 ### Properties
 

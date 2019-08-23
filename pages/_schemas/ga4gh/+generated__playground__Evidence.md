@@ -39,9 +39,10 @@ tags:
 * [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/sb-meta/Evidence.yaml)
 
 ### Attributes
+  
+__Type:__ object  
+__Description:__ Evidence, FHIR mapping: Condition.evidence (https://www.hl7.org/fhir/condition-definitions.html#Condition.evidence)
 
-* Type: 
-    - object
 
 ### Properties
 
