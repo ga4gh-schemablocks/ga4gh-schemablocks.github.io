@@ -52,7 +52,7 @@
          "type" : "string"
       },
       "ageClass" : {
-         "$ref" : "https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml",
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/OntologyClass.json",
          "description" : "The age of the subject (e.g. individual at the onset of a phenotype),\nas OntologyClass. An example ontology here is HsapDv (Human\nDevelopmental Stages).\nThis does not exactly correspond to the use of \"age of onset\" in HPO,\nsince this specifically codes the \"onset\" of a phenotype, not just any\nage as a timepoint. So when coding onset, implementations may choose\nto either use an \"age of onset\" ontology or an \"Age\" class.\n",
          "examples" : [
             {

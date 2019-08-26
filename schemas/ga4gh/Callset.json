@@ -80,7 +80,7 @@
          "type" : "string"
       },
       "data_use_conditions" : {
-         "$ref" : "https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml",
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/OntologyClass.json",
          "description" : "Data use conditions applying to data from this callset, as ontology class \n(e.g. DUO).\n",
          "examples" : [
             {
@@ -97,7 +97,7 @@
          "type" : "string"
       },
       "geo_provenance" : {
-         "$ref" : "https://schemablocks.org/schemas/ga4gh/GeoLocation.yaml",
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/GeoLocation.json",
          "description" : "This geo_class attribute ideally describes the geographic location of \nwhere this callset was analysed.\n",
          "examples" : [
             {

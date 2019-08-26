@@ -37,8 +37,8 @@ tags:
 
 ### Source
 
-* raw source [[YAML](./OntologyClass.yaml)] [[JSON](./OntologyClass.json)] 
-* [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/sb-meta/OntologyClass.yaml)
+* raw source [[JSON](./OntologyClass.json)] 
+* [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/src/OntologyClass.yaml)
 
 ### Attributes
   

@@ -31,8 +31,8 @@ tags:
 
 ### Source
 
-* raw source [[YAML](./File.yaml)] [[JSON](./File.json)] 
-* [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/sb-meta/File.yaml)
+* raw source [[JSON](./File.json)] 
+* [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/src/File.yaml)
 
 ### Attributes
   

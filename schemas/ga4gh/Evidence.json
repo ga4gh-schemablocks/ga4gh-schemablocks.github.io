@@ -43,7 +43,7 @@
       "evidenceCode" : {
          "allof" : [
             {
-               "$ref" : "https://schemablocks.org/schemas/ga4gh/OntologyClass/v0.0.1"
+               "$ref" : "https://schemablocks.org/schemas/ga4gh/OntologyClass.json"
             },
             {
                "description" : "The encoded evidence type using, for example the Evidence & Conclusion Ontology\n(ECO - http://purl.obolibrary.org/obo/eco.owl)\nFHIR mapping - Condition.evidence.code\n",
@@ -60,7 +60,7 @@
       "reference" : {
          "allof" : [
             {
-               "$ref" : "https://schemablocks.org/schemas/ga4gh/ExternalReference/v0.0.1"
+               "$ref" : "https://schemablocks.org/schemas/ga4gh/ExternalReference.json"
             },
             {
                "description" : "FHIR mapping - Condition.evidence.detail\n",

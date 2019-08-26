@@ -33,8 +33,8 @@ tags:
 
 ### Source
 
-* raw source [[YAML](./Curie.yaml)] [[JSON](./Curie.json)] 
-* [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/sb-meta/Curie.yaml)
+* raw source [[JSON](./Curie.json)] 
+* [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/src/Curie.yaml)
 
 ### Attributes
   

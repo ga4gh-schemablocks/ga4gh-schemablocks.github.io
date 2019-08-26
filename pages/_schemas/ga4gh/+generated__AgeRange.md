@@ -34,8 +34,8 @@ tags:
 
 ### Source
 
-* raw source [[YAML](./AgeRange.yaml)] [[JSON](./AgeRange.json)] 
-* [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/sb-meta/AgeRange.yaml)
+* raw source [[JSON](./AgeRange.json)] 
+* [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/src/AgeRange.yaml)
 
 ### Attributes
   
@@ -51,11 +51,11 @@ __Description:__ Age range
   </tr>
   <tr>
     <td>end</td>
-    <td>https://schemablocks.org/schemas/ga4gh/Age.yaml [<a href="https://schemablocks.org/schemas/ga4gh/Age.yaml" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]</td>
+    <td>https://schemablocks.org/schemas/ga4gh/Age.json [<a href="https://schemablocks.org/schemas/ga4gh/Age.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
     <td>start</td>
-    <td>https://schemablocks.org/schemas/ga4gh/Age.yaml [<a href="https://schemablocks.org/schemas/ga4gh/Age.yaml" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]</td>
+    <td>https://schemablocks.org/schemas/ga4gh/Age.json [<a href="https://schemablocks.org/schemas/ga4gh/Age.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]</td>
   </tr>
 
 </table>
@@ -63,7 +63,7 @@ __Description:__ Age range
     
 #### end
 
-* type: https://schemablocks.org/schemas/ga4gh/Age.yaml [<a href="https://schemablocks.org/schemas/ga4gh/Age.yaml" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]
+* type: https://schemablocks.org/schemas/ga4gh/Age.json [<a href="https://schemablocks.org/schemas/ga4gh/Age.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]
 
 Age as ISO8601 string or OntologyClass
 
@@ -85,7 +85,7 @@ Age as ISO8601 string or OntologyClass
     
 #### start
 
-* type: https://schemablocks.org/schemas/ga4gh/Age.yaml [<a href="https://schemablocks.org/schemas/ga4gh/Age.yaml" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]
+* type: https://schemablocks.org/schemas/ga4gh/Age.json [<a href="https://schemablocks.org/schemas/ga4gh/Age.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]
 
 Age as ISO8601 string or OntologyClass
 

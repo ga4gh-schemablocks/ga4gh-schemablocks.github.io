@@ -51,7 +51,7 @@
    },
    "properties" : {
       "end" : {
-         "$ref" : "https://schemablocks.org/schemas/ga4gh/Age.yaml",
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/Age.json",
          "description" : "Age as ISO8601 string or OntologyClass",
          "examples" : [
             {
@@ -66,7 +66,7 @@
          ]
       },
       "start" : {
-         "$ref" : "https://schemablocks.org/schemas/ga4gh/Age.yaml",
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/Age.json",
          "description" : "Age as ISO8601 string or OntologyClass",
          "examples" : [
             {

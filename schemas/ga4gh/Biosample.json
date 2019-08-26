@@ -1,0 +1,239 @@
+{
+   "$id" : "https://schemablocks.org/schemas/ga4gh/Biosample/v0.0.1",
+   "$schema\"" : "http://json-schema.org/draft-07/schema#",
+   "description" : "A Biosample refers to a unit of biological material from which the substrate \nmolecules (e.g. genomic DNA, RNA, proteins) for molecular analyses (e.g. \nsequencing, array hybridisation, mass-spectrometry) are extracted.\n\nExamples would be a tissue biopsy, a single cell from a culture for single \ncell genome sequencing or a protein fraction from a gradient centrifugation. \n\nSeveral instances (e.g. technical replicates) or types of experiments (e.g. \ngenomic array as well as RNA-seq experiments) may refer to the same Biosample.\n\nFHIR mapping: [Specimen](http://www.hl7.org/fhir/specimen.html).\n",
+   "examples" : [
+      {
+         "age_at_collection" : {
+            "age" : "P56Y",
+            "age_class" : {
+               "id" : "HP:0003621",
+               "label" : "Juvenile onset"
+            }
+         },
+         "biocharacteristics" : [
+            {
+               "description" : "Lobular Breast Carcinoma In Situ, study sample",
+               "type" : {
+                  "id" : "ncit:C4018",
+                  "label" : "Lobular Breast Carcinoma In Situ"
+               }
+            }
+         ],
+         "created" : "2017-10-25T07:06:03Z",
+         "data_use_conditions" : {
+            "id" : "DUO:0000004",
+            "label" : "no restriction"
+         },
+         "description" : "Burkitt lymphoma, cell line Namalwa",
+         "external_references" : [
+            {
+               "description" : "Cellosaurus cell line identifier",
+               "relation" : "provenance",
+               "type" : {
+                  "id" : "cellosaurus:CVCL_0312",
+                  "label" : "HOS"
+               }
+            }
+         ],
+         "geo_provenance" : {
+            "altitude" : "94",
+            "city" : "Timisoara",
+            "country" : "Romania",
+            "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
+            "latitude" : "45.75",
+            "longitude" : "21.23"
+         },
+         "id" : "AM_BS__NCBISKYCGH-1993",
+         "individual_id" : "ind-cnhl-1293347-004",
+         "info" : {
+            "death" : "1",
+            "followup_time" : "P14M"
+         },
+         "name" : "Sample BRCA-00429, 2nd replicate",
+         "project_id" : "ind-cnhl-1293347-004",
+         "updated" : "2017-10-25T07:06:03Z"
+      }
+   ],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "GA4GH Data Working Group"
+         },
+         {
+            "description" : "Michael Baudis",
+            "id" : "orcid:0000-0002-9903-4248"
+         },
+         {
+            "description" : "Jules Jacobsen",
+            "id" : "orcid:0000-0002-3265-15918"
+         },
+         {
+            "description" : "Melanie Courtot",
+            "id" : "orcid:0000-0002-9551-6370"
+         }
+      ],
+      "provenance" : [
+         {
+            "description" : "Original GA4GH schema",
+            "id" : "https://github.com/ga4gh/ga4gh-schemas/blob/master/src/main/proto/ga4gh/bio_metadata.proto#L65"
+         }
+      ],
+      "sb_status" : "implemented",
+      "used_by" : [
+         {
+            "description" : "Phenopackets",
+            "url" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/biosample.rst"
+         },
+         {
+            "description" : "Progenetix database schema (Beacon+ backend)",
+            "id" : "https://github.com/progenetix/schemas/tree/master/main/yaml"
+         }
+      ]
+   },
+   "properties" : {
+      "age_at_collection" : {
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/Age.json",
+         "description" : "The age of the individual at time of biosample collection, as Age object.\n",
+         "example" : {
+            "age" : "P56Y",
+            "age_class" : {
+               "id" : "HP:0003621",
+               "label" : "Juvenile onset"
+            }
+         },
+         "examples" : []
+      },
+      "biocharacteristics" : {
+         "description" : "The _Biocharacteristics_ object represents a wrapper list of \"Phenotype\" \nobjects with properly prefixed term ids, describing features of the \nbiosample.  \nExamples would be phenotypes, disease codes or other ontology classes \n*specific to this biosample*, i.e. not general features of the individual \nit was derived from.  \nIn a complete data model (variants->[callsets]->biosamples->individuals), \ncharacteristics applying to the _individual_ (e.g. sex, most phenotypes) \nshould be annotated with the individual.\n",
+         "examples" : [
+            {
+               "description" : "Adenocarcinoma of the pancreas",
+               "type" : {
+                  "id" : "pgx:81403",
+                  "label" : "Adenocarcinoma, NOS"
+               }
+            },
+            {
+               "description" : "Pancreatic Adenocarcinoma",
+               "type" : {
+                  "id" : "ncit:C8294",
+                  "label" : "Pancreatic Adenocarcinoma"
+               }
+            }
+         ],
+         "items" : {
+            "$ref" : "https://schemablocks.org/schemas/ga4gh/PhenotypicFeature.json"
+         },
+         "type" : "array"
+      },
+      "created" : {
+         "description" : "The creation time of this record, in ISO8601\n",
+         "example" : "2017-10-25T07:06:03Z",
+         "examples" : [],
+         "type" : "string"
+      },
+      "data_use_conditions" : {
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/DataUseConditions.json",
+         "description" : "Data use conditions applying to data from this biosample, as data use \ncondition object (e.g. DUO).\n",
+         "examples" : [
+            {
+               "id" : "DUO:0000004",
+               "label" : "no restriction"
+            }
+         ]
+      },
+      "description" : {
+         "description" : "A free text description of the biosample. This should not contain any \nstructured data.\n",
+         "example" : "Burkitt lymphoma, cell line Namalwa",
+         "examples" : [],
+         "type" : "string"
+      },
+      "external_references" : {
+         "description" : "A list of reference_class objects with properly (e.g. identifiers.org) \nprefixed external identifiers and a term describing the relationship.\n",
+         "example" : [
+            {
+               "description" : "Cellosaurus cell line identifier",
+               "relation" : "provenance",
+               "type" : {
+                  "id" : "cellosaurus:CVCL_0312",
+                  "label" : "HOS"
+               }
+            },
+            {
+               "description" : "PubMed reference",
+               "relation" : "report",
+               "type" : {
+                  "id" : "pubmed:2823272",
+                  "label" : "Rearrangement of the p53 gene in human osteogenic sarcomas."
+               }
+            }
+         ],
+         "examples" : [],
+         "items" : {
+            "$ref" : "https://schemablocks.org/schemas/ga4gh/ExternalReference.json"
+         },
+         "type" : "array"
+      },
+      "geo_provenance" : {
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/GeoLocation.json",
+         "description" : "This geo_class attribute ideally describes the geographic location of where the sample was extracted.\nFrequently, this value may reflect either the place of the laboratory where the analysis was performed, or correspond to the corresponding author's institution.\n",
+         "example" : {
+            "altitude" : "94",
+            "city" : "Timisoara",
+            "country" : "Romania",
+            "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
+            "latitude" : "45.75",
+            "longitude" : "21.23",
+            "precision" : "address"
+         },
+         "examples" : []
+      },
+      "id" : {
+         "description" : "The local-unique identifier of this biosample (referenced as \n\"biosample_id\"). This is unique in the context of the local (e.g. \nserver, resource) instance.\n",
+         "examples" : [
+            "AM_BS__NCBISKYCGH-1993"
+         ],
+         "type" : "string"
+      },
+      "individual_id" : {
+         "description" : "In a complete data model \"individual_id\" points to the \"id\" of the \nindividual (\"donor\", \"subjerct\"...) this _Biosample_ was derived from.\n\nIn a local context this could be the _id_ attribute in a corresponding \n\"individuals\" collection.\n",
+         "examples" : [
+            "ind-cnhl-1293347-004"
+         ],
+         "type" : "string"
+      },
+      "info" : {
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/Info.json",
+         "description" : "This is a wrapper for objects without further specification in the schema.\n",
+         "example" : {
+            "death" : "1",
+            "followup_time" : "P14M"
+         },
+         "examples" : []
+      },
+      "name" : {
+         "description" : "A short descriptive name for sample which should be sufficient to \ndistinguish it from other samples in the project or collection. \nThis is a label or symbolic identifier for the biosample.\n",
+         "examples" : [
+            "Sample BRCA-00429, 2nd replicate"
+         ],
+         "type" : "string"
+      },
+      "project_id" : {
+         "description" : "The id attribute of the project that this biosample was collected in.\n",
+         "examples" : [
+            "ind-cnhl-1293347-004"
+         ],
+         "type" : "string"
+      },
+      "updated" : {
+         "description" : "The time of the last edit of this record, in ISO8601\n",
+         "example" : "2022-11-11T09:45:13Z",
+         "examples" : [],
+         "type" : "string"
+      }
+   },
+   "title" : "Biosample",
+   "type" : "object"
+}
+

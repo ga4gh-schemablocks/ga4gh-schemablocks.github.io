@@ -41,7 +41,7 @@
    },
    "properties" : {
       "bodySite" : {
-         "$ref" : "https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml",
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/OntologyClass.json",
          "description" : "FHIR mapping - Procedure.bodySite\n",
          "examples" : [
             {
@@ -51,7 +51,7 @@
          ]
       },
       "code" : {
-         "$ref" : "https://schemablocks.org/schemas/ga4gh/OntologyClass.yaml",
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/OntologyClass.json",
          "description" : "FHIR mapping - Procedure.code\n",
          "examples" : [
             {

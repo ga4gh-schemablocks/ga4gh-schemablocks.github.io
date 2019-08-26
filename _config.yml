@@ -16,7 +16,7 @@ include:        # usually only pages in / and /_posts are "seen" => processed
   - tags        # contains landing pages for each tag
   - schemas
 
-# Collections are used to organise pages into logical groups; these do not need 
+# Collections are used to organise pages into logical groups; these do not need
 # to have a relation to the "categories", though this is highly recommended
 # Collection directories reside in "/collections_dir/_(collection name)".
 
@@ -37,8 +37,8 @@ collections:
     output: true
     permalink: /howto/:path/
 collections_dir: pages  # optional; here, all collections are inside "/pages"
-    
-# navigation blocks can be used to separate different categories and add e.g. 
+
+# navigation blocks can be used to separate different categories and add e.g.
 # external link block(s), in combination with a properly modified layout
 
 nav_cat_blocks: # comma-separated "label,type,label_visibility"
@@ -64,7 +64,7 @@ tags-date-sorted:
   - press
   - news
 
-related_sites: 
+related_sites:
   'GA4GH::Discovery': 'http://ga4gh-discovery.github.io'
   'GA4GH::CLP': 'http://ga4gh-cp.github.io'
   'GA4GH::GKS': 'http://ga4gh-gks.github.io'
@@ -76,7 +76,7 @@ related_sites:
 github_projects:
   'SchemaBlocks': 'http://github.com/ga4gh-schemablocks/'
   'ELIXIR Beacon': 'http://github.com/beacon-project/'
-  
+
 # tag_cloud items
 
 cloud_tags:
