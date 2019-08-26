@@ -33,7 +33,7 @@ tags:
 ### Source
 
 * raw source [[JSON](./HtsFile.json)] 
-* [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/src/HtsFile.yaml)
+* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/HtsFile.yaml)
 
 ### Attributes
   

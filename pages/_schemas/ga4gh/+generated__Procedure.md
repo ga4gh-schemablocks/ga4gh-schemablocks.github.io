@@ -33,7 +33,7 @@ tags:
 ### Source
 
 * raw source [[JSON](./Procedure.json)] 
-* [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/src/Procedure.yaml)
+* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/Procedure.yaml)
 
 ### Attributes
   

@@ -34,7 +34,7 @@ tags:
 ### Source
 
 * raw source [[JSON](./Curie.json)] 
-* [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/src/Curie.yaml)
+* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/Curie.yaml)
 
 ### Attributes
   

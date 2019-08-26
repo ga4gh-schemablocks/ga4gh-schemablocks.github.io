@@ -34,7 +34,7 @@ tags:
 ### Source
 
 * raw source [[JSON](./Age.json)] 
-* [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/src/Age.yaml)
+* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/Age.yaml)
 
 ### Attributes
   

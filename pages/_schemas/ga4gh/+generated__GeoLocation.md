@@ -35,7 +35,7 @@ tags:
 ### Source
 
 * raw source [[JSON](./GeoLocation.json)] 
-* [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/src/GeoLocation.yaml)
+* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/GeoLocation.yaml)
 
 ### Attributes
   

@@ -35,7 +35,7 @@ tags:
 ### Source
 
 * raw source [[JSON](./AgeRange.json)] 
-* [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/src/AgeRange.yaml)
+* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/AgeRange.yaml)
 
 ### Attributes
   
