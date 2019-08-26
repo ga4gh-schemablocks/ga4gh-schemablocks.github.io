@@ -1,17 +1,15 @@
 ---
 title: 'Current {S}[B] Repository Status'
 layout: default
-author: @mbaudis
+author: ['@mbaudis']
 excerpt_separator: <!--more-->
 www_link:
-category:
+categories:
   - news
-  - schemas
 tags:
   - news
   - code
   - FAQ
-  - developers
   - issues
 ---
 
