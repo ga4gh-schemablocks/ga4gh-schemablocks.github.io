@@ -1,6 +1,6 @@
 ---
 title: 'SchemaBlocks Repositories'
-date: 2019-03-06
+date: 2019-08-26
 layout: default
 author: "@mbaudis"
 excerpt_separator: <!--more-->
@@ -30,7 +30,7 @@ repositories. Please use the relevant _Github Issues_ to and/or GH pull requests
 * website repository
 * contains
     - documentation pages (formats, general)
-    - representation of schemas ("blocks"), rendered from the code repositories
+    - representation of schemas ("blocks"), rendered from the code repositories, in [/pages/_schemas](https://github.com/ga4gh-schemablocks/ga4gh-schemablocks.github.io/edit/master/pages/_schemas/) (website source files for Github Pages rendering) and [/schemas/ga4gh](https://github.com/ga4gh-schemablocks/ga4gh-schemablocks.github.io/edit/master/schemas/ga4gh) (schema source code in JSON Schema format)
 * [Github issues](https://github.com/ga4gh-schemablocks/ga4gh-schemablocks.github.io/issues) here should address general SchemaBlocks topics and governance, as well as formats documentation
 
 #### [blocks](https://github.com/ga4gh-schemablocks/blocks)
@@ -44,10 +44,15 @@ repositories. Please use the relevant _Github Issues_ to and/or GH pull requests
 * repository for suggeting & testing possible additions to the {S}[B] environment
 * items there should be considered "experimental", with no reliable endorsement by the {S}[B] community
 
-#### [blocks-json-schema](https://github.com/ga4gh-schemablocks/blocks-json-schema)
+#### [tools](https://github.com/ga4gh-schemablocks/tools)
 
-* working repository for the conversion of existing / external schema blocks into the JSON Schema format used throughout {S}[B]
-* as a working repository not to be considered authoritive; however, place for commenting on code etc.
+* scripts for processing the source code in the blocks (and possibly other) repository and rendering the reference schema files and documentation pages into this website project
+
+#### [playground](https://github.com/ga4gh-schemablocks/playground)
+
+* repository for suggeting & testing possible additions to the {S}[B] environment
+* items there should be considered "experimental", with no reliable endorsement by the {S}[B] community
+
 
 #### TODO: "implementations"
 
