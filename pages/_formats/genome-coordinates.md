@@ -9,7 +9,7 @@ description: >
   Use "0-start, half-open" intervals when representing coordinates in all systems bar when data is displayed to a human.
 excerpt_separator: <!--more-->
 category:
-  - formats
+  - standards
 tags:
   - coordinates
   - recommendation

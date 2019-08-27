@@ -6,7 +6,7 @@ permalink:
 author: "@mbaudis"
 excerpt_separator: <!--more-->
 category:
-  - formats
+  - standards
 tags:
   - times
   - dates

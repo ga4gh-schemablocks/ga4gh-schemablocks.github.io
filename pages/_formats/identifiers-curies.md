@@ -7,7 +7,7 @@ author:
   - "@cmungall"
 excerpt_separator: <!--more-->
 category:
-  - formats
+  - standards
 tags:
   - identifiers
 ---
@@ -33,7 +33,7 @@ This is a draft recommendation; please see also [a recent discussion](https://gi
 * {{this_author}}
     {%- endif -%}
   {% endfor %}
-{% endif %} 
+{% endif %}
 
 CURIEs ("[Compact URIs](https://www.w3.org/TR/curie/)") are namespace-scoped identifiers which can be expanded to Internationalized Resource Identifiers ([IRI](https://www.w3.org/International/articles/idn-and-iri/)). A CURIE is comprised of two components, a prefix and a reference, separated by a colon symbol (:). CURIES are case sensitive, although for prefixes this practice is inconsistently being followed.
 
@@ -61,5 +61,3 @@ In GA4GH schemas, CURIEs constitute the recommended syntax for the referencing o
 * [W3C IRI](https://www.w3.org/International/articles/idn-and-iri/) documentation
 * [IETF IRI](https://www.ietf.org/rfc/rfc3987.txt) specification (e.g. allowed characters)
 * SchemaBlocks [Ontology_term](http://schemablocks.org/schemas/blocks/Ontology_term.html) class documentation
-
-

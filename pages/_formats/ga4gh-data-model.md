@@ -10,7 +10,7 @@ description: |
   A general object model recommendation, based on the GA4GH schema and describing relationships between variants - callsets - biosamples - individuals
 excerpt_separator: <!--more-->
 category:
-  - formats
+  - standards
 tags:
   - model
   - objects

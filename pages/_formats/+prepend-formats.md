@@ -1,6 +1,6 @@
 ---
 category:
-  - formats
+  - standards
 tags:
   - .prepend
   - .sticky

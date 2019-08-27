@@ -27,9 +27,9 @@ collections:
   schemas:
     output: true
     permalink: /schemas/:path/
-  formats:
+  standards:
     output: true
-    permalink: /formats/:path/
+    permalink: /standards/:path/
   people:
     output: true
     permalink: /people/:path/
@@ -50,8 +50,8 @@ General:
   about: 'About {S}[B]'
   news: News
   people: Participants
-  formats: 'Data Formats'
-  schemas: 'Data Schemas'
+  standards: 'Standards'
+  schemas: 'Schemas'
   howto: 'Examples, Guides & FAQ'
   minutes: 'Meeting minutes'
   contact: Contacts
