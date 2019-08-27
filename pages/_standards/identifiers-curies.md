@@ -37,6 +37,13 @@ This is a draft recommendation; please see also [a recent discussion](https://gi
 
 CURIEs ("[Compact URIs](https://www.w3.org/TR/curie/)") are namespace-scoped identifiers which can be expanded to Internationalized Resource Identifiers ([IRI](https://www.w3.org/International/articles/idn-and-iri/)). A CURIE is comprised of two components, a prefix and a reference, separated by a colon symbol (:). CURIES are case sensitive, although for prefixes this practice is inconsistently being followed.
 
+The GA4GH recommendations are:
+
+* use only a single prefix
+* avoid the use of the underscore `_` character in th eprivate part of an identifier
+    - reason is the sometimes replacement of the colon `:` separator by `_`, in computing environments where `:` may be problematic
+    - exceptions are underscore characters in computed identifiers
+
 #### GA4GH Use
 
 In GA4GH schemas, CURIEs constitute the recommended syntax for the referencing ontology classes or external references. Here, usually a CURIE as `id` is combined with a `label` for the text representation of the , such in the `Ontology_term` object prototype:
@@ -60,4 +67,5 @@ In GA4GH schemas, CURIEs constitute the recommended syntax for the referencing o
 * [W3C CURIE syntax](https://www.w3.org/TR/curie/) page
 * [W3C IRI](https://www.w3.org/International/articles/idn-and-iri/) documentation
 * [IETF IRI](https://www.ietf.org/rfc/rfc3987.txt) specification (e.g. allowed characters)
-* SchemaBlocks [Ontology_term](http://schemablocks.org/schemas/blocks/Ontology_term.html) class documentation
+* SchemaBlocks [Ontology_term](http://schemablocks.org/schemas/ga4gh/OntologyClass.html) class documentation
+* SchemaBlocks [Curie](http://schemablocks.org/schemas/ga4gh/Curie.html) class documentation
