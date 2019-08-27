@@ -83,6 +83,7 @@ cloud_tags:
   - Beacon
   - CP
   - Discovery
+  - FAQ
   - GA4GH
   - GKS
   - MME
@@ -95,10 +96,10 @@ cloud_tags:
   - developers
   - identifiers
   - issues
-  - FAQ
   - howto
   - leads
   - news
+  - phenopackets
   - press
   - times
   - website
