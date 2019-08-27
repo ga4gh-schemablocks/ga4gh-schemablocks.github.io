@@ -1,7 +1,7 @@
 ---
-title: 'Curie'
+title: Curie
 layout: default
-permalink: "/schemas/ga4gh/Curie.html"
+permalink: "/Curie.html"
 excerpt_separator: <!--more-->
 category:
   - schemas
@@ -15,15 +15,12 @@ tags:
 * {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
     - __implemented__
 
-
 * Provenance  
 
     - [vr-spec](https://github.com/ga4gh/vr-spec/blob/master/schema/vr.yaml)  
-
 * Used by  
 
     - [vr-spec](https://github.com/ga4gh/vr-spec/blob/master/schema/vr.yaml)  
-
 * Contributors  
 
     - [Reece Hart](https://orcid.org/0000-0003-3463-0775)  
@@ -33,7 +30,7 @@ tags:
 
 ### Source
 
-* raw source [[JSON](./Curie.json)] 
+* raw source [[JSON](./Curie.json)]
 * [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/Curie.yaml)
 
 ### Attributes
@@ -66,4 +63,5 @@ the prefix separation (in replacement for the colon character `:`).
 ```
 "PMID:15254584"
 ```
+
 

@@ -1,7 +1,7 @@
 ---
-title: 'PhenotypicFeature'
+title: PhenotypicFeature
 layout: default
-permalink: "/schemas/ga4gh/PhenotypicFeature.html"
+permalink: "/PhenotypicFeature.html"
 excerpt_separator: <!--more-->
 category:
   - schemas
@@ -15,15 +15,12 @@ tags:
 * {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
     - __implemented__
 
-
 * Provenance  
 
     - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/phenopacket.rst)  
-
 * Used by  
 
     - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/phenopacket.rst)  
-
 * Contributors  
 
     - [Jules Jacobsen](https://orcid.org/0000-0002-3265-15918)  
@@ -33,7 +30,7 @@ tags:
 
 ### Source
 
-* raw source [[JSON](./PhenotypicFeature.json)] 
+* raw source [[JSON](./PhenotypicFeature.json)]
 * [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/PhenotypicFeature.yaml)
 
 ### Attributes
@@ -91,7 +88,7 @@ Observation (https://www.hl7.org/fhir/observation.html)
 
 </table>
 
-    
+
 #### ageOfOnset
 
 * type: https://schemablocks.org/schemas/ga4gh/Age.json [<a href="https://schemablocks.org/schemas/ga4gh/Age.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]
@@ -112,7 +109,7 @@ FHIR mapping: Condition.onset
    }
 }
 ```
-    
+
 #### ageRangeOfOnset
 
 * type: https://schemablocks.org/schemas/ga4gh/AgeRange.json [<a href="https://schemablocks.org/schemas/ga4gh/AgeRange.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/AgeRange.html" target="_BLANK">HTML</a>]
@@ -138,7 +135,7 @@ FHIR mapping: Condition.onset
    }
 }
 ```
-    
+
 #### classOfOnset
 
 * type: https://schemablocks.org/schemas/ga4gh/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
@@ -155,7 +152,7 @@ FHIR mapping: Condition.onset
    "label" : "Middle age onset"
 }
 ```
-    
+
 #### description
 
 * type: string
@@ -170,7 +167,7 @@ fields should be used for this purpose.
 ```
 "Pancreatic Adenocarcinoma"
 ```
-    
+
 #### evidence
 
 * type: array of https://schemablocks.org/schemas/ga4gh/Evidence.json [<a href="https://schemablocks.org/schemas/ga4gh/Evidence.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Evidence.html" target="_BLANK">HTML</a>]
@@ -191,7 +188,7 @@ Evidences for how the phenotype was determined.
    }
 }
 ```
-    
+
 #### modifiers
 
 * type: array of https://schemablocks.org/schemas/ga4gh/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
@@ -208,7 +205,7 @@ HP:0012824 - Severity.
    "label" : "Dull"
 }
 ```
-    
+
 #### negated
 
 * type: boolean
@@ -225,7 +222,7 @@ the logical negation of the OntologyClass used in the 'type' field.
 ```
 "false"
 ```
-    
+
 #### severity
 
 * type: https://schemablocks.org/schemas/ga4gh/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
@@ -243,7 +240,7 @@ FHIR mapping: Condition.severity
    "label" : "Mild"
 }
 ```
-    
+
 #### type
 
 * type: https://schemablocks.org/schemas/ga4gh/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
@@ -298,4 +295,5 @@ FHIR mapping: Condition.identifier
    }
 }
 ```
+
 

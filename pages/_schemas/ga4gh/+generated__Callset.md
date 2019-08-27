@@ -1,7 +1,7 @@
 ---
-title: 'Callset'
+title: Callset
 layout: default
-permalink: "/schemas/ga4gh/Callset.html"
+permalink: "/Callset.html"
 excerpt_separator: <!--more-->
 category:
   - schemas
@@ -15,15 +15,12 @@ tags:
 * {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
     - __proposed__
 
-
 * Provenance  
 
     - [Original GA4GH schema](https://github.com/ga4gh/ga4gh-schemas/blob/master/src/main/proto/ga4gh/variants.proto#L65)  
-
 * Used by  
 
     - [Progenetix database schema (Beacon+ backend)](https://github.com/progenetix/schemas/tree/master/main/yaml)  
-
 * Contributors  
 
     - GA4GH Data Working Group  
@@ -32,7 +29,7 @@ tags:
 
 ### Source
 
-* raw source [[JSON](./Callset.json)] 
+* raw source [[JSON](./Callset.json)]
 * [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/Callset.yaml)
 
 ### Attributes
@@ -85,7 +82,7 @@ variants detected in this experiment, attributed to the referenced biosample.
 
 </table>
 
-    
+
 #### biosample_id
 
 * type: string
@@ -100,7 +97,7 @@ variant -> callset -> biosample chaining.
 ```
 "pgx-bs-987647"
 ```
-    
+
 #### created
 
 * type: string
@@ -111,7 +108,7 @@ implementations may transfer this to a date object.
 
 ##### `created` Value Example  
 
-    
+
 #### data_use_conditions
 
 * type: https://schemablocks.org/schemas/ga4gh/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
@@ -128,7 +125,7 @@ Data use conditions applying to data from this callset, as ontology class
    "label" : "no restriction"
 }
 ```
-    
+
 #### description
 
 * type: string
@@ -141,7 +138,7 @@ A free text description about the callset.
 ```
 "SNP6 array of cancer sample BRCA-0893"
 ```
-    
+
 #### geo_provenance
 
 * type: https://schemablocks.org/schemas/ga4gh/GeoLocation.json [<a href="https://schemablocks.org/schemas/ga4gh/GeoLocation.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/GeoLocation.html" target="_BLANK">HTML</a>]
@@ -161,7 +158,7 @@ where this callset was analysed.
    "longitude" : "21.23"
 }
 ```
-    
+
 #### id
 
 * type: string
@@ -174,7 +171,7 @@ The local-unique identifier of this callset (referenced as "callset_id").
 ```
 "GSM264198"
 ```
-    
+
 #### info
 
 * type: object
@@ -206,7 +203,7 @@ accompanying documentation of the specific implementation.
    }
 }
 ```
-    
+
 #### updated
 
 * type: string
@@ -260,4 +257,5 @@ System-specific implementations may transfer this to a date object.
    "updated" : "2017-10-25T07:06:03Z"
 }
 ```
+
 

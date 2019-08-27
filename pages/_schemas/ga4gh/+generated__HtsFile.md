@@ -1,7 +1,7 @@
 ---
-title: 'HtsFile'
+title: HtsFile
 layout: default
-permalink: "/schemas/ga4gh/HtsFile.html"
+permalink: "/HtsFile.html"
 excerpt_separator: <!--more-->
 category:
   - schemas
@@ -15,15 +15,12 @@ tags:
 * {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
     - __implemented__
 
-
 * Provenance  
 
     - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/file.rst)  
-
 * Used by  
 
     - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/file.rst)  
-
 * Contributors  
 
     - [Jules Jacobsen](https://orcid.org/0000-0002-3265-15918)  
@@ -32,7 +29,7 @@ tags:
 
 ### Source
 
-* raw source [[JSON](./HtsFile.json)] 
+* raw source [[JSON](./HtsFile.json)]
 * [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/HtsFile.yaml)
 
 ### Attributes
@@ -71,7 +68,7 @@ __Description:__ A file in one of the HTS formats (https://samtools.github.io/ht
 
 </table>
 
-    
+
 #### description
 
 * type: string
@@ -84,7 +81,7 @@ description of the file contents
 ```
 "this is the description for the file"
 ```
-    
+
 #### genomeAssembly
 
 * type: string
@@ -98,7 +95,7 @@ nomenclature e.g. GRCh37, GRCh38
 ```
 "GRCh37"
 ```
-    
+
 #### htsFormat
 
 * type: 
@@ -111,7 +108,7 @@ one of UNKNOWN, SAM, BAM, CRAM, VCF, BCF, GVCF
 ```
 "SAM"
 ```
-    
+
 #### individualToSampleIdentifiers
 
 * type: object
@@ -128,7 +125,7 @@ Individual::id for the individuals in the message, the values must map to the sa
    "individual2" : "add example"
 }
 ```
-    
+
 #### uri
 
 * type: string
@@ -154,4 +151,5 @@ URI for the file
    "uri" : "file://data/genomes/file1.vcf.gz"
 }
 ```
+
 

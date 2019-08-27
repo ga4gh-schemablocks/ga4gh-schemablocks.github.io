@@ -1,7 +1,7 @@
 ---
-title: 'OntologyClass'
+title: OntologyClass
 layout: default
-permalink: "/schemas/ga4gh/OntologyClass.html"
+permalink: "/OntologyClass.html"
 excerpt_separator: <!--more-->
 category:
   - schemas
@@ -15,18 +15,15 @@ tags:
 * {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
     - __implemented__
 
-
 * Provenance  
 
     - Original GA4GH schema  
     - additional discussions with @cmungall and phenopackets developers  
     - Phenopackets alignment  
-
 * Used by  
 
     - Phenopackets  
     - Progenetix database schema (Beacon+ backend)  
-
 * Contributors  
 
     - GA4GH Metadata Task Team  
@@ -37,7 +34,7 @@ tags:
 
 ### Source
 
-* raw source [[JSON](./OntologyClass.json)] 
+* raw source [[JSON](./OntologyClass.json)]
 * [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/OntologyClass.yaml)
 
 ### Attributes
@@ -68,7 +65,7 @@ inconsistently followed.
 
 </table>
 
-    
+
 #### id
 
 * type: string
@@ -80,7 +77,7 @@ properly prefixed CURIE of the ontology term
 ```
 "ncit:C8294"
 ```
-    
+
 #### label
 
 * type: string
@@ -108,4 +105,5 @@ the text label associated with the term
    "label" : "Juvenile onset"
 }
 ```
+
 

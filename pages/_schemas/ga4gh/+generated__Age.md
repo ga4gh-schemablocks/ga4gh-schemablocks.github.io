@@ -1,7 +1,7 @@
 ---
-title: 'Age'
+title: Age
 layout: default
-permalink: "/schemas/ga4gh/Age.html"
+permalink: "/Age.html"
 excerpt_separator: <!--more-->
 category:
   - schemas
@@ -15,15 +15,12 @@ tags:
 * {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
     - __implemented__
 
-
 * Provenance  
 
     - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/age.rst)  
-
 * Used by  
 
     - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/age.rst)  
-
 * Contributors  
 
     - [Jules Jacobsen](https://orcid.org/0000-0002-3265-15918)  
@@ -33,7 +30,7 @@ tags:
 
 ### Source
 
-* raw source [[JSON](./Age.json)] 
+* raw source [[JSON](./Age.json)]
 * [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/Age.yaml)
 
 ### Attributes
@@ -59,7 +56,7 @@ __Description:__ Age
 
 </table>
 
-    
+
 #### age
 
 * type: string
@@ -71,7 +68,7 @@ Age as ISO8601 period
 ```
 "P12Y"
 ```
-    
+
 #### ageClass
 
 * type: https://schemablocks.org/schemas/ga4gh/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
@@ -111,4 +108,5 @@ to either use an "age of onset" ontology or an "Age" class.
    "age" : "P56Y3M"
 }
 ```
+
 

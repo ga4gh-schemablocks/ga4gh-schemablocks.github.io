@@ -1,7 +1,7 @@
 ---
-title: 'GeoLocation'
+title: GeoLocation
 layout: default
-permalink: "/schemas/ga4gh/GeoLocation.html"
+permalink: "/GeoLocation.html"
 excerpt_separator: <!--more-->
 category:
   - schemas
@@ -15,15 +15,12 @@ tags:
 * {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
     - __proposed__
 
-
 * Provenance  
 
     - [Developer branch of original GA4GH schema](https://github.com/ga4gh-metadata/metadata-schemas/blob/master/schemas/shared.proto#L60)  
-
 * Used by  
 
     - [Progenetix database schema (Beacon+ backend)](https://github.com/progenetix/schemas/tree/master/main/yaml)  
-
 * Contributors  
 
     - GA4GH Metadata Task Team  
@@ -34,7 +31,7 @@ tags:
 
 ### Source
 
-* raw source [[JSON](./GeoLocation.json)] 
+* raw source [[JSON](./GeoLocation.json)]
 * [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/GeoLocation.yaml)
 
 ### Attributes
@@ -91,7 +88,7 @@ and avoids optional representation in non-standard units.
 
 </table>
 
-    
+
 #### altitude
 
 * type: number
@@ -103,7 +100,7 @@ height in meters above the WGS 84 reference ellipsoid; optional
 ```
 "8848"
 ```
-    
+
 #### city
 
 * type: string
@@ -125,7 +122,7 @@ values in interpreting the geographic location.
 ```
 "Zurich"
 ```
-    
+
 #### country
 
 * type: string
@@ -142,7 +139,7 @@ and procedural convenience (see notes for "city").
 ```
 "Albania"
 ```
-    
+
 #### label
 
 * type: string
@@ -159,7 +156,7 @@ identification elements, of the corresponding latitude, longitude,
 ```
 "Str Marasesti 5, 300077 Timisoara, Romania"
 ```
-    
+
 #### latitude
 
 * type: number
@@ -171,7 +168,7 @@ signed decimal degrees (North, relative to Equator)
 ```
 "47.37"
 ```
-    
+
 #### longitude
 
 * type: number
@@ -183,7 +180,7 @@ signed decimal degrees (East, relative to IERS Reference Meridian)
 ```
 "8.54"
 ```
-    
+
 #### precision
 
 * type: string
@@ -223,4 +220,5 @@ point coordinates.
    "precision" : "room"
 }
 ```
+
 

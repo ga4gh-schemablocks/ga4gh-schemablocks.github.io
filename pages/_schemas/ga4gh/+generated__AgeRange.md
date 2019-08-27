@@ -1,7 +1,7 @@
 ---
-title: 'AgeRange'
+title: AgeRange
 layout: default
-permalink: "/schemas/ga4gh/AgeRange.html"
+permalink: "/AgeRange.html"
 excerpt_separator: <!--more-->
 category:
   - schemas
@@ -15,15 +15,12 @@ tags:
 * {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
     - __implemented__
 
-
 * Provenance  
 
     - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/agerange.rst)  
-
 * Used by  
 
     - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/agerange.rst)  
-
 * Contributors  
 
     - [Jules Jacobsen](https://orcid.org/0000-0002-3265-15918)  
@@ -34,7 +31,7 @@ tags:
 
 ### Source
 
-* raw source [[JSON](./AgeRange.json)] 
+* raw source [[JSON](./AgeRange.json)]
 * [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/AgeRange.yaml)
 
 ### Attributes
@@ -60,7 +57,7 @@ __Description:__ Age range
 
 </table>
 
-    
+
 #### end
 
 * type: https://schemablocks.org/schemas/ga4gh/Age.json [<a href="https://schemablocks.org/schemas/ga4gh/Age.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]
@@ -82,7 +79,7 @@ Age as ISO8601 string or OntologyClass
    "age" : "P16Y6M"
 }
 ```
-    
+
 #### start
 
 * type: https://schemablocks.org/schemas/ga4gh/Age.json [<a href="https://schemablocks.org/schemas/ga4gh/Age.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]
@@ -114,4 +111,5 @@ Age as ISO8601 string or OntologyClass
    }
 }
 ```
+
 

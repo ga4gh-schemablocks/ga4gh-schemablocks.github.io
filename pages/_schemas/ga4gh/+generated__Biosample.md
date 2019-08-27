@@ -1,7 +1,7 @@
 ---
-title: 'Biosample'
+title: Biosample
 layout: default
-permalink: "/schemas/ga4gh/Biosample.html"
+permalink: "/Biosample.html"
 excerpt_separator: <!--more-->
 category:
   - schemas
@@ -15,16 +15,13 @@ tags:
 * {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
     - __implemented__
 
-
 * Provenance  
 
     - [Original GA4GH schema](https://github.com/ga4gh/ga4gh-schemas/blob/master/src/main/proto/ga4gh/bio_metadata.proto#L65)  
-
 * Used by  
 
     - Phenopackets  
     - [Progenetix database schema (Beacon+ backend)](https://github.com/progenetix/schemas/tree/master/main/yaml)  
-
 * Contributors  
 
     - GA4GH Data Working Group  
@@ -35,7 +32,7 @@ tags:
 
 ### Source
 
-* raw source [[JSON](./Biosample.json)] 
+* raw source [[JSON](./Biosample.json)]
 * [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/Biosample.yaml)
 
 ### Attributes
@@ -116,7 +113,7 @@ FHIR mapping: [Specimen](http://www.hl7.org/fhir/specimen.html).
 
 </table>
 
-    
+
 #### age_at_collection
 
 * type: https://schemablocks.org/schemas/ga4gh/Age.json [<a href="https://schemablocks.org/schemas/ga4gh/Age.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]
@@ -126,7 +123,7 @@ The age of the individual at time of biosample collection, as Age object.
 
 ##### `age_at_collection` Value Example  
 
-    
+
 #### biocharacteristics
 
 * type: array of https://schemablocks.org/schemas/ga4gh/PhenotypicFeature.json [<a href="https://schemablocks.org/schemas/ga4gh/PhenotypicFeature.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/PhenotypicFeature.html" target="_BLANK">HTML</a>]
@@ -162,7 +159,7 @@ should be annotated with the individual.
    }
 }
 ```
-    
+
 #### created
 
 * type: string
@@ -172,7 +169,7 @@ The creation time of this record, in ISO8601
 
 ##### `created` Value Example  
 
-    
+
 #### data_use_conditions
 
 * type: https://schemablocks.org/schemas/ga4gh/DataUseConditions.json [<a href="https://schemablocks.org/schemas/ga4gh/DataUseConditions.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/DataUseConditions.html" target="_BLANK">HTML</a>]
@@ -189,7 +186,7 @@ condition object (e.g. DUO).
    "label" : "no restriction"
 }
 ```
-    
+
 #### description
 
 * type: string
@@ -200,7 +197,7 @@ structured data.
 
 ##### `description` Value Example  
 
-    
+
 #### external_references
 
 * type: array of https://schemablocks.org/schemas/ga4gh/ExternalReference.json [<a href="https://schemablocks.org/schemas/ga4gh/ExternalReference.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/ExternalReference.html" target="_BLANK">HTML</a>]
@@ -211,7 +208,7 @@ prefixed external identifiers and a term describing the relationship.
 
 ##### `external_references` Value Example  
 
-    
+
 #### geo_provenance
 
 * type: https://schemablocks.org/schemas/ga4gh/GeoLocation.json [<a href="https://schemablocks.org/schemas/ga4gh/GeoLocation.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/GeoLocation.html" target="_BLANK">HTML</a>]
@@ -222,7 +219,7 @@ Frequently, this value may reflect either the place of the laboratory where the 
 
 ##### `geo_provenance` Value Example  
 
-    
+
 #### id
 
 * type: string
@@ -237,7 +234,7 @@ server, resource) instance.
 ```
 "AM_BS__NCBISKYCGH-1993"
 ```
-    
+
 #### individual_id
 
 * type: string
@@ -254,7 +251,7 @@ In a local context this could be the _id_ attribute in a corresponding
 ```
 "ind-cnhl-1293347-004"
 ```
-    
+
 #### info
 
 * type: https://schemablocks.org/schemas/ga4gh/Info.json [<a href="https://schemablocks.org/schemas/ga4gh/Info.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Info.html" target="_BLANK">HTML</a>]
@@ -264,7 +261,7 @@ This is a wrapper for objects without further specification in the schema.
 
 ##### `info` Value Example  
 
-    
+
 #### name
 
 * type: string
@@ -279,7 +276,7 @@ This is a label or symbolic identifier for the biosample.
 ```
 "Sample BRCA-00429, 2nd replicate"
 ```
-    
+
 #### project_id
 
 * type: string
@@ -292,7 +289,7 @@ The id attribute of the project that this biosample was collected in.
 ```
 "ind-cnhl-1293347-004"
 ```
-    
+
 #### updated
 
 * type: string
@@ -359,4 +356,5 @@ The time of the last edit of this record, in ISO8601
    "updated" : "2017-10-25T07:06:03Z"
 }
 ```
+
 

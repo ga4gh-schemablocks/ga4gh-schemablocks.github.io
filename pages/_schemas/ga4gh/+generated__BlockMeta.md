@@ -1,7 +1,7 @@
 ---
-title: 'BlockMeta'
+title: BlockMeta
 layout: default
-permalink: "/schemas/ga4gh/BlockMeta.html"
+permalink: "/BlockMeta.html"
 excerpt_separator: <!--more-->
 category:
   - schemas
@@ -15,15 +15,12 @@ tags:
 * {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
     - __playground__
 
-
 * Provenance  
 
     - [Original development for SchemaBlocks project](https://schemablocks.org)  
-
 * Used by  
 
     - [SchemaBlocks](https://schemablocks.org)  
-
 * Contributors  
 
     - [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
@@ -31,7 +28,7 @@ tags:
 
 ### Source
 
-* raw source [[JSON](./BlockMeta.json)] 
+* raw source [[JSON](./BlockMeta.json)]
 * [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/src/BlockMeta.yaml)
 
 ### Attributes
@@ -67,7 +64,7 @@ e.g. the given block's provenance, scope, external usage.
 
 </table>
 
-    
+
 #### contributors
 
 * type: array of https://schemablocks.org/schemas/ga4gh/ExternalReference.json [<a href="https://schemablocks.org/schemas/ga4gh/ExternalReference.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/ExternalReference.html" target="_BLANK">HTML</a>]
@@ -84,7 +81,7 @@ which had been involved in the block's definition or support its format.
    "id" : "orcid:0000-0002-9903-4248"
 }
 ```
-    
+
 #### provenance
 
 * type: array of https://schemablocks.org/schemas/ga4gh/ExternalReference.json [<a href="https://schemablocks.org/schemas/ga4gh/ExternalReference.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/ExternalReference.html" target="_BLANK">HTML</a>]
@@ -102,7 +99,7 @@ describing the schema's genesis.
    "id" : "https://github.com/ga4gh/ga4gh-schemas/blob/master/src/main/proto/ga4gh/bio_metadata.proto#L111"
 }
 ```
-    
+
 #### sb_status
 
 * type: string
@@ -145,7 +142,7 @@ levels is:
 ```
 "playground"
 ```
-    
+
 #### use_cases
 
 * type: array of https://schemablocks.org/schemas/ga4gh/ExternalReference.json [<a href="https://schemablocks.org/schemas/ga4gh/ExternalReference.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/ExternalReference.html" target="_BLANK">HTML</a>]
@@ -205,4 +202,5 @@ of the schema.
    ]
 }
 ```
+
 

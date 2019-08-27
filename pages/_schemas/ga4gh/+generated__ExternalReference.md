@@ -1,7 +1,7 @@
 ---
-title: 'ExternalReference'
+title: ExternalReference
 layout: default
-permalink: "/schemas/ga4gh/ExternalReference.html"
+permalink: "/ExternalReference.html"
 excerpt_separator: <!--more-->
 category:
   - schemas
@@ -15,15 +15,12 @@ tags:
 * {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
     - __implemented__
 
-
 * Provenance  
 
     - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/externalreference.rst)  
-
 * Used by  
 
     - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/externalreference.rst)  
-
 * Contributors  
 
     - [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
@@ -33,7 +30,7 @@ tags:
 
 ### Source
 
-* raw source [[JSON](./ExternalReference.json)] 
+* raw source [[JSON](./ExternalReference.json)]
 * [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/ExternalReference.yaml)
 
 ### Attributes
@@ -61,7 +58,7 @@ Using these references, the resources combine to build a web of information.
 
 </table>
 
-    
+
 #### description
 
 * type: string
@@ -76,7 +73,7 @@ Free text about the external reference
 ```
 "Integrative genome-wide expression profiling identifies three distinct molecular subgroups of renal cell carcinoma with different patient outcome. Beleut M, Zimmermann P, Baudis M, Bruni N, Buehlmann P, Laule O, Luu VD, Gruissem W, Schraml P, Moch H. BMC Cancer 12, 2012"
 ```
-    
+
 #### id
 
 * type: string
@@ -109,4 +106,5 @@ of a URI (CURIE or URL recommended).
    "id" : "PMID:15254584"
 }
 ```
+
 

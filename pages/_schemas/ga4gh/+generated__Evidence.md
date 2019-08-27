@@ -1,7 +1,7 @@
 ---
-title: 'Evidence'
+title: Evidence
 layout: default
-permalink: "/schemas/ga4gh/Evidence.html"
+permalink: "/Evidence.html"
 excerpt_separator: <!--more-->
 category:
   - schemas
@@ -15,15 +15,12 @@ tags:
 * {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
     - __implemented__
 
-
 * Provenance  
 
     - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/evidence.rst)  
-
 * Used by  
 
     - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/evidence.rst)  
-
 * Contributors  
 
     - [Jules Jacobsen](https://orcid.org/0000-0002-3265-15918)  
@@ -32,7 +29,7 @@ tags:
 
 ### Source
 
-* raw source [[JSON](./Evidence.json)] 
+* raw source [[JSON](./Evidence.json)]
 * [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/Evidence.yaml)
 
 ### Attributes
@@ -59,7 +56,7 @@ __Description:__ Evidence, FHIR mapping: Condition.evidence (https://www.hl7.org
 
 </table>
 
-    
+
 #### evidenceCode
 
 * type: 
@@ -68,7 +65,7 @@ __Description:__ Evidence, FHIR mapping: Condition.evidence (https://www.hl7.org
 
 ##### `evidenceCode` Value Example  
 
-    
+
 #### reference
 
 * type: 
@@ -93,4 +90,5 @@ __Description:__ Evidence, FHIR mapping: Condition.evidence (https://www.hl7.org
    }
 }
 ```
+
 

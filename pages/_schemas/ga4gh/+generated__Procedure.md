@@ -1,7 +1,7 @@
 ---
-title: 'Procedure'
+title: Procedure
 layout: default
-permalink: "/schemas/ga4gh/Procedure.html"
+permalink: "/Procedure.html"
 excerpt_separator: <!--more-->
 category:
   - schemas
@@ -15,15 +15,12 @@ tags:
 * {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
     - __implemented__
 
-
 * Provenance  
 
     - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/procedure.rst)  
-
 * Used by  
 
     - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/procedure.rst)  
-
 * Contributors  
 
     - [Jules Jacobsen](https://orcid.org/0000-0002-3265-15918)  
@@ -32,7 +29,7 @@ tags:
 
 ### Source
 
-* raw source [[JSON](./Procedure.json)] 
+* raw source [[JSON](./Procedure.json)]
 * [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/Procedure.yaml)
 
 ### Attributes
@@ -61,7 +58,7 @@ ontology class.
 
 </table>
 
-    
+
 #### bodySite
 
 * type: https://schemablocks.org/schemas/ga4gh/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
@@ -77,7 +74,7 @@ FHIR mapping - Procedure.bodySite
    "label" : "skin of forearm"
 }
 ```
-    
+
 #### code
 
 * type: https://schemablocks.org/schemas/ga4gh/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
@@ -109,4 +106,5 @@ FHIR mapping - Procedure.code
    }
 }
 ```
+
 
