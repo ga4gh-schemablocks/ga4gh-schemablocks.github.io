@@ -67,5 +67,5 @@ In GA4GH schemas, CURIEs constitute the recommended syntax for the referencing o
 * [W3C CURIE syntax](https://www.w3.org/TR/curie/) page
 * [W3C IRI](https://www.w3.org/International/articles/idn-and-iri/) documentation
 * [IETF IRI](https://www.ietf.org/rfc/rfc3987.txt) specification (e.g. allowed characters)
-* SchemaBlocks [Ontology_term](http://schemablocks.org/schemas/ga4gh/OntologyClass.html) class documentation
+* SchemaBlocks [OntologyClass](http://schemablocks.org/schemas/ga4gh/OntologyClass.html) class documentation
 * SchemaBlocks [Curie](http://schemablocks.org/schemas/ga4gh/Curie.html) class documentation
