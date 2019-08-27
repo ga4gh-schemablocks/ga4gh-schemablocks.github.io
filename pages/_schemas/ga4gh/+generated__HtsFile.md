@@ -1,7 +1,7 @@
 ---
 title: HtsFile
 layout: default
-permalink: "/HtsFile.html"
+permalink: "/schemas/ga4gh/HtsFile.html"
 excerpt_separator: <!--more-->
 category:
   - schemas

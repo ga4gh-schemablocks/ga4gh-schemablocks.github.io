@@ -1,7 +1,7 @@
 ---
 title: Age
 layout: default
-permalink: "/Age.html"
+permalink: "/schemas/ga4gh/Age.html"
 excerpt_separator: <!--more-->
 category:
   - schemas

@@ -1,7 +1,7 @@
 ---
 title: PhenotypicFeature
 layout: default
-permalink: "/PhenotypicFeature.html"
+permalink: "/schemas/ga4gh/PhenotypicFeature.html"
 excerpt_separator: <!--more-->
 category:
   - schemas

@@ -1,7 +1,7 @@
 ---
 title: Procedure
 layout: default
-permalink: "/Procedure.html"
+permalink: "/schemas/ga4gh/Procedure.html"
 excerpt_separator: <!--more-->
 category:
   - schemas

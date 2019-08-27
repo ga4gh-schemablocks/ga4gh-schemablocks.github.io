@@ -1,7 +1,7 @@
 ---
 title: AgeRange
 layout: default
-permalink: "/AgeRange.html"
+permalink: "/schemas/ga4gh/AgeRange.html"
 excerpt_separator: <!--more-->
 category:
   - schemas

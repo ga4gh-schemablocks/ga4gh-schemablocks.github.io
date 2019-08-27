@@ -1,7 +1,7 @@
 ---
 title: ExternalReference
 layout: default
-permalink: "/ExternalReference.html"
+permalink: "/schemas/ga4gh/ExternalReference.html"
 excerpt_separator: <!--more-->
 category:
   - schemas

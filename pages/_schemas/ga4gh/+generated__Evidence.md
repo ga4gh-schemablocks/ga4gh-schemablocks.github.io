@@ -1,7 +1,7 @@
 ---
 title: Evidence
 layout: default
-permalink: "/Evidence.html"
+permalink: "/schemas/ga4gh/Evidence.html"
 excerpt_separator: <!--more-->
 category:
   - schemas

@@ -1,7 +1,7 @@
 ---
 title: Curie
 layout: default
-permalink: "/Curie.html"
+permalink: "/schemas/ga4gh/Curie.html"
 excerpt_separator: <!--more-->
 category:
   - schemas

@@ -1,7 +1,7 @@
 ---
 title: File
 layout: default
-permalink: "/File.html"
+permalink: "/schemas/ga4gh/File.html"
 excerpt_separator: <!--more-->
 category:
   - schemas

@@ -1,7 +1,7 @@
 ---
 title: GeoLocation
 layout: default
-permalink: "/GeoLocation.html"
+permalink: "/schemas/ga4gh/GeoLocation.html"
 excerpt_separator: <!--more-->
 category:
   - schemas

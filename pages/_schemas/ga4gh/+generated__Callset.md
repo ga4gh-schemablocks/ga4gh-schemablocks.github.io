@@ -1,7 +1,7 @@
 ---
 title: Callset
 layout: default
-permalink: "/Callset.html"
+permalink: "/schemas/ga4gh/Callset.html"
 excerpt_separator: <!--more-->
 category:
   - schemas

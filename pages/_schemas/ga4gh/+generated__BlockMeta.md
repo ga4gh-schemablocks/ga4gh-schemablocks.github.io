@@ -1,7 +1,7 @@
 ---
 title: BlockMeta
 layout: default
-permalink: "/BlockMeta.html"
+permalink: "/schemas/ga4gh/BlockMeta.html"
 excerpt_separator: <!--more-->
 category:
   - schemas

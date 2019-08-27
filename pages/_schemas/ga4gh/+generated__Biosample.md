@@ -1,7 +1,7 @@
 ---
 title: Biosample
 layout: default
-permalink: "/Biosample.html"
+permalink: "/schemas/ga4gh/Biosample.html"
 excerpt_separator: <!--more-->
 category:
   - schemas

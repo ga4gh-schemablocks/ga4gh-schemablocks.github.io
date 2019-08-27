@@ -1,7 +1,7 @@
 ---
 title: OntologyClass
 layout: default
-permalink: "/OntologyClass.html"
+permalink: "/schemas/ga4gh/OntologyClass.html"
 excerpt_separator: <!--more-->
 category:
   - schemas
