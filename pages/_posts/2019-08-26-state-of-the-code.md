@@ -33,6 +33,8 @@ As one of the most advanced and complex data schemas in the GA4GH ecosystem, and
 
 Over the last weeks, members of the {S}[B] team (especially Isuru, Jules, Ben and Michael) have worked on converting parts of the Phenopackets specification to JSON Schema blocks, with documentation rendered into the [{S}[B] schema collection](https://schemablocks.org/categories/schemas.html). This process isn't finished yet, but the existing schemas already should serve as the basis for discussions about representation, code maintenance and versioning and adoption of the working procedures for other schemas.
 
+* [working document](https://docs.google.com/document/d/1QWvFh0G0hY6FnyDbDA-E1hqQkQClba35yR2A_oYyyAc/edit#) providing some information about the ongoing conversion process
+
 #### `tools` Repository [[➚]](https://github.com/ga4gh-schemablocks/tools)
 
 Current {S}[B] source code development follows an "integrated document" approach, where the main documentation and data examples for each schema are included inline, as values of JSON Schema attributes (`examples`, `description`). From the main schema document (written in YAML), a dedicated parser then extracts  
