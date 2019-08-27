@@ -35,7 +35,7 @@ tags:
 ### Source
 
 * raw source [[JSON](./OntologyClass.json)]
-* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/OntologyClass.yaml)
+* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/OntologyClass.yaml)
 
 ### Attributes
   

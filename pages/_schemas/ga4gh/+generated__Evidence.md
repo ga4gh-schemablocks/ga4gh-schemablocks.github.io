@@ -30,7 +30,7 @@ tags:
 ### Source
 
 * raw source [[JSON](./Evidence.json)]
-* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/Evidence.yaml)
+* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/Evidence.yaml)
 
 ### Attributes
   

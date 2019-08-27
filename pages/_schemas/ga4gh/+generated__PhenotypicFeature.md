@@ -31,7 +31,7 @@ tags:
 ### Source
 
 * raw source [[JSON](./PhenotypicFeature.json)]
-* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/PhenotypicFeature.yaml)
+* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/PhenotypicFeature.yaml)
 
 ### Attributes
   
