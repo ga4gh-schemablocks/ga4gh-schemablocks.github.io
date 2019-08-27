@@ -43,10 +43,11 @@ repositories. Please use the relevant _Github Issues_ to and/or GH pull requests
 
 {S}[B] code repositories adhere a consistent structure & naming:
 
+
 ```
 sb-code       # each of the code repositories, e.g. "blocks"
   |
-  |- source   # original code
+  |- source   # original code, e.g. from imported schema
   |- working  # for editing, temporary...
   |- schemas  # JSON Schema files as YAML; read to produce the output files
   |- json     # .json version of the schema, generated from YAML file
@@ -69,7 +70,6 @@ schema files. Please refer to the [documentation in the `tools` repository](http
 * items there should be considered "experimental", with no reliable endorsement by the {S}[B] community
 
 
-#### TODO: "implementations"
+#### TODO: "implementation repositories"
 
-* example implementations repository
-* expected to provide representations and examples of SchemaBlocks use in different projects
+In the future we may switch to a project-specific structure, where the donor schemas (e.g. Phenopackets, Beacon ...) and the derived {S}[B] versions are represented in individual repositories.
