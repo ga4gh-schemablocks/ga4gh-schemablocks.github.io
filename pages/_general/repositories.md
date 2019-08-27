@@ -45,14 +45,15 @@ repositories. Please use the relevant _Github Issues_ to and/or GH pull requests
 
 
 ```
-sb-code       # each of the code repositories, e.g. "blocks"
+sb-code           # each of the code repositories
   |
-  |- source   # original code, e.g. from imported schema
-  |- working  # for editing, temporary...
-  |- schemas  # JSON Schema files as YAML; read to produce the output files
-  |- json     # .json version of the schema, generated from YAML file
-  |- examples # .json example data, generated from inline examples in schema
-  |- doc      # .md documentation, generated from inline documentation in schema
+  |- source       # original code
+  |- working      # for editing, temporary...
+  |- schemas      # JSON Schema files as YAML; read to produce the output files
+  |- generated    # contains files generated from main schema YAML files
+      |- json     # .json version of the schema
+      |- examples # .json example data, from inline examples
+      |- doc      # .md documentation, from inline documentation
 ```
 
 The structure of the code repositories is a pre-requisite for the parsing of the
