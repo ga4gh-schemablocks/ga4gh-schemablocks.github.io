@@ -23,9 +23,9 @@ tags:
 
 One of the GA4GH conventions is to use CURIEs as (external) identifiers.
 
-<!--more-->
-
 This is a maturing recommendation; please see also [a previous discussion](https://github.com/ga4gh-metadata/SchemaBlocks/issues/10) on Github, and the links from there.
+
+<!--more-->
 
 #### Contributors
 
@@ -79,3 +79,4 @@ In GA4GH schemas, CURIEs constitute the recommended syntax for the referencing o
 * [IETF IRI](https://www.ietf.org/rfc/rfc3987.txt) specification (e.g. allowed characters)
 * SchemaBlocks [OntologyClass](http://schemablocks.org/schemas/ga4gh/OntologyClass.html) class documentation
 * SchemaBlocks [Curie](http://schemablocks.org/schemas/ga4gh/Curie.html) class documentation
+* N2T resolver [documentation](https://n2t.net/e/n2t_apidoc.html)
