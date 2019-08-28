@@ -2,10 +2,10 @@
 title: "GA4GH Data Model"
 layout: default
 date: 2019-02-19
-author: 
+author:
   - "@mcourtot"
   - "@mbaudis"
-permalink: /categories/formats/ga4gh-data-model.html
+permalink: /standards/ga4gh-data-model.html
 description: |
   A general object model recommendation, based on the GA4GH schema and describing relationships between variants - callsets - biosamples - individuals
 excerpt_separator: <!--more-->
@@ -26,8 +26,8 @@ The GA4GH data model recommends the use of a default object hierarchy in standar
 
 
 <div style="display: block; float: right; width: 300px; margin: 0px 0px 15px 15px; ">
-  
-  
+
+
   <a href="/assets/img/ga4gh-core-object-model.png" target="_BLANK"><img src="/assets/img/ga4gh-core-object-model.png" style="width: 300px;" alt="GA4GH core object model" /></a>
   <div style="display: block; width: 300px; text-align: justify; font-size: 0.8em; color: #03c; background-color: #eee; padding: 5px;">
 A graph showing recommended basic objects and their relationships. The names and attributes are examples and may diverge in count and specific wording (e.g. "subject" instead of "individual") in specific implementations.
@@ -56,7 +56,7 @@ The GA4GH data model for genomics recommends the use of a principle object hiera
     - a single molecular observation, e.g. a genomic variant observed in the analysis of the DNA from a biosample
 * __callset__
     - the entirety of all variants, observed in a single experiment on a single sample
-    - a _callset_ can be compared to a data column in a __VCF__ variant annotation file 
+    - a _callset_ can be compared to a data column in a __VCF__ variant annotation file
     - _callset_ has an optional position in the object hierarchy, since _variants_ describe biological observations in a biosample
 * __biosample__
     - a reference to a physical biological specimen on which analyses are performed

@@ -2,7 +2,7 @@
 title: "Dates & Times"
 layout: default
 date: 2018-12-21
-permalink:
+permalink: /standards/dates-times.html
 author: "@mbaudis"
 excerpt_separator: <!--more-->
 category:

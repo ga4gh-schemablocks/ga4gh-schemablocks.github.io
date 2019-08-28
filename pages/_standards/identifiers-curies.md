@@ -1,10 +1,15 @@
 ---
 title: "Identifiers and CURIEs"
 layout: default
-date: 2018-12-24
+permalink: /standards/identifiers-curies.html
+date: 2019-08-28
 author:
   - "@mbaudis"
   - "@cmungall"
+  - "@reece"
+  - "@jmcmurry"
+  - "@mellybelly"
+  - "cross GA4GH alignment"
 excerpt_separator: <!--more-->
 category:
   - standards
@@ -14,13 +19,13 @@ tags:
 
 ## {{ page.title }}
 
-#### Status: __DRAFT__
+#### Status: __Recommendation__
 
 One of the GA4GH conventions is to use CURIEs as (external) identifiers.
 
 <!--more-->
 
-This is a draft recommendation; please see also [a recent discussion](https://github.com/ga4gh-metadata/SchemaBlocks/issues/10) on Github, and the links from there.
+This is a maturing recommendation; please see also [a previous discussion](https://github.com/ga4gh-metadata/SchemaBlocks/issues/10) on Github, and the links from there.
 
 #### Contributors
 
@@ -40,13 +45,18 @@ CURIEs ("[Compact URIs](https://www.w3.org/TR/curie/)") are namespace-scoped ide
 The GA4GH recommendations are:
 
 * use only a single prefix
-* avoid the use of the underscore `_` character in th eprivate part of an identifier
+* for newly generated identifiers, and specifically applying to the new `ga4gh` namespace, one should avoid the use of the underscore `_` character in the private part of an identifier
     - reason is the sometimes replacement of the colon `:` separator by `_`, in computing environments where `:` may be problematic
-    - exceptions are underscore characters in computed identifiers
+    - exceptions are underscore characters in _computed_ identifiers
+* a reasonable separation character for structural elements of the private identifier part ("internal prefix") is the dot `.` character
 
-#### GA4GH Use
+#### `ga4gh` Prefix
 
-In GA4GH schemas, CURIEs constitute the recommended syntax for the referencing ontology classes or external references. Here, usually a CURIE as `id` is combined with a `label` for the text representation of the , such in the `Ontology_term` object prototype:
+In a "GA4GH Namespace Discussion" telecon on 2019-08-22, initiated by GKS and with the participation of different work stream and project leads, it was agreed that newly generated identifiers created and maintained in the "GA4GH ecosystem" should use a general `ga4gh` prefix, and __not__ create scoped prefixes.
+
+#### GA4GH CURIE Use
+
+In GA4GH schemas, CURIEs constitute the recommended syntax for the referencing ontology classes or external references. Here, usually a CURIE as `id` is combined with a `label` for the text representation of the , such in the [`OntologyClass`](/schemas/ga4gh/OntologyClass.html) object prototype:
 
 
 ```
