@@ -52,7 +52,7 @@ The GA4GH recommendations are:
 
 #### `ga4gh` Prefix
 
-In a "GA4GH Namespace Discussion" telecon on 2019-08-22, initiated by GKS and with the participation of different work stream and project leads, it was agreed that newly generated identifiers created and maintained in the "GA4GH ecosystem" should use a general `ga4gh` prefix, and __not__ create scoped prefixes.
+In a "GA4GH Namespace Discussion" telecon on 2019-08-22, initiated by GKS and with the participation of different work stream and project leads, it was agreed that newly generated identifiers created and maintained in the "GA4GH ecosystem" should use a general `ga4gh` prefix, and __not__ create scoped prefixes. Details and implementation of this general concept are currently being evaluated.
 
 #### GA4GH CURIE Use
 
