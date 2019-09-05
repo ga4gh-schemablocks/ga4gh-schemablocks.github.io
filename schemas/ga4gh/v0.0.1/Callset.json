@@ -1,1 +1,152 @@
+{
+   "$id" : "https://schemablocks.org/schemas/ga4gh/Callset/v0.0.1",
+   "$schema\"" : "http://json-schema.org/draft-07/schema#",
+   "description" : "The callset object contains information about an experiment performed on \nmaterial from a single biosample and provides a shared identifier for all \nvariants detected in this experiment, attributed to the referenced biosample.\n",
+   "examples" : [
+      {
+         "biosample_id" : "SAMEA1234",
+         "created" : "2017-10-25T07:06:03Z",
+         "data_use_conditions" : {
+            "id" : "DUO:0000004",
+            "label" : "no restriction"
+         },
+         "description" : "SNP6 array of cancer sample BRCA-0893",
+         "geo_provenance" : {
+            "city" : "Timisoara",
+            "country" : "Romania",
+            "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
+            "latitude" : "45.75",
+            "longitude" : "21.23"
+         },
+         "id" : "GSM264198",
+         "info" : {
+            "statusmaps" : {
+               "binning" : "1000000",
+               "dupmap" : [
+                  "",
+                  "",
+                  "DUP",
+                  "DUP",
+                  "DUP",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+               ]
+            },
+            "technology" : "Affymetrix SNP6 genotyping array"
+         },
+         "updated" : "2017-10-25T07:06:03Z"
+      }
+   ],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "GA4GH Data Working Group"
+         },
+         {
+            "description" : "Michael Baudis",
+            "id" : "orcid:0000-0002-9903-4248"
+         }
+      ],
+      "provenance" : [
+         {
+            "description" : "Original GA4GH schema",
+            "id" : "https://github.com/ga4gh/ga4gh-schemas/blob/master/src/main/proto/ga4gh/variants.proto#L65"
+         }
+      ],
+      "sb_status" : "proposed",
+      "used_by" : [
+         {
+            "description" : "Progenetix database schema (Beacon+ backend)",
+            "id" : "https://github.com/progenetix/schemas/tree/master/main/yaml"
+         }
+      ]
+   },
+   "properties" : {
+      "biosample_id" : {
+         "description" : "The identifier (\"biosample.id\") of the biosample this variant was \nreported from. This attribute provides an alternative to an implicit \nvariant -> callset -> biosample chaining.\n",
+         "examples" : [
+            "pgx-bs-987647"
+         ],
+         "type" : "string"
+      },
+      "created" : {
+         "description" : "The creation time of this record, as ISO8601 string. System-specific \nimplementations may transfer this to a date object.\n",
+         "example" : "2017-10-25T07:06:03Z",
+         "type" : "string"
+      },
+      "data_use_conditions" : {
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/OntologyClass.json",
+         "description" : "Data use conditions applying to data from this callset, as ontology class \n(e.g. DUO).\n",
+         "examples" : [
+            {
+               "id" : "DUO:0000004",
+               "label" : "no restriction"
+            }
+         ]
+      },
+      "description" : {
+         "description" : "A free text description about the callset.\n",
+         "examples" : [
+            "SNP6 array of cancer sample BRCA-0893"
+         ],
+         "type" : "string"
+      },
+      "geo_provenance" : {
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/GeoLocation.json",
+         "description" : "This geo_class attribute ideally describes the geographic location of \nwhere this callset was analysed.\n",
+         "examples" : [
+            {
+               "city" : "Timisoara",
+               "country" : "Romania",
+               "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
+               "latitude" : "45.75",
+               "longitude" : "21.23"
+            }
+         ]
+      },
+      "id" : {
+         "description" : "The local-unique identifier of this callset (referenced as \"callset_id\").\n",
+         "examples" : [
+            "GSM264198"
+         ],
+         "type" : "string"
+      },
+      "info" : {
+         "description" : "Additional information object, in a format defined in examples and \naccompanying documentation of the specific implementation.\n",
+         "examples" : [
+            {
+               "statusmaps" : {
+                  "binning" : "1000000",
+                  "description" : "The cnv_maps object is a wrapper for genomic interval mapped status \ninformation. In Progenetix and arrayMap, this is used to indictate \nfor fixed 1MB genome intervals - the status\n- dupmap => \"DUP\" or \"\"\n- delmap => \"DEL\" or \"\"  \nor the maximum / minimum positive / negative value encountered in \nthe segment, as far as it has been called to contain DUP or DEL.\n",
+                  "dupmap" : [
+                     "",
+                     "",
+                     "DUP",
+                     "DUP",
+                     "DUP",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               }
+            }
+         ],
+         "type" : "object"
+      },
+      "updated" : {
+         "description" : "The update time of this record's content, as ISO8601 string.\nSystem-specific implementations may transfer this to a date object.\n",
+         "example" : "2022-11-11T09:45:13Z",
+         "type" : "string"
+      }
+   },
+   "title" : "Callset",
+   "type" : "object"
+}
 

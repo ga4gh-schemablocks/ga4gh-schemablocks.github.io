@@ -76,7 +76,6 @@
       "created" : {
          "description" : "The creation time of this record, as ISO8601 string. System-specific \nimplementations may transfer this to a date object.\n",
          "example" : "2017-10-25T07:06:03Z",
-         "examples" : [],
          "type" : "string"
       },
       "data_use_conditions" : {
@@ -144,12 +143,10 @@
       "updated" : {
          "description" : "The update time of this record's content, as ISO8601 string.\nSystem-specific implementations may transfer this to a date object.\n",
          "example" : "2022-11-11T09:45:13Z",
-         "examples" : [],
          "type" : "string"
       }
    },
    "title" : "Callset",
    "type" : "object"
 }
-
 

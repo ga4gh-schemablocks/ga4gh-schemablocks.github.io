@@ -54,8 +54,7 @@
                   }
                ]
             }
-         ],
-         "examples" : []
+         ]
       },
       "reference" : {
          "allof" : [
@@ -71,8 +70,7 @@
                   }
                ]
             }
-         ],
-         "examples" : []
+         ]
       }
    },
    "required" : [
@@ -81,5 +79,4 @@
    "title" : "Evidence",
    "type" : "object"
 }
-
 

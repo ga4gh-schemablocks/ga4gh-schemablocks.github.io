@@ -101,8 +101,7 @@
                "id" : "HP:0003621",
                "label" : "Juvenile onset"
             }
-         },
-         "examples" : []
+         }
       },
       "biocharacteristics" : {
          "description" : "The _Biocharacteristics_ object represents a wrapper list of \"Phenotype\" \nobjects with properly prefixed term ids, describing features of the \nbiosample.  \nExamples would be phenotypes, disease codes or other ontology classes \n*specific to this biosample*, i.e. not general features of the individual \nit was derived from.  \nIn a complete data model (variants->[callsets]->biosamples->individuals), \ncharacteristics applying to the _individual_ (e.g. sex, most phenotypes) \nshould be annotated with the individual.\n",
@@ -130,7 +129,6 @@
       "created" : {
          "description" : "The creation time of this record, in ISO8601\n",
          "example" : "2017-10-25T07:06:03Z",
-         "examples" : [],
          "type" : "string"
       },
       "data_use_conditions" : {
@@ -146,7 +144,6 @@
       "description" : {
          "description" : "A free text description of the biosample. This should not contain any \nstructured data.\n",
          "example" : "Burkitt lymphoma, cell line Namalwa",
-         "examples" : [],
          "type" : "string"
       },
       "external_references" : {
@@ -169,7 +166,6 @@
                }
             }
          ],
-         "examples" : [],
          "items" : {
             "$ref" : "https://schemablocks.org/schemas/ga4gh/ExternalReference.json"
          },
@@ -186,8 +182,7 @@
             "latitude" : "45.75",
             "longitude" : "21.23",
             "precision" : "address"
-         },
-         "examples" : []
+         }
       },
       "id" : {
          "description" : "The local-unique identifier of this biosample (referenced as \n\"biosample_id\"). This is unique in the context of the local (e.g. \nserver, resource) instance.\n",
@@ -209,8 +204,7 @@
          "example" : {
             "death" : "1",
             "followup_time" : "P14M"
-         },
-         "examples" : []
+         }
       },
       "name" : {
          "description" : "A short descriptive name for sample which should be sufficient to \ndistinguish it from other samples in the project or collection. \nThis is a label or symbolic identifier for the biosample.\n",
@@ -229,12 +223,10 @@
       "updated" : {
          "description" : "The time of the last edit of this record, in ISO8601\n",
          "example" : "2022-11-11T09:45:13Z",
-         "examples" : [],
          "type" : "string"
       }
    },
    "title" : "Biosample",
    "type" : "object"
 }
-
 
