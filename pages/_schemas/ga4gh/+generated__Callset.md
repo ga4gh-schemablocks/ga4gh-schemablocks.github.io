@@ -30,7 +30,7 @@ tags:
 ### Source
 
 * raw source [[JSON](./Callset.json)]
-* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/Callset.yaml)
+* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/ga4gh/v0.0.1/Callset.yaml)
 
 ### Attributes
   

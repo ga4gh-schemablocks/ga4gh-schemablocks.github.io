@@ -1,5 +1,5 @@
 {
-   "$id" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/HtsFile.json",
+   "$id" : "https://schemablocks.org/schemas/ga4gh/HtsFile/v0.0.1",
    "$schema" : "http://json-schema.org/draft-07/schema#",
    "description" : "A file in one of the HTS formats (https://samtools.github.io/hts-specs)\n",
    "examples" : [

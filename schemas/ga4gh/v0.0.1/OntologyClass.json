@@ -1,5 +1,5 @@
 {
-   "$id" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json",
+   "$id" : "https://schemablocks.org/schemas/ga4gh/OntologyClass/v0.0.1",
    "$schema" : "http://json-schema.org/draft-07/schema#",
    "description" : "OntologyClass represents the core object used to reference domain-specific\nentities, as well as to identify their domains through the appropriate\nprefix.\nCURIES are case sensitive, although for prefixes this practice is\ninconsistently followed.\n",
    "examples" : [
@@ -33,7 +33,7 @@
       "provenance" : [
          {
             "description" : "Original GA4GH schema",
-            "url" : "https://github.com/ga4gh/ga4gh-schemas/blob/master/src/main/proto/ga4gh/common.proto#L152"
+            "url" : "https://github.com/ga4gh/ga4gh-schemas/blob/master/src/main/proto/ga4gh/common.proto"
          },
          {
             "description" : "additional discussions with @cmungall and phenopackets developers"
@@ -56,14 +56,14 @@
    },
    "properties" : {
       "id" : {
-         "description" : "CURIE of the ontology class",
+         "description" : "properly prefixed CURIE of the ontology term",
          "examples" : [
             "ncit:C8294"
          ],
          "type" : "string"
       },
       "label" : {
-         "description" : "the text label associated with the ontology class",
+         "description" : "the text label associated with the term",
          "examples" : [
             "Pancreatic Adenocarcinoma"
          ],

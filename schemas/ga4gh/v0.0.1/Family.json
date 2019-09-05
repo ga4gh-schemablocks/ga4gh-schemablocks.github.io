@@ -1,90 +1,53 @@
 {
-   "$id" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Family.json",
+   "$id" : "https://schemablocks.org/schemas/ga4gh/Family/v0.0.1",
    "$schema" : "http://json-schema.org/draft-07/schema#",
    "description" : "Phenotype, sample and pedigree data required for a genomic diagnosis.\nEquivalent to the Genomics England InterpretationRequestRD\nhttps://github.com/genomicsengland/GelReportModels/blob/master/schemas/IDLs/org.gel.models.report.avro/5.0.0/InterpretationRequestRD.avdl\n",
    "examples" : [
       {
          "htsFiles" : [
             {
-               "htsFormat" : "GVCF",
-               "uri" : "file://data/genomes/file1.vcf.gz"
+               "file" : {
+                  "path" : "/data/genomes/file1.vcf.gz",
+                  "uri" : "file://data/genomes/file1.vcf.gz"
+               },
+               "tsFormat" : "GVCF"
             }
          ],
          "id" : "family-id-123",
          "metaData" : {
             "created" : "2016-06-29T12:03:03.240Z",
-            "updates" : [
-               {
-                  "timestamp" : "2007-12-03T10:15:30.00Z"
-               }
+            "updated" : [
+               "2018-06-10T10:59:06.784Z"
             ]
          },
          "proband" : {
             "id" : "phenopacketid-123",
             "metaData" : {
                "created" : "2016-06-29T12:03:03.240Z",
-               "updates" : [
-                  {
-                     "timestamp" : "2007-12-03T10:15:30.00Z"
-                  }
+               "updated" : [
+                  "2018-06-10T10:59:06.784Z"
                ]
             }
          }
       }
    ],
-   "meta" : {
-      "contributors" : [
-         {
-            "description" : "GA4GH Data Working Group"
-         },
-         {
-            "description" : "Jules Jacobsen",
-            "id" : "orcid:0000-0002-3265-15918"
-         },
-         {
-            "description" : "Peter Robinson",
-            "id" : "orcid:0000-0002-0736-91998"
-         },
-         {
-            "description" : "Michael Baudis",
-            "id" : "orcid:0000-0002-9903-4248"
-         },
-         {
-            "description" : "Melanie Courtot",
-            "id" : "orcid:0000-0002-9551-6370"
-         },
-         {
-            "description" : "Isuru Liyanage",
-            "id" : "orcid:0000-0002-4839-5158"
-         }
-      ],
-      "provenance" : [
-         {
-            "description" : "Phenopackets",
-            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/family.rst"
-         }
-      ],
-      "sb_status" : "implemented",
-      "used_by" : [
-         {
-            "description" : "Phenopackets",
-            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/family.rst"
-         }
-      ]
-   },
+   "meta" : {},
    "properties" : {
       "htsFiles" : {
          "description" : "Pointer to the relevant HTS file(s) for the family. These should be files relating to one or more of the family\nmembers e.g a multi-sample VCF\n",
          "examples" : [
             [
                {
-                  "htsFormat" : "GVCF",
-                  "uri" : "file://data/genomes/file1.vcf.gz"
+                  "file" : {
+                     "path" : "/data/genomes/file1.vcf.gz",
+                     "uri" : "file://data/genomes/file1.vcf.gz"
+                  },
+                  "htsFormat" : "GVCF"
                }
             ]
          ],
          "items" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/HtsFile.json"
+            "$ref" : "https://schemablocks.org/schemas/ga4gh/HtsFile/v0.0.1"
          },
          "type" : "array"
       },
@@ -98,17 +61,15 @@
       "metaData" : {
          "allof" : [
             {
-               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/MetaData.json"
+               "$ref" : "https://schemablocks.org/schemas/ga4gh/MetaData/v0.0.1"
             },
             {
                "description" : "Structured definitions of the resources and ontologies used within the phenopacket. REQUIRED\n",
                "examples" : [
                   {
                      "created" : "2016-06-29T12:03:03.240Z",
-                     "updates" : [
-                        {
-                           "timestamp" : "2007-12-03T10:15:30.00Z"
-                        }
+                     "updated" : [
+                        "2018-06-10T10:59:06.784Z"
                      ]
                   }
                ]
@@ -119,7 +80,7 @@
       "pedigree" : {
          "allof" : [
             {
-               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Pedigree.json"
+               "$ref" : "https://schemablocks.org/schemas/ga4gh/Pedigree/v0.0.1"
             },
             {
                "description" : "The pedigree defining the relations between the proband and their relatives. Pedigree.individual_id should\nmap to the PhenoPacket.Individual.id\n",
@@ -139,7 +100,7 @@
       "proband" : {
          "allof" : [
             {
-               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Phenopacket.json"
+               "$ref" : "https://schemablocks.org/schemas/ga4gh/Phenopacket/v0.0.1"
             },
             {
                "description" : "The individual representing the focus of this packet - e.g. the proband in rare disease cases or cancer patient\n",
@@ -148,10 +109,8 @@
                      "id" : "phenopacketid-123",
                      "metaData" : {
                         "created" : "2016-06-29T12:03:03.240Z",
-                        "updates" : [
-                           {
-                              "timestamp" : "2007-12-03T10:15:30.00Z"
-                           }
+                        "updated" : [
+                           "2018-06-10T10:59:06.784Z"
                         ]
                      }
                   }
@@ -168,17 +127,15 @@
                   "id" : "phenopacketid-123",
                   "metaData" : {
                      "created" : "2016-06-29T12:03:03.240Z",
-                     "updates" : [
-                        {
-                           "timestamp" : "2007-12-03T10:15:30.00Z"
-                        }
+                     "updated" : [
+                        "2018-06-10T10:59:06.784Z"
                      ]
                   }
                }
             ]
          ],
          "items" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Phenopacket.json"
+            "$ref" : "https://schemablocks.org/schemas/ga4gh/Phenopacket/v0.0.1"
          },
          "type" : "array"
       }

@@ -1,8 +1,22 @@
 {
-   "$id" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Variant.json",
+   "$id" : "https://schemablocks.org/schemas/ga4gh/Variant/v0.0.1",
    "$schema" : "http://json-schema.org/draft-07/schema#",
    "description" : "A variant allele. Alleles can be listed using HGVS, VCF, SPDI or ISCN notation.\nSPDI format is the exchange standard used for ClinVar, dbSNP and soon the EVA\nTools for interconversion between SPDI, HGVS and VCF exist at https://api.ncbi.nlm.nih.gov/variation/v0/\n",
    "examples" : [
+      {
+         "background" : "involves: 129S1/Sv * 129X1/SvJ * C57BL/6J",
+         "description" : "description of variant",
+         "id" : "ID_12345",
+         "murineAllele" : {
+            "alleleSymbol" : "tm1Hcd",
+            "gene" : "Fbn1",
+            "id" : "MGI:3690325"
+         },
+         "zygosity" : {
+            "id" : "GENO:0000135",
+            "label" : "heterozygous"
+         }
+      },
       {
          "description" : "description of variant",
          "id" : "ID_12345",
@@ -15,43 +29,7 @@
          }
       }
    ],
-   "meta" : {
-      "contributors" : [
-         {
-            "description" : "Jules Jacobsen",
-            "id" : "orcid:0000-0002-3265-15918"
-         },
-         {
-            "description" : "Peter Robinson",
-            "id" : "orcid:0000-0002-0736-91998"
-         },
-         {
-            "description" : "Michael Baudis",
-            "id" : "orcid:0000-0002-9903-4248"
-         },
-         {
-            "description" : "Melanie Courtot",
-            "id" : "orcid:0000-0002-9551-6370"
-         },
-         {
-            "description" : "Isuru Liyanage",
-            "id" : "orcid:0000-0002-4839-5158"
-         }
-      ],
-      "provenance" : [
-         {
-            "description" : "Phenopackets",
-            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/variant.rst"
-         }
-      ],
-      "sb_status" : "implemented",
-      "used_by" : [
-         {
-            "description" : "Phenopackets",
-            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/variant.rst"
-         }
-      ]
-   },
+   "meta" : {},
    "oneof" : [
       {
          "properties" : [
@@ -80,90 +58,73 @@
       }
    ],
    "properties" : {
-      "hgvsAllele" : {
-         "allof" : [
-            {
-               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/HgvsAllele.json"
-            },
-            {
-               "description" : "add description",
-               "examples" : [
-                  "add example"
-               ]
-            }
+      "background" : {
+         "description" : "add description",
+         "examples" : [
+            "involves: 129S1/Sv * 129X1/SvJ * C57BL/6J"
          ],
-         "examples" : []
+         "type" : "string"
+      },
+      "hgvsAllele" : {
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/HgvsAllele/v0.0.1",
+         "description" : "add description",
+         "examples" : [
+            "add example"
+         ]
       },
       "iscnAllele" : {
-         "allof" : [
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/IscnAllele/v0.0.1",
+         "description" : "add description",
+         "examples" : [
+            "add example"
+         ]
+      },
+      "murineAllele" : {
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/MurineAllele/v0.0.1",
+         "description" : "add description",
+         "examples" : [
             {
-               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/IscnAllele.json"
-            },
-            {
-               "description" : "add description",
-               "examples" : [
-                  "add example"
-               ]
+               "alleleSymbol" : "tm1Hcd",
+               "gene" : "Fbn1",
+               "id" : "MGI:3690325"
             }
-         ],
-         "examples" : []
+         ]
       },
       "spdiAllele" : {
-         "allof" : [
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/SpdiAllele/v0.0.1",
+         "description" : "add description",
+         "examples" : [
             {
-               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/SpdiAllele.json"
-            },
-            {
-               "description" : "add description",
-               "examples" : [
-                  {
-                     "deletedSequence" : "T",
-                     "id" : "id_abc_123",
-                     "insertedSequence" : "G",
-                     "position" : "123256214",
-                     "seqId" : "NC_000010.10"
-                  }
-               ]
+               "deletedSequence" : "T",
+               "id" : "id_abc_123",
+               "insertedSequence" : "G",
+               "position" : "123256214",
+               "seqId" : "NC_000010.10"
             }
-         ],
-         "examples" : []
+         ]
       },
       "vcfAllele" : {
-         "allof" : [
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/VcfAllele/v0.0.1",
+         "description" : "add description",
+         "examples" : [
             {
-               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/VcfAllele.json"
-            },
-            {
-               "description" : "add description",
-               "examples" : [
-                  {
-                     "alt" : "G",
-                     "chr" : "10",
-                     "genomeAssembly" : "GRCh37",
-                     "pos" : "123256215",
-                     "ref" : "T"
-                  }
-               ]
+               "alt" : "G",
+               "chr" : "10",
+               "genomeAssembly" : "GRCh37",
+               "pos" : "123256215",
+               "ref" : "T"
             }
-         ],
-         "examples" : []
+         ]
       },
       "zygosity" : {
-         "allof" : [
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/OntologyClass/v0.0.1",
+         "description" : "add description",
+         "examples" : [
             {
-               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json"
-            },
-            {
-               "description" : "add description",
-               "examples" : [
-                  {
-                     "id" : "GENO:0000135",
-                     "label" : "heterozygous"
-                  }
-               ]
+               "id" : "GENO:0000135",
+               "label" : "heterozygous"
             }
-         ],
-         "examples" : []
+         ]
       }
    },
    "required" : [

@@ -33,7 +33,7 @@ tags:
 ### Source
 
 * raw source [[JSON](./Biosample.json)]
-* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/Biosample.yaml)
+* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/ga4gh/v0.0.1/Biosample.yaml)
 
 ### Attributes
   

@@ -29,7 +29,7 @@ tags:
 ### Source
 
 * raw source [[JSON](./File.json)]
-* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/File.yaml)
+* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/ga4gh/v0.0.1/File.yaml)
 
 ### Attributes
   
