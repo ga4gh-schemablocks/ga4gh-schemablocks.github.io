@@ -32,7 +32,7 @@ tags:
 ### Source
 
 * raw source [[JSON](./AgeRange.json)]
-* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/ga4gh/v0.0.1/AgeRange.yaml)
+* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/ga4gh/AgeRange.yaml)
 
 ### Attributes
   

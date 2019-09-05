@@ -32,7 +32,7 @@ tags:
 ### Source
 
 * raw source [[JSON](./GeoLocation.json)]
-* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/ga4gh/v0.0.1/GeoLocation.yaml)
+* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/ga4gh/GeoLocation.yaml)
 
 ### Attributes
   

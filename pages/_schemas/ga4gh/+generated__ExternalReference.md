@@ -31,7 +31,7 @@ tags:
 ### Source
 
 * raw source [[JSON](./ExternalReference.json)]
-* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/ga4gh/v0.0.1/ExternalReference.yaml)
+* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/ga4gh/ExternalReference.yaml)
 
 ### Attributes
   
