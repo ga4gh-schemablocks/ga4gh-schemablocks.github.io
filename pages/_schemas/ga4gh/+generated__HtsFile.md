@@ -30,7 +30,7 @@ tags:
 ### Source
 
 * raw source [[JSON](./HtsFile.json)]
-* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/ga4gh/HtsFile.yaml)
+* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/HtsFile.yaml)
 
 ### Attributes
   

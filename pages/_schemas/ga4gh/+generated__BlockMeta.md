@@ -29,7 +29,7 @@ tags:
 ### Source
 
 * raw source [[JSON](./BlockMeta.json)]
-* [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/schemas/ga4gh/BlockMeta.yaml)
+* [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/schemas/BlockMeta.yaml)
 
 ### Attributes
   
