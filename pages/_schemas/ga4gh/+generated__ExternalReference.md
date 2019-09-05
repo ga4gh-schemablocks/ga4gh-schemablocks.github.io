@@ -28,9 +28,9 @@ tags:
     - [Peter Robinson](https://orcid.org/0000-0002-0736-91998)  
 <!--more-->
 
-### Source
+### Source (v0.0.1)
 
-* raw source [[JSON](./ExternalReference.json)]
+* raw source [[JSON](./current/ExternalReference.json)]
 * [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/ExternalReference.yaml)
 
 ### Attributes

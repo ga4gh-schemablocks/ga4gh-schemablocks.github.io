@@ -28,9 +28,9 @@ tags:
     - [Isuru Liyanage](https://orcid.org/0000-0002-4839-5158)  
 <!--more-->
 
-### Source
+### Source (v0.0.1)
 
-* raw source [[JSON](./Curie.json)]
+* raw source [[JSON](./current/Curie.json)]
 * [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/Curie.yaml)
 
 ### Attributes

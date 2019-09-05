@@ -30,9 +30,9 @@ tags:
     - [Melanie Courtot](https://orcid.org/0000-0002-9551-6370)  
 <!--more-->
 
-### Source
+### Source (v0.0.1)
 
-* raw source [[JSON](./Biosample.json)]
+* raw source [[JSON](./current/Biosample.json)]
 * [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/Biosample.yaml)
 
 ### Attributes

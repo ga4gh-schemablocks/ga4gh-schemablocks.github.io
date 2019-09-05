@@ -26,9 +26,9 @@ tags:
     - [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
 <!--more-->
 
-### Source
+### Source (v0.0.1)
 
-* raw source [[JSON](./BlockMeta.json)]
+* raw source [[JSON](./current/BlockMeta.json)]
 * [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/schemas/BlockMeta.yaml)
 
 ### Attributes

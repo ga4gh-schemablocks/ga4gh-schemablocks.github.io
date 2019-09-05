@@ -27,9 +27,9 @@ tags:
     - [Peter Robinson](https://orcid.org/0000-0002-0736-91998)  
 <!--more-->
 
-### Source
+### Source (v0.0.1)
 
-* raw source [[JSON](./HtsFile.json)]
+* raw source [[JSON](./current/HtsFile.json)]
 * [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/HtsFile.yaml)
 
 ### Attributes
