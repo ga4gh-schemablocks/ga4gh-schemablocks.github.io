@@ -51,15 +51,15 @@ Observation (https://www.hl7.org/fhir/observation.html)
   </tr>
   <tr>
     <td>ageOfOnset</td>
-    <td>https://schemablocks.org/schemas/ga4gh/Age.json [<a href="https://schemablocks.org/schemas/ga4gh/Age.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]</td>
+    <td>https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
     <td>ageRangeOfOnset</td>
-    <td>https://schemablocks.org/schemas/ga4gh/AgeRange.json [<a href="https://schemablocks.org/schemas/ga4gh/AgeRange.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/AgeRange.html" target="_BLANK">HTML</a>]</td>
+    <td>https://schemablocks.org/schemas/ga4gh/v0.0.1/AgeRange.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/AgeRange.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/AgeRange.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
     <td>classOfOnset</td>
-    <td>https://schemablocks.org/schemas/ga4gh/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]</td>
+    <td>https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
     <td>description</td>
@@ -67,11 +67,11 @@ Observation (https://www.hl7.org/fhir/observation.html)
   </tr>
   <tr>
     <td>evidence</td>
-    <td>array of https://schemablocks.org/schemas/ga4gh/Evidence.json [<a href="https://schemablocks.org/schemas/ga4gh/Evidence.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Evidence.html" target="_BLANK">HTML</a>]</td>
+    <td>array of https://schemablocks.org/schemas/ga4gh/v0.0.1/Evidence.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/Evidence.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Evidence.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
     <td>modifiers</td>
-    <td>array of https://schemablocks.org/schemas/ga4gh/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]</td>
+    <td>array of https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
     <td>negated</td>
@@ -79,11 +79,11 @@ Observation (https://www.hl7.org/fhir/observation.html)
   </tr>
   <tr>
     <td>severity</td>
-    <td>https://schemablocks.org/schemas/ga4gh/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]</td>
+    <td>https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
     <td>type</td>
-    <td>https://schemablocks.org/schemas/ga4gh/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]</td>
+    <td>https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]</td>
   </tr>
 
 </table>
@@ -91,7 +91,7 @@ Observation (https://www.hl7.org/fhir/observation.html)
 
 #### ageOfOnset
 
-* type: https://schemablocks.org/schemas/ga4gh/Age.json [<a href="https://schemablocks.org/schemas/ga4gh/Age.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]
+* type: https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]
 
 The values of this will come from the HPO onset hierarchy i.e. subclasses 
 of HP:0003674.
@@ -112,7 +112,7 @@ FHIR mapping: Condition.onset
 
 #### ageRangeOfOnset
 
-* type: https://schemablocks.org/schemas/ga4gh/AgeRange.json [<a href="https://schemablocks.org/schemas/ga4gh/AgeRange.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/AgeRange.html" target="_BLANK">HTML</a>]
+* type: https://schemablocks.org/schemas/ga4gh/v0.0.1/AgeRange.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/AgeRange.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/AgeRange.html" target="_BLANK">HTML</a>]
 
 The values of this will come from the HPO onset hierarchy i.e. subclasses 
 of HP:0003674.
@@ -138,7 +138,7 @@ FHIR mapping: Condition.onset
 
 #### classOfOnset
 
-* type: https://schemablocks.org/schemas/ga4gh/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
+* type: https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
 
 the values of this will come from the HPO onset hierarchy i.e. subclasses of HP:0003674
 FHIR mapping: Condition.onset
@@ -170,7 +170,7 @@ fields should be used for this purpose.
 
 #### evidence
 
-* type: array of https://schemablocks.org/schemas/ga4gh/Evidence.json [<a href="https://schemablocks.org/schemas/ga4gh/Evidence.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Evidence.html" target="_BLANK">HTML</a>]
+* type: array of https://schemablocks.org/schemas/ga4gh/v0.0.1/Evidence.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/Evidence.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Evidence.html" target="_BLANK">HTML</a>]
 
 Evidences for how the phenotype was determined.
 
@@ -191,7 +191,7 @@ Evidences for how the phenotype was determined.
 
 #### modifiers
 
-* type: array of https://schemablocks.org/schemas/ga4gh/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
+* type: array of https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
 
 Subclasses of HP:0012823 ! Clinical modifier apart from Severity 
 HP:0012824 - Severity.
@@ -225,7 +225,7 @@ the logical negation of the OntologyClass used in the 'type' field.
 
 #### severity
 
-* type: https://schemablocks.org/schemas/ga4gh/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
+* type: https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
 
 Severity of the condition e.g. subclasses of HP:0012824-Severity or 
 SNOMED:272141005-Severities.
@@ -243,7 +243,7 @@ FHIR mapping: Condition.severity
 
 #### type
 
-* type: https://schemablocks.org/schemas/ga4gh/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
+* type: https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
 
 The primary ontology class which describes the phenotype.
 FHIR mapping: Condition.identifier

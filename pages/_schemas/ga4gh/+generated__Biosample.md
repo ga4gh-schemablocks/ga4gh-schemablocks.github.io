@@ -60,11 +60,11 @@ FHIR mapping: [Specimen](http://www.hl7.org/fhir/specimen.html).
   </tr>
   <tr>
     <td>age_at_collection</td>
-    <td>https://schemablocks.org/schemas/ga4gh/Age.json [<a href="https://schemablocks.org/schemas/ga4gh/Age.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]</td>
+    <td>https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
     <td>biocharacteristics</td>
-    <td>array of https://schemablocks.org/schemas/ga4gh/PhenotypicFeature.json [<a href="https://schemablocks.org/schemas/ga4gh/PhenotypicFeature.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/PhenotypicFeature.html" target="_BLANK">HTML</a>]</td>
+    <td>array of https://schemablocks.org/schemas/ga4gh/v0.0.1/PhenotypicFeature.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/PhenotypicFeature.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/PhenotypicFeature.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
     <td>created</td>
@@ -72,7 +72,7 @@ FHIR mapping: [Specimen](http://www.hl7.org/fhir/specimen.html).
   </tr>
   <tr>
     <td>data_use_conditions</td>
-    <td>https://schemablocks.org/schemas/ga4gh/DataUseConditions.json [<a href="https://schemablocks.org/schemas/ga4gh/DataUseConditions.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/DataUseConditions.html" target="_BLANK">HTML</a>]</td>
+    <td>https://schemablocks.org/schemas/ga4gh/v0.0.1/DataUseConditions.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/DataUseConditions.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/DataUseConditions.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
     <td>description</td>
@@ -80,11 +80,11 @@ FHIR mapping: [Specimen](http://www.hl7.org/fhir/specimen.html).
   </tr>
   <tr>
     <td>external_references</td>
-    <td>array of https://schemablocks.org/schemas/ga4gh/ExternalReference.json [<a href="https://schemablocks.org/schemas/ga4gh/ExternalReference.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/ExternalReference.html" target="_BLANK">HTML</a>]</td>
+    <td>array of https://schemablocks.org/schemas/ga4gh/v0.0.1/ExternalReference.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/ExternalReference.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/ExternalReference.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
     <td>geo_provenance</td>
-    <td>https://schemablocks.org/schemas/ga4gh/GeoLocation.json [<a href="https://schemablocks.org/schemas/ga4gh/GeoLocation.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/GeoLocation.html" target="_BLANK">HTML</a>]</td>
+    <td>https://schemablocks.org/schemas/ga4gh/v0.0.1/GeoLocation.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/GeoLocation.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/GeoLocation.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
     <td>id</td>
@@ -96,7 +96,7 @@ FHIR mapping: [Specimen](http://www.hl7.org/fhir/specimen.html).
   </tr>
   <tr>
     <td>info</td>
-    <td>https://schemablocks.org/schemas/ga4gh/Info.json [<a href="https://schemablocks.org/schemas/ga4gh/Info.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Info.html" target="_BLANK">HTML</a>]</td>
+    <td>https://schemablocks.org/schemas/ga4gh/v0.0.1/Info.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/Info.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Info.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
     <td>name</td>
@@ -116,7 +116,7 @@ FHIR mapping: [Specimen](http://www.hl7.org/fhir/specimen.html).
 
 #### age_at_collection
 
-* type: https://schemablocks.org/schemas/ga4gh/Age.json [<a href="https://schemablocks.org/schemas/ga4gh/Age.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]
+* type: https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]
 
 The age of the individual at time of biosample collection, as Age object.
 
@@ -126,7 +126,7 @@ The age of the individual at time of biosample collection, as Age object.
 
 #### biocharacteristics
 
-* type: array of https://schemablocks.org/schemas/ga4gh/PhenotypicFeature.json [<a href="https://schemablocks.org/schemas/ga4gh/PhenotypicFeature.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/PhenotypicFeature.html" target="_BLANK">HTML</a>]
+* type: array of https://schemablocks.org/schemas/ga4gh/v0.0.1/PhenotypicFeature.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/PhenotypicFeature.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/PhenotypicFeature.html" target="_BLANK">HTML</a>]
 
 The _Biocharacteristics_ object represents a wrapper list of "Phenotype" 
 objects with properly prefixed term ids, describing features of the 
@@ -172,7 +172,7 @@ The creation time of this record, in ISO8601
 
 #### data_use_conditions
 
-* type: https://schemablocks.org/schemas/ga4gh/DataUseConditions.json [<a href="https://schemablocks.org/schemas/ga4gh/DataUseConditions.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/DataUseConditions.html" target="_BLANK">HTML</a>]
+* type: https://schemablocks.org/schemas/ga4gh/v0.0.1/DataUseConditions.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/DataUseConditions.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/DataUseConditions.html" target="_BLANK">HTML</a>]
 
 Data use conditions applying to data from this biosample, as data use 
 condition object (e.g. DUO).
@@ -200,7 +200,7 @@ structured data.
 
 #### external_references
 
-* type: array of https://schemablocks.org/schemas/ga4gh/ExternalReference.json [<a href="https://schemablocks.org/schemas/ga4gh/ExternalReference.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/ExternalReference.html" target="_BLANK">HTML</a>]
+* type: array of https://schemablocks.org/schemas/ga4gh/v0.0.1/ExternalReference.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/ExternalReference.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/ExternalReference.html" target="_BLANK">HTML</a>]
 
 A list of reference_class objects with properly (e.g. identifiers.org) 
 prefixed external identifiers and a term describing the relationship.
@@ -211,7 +211,7 @@ prefixed external identifiers and a term describing the relationship.
 
 #### geo_provenance
 
-* type: https://schemablocks.org/schemas/ga4gh/GeoLocation.json [<a href="https://schemablocks.org/schemas/ga4gh/GeoLocation.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/GeoLocation.html" target="_BLANK">HTML</a>]
+* type: https://schemablocks.org/schemas/ga4gh/v0.0.1/GeoLocation.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/GeoLocation.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/GeoLocation.html" target="_BLANK">HTML</a>]
 
 This geo_class attribute ideally describes the geographic location of where the sample was extracted.
 Frequently, this value may reflect either the place of the laboratory where the analysis was performed, or correspond to the corresponding author's institution.
@@ -254,7 +254,7 @@ In a local context this could be the _id_ attribute in a corresponding
 
 #### info
 
-* type: https://schemablocks.org/schemas/ga4gh/Info.json [<a href="https://schemablocks.org/schemas/ga4gh/Info.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Info.html" target="_BLANK">HTML</a>]
+* type: https://schemablocks.org/schemas/ga4gh/v0.0.1/Info.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/Info.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Info.html" target="_BLANK">HTML</a>]
 
 This is a wrapper for objects without further specification in the schema.
 

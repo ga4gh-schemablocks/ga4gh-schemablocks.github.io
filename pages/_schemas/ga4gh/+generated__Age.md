@@ -51,7 +51,7 @@ __Description:__ Age
   </tr>
   <tr>
     <td>ageClass</td>
-    <td>https://schemablocks.org/schemas/ga4gh/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]</td>
+    <td>https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]</td>
   </tr>
 
 </table>
@@ -71,7 +71,7 @@ Age as ISO8601 period
 
 #### ageClass
 
-* type: https://schemablocks.org/schemas/ga4gh/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
+* type: https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
 
 The age of the subject (e.g. individual at the onset of a phenotype),
 as OntologyClass. An example ontology here is HsapDv (Human

@@ -93,7 +93,7 @@
    },
    "properties" : {
       "age_at_collection" : {
-         "$ref" : "https://schemablocks.org/schemas/ga4gh/Age.json",
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json",
          "description" : "The age of the individual at time of biosample collection, as Age object.\n",
          "example" : {
             "age" : "P56Y",
@@ -122,7 +122,7 @@
             }
          ],
          "items" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/PhenotypicFeature.json"
+            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/PhenotypicFeature.json"
          },
          "type" : "array"
       },
@@ -132,7 +132,7 @@
          "type" : "string"
       },
       "data_use_conditions" : {
-         "$ref" : "https://schemablocks.org/schemas/ga4gh/DataUseConditions.json",
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/DataUseConditions.json",
          "description" : "Data use conditions applying to data from this biosample, as data use \ncondition object (e.g. DUO).\n",
          "examples" : [
             {
@@ -167,12 +167,12 @@
             }
          ],
          "items" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/ExternalReference.json"
+            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/ExternalReference.json"
          },
          "type" : "array"
       },
       "geo_provenance" : {
-         "$ref" : "https://schemablocks.org/schemas/ga4gh/GeoLocation.json",
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/GeoLocation.json",
          "description" : "This geo_class attribute ideally describes the geographic location of where the sample was extracted.\nFrequently, this value may reflect either the place of the laboratory where the analysis was performed, or correspond to the corresponding author's institution.\n",
          "example" : {
             "altitude" : "94",
@@ -199,7 +199,7 @@
          "type" : "string"
       },
       "info" : {
-         "$ref" : "https://schemablocks.org/schemas/ga4gh/Info.json",
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Info.json",
          "description" : "This is a wrapper for objects without further specification in the schema.\n",
          "example" : {
             "death" : "1",

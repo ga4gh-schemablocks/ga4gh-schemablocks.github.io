@@ -67,7 +67,7 @@
    },
    "properties" : {
       "ageOfOnset" : {
-         "$ref" : "https://schemablocks.org/schemas/ga4gh/Age.json",
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json",
          "description" : "The values of this will come from the HPO onset hierarchy i.e. subclasses \nof HP:0003674.\nFHIR mapping: Condition.onset\n",
          "examples" : [
             {
@@ -80,7 +80,7 @@
          ]
       },
       "ageRangeOfOnset" : {
-         "$ref" : "https://schemablocks.org/schemas/ga4gh/AgeRange.json",
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/AgeRange.json",
          "description" : "The values of this will come from the HPO onset hierarchy i.e. subclasses \nof HP:0003674.\nFHIR mapping: Condition.onset\n",
          "examples" : [
             {
@@ -98,7 +98,7 @@
          ]
       },
       "classOfOnset" : {
-         "$ref" : "https://schemablocks.org/schemas/ga4gh/OntologyClass.json",
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json",
          "description" : "the values of this will come from the HPO onset hierarchy i.e. subclasses of HP:0003674\nFHIR mapping: Condition.onset\n",
          "examples" : [
             {
@@ -129,7 +129,7 @@
             }
          ],
          "items" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/Evidence.json"
+            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Evidence.json"
          },
          "type" : "array"
       },
@@ -142,7 +142,7 @@
             }
          ],
          "items" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/OntologyClass.json"
+            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json"
          },
          "type" : "array"
       },
@@ -154,7 +154,7 @@
          "type" : "boolean"
       },
       "severity" : {
-         "$ref" : "https://schemablocks.org/schemas/ga4gh/OntologyClass.json",
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json",
          "description" : "Severity of the condition e.g. subclasses of HP:0012824-Severity or \nSNOMED:272141005-Severities.\nFHIR mapping: Condition.severity\n",
          "examples" : [
             {
@@ -164,7 +164,7 @@
          ]
       },
       "type" : {
-         "$ref" : "https://schemablocks.org/schemas/ga4gh/OntologyClass.json",
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json",
          "description" : "The primary ontology class which describes the phenotype.\nFHIR mapping: Condition.identifier\n",
          "examples" : [
             {
