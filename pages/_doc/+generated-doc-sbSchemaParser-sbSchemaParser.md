@@ -122,3 +122,25 @@ auto-generated and normal pages can be separated.
 The property overview is followed by the listing of the properties, including
 descriptions and examples.
 
+
+#### Jekyll File Header
+
+A version of the Markdown inline documentation is added to the Github (or 
+alternative), Jekyll based website source tree.
+
+The page will only be generated into an HTML page if it contains a specific 
+header written in YAML.
+
+The `_create_jekyll_header` function will pre-pend such a header to the Markdown 
+page, including some file specific parameters such as the `permalink` address of 
+the page.
+
+
+### Helper Subroutines
+
+#### `_expand_CURIEs`
+
+This function expands prefixes in identifiers, based on the parameters provided 
+in `config.yml`. This is thought as a helper for some script/website specific 
+linking, not as a general CURIE expansion utility.
+
