@@ -36,6 +36,9 @@ collections:
   howto:
     output: true
     permalink: /howto/:path/
+  doc:
+    output: true
+    permalink: /doc/:path/
 collections_dir: pages  # optional; here, all collections are inside "/pages"
 
 # navigation blocks can be used to separate different categories and add e.g.
