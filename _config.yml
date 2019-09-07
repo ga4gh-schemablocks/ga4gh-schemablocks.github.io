@@ -94,6 +94,7 @@ cloud_tags:
   - coordinates
   - dates
   - developers
+  - documentation
   - identifiers
   - issues
   - howto
@@ -101,6 +102,7 @@ cloud_tags:
   - news
   - phenopackets
   - press
+  - tools
   - website
 
 # additional Jekyll instructions

@@ -3,7 +3,7 @@ title: "ProgenetixTemplate::bootstrap_site.pl Perl Code Documentation"
 layout: default
 www_link: 
 excerpt_separator: <!--more-->
-date: 2019-07-10
+date: 2019-09-07
 category:
   - howto
 tags:
