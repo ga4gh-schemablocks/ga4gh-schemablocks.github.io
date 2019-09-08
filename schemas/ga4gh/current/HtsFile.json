@@ -4,23 +4,42 @@
    "description" : "A file in one of the HTS formats (https://samtools.github.io/hts-specs)\n",
    "examples" : [
       {
-         "file" : {
-            "path" : "/data/genomes/file1.vcf.gz",
-            "uri" : "file://data/genomes/file1.vcf.gz"
-         },
-         "htsFormat" : "GVCF"
+         "htsFormat" : "GVCF",
+         "uri" : "file://data/genomes/file1.vcf.gz"
       }
    ],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "Jules Jacobsen",
+            "id" : "orcid:0000-0002-3265-15918"
+         },
+         {
+            "description" : "Peter Robinson",
+            "id" : "orcid:0000-0002-0736-91998"
+         }
+      ],
+      "provenance" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/file.rst"
+         }
+      ],
+      "sb_status" : "implemented",
+      "used_by" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/file.rst"
+         }
+      ]
+   },
    "properties" : {
-      "file" : {
-         "$ref\"" : "https://schemablocks.org/schemas/ga4gh/File/v0.0.1",
-         "description" : "the actual hts file\n",
+      "description" : {
+         "description" : "description of the file contents\n",
          "examples" : [
-            {
-               "path" : "/data/genomes/file1.vcf.gz",
-               "uri" : "file://data/genomes/file1.vcf.gz"
-            }
-         ]
+            "this is the description for the file"
+         ],
+         "type" : "string"
       },
       "genomeAssembly" : {
          "description" : "Genome assembly the contents of this file was called against. We recommend using the Genome Reference Consortium\nnomenclature e.g. GRCh37, GRCh38\n",
@@ -48,15 +67,24 @@
          "description" : "A map of identifiers mapping an individual to a sample in the file. The key values must correspond to the\nIndividual::id for the individuals in the message, the values must map to the samples in the file.\n",
          "examples" : [
             {
-               "individual1" : "add example"
+               "individual1" : "add example",
+               "individual2" : "add example"
             }
          ],
          "type" : "object"
+      },
+      "uri" : {
+         "description" : "URI for the file\n",
+         "examples" : [
+            "file://data/genomes/file1.vcf.gz",
+            "https://opensnp.org/data/60.23andme-exome-vcf.231?1341012444"
+         ],
+         "type" : "string"
       }
    },
    "required" : [
-      "htsFormat",
-      "file"
+      "uri",
+      "htsFormat"
    ],
    "title" : "HtsFile",
    "type" : "object"

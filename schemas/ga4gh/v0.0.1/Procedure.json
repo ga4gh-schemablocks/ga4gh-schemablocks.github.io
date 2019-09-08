@@ -10,13 +10,38 @@
          },
          "code" : {
             "id" : "NCIT:C28743",
-            "label" : "Funch Biopsy"
+            "label" : "Punch Biopsy"
          }
       }
    ],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "Jules Jacobsen",
+            "id" : "orcid:0000-0002-3265-15918"
+         },
+         {
+            "description" : "Peter Robinson",
+            "id" : "orcid:0000-0002-0736-91998"
+         }
+      ],
+      "provenance" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/procedure.rst"
+         }
+      ],
+      "sb_status" : "implemented",
+      "used_by" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/procedure.rst"
+         }
+      ]
+   },
    "properties" : {
       "bodySite" : {
-         "$ref" : "https://schemablocks.org/schemas/ga4gh/OntologyClass/v0.0.1",
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json",
          "description" : "FHIR mapping - Procedure.bodySite\n",
          "examples" : [
             {
@@ -26,12 +51,12 @@
          ]
       },
       "code" : {
-         "$ref" : "https://schemablocks.org/schemas/ga4gh/OntologyClass/v0.0.1",
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json",
          "description" : "FHIR mapping - Procedure.code\n",
          "examples" : [
             {
                "id" : "NCIT:C28743",
-               "label" : "Funch Biopsy"
+               "label" : "Punch Biopsy"
             }
          ]
       }

@@ -77,7 +77,7 @@ this-organization
   |           |
   |           |-- examples
   |   
-  |-- (webdocs.repo)   						# web repository (Jekyll based)
+  |-- (webdocs.repo)   							# web repository (Jekyll based)
         |
         |-- (webdocs.jekylldir)
         |     |-- Schema.md
@@ -124,20 +124,22 @@ path structure with the class name post-pended with a version:
 Processing is skipped if the class name does not consist of word character, or
 if a filter had been provided and the class name doesn't match.
 
-The documentation is extracted from the $data object and formatted into a
-markdown document.
+The documentation is extracted from the YAML schema file and formatted into
+markdown content, both for a plain `.md` file in the output directories of 
+the original repository (`out_dirnames.markdown`) and for the file for the Jekyll webpage generator.
 
 The script performs a CURIE to URL expansion for prefixes defined in the
 configuration file and links e.g. the ORCID id to its web address.
 
 
 
-Paths for the output files are created from the pre-generated directory paths
-and variables (class, parent directory name) which are extracted from the full
-path of the input file.
+Paths for the output files are created based on the values (e.g. out_dirnames` 
+provided in the configuration file.
 
-The web files for the Jekyll / GH-pages processing gets a prefix, to ensure that
-auto-generated and normal pages can be separated.
+The web files for the Jekyll / GH-pages processing receive a prefix, to ensure 
+that auto-generated and normal pages can co-exist. The `permalink` parameter 
+provided in the YAML header of the Jekyll file provides a "nice" and stable 
+name for the generated HTML page (independent of the original file name).
 
 The property overview is followed by the listing of the properties, including
 descriptions and examples.
