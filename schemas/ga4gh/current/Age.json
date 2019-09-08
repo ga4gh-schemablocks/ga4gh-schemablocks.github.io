@@ -1,6 +1,18 @@
 {
    "$id" : "https://schemablocks.org/schemas/ga4gh/Age/v0.0.1",
    "$schema" : "http://json-schema.org/draft-07/schema#",
+   "anyof" : [
+      {
+         "required" : [
+            "age"
+         ]
+      },
+      {
+         "required" : [
+            "ageClass"
+         ]
+      }
+   ],
    "description" : "Age",
    "examples" : [
       {
@@ -17,8 +29,7 @@
    "meta" : {
       "contributors" : [
          {
-            "description" : "Jules Jacobsen",
-            "id" : "orcid:0000-0002-3265-15918"
+            "description" : "Jules Jacobsen"
          },
          {
             "description" : "Peter Robinson",
@@ -52,7 +63,7 @@
          "type" : "string"
       },
       "ageClass" : {
-         "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json",
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/Age/v0.0.1",
          "description" : "The age of the subject (e.g. individual at the onset of a phenotype),\nas OntologyClass. An example ontology here is HsapDv (Human\nDevelopmental Stages).\nThis does not exactly correspond to the use of \"age of onset\" in HPO,\nsince this specifically codes the \"onset\" of a phenotype, not just any\nage as a timepoint. So when coding onset, implementations may choose\nto either use an \"age of onset\" ontology or an \"Age\" class.\n",
          "examples" : [
             {
@@ -61,12 +72,6 @@
             }
          ]
       }
-   },
-   "required" : {
-      "anyof" : [
-         "age",
-         "ageClass"
-      ]
    },
    "title" : "Age",
    "type" : "object"

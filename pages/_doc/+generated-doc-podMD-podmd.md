@@ -3,7 +3,7 @@ title: "podMD::podmd.pl Perl Code Documentation"
 layout: default
 www_link: 
 excerpt_separator: <!--more-->
-date: 2019-09-07
+date: 2019-09-08
 category:
   - howto
 tags:
@@ -20,17 +20,15 @@ tags:
 
 * [Source Link](https://github.com/ga4gh-schemablocks/tools/tree/master/podMD/podmd.pl) 
 
-The "podmd.pl" script parses inline documentation from - now various - code files
+The `podmd.pl` script parses inline documentation from - now various - code files
 and writes it to a given output directory, in the format of Jekyll-compatible
 Markdown files, i.e. including a YAML header.
 
-* location: `__Jekyll_site_directory__/_tools/`
-
-Processing the input files is based on parameters provided in the "podmd.yaml"
+Processing the input files is based on parameters provided in the `podmd.yaml`
 configuration file. Please have a look for examples there.
 
-For now, the functions of the script are optimised for use in the
-[Progenetix](http://info.progenetix.org) documentation environment but may be
+The functions of the script were developed for use in the
+[Progenetix](http://info.progenetix.org) environment but now have been 
 adapted for other purposes.
 
 The script itself contains an inline predefined minimal processing configuration

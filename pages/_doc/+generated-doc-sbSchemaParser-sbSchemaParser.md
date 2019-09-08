@@ -3,7 +3,7 @@ title: "sbSchemaParser::sbSchemaParser.pl Perl Code Documentation"
 layout: default
 www_link: 
 excerpt_separator: <!--more-->
-date: 2019-09-07
+date: 2019-09-08
 category:
   - howto
 tags:
@@ -77,13 +77,13 @@ this-organization
   |           |
   |           |-- examples
   |   
-  |-- this-organization.github.io   # web repository (Jekyll based)
+  |-- (webdocs.repo)   						# web repository (Jekyll based)
         |
-        |-- (out_web.dirs.jekyll)
+        |-- (webdocs.jekylldir)
         |     |-- Schema.md
         |     |-- ...
         |
-        |-- (out_web.dirs.schemas)
+        |-- (webdocs.schemadir)
               |-- current
               |     |-- Schema.json
               |     |-- ...
@@ -94,6 +94,26 @@ this-organization
               |    
               |-- v...
 ```
+
+#### Usage
+
+The `sbSchemaParser.pl` script has to be run in a _local_ version of the 
+repository structure. In principle, any relative directory locations should be 
+possible if specified in the `config.yaml` defaults file, though a reasonable 
+approach is to use a "organization -> projects" structure as above.
+
+The script is executed with
+
+```
+perl sbSchemaParser.pl
+```
+
+The only current option is to provide a "-filter" argument against the schema 
+file names; e.g. `perl sbSchemaParser.pl -filter Age` will only process schemas 
+with "Age" in their file name.
+
+#### Processing Schema Source Directories
+
 
 The class name is derived from the file's "$id" value, assuming a canonical 
 path structure with the class name post-pended with a version:
