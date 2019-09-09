@@ -51,28 +51,32 @@
    },
    "properties" : {
       "end" : {
-         "$ref" : "https://schemablocks.org/schemas/ga4gh/Age.json",
-         "description" : "Age as ISO8601 string or OntologyClass",
-         "examples" : [
-            {
-               "ageClass" : {
-                  "id" : "HsapDv:0000086",
-                  "label" : "adolescent stage"
+         "allof" : {
+            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json",
+            "description" : "Age as ISO8601 string or OntologyClass",
+            "examples" : [
+               {
+                  "ageClass" : {
+                     "id" : "HsapDv:0000086",
+                     "label" : "adolescent stage"
+                  }
+               },
+               {
+                  "age" : "P16Y6M"
                }
-            },
-            {
-               "age" : "P16Y6M"
-            }
-         ]
+            ]
+         }
       },
       "start" : {
-         "$ref" : "https://schemablocks.org/schemas/ga4gh/Age.json",
-         "description" : "Age as ISO8601 string or OntologyClass",
-         "examples" : [
-            {
-               "age" : "P12Y"
-            }
-         ]
+         "allof" : {
+            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json",
+            "description" : "Age as ISO8601 string or OntologyClass",
+            "examples" : [
+               {
+                  "age" : "P12Y"
+               }
+            ]
+         }
       }
    },
    "required" : {

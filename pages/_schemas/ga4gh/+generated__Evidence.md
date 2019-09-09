@@ -47,11 +47,11 @@ __Description:__ Evidence, FHIR mapping: Condition.evidence (https://www.hl7.org
   </tr>
   <tr>
     <td>evidenceCode</td>
-    <td></td>
+    <td>https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
     <td>reference</td>
-    <td></td>
+    <td>https://schemablocks.org/schemas/ga4gh/v0.0.1/ExternalReference.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/ExternalReference.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/ExternalReference.html" target="_BLANK">HTML</a>]</td>
   </tr>
 
 </table>
@@ -59,7 +59,7 @@ __Description:__ Evidence, FHIR mapping: Condition.evidence (https://www.hl7.org
 
 #### evidenceCode
 
-* type: 
+* type: https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
 
 
 
@@ -68,7 +68,7 @@ __Description:__ Evidence, FHIR mapping: Condition.evidence (https://www.hl7.org
 
 #### reference
 
-* type: 
+* type: https://schemablocks.org/schemas/ga4gh/v0.0.1/ExternalReference.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/ExternalReference.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/ExternalReference.html" target="_BLANK">HTML</a>]
 
 
 

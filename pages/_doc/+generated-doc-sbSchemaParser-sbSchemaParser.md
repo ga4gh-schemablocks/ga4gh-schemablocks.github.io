@@ -157,6 +157,17 @@ The `_create_jekyll_header` function will pre-pend such a header to the Markdown
 page, including some file specific parameters such as the `permalink` address of 
 the page.
 
+##### Hacking the "$ref is a solitary attribute" problem
+
+In the current JSON Schema specification there is a problem with "$ref"-type 
+attribute types: If a reference is given, additional attributes of the property 
+(examples, description) are being ignored. This isn't very helpful, since 
+information specific to the property's _instantiation_ will not be displayed.
+
+This behaviour can be alleviated by wrapping the `$ref` and other attributes 
+with an `allof` statement (which is interpolated in the following, to expose 
+the attributes). We'll hope for a more elegant solution ...
+
 
 ### Helper Subroutines
 
