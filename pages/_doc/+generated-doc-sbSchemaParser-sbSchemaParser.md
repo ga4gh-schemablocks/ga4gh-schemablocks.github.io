@@ -169,6 +169,8 @@ with an `allof` statement (which is interpolated in the following, to expose
 the attributes). We'll hope for a more elegant solution ...
 
 
+
+
 ### Helper Subroutines
 
 #### `_expand_CURIEs`

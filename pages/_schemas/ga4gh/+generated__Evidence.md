@@ -61,19 +61,35 @@ __Description:__ Evidence, FHIR mapping: Condition.evidence (https://www.hl7.org
 
 * type: https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
 
+The encoded evidence type using, for example the Evidence & Conclusion Ontology
+(ECO - http://purl.obolibrary.org/obo/eco.owl)
+FHIR mapping - Condition.evidence.code
 
 
 ##### `evidenceCode` Value Example  
 
+```
+{
+   "id" : "add example",
+   "label" : "add example"
+}
+```
 
 #### reference
 
 * type: https://schemablocks.org/schemas/ga4gh/v0.0.1/ExternalReference.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/ExternalReference.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/ExternalReference.html" target="_BLANK">HTML</a>]
 
+FHIR mapping - Condition.evidence.detail
 
 
 ##### `reference` Value Example  
 
+```
+{
+   "description" : "COL6A1 mutation leading to Bethlem myopathy with recurrent hematuria: a case report.",
+   "id" : "PMID:30808312"
+}
+```
 
 
 ### `Evidence` Value Example  

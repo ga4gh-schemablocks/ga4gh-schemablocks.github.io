@@ -62,19 +62,37 @@ __Description:__ Age range
 
 * type: https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]
 
+Age as ISO8601 string or OntologyClass
 
+##### `end` Value Examples  
 
-##### `end` Value Example  
-
+```
+{
+   "ageClass" : {
+      "id" : "HsapDv:0000086",
+      "label" : "adolescent stage"
+   }
+}
+```
+```
+{
+   "age" : "P16Y6M"
+}
+```
 
 #### start
 
 * type: https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]
 
-
+Age as ISO8601 string or OntologyClass
 
 ##### `start` Value Example  
 
+```
+{
+   "age" : "P12Y"
+}
+```
 
 
 ### `AgeRange` Value Example  
