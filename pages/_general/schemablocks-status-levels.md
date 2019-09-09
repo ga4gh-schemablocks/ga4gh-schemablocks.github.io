@@ -41,7 +41,7 @@ The current status level of thiose recommendations is "proposed".
 	- the code may undergo considerable maturation
 	- not recommended for integration into products w/o close tracking
 	- contributions and discussions are encouraged
-* `implementation`
+* `implemented`
 	- mature block which is implemented in one or more {S}[B] aligned
 	schemas
 	- may be extended from a core block or be too specific for general
