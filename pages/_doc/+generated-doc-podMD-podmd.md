@@ -3,7 +3,7 @@ title: "podMD::podmd.pl Perl Code Documentation"
 layout: default
 www_link: 
 excerpt_separator: <!--more-->
-date: 2019-09-08
+date: 2019-09-09
 category:
   - howto
 tags:
@@ -36,25 +36,26 @@ which should be overridden from a `./podmd.yaml` file:
 
 ```
 my $here_path   =   File::Basename::dirname( eval { ( caller() )[1] } );
-my $conf_yaml		=		$here_path.'/podmd.yaml';
-my $config			=		{
-	output_dir		=>	 '../pages/_doc',
-	output_pre		=>	 '+generated-podmd-doc',
-	category			=>	 'howto',
-	tags					=>	[ qw(code documentation) ],
-	md_starts			=>	[ '^=podmd', '\/\*podmd', '^# podmd' ],
-	md_stops			=>	[ '^=cut', 'end_podmd\*\/', '^# end_podmd' ],
-	packages			=>	{
-		ProgenetixTemplate	=>	{
-			input				=>	'.',
-			extensions	=>	[ '.pl' ],
-			language		=>	'Perl',
-		},
-	},
+my $conf_yaml   =   $here_path.'/podmd.yaml';
+my $config      =   {
+  output_dir    =>   '../pages/_doc',
+  output_pre    =>   '+generated-podmd-doc',
+  category      =>   'howto',
+  tags          =>  [ qw(code documentation) ],
+  md_starts     =>  [ '^=podmd', '\/\*podmd', '^# podmd' ],
+  md_stops      =>  [ '^=cut', 'end_podmd\*\/', '^# end_podmd' ],
+  packages      =>  {
+    ProgenetixTemplate  =>  {
+      input       =>  '.',
+      extensions  =>  [ '.pl' ],
+      language    =>  'Perl',
+    },
+  },
+  tab_to_spaces  =>  2,
 };
 
 if (-f $conf_yaml) {
-	$config      	=   LoadFile($here_path.'/podmd.yaml') }
+  $config       =   LoadFile($here_path.'/podmd.yaml') }
 ```
 For the scanned files, comment lines are read in if they are between one of the
 `md_starts` and `md_stops` markers, which can be defined as global parameters
@@ -65,7 +66,7 @@ markers, but is wrapped in source quote tags.
 
 If per-line commenting is uses between the markers (Python "# " line starts),
 these comment tags a re removed. However, this will also remove Markdown H1
-tags - so either use HTML for those or pre-pend them with a space.
+tags - so either use HTML for those or pre-pend them with a space. 
 
 No file is created if there isn't any content in the text buffer.
 
@@ -80,7 +81,7 @@ The following code shows how the header is generated through injecting some
 file dependent parameters into a standard _Jekyll_ YAML header:
 
 ```
-		my $mdFtxt	=		<<END;
+    my $mdFtxt  =   <<END;
 ---
 title: "$scope::$cfName $package->{language} Code Documentation"
 layout: default

@@ -3,7 +3,7 @@ title: "sbSchemaParser::sbSchemaParser.pl Perl Code Documentation"
 layout: default
 www_link: 
 excerpt_separator: <!--more-->
-date: 2019-09-08
+date: 2019-09-09
 category:
   - howto
 tags:
@@ -43,7 +43,7 @@ this-organization
   |     |
   |     |-- sbSchemaParser
   |           |-- sbSchemaParser.pl # this file
-  |           |-- config.yaml				# in- and output path definitions
+  |           |-- config.yaml       # in- and output path definitions
   |
   |-- blocks                        # example for (1 or 1+) schema repositories
   |     |
@@ -77,7 +77,7 @@ this-organization
   |           |
   |           |-- examples
   |   
-  |-- (webdocs.repo)   							# web repository (Jekyll based)
+  |-- (webdocs.repo)                # web repository (Jekyll based)
         |
         |-- (webdocs.jekylldir)
         |     |-- Schema.md
