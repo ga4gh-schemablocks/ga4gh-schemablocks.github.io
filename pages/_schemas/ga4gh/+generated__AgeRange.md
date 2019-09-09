@@ -17,10 +17,10 @@ tags:
 
 * Provenance  
 
-    - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/agerange.rst)  
+    - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/age.rst)  
 * Used by  
 
-    - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/agerange.rst)  
+    - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/age.rst)  
 * Contributors  
 
     - [Jules Jacobsen](https://orcid.org/0000-0002-3265-15918)  

@@ -38,14 +38,14 @@
       "provenance" : [
          {
             "description" : "Phenopackets",
-            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/agerange.rst"
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/age.rst"
          }
       ],
       "sb_status" : "implemented",
       "used_by" : [
          {
             "description" : "Phenopackets",
-            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/agerange.rst"
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/age.rst"
          }
       ]
    },
