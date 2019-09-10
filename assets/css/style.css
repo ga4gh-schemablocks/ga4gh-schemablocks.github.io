@@ -86,7 +86,7 @@ header h5  {
 }
 
 #listpage_sortmarker {
-	width: 10%;
+	min-width: 180px;
 	padding-top: 10px;
 	float: right;
 	font-size: 0.8em;
@@ -94,7 +94,7 @@ header h5  {
 }
 
 #listpage_headline {
-	width: 85%;
+/*	width: 78%; */
 	float: left;
 	clear: none;
 }
