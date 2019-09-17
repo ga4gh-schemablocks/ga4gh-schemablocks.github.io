@@ -14,7 +14,7 @@ SchemaBlocks is a "__cross-workstreams, cross-drivers__" initiative to document 
 
 Launched in December 2018, this project is still in an "orientation phase", with developing participation, leadership and governance structures. At its current stage, the documents can __not__ be considered "__authoritative GA4GH recommendations__" but rather represent documentation and implementation examples provided by GA4GH members.
 
-<img style="float: left; margin: 20px 20px 10px 0px;" src="{{ "assets/img/logo-schemablocks-120x120.png" | relative_url}}" />
+<img style="float: left; margin: 20px 20px 10px 0px;" src="{{ "assets/img/logo-schemablocks-120x120-no-logo.png" | relative_url}}" />
 
 While future products and implementations may be completely based on _SchemaBlocks_ models, this project does not attempt to develop a rigid, complete data schema but rather to provide the object vocabulary and semantics for a large range of developments.
 
