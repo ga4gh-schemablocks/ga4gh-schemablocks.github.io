@@ -2,7 +2,7 @@
 title: "Michael Baudis"
 layout: default
 date: 2018-12-11
-excerpt_link: 'https://info.baudisgroup.org/group/Michael-Baudis.html'
+excerpt_link: 'https://info.baudisgroup.org/group/Michael_Baudis/'
 excerpt_separator: <!--more-->
 image_file: 'mbaudis.jpg'
 category:
@@ -26,17 +26,17 @@ tags:
 
 ## {{ page.title }}
 
-Professor of Bioinformatics  
-University of Zurich  
-Swiss Institute of Bioinformatics  
-Co-chair GA4GH Discovery  
-Co-lead SchemaBlocks initiative  
-Co-lead ELIXIR Beacon  
+Professor of Bioinformatics
+University of Zurich
+Swiss Institute of Bioinformatics
+Co-chair GA4GH Discovery
+Co-lead SchemaBlocks initiative
+Co-lead ELIXIR Beacon
 
 <!--more-->
 
-email [mbaudis@progenetix.org](mailto:mbaudis@progenetix.org)  
-web [UZH](https://www.imls.uzh.ch/en/research/baudis.html)  
-web [SIB](https://www.sib.swiss/michael-baudis-group)  
-web [group](https://info.baudisgroup.org)  
+email [mbaudis@progenetix.org](mailto:mbaudis@progenetix.org)
+web [UZH](https://www.imls.uzh.ch/en/research/baudis.html)
+web [SIB](https://www.sib.swiss/michael-baudis-group)
+web [group](https://info.baudisgroup.org)
 
