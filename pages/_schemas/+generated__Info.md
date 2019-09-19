@@ -17,15 +17,15 @@ tags:
 
 
 
-#### Provenance  
+#### Provenance
 
 
 #### Authors
 
-* 
+*
 
-#### Schema source: [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/info.yaml)    
-#### Properties of the _Info_ class    
+#### Schema source: [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/working/info.yaml)
+#### Properties of the _Info_ class
 
 <table>
   <tr>
@@ -62,7 +62,7 @@ tags:
 </table>
 
 
-#### Description 
+#### Description
 Additional information regarding the object in reference.
 
 

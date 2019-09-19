@@ -17,15 +17,15 @@ tags:
 
 
 
-#### Provenance  
+#### Provenance
 
 
 #### Authors
 
-* 
+*
 
-#### Schema source: [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/individual.yaml)    
-#### Properties of the _Individual_ class    
+#### Schema source: [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/working/individual.yaml)
+#### Properties of the _Individual_ class
 
 <table>
   <tr>
@@ -121,7 +121,7 @@ For resources where there may be more than one organism being studied it is advi
 </table>
 
 
-#### Description 
+#### Description
 An individual is a single organism (here typically a human).
 
 

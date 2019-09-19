@@ -17,20 +17,20 @@ tags:
 
 
 
-#### Provenance  
+#### Provenance
 
-* [Original GA4GH schema](https://github.com/ga4gh/ga4gh-schemas/blob/master/src/main/proto/ga4gh/variants.proto#L145)  
+* [Original GA4GH schema](https://github.com/ga4gh/ga4gh-schemas/blob/master/src/main/proto/ga4gh/variants.proto#L145)
 
-#### Used by  
+#### Used by
 
-* [Beacon, in modified form as basis for query model](https://github.com/ga4gh-beacon/specification/blob/master/beacon.yaml#L345)  
+* [Beacon, in modified form as basis for query model](https://github.com/ga4gh-beacon/specification/blob/master/beacon.yaml#L345)
 
 #### Authors
 
 * GA4GH Metadata Task Team, GA4GH Variant Task Team, @mbaudis
 
-#### Schema source: [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/src/yaml/variant.yaml)    
-#### Properties of the _Variant_ class    
+#### Schema source: [YAML file](https://github.com/ga4gh-schemablocks/blocks/blob/master/working/variant.yaml)
+#### Properties of the _Variant_ class
 
 <table>
   <tr>
@@ -145,7 +145,7 @@ tags:
 </table>
 
 
-#### Description 
+#### Description
 The document describes attributes of the _variant_ object. In its current implementation, _variant_ (and related genomic objects such as _callset_) represent extended versions of the original, VCF-derived GA4GH schema.
 Compared to the VCF model it was derived from, this schema includes some
 changes:

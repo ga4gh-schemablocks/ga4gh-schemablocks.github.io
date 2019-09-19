@@ -1,2 +1,6 @@
 /_site/*
 .jekyll-metadata
+pages/.DS_Store
+.DS_Store
+pages/_schemas/.DS_Store
+pages/_schemas/.DS_Store
