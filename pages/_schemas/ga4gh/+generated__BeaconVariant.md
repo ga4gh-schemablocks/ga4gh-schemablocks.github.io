@@ -69,7 +69,7 @@ GA4GH::GKS work stream.
   </tr>
   <tr>
     <td>biosample_id</td>
-    <td></td>
+    <td>string</td>
   </tr>
   <tr>
     <td>callset_id</td>
@@ -81,11 +81,11 @@ GA4GH::GKS work stream.
   </tr>
   <tr>
     <td>end</td>
-    <td>array of array</td>
+    <td>array of int64</td>
   </tr>
   <tr>
     <td>genotype</td>
-    <td>array of array</td>
+    <td>array of string</td>
   </tr>
   <tr>
     <td>id</td>
@@ -109,7 +109,7 @@ GA4GH::GKS work stream.
   </tr>
   <tr>
     <td>start</td>
-    <td>array of array</td>
+    <td>array of int64</td>
   </tr>
   <tr>
     <td>variant_type</td>
@@ -136,7 +136,7 @@ the reference_bases value
 
 #### biosample_id
 
-* type: 
+* type: string
 
 The optional identifier ("biosample.id") of the biosample this variant was reported 
 from. This is a shortcut to using the variant -> callset -> biosample chaining.
@@ -181,7 +181,7 @@ from callset" storage systems
 
 #### end
 
-* type: array of array
+* type: array of int64
 
 array of 0 (for presise sequence variants), 1 or 2 (for imprecise end position of 
 structural variant) integers
@@ -198,7 +198,7 @@ structural variant) integers
 
 #### genotype
 
-* type: array of array
+* type: array of string
 
 list of strings, which represent the (phased) alleles in which the variant was 
 being observed
@@ -287,7 +287,7 @@ Reference name (chromosome). Accepting values 1-22, X, Y.
 
 #### start
 
-* type: array of array
+* type: array of int64
 
 array of 1 or 2 (for imprecise end position of structural variant) integers
 

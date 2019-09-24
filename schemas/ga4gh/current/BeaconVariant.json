@@ -101,7 +101,8 @@
          "description" : "The optional identifier (\"biosample.id\") of the biosample this variant was reported \nfrom. This is a shortcut to using the variant -> callset -> biosample chaining.\n",
          "examples" : [
             "pgx-bs-987647"
-         ]
+         ],
+         "type" : "string"
       },
       "callset_id" : {
          "description" : "* the identifier (\"callset.id\") of the callset (i.e. \"VCF column\") this variant is \npart of\n* optional, if another provenance method is provided (e.g. if variants are nested \nwith the parental object as in a Phenopacket)\n",
@@ -126,7 +127,7 @@
             ]
          ],
          "items" : {
-            "format" : "int64"
+            "type" : "int64"
          },
          "queries" : [
             {
@@ -196,7 +197,7 @@
             ]
          ],
          "items" : {
-            "format" : "int64"
+            "type" : "int64"
          },
          "type" : "array"
       },
