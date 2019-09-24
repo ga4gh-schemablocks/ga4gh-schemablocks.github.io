@@ -35,7 +35,7 @@ tags:
 ### Source (v0.0.1)
 
 * raw source [[JSON](./current/OntologyClass.json)]
-* [Github](https://github.com/ga4gh-schemablocks/sb-phenopackets/blob/master/schemas/OntologyClass.yaml)
+* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/OntologyClass.yaml)
 
 ### Attributes
   
@@ -70,7 +70,7 @@ inconsistently followed.
 
 * type: string
 
-CURIE of the ontology class
+properly prefixed CURIE of the ontology term
 
 ##### `id` Value Example  
 
@@ -82,7 +82,7 @@ CURIE of the ontology class
 
 * type: string
 
-the text label associated with the ontology class
+the text label associated with the term
 
 ##### `label` Value Example  
 

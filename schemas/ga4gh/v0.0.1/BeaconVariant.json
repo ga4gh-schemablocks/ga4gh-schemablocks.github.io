@@ -1,0 +1,214 @@
+{
+   "$id" : "https://schemablocks.org/schemas/ga4gh/BeaconVariant/v0.0.1",
+   "$schema\"" : "http://json-schema.org/draft-07/schema#",
+   "description" : "The document describes attributes of the _variant_ object. In its current \nimplementation, _variant_ (and related genomic objects such as _callset_) represent \nextended versions of the original, VCF-derived GA4GH schema.\nCompared to the VCF model it was derived from, this schema includes some\nchanges:\n\n* the definition of an optional `end` position, to support e.g. structural variants \nw/o definition of the sequence\n* the use of arrays for `start` and `end` positions, to describe positions with \nuncertain exact location (again, important for structural variants and data derived \nfrom array based experiments)\n    - this corresponds to the use of `CIPOS` and `CIEND` intervals around `pos` and \n    `END` positions ibn VCF, where the begin of e.g. the `pos` interval is given by \n    `pos - CIPOS[0]` and the end of the `pos` estimate by `pos + CIPOS[0]`\n\nThis format may be superseeded or augmented based on current developments in the \nGA4GH::GKS work stream.\n",
+   "examples" : [
+      {
+         "biosample_id" : "fcl-bs-0099615",
+         "callset_id" : "structdb-cs-nhl-0009876",
+         "digest" : "8,14:20867740-21977798,21978106:BND",
+         "end" : [
+            "21977798",
+            "21978106"
+         ],
+         "id" : "structdb-var-123456789",
+         "mate_name" : "14",
+         "reference_bases" : "N",
+         "reference_name" : "8",
+         "start" : [
+            "20867740"
+         ],
+         "variant_type" : "BND"
+      },
+      {
+         "biosample_id" : "structdb-bs-nhl-0009876",
+         "callset_id" : "structdb-cs-nhl-0009876",
+         "digest" : "6:63450000,63550000-63450000,63550000:DEL",
+         "end" : [
+            "63450000",
+            "63550000"
+         ],
+         "id" : "structdb-var-123456790",
+         "info" : {
+            "cnv_length" : "85500000",
+            "cnv_value" : "-0.294"
+         },
+         "reference_bases" : "N",
+         "reference_name" : "6",
+         "start" : [
+            "63450000",
+            "63550000"
+         ],
+         "variant_type" : "DEL"
+      },
+      {
+         "alternate_bases" : "AC",
+         "callset_id" : "DIPG_CS_0290",
+         "digest" : "2:203420136:A>AC",
+         "genotype" : [
+            "1",
+            "."
+         ],
+         "id" : "5be1840772798347f0ed9e8b",
+         "reference_bases" : "A",
+         "reference_name" : "2",
+         "start" : [
+            "203420136"
+         ]
+      }
+   ],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "GA4GH Data Working Group"
+         },
+         {
+            "description" : "ELIXIR Beacon team"
+         },
+         {
+            "description" : "Michael Baudis",
+            "id" : "orcid:0000-0002-9903-4248"
+         }
+      ],
+      "provenance" : [
+         {
+            "description" : "Original GA4GH schema",
+            "id" : "https://github.com/ga4gh/ga4gh-schemas/blob/master/src/main/proto/ga4gh/variants.proto#L145"
+         }
+      ],
+      "sb_status" : "implemented",
+      "used_by" : [
+         {
+            "description" : "Beacon, in modified form as basis for query model",
+            "id" : "https://github.com/ga4gh-beacon/specification/blob/master/beacon.yaml"
+         },
+         {
+            "description" : "Progenetix database schema (Beacon+ backend)",
+            "id" : "https://github.com/progenetix/schemas/tree/master/main/yaml"
+         }
+      ]
+   },
+   "properties" : {
+      "alternate_bases" : {
+         "description" : "* one or more bases relative to start position of the reference genome, replacing \nthe reference_bases value\n* for precise variants; not used for structural (e.g. DUP, DEL) alterations\n",
+         "examples" : [
+            "AC"
+         ],
+         "pattern" : "^[ACGTN]+$",
+         "type" : "string"
+      },
+      "biosample_id" : {
+         "description" : "The optional identifier (\"biosample.id\") of the biosample this variant was reported \nfrom. This is a shortcut to using the variant -> callset -> biosample chaining.\n",
+         "examples" : [
+            "pgx-bs-987647"
+         ]
+      },
+      "callset_id" : {
+         "description" : "* the identifier (\"callset.id\") of the callset (i.e. \"VCF column\") this variant is \npart of\n* optional, if another provenance method is provided (e.g. if variants are nested \nwith the parental object as in a Phenopacket)\n",
+         "examples" : [
+            "PGX_AM_CS_GSM1690424"
+         ],
+         "type" : "string"
+      },
+      "digest" : {
+         "description" : "* Concatenated unique specific elements of the variant.\n* Optional, convenience element to derive unique variants in \"individual variant \nfrom callset\" storage systems\n",
+         "examples" : [
+            "4:12282-46465:DEL"
+         ],
+         "type" : "string"
+      },
+      "end" : {
+         "description" : "array of 0 (for presise sequence variants), 1 or 2 (for imprecise end position of \nstructural variant) integers\n",
+         "examples" : [
+            [
+               "21977798",
+               "21978106"
+            ]
+         ],
+         "items" : {
+            "format" : "int64"
+         },
+         "queries" : [
+            {
+               "description" : "This example query will return all deletion variants with any overlap of the \nCDKN2A CDR (GRCh38 positions).\n",
+               "query" : "db.variants.find( { \"reference_name\" : \"9\",  \"variant_type\" : \"DEL\", \"start\" : { $lteq : 21975098 }, \"end\" : { $gteq : 21967753 } } )"
+            }
+         ],
+         "type" : "array"
+      },
+      "genotype" : {
+         "description" : "list of strings, which represent the (phased) alleles in which the variant was \nbeing observed\n",
+         "examples" : [
+            [
+               "1",
+               "."
+            ]
+         ],
+         "items" : {
+            "type" : "string"
+         },
+         "type" : "array"
+      },
+      "id" : {
+         "description" : "* The local-unique identifier of this variant (referenced as \"variant_id\").\n* Optional\n",
+         "examples" : [
+            "amvar-8754-7751-1119-8539"
+         ],
+         "type" : "string"
+      },
+      "info" : {
+         "allof" : {
+            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Info.json",
+            "description" : "additional variant information, as defined in the example and accompanying \ndocumentation\n",
+            "examples" : [
+               {
+                  "cnv_length" : "1205290",
+                  "cnv_value" : "-0.294"
+               }
+            ]
+         }
+      },
+      "mate_name" : {
+         "description" : "Mate name (chromosome) for fusion (BRK) events; otherwise left empty. Accepting \nvalues 1-22, X, Y.\n",
+         "examples" : [
+            "14"
+         ],
+         "type" : "string"
+      },
+      "reference_bases" : {
+         "description" : "one or more bases at start position in the reference genome, which have been \nreplaced by the `alternate_bases` value\n",
+         "examples" : [
+            "G"
+         ],
+         "pattern" : "^[ACGTN]+$",
+         "type" : "string"
+      },
+      "reference_name" : {
+         "description" : "Reference name (chromosome). Accepting values 1-22, X, Y.\n",
+         "examples" : [
+            "8"
+         ],
+         "type" : "string"
+      },
+      "start" : {
+         "description" : "array of 1 or 2 (for imprecise end position of structural variant) integers\n",
+         "examples" : [
+            [
+               "20867740"
+            ]
+         ],
+         "items" : {
+            "format" : "int64"
+         },
+         "type" : "array"
+      },
+      "variant_type" : {
+         "description" : "the variant type in case of a named (structural) variant (e.g. DUP, DEL, BND ...)\n",
+         "example" : "DEL",
+         "type" : "string"
+      }
+   },
+   "title" : "BeaconVariant",
+   "type" : "object"
+}
+

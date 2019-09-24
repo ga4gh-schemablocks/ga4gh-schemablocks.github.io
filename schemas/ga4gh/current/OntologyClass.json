@@ -56,14 +56,14 @@
    },
    "properties" : {
       "id" : {
-         "description" : "CURIE of the ontology class",
+         "description" : "properly prefixed CURIE of the ontology term",
          "examples" : [
             "ncit:C8294"
          ],
          "type" : "string"
       },
       "label" : {
-         "description" : "the text label associated with the ontology class",
+         "description" : "the text label associated with the term",
          "examples" : [
             "Pancreatic Adenocarcinoma"
          ],

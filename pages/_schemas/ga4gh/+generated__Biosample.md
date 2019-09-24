@@ -67,10 +67,6 @@ FHIR mapping: [Specimen](http://www.hl7.org/fhir/specimen.html).
     <td>array of https://schemablocks.org/schemas/ga4gh/v0.0.1/PhenotypicFeature.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/PhenotypicFeature.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/PhenotypicFeature.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
-    <td>created</td>
-    <td>string</td>
-  </tr>
-  <tr>
     <td>data_use_conditions</td>
     <td>https://schemablocks.org/schemas/ga4gh/v0.0.1/DataUseConditions.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/DataUseConditions.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/DataUseConditions.html" target="_BLANK">HTML</a>]</td>
   </tr>
@@ -104,10 +100,6 @@ FHIR mapping: [Specimen](http://www.hl7.org/fhir/specimen.html).
   </tr>
   <tr>
     <td>project_id</td>
-    <td>string</td>
-  </tr>
-  <tr>
-    <td>updated</td>
     <td>string</td>
   </tr>
 
@@ -160,16 +152,6 @@ should be annotated with the individual.
 }
 ```
 
-#### created
-
-* type: string
-
-The creation time of this record, in ISO8601
-
-
-##### `created` Value Example  
-
-
 #### data_use_conditions
 
 * type: https://schemablocks.org/schemas/ga4gh/v0.0.1/DataUseConditions.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/DataUseConditions.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/DataUseConditions.html" target="_BLANK">HTML</a>]
@@ -219,6 +201,17 @@ Frequently, this value may reflect either the place of the laboratory where the 
 
 ##### `geo_provenance` Value Example  
 
+```
+{
+   "altitude" : "94",
+   "city" : "Timisoara",
+   "country" : "Romania",
+   "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
+   "latitude" : "45.75",
+   "longitude" : "21.23",
+   "precision" : "address"
+}
+```
 
 #### id
 
@@ -256,7 +249,8 @@ In a local context this could be the _id_ attribute in a corresponding
 
 * type: https://schemablocks.org/schemas/ga4gh/v0.0.1/Info.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/Info.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Info.html" target="_BLANK">HTML</a>]
 
-This is a wrapper for objects without further specification in the schema.
+additional variant information, as defined in the example and accompanying 
+documentation
 
 
 ##### `info` Value Example  
@@ -290,16 +284,6 @@ The id attribute of the project that this biosample was collected in.
 "ind-cnhl-1293347-004"
 ```
 
-#### updated
-
-* type: string
-
-The time of the last edit of this record, in ISO8601
-
-
-##### `updated` Value Example  
-
-
 
 ### `Biosample` Value Example  
 
@@ -321,7 +305,6 @@ The time of the last edit of this record, in ISO8601
          }
       }
    ],
-   "created" : "2017-10-25T07:06:03Z",
    "data_use_conditions" : {
       "id" : "DUO:0000004",
       "label" : "no restriction"
@@ -352,8 +335,7 @@ The time of the last edit of this record, in ISO8601
       "followup_time" : "P14M"
    },
    "name" : "Sample BRCA-00429, 2nd replicate",
-   "project_id" : "ind-cnhl-1293347-004",
-   "updated" : "2017-10-25T07:06:03Z"
+   "project_id" : "ind-cnhl-1293347-004"
 }
 ```
 

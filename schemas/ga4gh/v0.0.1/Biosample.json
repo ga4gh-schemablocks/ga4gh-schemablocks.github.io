@@ -20,7 +20,6 @@
                }
             }
          ],
-         "created" : "2017-10-25T07:06:03Z",
          "data_use_conditions" : {
             "id" : "DUO:0000004",
             "label" : "no restriction"
@@ -51,8 +50,7 @@
             "followup_time" : "P14M"
          },
          "name" : "Sample BRCA-00429, 2nd replicate",
-         "project_id" : "ind-cnhl-1293347-004",
-         "updated" : "2017-10-25T07:06:03Z"
+         "project_id" : "ind-cnhl-1293347-004"
       }
    ],
    "meta" : {
@@ -93,13 +91,15 @@
    },
    "properties" : {
       "age_at_collection" : {
-         "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json",
-         "description" : "The age of the individual at time of biosample collection, as Age object.\n",
-         "example" : {
-            "age" : "P56Y",
-            "age_class" : {
-               "id" : "HP:0003621",
-               "label" : "Juvenile onset"
+         "allof" : {
+            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json",
+            "description" : "The age of the individual at time of biosample collection, as Age object.\n",
+            "example" : {
+               "age" : "P56Y",
+               "age_class" : {
+                  "id" : "HP:0003621",
+                  "label" : "Juvenile onset"
+               }
             }
          }
       },
@@ -126,20 +126,17 @@
          },
          "type" : "array"
       },
-      "created" : {
-         "description" : "The creation time of this record, in ISO8601\n",
-         "example" : "2017-10-25T07:06:03Z",
-         "type" : "string"
-      },
       "data_use_conditions" : {
-         "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/DataUseConditions.json",
-         "description" : "Data use conditions applying to data from this biosample, as data use \ncondition object (e.g. DUO).\n",
-         "examples" : [
-            {
-               "id" : "DUO:0000004",
-               "label" : "no restriction"
-            }
-         ]
+         "allof" : {
+            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/DataUseConditions.json",
+            "description" : "Data use conditions applying to data from this biosample, as data use \ncondition object (e.g. DUO).\n",
+            "examples" : [
+               {
+                  "id" : "DUO:0000004",
+                  "label" : "no restriction"
+               }
+            ]
+         }
       },
       "description" : {
          "description" : "A free text description of the biosample. This should not contain any \nstructured data.\n",
@@ -172,16 +169,20 @@
          "type" : "array"
       },
       "geo_provenance" : {
-         "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/GeoLocation.json",
-         "description" : "This geo_class attribute ideally describes the geographic location of where the sample was extracted.\nFrequently, this value may reflect either the place of the laboratory where the analysis was performed, or correspond to the corresponding author's institution.\n",
-         "example" : {
-            "altitude" : "94",
-            "city" : "Timisoara",
-            "country" : "Romania",
-            "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
-            "latitude" : "45.75",
-            "longitude" : "21.23",
-            "precision" : "address"
+         "allof" : {
+            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/GeoLocation.json",
+            "description" : "This geo_class attribute ideally describes the geographic location of where the sample was extracted.\nFrequently, this value may reflect either the place of the laboratory where the analysis was performed, or correspond to the corresponding author's institution.\n",
+            "examples" : [
+               {
+                  "altitude" : "94",
+                  "city" : "Timisoara",
+                  "country" : "Romania",
+                  "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
+                  "latitude" : "45.75",
+                  "longitude" : "21.23",
+                  "precision" : "address"
+               }
+            ]
          }
       },
       "id" : {
@@ -199,11 +200,13 @@
          "type" : "string"
       },
       "info" : {
-         "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Info.json",
-         "description" : "This is a wrapper for objects without further specification in the schema.\n",
-         "example" : {
-            "death" : "1",
-            "followup_time" : "P14M"
+         "allof" : {
+            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Info.json",
+            "description" : "additional variant information, as defined in the example and accompanying \ndocumentation\n",
+            "example" : {
+               "death" : "1",
+               "followup_time" : "P14M"
+            }
          }
       },
       "name" : {
@@ -218,11 +221,6 @@
          "examples" : [
             "ind-cnhl-1293347-004"
          ],
-         "type" : "string"
-      },
-      "updated" : {
-         "description" : "The time of the last edit of this record, in ISO8601\n",
-         "example" : "2022-11-11T09:45:13Z",
          "type" : "string"
       }
    },
