@@ -93,7 +93,7 @@ GA4GH::GKS work stream.
   </tr>
   <tr>
     <td>info</td>
-    <td>https://schemablocks.org/schemas/ga4gh/v0.0.1/Info.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/Info.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Info.html" target="_BLANK">HTML</a>]</td>
+    <td>object</td>
   </tr>
   <tr>
     <td>mate_name</td>
@@ -229,7 +229,7 @@ being observed
 
 #### info
 
-* type: https://schemablocks.org/schemas/ga4gh/v0.0.1/Info.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/Info.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Info.html" target="_BLANK">HTML</a>]
+* type: object
 
 additional variant information, as defined in the example and accompanying 
 documentation

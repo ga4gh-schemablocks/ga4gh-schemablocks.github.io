@@ -157,16 +157,14 @@
          "type" : "string"
       },
       "info" : {
-         "allof" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Info.json",
-            "description" : "additional variant information, as defined in the example and accompanying \ndocumentation\n",
-            "examples" : [
-               {
-                  "cnv_length" : "1205290",
-                  "cnv_value" : "-0.294"
-               }
-            ]
-         }
+         "description" : "additional variant information, as defined in the example and accompanying \ndocumentation\n",
+         "examples" : [
+            {
+               "cnv_length" : "1205290",
+               "cnv_value" : "-0.294"
+            }
+         ],
+         "type" : "object"
       },
       "mate_name" : {
          "description" : "Mate name (chromosome) for fusion (BRK) events; otherwise left empty. Accepting \nvalues 1-22, X, Y.\n",
