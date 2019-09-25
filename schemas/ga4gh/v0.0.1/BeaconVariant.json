@@ -4,6 +4,24 @@
    "description" : "The document describes attributes of the _variant_ object. In its current \nimplementation, _variant_ (and related genomic objects such as _callset_) represent \nextended versions of the original, VCF-derived GA4GH schema.\nCompared to the VCF model it was derived from, this schema includes some\nchanges:\n\n* the definition of an optional `end` position, to support e.g. structural variants \nw/o definition of the sequence\n* the use of arrays for `start` and `end` positions, to describe positions with \nuncertain exact location (again, important for structural variants and data derived \nfrom array based experiments)\n    - this corresponds to the use of `CIPOS` and `CIEND` intervals around `pos` and \n    `END` positions ibn VCF, where the begin of e.g. the `pos` interval is given by \n    `pos - CIPOS[0]` and the end of the `pos` estimate by `pos + CIPOS[0]`\n\nThis format may be superseeded or augmented based on current developments in the \nGA4GH::GKS work stream.\n",
    "examples" : [
       {
+         "alternate_bases" : [
+            "AC",
+            "ACC"
+         ],
+         "callset_id" : "DIPG_CS_0290",
+         "digest" : "2:203420136:A>AC,ACC",
+         "genotype" : [
+            "2",
+            "1"
+         ],
+         "id" : "5be1840772798347f0ed9e8b",
+         "reference_bases" : "A",
+         "reference_name" : "2",
+         "start" : [
+            "203420136"
+         ]
+      },
+      {
          "biosample_id" : "fcl-bs-0099615",
          "callset_id" : "structdb-cs-nhl-0009876",
          "digest" : "8,14:20867740-21977798,21978106:BND",
@@ -21,7 +39,6 @@
          "variant_type" : "BND"
       },
       {
-         "biosample_id" : "structdb-bs-nhl-0009876",
          "callset_id" : "structdb-cs-nhl-0009876",
          "digest" : "6:63450000,63550000-63450000,63550000:DEL",
          "end" : [
@@ -40,21 +57,6 @@
             "63550000"
          ],
          "variant_type" : "DEL"
-      },
-      {
-         "alternate_bases" : "AC",
-         "callset_id" : "DIPG_CS_0290",
-         "digest" : "2:203420136:A>AC",
-         "genotype" : [
-            "1",
-            "."
-         ],
-         "id" : "5be1840772798347f0ed9e8b",
-         "reference_bases" : "A",
-         "reference_name" : "2",
-         "start" : [
-            "203420136"
-         ]
       }
    ],
    "meta" : {
@@ -140,14 +142,14 @@
          },
          "queries" : [
             {
-               "description" : "This example query will return all deletion variants with any overlap of the \nCDKN2A CDR (GRCh38 positions).\n",
+               "description" : "This example query will return all deletion variants with any overlap \nof the CDKN2A CDR (GRCh38 positions).\n",
                "query" : "db.variants.find( { \"reference_name\" : \"9\",  \"variant_type\" : \"DEL\", \"start\" : { $lteq : 21975098 }, \"end\" : { $gteq : 21967753 } } )"
             }
          ],
          "type" : "array"
       },
       "genotype" : {
-         "description" : "* list of strings, using the natural index of the corresponding \n`alternate_bases` values for the (optionally phased) indication of \nobserved allelic replacements\n* the dot `.` value is used for indicating the reference allele or unknown \nvalue\n",
+         "description" : "* list of strings, using the natural index of the corresponding \n`alternate_bases` values for the (optionally phased) indication of \nobserved allelic replacements\n* the dot `.` value is used for indicating the reference allele or unknown \nvalue\n\nThe genotype parameter is largely redundant for single-sample variant \nannotations in contrast to VCF, where the `alternat_bases` calls have to \nbe indicated for multiple callsets.\n",
          "examples" : [
             [
                "1",

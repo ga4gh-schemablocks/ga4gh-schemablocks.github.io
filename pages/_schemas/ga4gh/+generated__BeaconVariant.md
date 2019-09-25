@@ -217,6 +217,10 @@ observed allelic replacements
 * the dot `.` value is used for indicating the reference allele or unknown 
 value
 
+The genotype parameter is largely redundant for single-sample variant 
+annotations in contrast to VCF, where the `alternat_bases` calls have to 
+be indicated for multiple callsets.
+
 
 ##### `genotype` Value Examples  
 
@@ -335,6 +339,26 @@ the variant type in case of a named (structural) variant (e.g. DUP, DEL, BND ...
 
 ```
 {
+   "alternate_bases" : [
+      "AC",
+      "ACC"
+   ],
+   "callset_id" : "DIPG_CS_0290",
+   "digest" : "2:203420136:A>AC,ACC",
+   "genotype" : [
+      "2",
+      "1"
+   ],
+   "id" : "5be1840772798347f0ed9e8b",
+   "reference_bases" : "A",
+   "reference_name" : "2",
+   "start" : [
+      "203420136"
+   ]
+}
+```
+```
+{
    "biosample_id" : "fcl-bs-0099615",
    "callset_id" : "structdb-cs-nhl-0009876",
    "digest" : "8,14:20867740-21977798,21978106:BND",
@@ -354,7 +378,6 @@ the variant type in case of a named (structural) variant (e.g. DUP, DEL, BND ...
 ```
 ```
 {
-   "biosample_id" : "structdb-bs-nhl-0009876",
    "callset_id" : "structdb-cs-nhl-0009876",
    "digest" : "6:63450000,63550000-63450000,63550000:DEL",
    "end" : [
@@ -373,23 +396,6 @@ the variant type in case of a named (structural) variant (e.g. DUP, DEL, BND ...
       "63550000"
    ],
    "variant_type" : "DEL"
-}
-```
-```
-{
-   "alternate_bases" : "AC",
-   "callset_id" : "DIPG_CS_0290",
-   "digest" : "2:203420136:A>AC",
-   "genotype" : [
-      "1",
-      "."
-   ],
-   "id" : "5be1840772798347f0ed9e8b",
-   "reference_bases" : "A",
-   "reference_name" : "2",
-   "start" : [
-      "203420136"
-   ]
 }
 ```
 
