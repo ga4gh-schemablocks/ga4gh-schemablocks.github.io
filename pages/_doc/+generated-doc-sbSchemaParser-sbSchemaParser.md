@@ -3,7 +3,7 @@ title: "sbSchemaParser::sbSchemaParser.pl Perl Code Documentation"
 layout: default
 www_link: 
 excerpt_separator: <!--more-->
-date: 2019-09-24
+date: 2019-09-25
 category:
   - howto
 tags:
@@ -20,9 +20,10 @@ tags:
 
 * [Source Link](https://github.com/ga4gh-schemablocks/tools/tree/master/sbSchemaParser/sbSchemaParser.pl) 
 
-The `sbSchemaParser.pl` Perl script parses YAML schema definition scripts 
-written in JSON Schema and using GA4GH SchemaBlocks {S}[B] attributes and 
-structure, into 
+
+The `sbSchemaParser.pl` Perl script parses YAML schema definitions 
+written in [_JSON Schema_](https://json-schema.org) which use the standard GA4GH 
+[SchemaBlocks {S}[B]](http://schemablocks.org) structure, into 
 
 * JSON versions of the schemas (unprocessed), to serve as the reference
 schema versions
@@ -114,6 +115,10 @@ with "Age" in their file name.
 
 #### Processing Schema Source Directories
 
+The script parses through the associated source repositories which are required to reside 
+inside a unified root (`git_root_dir`). The names of the (one or several) repositories and 
+their schema file source directories (one or several per repository) are specified in the 
+`config.yaml` file.
 
 The class name is derived from the file's "$id" value, assuming a canonical 
 path structure with the class name post-pended with a version:
@@ -121,25 +126,45 @@ path structure with the class name post-pended with a version:
 ```
 "$id": https://schemablocks.org/schemas/ga4gh/Phenopacket/v0.0.1
 ```
-Processing is skipped if the class name does not consist of word character, or
+Processing is skipped if the class name does not consist of word/dot/ characters, or
 if a filter had been provided and the class name doesn't match.
 
+
 The documentation is extracted from the YAML schema file and formatted into
-markdown content, both for a plain `.md` file in the output directories of 
-the original repository (`out_dirnames.markdown`) and for the file for the Jekyll webpage generator.
+markdown content, producing 
 
-The script performs a CURIE to URL expansion for prefixes defined in the
-configuration file and links e.g. the ORCID id to its web address.
+* a plain `.md` file in the output directories of the original repository 
+(`out_dirnames.markdown`)
+* the YAML header prepended file for the webpage generation
+
+
+A rudimentary CURIE to URL expansion is performed for prefixes defined in the
+configuration file. An example would be the linking of an ORCID id to its web address.
 
 
 
-Paths for the output files are created based on the values (e.g. out_dirnames` 
+
+Paths for output files are created based on the values (e.g. `out_dirnames` 
 provided in the configuration file.
 
 The web files for the Jekyll / GH-pages processing receive a prefix, to ensure 
 that auto-generated and normal pages can co-exist. The `permalink` parameter 
 provided in the YAML header of the Jekyll file provides a "nice" and stable 
 name for the generated HTML page (independent of the original file name).
+
+#### Deparsing of the class "$id"
+
+The class "$id" values are assumed to have a specific structure, where 
+
+* the last component is a version id
+* the second-to-last component is the class name
+* elements before the class name are ignored in parsing
+
+##### Example
+
+```
+"$id": https://schemablocks.org/schemas/ga4gh/BeaconVariant/v0.0.1
+```
 
 The property overview is followed by the listing of the properties, including
 descriptions and examples.
