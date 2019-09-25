@@ -126,8 +126,9 @@ path structure with the class name post-pended with a version:
 ```
 "$id": https://schemablocks.org/schemas/ga4gh/Phenopacket/v0.0.1
 ```
-Processing is skipped if the class name does not consist of word/dot/ characters, or
-if a filter had been provided and the class name doesn't match.
+Processing is skipped if the class name does contain other than word / dot / 
+dash characters, or if a filter had been provided and the class name 
+does not match.
 
 
 The documentation is extracted from the YAML schema file and formatted into

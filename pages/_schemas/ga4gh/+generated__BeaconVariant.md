@@ -65,7 +65,7 @@ GA4GH::GKS work stream.
   </tr>
   <tr>
     <td>alternate_bases</td>
-    <td>string</td>
+    <td>array of string</td>
   </tr>
   <tr>
     <td>biosample_id</td>
@@ -121,17 +121,28 @@ GA4GH::GKS work stream.
 
 #### alternate_bases
 
-* type: string
+* type: array of string
 
-* one or more bases relative to start position of the reference genome, replacing 
-the reference_bases value
-* for precise variants; not used for structural (e.g. DUP, DEL) alterations
+* one or more single or multi-base sequences, replacing the  the 
+`reference_bases` value
+* more than one `alternate_bases` values is used for differing 
+replacements involving the different alleles
+* used for precise variants; not used for structural (e.g. DUP, DEL) 
+alterations
 
 
-##### `alternate_bases` Value Example  
+##### `alternate_bases` Value Examples  
 
 ```
-"AC"
+[
+   "C"
+]
+```
+```
+[
+   "TA",
+   "TAA"
+]
 ```
 
 #### biosample_id
@@ -200,16 +211,25 @@ structural variant) integers
 
 * type: array of string
 
-list of strings, which represent the (phased) alleles in which the variant was 
-being observed
+* list of strings, using the natural index of the corresponding 
+`alternate_bases` values for the (optionally phased) indication of 
+observed allelic replacements
+* the dot `.` value is used for indicating the reference allele or unknown 
+value
 
 
-##### `genotype` Value Example  
+##### `genotype` Value Examples  
 
 ```
 [
    "1",
    "."
+]
+```
+```
+[
+   "2",
+   "1"
 ]
 ```
 

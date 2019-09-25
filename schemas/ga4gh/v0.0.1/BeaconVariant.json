@@ -90,12 +90,21 @@
    },
    "properties" : {
       "alternate_bases" : {
-         "description" : "* one or more bases relative to start position of the reference genome, replacing \nthe reference_bases value\n* for precise variants; not used for structural (e.g. DUP, DEL) alterations\n",
+         "description" : "* one or more single or multi-base sequences, replacing the  the \n`reference_bases` value\n* more than one `alternate_bases` values is used for differing \nreplacements involving the different alleles\n* used for precise variants; not used for structural (e.g. DUP, DEL) \nalterations\n",
          "examples" : [
-            "AC"
+            [
+               "C"
+            ],
+            [
+               "TA",
+               "TAA"
+            ]
          ],
-         "pattern" : "^[ACGTN]+$",
-         "type" : "string"
+         "items" : {
+            "pattern" : "^[ACGTN]+$",
+            "type" : "string"
+         },
+         "type" : "array"
       },
       "biosample_id" : {
          "description" : "The optional identifier (\"biosample.id\") of the biosample this variant was reported \nfrom. This is a shortcut to using the variant -> callset -> biosample chaining.\n",
@@ -138,11 +147,15 @@
          "type" : "array"
       },
       "genotype" : {
-         "description" : "list of strings, which represent the (phased) alleles in which the variant was \nbeing observed\n",
+         "description" : "* list of strings, using the natural index of the corresponding \n`alternate_bases` values for the (optionally phased) indication of \nobserved allelic replacements\n* the dot `.` value is used for indicating the reference allele or unknown \nvalue\n",
          "examples" : [
             [
                "1",
                "."
+            ],
+            [
+               "2",
+               "1"
             ]
          ],
          "items" : {
@@ -207,6 +220,16 @@
          "type" : "string"
       }
    },
+   "required" : [
+      "reference_name",
+      "start",
+      {
+         "oneof" : [
+            "alternate_bases",
+            "variant_type"
+         ]
+      }
+   ],
    "title" : "BeaconVariant",
    "type" : "object"
 }
