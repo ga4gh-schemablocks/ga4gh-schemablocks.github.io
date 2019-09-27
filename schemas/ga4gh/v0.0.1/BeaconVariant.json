@@ -183,7 +183,7 @@
          "type" : "object"
       },
       "mate_name" : {
-         "description" : "Mate name (chromosome) for fusion (BRK) events; otherwise left empty. Accepting \nvalues 1-22, X, Y.\n",
+         "description" : "Mate name (chromosome) for fusion (BND) events; otherwise left empty. \nAccepting values 1-22, X, Y.\nCompared to the VCF specification, where a fusion is defined from 2 \nBND variants and verbose annotations for describing the fusion partners, \nthe use of the `mate_name` attribute allows to treat fusion events as \nsingle \"variant\". Conventions: \n\n* the lower sorted chromosome (e.g. \"8\") is annotated for `reference_name` \nand the higher (e.g. \"14\") becomes the `mate_name`\n* if a `mate_name` parameter exists, the `end` position refers to this\n* for intrachromosomal events, `mate_name` is identical to \n`reference_name` and the higher base values are assigned to `end`\n",
          "examples" : [
             "14"
          ],
