@@ -62,17 +62,17 @@ tags-date-sorted:
   - news
 
 related_sites:
+  GA4GH: 'http://www.ga4gh.org'
   'GA4GH::Discovery': 'http://ga4gh-discovery.github.io'
-  'GA4GH::CLP': 'http://ga4gh-cp.github.io'
-  'GA4GH::GKS': 'http://ga4gh-gks.github.io'
   'ELIXIR Beacon': 'http://ga4gh-beacon.github.io'
   Phenopackets: 'http://github.com/phenopackets'
-  GA4GH: 'http://www.ga4gh.org'
-  'Beacon<span style="color: red; font-weight: 800;">+</span>': 'http://beacon.progenetix.org'
+  'GA4GH::CLP': 'http://ga4gh-cp.github.io'
+  'GA4GH::GKS': 'http://ga4gh-gks.github.io'
+  'Beacon<span style="color: red; font-weight: 800;">+</span>': 'http://beacon.progenetix.org/ui/'
 
 github_projects:
   'SchemaBlocks': 'http://github.com/ga4gh-schemablocks/'
-  'ELIXIR Beacon': 'http://github.com/beacon-project/'
+  'ELIXIR Beacon': 'https://github.com/ga4gh-beacon/'
 
 # tag_cloud items
 
