@@ -3,6 +3,7 @@ title: "Data Models"
 layout: default
 date: 2019-10-15
 author:
+  - "GA4GH Data Working Group"
   - "@mcourtot"
   - "@mbaudis"
 permalink: /standards/ga4gh-data-model.html
@@ -32,14 +33,15 @@ objects" (_individual_, _biosample_) for provenance tracking and representation
 of "meta information" related to the individual genotyping results.
 
 This hierarchical object model is well suited for the representation of data 
-from individuals and their genotyping information:
+from individuals and their genotyping information. It had __not__ been developed 
+to document e.g. recurring evidence documentation or equivalence modeling of 
+their physiologic and phenotypic associations. 
 
-* genomic variants observed in a __cancer biosample__ and a related __germline__ 
-sample from the same individual being represented through the relations of 
-`variant`s represented in a `callset` (all variants from an 
-experiment/evaluation) derived by sequencing material of germline and cancer 
-`biosample`s from the same `individual`.  
-
+This general object model is used in various implementations, with some 
+variations regarding requirements for the individual components (e.g. 
+_Phenopackets_ may not make use of the `biosample` component in a germline/rare 
+disease setting; _Beacon_ resources may not link up to `individual`s or even 
+`biosample`s in their aggregate backend version).
 
 <a href="/assets/img/ga4gh-DWG-Phenopackets-object-models.png" target="_BLANK">
 <img src="/assets/img/ga4gh-DWG-Phenopackets-object-models.png" style="width: 100%; margin-top: 20px; margin-bottom: 5px;" alt="GA4GH core object model" />
@@ -53,14 +55,56 @@ and may diverge in count and specific wording (e.g. "subject" instead of
 "individual") in specific implementations.
 </div>
 
+#### Components
 
-This general object model is used in various implementations, with some 
-variations regarding requirements for the individual components (e.g. 
-_Phenopackets_ may not make use of the `biosample` component in a germline/rare 
-disease setting; _Beacon_ resources may not link up to `individual`s or even 
-`biosample`s in their aggregate backend version).
+The GA4GH data model for genomics recommends the use of a principle object hierarchy, consisting of
 
-### Contributors
+* __variant__
+    - a single molecular observation, e.g. a genomic variant observed in the 
+    analysis of the DNA from a biosample
+    - similar to the _variant_ concept (i.e. line) in VCF, though it would be 
+    recommended to use separate annotations for multiple variant alleles, which 
+    are then logically connected through their _idem_ callset_id_
+* __callset__
+    - the entirety of all variants, observed in a single experiment on a single sample
+    - a _callset_ can be compared to a data column in a __VCF__ variant annotation file
+    - _callset_ has an optional position in the object hierarchy, since _variants_ describe biological observations in a biosample
+* __biosample__
+    - a reference to a physical biological specimen on which analyses are performed
+* __individual__
+    - in a typical use a human subject from which the biosample(s) was/were extracted
+
+Additional concepts (e.g. _dataset_, _study_ ...) may be added in the future.
+
+#### Notes
+
+In the design of genomics APIs, file formats and storage protocols, it is of 
+relevance to adhere to a logical object structure which reflects physical 
+reality and common data handling procedures.
+
+At the core of many (human health related and other) databases and procedural 
+systems is the concept of a "_biosample_", representing the source of 
+biological material on which some (molecular or other) analyses are being 
+performed, leading to a set of observations (e.g. the genomic variants measured 
+by Whole Genome Sequencing and called against a reference genome, in the DNA 
+extracted from a tissue biopsy).
+
+For a consistant API design, it is important to relate observations and 
+measurement to the correct object in the data model's hierarchy. A typical 
+example human genomic data analysis is the association of phenotypic information 
+to the type of biosample being analysed. For the association of genomic variants 
+with a cancer diagnosis, it is of paramount importance to know if - for an 
+individual with a cancer diagnosis - the observed variants were called from a 
+_germline_ biosample (i.e. analysis of cancer predisposition) or from a 
+_cancer tissue_ biosample (i.e. somatic mutation analysis).
+
+#### Further Reading
+
+* [GA4GH schema documentation](https://ga4gh-schemas.readthedocs.io/en/latest/api/metadata.html)
+    - deprecated but informative
+* original [GA4GH schema](https://github.com/ga4gh/ga4gh-schemas/) code repository
+
+#### Contributors
 
 {% if page.author %}
   {%- for this_author in page.author -%}
@@ -74,35 +118,3 @@ disease setting; _Beacon_ resources may not link up to `individual`s or even
 {% endif %}
 
 
-### Summary
-
-The GA4GH data model for genomics recommends the use of a principle object hierarchy, consisting of
-
-* __variant__
-    - a single molecular observation, e.g. a genomic variant observed in the analysis of the DNA from a biosample
-* __callset__
-    - the entirety of all variants, observed in a single experiment on a single sample
-    - a _callset_ can be compared to a data column in a __VCF__ variant annotation file
-    - _callset_ has an optional position in the object hierarchy, since _variants_ describe biological observations in a biosample
-* __biosample__
-    - a reference to a physical biological specimen on which analyses are performed
-* __individual__
-    - in a typical use a human subject from which the biosample(s) was/were extracted
-
-These basic definitions will be detailed further on.
-
-Additional concepts (e.g. _dataset_, _study_ ...) may be added in the future.
-
-### Details
-
-In the design of genomics APIs, file formats and storage protocols, it is of relevance to adhere to a logical object structure which reflects physical reality and common data handling procedures.
-
-At the core of many (human health related and other) databases and procedural systems is the concept of a "_biosample_", representing the source of biological material on which some (molecular or other) analyses are being performed, leading to a set of observations (e.g. the genomic variants measured by Whole Genome Sequencing and called against a reference genome, in the DNA extracted from a tissue biopsy).
-
-For a consistant API design, it is important to relate observations and measurement to the correct object in the data model's hierarchy. A typical example human genomic data analysis is the association of phenotypic information to the type of biosample being analysed. For the association of genomic variants with a cancer diagnosis, it is of paramount importance to know if - for an individual with a cancer diagnosis - the observed variants were called from a _germline_ biosample (i.e. analysis of cancer predisposition) or from a _cancer tissue_ biosample (i.e. somatic mutation analysis).
-
-### Further Reading
-
-* [GA4GH schema documentation](https://ga4gh-schemas.readthedocs.io/en/latest/api/metadata.html)
-    - deprecated but informative
-* original [GA4GH schema](https://github.com/ga4gh/ga4gh-schemas/) code repository
