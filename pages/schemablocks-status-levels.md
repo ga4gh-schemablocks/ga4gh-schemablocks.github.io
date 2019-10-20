@@ -1,5 +1,5 @@
 ---
-title: 'SchemaBlocks "Status" Levels (proposal)'
+title: 'SchemaBlocks "Status" Levels'
 date: 2019-07-17
 layout: default
 author: "@mbaudis"
