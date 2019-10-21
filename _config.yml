@@ -88,7 +88,6 @@ cloud_tags:
   - admins
   - contacts
   - contributors
-  - coordinates
   - dates
   - developers
   - documentation
@@ -101,6 +100,10 @@ cloud_tags:
   - press
   - tools
   - website
+  - playground      # sb_status
+  - proposed        # sb_status
+  - implemented     # sb_status
+  - core            # sb_status
 
 # additional Jekyll instructions
 
