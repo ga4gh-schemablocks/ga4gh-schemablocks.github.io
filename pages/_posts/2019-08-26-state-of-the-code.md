@@ -6,6 +6,7 @@ excerpt_separator: <!--more-->
 www_link:
 categories:
   - news
+  - howto
 tags:
   - news
   - code
