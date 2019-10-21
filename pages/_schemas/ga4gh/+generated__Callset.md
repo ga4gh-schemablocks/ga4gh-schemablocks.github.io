@@ -2,11 +2,13 @@
 title: Callset
 layout: default
 permalink: "/schemas/ga4gh/Callset.html"
+sb_status: "proposed"
 excerpt_separator: <!--more-->
 category:
   - schemas
 tags:
   - code
+  - proposed
 ---
 
 

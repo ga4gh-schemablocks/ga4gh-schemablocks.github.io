@@ -1,6 +1,7 @@
 {
    "$id" : "https://schemablocks.org/schemas/ga4gh/OntologyClass/v0.0.1",
    "$schema" : "http://json-schema.org/draft-07/schema#",
+   "additionalProperties" : "",
    "description" : "OntologyClass represents the core object used to reference domain-specific\nentities, as well as to identify their domains through the appropriate\nprefix.\nCURIES are case sensitive, although for prefixes this practice is\ninconsistently followed.\n",
    "examples" : [
       {
@@ -42,7 +43,7 @@
             "description" : "Phenopackets alignment"
          }
       ],
-      "sb_status" : "implemented",
+      "sb_status" : "core",
       "used_by" : [
          {
             "description" : "Phenopackets",
@@ -56,14 +57,14 @@
    },
    "properties" : {
       "id" : {
-         "description" : "properly prefixed CURIE of the ontology term",
+         "description" : "CURIE of the ontology class",
          "examples" : [
             "ncit:C8294"
          ],
          "type" : "string"
       },
       "label" : {
-         "description" : "the text label associated with the term",
+         "description" : "the text label associated with the ontology class",
          "examples" : [
             "Pancreatic Adenocarcinoma"
          ],

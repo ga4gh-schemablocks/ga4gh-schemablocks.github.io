@@ -2,11 +2,13 @@
 title: Evidence
 layout: default
 permalink: "/schemas/ga4gh/Evidence.html"
+sb_status: "implemented"
 excerpt_separator: <!--more-->
 category:
   - schemas
 tags:
   - code
+  - implemented
 ---
 
 
@@ -25,12 +27,15 @@ tags:
 
     - [Jules Jacobsen](https://orcid.org/0000-0002-3265-15918)  
     - [Peter Robinson](https://orcid.org/0000-0002-0736-91998)  
+    - [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
+    - [Melanie Courtot](https://orcid.org/0000-0002-9551-6370)  
+    - [Isuru Liyanage](https://orcid.org/0000-0002-4839-5158)  
 <!--more-->
 
 ### Source (v0.0.1)
 
 * raw source [[JSON](./current/Evidence.json)]
-* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/Evidence.yaml)
+* [Github](https://github.com/ga4gh-schemablocks/sb-phenopackets/blob/master/schemas/Evidence.yaml)
 
 ### Attributes
   

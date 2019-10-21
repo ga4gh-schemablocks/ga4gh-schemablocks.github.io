@@ -2,11 +2,13 @@
 title: ExternalReference
 layout: default
 permalink: "/schemas/ga4gh/ExternalReference.html"
+sb_status: "implemented"
 excerpt_separator: <!--more-->
 category:
   - schemas
 tags:
   - code
+  - implemented
 ---
 
 
@@ -31,7 +33,7 @@ tags:
 ### Source (v0.0.1)
 
 * raw source [[JSON](./current/ExternalReference.json)]
-* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/ExternalReference.yaml)
+* [Github](https://github.com/ga4gh-schemablocks/sb-phenopackets/blob/master/schemas/ExternalReference.yaml)
 
 ### Attributes
   

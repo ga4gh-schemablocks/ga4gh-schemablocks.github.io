@@ -1,6 +1,7 @@
 {
    "$id" : "https://schemablocks.org/schemas/ga4gh/Phenopacket/v0.0.1",
    "$schema" : "http://json-schema.org/draft-07/schema#",
+   "additionalProperties" : "",
    "description" : "An anonymous phenotypic description of an individual or biosample with potential genes of interest and/or diagnoses.\nThis is a bundle of high-level concepts with no specifically defined relational concepts. It is expected that the\nresources sharing the phenopackets will define and enforce their own semantics and level of requirements for included\nfields.\n",
    "examples" : [
       {
@@ -18,8 +19,10 @@
          "id" : "phenopacketid-123",
          "metaData" : {
             "created" : "2016-06-29T12:03:03.240Z",
-            "updated" : [
-               "2018-06-10T10:59:06.784Z"
+            "updates" : [
+               {
+                  "timestamp" : "2007-12-03T10:15:30.00Z"
+               }
             ]
          },
          "subject" : {
@@ -32,6 +35,46 @@
          }
       }
    ],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "GA4GH Data Working Group"
+         },
+         {
+            "description" : "Jules Jacobsen",
+            "id" : "orcid:0000-0002-3265-15918"
+         },
+         {
+            "description" : "Peter Robinson",
+            "id" : "orcid:0000-0002-0736-91998"
+         },
+         {
+            "description" : "Michael Baudis",
+            "id" : "orcid:0000-0002-9903-4248"
+         },
+         {
+            "description" : "Melanie Courtot",
+            "id" : "orcid:0000-0002-9551-6370"
+         },
+         {
+            "description" : "Isuru Liyanage",
+            "id" : "orcid:0000-0002-4839-5158"
+         }
+      ],
+      "provenance" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/phenopacket.rst"
+         }
+      ],
+      "sb_status" : "implemented",
+      "used_by" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/phenopacket.rst"
+         }
+      ]
+   },
    "properties" : {
       "biosamples" : {
          "description" : "Biosample(s) derived from the patient or a collection of biosamples in isolation\n",
@@ -49,7 +92,7 @@
             ]
          ],
          "items" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/Biosample/v0.0.1"
+            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Biosample.json"
          },
          "type" : "array"
       },
@@ -62,14 +105,15 @@
                      "id" : "HP:0003596",
                      "label" : "Middle age onset"
                   },
-                  "id" : "MONDO:0007043",
-                  "label" : "Pfeiffer syndrome",
-                  "term" : null
+                  "term" : {
+                     "id" : "MONDO:0007043",
+                     "label" : "Pfeiffer syndrome"
+                  }
                }
             ]
          ],
          "items" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/Disease/v0.0.1"
+            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Disease.json"
          },
          "type" : "array"
       },
@@ -84,7 +128,7 @@
             ]
          ],
          "items" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/Gene/v0.0.1"
+            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Gene.json"
          },
          "type" : "array"
       },
@@ -93,16 +137,13 @@
          "examples" : [
             [
                {
-                  "file" : {
-                     "path" : "/data/genomes/file1.vcf.gz",
-                     "uri" : "file://data/genomes/file1.vcf.gz"
-                  },
-                  "htsFormat" : "GVCF"
+                  "htsFormat" : "GVCF",
+                  "uri" : "file://data/genomes/file1.vcf.gz"
                }
             ]
          ],
          "items" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/HtsFile/v0.0.1"
+            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/HtsFile.json"
          },
          "type" : "array"
       },
@@ -114,22 +155,20 @@
          "type" : "string"
       },
       "metaData" : {
-         "allof" : [
-            {
-               "$ref" : "https://schemablocks.org/schemas/ga4gh/MetaData/v0.0.1"
-            },
-            {
-               "description" : "Structured definitions of the resources and ontologies used within the phenopacket. REQUIRED\n",
-               "examples" : [
-                  {
-                     "created" : "2016-06-29T12:03:03.240Z",
-                     "updated" : [
-                        "2018-06-10T10:59:06.784Z"
-                     ]
-                  }
-               ]
-            }
-         ]
+         "allof" : {
+            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/MetaData.json",
+            "description" : "Structured definitions of the resources and ontologies used within the phenopacket. REQUIRED\n",
+            "examples" : [
+               {
+                  "created" : "2016-06-29T12:03:03.240Z",
+                  "updates" : [
+                     {
+                        "timestamp" : "2007-12-03T10:15:30.00Z"
+                     }
+                  ]
+               }
+            ]
+         }
       },
       "phenotypicFeatures" : {
          "description" : "Phenotypic features relating to the subject of the phenopacket\n",
@@ -145,29 +184,25 @@
             ]
          ],
          "items" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/PhenotypicFeature/v0.0.1"
+            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/PhenotypicFeature.json"
          },
          "type" : "array"
       },
       "subject" : {
-         "allof" : [
-            {
-               "$ref" : "https://schemablocks.org/schemas/ga4gh/Individual/v0.0.1"
-            },
-            {
-               "description" : "The individual representing the focus of this packet - e.g. the proband in rare disease cases or cancer patient\n",
-               "examples" : [
-                  {
-                     "id" : "SAMN05324082-individual",
-                     "sex" : "MALE",
-                     "taxonomy" : {
-                        "id" : "NCBITaxon:9606",
-                        "label" : "Homo sapiens"
-                     }
+         "allof" : {
+            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Individual.json",
+            "description" : "The individual representing the focus of this packet - e.g. the proband in rare disease cases or cancer patient\n",
+            "examples" : [
+               {
+                  "id" : "SAMN05324082-individual",
+                  "sex" : "MALE",
+                  "taxonomy" : {
+                     "id" : "NCBITaxon:9606",
+                     "label" : "Homo sapiens"
                   }
-               ]
-            }
-         ]
+               }
+            ]
+         }
       },
       "variants" : {
          "description" : "Field for genetic variants - could be used for listing either candidate variants or diagnosed causative\nvariants. The resources using these fields should define what this represents in their context.\n",
@@ -185,7 +220,7 @@
             ]
          ],
          "items" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/Variant/v0.0.1"
+            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Variant.json"
          },
          "type" : "array"
       }

@@ -2,11 +2,13 @@
 title: PhenotypicFeature
 layout: default
 permalink: "/schemas/ga4gh/PhenotypicFeature.html"
+sb_status: "implemented"
 excerpt_separator: <!--more-->
 category:
   - schemas
 tags:
   - code
+  - implemented
 ---
 
 
@@ -17,21 +19,23 @@ tags:
 
 * Provenance  
 
-    - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/phenopacket.rst)  
+    - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/PhenotypicFeature.rst)  
 * Used by  
 
-    - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/phenopacket.rst)  
+    - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/PhenotypicFeature.rst)  
 * Contributors  
 
     - [Jules Jacobsen](https://orcid.org/0000-0002-3265-15918)  
     - [Peter Robinson](https://orcid.org/0000-0002-0736-91998)  
     - [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
+    - [Melanie Courtot](https://orcid.org/0000-0002-9551-6370)  
+    - [Isuru Liyanage](https://orcid.org/0000-0002-4839-5158)  
 <!--more-->
 
 ### Source (v0.0.1)
 
 * raw source [[JSON](./current/PhenotypicFeature.json)]
-* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/PhenotypicFeature.yaml)
+* [Github](https://github.com/ga4gh-schemablocks/sb-phenopackets/blob/master/schemas/PhenotypicFeature.yaml)
 
 ### Attributes
   
@@ -67,7 +71,7 @@ Observation (https://www.hl7.org/fhir/observation.html)
   </tr>
   <tr>
     <td>evidence</td>
-    <td>array of https://schemablocks.org/schemas/ga4gh/v0.0.1/Evidence.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/Evidence.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Evidence.html" target="_BLANK">HTML</a>]</td>
+    <td>https://schemablocks.org/schemas/ga4gh/v0.0.1/Evidence.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/Evidence.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Evidence.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
     <td>modifiers</td>
@@ -93,8 +97,7 @@ Observation (https://www.hl7.org/fhir/observation.html)
 
 * type: https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]
 
-The values of this will come from the HPO onset hierarchy i.e. subclasses 
-of HP:0003674.
+the values of this will come from the HPO onset hierarchy i.e. subclasses of HP:0003674
 FHIR mapping: Condition.onset
 
 
@@ -102,11 +105,7 @@ FHIR mapping: Condition.onset
 
 ```
 {
-   "age" : "P35Y",
-   "ageClass" : {
-      "id" : "HP:0003596",
-      "label" : "Middle age onset"
-   }
+   "age" : "P35Y"
 }
 ```
 
@@ -114,8 +113,7 @@ FHIR mapping: Condition.onset
 
 * type: https://schemablocks.org/schemas/ga4gh/v0.0.1/AgeRange.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/AgeRange.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/AgeRange.html" target="_BLANK">HTML</a>]
 
-The values of this will come from the HPO onset hierarchy i.e. subclasses 
-of HP:0003674.
+the values of this will come from the HPO onset hierarchy i.e. subclasses of HP:0003674
 FHIR mapping: Condition.onset
 
 
@@ -123,15 +121,8 @@ FHIR mapping: Condition.onset
 
 ```
 {
-   "end" : {
-      "age" : "P60Y"
-   },
    "start" : {
-      "age" : "P35Y",
-      "ageClass" : {
-         "id" : "HP:0003596",
-         "label" : "Middle age onset"
-      }
+      "age" : "P35Y"
    }
 }
 ```
@@ -157,9 +148,8 @@ FHIR mapping: Condition.onset
 
 * type: string
 
-Free-text description of the phenotype. Note this is not a acceptable 
-place to document/describe the phenotype - the type and onset etc... 
-fields should be used for this purpose.
+Free-text description of the phenotype. Note this is not a acceptable place to document/describe the
+phenotype - the type and onset etc... fields should be used for this purpose.
 
 
 ##### `description` Value Example  
@@ -170,7 +160,7 @@ fields should be used for this purpose.
 
 #### evidence
 
-* type: array of https://schemablocks.org/schemas/ga4gh/v0.0.1/Evidence.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/Evidence.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Evidence.html" target="_BLANK">HTML</a>]
+* type: https://schemablocks.org/schemas/ga4gh/v0.0.1/Evidence.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/Evidence.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Evidence.html" target="_BLANK">HTML</a>]
 
 Evidences for how the phenotype was determined.
 
@@ -193,17 +183,17 @@ Evidences for how the phenotype was determined.
 
 * type: array of https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
 
-Subclasses of HP:0012823 ! Clinical modifier apart from Severity 
-HP:0012824 - Severity.
-
+subclasses of HP:0012823 ! Clinical modifier apart from Severity HP:0012824 - Severity
 
 ##### `modifiers` Value Example  
 
 ```
-{
-   "id" : "HP:0025282",
-   "label" : "Dull"
-}
+[
+   {
+      "id" : "HP:0025282",
+      "label" : "Dull"
+   }
+]
 ```
 
 #### negated
@@ -227,8 +217,7 @@ the logical negation of the OntologyClass used in the 'type' field.
 
 * type: https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
 
-Severity of the condition e.g. subclasses of HP:0012824-Severity or 
-SNOMED:272141005-Severities.
+Severity of the condition e.g. subclasses of HP:0012824-Severity or SNOMED:272141005-Severities
 FHIR mapping: Condition.severity
 
 

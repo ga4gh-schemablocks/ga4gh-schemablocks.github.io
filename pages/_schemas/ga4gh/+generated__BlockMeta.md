@@ -2,11 +2,13 @@
 title: BlockMeta
 layout: default
 permalink: "/schemas/ga4gh/BlockMeta.html"
+sb_status: "playground"
 excerpt_separator: <!--more-->
 category:
   - schemas
 tags:
   - code
+  - playground
 ---
 
 

@@ -1,6 +1,19 @@
 {
    "$id" : "https://schemablocks.org/schemas/ga4gh/AgeRange/v0.0.1",
    "$schema" : "http://json-schema.org/draft-07/schema#",
+   "additionalProperties" : "",
+   "anyof" : [
+      {
+         "required" : [
+            "start"
+         ]
+      },
+      {
+         "required" : [
+            "end"
+         ]
+      }
+   ],
    "description" : "Age range",
    "examples" : [
       {
@@ -8,11 +21,7 @@
             "age" : "P18Y"
          },
          "start" : {
-            "age" : "P12Y",
-            "ageClass" : {
-               "id" : "HsapDv:0000086",
-               "label" : "adolescent stage"
-            }
+            "age" : "P12Y"
          }
       }
    ],
@@ -38,14 +47,14 @@
       "provenance" : [
          {
             "description" : "Phenopackets",
-            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/age.rst"
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/agerange.rst"
          }
       ],
       "sb_status" : "implemented",
       "used_by" : [
          {
             "description" : "Phenopackets",
-            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/age.rst"
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/agerange.rst"
          }
       ]
    },
@@ -53,14 +62,8 @@
       "end" : {
          "allof" : {
             "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json",
-            "description" : "Age as ISO8601 string or OntologyClass",
+            "description" : "Age as ISO8601 string",
             "examples" : [
-               {
-                  "ageClass" : {
-                     "id" : "HsapDv:0000086",
-                     "label" : "adolescent stage"
-                  }
-               },
                {
                   "age" : "P16Y6M"
                }
@@ -70,7 +73,7 @@
       "start" : {
          "allof" : {
             "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json",
-            "description" : "Age as ISO8601 string or OntologyClass",
+            "description" : "Age as ISO8601 string",
             "examples" : [
                {
                   "age" : "P12Y"
@@ -78,12 +81,6 @@
             ]
          }
       }
-   },
-   "required" : {
-      "anyof" : [
-         "start",
-         "end"
-      ]
    },
    "title" : "AgeRange",
    "type" : "object"

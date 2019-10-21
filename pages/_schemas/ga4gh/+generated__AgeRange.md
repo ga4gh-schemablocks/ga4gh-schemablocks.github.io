@@ -2,11 +2,13 @@
 title: AgeRange
 layout: default
 permalink: "/schemas/ga4gh/AgeRange.html"
+sb_status: "implemented"
 excerpt_separator: <!--more-->
 category:
   - schemas
 tags:
   - code
+  - implemented
 ---
 
 
@@ -17,10 +19,10 @@ tags:
 
 * Provenance  
 
-    - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/age.rst)  
+    - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/agerange.rst)  
 * Used by  
 
-    - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/age.rst)  
+    - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/agerange.rst)  
 * Contributors  
 
     - [Jules Jacobsen](https://orcid.org/0000-0002-3265-15918)  
@@ -32,7 +34,7 @@ tags:
 ### Source (v0.0.1)
 
 * raw source [[JSON](./current/AgeRange.json)]
-* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/AgeRange.yaml)
+* [Github](https://github.com/ga4gh-schemablocks/sb-phenopackets/blob/master/schemas/AgeRange.yaml)
 
 ### Attributes
   
@@ -62,18 +64,10 @@ __Description:__ Age range
 
 * type: https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]
 
-Age as ISO8601 string or OntologyClass
+Age as ISO8601 string
 
-##### `end` Value Examples  
+##### `end` Value Example  
 
-```
-{
-   "ageClass" : {
-      "id" : "HsapDv:0000086",
-      "label" : "adolescent stage"
-   }
-}
-```
 ```
 {
    "age" : "P16Y6M"
@@ -84,7 +78,7 @@ Age as ISO8601 string or OntologyClass
 
 * type: https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]
 
-Age as ISO8601 string or OntologyClass
+Age as ISO8601 string
 
 ##### `start` Value Example  
 
@@ -103,11 +97,7 @@ Age as ISO8601 string or OntologyClass
       "age" : "P18Y"
    },
    "start" : {
-      "age" : "P12Y",
-      "ageClass" : {
-         "id" : "HsapDv:0000086",
-         "label" : "adolescent stage"
-      }
+      "age" : "P12Y"
    }
 }
 ```

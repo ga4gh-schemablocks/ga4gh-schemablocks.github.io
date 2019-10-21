@@ -2,11 +2,13 @@
 title: Age
 layout: default
 permalink: "/schemas/ga4gh/Age.html"
+sb_status: "implemented"
 excerpt_separator: <!--more-->
 category:
   - schemas
 tags:
   - code
+  - implemented
 ---
 
 
@@ -31,7 +33,7 @@ tags:
 ### Source (v0.0.1)
 
 * raw source [[JSON](./current/Age.json)]
-* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/Age.yaml)
+* [Github](https://github.com/ga4gh-schemablocks/sb-phenopackets/blob/master/schemas/Age.yaml)
 
 ### Attributes
   
@@ -49,10 +51,6 @@ __Description:__ Age
     <td>age</td>
     <td>string</td>
   </tr>
-  <tr>
-    <td>ageClass</td>
-    <td>https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]</td>
-  </tr>
 
 </table>
 
@@ -69,43 +67,12 @@ Age as ISO8601 period
 "P12Y"
 ```
 
-#### ageClass
 
-* type: https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
-
-The age of the subject (e.g. individual at the onset of a phenotype),
-as OntologyClass. An example ontology here is HsapDv (Human
-Developmental Stages).
-This does not exactly correspond to the use of "age of onset" in HPO,
-since this specifically codes the "onset" of a phenotype, not just any
-age as a timepoint. So when coding onset, implementations may choose
-to either use an "age of onset" ontology or an "Age" class.
-
-
-##### `ageClass` Value Example  
+### `Age` Value Example  
 
 ```
 {
-   "id" : "HsapDv:0000083",
-   "label" : "infant stage"
-}
-```
-
-
-### `Age` Value Examples  
-
-```
-{
-   "age" : "P14Y",
-   "ageClass" : {
-      "id" : "HsapDv:0000086",
-      "label" : "adolescent stage"
-   }
-}
-```
-```
-{
-   "age" : "P56Y3M"
+   "age" : "P14Y"
 }
 ```
 

@@ -2,11 +2,13 @@
 title: Curie
 layout: default
 permalink: "/schemas/ga4gh/Curie.html"
+sb_status: "implemented"
 excerpt_separator: <!--more-->
 category:
   - schemas
 tags:
   - code
+  - implemented
 ---
 
 

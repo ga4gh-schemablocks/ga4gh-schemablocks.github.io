@@ -2,11 +2,13 @@
 title: BeaconVariant
 layout: default
 permalink: "/schemas/ga4gh/BeaconVariant.html"
+sb_status: "implemented"
 excerpt_separator: <!--more-->
 category:
   - schemas
 tags:
   - code
+  - implemented
 ---
 
 

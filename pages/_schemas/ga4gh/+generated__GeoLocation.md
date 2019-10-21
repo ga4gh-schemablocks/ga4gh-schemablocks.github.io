@@ -2,11 +2,13 @@
 title: GeoLocation
 layout: default
 permalink: "/schemas/ga4gh/GeoLocation.html"
+sb_status: "proposed"
 excerpt_separator: <!--more-->
 category:
   - schemas
 tags:
   - code
+  - proposed
 ---
 
 

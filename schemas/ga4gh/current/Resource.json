@@ -1,6 +1,7 @@
 {
    "$id" : "https://schemablocks.org/schemas/ga4gh/Resource/v0.0.1",
    "$schema" : "http://json-schema.org/draft-07/schema#",
+   "additionalProperties" : "",
    "description" : "Description of an external resource used for referencing an object. For example the resource may be an ontology such\nas the HPO or SNOMED.\nFHIR mapping: CodeSystem (http://www.hl7.org/fhir/codesystem.html)\n",
    "examples" : [
       {
@@ -33,6 +34,46 @@
          "version" : "2018-03-08"
       }
    ],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "GA4GH Data Working Group"
+         },
+         {
+            "description" : "Jules Jacobsen",
+            "id" : "orcid:0000-0002-3265-15918"
+         },
+         {
+            "description" : "Peter Robinson",
+            "id" : "orcid:0000-0002-0736-91998"
+         },
+         {
+            "description" : "Michael Baudis",
+            "id" : "orcid:0000-0002-9903-4248"
+         },
+         {
+            "description" : "Melanie Courtot",
+            "id" : "orcid:0000-0002-9551-6370"
+         },
+         {
+            "description" : "Isuru Liyanage",
+            "id" : "orcid:0000-0002-4839-5158"
+         }
+      ],
+      "provenance" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/resource.rst"
+         }
+      ],
+      "sb_status" : "implemented",
+      "used_by" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/resource.rst"
+         }
+      ]
+   },
    "properties" : {
       "id" : {
          "description" : "for OBO Ontologies, the value of this string MUST always be the official\nOBO ID, which is always equivalent to the ID prefix in lower case.\nExamples: hp, go, mp, mondo\nConsult http://obofoundry.org for a complete list\nFor other ontologies (e.g. SNOMED), use the prefix in identifiers.org\n",

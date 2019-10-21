@@ -2,11 +2,13 @@
 title: File
 layout: default
 permalink: "/schemas/ga4gh/File.html"
+sb_status: "implemented"
 excerpt_separator: <!--more-->
 category:
   - schemas
 tags:
   - code
+  - implemented
 ---
 
 

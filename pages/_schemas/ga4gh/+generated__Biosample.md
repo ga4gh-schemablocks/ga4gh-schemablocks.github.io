@@ -2,11 +2,13 @@
 title: Biosample
 layout: default
 permalink: "/schemas/ga4gh/Biosample.html"
+sb_status: "implemented"
 excerpt_separator: <!--more-->
 category:
   - schemas
 tags:
   - code
+  - implemented
 ---
 
 
@@ -17,38 +19,39 @@ tags:
 
 * Provenance  
 
-    - [Original GA4GH schema](https://github.com/ga4gh/ga4gh-schemas/blob/master/src/main/proto/ga4gh/bio_metadata.proto#L65)  
+    - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/biosamples.rst)  
 * Used by  
 
-    - Phenopackets  
-    - [Progenetix database schema (Beacon+ backend)](https://github.com/progenetix/schemas/tree/master/main/yaml)  
+    - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/biosamples.rst)  
 * Contributors  
 
     - GA4GH Data Working Group  
-    - [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
     - [Jules Jacobsen](https://orcid.org/0000-0002-3265-15918)  
+    - [Peter Robinson](https://orcid.org/0000-0002-0736-91998)  
+    - [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
     - [Melanie Courtot](https://orcid.org/0000-0002-9551-6370)  
+    - [Isuru Liyanage](https://orcid.org/0000-0002-4839-5158)  
 <!--more-->
 
 ### Source (v0.0.1)
 
 * raw source [[JSON](./current/Biosample.json)]
-* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/Biosample.yaml)
+* [Github](https://github.com/ga4gh-schemablocks/sb-phenopackets/blob/master/schemas/Biosample.yaml)
 
 ### Attributes
   
 __Type:__ object  
-__Description:__ A Biosample refers to a unit of biological material from which the substrate 
-molecules (e.g. genomic DNA, RNA, proteins) for molecular analyses (e.g. 
-sequencing, array hybridisation, mass-spectrometry) are extracted.
+__Description:__ A Biosample refers to a unit of biological material from which the substrate
+  molecules (e.g. genomic DNA, RNA, proteins) for molecular analyses (e.g.
+  sequencing, array hybridisation, mass-spectrometry) are extracted.
 
-Examples would be a tissue biopsy, a single cell from a culture for single 
-cell genome sequencing or a protein fraction from a gradient centrifugation. 
+  Examples would be a tissue biopsy, a single cell from a culture for single
+  cell genome sequencing or a protein fraction from a gradient centrifugation.
 
-Several instances (e.g. technical replicates) or types of experiments (e.g. 
-genomic array as well as RNA-seq experiments) may refer to the same Biosample.
+  Several instances (e.g. technical replicates) or types of experiments (e.g.
+  genomic array as well as RNA-seq experiments) may refer to the same Biosample.
 
-FHIR mapping: [Specimen](http://www.hl7.org/fhir/specimen.html).
+  FHIR mapping: [Specimen](http://www.hl7.org/fhir/specimen.html).
 
 
 ### Properties
@@ -59,113 +62,113 @@ FHIR mapping: [Specimen](http://www.hl7.org/fhir/specimen.html).
     <th>Type</th>
   </tr>
   <tr>
-    <td>age_at_collection</td>
+    <td>ageOfIndividualAtCollection</td>
     <td>https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
-    <td>biocharacteristics</td>
-    <td>array of https://schemablocks.org/schemas/ga4gh/v0.0.1/PhenotypicFeature.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/PhenotypicFeature.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/PhenotypicFeature.html" target="_BLANK">HTML</a>]</td>
-  </tr>
-  <tr>
-    <td>data_use_conditions</td>
-    <td>https://schemablocks.org/schemas/ga4gh/v0.0.1/DataUseConditions.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/DataUseConditions.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/DataUseConditions.html" target="_BLANK">HTML</a>]</td>
+    <td>ageRangeOfIndividualAtCollection</td>
+    <td>https://schemablocks.org/schemas/ga4gh/v0.0.1/AgeRange.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/AgeRange.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/AgeRange.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
     <td>description</td>
     <td>string</td>
   </tr>
   <tr>
-    <td>external_references</td>
-    <td>array of https://schemablocks.org/schemas/ga4gh/v0.0.1/ExternalReference.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/ExternalReference.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/ExternalReference.html" target="_BLANK">HTML</a>]</td>
+    <td>diagnosticMarkers</td>
+    <td>array of https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
-    <td>geo_provenance</td>
-    <td>https://schemablocks.org/schemas/ga4gh/v0.0.1/GeoLocation.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/GeoLocation.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/GeoLocation.html" target="_BLANK">HTML</a>]</td>
+    <td>histologicalDiagnosis</td>
+    <td>https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]</td>
+  </tr>
+  <tr>
+    <td>htsFiles</td>
+    <td>array of https://schemablocks.org/schemas/ga4gh/v0.0.1/HtsFile.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/HtsFile.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/HtsFile.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
     <td>id</td>
     <td>string</td>
   </tr>
   <tr>
-    <td>individual_id</td>
+    <td>individualId</td>
     <td>string</td>
   </tr>
   <tr>
-    <td>info</td>
-    <td>https://schemablocks.org/schemas/ga4gh/v0.0.1/Info.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/Info.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Info.html" target="_BLANK">HTML</a>]</td>
+    <td>isControlSample</td>
+    <td>boolean</td>
   </tr>
   <tr>
-    <td>name</td>
-    <td>string</td>
+    <td>phenotypicFeature</td>
+    <td>array of https://schemablocks.org/schemas/ga4gh/v0.0.1/PhenotypicFeature.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/PhenotypicFeature.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/PhenotypicFeature.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
-    <td>project_id</td>
-    <td>string</td>
+    <td>procedure</td>
+    <td>https://schemablocks.org/schemas/ga4gh/v0.0.1/Procedure.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/Procedure.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Procedure.html" target="_BLANK">HTML</a>]</td>
+  </tr>
+  <tr>
+    <td>sampledTissue</td>
+    <td>https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]</td>
+  </tr>
+  <tr>
+    <td>taxonomy</td>
+    <td>https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]</td>
+  </tr>
+  <tr>
+    <td>tumorGrade</td>
+    <td>https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]</td>
+  </tr>
+  <tr>
+    <td>tumorProgression</td>
+    <td>https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]</td>
+  </tr>
+  <tr>
+    <td>variants</td>
+    <td>array of https://schemablocks.org/schemas/ga4gh/v0.0.1/Variant.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/Variant.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Variant.html" target="_BLANK">HTML</a>]</td>
   </tr>
 
 </table>
 
 
-#### age_at_collection
+#### ageOfIndividualAtCollection
 
 * type: https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]
 
-The age of the individual at time of biosample collection, as Age object.
+An age object describing the age of the individual this biosample was
+derived from at the time of collection. The Age object allows the encoding
+of the age either as ISO8601 duration or time interval (preferred), or
+as ontology term object.
+See http://build.fhir.org/datatypes
 
 
-##### `age_at_collection` Value Example  
-
-
-#### biocharacteristics
-
-* type: array of https://schemablocks.org/schemas/ga4gh/v0.0.1/PhenotypicFeature.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/PhenotypicFeature.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/PhenotypicFeature.html" target="_BLANK">HTML</a>]
-
-The _Biocharacteristics_ object represents a wrapper list of "Phenotype" 
-objects with properly prefixed term ids, describing features of the 
-biosample.  
-Examples would be phenotypes, disease codes or other ontology classes 
-*specific to this biosample*, i.e. not general features of the individual 
-it was derived from.  
-In a complete data model (variants->[callsets]->biosamples->individuals), 
-characteristics applying to the _individual_ (e.g. sex, most phenotypes) 
-should be annotated with the individual.
-
-
-##### `biocharacteristics` Value Examples  
+##### `ageOfIndividualAtCollection` Value Example  
 
 ```
 {
-   "description" : "Adenocarcinoma of the pancreas",
-   "type" : {
-      "id" : "pgx:81403",
-      "label" : "Adenocarcinoma, NOS"
-   }
-}
-```
-```
-{
-   "description" : "Pancreatic Adenocarcinoma",
-   "type" : {
-      "id" : "ncit:C8294",
-      "label" : "Pancreatic Adenocarcinoma"
-   }
+   "age" : "P48Y3M"
 }
 ```
 
-#### data_use_conditions
+#### ageRangeOfIndividualAtCollection
 
-* type: https://schemablocks.org/schemas/ga4gh/v0.0.1/DataUseConditions.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/DataUseConditions.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/DataUseConditions.html" target="_BLANK">HTML</a>]
+* type: https://schemablocks.org/schemas/ga4gh/v0.0.1/AgeRange.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/AgeRange.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/AgeRange.html" target="_BLANK">HTML</a>]
 
-Data use conditions applying to data from this biosample, as data use 
-condition object (e.g. DUO).
+An age range object describing the age of the individual this biosample was
+derived from at the time of collection. The Age object allows the encoding
+of the age either as ISO8601 duration or time interval (preferred), or
+as ontology term object.
+See http://build.fhir.org/datatypes
 
 
-##### `data_use_conditions` Value Example  
+##### `ageRangeOfIndividualAtCollection` Value Example  
 
 ```
 {
-   "id" : "DUO:0000004",
-   "label" : "no restriction"
+   "end" : {
+      "age" : "P18Y"
+   },
+   "start" : {
+      "age" : "P12Y"
+   }
 }
 ```
 
@@ -173,169 +176,330 @@ condition object (e.g. DUO).
 
 * type: string
 
-A free text description of the biosample. This should not contain any 
-structured data.
+The biosample's description. This attribute contains human readable text.
+The "description" attributes should not contain any structured data.
 
 
 ##### `description` Value Example  
 
+```
+"THP-1; 6 hours; DMSO; Replicate 1"
+```
 
-#### external_references
+#### diagnosticMarkers
 
-* type: array of https://schemablocks.org/schemas/ga4gh/v0.0.1/ExternalReference.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/ExternalReference.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/ExternalReference.html" target="_BLANK">HTML</a>]
+* type: array of https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
 
-A list of reference_class objects with properly (e.g. identifiers.org) 
-prefixed external identifiers and a term describing the relationship.
-
-
-##### `external_references` Value Example  
-
-
-#### geo_provenance
-
-* type: https://schemablocks.org/schemas/ga4gh/v0.0.1/GeoLocation.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/GeoLocation.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/GeoLocation.html" target="_BLANK">HTML</a>]
-
-This geo_class attribute ideally describes the geographic location of where the sample was extracted.
-Frequently, this value may reflect either the place of the laboratory where the analysis was performed, or correspond to the corresponding author's institution.
+Clinically relevant bio markers. Most of the assays such as IHC are covered by the NCIT under the sub-hierarchy
+NCIT:C25294 (Laboratory Procedure).
+e.g. NCIT:C68748 (HER2/Neu Positive), NCIT:C131711 (Human Papillomavirus-18 Positive)
 
 
-##### `geo_provenance` Value Example  
+##### `diagnosticMarkers` Value Example  
+
+```
+[
+   {
+      "id" : "NCIT:C131711",
+      "label" : "Human Papillomavirus-18 Positive"
+   }
+]
+```
+
+#### histologicalDiagnosis
+
+* type: https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
+
+This is the pathologist’s diagnosis and may often represent a refinement of the clinical diagnosis given in the
+Patient/Clinical module. Should use the same terminology as diagnosis, but represent the pathologist’s findings.
+Normal samples would be tagged with the term "NCIT:C38757", "Negative Finding"
+
+
+##### `histologicalDiagnosis` Value Example  
 
 ```
 {
-   "altitude" : "94",
-   "city" : "Timisoara",
-   "country" : "Romania",
-   "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
-   "latitude" : "45.75",
-   "longitude" : "21.23",
-   "precision" : "address"
+   "id" : "EFO:0000221",
+   "label" : "Acute Monocytic Leukemia"
 }
+```
+
+#### htsFiles
+
+* type: array of https://schemablocks.org/schemas/ga4gh/v0.0.1/HtsFile.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/HtsFile.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/HtsFile.html" target="_BLANK">HTML</a>]
+
+Pointer to the relevant HTS file(s) for the biosample
+
+
+##### `htsFiles` Value Example  
+
+```
+[
+   {
+      "file" : {
+         "path" : "/data/genomes/file1.vcf.gz",
+         "uri" : "file://data/genomes/file1.vcf.gz"
+      },
+      "htsFormat" : "GVCF"
+   }
+]
 ```
 
 #### id
 
 * type: string
 
-The local-unique identifier of this biosample (referenced as 
-"biosample_id"). This is unique in the context of the local (e.g. 
+The local-unique identifier of this biosample (referenced as
+"biosample_id"). This is unique in the context of the local (e.g.
 server, resource) instance.
 
 
 ##### `id` Value Example  
 
 ```
-"AM_BS__NCBISKYCGH-1993"
+"SAMN05324082"
 ```
 
-#### individual_id
+#### individualId
 
 * type: string
 
-In a complete data model "individual_id" points to the "id" of the 
+In a complete data model "individual_id" points to the "id" of the
 individual ("donor", "subjerct"...) this _Biosample_ was derived from.
 
-In a local context this could be the _id_ attribute in a corresponding 
+In a local context this could be the _id_ attribute in a corresponding
 "individuals" collection.
 
 
-##### `individual_id` Value Example  
+##### `individualId` Value Example  
 
 ```
-"ind-cnhl-1293347-004"
+"SAMN05324082-individual"
 ```
 
-#### info
+#### isControlSample
 
-* type: https://schemablocks.org/schemas/ga4gh/v0.0.1/Info.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/Info.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Info.html" target="_BLANK">HTML</a>]
+* type: boolean
 
-additional variant information, as defined in the example and accompanying 
-documentation
-
-
-##### `info` Value Example  
+if true, this sample is being use as a normal control, often in combination with
+another sample that is thought to contain a pathological finding the default value is false
 
 
-#### name
-
-* type: string
-
-A short descriptive name for sample which should be sufficient to 
-distinguish it from other samples in the project or collection. 
-This is a label or symbolic identifier for the biosample.
-
-
-##### `name` Value Example  
+##### `isControlSample` Value Example  
 
 ```
-"Sample BRCA-00429, 2nd replicate"
+""
 ```
 
-#### project_id
+#### phenotypicFeature
 
-* type: string
+* type: array of https://schemablocks.org/schemas/ga4gh/v0.0.1/PhenotypicFeature.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/PhenotypicFeature.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/PhenotypicFeature.html" target="_BLANK">HTML</a>]
 
-The id attribute of the project that this biosample was collected in.
+Phenotypic characteristics of the BioSample, for example histological findings of a biopsy
 
-
-##### `project_id` Value Example  
+##### `phenotypicFeature` Value Example  
 
 ```
-"ind-cnhl-1293347-004"
+[
+   {
+      "type" : {
+         "id" : "EFO:0001253",
+         "label" : "THP-1"
+      }
+   }
+]
 ```
 
+#### procedure
 
-### `Biosample` Value Example  
+* type: https://schemablocks.org/schemas/ga4gh/v0.0.1/Procedure.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/Procedure.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Procedure.html" target="_BLANK">HTML</a>]
+
+Clinical procedure performed on the subject in order to extract the biosample.
+
+
+##### `procedure` Value Example  
 
 ```
 {
-   "age_at_collection" : {
-      "age" : "P56Y",
-      "age_class" : {
-         "id" : "HP:0003621",
-         "label" : "Juvenile onset"
-      }
+   "bodySite" : {
+      "id" : "UBERON:0003403",
+      "label" : "skin of forearm"
    },
-   "biocharacteristics" : [
+   "code" : {
+      "id" : "NCIT:C28743",
+      "label" : "Funch Biopsy"
+   }
+}
+```
+
+#### sampledTissue
+
+* type: https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
+
+UBERON class describing the tissue from which the specimen was collected.
+PDX-MI mapping: 'Specimen tumor tissue'
+FHIR mapping: Specimen.type
+
+
+##### `sampledTissue` Value Example  
+
+```
+{
+   "id" : "UBERON:0000178",
+   "label" : "peripheral blood"
+}
+```
+
+#### taxonomy
+
+* type: https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
+
+NCBI taxonomic identifier (NCBITaxon) of the sample e.g. NCBITaxon:9606
+
+##### `taxonomy` Value Example  
+
+```
+{
+   "description" : "Homo sapiens",
+   "type" : "NCBITaxon:9606"
+}
+```
+
+#### tumorGrade
+
+* type: https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
+
+Potentially a child term of NCIT:C28076 (Disease Grade Qualifier) or equivalent
+See https://www.cancer.gov/about-cancer/diagnosis-staging/prognosis/tumor-grade-fact-sheet
+
+
+##### `tumorGrade` Value Example  
+
+```
+{
+   "id" : "NCIT:C28091",
+   "label" : "Gleason Score 7"
+}
+```
+
+#### tumorProgression
+
+* type: https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
+
+Is the specimen tissue from the primary tumor, a metastasis or a recurrence?
+Most likely a child term of NCIT:C7062 (Neoplasm by Special Category)
+NCIT:C3677 (Benign Neoplasm)
+NCIT:C84509 (Primary Malignant Neoplasm)
+NCIT:C95606 (Second Primary Malignant Neoplasm)
+NCIT:C3261 (Metastatic Neoplasm)
+NCIT:C4813 (Recurrent Malignant Neoplasm)
+
+
+##### `tumorProgression` Value Example  
+
+```
+{
+   "id" : "NCIT:C84509",
+   "label" : "Primary Malignant Neoplasm"
+}
+```
+
+#### variants
+
+* type: array of https://schemablocks.org/schemas/ga4gh/v0.0.1/Variant.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/Variant.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Variant.html" target="_BLANK">HTML</a>]
+
+Field for variants relevant to this biosample
+
+
+##### `variants` Value Example  
+
+```
+[
+   {
+      "background" : "add example",
+      "hgvsAllele" : "add example"
+   }
+]
+```
+
+
+### `Biosample` Value Examples  
+
+```
+{
+   "ageOfIndividualAtCollection" : {
+      "age" : "P1Y"
+   },
+   "description" : "THP-1; 6 hours; DMSO; Replicate 1",
+   "histologicalDiagnosis" : {
+      "id" : "EFO:0000221",
+      "label" : "Acute Monocytic Leukemia"
+   },
+   "id" : "SAMN05324082",
+   "individualId" : "SAMN05324082-individual",
+   "phenotypicFeature" : [
       {
-         "description" : "Lobular Breast Carcinoma In Situ, study sample",
          "type" : {
-            "id" : "ncit:C4018",
-            "label" : "Lobular Breast Carcinoma In Situ"
+            "id" : "EFO:0001253",
+            "label" : "THP-1"
          }
       }
    ],
-   "data_use_conditions" : {
-      "id" : "DUO:0000004",
-      "label" : "no restriction"
+   "sampledTissue" : {
+      "id" : "UBERON:0000178",
+      "label" : "peripheral blood"
    },
-   "description" : "Burkitt lymphoma, cell line Namalwa",
-   "external_references" : [
+   "taxonomy" : {
+      "id" : "NCBITaxon:9606",
+      "label" : "Homo sapiens"
+   }
+}
+```
+```
+{
+   "ageOfIndividualAtCollection" : {
+      "age" : "P1Y"
+   },
+   "diagnosticMarkers" : [
       {
-         "description" : "Cellosaurus cell line identifier",
-         "relation" : "provenance",
-         "type" : {
-            "id" : "cellosaurus:CVCL_0312",
-            "label" : "HOS"
-         }
+         "id" : "NCIT:C131711",
+         "label" : "Human Papillomavirus-18 Positive"
       }
    ],
-   "geo_provenance" : {
-      "altitude" : "94",
-      "city" : "Timisoara",
-      "country" : "Romania",
-      "label" : "Str Marasesti 5, 300077 Timisoara, Romania",
-      "latitude" : "45.75",
-      "longitude" : "21.23"
+   "histologicalDiagnosis" : {
+      "id" : "EFO:0000221",
+      "label" : "Acute Monocytic Leukemia"
    },
-   "id" : "AM_BS__NCBISKYCGH-1993",
-   "individual_id" : "ind-cnhl-1293347-004",
-   "info" : {
-      "death" : "1",
-      "followup_time" : "P14M"
+   "id" : "SAMN05324083",
+   "individualId" : "SAMN05324083-individual",
+   "procedure" : {
+      "code" : {
+         "id" : "NCIT:C15189",
+         "label" : "Biopsy"
+      }
    },
-   "name" : "Sample BRCA-00429, 2nd replicate",
-   "project_id" : "ind-cnhl-1293347-004"
+   "sampledTissue" : {
+      "id" : "NCIT:C139196",
+      "label" : "Esophageal Lymph Node"
+   },
+   "tumorProgression" : {
+      "id" : "NCIT:C84509",
+      "label" : "Primary Malignant Neoplasm"
+   },
+   "tumorStage" : [
+      {
+         "id" : "NCIT:C48724",
+         "label" : "T2 Stage Finding"
+      },
+      {
+         "id" : "NCIT:C48706",
+         "label" : "N1 Stage Finding"
+      },
+      {
+         "id" : "NCIT:C48699",
+         "label" : "M0 Stage Finding"
+      }
+   ]
 }
 ```
 

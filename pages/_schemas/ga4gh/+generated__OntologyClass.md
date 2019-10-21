@@ -2,18 +2,20 @@
 title: OntologyClass
 layout: default
 permalink: "/schemas/ga4gh/OntologyClass.html"
+sb_status: "core"
 excerpt_separator: <!--more-->
 category:
   - schemas
 tags:
   - code
+  - core
 ---
 
 
 ## OntologyClass
 
 * {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
-    - __implemented__
+    - __core__
 
 * Provenance  
 
@@ -35,7 +37,7 @@ tags:
 ### Source (v0.0.1)
 
 * raw source [[JSON](./current/OntologyClass.json)]
-* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/OntologyClass.yaml)
+* [Github](https://github.com/ga4gh-schemablocks/sb-phenopackets/blob/master/schemas/OntologyClass.yaml)
 
 ### Attributes
   
@@ -70,7 +72,7 @@ inconsistently followed.
 
 * type: string
 
-properly prefixed CURIE of the ontology term
+CURIE of the ontology class
 
 ##### `id` Value Example  
 
@@ -82,7 +84,7 @@ properly prefixed CURIE of the ontology term
 
 * type: string
 
-the text label associated with the term
+the text label associated with the ontology class
 
 ##### `label` Value Example  
 
