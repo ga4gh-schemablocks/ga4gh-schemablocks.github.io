@@ -10,11 +10,11 @@ category:
 
 ## {{page.title}}
 
-<p>SchemaBlocks is a "__cross-workstreams, cross-drivers__" initiative to document 
+SchemaBlocks is a "__cross-workstreams, cross-drivers__" initiative to document 
 GA4GH object standards and prototypes, as well as common data formats and 
-semantics.</p>
+semantics.
 
-<img style="float: left; margin: 20px 20px 10px 0px; clear: none;" src="{{ "assets/img/logo-schemablocks-120x120-no-logo.png" | relative_url}}" />Launched in December 2018, this project is still to be considered a "community 
+<img style="float: left; margin: 20px 20px 10px 0px; width: 60px; clear: none;" src="{{ "assets/img/logo-schemablocks-120x120-no-logo.png" | relative_url}}" />Launched in December 2018, this project is still to be considered a "community 
 initiative", with developing participation, leadership and governance 
 structures. At its current stage, the documents can __not__ be considered 
 "__authoritative GA4GH recommendations__" but rather represent documentation 
