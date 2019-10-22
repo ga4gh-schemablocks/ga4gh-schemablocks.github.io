@@ -60,26 +60,38 @@
    },
    "properties" : {
       "end" : {
-         "allof" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json",
-            "description" : "Age as ISO8601 string",
-            "examples" : [
-               {
-                  "age" : "P16Y6M"
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json"
+            },
+            {
+               "instance" : {
+                  "description" : "Age as ISO8601 string",
+                  "examples" : [
+                     {
+                        "age" : "P16Y6M"
+                     }
+                  ]
                }
-            ]
-         }
+            }
+         ]
       },
       "start" : {
-         "allof" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json",
-            "description" : "Age as ISO8601 string",
-            "examples" : [
-               {
-                  "age" : "P12Y"
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json"
+            },
+            {
+               "instance" : {
+                  "description" : "Age as ISO8601 string",
+                  "examples" : [
+                     {
+                        "age" : "P12Y"
+                     }
+                  ]
                }
-            ]
-         }
+            }
+         ]
       }
    },
    "title" : "AgeRange",
