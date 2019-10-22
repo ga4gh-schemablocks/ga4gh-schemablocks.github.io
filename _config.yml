@@ -5,6 +5,9 @@ description: |
 keywords: genomics, cloud, Beacon, DNA, sharing, GA4GH
 site_domain_name: schemablocks.org
 url: 'https://schemablocks.org'
+google_search_code: |
+  <script async src="https://cse.google.com/cse.js?cx=008117828495027240668:yh9utjhmnjo"></script>
+  <div class="gcse-searchbox-only"></div>
 baseurl: ""
 site_parent_link: 'https://ga4gh.org'
 github_organisation: ga4gh-schemablocks
