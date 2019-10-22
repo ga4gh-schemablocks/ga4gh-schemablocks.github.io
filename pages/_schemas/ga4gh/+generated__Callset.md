@@ -23,12 +23,13 @@ tags:
 * Used by  
 
     - [Progenetix database schema (Beacon+ backend)](https://github.com/progenetix/schemas/tree/master/main/yaml)  
+
+<!--more-->
+
 * Contributors  
 
     - GA4GH Data Working Group  
     - [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
-<!--more-->
-
 ### Source (v0.0.1)
 
 * raw source [[JSON](./current/Callset.json)]

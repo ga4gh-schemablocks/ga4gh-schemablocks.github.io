@@ -23,11 +23,12 @@ tags:
 * Used by  
 
     - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/file.rst)  
+
+<!--more-->
+
 * Contributors  
 
     - [Jules Jacobsen](https://orcid.org/0000-0002-3265-15918)  
-<!--more-->
-
 ### Source (v0.0.1)
 
 * raw source [[JSON](./current/File.json)]

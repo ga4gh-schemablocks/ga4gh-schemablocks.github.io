@@ -194,6 +194,17 @@ This behaviour can be alleviated by wrapping the `$ref` and other attributes
 with an `allof` statement (which is interpolated in the following, to expose 
 the attributes). We'll hope for a more elegant solution ...
 
+##### Helper `_remap_allof`
+
+This function remaps the list of property attributes required from using a 
+'$ref' property definition to a standard object, which is then processed for
+documentation in the usual way.
+
+TODO: 
+* be aware of the possibility of multiple "$ref" elements (not in the {S}[B]
+specifications right now) which would being reduced to one
+* hoping for _JSON Schema_ to fix the "$ref" format requirement ...
+
 
 
 

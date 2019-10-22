@@ -23,13 +23,14 @@ tags:
 * Used by  
 
     - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/externalreference.rst)  
+
+<!--more-->
+
 * Contributors  
 
     - [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
     - [Jules Jacobsen](https://orcid.org/0000-0002-3265-15918)  
     - [Peter Robinson](https://orcid.org/0000-0002-0736-91998)  
-<!--more-->
-
 ### Source (v0.0.1)
 
 * raw source [[JSON](./current/ExternalReference.json)]

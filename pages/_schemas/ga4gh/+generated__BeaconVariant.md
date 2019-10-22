@@ -24,13 +24,14 @@ tags:
 
     - [Beacon, in modified form as basis for query model](https://github.com/ga4gh-beacon/specification/blob/master/beacon.yaml)  
     - [Progenetix database schema (Beacon+ backend)](https://github.com/progenetix/schemas/tree/master/main/yaml)  
+
+<!--more-->
+
 * Contributors  
 
     - GA4GH Data Working Group  
     - ELIXIR Beacon team  
     - [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
-<!--more-->
-
 ### Source (v0.0.1)
 
 * raw source [[JSON](./current/BeaconVariant.json)]
