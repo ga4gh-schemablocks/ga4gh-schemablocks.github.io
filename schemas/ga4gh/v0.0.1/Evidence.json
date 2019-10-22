@@ -54,28 +54,36 @@
    },
    "properties" : {
       "evidenceCode" : {
-         "allof" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json",
-            "description" : "The encoded evidence type using, for example the Evidence & Conclusion Ontology\n(ECO - http://purl.obolibrary.org/obo/eco.owl)\nFHIR mapping - Condition.evidence.code\n",
-            "examples" : [
-               {
-                  "id" : "add example",
-                  "label" : "add example"
-               }
-            ]
-         }
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json"
+            },
+            {
+               "description" : "The encoded evidence type using, for example the Evidence & Conclusion Ontology\n(ECO - http://purl.obolibrary.org/obo/eco.owl)\nFHIR mapping - Condition.evidence.code\n",
+               "examples" : [
+                  {
+                     "id" : "add example",
+                     "label" : "add example"
+                  }
+               ]
+            }
+         ]
       },
       "reference" : {
-         "allof" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/ExternalReference.json",
-            "description" : "FHIR mapping - Condition.evidence.detail\n",
-            "examples" : [
-               {
-                  "description" : "COL6A1 mutation leading to Bethlem myopathy with recurrent hematuria: a case report.",
-                  "id" : "PMID:30808312"
-               }
-            ]
-         }
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/ExternalReference.json"
+            },
+            {
+               "description" : "FHIR mapping - Condition.evidence.detail\n",
+               "examples" : [
+                  {
+                     "description" : "COL6A1 mutation leading to Bethlem myopathy with recurrent hematuria: a case report.",
+                     "id" : "PMID:30808312"
+                  }
+               ]
+            }
+         ]
       }
    },
    "required" : [

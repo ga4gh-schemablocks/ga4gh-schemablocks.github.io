@@ -132,31 +132,39 @@
    ],
    "properties" : {
       "ageOfIndividualAtCollection" : {
-         "allof" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json",
-            "description" : "An age object describing the age of the individual this biosample was\nderived from at the time of collection. The Age object allows the encoding\nof the age either as ISO8601 duration or time interval (preferred), or\nas ontology term object.\nSee http://build.fhir.org/datatypes\n",
-            "examples" : [
-               {
-                  "age" : "P48Y3M"
-               }
-            ]
-         }
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json"
+            },
+            {
+               "description" : "An age object describing the age of the individual this biosample was\nderived from at the time of collection. The Age object allows the encoding\nof the age either as ISO8601 duration or time interval (preferred), or\nas ontology term object.\nSee http://build.fhir.org/datatypes\n",
+               "examples" : [
+                  {
+                     "age" : "P48Y3M"
+                  }
+               ]
+            }
+         ]
       },
       "ageRangeOfIndividualAtCollection" : {
-         "allof" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/AgeRange.json",
-            "description" : "An age range object describing the age of the individual this biosample was\nderived from at the time of collection. The Age object allows the encoding\nof the age either as ISO8601 duration or time interval (preferred), or\nas ontology term object.\nSee http://build.fhir.org/datatypes\n",
-            "examples" : [
-               {
-                  "end" : {
-                     "age" : "P18Y"
-                  },
-                  "start" : {
-                     "age" : "P12Y"
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/AgeRange.json"
+            },
+            {
+               "description" : "An age range object describing the age of the individual this biosample was\nderived from at the time of collection. The Age object allows the encoding\nof the age either as ISO8601 duration or time interval (preferred), or\nas ontology term object.\nSee http://build.fhir.org/datatypes\n",
+               "examples" : [
+                  {
+                     "end" : {
+                        "age" : "P18Y"
+                     },
+                     "start" : {
+                        "age" : "P12Y"
+                     }
                   }
-               }
-            ]
-         }
+               ]
+            }
+         ]
       },
       "description" : {
          "description" : "The biosample's description. This attribute contains human readable text.\nThe \"description\" attributes should not contain any structured data.\n",
@@ -181,16 +189,20 @@
          "type" : "array"
       },
       "histologicalDiagnosis" : {
-         "allof" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json",
-            "description" : "This is the pathologist’s diagnosis and may often represent a refinement of the clinical diagnosis given in the\nPatient/Clinical module. Should use the same terminology as diagnosis, but represent the pathologist’s findings.\nNormal samples would be tagged with the term \"NCIT:C38757\", \"Negative Finding\"\n",
-            "examples" : [
-               {
-                  "id" : "EFO:0000221",
-                  "label" : "Acute Monocytic Leukemia"
-               }
-            ]
-         }
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json"
+            },
+            {
+               "description" : "This is the pathologist’s diagnosis and may often represent a refinement of the clinical diagnosis given in the\nPatient/Clinical module. Should use the same terminology as diagnosis, but represent the pathologist’s findings.\nNormal samples would be tagged with the term \"NCIT:C38757\", \"Negative Finding\"\n",
+               "examples" : [
+                  {
+                     "id" : "EFO:0000221",
+                     "label" : "Acute Monocytic Leukemia"
+                  }
+               ]
+            }
+         ]
       },
       "htsFiles" : {
          "description" : "Pointer to the relevant HTS file(s) for the biosample\n",
@@ -249,70 +261,90 @@
          "type" : "array"
       },
       "procedure" : {
-         "allof" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Procedure.json",
-            "description" : "Clinical procedure performed on the subject in order to extract the biosample.\n",
-            "examples" : [
-               {
-                  "bodySite" : {
-                     "id" : "UBERON:0003403",
-                     "label" : "skin of forearm"
-                  },
-                  "code" : {
-                     "id" : "NCIT:C28743",
-                     "label" : "Funch Biopsy"
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Procedure.json"
+            },
+            {
+               "description" : "Clinical procedure performed on the subject in order to extract the biosample.\n",
+               "examples" : [
+                  {
+                     "bodySite" : {
+                        "id" : "UBERON:0003403",
+                        "label" : "skin of forearm"
+                     },
+                     "code" : {
+                        "id" : "NCIT:C28743",
+                        "label" : "Funch Biopsy"
+                     }
                   }
-               }
-            ]
-         }
+               ]
+            }
+         ]
       },
       "sampledTissue" : {
-         "allof" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json",
-            "description" : "UBERON class describing the tissue from which the specimen was collected.\nPDX-MI mapping: 'Specimen tumor tissue'\nFHIR mapping: Specimen.type\n",
-            "examples" : [
-               {
-                  "id" : "UBERON:0000178",
-                  "label" : "peripheral blood"
-               }
-            ]
-         }
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json"
+            },
+            {
+               "description" : "UBERON class describing the tissue from which the specimen was collected.\nPDX-MI mapping: 'Specimen tumor tissue'\nFHIR mapping: Specimen.type\n",
+               "examples" : [
+                  {
+                     "id" : "UBERON:0000178",
+                     "label" : "peripheral blood"
+                  }
+               ]
+            }
+         ]
       },
       "taxonomy" : {
-         "allof" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json",
-            "description" : "NCBI taxonomic identifier (NCBITaxon) of the sample e.g. NCBITaxon:9606",
-            "examples" : [
-               {
-                  "description" : "Homo sapiens",
-                  "type" : "NCBITaxon:9606"
-               }
-            ]
-         }
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json"
+            },
+            {
+               "description" : "NCBI taxonomic identifier (NCBITaxon) of the sample e.g. NCBITaxon:9606",
+               "examples" : [
+                  {
+                     "description" : "Homo sapiens",
+                     "type" : "NCBITaxon:9606"
+                  }
+               ]
+            }
+         ]
       },
       "tumorGrade" : {
-         "allof" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json",
-            "description" : "Potentially a child term of NCIT:C28076 (Disease Grade Qualifier) or equivalent\nSee https://www.cancer.gov/about-cancer/diagnosis-staging/prognosis/tumor-grade-fact-sheet\n",
-            "examples" : [
-               {
-                  "id" : "NCIT:C28091",
-                  "label" : "Gleason Score 7"
-               }
-            ]
-         }
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json"
+            },
+            {
+               "description" : "Potentially a child term of NCIT:C28076 (Disease Grade Qualifier) or equivalent\nSee https://www.cancer.gov/about-cancer/diagnosis-staging/prognosis/tumor-grade-fact-sheet\n",
+               "examples" : [
+                  {
+                     "id" : "NCIT:C28091",
+                     "label" : "Gleason Score 7"
+                  }
+               ]
+            }
+         ]
       },
       "tumorProgression" : {
-         "allof" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json",
-            "description" : "Is the specimen tissue from the primary tumor, a metastasis or a recurrence?\nMost likely a child term of NCIT:C7062 (Neoplasm by Special Category)\nNCIT:C3677 (Benign Neoplasm)\nNCIT:C84509 (Primary Malignant Neoplasm)\nNCIT:C95606 (Second Primary Malignant Neoplasm)\nNCIT:C3261 (Metastatic Neoplasm)\nNCIT:C4813 (Recurrent Malignant Neoplasm)\n",
-            "examples" : [
-               {
-                  "id" : "NCIT:C84509",
-                  "label" : "Primary Malignant Neoplasm"
-               }
-            ]
-         }
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json"
+            },
+            {
+               "description" : "Is the specimen tissue from the primary tumor, a metastasis or a recurrence?\nMost likely a child term of NCIT:C7062 (Neoplasm by Special Category)\nNCIT:C3677 (Benign Neoplasm)\nNCIT:C84509 (Primary Malignant Neoplasm)\nNCIT:C95606 (Second Primary Malignant Neoplasm)\nNCIT:C3261 (Metastatic Neoplasm)\nNCIT:C4813 (Recurrent Malignant Neoplasm)\n",
+               "examples" : [
+                  {
+                     "id" : "NCIT:C84509",
+                     "label" : "Primary Malignant Neoplasm"
+                  }
+               ]
+            }
+         ]
       },
       "variants" : {
          "description" : "Field for variants relevant to this biosample\n",

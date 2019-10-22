@@ -105,20 +105,24 @@
          "type" : "array"
       },
       "metaData" : {
-         "allof" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/MetaData.json",
-            "description" : "Structured definitions of the resources and ontologies used within the phenopacket. REQUIRED\n",
-            "examples" : [
-               {
-                  "created" : "2016-06-29T12:03:03.240Z",
-                  "updates" : [
-                     {
-                        "timestamp" : "2007-12-03T10:15:30.00Z"
-                     }
-                  ]
-               }
-            ]
-         }
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/MetaData.json"
+            },
+            {
+               "description" : "Structured definitions of the resources and ontologies used within the phenopacket. REQUIRED\n",
+               "examples" : [
+                  {
+                     "created" : "2016-06-29T12:03:03.240Z",
+                     "updates" : [
+                        {
+                           "timestamp" : "2007-12-03T10:15:30.00Z"
+                        }
+                     ]
+                  }
+               ]
+            }
+         ]
       }
    },
    "required" : [

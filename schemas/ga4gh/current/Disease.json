@@ -74,15 +74,19 @@
    ],
    "properties" : {
       "ageOfOnset" : {
-         "allof" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json",
-            "description" : "The onset of the disease. The values of this will come from the HPO onset hierarchy\ni.e. subclasses of HP:0003674\nFHIR mapping: Condition.onset\n",
-            "examples" : [
-               {
-                  "age" : "P35Y"
-               }
-            ]
-         }
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json"
+            },
+            {
+               "description" : "The onset of the disease. The values of this will come from the HPO onset hierarchy\ni.e. subclasses of HP:0003674\nFHIR mapping: Condition.onset\n",
+               "examples" : [
+                  {
+                     "age" : "P35Y"
+                  }
+               ]
+            }
+         ]
       },
       "ageRangeOfOnset" : {
          "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/AgeRange.json",
@@ -106,15 +110,19 @@
          ]
       },
       "term" : {
-         "allof" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json",
-            "description" : "The identifier of this disease\ne.g. MONDO:0007043, OMIM:101600, Orphanet:710, DOID:14705 (note these are all equivalent)\n",
-            "examples" : [
-               {
-                  "id" : "MONDO:0007043"
-               }
-            ]
-         }
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json"
+            },
+            {
+               "description" : "The identifier of this disease\ne.g. MONDO:0007043, OMIM:101600, Orphanet:710, DOID:14705 (note these are all equivalent)\n",
+               "examples" : [
+                  {
+                     "id" : "MONDO:0007043"
+                  }
+               ]
+            }
+         ]
       },
       "tumorStage" : {
          "description" : "Cancer findings in the TNM system that is relevant to the diagnosis of cancer.\nSee https://www.cancer.gov/about-cancer/diagnosis-staging/staging\ne.g. Child terms of NCIT:C48232 (Cancer TNM Finding)\n",

@@ -82,64 +82,84 @@
    ],
    "properties" : {
       "hgvsAllele" : {
-         "allof" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/HgvsAllele.json",
-            "description" : "add description",
-            "examples" : [
-               "add example"
-            ]
-         }
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/HgvsAllele.json"
+            },
+            {
+               "description" : "HGVS version of describing a sequence variation",
+               "examples" : [
+                  "add example"
+               ]
+            }
+         ]
       },
       "iscnAllele" : {
-         "allof" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/IscnAllele.json",
-            "description" : "add description",
-            "examples" : [
-               "add example"
-            ]
-         }
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/IscnAllele.json"
+            },
+            {
+               "description" : "Cytogenetic variation in ISCN format",
+               "examples" : [
+                  "t(8;14)(q24;q32)"
+               ]
+            }
+         ]
       },
       "spdiAllele" : {
-         "allof" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/SpdiAllele.json",
-            "description" : "add description",
-            "examples" : [
-               {
-                  "deletedSequence" : "T",
-                  "id" : "id_abc_123",
-                  "insertedSequence" : "G",
-                  "position" : "123256214",
-                  "seqId" : "NC_000010.10"
-               }
-            ]
-         }
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/SpdiAllele.json"
+            },
+            {
+               "description" : "add description",
+               "examples" : [
+                  {
+                     "deletedSequence" : "T",
+                     "id" : "id_abc_123",
+                     "insertedSequence" : "G",
+                     "position" : "123256214",
+                     "seqId" : "NC_000010.10"
+                  }
+               ]
+            }
+         ]
       },
       "vcfAllele" : {
-         "allof" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/VcfAllele.json",
-            "description" : "add description",
-            "examples" : [
-               {
-                  "alt" : "G",
-                  "chr" : "10",
-                  "genomeAssembly" : "GRCh37",
-                  "pos" : "123256215",
-                  "ref" : "T"
-               }
-            ]
-         }
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/VcfAllele.json"
+            },
+            {
+               "description" : "add description",
+               "examples" : [
+                  {
+                     "alt" : "G",
+                     "chr" : "10",
+                     "genomeAssembly" : "GRCh37",
+                     "pos" : "123256215",
+                     "ref" : "T"
+                  }
+               ]
+            }
+         ]
       },
       "zygosity" : {
-         "allof" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json",
-            "description" : "add description",
-            "examples" : [
-               {
-                  "id" : "GENO:0000135",
-                  "label" : "heterozygous"
-               }
-            ]
-         }
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json"
+            },
+            {
+               "description" : "add description",
+               "examples" : [
+                  {
+                     "id" : "GENO:0000135",
+                     "label" : "heterozygous"
+                  }
+               ]
+            }
+         ]
       }
    },
    "required" : [

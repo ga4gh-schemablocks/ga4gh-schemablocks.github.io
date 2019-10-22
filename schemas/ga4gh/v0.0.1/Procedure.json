@@ -54,28 +54,36 @@
    },
    "properties" : {
       "bodySite" : {
-         "allof" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json",
-            "description" : "FHIR mapping - Procedure.bodySite\n",
-            "examples" : [
-               {
-                  "id" : "UBERON:0003403",
-                  "label" : "skin of forearm"
-               }
-            ]
-         }
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json"
+            },
+            {
+               "description" : "FHIR mapping - Procedure.bodySite\n",
+               "examples" : [
+                  {
+                     "id" : "UBERON:0003403",
+                     "label" : "skin of forearm"
+                  }
+               ]
+            }
+         ]
       },
       "code" : {
-         "allof" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json",
-            "description" : "FHIR mapping - Procedure.code\n",
-            "examples" : [
-               {
-                  "id" : "NCIT:C28743",
-                  "label" : "Funch Biopsy"
-               }
-            ]
-         }
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json"
+            },
+            {
+               "description" : "FHIR mapping - Procedure.code\n",
+               "examples" : [
+                  {
+                     "id" : "NCIT:C28743",
+                     "label" : "Funch Biopsy"
+                  }
+               ]
+            }
+         ]
       }
    },
    "required" : [

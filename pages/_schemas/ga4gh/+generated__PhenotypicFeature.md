@@ -97,7 +97,7 @@ Observation (https://www.hl7.org/fhir/observation.html)
 
 * type: https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]
 
-the values of this will come from the HPO onset hierarchy i.e. subclasses of HP:0003674
+The age at disease onset.
 FHIR mapping: Condition.onset
 
 
@@ -131,7 +131,8 @@ FHIR mapping: Condition.onset
 
 * type: https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
 
-the values of this will come from the HPO onset hierarchy i.e. subclasses of HP:0003674
+The values of this will come from the HPO onset hierarchy i.e. 
+subclasses of HP:0003674
 FHIR mapping: Condition.onset
 
 

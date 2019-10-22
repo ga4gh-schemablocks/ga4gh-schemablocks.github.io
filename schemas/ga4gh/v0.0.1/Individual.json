@@ -67,28 +67,36 @@
    ],
    "properties" : {
       "ageAtCollection" : {
-         "allof" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json",
-            "description" : "An age object describing the age of the individual at the time of collection.\nThe Age object allows the encoding of the age either as ISO8601 duration or\ntime interval (preferred), or as ontology term object.\n",
-            "examples" : [
-               {
-                  "age" : "P14Y"
-               }
-            ]
-         }
-      },
-      "ageRangeAtCollection" : {
-         "allof" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/AgeRange.json",
-            "description" : "An age object describing the age of the individual at the time of collection.\nThe Age object allows the encoding of the age either as ISO8601 duration or\ntime interval (preferred), or as ontology term object.\n",
-            "examples" : [
-               {
-                  "start" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json"
+            },
+            {
+               "description" : "An age object describing the age of the individual at the time of collection.\nThe Age object allows the encoding of the age either as ISO8601 duration or\ntime interval (preferred), or as ontology term object.\n",
+               "examples" : [
+                  {
                      "age" : "P14Y"
                   }
-               }
-            ]
-         }
+               ]
+            }
+         ]
+      },
+      "ageRangeAtCollection" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/AgeRange.json"
+            },
+            {
+               "description" : "An age object describing the age of the individual at the time of collection.\nThe Age object allows the encoding of the age either as ISO8601 duration or\ntime interval (preferred), or as ontology term object.\n",
+               "examples" : [
+                  {
+                     "start" : {
+                        "age" : "P14Y"
+                     }
+                  }
+               ]
+            }
+         ]
       },
       "alternateIds" : {
          "description" : "An optional list of alternative identifiers for this individual. This field is provided\nfor the convenience of users who may have multiple mappings to an individual which they need to track.\n",
@@ -147,16 +155,20 @@
          ]
       },
       "taxonomy" : {
-         "allof" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json",
-            "description" : "NCBI taxonomic identifier. For resources where there may be more than one organism being studied\nit is advisable to indicate the taxonomic identifier of that organism, to its most specific level\n",
-            "examples" : [
-               {
-                  "id" : "NCBITaxon:9606",
-                  "label" : "Homo sapiens"
-               }
-            ]
-         }
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json"
+            },
+            {
+               "description" : "NCBI taxonomic identifier. For resources where there may be more than one organism being studied\nit is advisable to indicate the taxonomic identifier of that organism, to its most specific level\n",
+               "examples" : [
+                  {
+                     "id" : "NCBITaxon:9606",
+                     "label" : "Homo sapiens"
+                  }
+               ]
+            }
+         ]
       }
    },
    "required" : [

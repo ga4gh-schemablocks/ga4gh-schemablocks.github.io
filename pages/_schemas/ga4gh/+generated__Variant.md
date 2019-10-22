@@ -80,7 +80,7 @@ Tools for interconversion between SPDI, HGVS and VCF exist at https://api.ncbi.n
 
 * type: https://schemablocks.org/schemas/ga4gh/v0.0.1/HgvsAllele.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/HgvsAllele.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/HgvsAllele.html" target="_BLANK">HTML</a>]
 
-add description
+HGVS version of describing a sequence variation
 
 ##### `hgvsAllele` Value Example  
 
@@ -92,12 +92,12 @@ add description
 
 * type: https://schemablocks.org/schemas/ga4gh/v0.0.1/IscnAllele.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/IscnAllele.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/IscnAllele.html" target="_BLANK">HTML</a>]
 
-add description
+Cytogenetic variation in ISCN format
 
 ##### `iscnAllele` Value Example  
 
 ```
-"add example"
+"t(8;14)(q24;q32)"
 ```
 
 #### spdiAllele

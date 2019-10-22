@@ -97,44 +97,14 @@
          "type" : "string"
       },
       "metaData" : {
-         "allof" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/MetaData.json",
-            "description" : "Structured definitions of the resources and ontologies used within the phenopacket. REQUIRED\n",
-            "examples" : [
-               {
-                  "created" : "2016-06-29T12:03:03.240Z",
-                  "updates" : [
-                     {
-                        "timestamp" : "2007-12-03T10:15:30.00Z"
-                     }
-                  ]
-               }
-            ]
-         }
-      },
-      "pedigree" : {
-         "allof" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Pedigree.json",
-            "description" : "The pedigree defining the relations between the proband and their relatives. Pedigree.individual_id should\nmap to the PhenoPacket.Individual.id\n",
-            "examples" : [
-               {
-                  "person" : [
-                     {
-                        "individualId" : "add example"
-                     }
-                  ]
-               }
-            ]
-         }
-      },
-      "proband" : {
-         "allof" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Phenopacket.json",
-            "description" : "The individual representing the focus of this packet - e.g. the proband in rare disease cases or cancer patient\n",
-            "examples" : [
-               {
-                  "id" : "phenopacketid-123",
-                  "metaData" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/MetaData.json"
+            },
+            {
+               "description" : "Structured definitions of the resources and ontologies used within the phenopacket. REQUIRED\n",
+               "examples" : [
+                  {
                      "created" : "2016-06-29T12:03:03.240Z",
                      "updates" : [
                         {
@@ -142,9 +112,51 @@
                         }
                      ]
                   }
-               }
-            ]
-         }
+               ]
+            }
+         ]
+      },
+      "pedigree" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Pedigree.json"
+            },
+            {
+               "description" : "The pedigree defining the relations between the proband and their relatives. Pedigree.individual_id should\nmap to the PhenoPacket.Individual.id\n",
+               "examples" : [
+                  {
+                     "person" : [
+                        {
+                           "individualId" : "add example"
+                        }
+                     ]
+                  }
+               ]
+            }
+         ]
+      },
+      "proband" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Phenopacket.json"
+            },
+            {
+               "description" : "The individual representing the focus of this packet - e.g. the proband in rare disease cases or cancer patient\n",
+               "examples" : [
+                  {
+                     "id" : "phenopacketid-123",
+                     "metaData" : {
+                        "created" : "2016-06-29T12:03:03.240Z",
+                        "updates" : [
+                           {
+                              "timestamp" : "2007-12-03T10:15:30.00Z"
+                           }
+                        ]
+                     }
+                  }
+               ]
+            }
+         ]
       },
       "relatives" : {
          "description" : "Individuals related in some way to the patient. For instance, the individuals may be genetically related or may\nbe members of a cohort. If this field is used, then  it is expected that a pedigree will be included for\ngenetically related individuals for use cases such as genomic diagnostics. If a phenopacket is being used to\ndescribe one member of a cohort, then in general one phenopacket will be created for each of the individuals in\nthe cohort.\n",
