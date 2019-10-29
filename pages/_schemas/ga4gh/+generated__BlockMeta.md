@@ -9,10 +9,11 @@ category:
 tags:
   - code
   - playground
+  - ga4gh
 ---
 
 
-## BlockMeta
+## BlockMeta (ga4gh)
 
 * {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
     - __playground__
@@ -33,7 +34,7 @@ tags:
 ### Source (v0.0.1)
 
 * raw source [[JSON](./current/BlockMeta.json)]
-* [Github](https://github.com/ga4gh-schemablocks/playground/blob/master/schemas/BlockMeta.yaml)
+* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/BlockMeta.yaml)
 
 ### Attributes
   

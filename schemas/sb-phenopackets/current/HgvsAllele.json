@@ -1,0 +1,71 @@
+{
+   "$id" : "https://schemablocks.org/schemas/sb-phenopackets/HgvsAllele/v1.0.0",
+   "$schema" : "http://json-schema.org/draft-07/schema#",
+   "additionalProperties" : "",
+   "description" : "A single HGVS allele.\nIt is recommended that the string is validated using the VariantValidator - https://variantvalidator.org/\nSee http://varnomen.hgvs.org/recommendations/DNA/variant/alleles/\n",
+   "examples" : [
+      {
+         "hgvs" : "NM_001848.2:c.877G>A",
+         "id" : "add example"
+      }
+   ],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "Jules Jacobsen",
+            "id" : "orcid:0000-0002-3265-15918"
+         },
+         {
+            "description" : "Peter Robinson",
+            "id" : "orcid:0000-0002-0736-91998"
+         },
+         {
+            "description" : "Michael Baudis",
+            "id" : "orcid:0000-0002-9903-4248"
+         },
+         {
+            "description" : "Melanie Courtot",
+            "id" : "orcid:0000-0002-9551-6370"
+         },
+         {
+            "description" : "Isuru Liyanage",
+            "id" : "orcid:0000-0002-4839-5158"
+         }
+      ],
+      "provenance" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/variant.rst"
+         }
+      ],
+      "sb_status" : "implemented",
+      "used_by" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/variant.rst"
+         }
+      ]
+   },
+   "properties" : {
+      "hgvs" : {
+         "description" : "add description",
+         "examples" : [
+            "NM_001848.2:c.877G>A"
+         ],
+         "type" : "string"
+      },
+      "id" : {
+         "description" : "add description",
+         "examples" : [
+            "add example"
+         ],
+         "type" : "string"
+      }
+   },
+   "required" : [
+      "id"
+   ],
+   "title" : "HgvsAllele",
+   "type" : "object"
+}
+

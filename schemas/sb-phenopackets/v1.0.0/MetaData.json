@@ -1,0 +1,162 @@
+{
+   "$id" : "https://schemablocks.org/schemas/sb-phenopackets/MetaData/v1.0.0",
+   "$schema" : "http://json-schema.org/draft-07/schema#",
+   "additionalProperties" : "",
+   "description" : "metadata\n",
+   "examples" : [
+      {
+         "created" : "2016-06-29T12:03:03.240Z",
+         "updates" : [
+            {
+               "timestamp" : "2007-12-03T10:15:30.00Z"
+            }
+         ]
+      },
+      {
+         "created" : "2016-06-29T12:03:03.240Z",
+         "createdBy" : "samuel_jackson",
+         "resources" : [
+            {
+               "id" : "geno",
+               "iriPrefix" : "http://purl.obolibrary.org/obo/GENO_",
+               "name" : "Genotype Ontology",
+               "namespacePrefix" : "GENO",
+               "url" : "http://purl.obolibrary.org/obo/geno.owl",
+               "version" : "19-03-2018"
+            }
+         ],
+         "updates" : [
+            {
+               "timestamp" : "2007-12-03T10:15:30.00Z"
+            }
+         ]
+      }
+   ],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "GA4GH Data Working Group"
+         },
+         {
+            "description" : "Jules Jacobsen",
+            "id" : "orcid:0000-0002-3265-15918"
+         },
+         {
+            "description" : "Peter Robinson",
+            "id" : "orcid:0000-0002-0736-91998"
+         },
+         {
+            "description" : "Michael Baudis",
+            "id" : "orcid:0000-0002-9903-4248"
+         },
+         {
+            "description" : "Melanie Courtot",
+            "id" : "orcid:0000-0002-9551-6370"
+         },
+         {
+            "description" : "Isuru Liyanage",
+            "id" : "orcid:0000-0002-4839-5158"
+         }
+      ],
+      "provenance" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/metadata.rst"
+         }
+      ],
+      "sb_status" : "implemented",
+      "used_by" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/metadata.rst"
+         }
+      ]
+   },
+   "properties" : {
+      "created" : {
+         "description" : "ISO8601 UTC timestamp for when this phenopacket was created in ISO \"2018-03-01T00:00:00Z\"",
+         "examples" : [
+            "2018-03-01T00:00:00Z"
+         ],
+         "type" : "string"
+      },
+      "createdBy" : {
+         "description" : "some kind of identifier for the contributor/ program",
+         "examples" : [
+            "samuel_jackson"
+         ],
+         "type" : "string"
+      },
+      "externalReferences" : {
+         "description" : "External identifiers for this message. These are considered different representation of the same record, not\nrecords which are in some other relation with the record at hand. For example this might be a PubMed reference\nto a study in which the individuals are reported.\n",
+         "examples" : [
+            [
+               {
+                  "description" : "Cellosaurus cell line identifier",
+                  "id" : "cellosaurus:CVCL_0312"
+               }
+            ]
+         ],
+         "items" : {
+            "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/ExternalReference.json"
+         },
+         "type" : "array"
+      },
+      "phenopacketSchemaVersion" : {
+         "description" : "Used to create this phenopacket",
+         "examples" : [
+            "1.0.2"
+         ],
+         "type" : "string"
+      },
+      "resources" : {
+         "description" : "A listing of the ontologies/resources referenced in the phenopacket\n",
+         "examples" : [
+            [
+               {
+                  "id" : "12345",
+                  "name" : "The Human Phenotype Ontology",
+                  "url" : "http://purl.obolibrary.org/obo/hp.owl"
+               },
+               {
+                  "id" : "12345",
+                  "name" : "The Human Phenotype Ontology",
+                  "url" : "http://purl.obolibrary.org/obo/hp.owl"
+               }
+            ]
+         ],
+         "items" : {
+            "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Resource.json"
+         },
+         "type" : "array"
+      },
+      "submittedBy" : {
+         "description" : "Information about the person/organisation/network that has submitted this phenopacket\n",
+         "examples" : [
+            "add example"
+         ],
+         "type" : "string"
+      },
+      "updates" : {
+         "description" : "ISO8601 UTC timestamps at which this record was updated,\nin the format YYYY-MM-DDTHH:MM:SS.SSSZ e.g. 2007-12-03T10:15:30.00Z\n",
+         "examples" : [
+            [
+               {
+                  "timestamp" : "2007-12-03T10:15:30.00Z"
+               }
+            ]
+         ],
+         "items" : {
+            "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Update.json"
+         },
+         "type" : "array"
+      }
+   },
+   "required" : [
+      "created",
+      "updated"
+   ],
+   "title" : "Metadata",
+   "type" : "object"
+}
+

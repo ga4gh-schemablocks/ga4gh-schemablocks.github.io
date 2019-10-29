@@ -3,7 +3,7 @@ title: "sbSchemaParser::sbSchemaParser.pl Perl Code Documentation"
 layout: default
 www_link: 
 excerpt_separator: <!--more-->
-date: 2019-10-22
+date: 2019-10-29
 category:
   - howto
 tags:
@@ -43,12 +43,18 @@ this-organization
   |-- tools
   |     |
   |     |-- sbSchemaParser
+  |     |     |
   |           |-- sbSchemaParser.pl # this file
   |           |-- config.yaml       # in- and output path definitions
   |
-  |-- blocks                        # example for (1 or 1+) schema repositories
+  |-- sb-external-schemas-name      # example for (1 or 1+) schema repositories
+  |     |
+  |     |-- source
+  |     |     |
+  |     |     |-- v1.0.1            # versioned representation of the donor code
   |     |
   |     |-- schemas
+  |     |     |
   |     |     |-- Schema.yaml
   |     |     |-- OtherSchema.yaml
   |     |     |-- ...
@@ -81,11 +87,12 @@ this-organization
   |-- (webdocs.repo)                # web repository (Jekyll based)
         |
         |-- (webdocs.jekylldir)
+        |     |
         |     |-- Schema.md
         |     |-- ...
         |
         |-- (webdocs.schemadir)
-              |-- current
+              |
               |     |-- Schema.json
               |     |-- ...
               |    
@@ -124,7 +131,7 @@ The class name is derived from the file's "$id" value, assuming a canonical
 path structure with the class name post-pended with a version:
 
 ```
-"$id": https://schemablocks.org/schemas/ga4gh/Phenopacket/v0.0.1
+"$id": https://schemablocks.org/schemas/sb-phenopackets/Phenopacket/v0.0.1
 ```
 Processing is skipped if the class name does contain other than word / dot / 
 dash characters, or if a filter had been provided and the class name 
@@ -164,7 +171,7 @@ The class "$id" values are assumed to have a specific structure, where
 ##### Example
 
 ```
-"$id": https://schemablocks.org/schemas/ga4gh/BeaconVariant/v0.0.1
+"$id": https://schemablocks.org/schemas/sb-beacon/BeaconVariant/v1.0.1
 ```
 
 The property overview is followed by the listing of the properties, including

@@ -1,0 +1,243 @@
+{
+   "$id" : "https://schemablocks.org/schemas/sb-phenopackets/Phenopacket/v1.0.0",
+   "$schema" : "http://json-schema.org/draft-07/schema#",
+   "additionalProperties" : "",
+   "description" : "An anonymous phenotypic description of an individual or biosample with potential genes of interest and/or diagnoses.\nThis is a bundle of high-level concepts with no specifically defined relational concepts. It is expected that the\nresources sharing the phenopackets will define and enforce their own semantics and level of requirements for included\nfields.\n",
+   "examples" : [
+      {
+         "biosamples" : [
+            {
+               "description" : "THP-1; 6 hours; DMSO; Replicate 1",
+               "id" : "SAMN05324082",
+               "individualId" : "SAMN05324082-individual",
+               "sampledTissue" : {
+                  "id" : "UBERON:0000178",
+                  "label" : "peripheral blood"
+               }
+            }
+         ],
+         "id" : "phenopacketid-123",
+         "metaData" : {
+            "created" : "2016-06-29T12:03:03.240Z",
+            "updates" : [
+               {
+                  "timestamp" : "2007-12-03T10:15:30.00Z"
+               }
+            ]
+         },
+         "subject" : {
+            "id" : "SAMN05324082-individual",
+            "sex" : "MALE",
+            "taxonomy" : {
+               "id" : "NCBITaxon:9606",
+               "label" : "Homo sapiens"
+            }
+         }
+      }
+   ],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "GA4GH Data Working Group"
+         },
+         {
+            "description" : "Jules Jacobsen",
+            "id" : "orcid:0000-0002-3265-15918"
+         },
+         {
+            "description" : "Peter Robinson",
+            "id" : "orcid:0000-0002-0736-91998"
+         },
+         {
+            "description" : "Michael Baudis",
+            "id" : "orcid:0000-0002-9903-4248"
+         },
+         {
+            "description" : "Melanie Courtot",
+            "id" : "orcid:0000-0002-9551-6370"
+         },
+         {
+            "description" : "Isuru Liyanage",
+            "id" : "orcid:0000-0002-4839-5158"
+         }
+      ],
+      "provenance" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/phenopacket.rst"
+         }
+      ],
+      "sb_status" : "implemented",
+      "used_by" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/phenopacket.rst"
+         }
+      ]
+   },
+   "properties" : {
+      "biosamples" : {
+         "description" : "Biosample(s) derived from the patient or a collection of biosamples in isolation\n",
+         "examples" : [
+            [
+               {
+                  "description" : "THP-1; 6 hours; DMSO; Replicate 1",
+                  "id" : "SAMN05324082",
+                  "individualId" : "SAMN05324082-individual",
+                  "sampledTissue" : {
+                     "id" : "UBERON:0000178",
+                     "label" : "peripheral blood"
+                  }
+               }
+            ]
+         ],
+         "items" : {
+            "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Biosample.json"
+         },
+         "type" : "array"
+      },
+      "diseases" : {
+         "description" : "Field for disease identifiers - could be used for listing either diagnosed or suspected conditions. The\nresources using these fields should define what this represents in their context.\n",
+         "examples" : [
+            [
+               {
+                  "classOfOnset" : {
+                     "id" : "HP:0003596",
+                     "label" : "Middle age onset"
+                  },
+                  "term" : {
+                     "id" : "MONDO:0007043",
+                     "label" : "Pfeiffer syndrome"
+                  }
+               }
+            ]
+         ],
+         "items" : {
+            "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Disease.json"
+         },
+         "type" : "array"
+      },
+      "genes" : {
+         "description" : "Field for gene identifiers - could be used for listing either candidate genes or causative genes. The\nresources using these fields should define what this represents in their context. This could be used in order to\nobfuscate the specific causative/candidate variant.\n",
+         "examples" : [
+            [
+               {
+                  "id" : "HGNC:3477",
+                  "symbol" : "ETF1"
+               }
+            ]
+         ],
+         "items" : {
+            "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Gene.json"
+         },
+         "type" : "array"
+      },
+      "htsFiles" : {
+         "description" : "Pointer to the relevant HTS file(s) for the patient\n",
+         "examples" : [
+            [
+               {
+                  "htsFormat" : "GVCF",
+                  "uri" : "file://data/genomes/file1.vcf.gz"
+               }
+            ]
+         ],
+         "items" : {
+            "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/HtsFile.json"
+         },
+         "type" : "array"
+      },
+      "id" : {
+         "description" : "An identifier specific for this phenopacket",
+         "examples" : [
+            "phenopacketid123"
+         ],
+         "type" : "string"
+      },
+      "metaData" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/MetaData.json"
+            },
+            {
+               "description" : "Structured definitions of the resources and ontologies used within the phenopacket. REQUIRED\n",
+               "examples" : [
+                  {
+                     "created" : "2016-06-29T12:03:03.240Z",
+                     "updates" : [
+                        {
+                           "timestamp" : "2007-12-03T10:15:30.00Z"
+                        }
+                     ]
+                  }
+               ]
+            }
+         ]
+      },
+      "phenotypicFeatures" : {
+         "description" : "Phenotypic features relating to the subject of the phenopacket\n",
+         "examples" : [
+            [
+               {
+                  "description" : "add example",
+                  "type" : {
+                     "id" : "add example",
+                     "label" : "add example"
+                  }
+               }
+            ]
+         ],
+         "items" : {
+            "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/PhenotypicFeature.json"
+         },
+         "type" : "array"
+      },
+      "subject" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Individual.json"
+            },
+            {
+               "description" : "The individual representing the focus of this packet - e.g. the proband in rare disease cases or cancer patient\n",
+               "examples" : [
+                  {
+                     "id" : "SAMN05324082-individual",
+                     "sex" : "MALE",
+                     "taxonomy" : {
+                        "id" : "NCBITaxon:9606",
+                        "label" : "Homo sapiens"
+                     }
+                  }
+               ]
+            }
+         ]
+      },
+      "variants" : {
+         "description" : "Field for genetic variants - could be used for listing either candidate variants or diagnosed causative\nvariants. The resources using these fields should define what this represents in their context.\n",
+         "examples" : [
+            [
+               {
+                  "description" : "description of variant",
+                  "id" : "ID_12345",
+                  "murineAllele" : {
+                     "alleleSymbol" : "tm1Hcd",
+                     "gene" : "Fbn1",
+                     "id" : "MGI:3690325"
+                  }
+               }
+            ]
+         ],
+         "items" : {
+            "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Variant.json"
+         },
+         "type" : "array"
+      }
+   },
+   "required" : [
+      "id",
+      "metaData"
+   ],
+   "title" : "Phenopacket",
+   "type" : "object"
+}
+

@@ -9,10 +9,11 @@ category:
 tags:
   - code
   - proposed
+  - ga4gh
 ---
 
 
-## Callset
+## Callset (ga4gh)
 
 * {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
     - __proposed__
