@@ -13,45 +13,73 @@ tags:
 ---
 
 
-## Age (ga4gh)
+<div id="schema-header-title">
+  <h2>Age <span id="schema-header-title-project">ga4gh <a href="https://github.com/ga4gh-schemablocks/sb-phenopackets" target="_BLANK">&nearr;</a></span> </h2>
+</div>
 
-* {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
-    - __implemented__
+<table id="schema-header-table">
+  <tr>
+    <th>{S}[B] Status <a href="https://schemablocks.org/about/sb-status-levels.html">[i]</a></th>
+    <td><div id="schema-header-status">implemented</div></td>
+  </tr>
 
-* Provenance  
-
-    - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/age.rst)  
-* Used by  
-
-    - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/age.rst)  
+  <tr>
+    <th>Provenance</th>
+    <td>
+      <ul>
+<li><a href="https://github.com/phenopackets/phenopacket-schema/blob/master/docs/age.rst">Phenopackets</a></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Used by</th>
+    <td>
+      <ul>
+<li><a href="https://github.com/phenopackets/phenopacket-schema/blob/master/docs/age.rst">Phenopackets</a></li>
+      </ul>
+    </td>
+  </tr>
 
 <!--more-->
 
-* Contributors  
+  <tr>
+    <th>Contributors</th>
+    <td>
+      <ul>
+<li><a href="https://orcid.org/0000-0002-3265-15918">Jules Jacobsen</a></li>
+<li><a href="https://orcid.org/0000-0002-0736-91998">Peter Robinson</a></li>
+<li><a href="https://orcid.org/0000-0002-9903-4248">Michael Baudis</a></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Source (v0.0.1)</th>
+    <td>
+      <ul>
+        <li><a href="current/Age.json" target="_BLANK">raw source [JSON]</a></li>
+        <li><a href="https://github.com/ga4gh-schemablocks/sb-phenopackets/blob/master/schemas/Age.yaml" target="_BLANK">Github</a></li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-    - [Jules Jacobsen](https://orcid.org/0000-0002-3265-15918)  
-    - [Peter Robinson](https://orcid.org/0000-0002-0736-91998)  
-    - [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
+<div id="schema-attributes-title">
+  <h3>Attributes</h3>
+</div>
 
-### Source (v0.0.1)
-
-* raw source [[JSON](./current/Age.json)]
-* [Github](https://github.com/ga4gh-schemablocks/sb-phenopackets/blob/master/schemas/Age.yaml)
-
-### Attributes
   
 __Type:__ object  
 __Description:__ Age
 
 ### Properties
 
-<table>
+<table id="schema-property-table">
   <tr>
     <th>Property</th>
     <th>Type</th>
   </tr>
   <tr>
-    <td>age</td>
+    <th>age</th>
     <td>string</td>
   </tr>
 

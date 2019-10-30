@@ -13,50 +13,78 @@ tags:
 ---
 
 
-## AgeRange (sb-phenopackets)
+<div id="schema-header-title">
+  <h2>AgeRange <span id="schema-header-title-project">sb-phenopackets <a href="https://github.com/ga4gh-schemablocks/sb-phenopackets" target="_BLANK">&nearr;</a></span> </h2>
+</div>
 
-* {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
-    - __implemented__
+<table id="schema-header-table">
+  <tr>
+    <th>{S}[B] Status <a href="https://schemablocks.org/about/sb-status-levels.html">[i]</a></th>
+    <td><div id="schema-header-status">implemented</div></td>
+  </tr>
 
-* Provenance  
-
-    - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/agerange.rst)  
-* Used by  
-
-    - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/agerange.rst)  
+  <tr>
+    <th>Provenance</th>
+    <td>
+      <ul>
+<li><a href="https://github.com/phenopackets/phenopacket-schema/blob/master/docs/agerange.rst">Phenopackets</a></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Used by</th>
+    <td>
+      <ul>
+<li><a href="https://github.com/phenopackets/phenopacket-schema/blob/master/docs/agerange.rst">Phenopackets</a></li>
+      </ul>
+    </td>
+  </tr>
 
 <!--more-->
 
-* Contributors  
+  <tr>
+    <th>Contributors</th>
+    <td>
+      <ul>
+<li><a href="https://orcid.org/0000-0002-3265-15918">Jules Jacobsen</a></li>
+<li><a href="https://orcid.org/0000-0002-0736-91998">Peter Robinson</a></li>
+<li><a href="https://orcid.org/0000-0002-9903-4248">Michael Baudis</a></li>
+<li><a href="https://orcid.org/0000-0002-4839-5158">Isuru Liyanage</a></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Source (v1.0.0)</th>
+    <td>
+      <ul>
+        <li><a href="current/AgeRange.json" target="_BLANK">raw source [JSON]</a></li>
+        <li><a href="https://github.com/ga4gh-schemablocks/sb-phenopackets/blob/master/schemas/AgeRange.yaml" target="_BLANK">Github</a></li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-    - [Jules Jacobsen](https://orcid.org/0000-0002-3265-15918)  
-    - [Peter Robinson](https://orcid.org/0000-0002-0736-91998)  
-    - [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
-    - [Isuru Liyanage](https://orcid.org/0000-0002-4839-5158)  
+<div id="schema-attributes-title">
+  <h3>Attributes</h3>
+</div>
 
-### Source (v1.0.0)
-
-* raw source [[JSON](./current/AgeRange.json)]
-* [Github](https://github.com/ga4gh-schemablocks/sb-phenopackets/blob/master/schemas/AgeRange.yaml)
-
-### Attributes
   
 __Type:__ object  
 __Description:__ Age range
 
 ### Properties
 
-<table>
+<table id="schema-property-table">
   <tr>
     <th>Property</th>
     <th>Type</th>
   </tr>
   <tr>
-    <td>end</td>
+    <th>end</th>
     <td>https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
-    <td>start</td>
+    <th>start</th>
     <td>https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/Age.html" target="_BLANK">HTML</a>]</td>
   </tr>
 

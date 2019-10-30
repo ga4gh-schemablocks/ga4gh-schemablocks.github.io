@@ -13,33 +13,61 @@ tags:
 ---
 
 
-## BeaconVariant (ga4gh)
+<div id="schema-header-title">
+  <h2>BeaconVariant <span id="schema-header-title-project">ga4gh <a href="https://github.com/ga4gh-schemablocks/blocks" target="_BLANK">&nearr;</a></span> </h2>
+</div>
 
-* {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
-    - __implemented__
+<table id="schema-header-table">
+  <tr>
+    <th>{S}[B] Status <a href="https://schemablocks.org/about/sb-status-levels.html">[i]</a></th>
+    <td><div id="schema-header-status">implemented</div></td>
+  </tr>
 
-* Provenance  
-
-    - [Original GA4GH schema](https://github.com/ga4gh/ga4gh-schemas/blob/master/src/main/proto/ga4gh/variants.proto#L145)  
-* Used by  
-
-    - [Beacon, in modified form as basis for query model](https://github.com/ga4gh-beacon/specification/blob/master/beacon.yaml)  
-    - [Progenetix database schema (Beacon+ backend)](https://github.com/progenetix/schemas/tree/master/main/yaml)  
+  <tr>
+    <th>Provenance</th>
+    <td>
+      <ul>
+<li><a href="https://github.com/ga4gh/ga4gh-schemas/blob/master/src/main/proto/ga4gh/variants.proto#L145">Original GA4GH schema</a></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Used by</th>
+    <td>
+      <ul>
+<li><a href="https://github.com/ga4gh-beacon/specification/blob/master/beacon.yaml">Beacon, in modified form as basis for query model</a></li>
+<li><a href="https://github.com/progenetix/schemas/tree/master/main/yaml">Progenetix database schema (Beacon+ backend)</a></li>
+      </ul>
+    </td>
+  </tr>
 
 <!--more-->
 
-* Contributors  
+  <tr>
+    <th>Contributors</th>
+    <td>
+      <ul>
+<li>GA4GH Data Working Group</li>
+<li>ELIXIR Beacon team</li>
+<li><a href="https://orcid.org/0000-0002-9903-4248">Michael Baudis</a></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Source (v0.0.1)</th>
+    <td>
+      <ul>
+        <li><a href="current/BeaconVariant.json" target="_BLANK">raw source [JSON]</a></li>
+        <li><a href="https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/BeaconVariant.yaml" target="_BLANK">Github</a></li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-    - GA4GH Data Working Group  
-    - ELIXIR Beacon team  
-    - [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
+<div id="schema-attributes-title">
+  <h3>Attributes</h3>
+</div>
 
-### Source (v0.0.1)
-
-* raw source [[JSON](./current/BeaconVariant.json)]
-* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/BeaconVariant.yaml)
-
-### Attributes
   
 __Type:__ object  
 __Description:__ The document describes attributes of the _variant_ object. In its current 
@@ -63,61 +91,61 @@ GA4GH::GKS work stream.
 
 ### Properties
 
-<table>
+<table id="schema-property-table">
   <tr>
     <th>Property</th>
     <th>Type</th>
   </tr>
   <tr>
-    <td>alternate_bases</td>
+    <th>alternate_bases</th>
     <td>array of string</td>
   </tr>
   <tr>
-    <td>biosample_id</td>
+    <th>biosample_id</th>
     <td>string</td>
   </tr>
   <tr>
-    <td>callset_id</td>
+    <th>callset_id</th>
     <td>string</td>
   </tr>
   <tr>
-    <td>digest</td>
+    <th>digest</th>
     <td>string</td>
   </tr>
   <tr>
-    <td>end</td>
+    <th>end</th>
     <td>array of int64</td>
   </tr>
   <tr>
-    <td>genotype</td>
+    <th>genotype</th>
     <td>array of string</td>
   </tr>
   <tr>
-    <td>id</td>
+    <th>id</th>
     <td>string</td>
   </tr>
   <tr>
-    <td>info</td>
+    <th>info</th>
     <td>object</td>
   </tr>
   <tr>
-    <td>mate_name</td>
+    <th>mate_name</th>
     <td>string</td>
   </tr>
   <tr>
-    <td>reference_bases</td>
+    <th>reference_bases</th>
     <td>string</td>
   </tr>
   <tr>
-    <td>reference_name</td>
+    <th>reference_name</th>
     <td>string</td>
   </tr>
   <tr>
-    <td>start</td>
+    <th>start</th>
     <td>array of int64</td>
   </tr>
   <tr>
-    <td>variant_type</td>
+    <th>variant_type</th>
     <td>string</td>
   </tr>
 

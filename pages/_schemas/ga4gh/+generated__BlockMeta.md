@@ -13,30 +13,58 @@ tags:
 ---
 
 
-## BlockMeta (ga4gh)
+<div id="schema-header-title">
+  <h2>BlockMeta <span id="schema-header-title-project">ga4gh <a href="https://github.com/ga4gh-schemablocks/blocks" target="_BLANK">&nearr;</a></span> </h2>
+</div>
 
-* {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
-    - __playground__
+<table id="schema-header-table">
+  <tr>
+    <th>{S}[B] Status <a href="https://schemablocks.org/about/sb-status-levels.html">[i]</a></th>
+    <td><div id="schema-header-status">playground</div></td>
+  </tr>
 
-* Provenance  
-
-    - [Original development for SchemaBlocks project](https://schemablocks.org)  
-* Used by  
-
-    - [SchemaBlocks](https://schemablocks.org)  
+  <tr>
+    <th>Provenance</th>
+    <td>
+      <ul>
+<li><a href="https://schemablocks.org">Original development for SchemaBlocks project</a></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Used by</th>
+    <td>
+      <ul>
+<li><a href="https://schemablocks.org">SchemaBlocks</a></li>
+      </ul>
+    </td>
+  </tr>
 
 <!--more-->
 
-* Contributors  
+  <tr>
+    <th>Contributors</th>
+    <td>
+      <ul>
+<li><a href="https://orcid.org/0000-0002-9903-4248">Michael Baudis</a></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Source (v0.0.1)</th>
+    <td>
+      <ul>
+        <li><a href="current/BlockMeta.json" target="_BLANK">raw source [JSON]</a></li>
+        <li><a href="https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/BlockMeta.yaml" target="_BLANK">Github</a></li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-    - [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
+<div id="schema-attributes-title">
+  <h3>Attributes</h3>
+</div>
 
-### Source (v0.0.1)
-
-* raw source [[JSON](./current/BlockMeta.json)]
-* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/BlockMeta.yaml)
-
-### Attributes
   
 __Type:__ object  
 __Description:__ BlockMeta defines the format of the SchemaBlocks metadata, used to describe
@@ -45,25 +73,25 @@ e.g. the given block's provenance, scope, external usage.
 
 ### Properties
 
-<table>
+<table id="schema-property-table">
   <tr>
     <th>Property</th>
     <th>Type</th>
   </tr>
   <tr>
-    <td>contributors</td>
+    <th>contributors</th>
     <td>array of https://schemablocks.org/schemas/ga4gh/v0.0.1/ExternalReference.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/ExternalReference.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/ExternalReference.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
-    <td>provenance</td>
+    <th>provenance</th>
     <td>array of https://schemablocks.org/schemas/ga4gh/v0.0.1/ExternalReference.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/ExternalReference.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/ExternalReference.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
-    <td>sb_status</td>
+    <th>sb_status</th>
     <td>string</td>
   </tr>
   <tr>
-    <td>use_cases</td>
+    <th>use_cases</th>
     <td>array of https://schemablocks.org/schemas/ga4gh/v0.0.1/ExternalReference.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/ExternalReference.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/ExternalReference.html" target="_BLANK">HTML</a>]</td>
   </tr>
 

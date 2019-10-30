@@ -13,32 +13,60 @@ tags:
 ---
 
 
-## Curie (ga4gh)
+<div id="schema-header-title">
+  <h2>Curie <span id="schema-header-title-project">ga4gh <a href="https://github.com/ga4gh-schemablocks/blocks" target="_BLANK">&nearr;</a></span> </h2>
+</div>
 
-* {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
-    - __implemented__
+<table id="schema-header-table">
+  <tr>
+    <th>{S}[B] Status <a href="https://schemablocks.org/about/sb-status-levels.html">[i]</a></th>
+    <td><div id="schema-header-status">implemented</div></td>
+  </tr>
 
-* Provenance  
-
-    - [vr-spec](https://github.com/ga4gh/vr-spec/blob/master/schema/vr.yaml)  
-* Used by  
-
-    - [vr-spec](https://github.com/ga4gh/vr-spec/blob/master/schema/vr.yaml)  
+  <tr>
+    <th>Provenance</th>
+    <td>
+      <ul>
+<li><a href="https://github.com/ga4gh/vr-spec/blob/master/schema/vr.yaml">vr-spec</a></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Used by</th>
+    <td>
+      <ul>
+<li><a href="https://github.com/ga4gh/vr-spec/blob/master/schema/vr.yaml">vr-spec</a></li>
+      </ul>
+    </td>
+  </tr>
 
 <!--more-->
 
-* Contributors  
+  <tr>
+    <th>Contributors</th>
+    <td>
+      <ul>
+<li><a href="https://orcid.org/0000-0003-3463-0775">Reece Hart</a></li>
+<li><a href="https://orcid.org/0000-0002-9903-4248">Michael Baudis</a></li>
+<li><a href="https://orcid.org/0000-0002-4839-5158">Isuru Liyanage</a></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Source (v0.0.1)</th>
+    <td>
+      <ul>
+        <li><a href="current/Curie.json" target="_BLANK">raw source [JSON]</a></li>
+        <li><a href="https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/Curie.yaml" target="_BLANK">Github</a></li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-    - [Reece Hart](https://orcid.org/0000-0003-3463-0775)  
-    - [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
-    - [Isuru Liyanage](https://orcid.org/0000-0002-4839-5158)  
+<div id="schema-attributes-title">
+  <h3>Attributes</h3>
+</div>
 
-### Source (v0.0.1)
-
-* raw source [[JSON](./current/Curie.json)]
-* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/Curie.yaml)
-
-### Attributes
   
 __Type:__ string  
 __Pattern:__ ^\w[^:]+:.+$  

@@ -23,3 +23,12 @@ a {
   color: var(--site-color);
   text-decoration: none;
 }
+
+#schema-header-title-project { color: #999; font-weight: 200; }
+#schema-header-title-project a:link { color: #999; font-weight: 200; }
+#schema-header-status { font-weight: 800; }
+#schema-header-table th { vertical-align: top; }
+#schema-properties-table th { vertical-align: top; }
+#schema-header-table th:first-child { width: 25%; }
+#schema-properties-table th:first-child { width: 25%; }
+#schema-header-table ul { list-style: circle inside; margin-bottom: 0px; }

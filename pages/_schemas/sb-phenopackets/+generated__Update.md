@@ -13,35 +13,63 @@ tags:
 ---
 
 
-## Update (sb-phenopackets)
+<div id="schema-header-title">
+  <h2>Update <span id="schema-header-title-project">sb-phenopackets <a href="https://github.com/ga4gh-schemablocks/sb-phenopackets" target="_BLANK">&nearr;</a></span> </h2>
+</div>
 
-* {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
-    - __implemented__
+<table id="schema-header-table">
+  <tr>
+    <th>{S}[B] Status <a href="https://schemablocks.org/about/sb-status-levels.html">[i]</a></th>
+    <td><div id="schema-header-status">implemented</div></td>
+  </tr>
 
-* Provenance  
-
-    - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/update.rst)  
-* Used by  
-
-    - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/update.rst)  
+  <tr>
+    <th>Provenance</th>
+    <td>
+      <ul>
+<li><a href="https://github.com/phenopackets/phenopacket-schema/blob/master/docs/update.rst">Phenopackets</a></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Used by</th>
+    <td>
+      <ul>
+<li><a href="https://github.com/phenopackets/phenopacket-schema/blob/master/docs/update.rst">Phenopackets</a></li>
+      </ul>
+    </td>
+  </tr>
 
 <!--more-->
 
-* Contributors  
+  <tr>
+    <th>Contributors</th>
+    <td>
+      <ul>
+<li>GA4GH Data Working Group</li>
+<li><a href="https://orcid.org/0000-0002-3265-15918">Jules Jacobsen</a></li>
+<li><a href="https://orcid.org/0000-0002-0736-91998">Peter Robinson</a></li>
+<li><a href="https://orcid.org/0000-0002-9903-4248">Michael Baudis</a></li>
+<li><a href="https://orcid.org/0000-0002-9551-6370">Melanie Courtot</a></li>
+<li><a href="https://orcid.org/0000-0002-4839-5158">Isuru Liyanage</a></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Source (v1.0.0)</th>
+    <td>
+      <ul>
+        <li><a href="current/Update.json" target="_BLANK">raw source [JSON]</a></li>
+        <li><a href="https://github.com/ga4gh-schemablocks/sb-phenopackets/blob/master/schemas/Update.yaml" target="_BLANK">Github</a></li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-    - GA4GH Data Working Group  
-    - [Jules Jacobsen](https://orcid.org/0000-0002-3265-15918)  
-    - [Peter Robinson](https://orcid.org/0000-0002-0736-91998)  
-    - [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
-    - [Melanie Courtot](https://orcid.org/0000-0002-9551-6370)  
-    - [Isuru Liyanage](https://orcid.org/0000-0002-4839-5158)  
+<div id="schema-attributes-title">
+  <h3>Attributes</h3>
+</div>
 
-### Source (v1.0.0)
-
-* raw source [[JSON](./current/Update.json)]
-* [Github](https://github.com/ga4gh-schemablocks/sb-phenopackets/blob/master/schemas/Update.yaml)
-
-### Attributes
   
 __Type:__ object  
 __Description:__ Information about when an update to a record occurred, who or what made the update and any pertinent information
@@ -50,21 +78,21 @@ regarding the content and/or reason for the update
 
 ### Properties
 
-<table>
+<table id="schema-property-table">
   <tr>
     <th>Property</th>
     <th>Type</th>
   </tr>
   <tr>
-    <td>comment</td>
+    <th>comment</th>
     <td>string</td>
   </tr>
   <tr>
-    <td>timestamp</td>
+    <th>timestamp</th>
     <td>string</td>
   </tr>
   <tr>
-    <td>updatedBy</td>
+    <th>updatedBy</th>
     <td>string</td>
   </tr>
 

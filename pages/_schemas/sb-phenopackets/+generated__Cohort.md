@@ -13,35 +13,63 @@ tags:
 ---
 
 
-## Cohort (sb-phenopackets)
+<div id="schema-header-title">
+  <h2>Cohort <span id="schema-header-title-project">sb-phenopackets <a href="https://github.com/ga4gh-schemablocks/sb-phenopackets" target="_BLANK">&nearr;</a></span> </h2>
+</div>
 
-* {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
-    - __implemented__
+<table id="schema-header-table">
+  <tr>
+    <th>{S}[B] Status <a href="https://schemablocks.org/about/sb-status-levels.html">[i]</a></th>
+    <td><div id="schema-header-status">implemented</div></td>
+  </tr>
 
-* Provenance  
-
-    - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/cohort.rst)  
-* Used by  
-
-    - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/cohort.rst)  
+  <tr>
+    <th>Provenance</th>
+    <td>
+      <ul>
+<li><a href="https://github.com/phenopackets/phenopacket-schema/blob/master/docs/cohort.rst">Phenopackets</a></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Used by</th>
+    <td>
+      <ul>
+<li><a href="https://github.com/phenopackets/phenopacket-schema/blob/master/docs/cohort.rst">Phenopackets</a></li>
+      </ul>
+    </td>
+  </tr>
 
 <!--more-->
 
-* Contributors  
+  <tr>
+    <th>Contributors</th>
+    <td>
+      <ul>
+<li>GA4GH Data Working Group</li>
+<li><a href="https://orcid.org/0000-0002-3265-15918">Jules Jacobsen</a></li>
+<li><a href="https://orcid.org/0000-0002-0736-91998">Peter Robinson</a></li>
+<li><a href="https://orcid.org/0000-0002-9903-4248">Michael Baudis</a></li>
+<li><a href="https://orcid.org/0000-0002-9551-6370">Melanie Courtot</a></li>
+<li><a href="https://orcid.org/0000-0002-4839-5158">Isuru Liyanage</a></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Source (v1.0.0)</th>
+    <td>
+      <ul>
+        <li><a href="current/Cohort.json" target="_BLANK">raw source [JSON]</a></li>
+        <li><a href="https://github.com/ga4gh-schemablocks/sb-phenopackets/blob/master/schemas/Cohort.yaml" target="_BLANK">Github</a></li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-    - GA4GH Data Working Group  
-    - [Jules Jacobsen](https://orcid.org/0000-0002-3265-15918)  
-    - [Peter Robinson](https://orcid.org/0000-0002-0736-91998)  
-    - [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
-    - [Melanie Courtot](https://orcid.org/0000-0002-9551-6370)  
-    - [Isuru Liyanage](https://orcid.org/0000-0002-4839-5158)  
+<div id="schema-attributes-title">
+  <h3>Attributes</h3>
+</div>
 
-### Source (v1.0.0)
-
-* raw source [[JSON](./current/Cohort.json)]
-* [Github](https://github.com/ga4gh-schemablocks/sb-phenopackets/blob/master/schemas/Cohort.yaml)
-
-### Attributes
   
 __Type:__ object  
 __Description:__ A group of individuals related in some phenotypic or genotypic aspect
@@ -49,29 +77,29 @@ __Description:__ A group of individuals related in some phenotypic or genotypic 
 
 ### Properties
 
-<table>
+<table id="schema-property-table">
   <tr>
     <th>Property</th>
     <th>Type</th>
   </tr>
   <tr>
-    <td>description</td>
+    <th>description</th>
     <td>string</td>
   </tr>
   <tr>
-    <td>htsFiles</td>
+    <th>htsFiles</th>
     <td>array of https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/HtsFile.json [<a href="https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/HtsFile.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-phenopackets/HtsFile.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
-    <td>id</td>
+    <th>id</th>
     <td>string</td>
   </tr>
   <tr>
-    <td>members</td>
+    <th>members</th>
     <td>array of https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Phenopacket.json [<a href="https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Phenopacket.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-phenopackets/Phenopacket.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
-    <td>metaData</td>
+    <th>metaData</th>
     <td>https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/MetaData.json [<a href="https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/MetaData.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-phenopackets/MetaData.html" target="_BLANK">HTML</a>]</td>
   </tr>
 

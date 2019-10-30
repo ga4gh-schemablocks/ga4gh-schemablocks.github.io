@@ -13,31 +13,59 @@ tags:
 ---
 
 
-## Callset (ga4gh)
+<div id="schema-header-title">
+  <h2>Callset <span id="schema-header-title-project">ga4gh <a href="https://github.com/ga4gh-schemablocks/blocks" target="_BLANK">&nearr;</a></span> </h2>
+</div>
 
-* {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
-    - __proposed__
+<table id="schema-header-table">
+  <tr>
+    <th>{S}[B] Status <a href="https://schemablocks.org/about/sb-status-levels.html">[i]</a></th>
+    <td><div id="schema-header-status">proposed</div></td>
+  </tr>
 
-* Provenance  
-
-    - [Original GA4GH schema](https://github.com/ga4gh/ga4gh-schemas/blob/master/src/main/proto/ga4gh/variants.proto#L65)  
-* Used by  
-
-    - [Progenetix database schema (Beacon+ backend)](https://github.com/progenetix/schemas/tree/master/main/yaml)  
+  <tr>
+    <th>Provenance</th>
+    <td>
+      <ul>
+<li><a href="https://github.com/ga4gh/ga4gh-schemas/blob/master/src/main/proto/ga4gh/variants.proto#L65">Original GA4GH schema</a></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Used by</th>
+    <td>
+      <ul>
+<li><a href="https://github.com/progenetix/schemas/tree/master/main/yaml">Progenetix database schema (Beacon+ backend)</a></li>
+      </ul>
+    </td>
+  </tr>
 
 <!--more-->
 
-* Contributors  
+  <tr>
+    <th>Contributors</th>
+    <td>
+      <ul>
+<li>GA4GH Data Working Group</li>
+<li><a href="https://orcid.org/0000-0002-9903-4248">Michael Baudis</a></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Source (v0.0.1)</th>
+    <td>
+      <ul>
+        <li><a href="current/Callset.json" target="_BLANK">raw source [JSON]</a></li>
+        <li><a href="https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/Callset.yaml" target="_BLANK">Github</a></li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-    - GA4GH Data Working Group  
-    - [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
+<div id="schema-attributes-title">
+  <h3>Attributes</h3>
+</div>
 
-### Source (v0.0.1)
-
-* raw source [[JSON](./current/Callset.json)]
-* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/Callset.yaml)
-
-### Attributes
   
 __Type:__ object  
 __Description:__ The callset object contains information about an experiment performed on 
@@ -47,41 +75,41 @@ variants detected in this experiment, attributed to the referenced biosample.
 
 ### Properties
 
-<table>
+<table id="schema-property-table">
   <tr>
     <th>Property</th>
     <th>Type</th>
   </tr>
   <tr>
-    <td>biosample_id</td>
+    <th>biosample_id</th>
     <td>string</td>
   </tr>
   <tr>
-    <td>created</td>
+    <th>created</th>
     <td>string</td>
   </tr>
   <tr>
-    <td>data_use_conditions</td>
+    <th>data_use_conditions</th>
     <td>https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
-    <td>description</td>
+    <th>description</th>
     <td>string</td>
   </tr>
   <tr>
-    <td>geo_provenance</td>
+    <th>geo_provenance</th>
     <td>https://schemablocks.org/schemas/ga4gh/v0.0.1/GeoLocation.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/GeoLocation.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/GeoLocation.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
-    <td>id</td>
+    <th>id</th>
     <td>string</td>
   </tr>
   <tr>
-    <td>info</td>
+    <th>info</th>
     <td>object</td>
   </tr>
   <tr>
-    <td>updated</td>
+    <th>updated</th>
     <td>string</td>
   </tr>
 

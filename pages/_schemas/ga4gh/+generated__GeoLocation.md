@@ -13,33 +13,61 @@ tags:
 ---
 
 
-## GeoLocation (ga4gh)
+<div id="schema-header-title">
+  <h2>GeoLocation <span id="schema-header-title-project">ga4gh <a href="https://github.com/ga4gh-schemablocks/blocks" target="_BLANK">&nearr;</a></span> </h2>
+</div>
 
-* {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
-    - __proposed__
+<table id="schema-header-table">
+  <tr>
+    <th>{S}[B] Status <a href="https://schemablocks.org/about/sb-status-levels.html">[i]</a></th>
+    <td><div id="schema-header-status">proposed</div></td>
+  </tr>
 
-* Provenance  
-
-    - [Developer branch of original GA4GH schema](https://github.com/ga4gh-metadata/metadata-schemas/blob/master/schemas/shared.proto#L60)  
-* Used by  
-
-    - [Progenetix database schema (Beacon+ backend)](https://github.com/progenetix/schemas/tree/master/main/yaml)  
+  <tr>
+    <th>Provenance</th>
+    <td>
+      <ul>
+<li><a href="https://github.com/ga4gh-metadata/metadata-schemas/blob/master/schemas/shared.proto#L60">Developer branch of original GA4GH schema</a></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Used by</th>
+    <td>
+      <ul>
+<li><a href="https://github.com/progenetix/schemas/tree/master/main/yaml">Progenetix database schema (Beacon+ backend)</a></li>
+      </ul>
+    </td>
+  </tr>
 
 <!--more-->
 
-* Contributors  
+  <tr>
+    <th>Contributors</th>
+    <td>
+      <ul>
+<li>GA4GH Metadata Task Team</li>
+<li><a href="https://orcid.org/0000-0002-9903-4248">Michael Baudis</a></li>
+<li><a href="https://orcid.org/0000-0002-4839-5158">Isuru Liyanage</a></li>
+<li><a href="https://orcid.org/0000-0002-9551-6370">Melanie Courtot</a></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Source (v0.0.1)</th>
+    <td>
+      <ul>
+        <li><a href="current/GeoLocation.json" target="_BLANK">raw source [JSON]</a></li>
+        <li><a href="https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/GeoLocation.yaml" target="_BLANK">Github</a></li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-    - GA4GH Metadata Task Team  
-    - [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
-    - [Isuru Liyanage](https://orcid.org/0000-0002-4839-5158)  
-    - [Melanie Courtot](https://orcid.org/0000-0002-9551-6370)  
+<div id="schema-attributes-title">
+  <h3>Attributes</h3>
+</div>
 
-### Source (v0.0.1)
-
-* raw source [[JSON](./current/GeoLocation.json)]
-* [Github](https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/GeoLocation.yaml)
-
-### Attributes
   
 __Type:__ object  
 __Description:__ Geo_location provides information about a geographic position related to 
@@ -57,37 +85,37 @@ and avoids optional representation in non-standard units.
 
 ### Properties
 
-<table>
+<table id="schema-property-table">
   <tr>
     <th>Property</th>
     <th>Type</th>
   </tr>
   <tr>
-    <td>altitude</td>
+    <th>altitude</th>
     <td>number</td>
   </tr>
   <tr>
-    <td>city</td>
+    <th>city</th>
     <td>string</td>
   </tr>
   <tr>
-    <td>country</td>
+    <th>country</th>
     <td>string</td>
   </tr>
   <tr>
-    <td>label</td>
+    <th>label</th>
     <td>string</td>
   </tr>
   <tr>
-    <td>latitude</td>
+    <th>latitude</th>
     <td>number</td>
   </tr>
   <tr>
-    <td>longitude</td>
+    <th>longitude</th>
     <td>number</td>
   </tr>
   <tr>
-    <td>precision</td>
+    <th>precision</th>
     <td>string</td>
   </tr>
 

@@ -13,35 +13,63 @@ tags:
 ---
 
 
-## Phenopacket (sb-phenopackets)
+<div id="schema-header-title">
+  <h2>Phenopacket <span id="schema-header-title-project">sb-phenopackets <a href="https://github.com/ga4gh-schemablocks/sb-phenopackets" target="_BLANK">&nearr;</a></span> </h2>
+</div>
 
-* {S}[B] Status  [[i]](https://schemablocks.org/about/sb-status-levels.html)
-    - __implemented__
+<table id="schema-header-table">
+  <tr>
+    <th>{S}[B] Status <a href="https://schemablocks.org/about/sb-status-levels.html">[i]</a></th>
+    <td><div id="schema-header-status">implemented</div></td>
+  </tr>
 
-* Provenance  
-
-    - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/phenopacket.rst)  
-* Used by  
-
-    - [Phenopackets](https://github.com/phenopackets/phenopacket-schema/blob/master/docs/phenopacket.rst)  
+  <tr>
+    <th>Provenance</th>
+    <td>
+      <ul>
+<li><a href="https://github.com/phenopackets/phenopacket-schema/blob/master/docs/phenopacket.rst">Phenopackets</a></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Used by</th>
+    <td>
+      <ul>
+<li><a href="https://github.com/phenopackets/phenopacket-schema/blob/master/docs/phenopacket.rst">Phenopackets</a></li>
+      </ul>
+    </td>
+  </tr>
 
 <!--more-->
 
-* Contributors  
+  <tr>
+    <th>Contributors</th>
+    <td>
+      <ul>
+<li>GA4GH Data Working Group</li>
+<li><a href="https://orcid.org/0000-0002-3265-15918">Jules Jacobsen</a></li>
+<li><a href="https://orcid.org/0000-0002-0736-91998">Peter Robinson</a></li>
+<li><a href="https://orcid.org/0000-0002-9903-4248">Michael Baudis</a></li>
+<li><a href="https://orcid.org/0000-0002-9551-6370">Melanie Courtot</a></li>
+<li><a href="https://orcid.org/0000-0002-4839-5158">Isuru Liyanage</a></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Source (v1.0.0)</th>
+    <td>
+      <ul>
+        <li><a href="current/Phenopacket.json" target="_BLANK">raw source [JSON]</a></li>
+        <li><a href="https://github.com/ga4gh-schemablocks/sb-phenopackets/blob/master/schemas/Phenopacket.yaml" target="_BLANK">Github</a></li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-    - GA4GH Data Working Group  
-    - [Jules Jacobsen](https://orcid.org/0000-0002-3265-15918)  
-    - [Peter Robinson](https://orcid.org/0000-0002-0736-91998)  
-    - [Michael Baudis](https://orcid.org/0000-0002-9903-4248)  
-    - [Melanie Courtot](https://orcid.org/0000-0002-9551-6370)  
-    - [Isuru Liyanage](https://orcid.org/0000-0002-4839-5158)  
+<div id="schema-attributes-title">
+  <h3>Attributes</h3>
+</div>
 
-### Source (v1.0.0)
-
-* raw source [[JSON](./current/Phenopacket.json)]
-* [Github](https://github.com/ga4gh-schemablocks/sb-phenopackets/blob/master/schemas/Phenopacket.yaml)
-
-### Attributes
   
 __Type:__ object  
 __Description:__ An anonymous phenotypic description of an individual or biosample with potential genes of interest and/or diagnoses.
@@ -52,45 +80,45 @@ fields.
 
 ### Properties
 
-<table>
+<table id="schema-property-table">
   <tr>
     <th>Property</th>
     <th>Type</th>
   </tr>
   <tr>
-    <td>biosamples</td>
+    <th>biosamples</th>
     <td>array of https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Biosample.json [<a href="https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Biosample.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-phenopackets/Biosample.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
-    <td>diseases</td>
+    <th>diseases</th>
     <td>array of https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Disease.json [<a href="https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Disease.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-phenopackets/Disease.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
-    <td>genes</td>
+    <th>genes</th>
     <td>array of https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Gene.json [<a href="https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Gene.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-phenopackets/Gene.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
-    <td>htsFiles</td>
+    <th>htsFiles</th>
     <td>array of https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/HtsFile.json [<a href="https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/HtsFile.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-phenopackets/HtsFile.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
-    <td>id</td>
+    <th>id</th>
     <td>string</td>
   </tr>
   <tr>
-    <td>metaData</td>
+    <th>metaData</th>
     <td>https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/MetaData.json [<a href="https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/MetaData.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-phenopackets/MetaData.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
-    <td>phenotypicFeatures</td>
+    <th>phenotypicFeatures</th>
     <td>array of https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/PhenotypicFeature.json [<a href="https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/PhenotypicFeature.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-phenopackets/PhenotypicFeature.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
-    <td>subject</td>
+    <th>subject</th>
     <td>https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Individual.json [<a href="https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Individual.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-phenopackets/Individual.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
-    <td>variants</td>
+    <th>variants</th>
     <td>array of https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Variant.json [<a href="https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Variant.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-phenopackets/Variant.html" target="_BLANK">HTML</a>]</td>
   </tr>
 
