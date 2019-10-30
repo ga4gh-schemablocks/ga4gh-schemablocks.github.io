@@ -17,7 +17,7 @@ tags:
 
 ## {{ page.title }}
 
-### Recommendation (_DRAFT_)
+### GA4GH Recommendation
 
 * We recommends the use of __"0-start, half-open"__ (interbase) coordinate system in all systems
 * This is not a retrospective recommendation for existing standards and products
