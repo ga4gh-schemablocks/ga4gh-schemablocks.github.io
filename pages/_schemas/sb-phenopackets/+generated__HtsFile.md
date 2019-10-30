@@ -184,5 +184,9 @@ URI for the file
    "uri" : "file://data/genomes/file1.vcf.gz"
 }
 ```
+<div id="schema-footer">
+This schema representation is for information purposes. The authorative 
+version remains with the developing project (see "provenance").
+</div>
 
 

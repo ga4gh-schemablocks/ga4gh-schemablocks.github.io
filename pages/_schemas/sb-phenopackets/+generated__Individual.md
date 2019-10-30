@@ -252,5 +252,9 @@ it is advisable to indicate the taxonomic identifier of that organism, to its mo
    }
 }
 ```
+<div id="schema-footer">
+This schema representation is for information purposes. The authorative 
+version remains with the developing project (see "provenance").
+</div>
 
 

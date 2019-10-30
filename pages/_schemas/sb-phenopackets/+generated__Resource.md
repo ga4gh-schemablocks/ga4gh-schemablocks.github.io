@@ -251,5 +251,9 @@ for OBO ontologies, this should be the versionIRI
    "version" : "2018-03-08"
 }
 ```
+<div id="schema-footer">
+This schema representation is for information purposes. The authorative 
+version remains with the developing project (see "provenance").
+</div>
 
 

@@ -90,7 +90,7 @@ variants detected in this experiment, attributed to the referenced biosample.
   </tr>
   <tr>
     <th>data_use_conditions</th>
-    <td>https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]</td>
+    <td>https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/OntologyClass.json [<a href="https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-phenopackets/OntologyClass.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
     <th>description</th>
@@ -144,7 +144,7 @@ implementations may transfer this to a date object.
 
 #### data_use_conditions
 
-* type: https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/OntologyClass.html" target="_BLANK">HTML</a>]
+* type: https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/OntologyClass.json [<a href="https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/OntologyClass.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-phenopackets/OntologyClass.html" target="_BLANK">HTML</a>]
 
 Data use conditions applying to data from this callset, as ontology class 
 (e.g. DUO).
@@ -290,5 +290,9 @@ System-specific implementations may transfer this to a date object.
    "updated" : "2017-10-25T07:06:03Z"
 }
 ```
+<div id="schema-footer">
+This schema representation is for information purposes. The authorative 
+version remains with the developing project (see "provenance").
+</div>
 
 

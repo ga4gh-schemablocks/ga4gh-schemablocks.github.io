@@ -441,5 +441,9 @@ the variant type in case of a named (structural) variant (e.g. DUP, DEL, BND ...
    "variant_type" : "DEL"
 }
 ```
+<div id="schema-footer">
+This schema representation is for information purposes. The authorative 
+version remains with the developing project (see "provenance").
+</div>
 
 

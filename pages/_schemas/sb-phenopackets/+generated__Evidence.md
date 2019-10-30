@@ -142,5 +142,9 @@ FHIR mapping - Condition.evidence.detail
    }
 }
 ```
+<div id="schema-footer">
+This schema representation is for information purposes. The authorative 
+version remains with the developing project (see "provenance").
+</div>
 
 

@@ -64,7 +64,7 @@
             }
          ],
          "items" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/ExternalReference.json"
+            "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/ExternalReference.json"
          },
          "type" : "array"
       },
@@ -77,7 +77,7 @@
             }
          ],
          "items" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/ExternalReference.json"
+            "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/ExternalReference.json"
          },
          "type" : "array"
       },
@@ -104,7 +104,7 @@
             }
          ],
          "items" : {
-            "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/ExternalReference.json"
+            "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/ExternalReference.json"
          },
          "type" : "array"
       }

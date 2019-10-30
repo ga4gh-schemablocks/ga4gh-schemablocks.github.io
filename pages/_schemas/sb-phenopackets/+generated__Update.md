@@ -145,5 +145,9 @@ Information about the person/organisation/network that has updated the phenopack
    "updatedBy" : "GA4GHData working group"
 }
 ```
+<div id="schema-footer">
+This schema representation is for information purposes. The authorative 
+version remains with the developing project (see "provenance").
+</div>
 
 

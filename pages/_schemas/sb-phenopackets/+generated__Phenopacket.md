@@ -343,5 +343,9 @@ variants. The resources using these fields should define what this represents in
    }
 }
 ```
+<div id="schema-footer">
+This schema representation is for information purposes. The authorative 
+version remains with the developing project (see "provenance").
+</div>
 
 

@@ -189,5 +189,9 @@ one of UNKNOWN_SEX, FEMALE, MALE, OTHER_SEX
    "individualId" : "add example"
 }
 ```
+<div id="schema-footer">
+This schema representation is for information purposes. The authorative 
+version remains with the developing project (see "provenance").
+</div>
 
 

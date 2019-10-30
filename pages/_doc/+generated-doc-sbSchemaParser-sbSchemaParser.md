@@ -147,7 +147,8 @@ markdown content, producing
 
 
 A rudimentary CURIE to URL expansion is performed for prefixes defined in the
-configuration file. An example would be the linking of an ORCID id to its web address.
+configuration file. An example would be the linking of an ORCID id to its web 
+address.
 
 
 

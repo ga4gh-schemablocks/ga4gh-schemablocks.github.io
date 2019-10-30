@@ -1,0 +1,40 @@
+{
+   "$id" : "https://schemablocks.org/schemas/sb-vr-spec/Curie/v1.0",
+   "$schema" : "http://json-schema.org/draft-07/schema#",
+   "description" : "A string that refers to an object uniquely.  The lifetime and\nscope of an id is defined by the sender.\n\nVR does not impose any contraints on strings used as ids in\nmessages. However, to maximize sharability of data, the VR\nSpecification RECOMMENDS that implementations use [W3C Compact\nURI (CURIE)](https://www.w3.org/TR/curie/) syntax.\n\nString CURIEs are represented as `prefix`:`reference` (W3C\nterminology), but often referred to as `namespace`:`accession`\nor `namespace`:`local id` colloquially.\n\nThe VR specification also RECOMMENDS that `prefix` be defined in\nidentifiers.org.\n\nThe `reference` component is an unconstrained string.\n\nA CURIE is a URI.  URIs may *locate* objects (i.e., specify\nwhere to retrieve them) or *name* objects conceptually.  VR uses\nCURIEs primarily as a naming mechanism.\n\nImplementations MAY provide CURIE resolution mechanisms for\nprefixes to make these objects locatable.\n\nUsing internal ids in public messages is strongly discouraged.\n",
+   "examples" : [
+      "ga4gh:GA.01234abcde",
+      "DUO:0000004",
+      "orcid:0000-0003-3463-0775",
+      "PMID:15254584"
+   ],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "Reece Hart",
+            "id" : "orcid:0000-0003-3463-0775"
+         },
+         {
+            "description" : "Michael Baudis",
+            "id" : "orcid:0000-0002-9903-4248"
+         }
+      ],
+      "provenance" : [
+         {
+            "description" : "vr-spec",
+            "id" : "https://github.com/ga4gh/vr-spec/blob/1.0/schema/vr.yaml"
+         }
+      ],
+      "sb_status" : "implemented",
+      "used_by" : [
+         {
+            "description" : "vr-spec",
+            "id" : "https://github.com/ga4gh/vr-spec/blob/1.0/schema/vr.yaml"
+         }
+      ]
+   },
+   "pattern" : "^\\w[^:]+:.+$",
+   "title" : "Curie",
+   "type" : "string"
+}
+

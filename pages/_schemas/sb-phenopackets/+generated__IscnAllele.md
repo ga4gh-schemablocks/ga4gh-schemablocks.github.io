@@ -126,5 +126,9 @@ An ICSN code such as del(6)(q23q24), t(8;9;11)(q12;p24;p12), +15
    "iscn" : "del(6)(q23q24)"
 }
 ```
+<div id="schema-footer">
+This schema representation is for information purposes. The authorative 
+version remains with the developing project (see "provenance").
+</div>
 
 

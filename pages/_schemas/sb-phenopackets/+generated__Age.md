@@ -1,7 +1,7 @@
 ---
 title: Age
 layout: default
-permalink: "/schemas/ga4gh/Age.html"
+permalink: "/schemas/sb-phenopackets/Age.html"
 sb_status: "implemented"
 excerpt_separator: <!--more-->
 category:
@@ -9,12 +9,12 @@ category:
 tags:
   - code
   - implemented
-  - ga4gh
+  - sb-phenopackets
 ---
 
 
 <div id="schema-header-title">
-  <h2>Age <span id="schema-header-title-project">ga4gh <a href="https://github.com/ga4gh-schemablocks/sb-phenopackets" target="_BLANK">&nearr;</a></span> </h2>
+  <h2>Age <span id="schema-header-title-project">sb-phenopackets <a href="https://github.com/ga4gh-schemablocks/sb-phenopackets" target="_BLANK">&nearr;</a></span> </h2>
 </div>
 
 <table id="schema-header-table">
@@ -46,9 +46,9 @@ tags:
     <th>Contributors</th>
     <td>
       <ul>
+<li><a href="https://orcid.org/0000-0002-9903-4248">Michael Baudis</a></li>
 <li><a href="https://orcid.org/0000-0002-3265-15918">Jules Jacobsen</a></li>
 <li><a href="https://orcid.org/0000-0002-0736-91998">Peter Robinson</a></li>
-<li><a href="https://orcid.org/0000-0002-9903-4248">Michael Baudis</a></li>
       </ul>
     </td>
   </tr>
@@ -106,5 +106,9 @@ Age as ISO8601 period
    "age" : "P14Y"
 }
 ```
+<div id="schema-footer">
+This schema representation is for information purposes. The authorative 
+version remains with the developing project (see "provenance").
+</div>
 
 

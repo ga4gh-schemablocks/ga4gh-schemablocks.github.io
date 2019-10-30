@@ -189,5 +189,9 @@ add description
    "seqId" : "NC_000010.10"
 }
 ```
+<div id="schema-footer">
+This schema representation is for information purposes. The authorative 
+version remains with the developing project (see "provenance").
+</div>
 
 

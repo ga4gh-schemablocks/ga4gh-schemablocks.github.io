@@ -156,5 +156,9 @@ The official gene symbol as designated by the organism gene nomenclature committ
    "symbol" : "FGFR2"
 }
 ```
+<div id="schema-footer">
+This schema representation is for information purposes. The authorative 
+version remains with the developing project (see "provenance").
+</div>
 
 

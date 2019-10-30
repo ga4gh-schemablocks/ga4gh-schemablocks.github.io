@@ -253,5 +253,9 @@ point coordinates.
    "precision" : "room"
 }
 ```
+<div id="schema-footer">
+This schema representation is for information purposes. The authorative 
+version remains with the developing project (see "provenance").
+</div>
 
 

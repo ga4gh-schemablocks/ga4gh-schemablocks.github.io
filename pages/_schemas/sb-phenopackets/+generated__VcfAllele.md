@@ -238,5 +238,9 @@ The value of the VCF spec fileformat field
    "vcfVersion" : "VCFv4.1"
 }
 ```
+<div id="schema-footer">
+This schema representation is for information purposes. The authorative 
+version remains with the developing project (see "provenance").
+</div>
 
 

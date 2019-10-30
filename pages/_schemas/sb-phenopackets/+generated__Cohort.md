@@ -204,5 +204,9 @@ Structured definitions of the resources and ontologies used within the phenopack
    }
 }
 ```
+<div id="schema-footer">
+This schema representation is for information purposes. The authorative 
+version remains with the developing project (see "provenance").
+</div>
 
 

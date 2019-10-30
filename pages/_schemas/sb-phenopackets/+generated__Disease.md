@@ -211,5 +211,9 @@ e.g. Child terms of NCIT:C48232 (Cancer TNM Finding)
    }
 }
 ```
+<div id="schema-footer">
+This schema representation is for information purposes. The authorative 
+version remains with the developing project (see "provenance").
+</div>
 
 
