@@ -25,7 +25,7 @@ Recently, repository structure, schema formats and the amount of schema blocks r
 
 Early on, {S}[B] participants had agreed on the representation of data schemas using the _JSON Schema_ conventions. While the first demonstrator schemas had been implemented in a similar, OpenAPI derived format, recent efforts have moved towards a clean JSON Schema representation, including a [metadata header format specifically geared towards {S}[B]](https://schemablocks.org/schemas/ga4gh/BlockMeta.html). An important element here is the __sb_status__ attribute, which will serve as primary indicator of a given schemas acceptance level and stability.
 
-* `BlockMeta` schema at playground [[➚]](https://github.com/ga4gh-schemablocks/playground/blob/master/schemas/BlockMeta.yaml)
+* `BlockMeta` schema [[➚]](/schemas/ga4gh/BlockMeta.html)
 * `sb_status` [documentation](https://schemablocks.org/about/sb-status-levels.html) and [issue](https://github.com/ga4gh-schemablocks/ga4gh-schemablocks.github.io/issues/15)
 
 #### Phenopackets Blocks
