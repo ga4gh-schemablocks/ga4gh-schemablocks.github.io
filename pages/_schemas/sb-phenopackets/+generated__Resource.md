@@ -79,7 +79,7 @@ FHIR mapping: CodeSystem (http://www.hl7.org/fhir/codesystem.html)
 
 ### Properties
 
-<table id="schema-property-table">
+<table id="schema-properties-table">
   <tr>
     <th>Property</th>
     <th>Type</th>

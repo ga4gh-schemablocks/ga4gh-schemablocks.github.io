@@ -77,7 +77,7 @@ __Description:__ A group of individuals related in some phenotypic or genotypic 
 
 ### Properties
 
-<table id="schema-property-table">
+<table id="schema-properties-table">
   <tr>
     <th>Property</th>
     <th>Type</th>

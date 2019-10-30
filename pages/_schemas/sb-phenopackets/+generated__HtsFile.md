@@ -73,7 +73,7 @@ __Description:__ A file in one of the HTS formats (https://samtools.github.io/ht
 
 ### Properties
 
-<table id="schema-property-table">
+<table id="schema-properties-table">
   <tr>
     <th>Property</th>
     <th>Type</th>

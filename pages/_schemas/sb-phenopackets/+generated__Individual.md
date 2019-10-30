@@ -77,7 +77,7 @@ __Description:__ An individual is a single organism (here typically a human).
 
 ### Properties
 
-<table id="schema-property-table">
+<table id="schema-properties-table">
   <tr>
     <th>Property</th>
     <th>Type</th>

@@ -76,7 +76,7 @@ __Description:__ See https://www.humpath.com/spip.php?article13862
 
 ### Properties
 
-<table id="schema-property-table">
+<table id="schema-properties-table">
   <tr>
     <th>Property</th>
     <th>Type</th>

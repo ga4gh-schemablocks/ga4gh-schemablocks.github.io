@@ -79,7 +79,7 @@ Observation (https://www.hl7.org/fhir/observation.html)
 
 ### Properties
 
-<table id="schema-property-table">
+<table id="schema-properties-table">
   <tr>
     <th>Property</th>
     <th>Type</th>

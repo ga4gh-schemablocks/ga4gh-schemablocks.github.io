@@ -78,7 +78,7 @@ Tools for interconversion between SPDI, HGVS and VCF exist at https://api.ncbi.n
 
 ### Properties
 
-<table id="schema-property-table">
+<table id="schema-properties-table">
   <tr>
     <th>Property</th>
     <th>Type</th>

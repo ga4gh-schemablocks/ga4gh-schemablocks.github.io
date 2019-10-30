@@ -78,7 +78,7 @@ regarding the content and/or reason for the update
 
 ### Properties
 
-<table id="schema-property-table">
+<table id="schema-properties-table">
   <tr>
     <th>Property</th>
     <th>Type</th>

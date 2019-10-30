@@ -76,7 +76,7 @@ __Description:__ Evidence, FHIR mapping: Condition.evidence (https://www.hl7.org
 
 ### Properties
 
-<table id="schema-property-table">
+<table id="schema-properties-table">
   <tr>
     <th>Property</th>
     <th>Type</th>

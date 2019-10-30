@@ -87,7 +87,7 @@ __Description:__ A Biosample refers to a unit of biological material from which 
 
 ### Properties
 
-<table id="schema-property-table">
+<table id="schema-properties-table">
   <tr>
     <th>Property</th>
     <th>Type</th>

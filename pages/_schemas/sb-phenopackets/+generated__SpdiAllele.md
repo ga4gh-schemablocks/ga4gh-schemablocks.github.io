@@ -88,7 +88,7 @@ See https://www.ncbi.nlm.nih.gov/variation/notation/
 
 ### Properties
 
-<table id="schema-property-table">
+<table id="schema-properties-table">
   <tr>
     <th>Property</th>
     <th>Type</th>

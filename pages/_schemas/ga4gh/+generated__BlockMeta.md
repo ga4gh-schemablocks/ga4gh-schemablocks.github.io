@@ -73,7 +73,7 @@ e.g. the given block's provenance, scope, external usage.
 
 ### Properties
 
-<table id="schema-property-table">
+<table id="schema-properties-table">
   <tr>
     <th>Property</th>
     <th>Type</th>

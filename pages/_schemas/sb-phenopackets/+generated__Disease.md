@@ -77,7 +77,7 @@ __Description:__ Message to indicate a disease (diagnosis) and its recorded onse
 
 ### Properties
 
-<table id="schema-property-table">
+<table id="schema-properties-table">
   <tr>
     <th>Property</th>
     <th>Type</th>
