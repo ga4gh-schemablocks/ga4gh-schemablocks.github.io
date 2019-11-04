@@ -35,8 +35,8 @@ tags:
     <th>Used by</th>
     <td>
       <ul>
-<li><a href="https://github.com/ga4gh/data-repository-service-schemas/blob/release/drs-1.0.0/docs/asciidoc/front_matter.adoc">GA4GH DRS</a></li>
-<li><a href="https://github.com/ga4gh/tool-registry-service-schemas/blob/72a8846edf84d58a99e1d8eacf63c8b3d2c9def2/openapi/openapi.yaml#L601">GA4GH TRS</a></li>
+<li><a href="https://github.com/ga4gh/data-repository-service-schemas/blob/master/docs/asciidoc/front_matter.adoc">GA4GH DRS</a></li>
+<li><a href="https://github.com/ga4gh/tool-registry-service-schemas/blob/develop/openapi/openapi.yaml">GA4GH TRS</a></li>
       </ul>
     </td>
   </tr>
@@ -93,7 +93,8 @@ __Description:__ Checksum
 
 * type: string
 
-The hexadecimal encoded ([Base16](https://tools.ietf.org/html/rfc4648#section-8)) checksum for the data
+The hexadecimal encoded ([Base16](https://tools.ietf.org/html/rfc4648#section-8))
+checksum for the data
 
 
 ##### `checksum` Value Example  
@@ -107,9 +108,13 @@ The hexadecimal encoded ([Base16](https://tools.ietf.org/html/rfc4648#section-8)
 * type: string
 
 The digest method used to create the checksum.
-The value (e.g. `sha-256`) SHOULD be listed as `Hash Name String` in the https://github.com/ga4gh-discovery/ga4gh-checksum/blob/master/hash-alg.csv[GA4GH Hash Algorithm Registry].
-Other values MAY be used, as long as implementors are aware of the issues discussed in https://tools.ietf.org/html/rfc6920#section-9.4[RFC6920].
-GA4GH may provide more explicit guidance for use of non-IANA-registered algorithms in the future.
+The value (e.g. `sha-256`) SHOULD be listed as `Hash Name String` in the 
+[GA4GH Hash Algorithm Registry](https://github.com/ga4gh-discovery/ga4gh-checksum/blob/master/hash-alg.csv).
+Other values MAY be used, as long as implementors are aware of the issues
+discussed in [RFC6920](https://tools.ietf.org/html/rfc6920#section-9.4).
+
+GA4GH may provide more explicit guidance for use of non-IANA-registered
+algorithms in the future.
 
 
 ##### `type` Value Example  

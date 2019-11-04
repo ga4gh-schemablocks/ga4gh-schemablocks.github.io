@@ -19,24 +19,24 @@
       "used_by" : [
          {
             "description" : "GA4GH DRS",
-            "id" : "https://github.com/ga4gh/data-repository-service-schemas/blob/release/drs-1.0.0/docs/asciidoc/front_matter.adoc"
+            "id" : "https://github.com/ga4gh/data-repository-service-schemas/blob/master/docs/asciidoc/front_matter.adoc"
          },
          {
             "description" : "GA4GH TRS",
-            "id" : "https://github.com/ga4gh/tool-registry-service-schemas/blob/72a8846edf84d58a99e1d8eacf63c8b3d2c9def2/openapi/openapi.yaml#L601"
+            "id" : "https://github.com/ga4gh/tool-registry-service-schemas/blob/develop/openapi/openapi.yaml"
          }
       ]
    },
    "properties" : {
       "checksum" : {
-         "description" : "The hexadecimal encoded ([Base16](https://tools.ietf.org/html/rfc4648#section-8)) checksum for the data\n",
+         "description" : "The hexadecimal encoded ([Base16](https://tools.ietf.org/html/rfc4648#section-8))\nchecksum for the data\n",
          "examples" : [
             "77af4d6b9913e693e8d0b4b294fa62ade6054e6b2f1ffb617ac955dd63fb0182"
          ],
          "type" : "string"
       },
       "type" : {
-         "description" : "The digest method used to create the checksum.\nThe value (e.g. `sha-256`) SHOULD be listed as `Hash Name String` in the https://github.com/ga4gh-discovery/ga4gh-checksum/blob/master/hash-alg.csv[GA4GH Hash Algorithm Registry].\nOther values MAY be used, as long as implementors are aware of the issues discussed in https://tools.ietf.org/html/rfc6920#section-9.4[RFC6920].\nGA4GH may provide more explicit guidance for use of non-IANA-registered algorithms in the future.\n",
+         "description" : "The digest method used to create the checksum.\nThe value (e.g. `sha-256`) SHOULD be listed as `Hash Name String` in the \n[GA4GH Hash Algorithm Registry](https://github.com/ga4gh-discovery/ga4gh-checksum/blob/master/hash-alg.csv).\nOther values MAY be used, as long as implementors are aware of the issues\ndiscussed in [RFC6920](https://tools.ietf.org/html/rfc6920#section-9.4).\n\nGA4GH may provide more explicit guidance for use of non-IANA-registered\nalgorithms in the future.\n",
          "examples" : [
             "sha-256"
          ],
