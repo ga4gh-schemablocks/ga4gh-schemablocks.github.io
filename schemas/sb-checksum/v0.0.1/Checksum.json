@@ -11,8 +11,8 @@
       ],
       "provenance" : [
          {
-            "description" : "GA4GH DRS",
-            "id" : "https://github.com/ga4gh/data-repository-service-schemas/blob/release/drs-1.0.0/docs/asciidoc/front_matter.adoc"
+            "description" : "GA4GH DRS (`develop` branch)",
+            "id" : "https://github.com/ga4gh-discovery/ga4gh-checksum/tree/develop"
          }
       ],
       "sb_status" : "proposed",

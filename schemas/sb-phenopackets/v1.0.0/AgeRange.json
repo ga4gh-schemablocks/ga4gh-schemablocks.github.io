@@ -62,7 +62,7 @@
       "end" : {
          "allof" : [
             {
-               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json"
+               "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Age.json"
             },
             {
                "description" : "Age as ISO8601 string",
@@ -77,7 +77,7 @@
       "start" : {
          "allof" : [
             {
-               "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/Age.json"
+               "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Age.json"
             },
             {
                "description" : "Age as ISO8601 string",
