@@ -75,7 +75,6 @@ __Type:__ object
 __Description:__ Information about when an update to a record occurred, who or what made the update and any pertinent information
 regarding the content and/or reason for the update
 
-
 ### Properties
 
 <table id="schema-properties-table">

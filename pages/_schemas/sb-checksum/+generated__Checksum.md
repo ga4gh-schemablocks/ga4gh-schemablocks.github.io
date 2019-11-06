@@ -69,7 +69,6 @@ tags:
   
 __Type:__ object  
 __Description:__ Checksum
-
 ### Properties
 
 <table id="schema-properties-table">
@@ -122,6 +121,10 @@ algorithms in the future.
 ```
 "sha-256"
 ```
+
+
+### `Checksum` Value Example  
+
 <div id="schema-footer">
 This schema representation is for information purposes. The authorative 
 version remains with the developing project (see "provenance").

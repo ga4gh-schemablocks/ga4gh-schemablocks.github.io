@@ -72,7 +72,6 @@ __Type:__ object
 __Description:__ Many of the defined elements in a resource are references to other resources.
 Using these references, the resources combine to build a web of information.
 
-
 ### Properties
 
 <table id="schema-properties-table">

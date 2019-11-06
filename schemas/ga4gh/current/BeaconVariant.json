@@ -78,7 +78,7 @@
             "id" : "https://github.com/ga4gh/ga4gh-schemas/blob/master/src/main/proto/ga4gh/variants.proto#L145"
          }
       ],
-      "sb_status" : "implemented",
+      "sb_status" : "playground",
       "used_by" : [
          {
             "description" : "Beacon, in modified form as basis for query model",

@@ -76,7 +76,6 @@ __Description:__ Phenotype, sample and pedigree data required for a genomic diag
 Equivalent to the Genomics England InterpretationRequestRD
 https://github.com/genomicsengland/GelReportModels/blob/master/schemas/IDLs/org.gel.models.report.avro/5.0.0/InterpretationRequestRD.avdl
 
-
 ### Properties
 
 <table id="schema-properties-table">

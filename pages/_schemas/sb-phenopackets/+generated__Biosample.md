@@ -84,7 +84,6 @@ __Description:__ A Biosample refers to a unit of biological material from which 
 
   FHIR mapping: [Specimen](http://www.hl7.org/fhir/specimen.html).
 
-
 ### Properties
 
 <table id="schema-properties-table">

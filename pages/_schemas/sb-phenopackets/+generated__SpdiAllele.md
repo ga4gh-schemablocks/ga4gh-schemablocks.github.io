@@ -85,7 +85,6 @@ insertion or deletion.
 The deleted and inserted sequences in SPDI are all written on the positive strand for two-stranded molecules.
 See https://www.ncbi.nlm.nih.gov/variation/notation/
 
-
 ### Properties
 
 <table id="schema-properties-table">

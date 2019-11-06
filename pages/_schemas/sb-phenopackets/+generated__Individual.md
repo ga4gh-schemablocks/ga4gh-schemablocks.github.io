@@ -74,7 +74,6 @@ tags:
 __Type:__ object  
 __Description:__ An individual is a single organism (here typically a human).
 
-
 ### Properties
 
 <table id="schema-properties-table">
@@ -92,7 +91,7 @@ __Description:__ An individual is a single organism (here typically a human).
   </tr>
   <tr>
     <th>alternateIds</th>
-    <td>array of string</td>
+    <td>array of HASH(0x7f99029c5f60)</td>
   </tr>
   <tr>
     <th>dateOfBirth</th>
@@ -156,7 +155,7 @@ time interval (preferred), or as ontology term object.
 
 #### alternateIds
 
-* type: array of string
+* type: array of HASH(0x7f99029c5f60)
 
 An optional list of alternative identifiers for this individual. This field is provided
 for the convenience of users who may have multiple mappings to an individual which they need to track.

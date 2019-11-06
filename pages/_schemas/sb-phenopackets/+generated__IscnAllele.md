@@ -73,7 +73,6 @@ tags:
 __Type:__ object  
 __Description:__ See https://www.humpath.com/spip.php?article13862
 
-
 ### Properties
 
 <table id="schema-properties-table">

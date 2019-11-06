@@ -76,7 +76,6 @@ For structural variation the INFO field should contain the relevant information 
 END=43500;SVTYPE=DUP;CHR2=1;SVLEN=29000;
 See https://samtools.github.io/hts-specs/VCFv4.3.pdf
 
-
 ### Properties
 
 <table id="schema-properties-table">

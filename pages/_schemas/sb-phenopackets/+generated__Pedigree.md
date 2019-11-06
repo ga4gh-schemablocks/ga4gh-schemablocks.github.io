@@ -74,7 +74,6 @@ tags:
 __Type:__ object  
 __Description:__ https://software.broadinstitute.org/gatk/documentation/article?id=11016
 
-
 ### Properties
 
 <table id="schema-properties-table">

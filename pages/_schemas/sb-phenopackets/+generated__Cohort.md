@@ -74,7 +74,6 @@ tags:
 __Type:__ object  
 __Description:__ A group of individuals related in some phenotypic or genotypic aspect
 
-
 ### Properties
 
 <table id="schema-properties-table">

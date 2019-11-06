@@ -73,7 +73,6 @@ tags:
 __Type:__ object  
 __Description:__ Evidence, FHIR mapping: Condition.evidence (https://www.hl7.org/fhir/condition-definitions.html#Condition.evidence)
 
-
 ### Properties
 
 <table id="schema-properties-table">

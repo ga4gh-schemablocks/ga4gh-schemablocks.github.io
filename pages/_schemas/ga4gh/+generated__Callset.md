@@ -14,7 +14,7 @@ tags:
 
 
 <div id="schema-header-title">
-  <h2>Callset <span id="schema-header-title-project">ga4gh <a href="https://github.com/ga4gh-schemablocks/blocks" target="_BLANK">&nearr;</a></span> </h2>
+  <h2>Callset <span id="schema-header-title-project">ga4gh <a href="https://github.com/ga4gh-schemablocks/playground" target="_BLANK">&nearr;</a></span> </h2>
 </div>
 
 <table id="schema-header-table">
@@ -56,7 +56,7 @@ tags:
     <td>
       <ul>
         <li><a href="current/Callset.json" target="_BLANK">raw source [JSON]</a></li>
-        <li><a href="https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/Callset.yaml" target="_BLANK">Github</a></li>
+        <li><a href="https://github.com/ga4gh-schemablocks/playground/blob/master/schemas/Callset.yaml" target="_BLANK">Github</a></li>
       </ul>
     </td>
   </tr>
@@ -71,7 +71,6 @@ __Type:__ object
 __Description:__ The callset object contains information about an experiment performed on 
 material from a single biosample and provides a shared identifier for all 
 variants detected in this experiment, attributed to the referenced biosample.
-
 
 ### Properties
 

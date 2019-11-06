@@ -76,7 +76,6 @@ __Description:__ Description of an external resource used for referencing an obj
 as the HPO or SNOMED.
 FHIR mapping: CodeSystem (http://www.hl7.org/fhir/codesystem.html)
 
-
 ### Properties
 
 <table id="schema-properties-table">

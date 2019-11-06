@@ -79,7 +79,6 @@ prefix.
 CURIES are case sensitive, although for prefixes this practice is
 inconsistently followed.
 
-
 ### Properties
 
 <table id="schema-properties-table">

@@ -65,7 +65,7 @@
                "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Age.json"
             },
             {
-               "description" : "Age as ISO8601 string",
+               "description" : "Age as an ISO8601 string\n",
                "examples" : [
                   {
                      "age" : "P16Y6M"
@@ -80,7 +80,7 @@
                "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Age.json"
             },
             {
-               "description" : "Age as ISO8601 string",
+               "description" : "Age as an ISO8601 string\n",
                "examples" : [
                   {
                      "age" : "P12Y"

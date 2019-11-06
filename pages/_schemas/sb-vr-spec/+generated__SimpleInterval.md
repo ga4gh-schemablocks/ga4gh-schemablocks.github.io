@@ -79,7 +79,6 @@ definition is for an "extent greater than zero".
 SimpleInterval is a representation of an Interval using `start` and `end`
 coordinates.
 
-
 ### Properties
 
 <table id="schema-properties-table">

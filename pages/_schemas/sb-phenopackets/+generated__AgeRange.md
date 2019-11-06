@@ -71,7 +71,6 @@ tags:
   
 __Type:__ object  
 __Description:__ Age range
-
 ### Properties
 
 <table id="schema-properties-table">
@@ -95,7 +94,8 @@ __Description:__ Age range
 
 * type: https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Age.json [<a href="https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Age.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-phenopackets/Age.html" target="_BLANK">HTML</a>]
 
-Age as ISO8601 string
+Age as an ISO8601 string
+
 
 ##### `end` Value Example  
 
@@ -109,7 +109,8 @@ Age as ISO8601 string
 
 * type: https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Age.json [<a href="https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Age.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-phenopackets/Age.html" target="_BLANK">HTML</a>]
 
-Age as ISO8601 string
+Age as an ISO8601 string
+
 
 ##### `start` Value Example  
 

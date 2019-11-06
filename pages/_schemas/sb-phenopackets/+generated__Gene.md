@@ -74,7 +74,6 @@ tags:
 __Type:__ object  
 __Description:__ Gene identifier
 
-
 ### Properties
 
 <table id="schema-properties-table">
@@ -84,7 +83,7 @@ __Description:__ Gene identifier
   </tr>
   <tr>
     <th>alternateIds</th>
-    <td>array of string</td>
+    <td>array of HASH(0x7f99029c63e0)</td>
   </tr>
   <tr>
     <th>id</th>
@@ -100,7 +99,7 @@ __Description:__ Gene identifier
 
 #### alternateIds
 
-* type: array of string
+* type: array of HASH(0x7f99029c63e0)
 
 alternate identifiers
 

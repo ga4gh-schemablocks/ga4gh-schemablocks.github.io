@@ -75,7 +75,6 @@ __Description:__ A variant allele. Alleles can be listed using HGVS, VCF, SPDI o
 SPDI format is the exchange standard used for ClinVar, dbSNP and soon the EVA
 Tools for interconversion between SPDI, HGVS and VCF exist at https://api.ncbi.nlm.nih.gov/variation/v0/
 
-
 ### Properties
 
 <table id="schema-properties-table">

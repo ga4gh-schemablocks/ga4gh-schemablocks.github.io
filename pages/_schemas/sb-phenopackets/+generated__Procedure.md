@@ -75,7 +75,6 @@ __Description:__ A clinical procedure performed on a subject. By preference a si
 body site should be used. In cases where this is not possible, the body site should be indicated using a separate
 ontology class.
 
-
 ### Properties
 
 <table id="schema-properties-table">

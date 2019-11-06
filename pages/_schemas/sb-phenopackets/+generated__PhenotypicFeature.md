@@ -76,7 +76,6 @@ with possible onset, modifiers and frequency.
 FHIR mapping: Condition (https://www.hl7.org/fhir/condition.html) or
 Observation (https://www.hl7.org/fhir/observation.html)
 
-
 ### Properties
 
 <table id="schema-properties-table">

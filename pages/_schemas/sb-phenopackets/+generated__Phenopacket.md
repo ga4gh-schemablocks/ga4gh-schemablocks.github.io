@@ -77,7 +77,6 @@ This is a bundle of high-level concepts with no specifically defined relational 
 resources sharing the phenopackets will define and enforce their own semantics and level of requirements for included
 fields.
 
-
 ### Properties
 
 <table id="schema-properties-table">

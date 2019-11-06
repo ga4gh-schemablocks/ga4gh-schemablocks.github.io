@@ -2,25 +2,25 @@
 title: BeaconVariant
 layout: default
 permalink: "/schemas/ga4gh/BeaconVariant.html"
-sb_status: "implemented"
+sb_status: "playground"
 excerpt_separator: <!--more-->
 category:
   - schemas
 tags:
   - code
-  - implemented
+  - playground
   - ga4gh
 ---
 
 
 <div id="schema-header-title">
-  <h2>BeaconVariant <span id="schema-header-title-project">ga4gh <a href="https://github.com/ga4gh-schemablocks/blocks" target="_BLANK">&nearr;</a></span> </h2>
+  <h2>BeaconVariant <span id="schema-header-title-project">ga4gh <a href="https://github.com/ga4gh-schemablocks/playground" target="_BLANK">&nearr;</a></span> </h2>
 </div>
 
 <table id="schema-header-table">
   <tr>
     <th>{S}[B] Status <a href="https://schemablocks.org/about/sb-status-levels.html">[i]</a></th>
-    <td><div id="schema-header-status">implemented</div></td>
+    <td><div id="schema-header-status">playground</div></td>
   </tr>
 
   <tr>
@@ -58,7 +58,7 @@ tags:
     <td>
       <ul>
         <li><a href="current/BeaconVariant.json" target="_BLANK">raw source [JSON]</a></li>
-        <li><a href="https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/BeaconVariant.yaml" target="_BLANK">Github</a></li>
+        <li><a href="https://github.com/ga4gh-schemablocks/playground/blob/master/schemas/BeaconVariant.yaml" target="_BLANK">Github</a></li>
       </ul>
     </td>
   </tr>
@@ -88,7 +88,6 @@ from array based experiments)
 This format may be superseeded or augmented based on current developments in the 
 GA4GH::GKS work stream.
 
-
 ### Properties
 
 <table id="schema-properties-table">
@@ -98,7 +97,7 @@ GA4GH::GKS work stream.
   </tr>
   <tr>
     <th>alternate_bases</th>
-    <td>array of string</td>
+    <td>array of HASH(0x7f87ac8f2e20)</td>
   </tr>
   <tr>
     <th>biosample_id</th>
@@ -114,11 +113,11 @@ GA4GH::GKS work stream.
   </tr>
   <tr>
     <th>end</th>
-    <td>array of int64</td>
+    <td>array of HASH(0x7f87ac8f27c0)</td>
   </tr>
   <tr>
     <th>genotype</th>
-    <td>array of string</td>
+    <td>array of HASH(0x7f87ac8f3060)</td>
   </tr>
   <tr>
     <th>id</th>
@@ -142,7 +141,7 @@ GA4GH::GKS work stream.
   </tr>
   <tr>
     <th>start</th>
-    <td>array of int64</td>
+    <td>array of HASH(0x7f87ac8dc078)</td>
   </tr>
   <tr>
     <th>variant_type</th>
@@ -154,7 +153,7 @@ GA4GH::GKS work stream.
 
 #### alternate_bases
 
-* type: array of string
+* type: array of HASH(0x7f87ac8f2e20)
 
 * one or more single or multi-base sequences, replacing the  the 
 `reference_bases` value
@@ -225,7 +224,7 @@ from callset" storage systems
 
 #### end
 
-* type: array of int64
+* type: array of HASH(0x7f87ac8f27c0)
 
 array of 0 (for presise sequence variants), 1 or 2 (for imprecise end position of 
 structural variant) integers
@@ -242,7 +241,7 @@ structural variant) integers
 
 #### genotype
 
-* type: array of string
+* type: array of HASH(0x7f87ac8f3060)
 
 * list of strings, using the natural index of the corresponding 
 `alternate_bases` values for the (optionally phased) indication of 
@@ -354,7 +353,7 @@ Reference name (chromosome). Accepting values 1-22, X, Y.
 
 #### start
 
-* type: array of int64
+* type: array of HASH(0x7f87ac8dc078)
 
 array of 1 or 2 (for imprecise end position of structural variant) integers
 

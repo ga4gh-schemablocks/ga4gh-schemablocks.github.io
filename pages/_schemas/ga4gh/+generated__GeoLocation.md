@@ -14,7 +14,7 @@ tags:
 
 
 <div id="schema-header-title">
-  <h2>GeoLocation <span id="schema-header-title-project">ga4gh <a href="https://github.com/ga4gh-schemablocks/blocks" target="_BLANK">&nearr;</a></span> </h2>
+  <h2>GeoLocation <span id="schema-header-title-project">ga4gh <a href="https://github.com/ga4gh-schemablocks/playground" target="_BLANK">&nearr;</a></span> </h2>
 </div>
 
 <table id="schema-header-table">
@@ -58,7 +58,7 @@ tags:
     <td>
       <ul>
         <li><a href="current/GeoLocation.json" target="_BLANK">raw source [JSON]</a></li>
-        <li><a href="https://github.com/ga4gh-schemablocks/blocks/blob/master/schemas/GeoLocation.yaml" target="_BLANK">Github</a></li>
+        <li><a href="https://github.com/ga4gh-schemablocks/playground/blob/master/schemas/GeoLocation.yaml" target="_BLANK">Github</a></li>
       </ul>
     </td>
   </tr>
@@ -81,7 +81,6 @@ administrative entity (Suffolk, U.K.)
 The geographic point object uses the default units from the 
 [DCMI point scheme](http://dublincore.org/documents/dcmi-point/) 
 and avoids optional representation in non-standard units.
-
 
 ### Properties
 

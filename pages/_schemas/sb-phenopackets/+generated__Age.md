@@ -70,7 +70,6 @@ tags:
   
 __Type:__ object  
 __Description:__ Age
-
 ### Properties
 
 <table id="schema-properties-table">
