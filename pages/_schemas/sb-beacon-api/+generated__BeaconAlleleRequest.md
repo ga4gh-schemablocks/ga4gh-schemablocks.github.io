@@ -106,7 +106,7 @@ __Description:__ Allele request as interpreted by the beacon.
   </tr>
   <tr>
     <th>mateName</th>
-    <td>https://schemablocks.org/schemas/sb-beacon-api/v1.0.0/Chromosome.json [<a href="https://schemablocks.org/schemas/sb-beacon-api/v1.0.0/Chromosome.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-beacon-api/Chromosome.html" target="_BLANK">HTML</a>]</td>
+    <td>https://schemablocks.org/schemas/sb-beacon-api/v1.1.0/Chromosome.json [<a href="https://schemablocks.org/schemas/sb-beacon-api/v1.1.0/Chromosome.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-beacon-api/Chromosome.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
     <th>referenceBases</th>
@@ -114,7 +114,7 @@ __Description:__ Allele request as interpreted by the beacon.
   </tr>
   <tr>
     <th>referenceName</th>
-    <td>https://schemablocks.org/schemas/sb-beacon-api/v1.0.0/Chromosome.json [<a href="https://schemablocks.org/schemas/sb-beacon-api/v1.0.0/Chromosome.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-beacon-api/Chromosome.html" target="_BLANK">HTML</a>]</td>
+    <td>https://schemablocks.org/schemas/sb-beacon-api/v1.1.0/Chromosome.json [<a href="https://schemablocks.org/schemas/sb-beacon-api/v1.1.0/Chromosome.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-beacon-api/Chromosome.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
     <th>start</th>
@@ -225,7 +225,7 @@ Minimum end coordinate. See startMin.
 
 #### mateName
 
-* type: https://schemablocks.org/schemas/sb-beacon-api/v1.0.0/Chromosome.json [<a href="https://schemablocks.org/schemas/sb-beacon-api/v1.0.0/Chromosome.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-beacon-api/Chromosome.html" target="_BLANK">HTML</a>]
+* type: https://schemablocks.org/schemas/sb-beacon-api/v1.1.0/Chromosome.json [<a href="https://schemablocks.org/schemas/sb-beacon-api/v1.1.0/Chromosome.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-beacon-api/Chromosome.html" target="_BLANK">HTML</a>]
 
 Second chromosome in fuion events, as string
 
@@ -258,7 +258,7 @@ combination) viable sequences.
 
 #### referenceName
 
-* type: https://schemablocks.org/schemas/sb-beacon-api/v1.0.0/Chromosome.json [<a href="https://schemablocks.org/schemas/sb-beacon-api/v1.0.0/Chromosome.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-beacon-api/Chromosome.html" target="_BLANK">HTML</a>]
+* type: https://schemablocks.org/schemas/sb-beacon-api/v1.1.0/Chromosome.json [<a href="https://schemablocks.org/schemas/sb-beacon-api/v1.1.0/Chromosome.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-beacon-api/Chromosome.html" target="_BLANK">HTML</a>]
 
 Chromosome as string
 
