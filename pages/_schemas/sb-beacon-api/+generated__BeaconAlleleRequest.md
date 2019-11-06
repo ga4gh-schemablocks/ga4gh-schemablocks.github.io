@@ -48,10 +48,10 @@ tags:
     <td>
       <ul>
 <li><a href="https://orcid.org/0000-0002-9769-375X">Marc Fiume</a></li>
-<li>Sabela de la Torre-Penas</li>
-<li>Jordi Rambla</li>
-<li>Beacon developers...</li>
 <li><a href="https://orcid.org/0000-0002-9903-4248">Michael Baudis</a></li>
+<li><a href="https://orcid.org/0000-0002-5129-2248">Sabela de la Torre Pernas</a></li>
+<li><a href="https://orcid.org/0000-0001-9091-257X">Jordi Rambla</a></li>
+<li>Beacon developers...</li>
       </ul>
     </td>
   </tr>

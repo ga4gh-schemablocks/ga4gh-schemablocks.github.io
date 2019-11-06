@@ -13,17 +13,19 @@
             "id" : "orcid:0000-0002-9769-375X"
          },
          {
-            "description" : "Sabela de la Torre-Penas"
+            "description" : "Michael Baudis",
+            "id" : "orcid:0000-0002-9903-4248"
          },
          {
-            "description" : "Jordi Rambla"
+            "description" : "Sabela de la Torre Pernas",
+            "id" : "orcid:0000-0002-5129-2248"
+         },
+         {
+            "description" : "Jordi Rambla",
+            "id" : "orcid:0000-0001-9091-257X"
          },
          {
             "description" : "Beacon developers..."
-         },
-         {
-            "description" : "Michael Baudis",
-            "id" : "orcid:0000-0002-9903-4248"
          }
       ],
       "provenance" : [
