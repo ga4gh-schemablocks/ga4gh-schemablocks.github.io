@@ -102,10 +102,8 @@
                "TAA"
             ]
          ],
-         "items" : {
-            "pattern" : "^[ACGTN]+$",
-            "type" : "string"
-         },
+         "items" : "string",
+         "pattern" : "^[ACGTN]+$",
          "type" : "array"
       },
       "biosample_id" : {
@@ -137,9 +135,7 @@
                "21978106"
             ]
          ],
-         "items" : {
-            "type" : "int64"
-         },
+         "items" : "int64",
          "queries" : [
             {
                "description" : "This example query will return all deletion variants with any overlap \nof the CDKN2A CDR (GRCh38 positions).\n",
@@ -160,9 +156,7 @@
                "1"
             ]
          ],
-         "items" : {
-            "type" : "string"
-         },
+         "items" : "string",
          "type" : "array"
       },
       "id" : {
@@ -211,14 +205,14 @@
                "20867740"
             ]
          ],
-         "items" : {
-            "type" : "int64"
-         },
+         "items" : "int64",
          "type" : "array"
       },
       "variant_type" : {
          "description" : "the variant type in case of a named (structural) variant (e.g. DUP, DEL, BND ...)\n",
-         "example" : "DEL",
+         "examples" : [
+            "DEL"
+         ],
          "type" : "string"
       }
    },

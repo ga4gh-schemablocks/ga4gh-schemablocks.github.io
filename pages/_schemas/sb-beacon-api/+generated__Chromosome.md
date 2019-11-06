@@ -73,6 +73,7 @@ tags:
   
 __Type:__ object  
 __Description:__ Chromosome as used by Beacon e.g. for instances of `referenceName`
+
 ### Properties
 
 <table id="schema-properties-table">

@@ -61,9 +61,7 @@
                "HGNC:3477"
             ]
          ],
-         "items" : {
-            "type" : "string"
-         },
+         "items" : "string",
          "type" : "array"
       },
       "id" : {

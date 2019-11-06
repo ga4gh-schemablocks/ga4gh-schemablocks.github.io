@@ -97,7 +97,7 @@ GA4GH::GKS work stream.
   </tr>
   <tr>
     <th>alternate_bases</th>
-    <td>array of HASH(0x7f87ac8f2e20)</td>
+    <td>array of string</td>
   </tr>
   <tr>
     <th>biosample_id</th>
@@ -113,11 +113,11 @@ GA4GH::GKS work stream.
   </tr>
   <tr>
     <th>end</th>
-    <td>array of HASH(0x7f87ac8f27c0)</td>
+    <td>array of int64</td>
   </tr>
   <tr>
     <th>genotype</th>
-    <td>array of HASH(0x7f87ac8f3060)</td>
+    <td>array of string</td>
   </tr>
   <tr>
     <th>id</th>
@@ -141,7 +141,7 @@ GA4GH::GKS work stream.
   </tr>
   <tr>
     <th>start</th>
-    <td>array of HASH(0x7f87ac8dc078)</td>
+    <td>array of int64</td>
   </tr>
   <tr>
     <th>variant_type</th>
@@ -153,7 +153,7 @@ GA4GH::GKS work stream.
 
 #### alternate_bases
 
-* type: array of HASH(0x7f87ac8f2e20)
+* type: array of string
 
 * one or more single or multi-base sequences, replacing the  the 
 `reference_bases` value
@@ -224,7 +224,7 @@ from callset" storage systems
 
 #### end
 
-* type: array of HASH(0x7f87ac8f27c0)
+* type: array of int64
 
 array of 0 (for presise sequence variants), 1 or 2 (for imprecise end position of 
 structural variant) integers
@@ -241,7 +241,7 @@ structural variant) integers
 
 #### genotype
 
-* type: array of HASH(0x7f87ac8f3060)
+* type: array of string
 
 * list of strings, using the natural index of the corresponding 
 `alternate_bases` values for the (optionally phased) indication of 
@@ -353,7 +353,7 @@ Reference name (chromosome). Accepting values 1-22, X, Y.
 
 #### start
 
-* type: array of HASH(0x7f87ac8dc078)
+* type: array of int64
 
 array of 1 or 2 (for imprecise end position of structural variant) integers
 
@@ -375,6 +375,9 @@ the variant type in case of a named (structural) variant (e.g. DUP, DEL, BND ...
 
 ##### `variant_type` Value Example  
 
+```
+"DEL"
+```
 
 
 ### `BeaconVariant` Value Examples  

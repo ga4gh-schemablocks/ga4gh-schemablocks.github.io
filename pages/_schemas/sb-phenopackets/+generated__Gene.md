@@ -83,7 +83,7 @@ __Description:__ Gene identifier
   </tr>
   <tr>
     <th>alternateIds</th>
-    <td>array of HASH(0x7f99029c63e0)</td>
+    <td>array of string</td>
   </tr>
   <tr>
     <th>id</th>
@@ -99,7 +99,7 @@ __Description:__ Gene identifier
 
 #### alternateIds
 
-* type: array of HASH(0x7f99029c63e0)
+* type: array of string
 
 alternate identifiers
 

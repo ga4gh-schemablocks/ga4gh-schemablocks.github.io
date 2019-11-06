@@ -105,9 +105,7 @@
                "another_id"
             ]
          ],
-         "items" : {
-            "type" : "string"
-         },
+         "items" : "string",
          "type" : "array"
       },
       "dateOfBirth" : {
