@@ -161,7 +161,7 @@ add description
 ##### `position` Value Example  
 
 ```
-"123256214"
+123256214
 ```
 
 #### seqId

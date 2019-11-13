@@ -130,7 +130,7 @@ height in meters above the WGS 84 reference ellipsoid; optional
 ##### `altitude` Value Example  
 
 ```
-"8848"
+8848
 ```
 
 #### city
@@ -198,7 +198,7 @@ signed decimal degrees (North, relative to Equator)
 ##### `latitude` Value Example  
 
 ```
-"47.37"
+47.37
 ```
 
 #### longitude
@@ -210,7 +210,7 @@ signed decimal degrees (East, relative to IERS Reference Meridian)
 ##### `longitude` Value Example  
 
 ```
-"8.54"
+8.54
 ```
 
 #### precision
