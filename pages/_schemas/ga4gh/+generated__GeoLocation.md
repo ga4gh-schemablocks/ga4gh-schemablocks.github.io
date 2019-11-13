@@ -91,7 +91,7 @@ and avoids optional representation in non-standard units.
   </tr>
   <tr>
     <th>altitude</th>
-    <td>number</td>
+    <td>number (float)</td>
   </tr>
   <tr>
     <th>city</th>
@@ -107,11 +107,11 @@ and avoids optional representation in non-standard units.
   </tr>
   <tr>
     <th>latitude</th>
-    <td>number</td>
+    <td>number (float)</td>
   </tr>
   <tr>
     <th>longitude</th>
-    <td>number</td>
+    <td>number (float)</td>
   </tr>
   <tr>
     <th>precision</th>
@@ -123,7 +123,7 @@ and avoids optional representation in non-standard units.
 
 #### altitude
 
-* type: number
+* type: number (float)
 
 height in meters above the WGS 84 reference ellipsoid; optional
 
@@ -191,7 +191,7 @@ identification elements, of the corresponding latitude, longitude,
 
 #### latitude
 
-* type: number
+* type: number (float)
 
 signed decimal degrees (North, relative to Equator)
 
@@ -203,7 +203,7 @@ signed decimal degrees (North, relative to Equator)
 
 #### longitude
 
-* type: number
+* type: number (float)
 
 signed decimal degrees (East, relative to IERS Reference Meridian)
 

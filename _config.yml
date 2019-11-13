@@ -107,6 +107,10 @@ cloud_tags:
   - proposed        # sb_status
   - implemented     # sb_status
   - core            # sb_status
+  - sb-beacon       # project
+  - sb-vr-schema    # project
+  - sb-phenopackets # project
+  - sb-adam-duo     # project
 
 # additional Jekyll instructions
 

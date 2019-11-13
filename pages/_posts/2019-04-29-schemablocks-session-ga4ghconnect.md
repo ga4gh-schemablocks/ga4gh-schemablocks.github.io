@@ -14,7 +14,7 @@ tags:
 
 ## {{ page.title }}
 
-During the first day of the 2019 GA4GHconnect meeting we had an open discussion session about the perceived need and future directions of the __{S}[B]__ initiative. The [slides](/assets/pdf/2019-04-29___Courtot-and-Baudis__SB-discussion__slides.pdf) used in the discussion recapitulate some of the reasoning and open questions related to {S}[B].
+During the first day of the 2019 GA4GHconnect meeting we had an open discussion session about the perceived need and future directions of the __{S}[B]__ initiative. The [slides](/pdf/2019-04-29___Courtot-and-Baudis__SB-discussion__slides.pdf) used in the discussion recapitulate some of the reasoning and open questions related to {S}[B].
 
 <!--more-->
 

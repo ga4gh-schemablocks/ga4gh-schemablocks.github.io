@@ -118,7 +118,7 @@ __Description:__ Allele request as interpreted by the beacon.
   </tr>
   <tr>
     <th>start</th>
-    <td>integer</td>
+    <td>integer (int64)</td>
   </tr>
   <tr>
     <th>startMax</th>
@@ -274,7 +274,7 @@ Chromosome as string
 
 #### start
 
-* type: integer
+* type: integer (int64)
 
 Precise start coordinate position, allele locus (0-based, inclusive).
 * start only:

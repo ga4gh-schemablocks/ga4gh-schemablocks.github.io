@@ -30,8 +30,6 @@ my %args        =   @ARGV;
 $args{-master}	||=	'progenetix/progenetix-site-template';
 $args{-update}	||=	'n';
 
-my @cat_blocks  =   qw(General Products);
-
 my $here_path   =   File::Basename::dirname( eval { ( caller() )[1] } );
 my $base_path   =   $here_path.'/..';
 our $config     =   LoadFile($base_path.'/_config.yml') or die "¡No _config.yml file in this path!";
