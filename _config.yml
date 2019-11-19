@@ -117,6 +117,7 @@ cloud_tags:
 plugins:
  - jekyll-seo-tag
 type: website
+search: true
 show_downloads: true
 future: true
 safe: false
