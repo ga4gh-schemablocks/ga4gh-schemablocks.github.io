@@ -21,6 +21,8 @@ Recently, repository structure, schema formats and the amount of schema blocks r
 
 <!--more-->
 
+![](/assets/img/schemablocks-repository-structure.png?raw=true)
+
 #### Schema Document Format
 
 Early on, {S}[B] participants had agreed on the representation of data schemas using the _JSON Schema_ conventions. While the first demonstrator schemas had been implemented in a similar, OpenAPI derived format, recent efforts have moved towards a clean JSON Schema representation, including a [metadata header format specifically geared towards {S}[B]](https://schemablocks.org/schemas/ga4gh/BlockMeta.html). An important element here is the __sb_status__ attribute, which will serve as primary indicator of a given schemas acceptance level and stability.
