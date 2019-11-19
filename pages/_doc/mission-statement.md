@@ -11,7 +11,6 @@ pdf_file_name: # the name of a PDF (no path) somewhere in "assets", which will b
 permalink: '/about/mission.html'
 category: # please adjust
   - about
-  - howto
 tags: # please adjust; see tags -n _config.yml (or extend them there, too)
   - FAQ
   - howto

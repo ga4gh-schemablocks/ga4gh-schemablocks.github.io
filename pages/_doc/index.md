@@ -8,6 +8,8 @@ www_links_formatted:  # one or multiple complete links
 author: "@mbaudis"
 category:
   - about
+tags:
+  - .prepend
 ---
 
 ## {{page.title}}

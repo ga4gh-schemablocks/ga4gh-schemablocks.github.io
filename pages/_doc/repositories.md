@@ -1,6 +1,6 @@
 ---
 title: 'SchemaBlocks Repositories'
-date: 2019-08-26
+date: 2019-11-19
 layout: default
 author: "@mbaudis"
 excerpt_separator: <!--more-->
@@ -26,6 +26,8 @@ repositories. Please use the relevant _Github Issues_ to and/or GH pull requests
 <!--more-->
 
 ### {S}[B] Tool & Web Repositories
+
+![](/assets/img/schemablocks-repository-structure-715px.png)
 
 #### [schemablocks.github.io](https://github.com/ga4gh-schemablocks/ga4gh-schemablocks.github.io)
 
