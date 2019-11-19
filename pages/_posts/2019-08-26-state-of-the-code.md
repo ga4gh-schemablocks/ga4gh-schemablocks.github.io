@@ -21,7 +21,7 @@ Recently, repository structure, schema formats and the amount of schema blocks r
 
 <!--more-->
 
-![](/assets/img/schemablocks-repository-structure.png?raw=true)
+![](/assets/img/schemablocks-repository-structure-540px.png?raw=true)
 
 #### Schema Document Format
 
