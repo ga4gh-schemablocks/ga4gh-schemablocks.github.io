@@ -34,8 +34,6 @@ my $here_path   =   File::Basename::dirname( eval { ( caller() )[1] } );
 my $base_path   =   $here_path.'/..';
 our $config     =   LoadFile($base_path.'/_config.yml') or die "¡No _config.yml file in this path!";
 
-
-
 print $base_path."\n";
 
 # updating the layout and css files from the master repo
@@ -84,7 +82,7 @@ to.
 =cut
 
 my $scopes			=		{
-	categories		=>	[],
+	categories		=>	$config->{special_categories},
 	tags					=>	$config->{cloud_tags}
 };
 
@@ -105,6 +103,10 @@ foreach my $scope (keys %$scopes) {
 	my $templates	=		$base_path.'/_templates/_';
 	
 	foreach my $item (@{ $scopes->{$scope} }) {
+	
+		my $item_dir	=		$type_path;
+		if ($item =~ /^index$/) {
+			$item_dir	=		$base_path }
 
 =podmd
 ##### List page sort order
@@ -125,19 +127,19 @@ tags-date-sorted:
 
 		copy(
 			$templates.$scope.'-alpha-sorted'.'.md',
-			$type_path.'/'.$item.'.md'
+			$item_dir.'/'.$item.'.md'
 		);
 			
 		foreach my $sort ("-date-sorted", "-alpha-sorted", "-date-sorted-reverse", "-alpha-sorted-reverse") {
 			copy(
 				$templates.$scope.$sort.'.md',
-				$type_path.'/'.$item.$sort.'.md'
+				$item_dir.'/'.$item.$sort.'.md'
 			);
 
 			if (grep{ $item =~ /^$_$/i } @{ $config->{$scope.$sort} } ) {
 				copy(
 					$templates.$scope.$sort.'.md',
-					$type_path.'/'.$item.'.md'
+					$item_dir.'/'.$item.'.md'
 				);
 			}
 

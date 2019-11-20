@@ -6,6 +6,8 @@ layout: default
 {%- assign this_category = this_name[0] | replace: '-alpha-sorted', '' -%}
 {%- assign this_pagetitle = this_category  | capitalize | replace: '_', ' ' -%}
 
+{% unless this_category contains 'index' %} 
+
 <div id="listpage_headline_wrapper">
 	<div id="listpage_sortmarker">
 		<a href="{{this_category}}-date-sorted.html">[date&nbsp;&darr;]</a>
@@ -16,6 +18,8 @@ layout: default
 		<h2 class="page_title">{{ this_pagetitle }}</h2>
 	</div>
 </div>
+
+{% endunless %}
 
 {%- comment -%}
   * collecting the pages

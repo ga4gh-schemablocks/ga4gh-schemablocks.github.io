@@ -11,6 +11,7 @@ pdf_file_name: # the name of a PDF (no path) somewhere in "assets", which will b
 permalink: '/about/repositories.html'
 category: # please adjust
   - about
+  - index
   - howto
 tags: # please adjust; see tags -n _config.yml (or extend them there, too)
   - FAQ

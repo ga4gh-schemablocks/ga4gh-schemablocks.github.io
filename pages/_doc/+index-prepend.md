@@ -2,12 +2,12 @@
 title: 'GA4GH SchemaBlocks Home'
 layout: default
 date: 2019-10-15
-permalink: /index.html
 www_links_formatted:  # one or multiple complete links
   - '<a href="/about/mission.html">[Mission Statement]</a>'
 author: "@mbaudis"
 category:
   - about
+  - index
 tags:
   - .prepend
 ---

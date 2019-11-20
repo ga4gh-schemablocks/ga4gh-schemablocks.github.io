@@ -6,16 +6,20 @@ layout: default
 {%- assign this_category = this_name[0] | replace: '-alpha-sorted-reverse', '' -%}
 {%- assign this_pagetitle = this_category  | capitalize | replace: '_', ' ' -%}
 
+{% unless this_category contains 'index' %} 
+
 <div id="listpage_headline_wrapper">
 	<div id="listpage_sortmarker">
 		<a href="{{this_category}}-date-sorted.html">[date&nbsp;&darr;]</a>
  		<a href="{{this_category}}-date-sorted-reverse.html">[date&nbsp;&uarr;]</a>
-		<a href="{{this_category}}-alpha-sorted.html">[A&nbsp;&rarr;&nbsp;Z]</a>
+		<a href="{{this_category}}-alpha-sorted-reverse.html">[Z&nbsp;&rarr;&nbsp;A]</a>
 	</div>
 	<div id="listpage_headline">
 		<h2 class="page_title">{{ this_pagetitle }}</h2>
 	</div>
 </div>
+
+{% endunless %}
 
 {%- comment -%}
   * collecting the pages
