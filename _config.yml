@@ -38,9 +38,6 @@ collections:
     permalink: /doc/:path/
 collections_dir: pages  # optional; here, all collections are inside "/pages"
 
-special_categories:
-  - index
-  
 # navigation blocks can be used to separate different categories and add e.g.
 # external link block(s), in combination with a properly modified layout
 
