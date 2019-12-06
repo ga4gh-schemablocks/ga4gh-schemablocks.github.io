@@ -109,6 +109,21 @@
             }
          ]
       },
+      "diseaseStage" : {
+         "description" : "Disease staging, the extent to which a disease has developed.\nFor cancers, see https://www.cancer.gov/about-cancer/diagnosis-staging/staging\nValid values include child terms of NCIT:C28108 (Disease Stage Qualifier)\n",
+         "examples" : [
+            [
+               {
+                  "id" : "NCIT:C90529",
+                  "label" : "AJCC v6 Stage"
+               }
+            ]
+         ],
+         "items" : {
+            "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/OntologyClass.json"
+         },
+         "type" : "array"
+      },
       "term" : {
          "allof" : [
             {
@@ -124,13 +139,13 @@
             }
          ]
       },
-      "tumorStage" : {
-         "description" : "Cancer findings in the TNM system that is relevant to the diagnosis of cancer.\nSee https://www.cancer.gov/about-cancer/diagnosis-staging/staging\ne.g. Child terms of NCIT:C48232 (Cancer TNM Finding)\n",
+      "tnmFinding" : {
+         "description" : "Cancer findings in the TNM system that is relevant to the diagnosis of cancer.\nSee https://www.cancer.gov/about-cancer/diagnosis-staging/staging\nValid values include child terms of NCIT:C48232 (Cancer TNM Finding)\n",
          "examples" : [
             [
                {
-                  "id" : "NCIT:C48706",
-                  "label" : "N1 Stage Finding"
+                  "id" : "NCIT:C48232",
+                  "label" : "Cancer TNM Finding"
                }
             ]
          ],

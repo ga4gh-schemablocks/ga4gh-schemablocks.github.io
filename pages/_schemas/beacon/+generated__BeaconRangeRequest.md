@@ -1,7 +1,7 @@
 ---
 title: BeaconRangeRequest
 layout: default
-permalink: "/schemas/sb-beacon-api/BeaconRangeRequest.html"
+permalink: "/schemas/beacon/BeaconRangeRequest.html"
 sb_status: "proposal"
 excerpt_separator: <!--more-->
 category:
@@ -9,12 +9,12 @@ category:
 tags:
   - code
   - proposal
-  - sb-beacon-api
+  - beacon
 ---
 
 
 <div id="schema-header-title">
-  <h2>BeaconRangeRequest <span id="schema-header-title-project">sb-beacon-api <a href="https://github.com/ga4gh-schemablocks/sb-beacon-api" target="_BLANK">&nearr;</a></span> </h2>
+  <h2>BeaconRangeRequest <span id="schema-header-title-project">beacon <a href="https://github.com/ga4gh-schemablocks/sb-beacon-api" target="_BLANK">&nearr;</a></span> </h2>
 </div>
 
 <table id="schema-header-table">
@@ -96,7 +96,7 @@ __Description:__ A `BeaconAlleleRequest` flavour for matching variants in a geno
   </tr>
   <tr>
     <th>mateName</th>
-    <td>https://schemablocks.org/schemas/sb-beacon-api/v1.1.0/Chromosome.json [<a href="https://schemablocks.org/schemas/sb-beacon-api/v1.1.0/Chromosome.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-beacon-api/Chromosome.html" target="_BLANK">HTML</a>]</td>
+    <td>https://schemablocks.org/schemas/beacon/v1.1.0/Chromosome.json [<a href="https://schemablocks.org/schemas/beacon/v1.1.0/Chromosome.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/beacon/Chromosome.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
     <th>referenceBases</th>
@@ -104,7 +104,7 @@ __Description:__ A `BeaconAlleleRequest` flavour for matching variants in a geno
   </tr>
   <tr>
     <th>referenceName</th>
-    <td>https://schemablocks.org/schemas/sb-beacon-api/v1.1.0/Chromosome.json [<a href="https://schemablocks.org/schemas/sb-beacon-api/v1.1.0/Chromosome.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-beacon-api/Chromosome.html" target="_BLANK">HTML</a>]</td>
+    <td>https://schemablocks.org/schemas/beacon/v1.1.0/Chromosome.json [<a href="https://schemablocks.org/schemas/beacon/v1.1.0/Chromosome.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/beacon/Chromosome.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
     <th>start</th>
@@ -185,7 +185,7 @@ See start.
 
 #### mateName
 
-* type: https://schemablocks.org/schemas/sb-beacon-api/v1.1.0/Chromosome.json [<a href="https://schemablocks.org/schemas/sb-beacon-api/v1.1.0/Chromosome.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-beacon-api/Chromosome.html" target="_BLANK">HTML</a>]
+* type: https://schemablocks.org/schemas/beacon/v1.1.0/Chromosome.json [<a href="https://schemablocks.org/schemas/beacon/v1.1.0/Chromosome.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/beacon/Chromosome.html" target="_BLANK">HTML</a>]
 
 Second chromosome in fusion events, as string
 
@@ -218,7 +218,7 @@ combination) viable sequences.
 
 #### referenceName
 
-* type: https://schemablocks.org/schemas/sb-beacon-api/v1.1.0/Chromosome.json [<a href="https://schemablocks.org/schemas/sb-beacon-api/v1.1.0/Chromosome.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-beacon-api/Chromosome.html" target="_BLANK">HTML</a>]
+* type: https://schemablocks.org/schemas/beacon/v1.1.0/Chromosome.json [<a href="https://schemablocks.org/schemas/beacon/v1.1.0/Chromosome.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/beacon/Chromosome.html" target="_BLANK">HTML</a>]
 
 Chromosome as string
 

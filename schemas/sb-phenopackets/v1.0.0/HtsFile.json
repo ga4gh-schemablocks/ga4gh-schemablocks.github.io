@@ -58,7 +58,8 @@
             "CRAM",
             "VCF",
             "BCF",
-            "GVCF"
+            "GVCF",
+            "FASTQ"
          ],
          "examples" : [
             "SAM"
