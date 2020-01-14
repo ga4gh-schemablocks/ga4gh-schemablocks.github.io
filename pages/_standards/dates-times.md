@@ -18,7 +18,7 @@ Date and time formats are specified as [ISO8601](https://www.w3.org/TR/NOTE-date
 
 <!--more-->
 
-<a href="https://xkcd.com/1179/" target="_blank"><img src="https://imgs.xkcd.com/comics/iso_8601.png" style="float: right; margin 20px 0px 30px 20px; width: 200px;" /></a>
+<a href="https://xkcd.com/1179/" target="_blank"><img src="https://imgs.xkcd.com/comics/iso_8601.png"  align="right" style="margin 20px 0px 30px 20px; width: 200px;" /></a>
 
 An optionally required granularity may be specified as part of the respective
 attributes' documentations.
