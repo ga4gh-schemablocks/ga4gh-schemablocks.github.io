@@ -3,7 +3,7 @@ title: "sbSchemaParser::sbSchemaParser.pl Perl Code Documentation"
 layout: default
 www_link: 
 excerpt_separator: <!--more-->
-date: 2019-12-06
+date: 2020-01-16
 category:
   - howto
 tags:
@@ -122,10 +122,10 @@ with "Age" in their file name.
 
 #### Processing Schema Source Directories
 
-The script parses through the associated source repositories which are required to reside 
-inside a unified root (`git_root_dir`). The names of the (one or several) repositories and 
-their schema file source directories (one or several per repository) are specified in the 
-`config.yaml` file.
+The script parses through the associated source repositories which are required
+to reside inside a unified root (`git_root_dir`). The names of the (one or
+several) repositories and their schema file source directories (one or several
+per repository) are specified in the `config.yaml` file.
 
 The class name is derived from the file's "$id" value, assuming a canonical 
 path structure with the class name post-pended with a version:
