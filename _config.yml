@@ -67,7 +67,7 @@ tags-date-sorted:
 related_sites:
   GA4GH: 'http://www.ga4gh.org'
   'GA4GH::Discovery': 'http://ga4gh-discovery.github.io'
-  'ELIXIR Beacon': 'http://ga4gh-beacon.github.io'
+  'Beacon Project': 'http://ga4gh-beacon.github.io'
   Phenopackets: 'http://github.com/phenopackets'
   'GA4GH::CLP': 'http://ga4gh-cp.github.io'
   'GA4GH::GKS': 'http://ga4gh-gks.github.io'
