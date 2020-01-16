@@ -71,9 +71,11 @@ tags:
 
   
 __Type:__ object  
-__Description:__ The document describes attributes of the _variant_ object. In its current 
-implementation, _variant_ (and related genomic objects such as _callset_) 
-represent extended versions of the original, VCF-derived GA4GH schema.
+__Description:__ The document describes attributes of the _BeaconGenomicVariant_ object.
+In its current implementation, _BeaconGenomicVariant_ (and related genomic
+objects such as _callset_) represent extended versions of the original,
+VCF-derived GA4GH _variant_ schema.
+
 Compared to the VCF model it was derived from, this schema includes some
 changes:
 
@@ -86,6 +88,7 @@ data derived from array based experiments)
     `pos` and `END` positions in VCF, where the begin of e.g. the `pos`
     interval is given by `pos - CIPOS[0]` and the end of the `pos` estimate
     by `pos + CIPOS[0]`
+* an additional 'mateName'
 
 This format may be superseeded or augmented based on current developments in
 the GA4GH::GKS work stream.
@@ -98,15 +101,15 @@ the GA4GH::GKS work stream.
     <th>Type</th>
   </tr>
   <tr>
-    <th>alternate_bases</th>
+    <th>alternateBases</th>
     <td>array of string</td>
   </tr>
   <tr>
-    <th>biosample_id</th>
+    <th>biosampleId</th>
     <td>string</td>
   </tr>
   <tr>
-    <th>callset_id</th>
+    <th>callsetId</th>
     <td>string</td>
   </tr>
   <tr>
@@ -130,30 +133,30 @@ the GA4GH::GKS work stream.
     <td>object</td>
   </tr>
   <tr>
-    <th>mate_name</th>
+    <th>mateName</th>
     <td>https://schemablocks.org/schemas/beacon/v1.1.0/Chromosome.json [<a href="https://schemablocks.org/schemas/beacon/v1.1.0/Chromosome.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/beacon/Chromosome.html" target="_BLANK">HTML</a>]</td>
+  </tr>
+  <tr>
+    <th>referenceBases</th>
+    <td>string</td>
   </tr>
   <tr>
     <th>referenceName</th>
     <td>https://schemablocks.org/schemas/beacon/v1.1.0/Chromosome.json [<a href="https://schemablocks.org/schemas/beacon/v1.1.0/Chromosome.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/beacon/Chromosome.html" target="_BLANK">HTML</a>]</td>
   </tr>
   <tr>
-    <th>reference_bases</th>
-    <td>string</td>
-  </tr>
-  <tr>
     <th>start</th>
     <td>array of int64</td>
   </tr>
   <tr>
-    <th>variant_type</th>
+    <th>variantType</th>
     <td>string</td>
   </tr>
 
 </table>
 
 
-#### alternate_bases
+#### alternateBases
 
 * type: array of string
 
@@ -167,7 +170,7 @@ alterations
 TODO: Redefine for single-allele use?
 
 
-##### `alternate_bases` Value Examples  
+##### `alternateBases` Value Examples  
 
 ```
 [
@@ -181,7 +184,7 @@ TODO: Redefine for single-allele use?
 ]
 ```
 
-#### biosample_id
+#### biosampleId
 
 * type: string
 
@@ -190,13 +193,13 @@ reported from. This is a shortcut to variant -> callset -> biosample
 chaining or replaces this in data models w/o separate callset level.
 
 
-##### `biosample_id` Value Example  
+##### `biosampleId` Value Example  
 
 ```
 "pgx-bs-987647"
 ```
 
-#### callset_id
+#### callsetId
 
 * type: string
 
@@ -206,7 +209,7 @@ variant is part of
 are nested with the parental object as in a Phenopacket)
 
 
-##### `callset_id` Value Example  
+##### `callsetId` Value Example  
 
 ```
 "PGX_AM_CS_GSM1690424"
@@ -232,8 +235,8 @@ variant from callset" storage systems
 
 * type: array of int64
 
-array of 0 (for presise sequence variants), 1 or 2 (for imprecise end position of 
-structural variant) integers
+array of 0 (for presise sequence variants), 1 or 2 (for imprecise end
+position of structural variant) integers
 
 
 ##### `end` Value Example  
@@ -259,7 +262,7 @@ The genotype parameter is largely redundant for single-sample variant
 annotations in contrast to VCF, where the `alternat_bases` calls have to 
 be indicated for multiple callsets.
 
-TODO: Remove for single-allele definition of BeaconGenomicVariant?
+TODO: Remove for single-allele definition of `BeaconGenomicVariant`?
 
 
 ##### `genotype` Value Examples  
@@ -308,7 +311,7 @@ documentation
 }
 ```
 
-#### mate_name
+#### mateName
 
 * type: https://schemablocks.org/schemas/beacon/v1.1.0/Chromosome.json [<a href="https://schemablocks.org/schemas/beacon/v1.1.0/Chromosome.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/beacon/Chromosome.html" target="_BLANK">HTML</a>]
 
@@ -326,13 +329,27 @@ and the higher (e.g. "14") becomes the `mate_name`
 `reference_name` and the higher base values are assigned to `end`
 
 
-##### `mate_name` Value Examples  
+##### `mateName` Value Examples  
 
 ```
 "14"
 ```
 ```
 "18"
+```
+
+#### referenceBases
+
+* type: string
+
+one or more bases at start position in the reference genome, which have
+been replaced by the `alternate_bases` value
+
+
+##### `referenceBases` Value Example  
+
+```
+"G"
 ```
 
 #### referenceName
@@ -351,20 +368,6 @@ Chromosome as string
 "Y"
 ```
 
-#### reference_bases
-
-* type: string
-
-one or more bases at start position in the reference genome, which have
-been replaced by the `alternate_bases` value
-
-
-##### `reference_bases` Value Example  
-
-```
-"G"
-```
-
 #### start
 
 * type: array of int64
@@ -380,14 +383,14 @@ array of 1 or 2 (for imprecise end position of structural variant) integers
 ]
 ```
 
-#### variant_type
+#### variantType
 
 * type: string
 
 the variant type in case of a named (structural) variant (e.g. DUP, DEL, BND ...)
 
 
-##### `variant_type` Value Example  
+##### `variantType` Value Example  
 
 ```
 "DEL"

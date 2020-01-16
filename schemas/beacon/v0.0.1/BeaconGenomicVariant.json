@@ -1,7 +1,7 @@
 {
    "$id" : "https://schemablocks.org/schemas/beacon/BeaconGenomicVariant/v0.0.1",
    "$schema\"" : "http://json-schema.org/draft-07/schema#",
-   "description" : "The document describes attributes of the _variant_ object. In its current \nimplementation, _variant_ (and related genomic objects such as _callset_) \nrepresent extended versions of the original, VCF-derived GA4GH schema.\nCompared to the VCF model it was derived from, this schema includes some\nchanges:\n\n* the definition of an optional `end` position, to support e.g. structural\nvariants w/o definition of the sequence\n* the use of arrays for `start` and `end` positions, to describe positions\nwith uncertain exact location (again, important for structural variants and\ndata derived from array based experiments)\n    - this corresponds to the use of `CIPOS` and `CIEND` intervals around\n    `pos` and `END` positions in VCF, where the begin of e.g. the `pos`\n    interval is given by `pos - CIPOS[0]` and the end of the `pos` estimate\n    by `pos + CIPOS[0]`\n\nThis format may be superseeded or augmented based on current developments in\nthe GA4GH::GKS work stream.\n",
+   "description" : "The document describes attributes of the _BeaconGenomicVariant_ object.\nIn its current implementation, _BeaconGenomicVariant_ (and related genomic\nobjects such as _callset_) represent extended versions of the original,\nVCF-derived GA4GH _variant_ schema.\n\nCompared to the VCF model it was derived from, this schema includes some\nchanges:\n\n* the definition of an optional `end` position, to support e.g. structural\nvariants w/o definition of the sequence\n* the use of arrays for `start` and `end` positions, to describe positions\nwith uncertain exact location (again, important for structural variants and\ndata derived from array based experiments)\n    - this corresponds to the use of `CIPOS` and `CIEND` intervals around\n    `pos` and `END` positions in VCF, where the begin of e.g. the `pos`\n    interval is given by `pos - CIPOS[0]` and the end of the `pos` estimate\n    by `pos + CIPOS[0]`\n* an additional 'mateName'\n\nThis format may be superseeded or augmented based on current developments in\nthe GA4GH::GKS work stream.\n",
    "examples" : [
       {
          "alternate_bases" : [
@@ -95,7 +95,7 @@
       ]
    },
    "properties" : {
-      "alternate_bases" : {
+      "alternateBases" : {
          "description" : "* one or more single or multi-base sequences, replacing the  the \n`reference_bases` value\n* more than one `alternate_bases` values is used for differing \nreplacements involving the different alleles\n* used for precise variants; not used for structural (e.g. DUP, DEL) \nalterations\n\nTODO: Redefine for single-allele use?\n",
          "examples" : [
             [
@@ -110,14 +110,14 @@
          "pattern" : "^[ACGTN]+$",
          "type" : "array"
       },
-      "biosample_id" : {
+      "biosampleId" : {
          "description" : "The optional identifier (\"biosample.id\") of the biosample this variant was\nreported from. This is a shortcut to variant -> callset -> biosample\nchaining or replaces this in data models w/o separate callset level.\n",
          "examples" : [
             "pgx-bs-987647"
          ],
          "type" : "string"
       },
-      "callset_id" : {
+      "callsetId" : {
          "description" : "* the identifier (\"callset.id\") of the callset (i.e. \"VCF column\") this\nvariant is part of\n* optional, if another provenance method is provided (e.g. if variants\nare nested with the parental object as in a Phenopacket)\n",
          "examples" : [
             "PGX_AM_CS_GSM1690424"
@@ -132,7 +132,7 @@
          "type" : "string"
       },
       "end" : {
-         "description" : "array of 0 (for presise sequence variants), 1 or 2 (for imprecise end position of \nstructural variant) integers\n",
+         "description" : "array of 0 (for presise sequence variants), 1 or 2 (for imprecise end\nposition of structural variant) integers\n",
          "examples" : [
             [
                "21977798",
@@ -143,7 +143,7 @@
          "type" : "array"
       },
       "genotype" : {
-         "description" : "* list of strings, using the natural index of the corresponding \n`alternate_bases` values for the (optionally phased) indication of \nobserved allelic replacements\n* the dot `.` value is used for indicating the reference allele or unknown \nvalue\n\nThe genotype parameter is largely redundant for single-sample variant \nannotations in contrast to VCF, where the `alternat_bases` calls have to \nbe indicated for multiple callsets.\n\nTODO: Remove for single-allele definition of BeaconGenomicVariant?\n",
+         "description" : "* list of strings, using the natural index of the corresponding \n`alternate_bases` values for the (optionally phased) indication of \nobserved allelic replacements\n* the dot `.` value is used for indicating the reference allele or unknown \nvalue\n\nThe genotype parameter is largely redundant for single-sample variant \nannotations in contrast to VCF, where the `alternat_bases` calls have to \nbe indicated for multiple callsets.\n\nTODO: Remove for single-allele definition of `BeaconGenomicVariant`?\n",
          "examples" : [
             [
                "1",
@@ -174,7 +174,7 @@
          ],
          "type" : "object"
       },
-      "mate_name" : {
+      "mateName" : {
          "allof" : [
             {
                "$ref" : "https://schemablocks.org/schemas/beacon/v1.1.0/Chromosome.json"
@@ -187,6 +187,14 @@
                ]
             }
          ]
+      },
+      "referenceBases" : {
+         "description" : "one or more bases at start position in the reference genome, which have\nbeen replaced by the `alternate_bases` value\n",
+         "examples" : [
+            "G"
+         ],
+         "pattern" : "^[ACGTN]+$",
+         "type" : "string"
       },
       "referenceName" : {
          "allof" : [
@@ -202,14 +210,6 @@
             }
          ]
       },
-      "reference_bases" : {
-         "description" : "one or more bases at start position in the reference genome, which have\nbeen replaced by the `alternate_bases` value\n",
-         "examples" : [
-            "G"
-         ],
-         "pattern" : "^[ACGTN]+$",
-         "type" : "string"
-      },
       "start" : {
          "description" : "array of 1 or 2 (for imprecise end position of structural variant) integers\n",
          "examples" : [
@@ -220,7 +220,7 @@
          "items" : "int64",
          "type" : "array"
       },
-      "variant_type" : {
+      "variantType" : {
          "description" : "the variant type in case of a named (structural) variant (e.g. DUP, DEL, BND ...)\n",
          "examples" : [
             "DEL"
@@ -229,12 +229,12 @@
       }
    },
    "required" : [
-      "reference_name",
+      "referenceName",
       "start",
       {
          "oneof" : [
-            "alternate_bases",
-            "variant_type"
+            "alternateBases",
+            "variantType"
          ]
       }
    ],
