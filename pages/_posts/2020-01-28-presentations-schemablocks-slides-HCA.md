@@ -1,5 +1,5 @@
 ---
-title: 'SchemaBlocks Presentations at GA4GH Boston'
+title: 'Notes about SchemaBlocks for HCA'
 date: 2020-01-28
 layout: default
 author: "@mbaudis"
