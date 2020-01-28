@@ -44,23 +44,26 @@ repositories. Please use the relevant _Github Issues_ to and/or GH pull requests
 
 ### {S}[B] Code Repositories
 
-{S}[B] code repositories adhere a consistent structure & naming:
+The structure of the code repositories is a pre-requisite for the parsing of the
+schema files. Please refer to the [documentation in the `tools` repository](https://github.com/ga4gh-schemablocks/tools).
 
+#### [sb-this-donor-project](https://github.com/ga4gh-schemablocks/)
+
+SchemaBlocks is organized around individual "donor"-repositories. The standard setup is to have a donor schema and the derived documents represented in its own repository. Those repositories follow an "sb-" prefixed naming convention.
+
+{S}[B] code repositories adhere a consistent structure & naming:
 
 ```
 sb-code           # each of the code repositories
   |
   |- source       # original code
   |- working      # for editing, temporary...
-  |- schemas      # JSON Schema files as YAML; read to produce the output files
+  |- schemas      # master transformed JSON Schema files as YAML; read to produce the output files
   |- generated    # contains files generated from main schema YAML files
       |- json     # .json version of the schema
       |- examples # .json example data, from inline examples
       |- doc      # .md documentation, from inline documentation
 ```
-
-The structure of the code repositories is a pre-requisite for the parsing of the
-schema files. Please refer to the [documentation in the `tools` repository](https://github.com/ga4gh-schemablocks/tools).
 
 #### [blocks](https://github.com/ga4gh-schemablocks/blocks)
 
@@ -73,7 +76,3 @@ schema files. Please refer to the [documentation in the `tools` repository](http
 * repository for suggeting & testing possible additions to the {S}[B] environment
 * items there should be considered "experimental", with no reliable endorsement by the {S}[B] community
 
-
-#### TODO: "implementation repositories"
-
-In the future we may switch to a project-specific structure, where the donor schemas (e.g. Phenopackets, Beacon ...) and the derived {S}[B] versions are represented in individual repositories.
