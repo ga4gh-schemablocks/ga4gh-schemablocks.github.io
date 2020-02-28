@@ -123,5 +123,5 @@ search: true
 show_downloads: true
 future: true
 safe: false
-navigation_max_items: 4 # number of shown links in current category
+navigation_max_items: 2 # number of shown links in current category
 emptyArray: []          # dummy element for array initialisation
