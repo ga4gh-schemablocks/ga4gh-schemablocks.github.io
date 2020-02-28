@@ -111,6 +111,8 @@ cloud_tags:
   - sb-vr-schema    # project
   - sb-phenopackets # project
   - sb-adam-duo     # project
+  - sb-duo
+  - sb-checksum
 
 # additional Jekyll instructions
 
