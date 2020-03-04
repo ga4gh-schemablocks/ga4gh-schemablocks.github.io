@@ -1,7 +1,7 @@
 ---
-title: DataUseLimitation
+title: DataUseModifier
 layout: default
-permalink: "/schemas/ga4gh/DataUseLimitation.html"
+permalink: "/schemas/ga4gh/DataUseModifier.html"
 sb_status: "implemented"
 excerpt_separator: <!--more-->
 category:
@@ -14,7 +14,7 @@ tags:
 
 
 <div id="schema-header-title">
-  <h2>DataUseLimitation <span id="schema-header-title-project">ga4gh <a href="https://github.com/ga4gh-schemablocks/sb-duo" target="_BLANK">&nearr;</a></span> </h2>
+  <h2>DataUseModifier <span id="schema-header-title-project">ga4gh <a href="https://github.com/ga4gh-schemablocks/sb-duo" target="_BLANK">&nearr;</a></span> </h2>
 </div>
 
 <table id="schema-header-table">
@@ -57,8 +57,8 @@ tags:
     <th>Source (v0.0.1)</th>
     <td>
       <ul>
-        <li><a href="current/DataUseLimitation.json" target="_BLANK">raw source [JSON]</a></li>
-        <li><a href="https://github.com/ga4gh-schemablocks/sb-duo/blob/master/schemas/DataUseLimitation.yaml" target="_BLANK">Github</a></li>
+        <li><a href="current/DataUseModifier.json" target="_BLANK">raw source [JSON]</a></li>
+        <li><a href="https://github.com/ga4gh-schemablocks/sb-duo/blob/master/schemas/DataUseModifier.yaml" target="_BLANK">Github</a></li>
       </ul>
     </td>
   </tr>
@@ -72,6 +72,7 @@ tags:
 __Type:__ object  
 __Description:__ The (GA4GH) Data Use Ontology (DUO) includes terms describing data use conditions,
 particularly for research data in the health/clinical/biomedical domain.
+Modifier specifies the criteria for data use condition.
 
 ### Properties
 
@@ -81,75 +82,49 @@ particularly for research data in the health/clinical/biomedical domain.
     <th>Type</th>
   </tr>
   <tr>
-    <th>description</th>
-    <td>string</td>
-  </tr>
-  <tr>
-    <th>modifier</th>
-    <td>./DataUseModifier</td>
-  </tr>
-  <tr>
-    <th>term</th>
+    <th>ontology</th>
     <td>https://schemablocks.org/schemas/sb-phenopackets/OntologyClass/v1.0.0</td>
+  </tr>
+  <tr>
+    <th>text</th>
+    <td>string</td>
   </tr>
 
 </table>
 
 
-#### description
-
-* type: string
-
-free text description mainly to encapsulate those conditions that wouldn't be described by DUO terms or modifiers
-
-
-##### `description` Value Example  
-
-
-#### modifier
-
-* type: ./DataUseModifier
-
-modifier/restriction applicable for the DUO
-
-##### `modifier` Value Example  
-
-
-#### term
+#### ontology
 
 * type: https://schemablocks.org/schemas/sb-phenopackets/OntologyClass/v1.0.0
 
-DUO - ontology term subclass of either DUO_0000001 or DUO_0000017
+ontology describing the modifier/restriction
 
-##### `term` Value Example  
+##### `ontology` Value Example  
+
+
+#### text
+
+* type: string
+
+text description of the modifier eg. date rage, geographic location, user/institute (RI)
+
+##### `text` Value Example  
 
 
 
-### `DataUseLimitation` Value Examples  
+### `DataUseModifier` Value Examples  
 
 ```
 {
-   "modifier" : {
-      "ontology" : {
-         "id" : "MONDO:0004992",
-         "label" : "cancer"
-      }
-   },
-   "term" : {
-      "id" : "DUO:0000007",
-      "label" : "disease specific research"
+   "ontology" : {
+      "id" : "MONDO:0004992",
+      "label" : "cancer"
    }
 }
 ```
 ```
 {
-   "modifier" : {
-      "text" : "UK"
-   },
-   "term" : {
-      "id" : "DUO:0000022",
-      "label" : "geographical restriction"
-   }
+   "text" : "UK"
 }
 ```
 <div id="schema-footer">
