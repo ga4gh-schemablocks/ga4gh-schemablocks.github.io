@@ -12,16 +12,20 @@ tags:
   - dates
 ---
 
-## {{ page.title }}
+<div>
 
-Date and time formats are specified as [ISO8601](https://www.w3.org/TR/NOTE-datetime) compatible strings, both for time points as well as for intervals and durations.
+<a href="https://xkcd.com/1179/" target="_blank"><img src="https://imgs.xkcd.com/comics/iso_8601.png"  align="right" style="margin 20px 0px 30px 20px; width: 200px; clear:none;" /></a>
 
-<!--more-->
+<h2>{{ page.title }}</h2>
 
-<a href="https://xkcd.com/1179/" target="_blank"><img src="https://imgs.xkcd.com/comics/iso_8601.png"  align="right" style="margin 20px 0px 30px 20px; width: 200px;" /></a>
+<p>Date and time formats are specified as <a href="https://www.w3.org/TR/NOTE-datetime">ISO8601</a> compatible strings, both for time points as well as for intervals and durations.
 
 An optionally required granularity may be specified as part of the respective
-attributes' documentations.
+attributes' documentations.</p>
+
+</div>
+
+<!--more-->
 
 * external information: [ISO8601](https://www.w3.org/TR/NOTE-datetime)
 
