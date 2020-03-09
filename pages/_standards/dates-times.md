@@ -25,8 +25,6 @@ attributes' documentations.</p>
 
 </div>
 
-<!--more-->
-
 * external information: [ISO8601](https://www.w3.org/TR/NOTE-datetime)
 
 #### Units of time
@@ -38,6 +36,8 @@ attributes' documentations.</p>
 * *M* = minute
 * *S* = second
 * *.S* = decimal fraction of a second
+
+<!--more-->
 
 #### Time points
 
