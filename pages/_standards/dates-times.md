@@ -18,14 +18,18 @@ tags:
 
 <h2>{{ page.title }}</h2>
 
-<p>Date and time formats are specified as <a href="https://www.w3.org/TR/NOTE-datetime">ISO8601</a> compatible strings, both for time points as well as for intervals and durations.
+<p>Date and time formats are specified as <a href="https://www.w3.org/TR/NOTE-datetime">ISO8601</a> compatible strings, both for time points as well as for intervals and durations.</p>
 
-An optionally required granularity may be specified as part of the respective
+<p>An optionally required granularity may be specified as part of the respective
 attributes' documentations.</p>
 
-</div>
+<h4>Links</h4>
 
-* external information: [ISO8601](https://www.w3.org/TR/NOTE-datetime)
+<ul>
+  <li>external information can be found at W3C: [ISO8601](https://www.w3.org/TR/NOTE-datetime)</li>
+</ul>
+
+</div>
 
 #### Units of time
 
