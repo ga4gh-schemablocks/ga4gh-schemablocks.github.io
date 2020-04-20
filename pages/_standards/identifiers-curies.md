@@ -72,6 +72,8 @@ In GA4GH schemas, CURIEs constitute the recommended syntax for the referencing o
 ]
 ```
 
+Please note that the underscore in the Cellosaurus id `cellosaurus:CVCL_0312` may be problematic.
+
 #### Further Information
 
 * [W3C CURIE syntax](https://www.w3.org/TR/curie/) page
