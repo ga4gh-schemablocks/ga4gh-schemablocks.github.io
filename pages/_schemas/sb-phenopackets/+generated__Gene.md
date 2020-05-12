@@ -83,7 +83,7 @@ __Description:__ Gene identifier
   </tr>
   <tr>
     <th>alternateIds</th>
-    <td>array of string</td>
+    <td>array of "string"</td>
   </tr>
   <tr>
     <th>id</th>
@@ -99,7 +99,7 @@ __Description:__ Gene identifier
 
 #### alternateIds
 
-* type: array of string
+* type: array of "string"
 
 alternate identifiers
 

@@ -102,7 +102,7 @@ the GA4GH::GKS work stream.
   </tr>
   <tr>
     <th>alternateBases</th>
-    <td>array of string</td>
+    <td>array of "string"</td>
   </tr>
   <tr>
     <th>biosampleId</th>
@@ -118,11 +118,11 @@ the GA4GH::GKS work stream.
   </tr>
   <tr>
     <th>end</th>
-    <td>array of int64</td>
+    <td>array of "int64"</td>
   </tr>
   <tr>
     <th>genotype</th>
-    <td>array of string</td>
+    <td>array of "string"</td>
   </tr>
   <tr>
     <th>id</th>
@@ -146,7 +146,7 @@ the GA4GH::GKS work stream.
   </tr>
   <tr>
     <th>start</th>
-    <td>array of int64</td>
+    <td>array of "int64"</td>
   </tr>
   <tr>
     <th>variantType</th>
@@ -158,7 +158,7 @@ the GA4GH::GKS work stream.
 
 #### alternateBases
 
-* type: array of string
+* type: array of "string"
 
 * one or more single or multi-base sequences, replacing the  the 
 `reference_bases` value
@@ -233,7 +233,7 @@ variant from callset" storage systems
 
 #### end
 
-* type: array of int64
+* type: array of "int64"
 
 array of 0 (for presise sequence variants), 1 or 2 (for imprecise end
 position of structural variant) integers
@@ -250,7 +250,7 @@ position of structural variant) integers
 
 #### genotype
 
-* type: array of string
+* type: array of "string"
 
 * list of strings, using the natural index of the corresponding 
 `alternate_bases` values for the (optionally phased) indication of 
@@ -370,7 +370,7 @@ Chromosome as string
 
 #### start
 
-* type: array of int64
+* type: array of "int64"
 
 array of 1 or 2 (for imprecise end position of structural variant) integers
 

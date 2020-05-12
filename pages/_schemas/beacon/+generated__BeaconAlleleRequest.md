@@ -90,7 +90,7 @@ __Description:__ Allele request as interpreted by the beacon.
   </tr>
   <tr>
     <th>datasetIds</th>
-    <td>array of string</td>
+    <td>array of "string"</td>
   </tr>
   <tr>
     <th>end</th>
@@ -148,8 +148,6 @@ INS:ME) will be represented in `variantType`.
 Optional: either `alternateBases` or `variantType` is required.
 
 
-##### `alternateBases` Value Example  
-
 
 #### assemblyId
 
@@ -165,7 +163,7 @@ Assembly identifier (GRC notation, e.g. `GRCh37`).
 
 #### datasetIds
 
-* type: array of string
+* type: array of "string"
 
 Identifiers of datasets, as defined in `BeaconDataset`. If this
 field is null/not specified, all datasets should be queried.
@@ -252,8 +250,6 @@ variations of [ACGT], or the bases are unknown: ANNT the Ns can take
 take any form of [ACGT], which makes both ACCT and ATGT (or any other 
 combination) viable sequences.
 
-
-##### `referenceBases` Value Example  
 
 
 #### referenceName

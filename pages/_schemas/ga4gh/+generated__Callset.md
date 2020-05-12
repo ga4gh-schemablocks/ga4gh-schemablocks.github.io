@@ -138,8 +138,6 @@ The creation time of this record, as ISO8601 string. System-specific
 implementations may transfer this to a date object.
 
 
-##### `created` Value Example  
-
 
 #### data_use_conditions
 
@@ -243,8 +241,6 @@ accompanying documentation of the specific implementation.
 The update time of this record's content, as ISO8601 string.
 System-specific implementations may transfer this to a date object.
 
-
-##### `updated` Value Example  
 
 
 

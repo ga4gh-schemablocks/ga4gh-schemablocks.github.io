@@ -99,16 +99,12 @@ Modifier specifies the criteria for data use condition.
 
 ontology describing the modifier/restriction
 
-##### `ontology` Value Example  
-
 
 #### text
 
 * type: string
 
 text description of the modifier eg. date rage, geographic location, user/institute (RI)
-
-##### `text` Value Example  
 
 
 

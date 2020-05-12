@@ -91,7 +91,7 @@ __Description:__ metadata
   </tr>
   <tr>
     <th>externalReferences</th>
-    <td>array of https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/ExternalReference.json [<a href="https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/ExternalReference.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-phenopackets/ExternalReference.html" target="_BLANK">HTML</a>]</td>
+    <td>array of "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/ExternalReference.json [<a href="https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/ExternalReference.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-phenopackets/ExternalReference.html" target="_BLANK">HTML</a>]"</td>
   </tr>
   <tr>
     <th>phenopacketSchemaVersion</th>
@@ -99,7 +99,7 @@ __Description:__ metadata
   </tr>
   <tr>
     <th>resources</th>
-    <td>array of https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Resource.json [<a href="https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Resource.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-phenopackets/Resource.html" target="_BLANK">HTML</a>]</td>
+    <td>array of "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Resource.json [<a href="https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Resource.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-phenopackets/Resource.html" target="_BLANK">HTML</a>]"</td>
   </tr>
   <tr>
     <th>submittedBy</th>
@@ -107,7 +107,7 @@ __Description:__ metadata
   </tr>
   <tr>
     <th>updates</th>
-    <td>array of https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Update.json [<a href="https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Update.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-phenopackets/Update.html" target="_BLANK">HTML</a>]</td>
+    <td>array of "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Update.json [<a href="https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Update.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-phenopackets/Update.html" target="_BLANK">HTML</a>]"</td>
   </tr>
 
 </table>
@@ -139,7 +139,7 @@ some kind of identifier for the contributor/ program
 
 #### externalReferences
 
-* type: array of https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/ExternalReference.json [<a href="https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/ExternalReference.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-phenopackets/ExternalReference.html" target="_BLANK">HTML</a>]
+* type: array of "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/ExternalReference.json [<a href="https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/ExternalReference.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-phenopackets/ExternalReference.html" target="_BLANK">HTML</a>]"
 
 External identifiers for this message. These are considered different representation of the same record, not
 records which are in some other relation with the record at hand. For example this might be a PubMed reference
@@ -171,7 +171,7 @@ Used to create this phenopacket
 
 #### resources
 
-* type: array of https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Resource.json [<a href="https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Resource.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-phenopackets/Resource.html" target="_BLANK">HTML</a>]
+* type: array of "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Resource.json [<a href="https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Resource.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-phenopackets/Resource.html" target="_BLANK">HTML</a>]"
 
 A listing of the ontologies/resources referenced in the phenopacket
 
@@ -208,7 +208,7 @@ Information about the person/organisation/network that has submitted this phenop
 
 #### updates
 
-* type: array of https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Update.json [<a href="https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Update.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-phenopackets/Update.html" target="_BLANK">HTML</a>]
+* type: array of "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Update.json [<a href="https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Update.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-phenopackets/Update.html" target="_BLANK">HTML</a>]"
 
 ISO8601 UTC timestamps at which this record was updated,
 in the format YYYY-MM-DDTHH:MM:SS.SSSZ e.g. 2007-12-03T10:15:30.00Z

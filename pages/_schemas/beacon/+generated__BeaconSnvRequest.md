@@ -87,7 +87,7 @@ __Description:__ The precise SNV query subtype of the `BeaconAlleleRequest`.
   </tr>
   <tr>
     <th>datasetIds</th>
-    <td>array of string</td>
+    <td>array of "string"</td>
   </tr>
   <tr>
     <th>includeDatasetResponses</th>
@@ -120,8 +120,6 @@ Symbolic ALT alleles (DEL, INS, DUP, INV, CNV, DUP:TANDEM, DEL:ME,
 INS:ME) cannot be represented in `alternateBases`.
 
 
-##### `alternateBases` Value Example  
-
 
 #### assemblyId
 
@@ -137,7 +135,7 @@ Assembly identifier (GRC notation, e.g. `GRCh37`).
 
 #### datasetIds
 
-* type: array of string
+* type: array of "string"
 
 Identifiers of datasets, as defined in `BeaconDataset`. If this
 field is null/not specified, all datasets should be queried.
@@ -162,8 +160,6 @@ Indicator of whether responses for individual datasets
 specified), the default value of NONE is assumed.
 
 
-##### `includeDatasetResponses` Value Example  
-
 
 #### referenceBases
 
@@ -178,8 +174,6 @@ variations of [ACGT], or the bases are unknown: ANNT the Ns can take
 take any form of [ACGT], which makes both ACCT and ATGT (or any other 
 combination) viable sequences.
 
-
-##### `referenceBases` Value Example  
 
 
 #### referenceName

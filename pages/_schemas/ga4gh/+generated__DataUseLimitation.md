@@ -103,8 +103,6 @@ particularly for research data in the health/clinical/biomedical domain.
 free text description mainly to encapsulate those conditions that wouldn't be described by DUO terms or modifiers
 
 
-##### `description` Value Example  
-
 
 #### modifier
 
@@ -112,16 +110,12 @@ free text description mainly to encapsulate those conditions that wouldn't be de
 
 modifier/restriction applicable for the DUO
 
-##### `modifier` Value Example  
-
 
 #### term
 
 * type: https://schemablocks.org/schemas/sb-phenopackets/OntologyClass/v1.0.0
 
 DUO - ontology term subclass of either DUO_0000001 or DUO_0000017
-
-##### `term` Value Example  
 
 
 

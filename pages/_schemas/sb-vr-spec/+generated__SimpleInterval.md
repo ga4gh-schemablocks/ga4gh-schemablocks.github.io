@@ -108,8 +108,6 @@ coordinates.
 
 
 
-##### `end` Value Example  
-
 
 #### start
 
@@ -117,16 +115,12 @@ coordinates.
 
 
 
-##### `start` Value Example  
-
 
 #### type
 
 * type: string
 
 
-
-##### `type` Value Example  
 
 
 

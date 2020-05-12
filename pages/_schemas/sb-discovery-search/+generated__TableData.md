@@ -80,7 +80,7 @@ __Description:__ A paginated collection of tabular data
   </tr>
   <tr>
     <th>data</th>
-    <td>array of HASH(0x7ff606916f60)</td>
+    <td>array of "object"</td>
   </tr>
   <tr>
     <th>data_model</th>
@@ -96,11 +96,9 @@ __Description:__ A paginated collection of tabular data
 
 #### data
 
-* type: array of HASH(0x7ff606916f60)
+* type: array of "object"
 
 Page of JSON values, each adhering to the schema given in the "data_model" property
-
-##### `data` Value Example  
 
 
 #### data_model
@@ -109,20 +107,12 @@ Page of JSON values, each adhering to the schema given in the "data_model" prope
 
 
 
-##### `data_model` Value Example  
-
 
 #### pagination
 
 * type: #/components/schemas/Pagination
 
 
-
-##### `pagination` Value Example  
-
-
-
-### `TableData` Value Example  
 
 <div id="schema-footer">
 This schema representation is for information purposes. The authorative 

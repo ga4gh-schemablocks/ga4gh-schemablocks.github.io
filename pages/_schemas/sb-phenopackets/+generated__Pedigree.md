@@ -83,7 +83,7 @@ __Description:__ https://software.broadinstitute.org/gatk/documentation/article?
   </tr>
   <tr>
     <th>person</th>
-    <td>array of https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Person.json [<a href="https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Person.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-phenopackets/Person.html" target="_BLANK">HTML</a>]</td>
+    <td>array of "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Person.json [<a href="https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Person.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-phenopackets/Person.html" target="_BLANK">HTML</a>]"</td>
   </tr>
 
 </table>
@@ -91,7 +91,7 @@ __Description:__ https://software.broadinstitute.org/gatk/documentation/article?
 
 #### person
 
-* type: array of https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Person.json [<a href="https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Person.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-phenopackets/Person.html" target="_BLANK">HTML</a>]
+* type: array of "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Person.json [<a href="https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Person.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/sb-phenopackets/Person.html" target="_BLANK">HTML</a>]"
 
 add description
 

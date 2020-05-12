@@ -95,20 +95,12 @@ __Type:__ object
 
 URL pointing to the next page of the same Table. Null or absent on last page.
 
-##### `next_page_url` Value Example  
-
 
 #### previous_page_url
 
 * type: string (uri)
 
 URL pointing to the previous page of the same Table. Null or absent on first page.
-
-##### `previous_page_url` Value Example  
-
-
-
-### `Pagination` Value Example  
 
 <div id="schema-footer">
 This schema representation is for information purposes. The authorative 

@@ -87,7 +87,7 @@ TODO: The documented queries will fail current tests due to the lack of the
   </tr>
   <tr>
     <th>datasetIds</th>
-    <td>array of string</td>
+    <td>array of "string"</td>
   </tr>
   <tr>
     <th>endMax</th>
@@ -135,7 +135,7 @@ Assembly identifier (GRC notation, e.g. `GRCh37`).
 
 #### datasetIds
 
-* type: array of string
+* type: array of "string"
 
 Identifiers of datasets, as defined in `BeaconDataset`. If this
 field is null/not specified, all datasets should be queried.
@@ -185,8 +185,6 @@ Minimum end coordinate. See startMin.
 * type: string
 
 Indicator of whether responses for individual datasets (datasetAlleleResponses) should be included in the response (BeaconAlleleResponse) to this request or not. If null (not specified), the default value of NONE is assumed.
-
-##### `includeDatasetResponses` Value Example  
 
 
 #### referenceName
