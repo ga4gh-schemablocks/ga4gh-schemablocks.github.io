@@ -36,11 +36,11 @@
    },
    "properties" : {
       "pagination" : {
-         "$ref" : "#/components/schemas/Pagination"
+         "$ref" : "./Pagination"
       },
       "tables" : {
          "items" : {
-            "$ref" : "#/components/schemas/Table"
+            "$ref" : "./Table"
          },
          "type" : "array"
       }

@@ -88,7 +88,7 @@ __Description:__ A paginated collection of tabular data
   </tr>
   <tr>
     <th>pagination</th>
-    <td>#/components/schemas/Pagination</td>
+    <td>./Pagination</td>
   </tr>
 
 </table>
@@ -110,7 +110,7 @@ Page of JSON values, each adhering to the schema given in the "data_model" prope
 
 #### pagination
 
-* type: #/components/schemas/Pagination
+* type: ./Pagination
 
 
 

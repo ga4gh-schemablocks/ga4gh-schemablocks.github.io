@@ -46,7 +46,7 @@
          "$ref" : "http://json-schema.org/draft-07/schema#"
       },
       "pagination" : {
-         "$ref" : "#/components/schemas/Pagination"
+         "$ref" : "./Pagination"
       }
    },
    "required" : [

@@ -79,11 +79,11 @@ __Type:__ object
   </tr>
   <tr>
     <th>pagination</th>
-    <td>#/components/schemas/Pagination</td>
+    <td>./Pagination</td>
   </tr>
   <tr>
     <th>tables</th>
-    <td>array of "#/components/schemas/Table"</td>
+    <td>array of "./Table"</td>
   </tr>
 
 </table>
@@ -91,14 +91,14 @@ __Type:__ object
 
 #### pagination
 
-* type: #/components/schemas/Pagination
+* type: ./Pagination
 
 
 
 
 #### tables
 
-* type: array of "#/components/schemas/Table"
+* type: array of "./Table"
 
 
 
