@@ -1,7 +1,6 @@
 {
-   "$id" : "https://schemablocks.org/schemas/sb-discovery-search/Table/0.1.0",
+   "$id" : "https://schemablocks.org/schemas/sb-discovery-search/Pagination/0.1.0",
    "$schema" : "http://json-schema.org/draft-07/schema#",
-   "description" : "Describes a Table hosted by this search node.\n",
    "examples" : [],
    "meta" : {
       "contributors" : [
@@ -35,23 +34,18 @@
       ]
    },
    "properties" : {
-      "data_model" : {
-         "$ref" : "http://json-schema.org/draft-07/schema#"
-      },
-      "description" : {
-         "description" : "Optional description of the Table",
+      "next_page_url" : {
+         "description" : "URL pointing to the next page of the same Table. Null or absent on last page.",
+         "format" : "uri",
          "type" : "string"
       },
-      "name" : {
-         "description" : "Table name",
+      "previous_page_url" : {
+         "description" : "URL pointing to the previous page of the same Table. Null or absent on first page.",
+         "format" : "uri",
          "type" : "string"
       }
    },
-   "required" : [
-      "name",
-      "data_model"
-   ],
-   "title" : "Table",
+   "title" : "Pagination",
    "type" : "object",
    "version" : "0.1.0"
 }

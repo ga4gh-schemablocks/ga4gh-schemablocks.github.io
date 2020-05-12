@@ -1,7 +1,7 @@
 ---
-title: Table
+title: TableData
 layout: default
-permalink: "/schemas/sb-discovery-search/Table.html"
+permalink: "/schemas/sb-discovery-search/TableData.html"
 sb_status: "playground"
 excerpt_separator: <!--more-->
 category:
@@ -14,7 +14,7 @@ tags:
 
 
 <div id="schema-header-title">
-  <h2>Table <span id="schema-header-title-project">sb-discovery-search <a href="https://github.com/ga4gh-schemablocks/sb-discovery-search" target="_BLANK">&nearr;</a></span> </h2>
+  <h2>TableData <span id="schema-header-title-project">sb-discovery-search <a href="https://github.com/ga4gh-schemablocks/sb-discovery-search" target="_BLANK">&nearr;</a></span> </h2>
 </div>
 
 <table id="schema-header-table">
@@ -57,8 +57,8 @@ tags:
     <th>Source (0.1.0)</th>
     <td>
       <ul>
-        <li><a href="current/Table.json" target="_BLANK">raw source [JSON]</a></li>
-        <li><a href="https://github.com/ga4gh-schemablocks/sb-discovery-search/blob/master/schemas/Table.yaml" target="_BLANK">Github</a></li>
+        <li><a href="current/TableData.json" target="_BLANK">raw source [JSON]</a></li>
+        <li><a href="https://github.com/ga4gh-schemablocks/sb-discovery-search/blob/master/schemas/TableData.yaml" target="_BLANK">Github</a></li>
       </ul>
     </td>
   </tr>
@@ -70,8 +70,7 @@ tags:
 
   
 __Type:__ object  
-__Description:__ Describes a Table hosted by this search node.
-
+__Description:__ A paginated collection of tabular data
 ### Properties
 
 <table id="schema-properties-table">
@@ -80,19 +79,28 @@ __Description:__ Describes a Table hosted by this search node.
     <th>Type</th>
   </tr>
   <tr>
+    <th>data</th>
+    <td>array of HASH(0x7ff606916f60)</td>
+  </tr>
+  <tr>
     <th>data_model</th>
     <td>http://json-schema.org/draft-07/schema#</td>
   </tr>
   <tr>
-    <th>description</th>
-    <td>string</td>
-  </tr>
-  <tr>
-    <th>name</th>
-    <td>string</td>
+    <th>pagination</th>
+    <td>#/components/schemas/Pagination</td>
   </tr>
 
 </table>
+
+
+#### data
+
+* type: array of HASH(0x7ff606916f60)
+
+Page of JSON values, each adhering to the schema given in the "data_model" property
+
+##### `data` Value Example  
 
 
 #### data_model
@@ -104,26 +112,17 @@ __Description:__ Describes a Table hosted by this search node.
 ##### `data_model` Value Example  
 
 
-#### description
+#### pagination
 
-* type: string
-
-Optional description of the Table
-
-##### `description` Value Example  
-
-
-#### name
-
-* type: string
-
-Table name
-
-##### `name` Value Example  
+* type: #/components/schemas/Pagination
 
 
 
-### `Table` Value Example  
+##### `pagination` Value Example  
+
+
+
+### `TableData` Value Example  
 
 <div id="schema-footer">
 This schema representation is for information purposes. The authorative 

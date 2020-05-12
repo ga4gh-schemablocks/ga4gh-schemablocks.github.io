@@ -1,7 +1,7 @@
 ---
-title: Table
+title: ListTablesResponse
 layout: default
-permalink: "/schemas/sb-discovery-search/Table.html"
+permalink: "/schemas/sb-discovery-search/ListTablesResponse.html"
 sb_status: "playground"
 excerpt_separator: <!--more-->
 category:
@@ -14,7 +14,7 @@ tags:
 
 
 <div id="schema-header-title">
-  <h2>Table <span id="schema-header-title-project">sb-discovery-search <a href="https://github.com/ga4gh-schemablocks/sb-discovery-search" target="_BLANK">&nearr;</a></span> </h2>
+  <h2>ListTablesResponse <span id="schema-header-title-project">sb-discovery-search <a href="https://github.com/ga4gh-schemablocks/sb-discovery-search" target="_BLANK">&nearr;</a></span> </h2>
 </div>
 
 <table id="schema-header-table">
@@ -57,8 +57,8 @@ tags:
     <th>Source (0.1.0)</th>
     <td>
       <ul>
-        <li><a href="current/Table.json" target="_BLANK">raw source [JSON]</a></li>
-        <li><a href="https://github.com/ga4gh-schemablocks/sb-discovery-search/blob/master/schemas/Table.yaml" target="_BLANK">Github</a></li>
+        <li><a href="current/ListTablesResponse.json" target="_BLANK">raw source [JSON]</a></li>
+        <li><a href="https://github.com/ga4gh-schemablocks/sb-discovery-search/blob/master/schemas/ListTablesResponse.yaml" target="_BLANK">Github</a></li>
       </ul>
     </td>
   </tr>
@@ -69,9 +69,7 @@ tags:
 </div>
 
   
-__Type:__ object  
-__Description:__ Describes a Table hosted by this search node.
-
+__Type:__ object
 ### Properties
 
 <table id="schema-properties-table">
@@ -80,50 +78,37 @@ __Description:__ Describes a Table hosted by this search node.
     <th>Type</th>
   </tr>
   <tr>
-    <th>data_model</th>
-    <td>http://json-schema.org/draft-07/schema#</td>
+    <th>pagination</th>
+    <td>#/components/schemas/Pagination</td>
   </tr>
   <tr>
-    <th>description</th>
-    <td>string</td>
-  </tr>
-  <tr>
-    <th>name</th>
-    <td>string</td>
+    <th>tables</th>
+    <td>array of #/components/schemas/Table</td>
   </tr>
 
 </table>
 
 
-#### data_model
+#### pagination
 
-* type: http://json-schema.org/draft-07/schema#
-
-
-
-##### `data_model` Value Example  
-
-
-#### description
-
-* type: string
-
-Optional description of the Table
-
-##### `description` Value Example  
-
-
-#### name
-
-* type: string
-
-Table name
-
-##### `name` Value Example  
+* type: #/components/schemas/Pagination
 
 
 
-### `Table` Value Example  
+##### `pagination` Value Example  
+
+
+#### tables
+
+* type: array of #/components/schemas/Table
+
+
+
+##### `tables` Value Example  
+
+
+
+### `ListTablesResponse` Value Example  
 
 <div id="schema-footer">
 This schema representation is for information purposes. The authorative 
