@@ -110,6 +110,7 @@ cloud_tags:
   - sb-beacon-api   # project
   - sb-vr-schema    # project
   - sb-phenopackets # project
+  - sb-discovery-search # project
   - sb-adam-duo     # project
   - sb-duo
   - sb-checksum
