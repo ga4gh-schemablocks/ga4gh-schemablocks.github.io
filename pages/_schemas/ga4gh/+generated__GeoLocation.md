@@ -35,7 +35,7 @@ tags:
     <th>Used by</th>
     <td>
       <ul>
-<li><a href="https://github.com/progenetix/schemas/tree/master/main/yaml">Progenetix database schema (Beacon+ backend)</a></li>
+<li><a href="https://github.com/progenetix/">Progenetix database schema (Beacon+ backend)</a></li>
       </ul>
     </td>
   </tr>
