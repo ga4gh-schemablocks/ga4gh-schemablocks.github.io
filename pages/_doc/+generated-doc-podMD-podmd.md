@@ -1,9 +1,9 @@
 ---
-title: "podMD::podmd.pl Perl Code Documentation"
+title: "podmd.pl Perl Code Documentation"
 layout: default
 www_link: 
 excerpt_separator: <!--more-->
-date: 2020-05-12
+date: 2020-09-04
 category:
   - howto
 tags:

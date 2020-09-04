@@ -107,14 +107,14 @@
       "provenance" : [
          {
             "description" : "Phenopackets",
-            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/biosamples.rst"
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/biosample.rst"
          }
       ],
       "sb_status" : "implemented",
       "used_by" : [
          {
             "description" : "Phenopackets",
-            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/biosamples.rst"
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/biosample.rst"
          }
       ]
    },
@@ -243,7 +243,7 @@
          ],
          "type" : "boolean"
       },
-      "phenotypicFeature" : {
+      "phenotypicFeatures" : {
          "description" : "Phenotypic characteristics of the BioSample, for example histological findings of a biopsy",
          "examples" : [
             [
