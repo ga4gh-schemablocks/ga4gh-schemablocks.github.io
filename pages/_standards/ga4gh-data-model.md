@@ -65,13 +65,13 @@ The GA4GH data model for genomics recommends the use of a principle object hiera
     - similar to the _variant_ concept (i.e. line) in VCF, though it would be 
     recommended to use separate annotations for multiple variant alleles, which 
     are then logically connected through their _idem_ callset_id_
-* `callset`
+* `callset` (also `analysis` or several technical objects)
     - the entirety of all variants, observed in a single experiment on a single `biosample`
     - a `callset` can be compared to a data column in a __VCF__ variant annotation file
-    - `callset` has an optional position in the object hierarchy, since `variant`s describe biological observations in a `biosample`
+    - `callset` has an optional position in the object hierarchy, since `variant`s describe biological observations in a `biosample` and can be seen as the entity describing the technologies and analysis procedures leading from the sample to the set of all variants
 * `biosample`
     - a reference to a physical biological specimen on which analyses are performed
-* `individual`
+* `individual` (also `subject`)
     - in a typical use a human subject from which the biosample(s) was/were extracted
 
 Additional concepts (e.g. _dataset_, _study_ ...) may be added in the future.
