@@ -36,7 +36,7 @@ tags:
     <td>
       <ul>
 <li><a href="https://github.com/ga4gh-beacon/specification/blob/master/beacon.yaml">Beacon</a></li>
-<li><a href="https://github.com/progenetix/">Progenetix database schema (Beacon+ backend)</a></li>
+<li><a href="https://github.com/progenetix/schemas/tree/master/main/yaml">Progenetix database schema (Beacon+ backend)</a></li>
       </ul>
     </td>
   </tr>

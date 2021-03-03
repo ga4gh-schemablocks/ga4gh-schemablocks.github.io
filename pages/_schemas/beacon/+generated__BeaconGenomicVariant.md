@@ -37,7 +37,7 @@ tags:
     <td>
       <ul>
 <li><a href="https://github.com/ga4gh-beacon/specification-v2">Beacon, in modified form as basis for query model and for Beacon v2 response testing</a></li>
-<li><a href="https://github.com/progenetix/">Progenetix database schema (Beacon+ backend)</a></li>
+<li><a href="https://github.com/progenetix/schemas/tree/master/main/yaml">Progenetix database schema (Beacon+ backend)</a></li>
       </ul>
     </td>
   </tr>

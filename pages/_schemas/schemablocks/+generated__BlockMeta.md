@@ -196,7 +196,7 @@ of the schema.
 ```
 {
    "description" : "Progenetix database schema (Beacon+ backend)",
-   "id" : "https://github.com/progenetix/"
+   "id" : "https://github.com/progenetix/schemas/tree/master/main/yaml"
 }
 ```
 
@@ -229,7 +229,7 @@ of the schema.
       },
       {
          "description" : "Progenetix database schema (Beacon+ backend)",
-         "id" : "https://github.com/progenetix/"
+         "id" : "https://github.com/progenetix/schemas/tree/master/main/yaml"
       }
    ]
 }
