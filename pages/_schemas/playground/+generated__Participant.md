@@ -9,12 +9,12 @@ category:
 tags:
   - code
   - proposed
-  - playground
+  - ga4gh
 ---
 
 
 <div id="schema-header-title">
-  <h2>Participant <span id="schema-header-title-project">playground <a href="https://github.com/ga4gh-schemablocks/playground" target="_BLANK">&nearr;</a></span> </h2>
+  <h2>Participant <span id="schema-header-title-project">ga4gh <a href="https://github.com/ga4gh-schemablocks/playground" target="_BLANK">&nearr;</a></span> </h2>
 </div>
 
 <table id="schema-header-table">

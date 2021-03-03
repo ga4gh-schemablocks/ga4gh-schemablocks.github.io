@@ -1,5 +1,5 @@
 {
-   "$id" : "https://schemablocks.org/schemas/playground/Study/v0.0.1",
+   "$id" : "https://schemablocks.org/schemas/search/Study/v0.0.1",
    "$schema" : "http://json-schema.org/draft-07/schema#",
    "description" : "Attributes relating to any kind of medical study or data collection effort.\n",
    "examples" : [],

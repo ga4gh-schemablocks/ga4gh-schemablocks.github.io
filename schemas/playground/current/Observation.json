@@ -1,5 +1,5 @@
 {
-   "$id" : "https://schemablocks.org/schemas/playground/Observation/v0.0.1",
+   "$id" : "https://schemablocks.org/schemas/search/Observation/v0.0.1",
    "$schema" : "http://json-schema.org/draft-07/schema#",
    "description" : "Attributes relating to an observation, assessment, or sample collection in any kind of medical study.\n",
    "examples" : [],
