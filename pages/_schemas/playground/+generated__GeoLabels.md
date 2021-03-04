@@ -163,7 +163,7 @@ The optional name of the country the location maps to, for sanity checks and pro
 "Gainesville, United States of America"
 ```
 ```
-"Zürich, Switzerland"
+"Zurich, Switzerland"
 ```
 ```
 "Str Marasesti 5, 300077 Timisoara, Romania"
