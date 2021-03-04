@@ -47,7 +47,6 @@ tags:
     <td>
       <ul>
 <li><a href="https://orcid.org/0000-0002-9551-6370">Melanie Courtot</a></li>
-<li><a href="https://orcid.org/0000-0002-9903-4248">Michael Baudis</a></li>
 <li>DUO group</li>
 <li><a href="https://orcid.org/0000-0002-4839-5158">Isuru Liyanage</a></li>
       </ul>
