@@ -55,6 +55,7 @@
          "value" : "Point"
       }
    },
-   "title" : "GeoJSONgeometry"
+   "title" : "GeoJSONgeometry",
+   "type" : "object"
 }
 

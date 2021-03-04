@@ -55,7 +55,7 @@ tags:
     </td>
   </tr>
   <tr>
-    <th>Source (v2021-03-03)</th>
+    <th>Source (v2021-03-04)</th>
     <td>
       <ul>
         <li><a href="current/GeoLocation.json" target="_BLANK">raw source [JSON]</a></li>
@@ -70,7 +70,54 @@ tags:
 </div>
 
   
+__Type:__ object  
 __Description:__ A GeoLocation object represents a geographic location formatted as a *GeoJSON feature*. The format is compatible with RFC 7946, while currently limiting its scope to features of type "Point". Also, the schema defines some optional parameters compatible with the GeoJSON feature *properties* wrapper object. Examples could be:   * an address, e.g. of a lab performing an analysis * provenance of an individual, obfuscated to a larger order  administrative entity (Suffolk, U.K.) * a lat/long/alt position where an environmental sample was collected  
+
+### Properties
+
+<table id="schema-properties-table">
+  <tr>
+    <th>Property</th>
+    <th>Type</th>
+  </tr>
+  <tr>
+    <th>geometry</th>
+    <td>GeoJSONgeometry.yaml#/properties</td>
+  </tr>
+  <tr>
+    <th>properties</th>
+    <td>GeoLabels.yaml#/properties</td>
+  </tr>
+  <tr>
+    <th>type</th>
+    <td>string</td>
+  </tr>
+
+</table>
+
+
+#### geometry
+
+* type: GeoJSONgeometry.yaml#/properties
+
+
+
+
+#### properties
+
+* type: GeoLabels.yaml#/properties
+
+
+
+
+#### type
+
+* type: string
+* value: Feature  
+
+
+
+
 <div id="schema-footer">
 This schema representation is for information purposes. The authorative 
 version remains with the developing project (see "provenance").
