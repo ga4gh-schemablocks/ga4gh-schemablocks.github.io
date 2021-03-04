@@ -27,8 +27,8 @@
             "id" : "https://github.com/ga4gh-metadata/metadata-schemas/blob/master/schemas/shared.proto#L60"
          },
          {
-            "description" : "Progenetix",
-            "id" : "https://github.com/progenetix/schemas/"
+            "description" : "IETF GeoJSON pecification",
+            "id" : "https://tools.ietf.org/html/rfc7946"
          }
       ],
       "sb_status" : "proposed",

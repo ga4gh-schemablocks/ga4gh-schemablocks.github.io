@@ -28,7 +28,7 @@ tags:
     <td>
       <ul>
 <li><a href="https://github.com/ga4gh-metadata/metadata-schemas/blob/master/schemas/shared.proto#L60">Developer branch of original GA4GH schema</a></li>
-<li><a href="https://github.com/progenetix/schemas/">Progenetix</a></li>
+<li><a href="https://tools.ietf.org/html/rfc7946">IETF GeoJSON pecification</a></li>
       </ul>
     </td>
   </tr>
