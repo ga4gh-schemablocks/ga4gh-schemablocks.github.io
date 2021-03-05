@@ -37,6 +37,10 @@ The current status level of thiose recommendations is "proposed".
 	- early development or import stage, of any quality
 	- no recommendation; existence does not mean any current or future
 	{S}[B] support
+* `community`
+	- reserved for schemas from GA4GH community contributors which are used in production (i.e. not individual ideas or concepts)
+	- not recommended for direct integration into products
+	- can serve as use-case based demonstrators and inspire GA44GH project modifications
 * `proposed`
 	- at least some {S}[B] contributors are in favour of such a block
 	- the code may undergo considerable maturation
