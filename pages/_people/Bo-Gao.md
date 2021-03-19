@@ -1,6 +1,7 @@
 ---
 title: "Bo Gao"
 layout: default
+excerpt_link: https://info.baudisgroup.org/group/Bo_Gao/
 excerpt_separator: <!--more-->
 image_file: bgao.png
 category:
@@ -8,6 +9,7 @@ category:
 tags:
   - contributors
   - developers
+  - Beacon
 ---
 
 {% for static_file in site.static_files %}
@@ -31,4 +33,3 @@ University of Zurich
 
 email [bo@progenetix.org](mailto:bo@progenetix.org)  
 web [Bo Gao @ UZH](http://info.baudisgroup.org/group/Bo_Gao/)  
-
