@@ -2,14 +2,14 @@
 title: "Melissa Konopko"
 layout: default
 excerpt_separator: <!--more-->
-image_file: 
+image_file:
 category:
   - people
-  - contact
+#  - contact
 tags:
-  - contacts
+#  - contacts
   - contributors
-  - admins
+#  - admins
   - GA4GH
   - GKS
   - CP
