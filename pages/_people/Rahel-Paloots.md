@@ -4,6 +4,7 @@ excerpt_link: https://info.baudisgroup.org/group/Rahel_Paloots/
 layout: default
 excerpt_separator: <!--more-->
 date:   2021-03-15
+image_file: 'rahelp.jpg'
 category:
   - people
 tags:
@@ -12,7 +13,13 @@ tags:
 - Beacon
 ---
 
-## Rahel Paloots
+{% for static_file in site.static_files %}
+  {% if static_file.path contains page.image_file %}
+<img style="float: right; width: 80px;" src="{{ static_file.path | relative_url}}" />
+  {% endif %}
+{% endfor %}
+
+## {{ page.title }}
 
 Department of Molecular Life Sciences  
 University of Zurich  
