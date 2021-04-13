@@ -4,59 +4,41 @@ layout: default
 permalink: "/schemas/playground/Study.html"
 sb_status: "proposed"
 excerpt_separator: <!--more-->
-category:
+categories:
   - schemas
 tags:
-  - code
+  - playground
   - proposed
+  - schemas
   - search
 ---
 
-
 <div id="schema-header-title">
-  <h2>Study <span id="schema-header-title-project">search <a href="https://github.com/ga4gh-schemablocks/playground" target="_BLANK">&nearr;</a></span> </h2>
+  <h2><span id="schema-header-title-project">search</span> Study <a href="https://github.com/ga4gh-schemablocks/playground" target="_BLANK">[ &nearr; ]</a></h2>
 </div>
 
 <table id="schema-header-table">
-  <tr>
-    <th>{S}[B] Status <a href="https://schemablocks.org/about/sb-status-levels.html">[i]</a></th>
-    <td><div id="schema-header-status">proposed</div></td>
-  </tr>
-
-  <tr>
-    <th>Used by</th>
-    <td>
-      <ul>
+<tr>
+<th>{S}[B] Status <a href="https://schemablocks.org/about/sb-status-levels.html">[i]</a></th>
+<td><div id="schema-header-status">proposed</div></td>
+</tr>
+<tr><th>Used by</th><td><ul>
 <li>Super Simple Study Schema</li>
-      </ul>
-    </td>
-  </tr>
+</ul></td></tr>
+
 
 <!--more-->
-
-  <tr>
-    <th>Contributors</th>
-    <td>
-      <ul>
+<tr><th>Contributors</th><td><ul>
 <li>GA4GH Search Team</li>
 <li><a href="https://orcid.org/0000-0001-9135-2164">Jonathan Fuerth</a></li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <th>Source (v0.0.1)</th>
-    <td>
-      <ul>
-        <li><a href="current/Study.json" target="_BLANK">raw source [JSON]</a></li>
-        <li><a href="https://github.com/ga4gh-schemablocks/playground/blob/master/schemas/Study.yaml" target="_BLANK">Github</a></li>
-      </ul>
-    </td>
-  </tr>
+</ul></td></tr>
+<tr><th>Source (v0.0.1)</th><td><ul>
+<li><a href="current/Study.json" target="_BLANK">raw source [JSON]</a></li>
+<li><a href="https://github.com/ga4gh-schemablocks/playground/blob/master/schemas/Study.yaml" target="_BLANK">Github</a></li>
+</ul></td></tr>
 </table>
 
-<div id="schema-attributes-title">
-  <h3>Attributes</h3>
-</div>
+<div id="schema-attributes-title"><h3>Attributes</h3></div>
 
   
 __Type:__ object  
@@ -65,53 +47,22 @@ __Description:__ Attributes relating to any kind of medical study or data collec
 ### Properties
 
 <table id="schema-properties-table">
-  <tr>
-    <th>Property</th>
-    <th>Type</th>
-  </tr>
-  <tr>
-    <th>data_use</th>
-    <td>https://schemablocks.org/schemas/sb-phenopackets/OntologyClass/v1.0.0</td>
-  </tr>
-  <tr>
-    <th>design</th>
-    <td>string</td>
-  </tr>
-  <tr>
-    <th>disease_area</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>end_date</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>geo_location</th>
-    <td>https://schemablocks.org/schemas/ga4gh/v0.0.1/GeoLocation.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/GeoLocation.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/GeoLocation.html" target="_BLANK">HTML</a>]</td>
-  </tr>
-  <tr>
-    <th>id</th>
-    <td>string</td>
-  </tr>
-  <tr>
-    <th>name</th>
-    <td>string</td>
-  </tr>
-  <tr>
-    <th>objectives</th>
-    <td>string</td>
-  </tr>
-  <tr>
-    <th>start_date</th>
-    <td></td>
-  </tr>
-
+<tr><th>Property</th><th>Type</th></tr>
+<tr><th>data_use</th><td>https://schemablocks.org/schemas/sb-phenopackets/OntologyClass/v1.0.0 [<a href="https://schemablocks.org/schemas/sb-phenopackets/OntologyClass/v1.0.0">LINK</a>]</td></tr>
+<tr><th>design</th><td>string</td></tr>
+<tr><th>disease_area</th><td></td></tr>
+<tr><th>end_date</th><td></td></tr>
+<tr><th>geo_location</th><td>https://schemablocks.org/schemas/ga4gh/v0.0.1/GeoLocation.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/GeoLocation.json">LINK</a>]</td></tr>
+<tr><th>id</th><td>string</td></tr>
+<tr><th>name</th><td>string</td></tr>
+<tr><th>objectives</th><td>string</td></tr>
+<tr><th>start_date</th><td></td></tr>
 </table>
 
 
 #### data_use
 
-* type: https://schemablocks.org/schemas/sb-phenopackets/OntologyClass/v1.0.0
+* type: https://schemablocks.org/schemas/sb-phenopackets/OntologyClass/v1.0.0 [<a href="https://schemablocks.org/schemas/sb-phenopackets/OntologyClass/v1.0.0">LINK</a>]
 
 Conditions and restrictions on the use of data associated with this study.
 
@@ -189,7 +140,7 @@ Date that the study began or is planned to begin.
 
 #### geo_location
 
-* type: https://schemablocks.org/schemas/ga4gh/v0.0.1/GeoLocation.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/GeoLocation.json" target="_BLANK">SRC</a>] [<a href="https://schemablocks.org/schemas/ga4gh/GeoLocation.html" target="_BLANK">HTML</a>]
+* type: https://schemablocks.org/schemas/ga4gh/v0.0.1/GeoLocation.json [<a href="https://schemablocks.org/schemas/ga4gh/v0.0.1/GeoLocation.json">LINK</a>]
 
 The geographic location where the study takes place. Use as an array item type for studies that take
 place in multiple discrete locations.
@@ -246,9 +197,6 @@ Objectives of the study, described in natural language.
 Date that the study began or is planned to begin.
 
 
-<div id="schema-footer">
-This schema representation is for information purposes. The authorative 
-version remains with the developing project (see "provenance").
-</div>
+<div id="schema-footer"> This schema representation is for information purposes. The authorative  version remains with the developing project (see "provenance"). </div>
 
 
