@@ -15,7 +15,7 @@ tags:
 ---
 
 <div id="schema-header-title">
-  <h2><span id="schema-header-title-project">beacon-v2</span> AnalysisFields <a href="https://github.com/ga4gh-beacon/sb-beacon-api" target="_BLANK">[ &nearr; ]</a></h2>
+  <h2><span id="schema-header-title-project">beacon-v2</span> AnalysisFields <a href="https://github.com/ga4gh-schemablocks/sb-beacon-api" target="_BLANK">[ &nearr; ]</a></h2>
 </div>
 
 <table id="schema-header-table">
@@ -41,7 +41,7 @@ tags:
 </ul></td></tr>
 <tr><th>Source (2.0.0-draft.3)</th><td><ul>
 <li><a href="current/AnalysisFields.json" target="_BLANK">raw source [JSON]</a></li>
-<li><a href="https://github.com/ga4gh-beacon/sb-beacon-api/blob/master/schemas/AnalysisFields.yaml" target="_BLANK">Github</a></li>
+<li><a href="https://github.com/ga4gh-schemablocks/sb-beacon-api/blob/master/schemas/AnalysisFields.yaml" target="_BLANK">Github</a></li>
 </ul></td></tr>
 </table>
 
