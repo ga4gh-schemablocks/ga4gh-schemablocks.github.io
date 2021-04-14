@@ -7,7 +7,7 @@ excerpt_separator: <!--more-->
 categories:
   - specification
 tags:
-  - Beaconv2
+  - Beacon-v2
   - beacon
   - beacon-v2
   - proposed

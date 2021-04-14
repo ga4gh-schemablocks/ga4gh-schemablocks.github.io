@@ -107,6 +107,7 @@ cloud_tags:
   - proposed        # sb_status
   - implemented     # sb_status
   - core            # sb_status
+  - Beacon-v2
   - sb-beacon-api   # project
   - sb-vr-schema    # project
   - sb-phenopackets # project
