@@ -1,7 +1,7 @@
 ---
 title: HtsFile
 layout: default
-permalink: "/schemas/sb-phenopackets/HtsFile.html"
+permalink: "/schemas/playground/HtsFile.html"
 sb_status: "implemented"
 excerpt_separator: <!--more-->
 categories:

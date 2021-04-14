@@ -1,7 +1,7 @@
 ---
 title: IscnAllele
 layout: default
-permalink: "/schemas/sb-phenopackets/IscnAllele.html"
+permalink: "/schemas/playground/IscnAllele.html"
 sb_status: "implemented"
 excerpt_separator: <!--more-->
 categories:

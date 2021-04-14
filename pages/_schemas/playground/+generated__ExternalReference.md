@@ -1,7 +1,7 @@
 ---
 title: ExternalReference
 layout: default
-permalink: "/schemas/sb-phenopackets/ExternalReference.html"
+permalink: "/schemas/playground/ExternalReference.html"
 sb_status: "implemented"
 excerpt_separator: <!--more-->
 categories:

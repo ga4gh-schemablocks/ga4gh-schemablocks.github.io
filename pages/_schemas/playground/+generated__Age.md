@@ -1,7 +1,7 @@
 ---
 title: Age
 layout: default
-permalink: "/schemas/sb-phenopackets/Age.html"
+permalink: "/schemas/playground/Age.html"
 sb_status: "implemented"
 excerpt_separator: <!--more-->
 categories:

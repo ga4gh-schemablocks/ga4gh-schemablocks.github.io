@@ -1,7 +1,7 @@
 ---
 title: Gene
 layout: default
-permalink: "/schemas/sb-phenopackets/Gene.html"
+permalink: "/schemas/playground/Gene.html"
 sb_status: "implemented"
 excerpt_separator: <!--more-->
 categories:

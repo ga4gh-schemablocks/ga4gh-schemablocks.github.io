@@ -1,7 +1,7 @@
 ---
 title: Variant
 layout: default
-permalink: "/schemas/sb-phenopackets/Variant.html"
+permalink: "/schemas/playground/Variant.html"
 sb_status: "implemented"
 excerpt_separator: <!--more-->
 categories:

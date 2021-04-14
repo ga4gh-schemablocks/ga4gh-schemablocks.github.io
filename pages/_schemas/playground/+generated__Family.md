@@ -1,7 +1,7 @@
 ---
 title: Family
 layout: default
-permalink: "/schemas/sb-phenopackets/Family.html"
+permalink: "/schemas/playground/Family.html"
 sb_status: "implemented"
 excerpt_separator: <!--more-->
 categories:

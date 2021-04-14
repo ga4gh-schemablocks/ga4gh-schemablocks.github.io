@@ -22,6 +22,7 @@ tags:
 <td><div id="schema-header-status">proposed</div></td>
 </tr>
 <tr><th>Provenance</th><td><ul>
+<li><a href="https://tools.ietf.org/html/rfc7946">IETF GeoJSON pecification</a></li>
 <li><a href="https://github.com/ga4gh-metadata/metadata-schemas/blob/master/schemas/shared.proto#L60">Developer branch of original GA4GH schema</a></li>
 <li><a href="https://github.com/progenetix/schemas/">Progenetix</a></li>
 </ul></td></tr>
@@ -37,7 +38,7 @@ tags:
 <li><a href="https://orcid.org/0000-0002-4839-5158">Isuru Liyanage</a></li>
 <li><a href="https://orcid.org/0000-0002-9551-6370">Melanie Courtot</a></li>
 </ul></td></tr>
-<tr><th>Source (v2021-03-04)</th><td><ul>
+<tr><th>Source (v2021-04-14)</th><td><ul>
 <li><a href="current/GeoLocation.json" target="_BLANK">raw source [JSON]</a></li>
 <li><a href="https://github.com/ga4gh-schemablocks/playground/blob/master/schemas/GeoLocation.yaml" target="_BLANK">Github</a></li>
 </ul></td></tr>

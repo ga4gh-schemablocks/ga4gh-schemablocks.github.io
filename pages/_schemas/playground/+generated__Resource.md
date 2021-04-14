@@ -1,7 +1,7 @@
 ---
 title: Resource
 layout: default
-permalink: "/schemas/sb-phenopackets/Resource.html"
+permalink: "/schemas/playground/Resource.html"
 sb_status: "implemented"
 excerpt_separator: <!--more-->
 categories:

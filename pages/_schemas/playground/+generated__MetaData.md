@@ -1,7 +1,7 @@
 ---
 title: MetaData
 layout: default
-permalink: "/schemas/sb-phenopackets/MetaData.html"
+permalink: "/schemas/playground/MetaData.html"
 sb_status: "implemented"
 excerpt_separator: <!--more-->
 categories:

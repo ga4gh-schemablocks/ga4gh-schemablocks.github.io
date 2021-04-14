@@ -1,7 +1,7 @@
 ---
 title: Phenopacket
 layout: default
-permalink: "/schemas/sb-phenopackets/Phenopacket.html"
+permalink: "/schemas/playground/Phenopacket.html"
 sb_status: "implemented"
 excerpt_separator: <!--more-->
 categories:

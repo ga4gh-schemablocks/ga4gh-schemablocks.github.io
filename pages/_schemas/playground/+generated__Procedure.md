@@ -1,7 +1,7 @@
 ---
 title: Procedure
 layout: default
-permalink: "/schemas/sb-phenopackets/Procedure.html"
+permalink: "/schemas/playground/Procedure.html"
 sb_status: "implemented"
 excerpt_separator: <!--more-->
 categories:

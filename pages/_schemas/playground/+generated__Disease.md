@@ -1,7 +1,7 @@
 ---
 title: Disease
 layout: default
-permalink: "/schemas/sb-phenopackets/Disease.html"
+permalink: "/schemas/playground/Disease.html"
 sb_status: "implemented"
 excerpt_separator: <!--more-->
 categories:

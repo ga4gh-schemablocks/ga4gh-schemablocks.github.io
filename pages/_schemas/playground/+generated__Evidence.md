@@ -1,7 +1,7 @@
 ---
 title: Evidence
 layout: default
-permalink: "/schemas/sb-phenopackets/Evidence.html"
+permalink: "/schemas/playground/Evidence.html"
 sb_status: "implemented"
 excerpt_separator: <!--more-->
 categories:

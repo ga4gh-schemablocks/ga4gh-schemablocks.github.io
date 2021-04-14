@@ -1,7 +1,7 @@
 ---
 title: SpdiAllele
 layout: default
-permalink: "/schemas/sb-phenopackets/SpdiAllele.html"
+permalink: "/schemas/playground/SpdiAllele.html"
 sb_status: "implemented"
 excerpt_separator: <!--more-->
 categories:

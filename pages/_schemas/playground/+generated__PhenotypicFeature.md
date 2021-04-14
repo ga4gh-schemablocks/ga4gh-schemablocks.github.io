@@ -1,7 +1,7 @@
 ---
 title: PhenotypicFeature
 layout: default
-permalink: "/schemas/sb-phenopackets/PhenotypicFeature.html"
+permalink: "/schemas/playground/PhenotypicFeature.html"
 sb_status: "implemented"
 excerpt_separator: <!--more-->
 categories:

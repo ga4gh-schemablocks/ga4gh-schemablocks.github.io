@@ -1,7 +1,7 @@
 ---
 title: AgeRange
 layout: default
-permalink: "/schemas/sb-phenopackets/AgeRange.html"
+permalink: "/schemas/playground/AgeRange.html"
 sb_status: "implemented"
 excerpt_separator: <!--more-->
 categories:

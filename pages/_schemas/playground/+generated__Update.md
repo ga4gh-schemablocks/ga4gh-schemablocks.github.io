@@ -1,7 +1,7 @@
 ---
 title: Update
 layout: default
-permalink: "/schemas/sb-phenopackets/Update.html"
+permalink: "/schemas/playground/Update.html"
 sb_status: "implemented"
 excerpt_separator: <!--more-->
 categories:

@@ -1,7 +1,7 @@
 ---
 title: Biosample
 layout: default
-permalink: "/schemas/sb-phenopackets/Biosample.html"
+permalink: "/schemas/playground/Biosample.html"
 sb_status: "implemented"
 excerpt_separator: <!--more-->
 categories:

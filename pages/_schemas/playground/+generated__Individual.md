@@ -1,7 +1,7 @@
 ---
 title: Individual
 layout: default
-permalink: "/schemas/sb-phenopackets/Individual.html"
+permalink: "/schemas/playground/Individual.html"
 sb_status: "implemented"
 excerpt_separator: <!--more-->
 categories:

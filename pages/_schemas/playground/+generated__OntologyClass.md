@@ -1,7 +1,7 @@
 ---
 title: OntologyClass
 layout: default
-permalink: "/schemas/sb-phenopackets/OntologyClass.html"
+permalink: "/schemas/playground/OntologyClass.html"
 sb_status: "core"
 excerpt_separator: <!--more-->
 categories:

@@ -1,7 +1,7 @@
 ---
 title: Person
 layout: default
-permalink: "/schemas/sb-phenopackets/Person.html"
+permalink: "/schemas/playground/Person.html"
 sb_status: "implemented"
 excerpt_separator: <!--more-->
 categories:

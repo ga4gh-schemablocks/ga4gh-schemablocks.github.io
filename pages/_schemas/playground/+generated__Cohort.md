@@ -1,7 +1,7 @@
 ---
 title: Cohort
 layout: default
-permalink: "/schemas/sb-phenopackets/Cohort.html"
+permalink: "/schemas/playground/Cohort.html"
 sb_status: "implemented"
 excerpt_separator: <!--more-->
 categories:

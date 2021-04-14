@@ -1,7 +1,7 @@
 ---
 title: VcfAllele
 layout: default
-permalink: "/schemas/sb-phenopackets/VcfAllele.html"
+permalink: "/schemas/playground/VcfAllele.html"
 sb_status: "implemented"
 excerpt_separator: <!--more-->
 categories:
