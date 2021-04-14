@@ -1,0 +1,55 @@
+{
+   "$id" : "https://schemablocks.org/schemas/playground/BloodGroup/v2021-04-13",
+   "$schema" : "https://json-schema.org/draft/2020-12/schema",
+   "description" : "An OntologyReference constrained to ABO Blood Groups\n",
+   "examples" : [],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "GA4GH Data Connect Team"
+         },
+         {
+            "description" : "Jonathan Fuerth",
+            "id" : "orcid:0000-0001-9135-2164"
+         }
+      ],
+      "provenance" : [
+         {
+            "description" : "GA4GH Data Connect"
+         }
+      ],
+      "sb_status" : "proposed",
+      "used_by" : [
+         {
+            "description" : "Example schema in Data Connect specification"
+         }
+      ]
+   },
+   "properties" : {
+      "id" : {
+         "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/OntologyClass.json#/properties",
+         "description" : "Subtype of HP:0032224 (ABO Blood Group)",
+         "examples" : [
+            {
+               "const" : "HP:0032442",
+               "title" : "O"
+            },
+            {
+               "const" : "HP:0032370",
+               "title" : "A"
+            },
+            {
+               "const" : "HP:0032440",
+               "title" : "B"
+            },
+            {
+               "const" : "HP:0032441",
+               "title" : "AB"
+            }
+         ]
+      }
+   },
+   "title" : "BloodGroup",
+   "type" : "object"
+}
+
