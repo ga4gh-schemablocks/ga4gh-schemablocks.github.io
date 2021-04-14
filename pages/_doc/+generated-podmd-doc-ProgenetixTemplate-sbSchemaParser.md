@@ -1,9 +1,9 @@
 ---
-title: "ProgenetixTemplate::sbSchemaParser.pl Perl Code Documentation"
+title: "sbSchemaParser.pl Perl Code Documentation"
 layout: default
 www_link: 
 excerpt_separator: <!--more-->
-date: 2020-02-28
+date: 2021-04-14
 category:
   - howto
 tags:
@@ -18,113 +18,9 @@ tags:
 <!--more-->
 
 
-
-The `sbSchemaParser.pl` Perl script parses YAML schema definitions 
-written in [_JSON Schema_](https://json-schema.org) which use the standard GA4GH 
-[SchemaBlocks {S}[B]](http://schemablocks.org) structure, into 
-
-* JSON versions of the schemas (unprocessed), to serve as the reference
-schema versions
-* Markdown documentation, both in plain Markdown and as sources for "Jekyll" 
-based Markdown => HTML generation by Github Pages (or a local installation)
-* example `.json` data files, from the inline `examples`
-
-The output files are generated relative to the script path. This assumes a
-directory structure, in which the different repositories are contained in the
-same root (i.e. organization) directory, and the script itself is inside a
-first order directory in one of the repositories. The specific names of all of 
-the directories can be modified in `config.yaml`:
-
-```
-this-organization
-  |
-  |-- tools
-  |     |
-  |     |-- sbSchemaParser
-  |     |     |
-  |           |-- sbSchemaParser.pl # this file
-  |           |-- config.yaml       # in- and output path definitions
-  |
-  |-- sb-external-schemas-name      # example for (1 or 1+) schema repositories
-  |     |
-  |     |-- source
-  |     |     |
-  |     |     |-- v1.0.1						# versioned representation of the donor code
-  |     |
-  |     |-- schemas
-  |     |     |
-  |     |     |-- Schema.yaml
-  |     |     |-- OtherSchema.yaml
-  |     |     |-- ...
-  |     |
-  |     |-- working
-  |     |     |-- SomethingNew.yaml     
-  |     |     |-- ...
-  |     |     
-  |     |-- generated               # config.yaml -> "out_dirnames"
-  |           |
-  |           |-- doc
-  |           |     |-- Schema.md
-  |           |     |-- OtherSchema.md
-  |           |     |-- ...
-  |           |
-  |           |-- json
-  |           |     |    
-  |           |     |-- current
-  |           |     |     |-- Schema.json
-  |           |     |     |-- ...
-  |           |     |    
-  |           |     |-- v0.0.1
-  |           |     |     |-- Schema.json
-  |           |     |     |-- ...
-  |           |     |    
-  |           |     |-- v... 
-  |           |
-  |           |-- examples
-  |   
-  |-- (webdocs.repo)                # web repository (Jekyll based)
-        |
-        |-- (webdocs.jekylldir)
-        |     |
-        |     |-- Schema.md
-        |     |-- ...
-        |
-        |-- (webdocs.schemadir)
-              |
-              |     |-- Schema.json
-              |     |-- ...
-              |    
-              |-- v0.0.1
-              |     |-- Schema.json
-              |     |-- ...
-              |    
-              |-- v...
-```
-
-#### Usage
-
-The `sbSchemaParser.pl` script has to be run in a _local_ version of the 
-repository structure. In principle, any relative directory locations should be 
-possible if specified in the `config.yaml` defaults file, though a reasonable 
-approach is to use a "organization -> projects" structure as above.
-
-The script is executed with
-
-```
-perl sbSchemaParser.pl
-```
-
-The only current option is to provide a "-filter" argument against the schema 
-file names; e.g. `perl sbSchemaParser.pl -filter Age` will only process schemas 
-with "Age" in their file name.
-
-#### Processing Schema Source Directories
-
-The script parses through the associated source repositories which are required
-to reside inside a unified root (`git_root_dir`). The names of the (one or
-several) repositories and their schema file source directories (one or several
-per repository) are specified in the `config.yaml` file.
-
+If a `meta_header_filename` is provided for this schema, its `meta` root parameter
+is used to replace the schema's `meta`.
+TODO: merge meta entries
 The class name is derived from the file's "$id" value, assuming a canonical 
 path structure with the class name post-pended with a version:
 
@@ -142,7 +38,6 @@ markdown content, producing
 * a plain `.md` file in the output directories of the original repository 
 (`out_dirnames.markdown`)
 * the YAML header prepended file for the webpage generation
-
 
 A rudimentary CURIE to URL expansion is performed for prefixes defined in the
 configuration file. An example would be the linking of an ORCID id to its web 
@@ -213,12 +108,11 @@ specifications right now) which would being reduced to one
 
 
 
-
 ### Helper Subroutines
 
 #### `_expand_CURIEs`
 
 This function expands prefixes in identifiers, based on the parameters provided 
-in `config.yml`. This is thought as a helper for some script/website specific 
+in `config.yaml`. This is thought as a helper for some script/website specific 
 linking, not as a general CURIE expansion utility.
 
