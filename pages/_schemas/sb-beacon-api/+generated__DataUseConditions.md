@@ -24,7 +24,7 @@ tags:
 <td><div id="schema-header-status">proposed</div></td>
 </tr>
 <tr><th>Provenance</th><td><ul>
-<li><a href="https://github.com/ga4gh-beacon/specification-v2">Beacon v2</a></li>
+<li><a href="https://github.com/ga4gh-beacon/specification-v2">Beacon v2 provisional / developer version</a></li>
 </ul></td></tr>
 <tr><th>Used by</th><td><ul>
 <li><a href="https://github.com/progenetix/schemas/">Progenetix database schema (Beacon+ backend)</a></li>
