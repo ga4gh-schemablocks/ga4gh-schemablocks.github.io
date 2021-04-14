@@ -2,7 +2,7 @@
 title: CohortResponseContent
 layout: default
 permalink: "/schemas/sb-beacon-api/CohortResponseContent.html"
-sb_status: "community"
+sb_status: "proposed"
 excerpt_separator: <!--more-->
 categories:
   - specification
@@ -10,7 +10,7 @@ tags:
   - Beaconv2
   - beacon
   - beacon-v2
-  - community
+  - proposed
   - schemas
 ---
 
@@ -21,7 +21,7 @@ tags:
 <table id="schema-header-table">
 <tr>
 <th>{S}[B] Status <a href="https://schemablocks.org/about/sb-status-levels.html">[i]</a></th>
-<td><div id="schema-header-status">community</div></td>
+<td><div id="schema-header-status">proposed</div></td>
 </tr>
 <tr><th>Provenance</th><td><ul>
 <li><a href="https://github.com/ga4gh-beacon/specification-v2">Beacon v2</a></li>
