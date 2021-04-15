@@ -34,7 +34,7 @@ tags:
 <li>GA4GH Data Connect Team</li>
 <li><a href="https://orcid.org/0000-0001-9135-2164">Jonathan Fuerth</a></li>
 </ul></td></tr>
-<tr><th>Source (v2021-04-13)</th><td><ul>
+<tr><th>Source (v2021-04-14)</th><td><ul>
 <li><a href="current/BloodGroup.json" target="_BLANK">raw source [JSON]</a></li>
 <li><a href="https://github.com/ga4gh-schemablocks/playground/blob/master/schemas/BloodGroup.yaml" target="_BLANK">Github</a></li>
 </ul></td></tr>
@@ -44,7 +44,8 @@ tags:
 
   
 __Type:__ object  
-__Description:__ An OntologyReference constrained to ABO Blood Groups
+__Description:__ An OntologyReference constrained to ABO Blood Groups.
+TODO: A method to constrain the value space by design, not only through documentation
 
 ### Properties
 
@@ -64,26 +65,26 @@ Subtype of HP:0032224 (ABO Blood Group)
 
 ```
 {
-   "const" : "HP:0032442",
-   "title" : "O"
+   "id" : "HP:0032442",
+   "label" : "O"
 }
 ```
 ```
 {
-   "const" : "HP:0032370",
-   "title" : "A"
+   "id" : "HP:0032370",
+   "label" : "A"
 }
 ```
 ```
 {
-   "const" : "HP:0032440",
-   "title" : "B"
+   "id" : "HP:0032440",
+   "label" : "B"
 }
 ```
 ```
 {
-   "const" : "HP:0032441",
-   "title" : "AB"
+   "id" : "HP:0032441",
+   "label" : "AB"
 }
 ```
 <div id="schema-footer"> This schema representation is for information purposes. The authorative  version remains with the developing project (see "provenance"). </div>

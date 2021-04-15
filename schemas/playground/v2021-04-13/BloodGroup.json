@@ -1,7 +1,7 @@
 {
    "$id" : "https://schemablocks.org/schemas/playground/BloodGroup/v2021-04-13",
    "$schema" : "https://json-schema.org/draft/2020-12/schema",
-   "description" : "An OntologyReference constrained to ABO Blood Groups\n",
+   "description" : "An OntologyReference constrained to ABO Blood Groups.\nTODO: A method to constrain the value space by design, not only through documentation\n",
    "examples" : [],
    "meta" : {
       "contributors" : [
@@ -31,20 +31,20 @@
          "description" : "Subtype of HP:0032224 (ABO Blood Group)",
          "examples" : [
             {
-               "const" : "HP:0032442",
-               "title" : "O"
+               "id" : "HP:0032442",
+               "label" : "O"
             },
             {
-               "const" : "HP:0032370",
-               "title" : "A"
+               "id" : "HP:0032370",
+               "label" : "A"
             },
             {
-               "const" : "HP:0032440",
-               "title" : "B"
+               "id" : "HP:0032440",
+               "label" : "B"
             },
             {
-               "const" : "HP:0032441",
-               "title" : "AB"
+               "id" : "HP:0032441",
+               "label" : "AB"
             }
          ]
       }
