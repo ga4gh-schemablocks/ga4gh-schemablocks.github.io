@@ -38,7 +38,7 @@ tags:
 </ul></td></tr>
 <tr><th>Source (2.0.0-draft.4)</th><td><ul>
 <li><a href="current/measurement.json" target="_BLANK">raw source [JSON]</a></li>
-<li><a href="https://github.com/ga4gh-schemablocks/sb-beacon-api/blob/master//measurement.yaml" target="_BLANK">Github</a></li>
+<li><a href="https://github.com/ga4gh-schemablocks/sb-beacon-api/blob/master/schemas/models/common/measurement.yaml" target="_BLANK">Github</a></li>
 </ul></td></tr>
 </table>
 
