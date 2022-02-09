@@ -89,7 +89,7 @@
       "partOfSpecification",
       "defaultSchema"
    ],
-   "title" : "",
+   "title" : "entryTypeDefinition",
    "type" : "object"
 }
 

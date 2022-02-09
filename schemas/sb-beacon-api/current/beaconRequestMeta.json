@@ -43,6 +43,7 @@
    "required" : [
       "apiVersion"
    ],
+   "title" : "beaconRequestMeta",
    "type" : "object"
 }
 

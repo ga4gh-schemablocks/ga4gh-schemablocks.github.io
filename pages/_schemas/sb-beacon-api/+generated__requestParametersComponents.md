@@ -15,7 +15,7 @@ tags:
 ---
 
 <div id="schema-header-title">
-  <h2><span id="schema-header-title-project">sb-beacon-api</span>  <a href="https://github.com/ga4gh-schemablocks/sb-beacon-api" target="_BLANK">[ &nearr; ]</a></h2>
+  <h2><span id="schema-header-title-project">sb-beacon-api</span> requestParametersComponents <a href="https://github.com/ga4gh-schemablocks/sb-beacon-api" target="_BLANK">[ &nearr; ]</a></h2>
 </div>
 
 <table id="schema-header-table">

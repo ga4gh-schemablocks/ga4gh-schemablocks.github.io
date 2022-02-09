@@ -42,6 +42,7 @@
       "meta",
       "response"
    ],
+   "title" : "beaconEntryTypesResponse",
    "type" : "object"
 }
 

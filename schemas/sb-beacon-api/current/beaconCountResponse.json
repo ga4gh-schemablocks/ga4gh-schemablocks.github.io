@@ -49,6 +49,7 @@
       "meta",
       "responseSummary"
    ],
+   "title" : "beaconCountResponse",
    "type" : "object"
 }
 

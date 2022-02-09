@@ -55,6 +55,7 @@
       "responseSummary",
       "response"
    ],
+   "title" : "beaconResultsetsResponse",
    "type" : "object"
 }
 

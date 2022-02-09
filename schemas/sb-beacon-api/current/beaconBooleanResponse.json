@@ -49,6 +49,7 @@
       "meta",
       "responseSummary"
    ],
+   "title" : "beaconBooleanResponse",
    "type" : "object"
 }
 

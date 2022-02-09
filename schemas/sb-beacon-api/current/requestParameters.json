@@ -99,6 +99,7 @@
             "label" : "Progenetix database schema (Beacon+ backend)"
          }
       ]
-   }
+   },
+   "title" : "requestParameters"
 }
 

@@ -42,6 +42,7 @@
       "meta",
       "response"
    ],
+   "title" : "beaconInfoResponse",
    "type" : "object"
 }
 
