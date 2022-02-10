@@ -21,7 +21,7 @@ directories:
 * multiple and nested `schema dirs`
 * meta header definition in config file and/or repository-specific YAML file
 * more relaxed regarding parameters and input schema structure
-  - `$id` papameter not strictly required; schema anmd version can be provided
+  - `$id` parameter not strictly required; schema anmd version can be provided
   from file name and through the config file, respectively
   - similar for the title which has now a "stemmed file name" fallback
 * updated documentation
