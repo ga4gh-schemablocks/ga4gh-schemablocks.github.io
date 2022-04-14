@@ -24,7 +24,8 @@ tags:
 <td><div id="schema-header-status">proposed</div></td>
 </tr>
 <tr><th>Provenance</th><td><ul>
-<li><a href="https://github.com/ga4gh-beacon/">Beacon v2 provisional version</a></li>
+<li><a href="https://github.com/ga4gh-beacon/beacon-v2">Beacon v2</a></li>
+<li><a href="http://docs.genomebeacons.org">Beacon v2 documentation</a></li>
 </ul></td></tr>
 <tr><th>Used by</th><td><ul>
 <li><a href="https://ga4gh-approval-service-registry.ega-archive.org">Beacon v2 frontline implementers</a></li>
@@ -36,9 +37,9 @@ tags:
 <tr><th>Contributors</th><td><ul>
 <li><a href="https://beacon-project.io/categories/people.html">ELIXIR Beacon project team</a></li>
 </ul></td></tr>
-<tr><th>Source (2.0.0-draft.4)</th><td><ul>
+<tr><th>Source (2.0.0)</th><td><ul>
 <li><a href="current/ageRange.json" target="_BLANK">raw source [JSON]</a></li>
-<li><a href="https://github.com/ga4gh-schemablocks/sb-beacon-api/blob/master/schemas/models/common/ageRange.yaml" target="_BLANK">Github</a></li>
+<li><a href="https://github.com/ga4gh-schemablocks/sb-beacon-api/blob/master/schemas/beacon-v2-default-model/common/ageRange.yaml" target="_BLANK">Github</a></li>
 </ul></td></tr>
 </table>
 
@@ -46,7 +47,7 @@ tags:
 
   
 __Type:__ object  
-__Description:__ Age range definition.
+__Description:__ Age range definition. Provenance: GA4GH Phenopackets v2 `AgeRange`
 ### Properties
 
 <table id="schema-properties-table">
@@ -60,14 +61,14 @@ __Description:__ Age range definition.
 
 * type: ./age.json
 
-Represents age as a ISO8601 duration (e.g., P59Y).
+Represents age as an ISO8601 duration (e.g., P59Y).
 
 
 #### start
 
 * type: ./age.json
 
-Represents age as a ISO8601 duration (e.g., P18Y).
+Represents age as an ISO8601 duration (e.g., P18Y).
 
 <div id="schema-footer"> This schema representation is for information purposes. The authorative  version remains with the developing project (see "provenance"). </div>
 

@@ -24,7 +24,8 @@ tags:
 <td><div id="schema-header-status">proposed</div></td>
 </tr>
 <tr><th>Provenance</th><td><ul>
-<li><a href="https://github.com/ga4gh-beacon/">Beacon v2 provisional version</a></li>
+<li><a href="https://github.com/ga4gh-beacon/beacon-v2">Beacon v2</a></li>
+<li><a href="http://docs.genomebeacons.org">Beacon v2 documentation</a></li>
 </ul></td></tr>
 <tr><th>Used by</th><td><ul>
 <li><a href="https://ga4gh-approval-service-registry.ega-archive.org">Beacon v2 frontline implementers</a></li>
@@ -36,7 +37,7 @@ tags:
 <tr><th>Contributors</th><td><ul>
 <li><a href="https://beacon-project.io/categories/people.html">ELIXIR Beacon project team</a></li>
 </ul></td></tr>
-<tr><th>Source (2.0.0-draft.4)</th><td><ul>
+<tr><th>Source (2.0.0)</th><td><ul>
 <li><a href="current/beaconMapSchema.json" target="_BLANK">raw source [JSON]</a></li>
 <li><a href="https://github.com/ga4gh-schemablocks/sb-beacon-api/blob/master/schemas/framework/configuration/beaconMapSchema.yaml" target="_BLANK">Github</a></li>
 </ul></td></tr>
@@ -46,7 +47,7 @@ tags:
 
   
 __Type:__ object  
-__Description:__ Map of a Beacon, its entry types and endpoints. It is conceptually similar to a website sitemap.
+__Description:__ Map of a Beacon, its entry types and endpoints. It isconceptually similar to a website sitemap.
 ### Properties
 
 <table id="schema-properties-table">

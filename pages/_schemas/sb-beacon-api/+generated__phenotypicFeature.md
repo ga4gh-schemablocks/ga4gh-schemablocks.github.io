@@ -24,7 +24,8 @@ tags:
 <td><div id="schema-header-status">proposed</div></td>
 </tr>
 <tr><th>Provenance</th><td><ul>
-<li><a href="https://github.com/ga4gh-beacon/">Beacon v2 provisional version</a></li>
+<li><a href="https://github.com/ga4gh-beacon/beacon-v2">Beacon v2</a></li>
+<li><a href="http://docs.genomebeacons.org">Beacon v2 documentation</a></li>
 </ul></td></tr>
 <tr><th>Used by</th><td><ul>
 <li><a href="https://ga4gh-approval-service-registry.ega-archive.org">Beacon v2 frontline implementers</a></li>
@@ -36,9 +37,9 @@ tags:
 <tr><th>Contributors</th><td><ul>
 <li><a href="https://beacon-project.io/categories/people.html">ELIXIR Beacon project team</a></li>
 </ul></td></tr>
-<tr><th>Source (2.0.0-draft.4)</th><td><ul>
+<tr><th>Source (2.0.0)</th><td><ul>
 <li><a href="current/phenotypicFeature.json" target="_BLANK">raw source [JSON]</a></li>
-<li><a href="https://github.com/ga4gh-schemablocks/sb-beacon-api/blob/master/schemas/models/common/phenotypicFeature.yaml" target="_BLANK">Github</a></li>
+<li><a href="https://github.com/ga4gh-schemablocks/sb-beacon-api/blob/master/schemas/beacon-v2-default-model/common/phenotypicFeature.yaml" target="_BLANK">Github</a></li>
 </ul></td></tr>
 </table>
 
@@ -53,12 +54,12 @@ __Description:__ Used to describe a phenotype that characterizes the subject or 
 <tr><th>Property</th><th>Type</th></tr>
 <tr><th>evidence</th><td>./evidence.json</td></tr>
 <tr><th>excluded</th><td>boolean</td></tr>
-<tr><th>featureType</th><td>https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json">LINK</a>]</td></tr>
-<tr><th>modifiers</th><td>array of "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json">LINK</a>]"</td></tr>
+<tr><th>featureType</th><td>https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json">LINK</a>]</td></tr>
+<tr><th>modifiers</th><td>array of "https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json">LINK</a>]"</td></tr>
 <tr><th>notes</th><td>string</td></tr>
 <tr><th>onset</th><td>./timeElement.json</td></tr>
 <tr><th>resolution</th><td>./timeElement.json</td></tr>
-<tr><th>severityLevel</th><td>./commonDefinitions.json#/definitions/SeverityLevel</td></tr>
+<tr><th>severity</th><td>./commonDefinitions.json#/definitions/SeverityLevel</td></tr>
 </table>
 
 
@@ -78,7 +79,7 @@ The evidence for an assertion of the observation of a type. RECOMMENDED.
 
 #### featureType
 
-* type: https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json">LINK</a>]
+* type: https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json">LINK</a>]
 
 Term denoting the phenotypic feature, preferably using a value from Human Phenotype Ontology (HPO)
 
@@ -105,7 +106,7 @@ Term denoting the phenotypic feature, preferably using a value from Human Phenot
 
 #### modifiers
 
-* type: array of "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json">LINK</a>]"
+* type: array of "https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json">LINK</a>]"
 
 For instance one or more terms from HPO Clinical Modifier (HP:0012823). This subontology is designed to provide terms to characterize and specify the phenotypic abnormalities defined in the Phenotypic abnormality subontology, with respect to severity, laterality, age of onset, and other aspects. [ HPO:probinson ] 
 
@@ -150,12 +151,26 @@ Age or time at which the feature was first observed.
 Age or time at which the feature resolved or abated.
 
 
-#### severityLevel
+#### severity
 
 * type: ./commonDefinitions.json#/definitions/SeverityLevel
 
 
 
+##### `severity` Value Examples  
+
+```
+{
+   "id" : "HP:0012828",
+   "label" : "Severe"
+}
+```
+```
+{
+   "id" : "HP:0012826",
+   "label" : "Moderate"
+}
+```
 <div id="schema-footer"> This schema representation is for information purposes. The authorative  version remains with the developing project (see "provenance"). </div>
 
 

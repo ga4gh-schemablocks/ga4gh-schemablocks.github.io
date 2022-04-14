@@ -24,7 +24,8 @@ tags:
 <td><div id="schema-header-status">proposed</div></td>
 </tr>
 <tr><th>Provenance</th><td><ul>
-<li><a href="https://github.com/ga4gh-beacon/">Beacon v2 provisional version</a></li>
+<li><a href="https://github.com/ga4gh-beacon/beacon-v2">Beacon v2</a></li>
+<li><a href="http://docs.genomebeacons.org">Beacon v2 documentation</a></li>
 </ul></td></tr>
 <tr><th>Used by</th><td><ul>
 <li><a href="https://ga4gh-approval-service-registry.ega-archive.org">Beacon v2 frontline implementers</a></li>
@@ -36,9 +37,9 @@ tags:
 <tr><th>Contributors</th><td><ul>
 <li><a href="https://beacon-project.io/categories/people.html">ELIXIR Beacon project team</a></li>
 </ul></td></tr>
-<tr><th>Source (2.0.0-draft.4)</th><td><ul>
+<tr><th>Source (2.0.0)</th><td><ul>
 <li><a href="current/evidence.json" target="_BLANK">raw source [JSON]</a></li>
-<li><a href="https://github.com/ga4gh-schemablocks/sb-beacon-api/blob/master/schemas/models/common/evidence.yaml" target="_BLANK">Github</a></li>
+<li><a href="https://github.com/ga4gh-schemablocks/sb-beacon-api/blob/master/schemas/beacon-v2-default-model/common/evidence.yaml" target="_BLANK">Github</a></li>
 </ul></td></tr>
 </table>
 
@@ -46,19 +47,19 @@ tags:
 
   
 __Type:__ object  
-__Description:__ Definition of an evidence class.
+__Description:__ Definition of an evidence class. Provenance: GA4GH Phenopackets v2 `Evidence`
 ### Properties
 
 <table id="schema-properties-table">
 <tr><th>Property</th><th>Type</th></tr>
-<tr><th>evidenceCode</th><td>https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json">LINK</a>]</td></tr>
+<tr><th>evidenceCode</th><td>https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json">LINK</a>]</td></tr>
 <tr><th>reference</th><td>./externalReference.json</td></tr>
 </table>
 
 
 #### evidenceCode
 
-* type: https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json">LINK</a>]
+* type: https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json">LINK</a>]
 
 An ontology class that represents the evidence type
 

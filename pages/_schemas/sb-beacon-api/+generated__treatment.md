@@ -15,7 +15,7 @@ tags:
 ---
 
 <div id="schema-header-title">
-  <h2><span id="schema-header-title-project">sb-beacon-api</span> Treament <a href="https://github.com/ga4gh-schemablocks/sb-beacon-api" target="_BLANK">[ &nearr; ]</a></h2>
+  <h2><span id="schema-header-title-project">sb-beacon-api</span> Treatment <a href="https://github.com/ga4gh-schemablocks/sb-beacon-api" target="_BLANK">[ &nearr; ]</a></h2>
 </div>
 
 <table id="schema-header-table">
@@ -24,7 +24,8 @@ tags:
 <td><div id="schema-header-status">proposed</div></td>
 </tr>
 <tr><th>Provenance</th><td><ul>
-<li><a href="https://github.com/ga4gh-beacon/">Beacon v2 provisional version</a></li>
+<li><a href="https://github.com/ga4gh-beacon/beacon-v2">Beacon v2</a></li>
+<li><a href="http://docs.genomebeacons.org">Beacon v2 documentation</a></li>
 </ul></td></tr>
 <tr><th>Used by</th><td><ul>
 <li><a href="https://ga4gh-approval-service-registry.ega-archive.org">Beacon v2 frontline implementers</a></li>
@@ -36,9 +37,9 @@ tags:
 <tr><th>Contributors</th><td><ul>
 <li><a href="https://beacon-project.io/categories/people.html">ELIXIR Beacon project team</a></li>
 </ul></td></tr>
-<tr><th>Source (2.0.0-draft.4)</th><td><ul>
+<tr><th>Source (2.0.0)</th><td><ul>
 <li><a href="current/treatment.json" target="_BLANK">raw source [JSON]</a></li>
-<li><a href="https://github.com/ga4gh-schemablocks/sb-beacon-api/blob/master/schemas/models/common/treatment.yaml" target="_BLANK">Github</a></li>
+<li><a href="https://github.com/ga4gh-schemablocks/sb-beacon-api/blob/master/schemas/beacon-v2-default-model/common/treatment.yaml" target="_BLANK">Github</a></li>
 </ul></td></tr>
 </table>
 
@@ -52,12 +53,10 @@ __Description:__ Treatment(s) prescribed/administered, defined by treatment ID, 
 <table id="schema-properties-table">
 <tr><th>Property</th><th>Type</th></tr>
 <tr><th>ageAtOnset</th><td>./age.json</td></tr>
-<tr><th>dose</th><td>number</td></tr>
-<tr><th>duration</th><td>string</td></tr>
-<tr><th>frequency</th><td>string</td></tr>
-<tr><th>route</th><td>https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json">LINK</a>]</td></tr>
-<tr><th>treatmentCode</th><td>https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json">LINK</a>]</td></tr>
-<tr><th>units</th><td>./commonDefinitions.json#/definitions/Units</td></tr>
+<tr><th>cumulativeDose</th><td>./quantity.json</td></tr>
+<tr><th>doseIntervals</th><td>array of "./doseInterval.json"</td></tr>
+<tr><th>routeOfAdministration</th><td>https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json">LINK</a>]</td></tr>
+<tr><th>treatmentCode</th><td>https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json">LINK</a>]</td></tr>
 </table>
 
 
@@ -68,39 +67,27 @@ __Description:__ Treatment(s) prescribed/administered, defined by treatment ID, 
 
 
 
-#### dose
+#### cumulativeDose
 
-* type: number
-
-The amount of any substance administered over a specific period of time. [ NCIT:C15682 ] 
+* type: ./quantity.json
 
 
-#### duration
-
-* type: string
-
-Treatment duration in ISO8601 duration format
-
-##### `duration` Value Example  
-
-```
-"P7D"
-```
-
-#### frequency
-
-* type: string
-
-The number of times a substance is administered within a specific time period. [ NCIT:C89081 ] 
 
 
-#### route
+#### doseIntervals
 
-* type: https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json">LINK</a>]
+* type: array of "./doseInterval.json"
+
+
+
+
+#### routeOfAdministration
+
+* type: https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json">LINK</a>]
 
 Route of treatment. Value from NCIT Route of Administration tree (NCIT:C38114).
 
-##### `route` Value Examples  
+##### `routeOfAdministration` Value Examples  
 
 ```
 {
@@ -117,9 +104,9 @@ Route of treatment. Value from NCIT Route of Administration tree (NCIT:C38114).
 
 #### treatmentCode
 
-* type: https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json">LINK</a>]
+* type: https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json">LINK</a>]
 
-Code of treatment. Value from NCIT or any relevant ontology.
+Code of treatment. Value from NCIT or any relevant ontology. Compares to `agent` in Phenopackets v2
 
 ##### `treatmentCode` Value Examples  
 
@@ -135,13 +122,6 @@ Code of treatment. Value from NCIT or any relevant ontology.
    "label" : "Tamoxifen"
 }
 ```
-
-#### units
-
-* type: ./commonDefinitions.json#/definitions/Units
-
-Treatment dose units
-
 <div id="schema-footer"> This schema representation is for information purposes. The authorative  version remains with the developing project (see "provenance"). </div>
 
 

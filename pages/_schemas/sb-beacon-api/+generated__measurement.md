@@ -24,7 +24,8 @@ tags:
 <td><div id="schema-header-status">proposed</div></td>
 </tr>
 <tr><th>Provenance</th><td><ul>
-<li><a href="https://github.com/ga4gh-beacon/">Beacon v2 provisional version</a></li>
+<li><a href="https://github.com/ga4gh-beacon/beacon-v2">Beacon v2</a></li>
+<li><a href="http://docs.genomebeacons.org">Beacon v2 documentation</a></li>
 </ul></td></tr>
 <tr><th>Used by</th><td><ul>
 <li><a href="https://ga4gh-approval-service-registry.ega-archive.org">Beacon v2 frontline implementers</a></li>
@@ -36,9 +37,9 @@ tags:
 <tr><th>Contributors</th><td><ul>
 <li><a href="https://beacon-project.io/categories/people.html">ELIXIR Beacon project team</a></li>
 </ul></td></tr>
-<tr><th>Source (2.0.0-draft.4)</th><td><ul>
+<tr><th>Source (2.0.0)</th><td><ul>
 <li><a href="current/measurement.json" target="_BLANK">raw source [JSON]</a></li>
-<li><a href="https://github.com/ga4gh-schemablocks/sb-beacon-api/blob/master/schemas/models/common/measurement.yaml" target="_BLANK">Github</a></li>
+<li><a href="https://github.com/ga4gh-schemablocks/sb-beacon-api/blob/master/schemas/beacon-v2-default-model/common/measurement.yaml" target="_BLANK">Github</a></li>
 </ul></td></tr>
 </table>
 
@@ -46,12 +47,12 @@ tags:
 
   
 __Type:__ object  
-__Description:__ Definition of a measurement class.
+__Description:__ Definition of a measurement class. Provenance: GA4GH Phenopackets v2 `Measurement`
 ### Properties
 
 <table id="schema-properties-table">
 <tr><th>Property</th><th>Type</th></tr>
-<tr><th>assayCode</th><td>https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json">LINK</a>]</td></tr>
+<tr><th>assayCode</th><td>https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json">LINK</a>]</td></tr>
 <tr><th>date</th><td>string (date)</td></tr>
 <tr><th>measurementValue</th><td></td></tr>
 <tr><th>notes</th><td>string</td></tr>
@@ -62,9 +63,9 @@ __Description:__ Definition of a measurement class.
 
 #### assayCode
 
-* type: https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json">LINK</a>]
+* type: https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json">LINK</a>]
 
-Class that describes the assay used to produce the measurement
+Class that describes the assay used to produce the measurement. Renamed compared to GA4GH Phenopackets v2 `Measurement.assay`
 
 ##### `assayCode` Value Example  
 
@@ -79,7 +80,7 @@ Class that describes the assay used to produce the measurement
 
 * type: string (date)
 
-Date of measurement
+Date of measurement. Addition compared to Phenopackets model.
 
 
 #### measurementValue
@@ -93,7 +94,7 @@ The result of the measurement
 
 * type: string
 
-Unstructured text to describe this measurement
+Unstructured text to describe this measurement. Addition compared to Phenopackets model.
 
 ##### `notes` Value Example  
 
@@ -105,7 +106,7 @@ Unstructured text to describe this measurement
 
 * type: ./timeElement.json
 
-Moment in time at which measurement was performed. RECOMMENDED.
+Moment in time at which measurement was performed. RECOMMENDED. Renamed compared to GA4GH Phenopackets v2 `Measurement.time_observed`
 
 ##### `observationMoment` Value Example  
 

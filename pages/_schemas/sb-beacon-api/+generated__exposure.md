@@ -15,7 +15,7 @@ tags:
 ---
 
 <div id="schema-header-title">
-  <h2><span id="schema-header-title-project">sb-beacon-api</span> Procedure <a href="https://github.com/ga4gh-schemablocks/sb-beacon-api" target="_BLANK">[ &nearr; ]</a></h2>
+  <h2><span id="schema-header-title-project">sb-beacon-api</span> Exposure <a href="https://github.com/ga4gh-schemablocks/sb-beacon-api" target="_BLANK">[ &nearr; ]</a></h2>
 </div>
 
 <table id="schema-header-table">
@@ -24,7 +24,8 @@ tags:
 <td><div id="schema-header-status">proposed</div></td>
 </tr>
 <tr><th>Provenance</th><td><ul>
-<li><a href="https://github.com/ga4gh-beacon/">Beacon v2 provisional version</a></li>
+<li><a href="https://github.com/ga4gh-beacon/beacon-v2">Beacon v2</a></li>
+<li><a href="http://docs.genomebeacons.org">Beacon v2 documentation</a></li>
 </ul></td></tr>
 <tr><th>Used by</th><td><ul>
 <li><a href="https://ga4gh-approval-service-registry.ega-archive.org">Beacon v2 frontline implementers</a></li>
@@ -36,9 +37,9 @@ tags:
 <tr><th>Contributors</th><td><ul>
 <li><a href="https://beacon-project.io/categories/people.html">ELIXIR Beacon project team</a></li>
 </ul></td></tr>
-<tr><th>Source (2.0.0-draft.4)</th><td><ul>
+<tr><th>Source (2.0.0)</th><td><ul>
 <li><a href="current/exposure.json" target="_BLANK">raw source [JSON]</a></li>
-<li><a href="https://github.com/ga4gh-schemablocks/sb-beacon-api/blob/master/schemas/models/common/exposure.yaml" target="_BLANK">Github</a></li>
+<li><a href="https://github.com/ga4gh-schemablocks/sb-beacon-api/blob/master/schemas/beacon-v2-default-model/common/exposure.yaml" target="_BLANK">Github</a></li>
 </ul></td></tr>
 </table>
 
@@ -54,8 +55,8 @@ __Description:__ Exposures (lifestyle, behavioural exposures) occurred to indivi
 <tr><th>ageAtExposure</th><td>../common/age.json</td></tr>
 <tr><th>date</th><td>string (date)</td></tr>
 <tr><th>duration</th><td>string</td></tr>
-<tr><th>exposureCode</th><td>https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json">LINK</a>]</td></tr>
-<tr><th>units</th><td>../common/commonDefinitions.json#/definitions/Units</td></tr>
+<tr><th>exposureCode</th><td>https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json">LINK</a>]</td></tr>
+<tr><th>unit</th><td>../common/commonDefinitions.json#/definitions/Unit</td></tr>
 <tr><th>value</th><td>number</td></tr>
 </table>
 
@@ -88,7 +89,7 @@ Exposure duration in ISO8601 format
 
 #### exposureCode
 
-* type: https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json">LINK</a>]
+* type: https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json">LINK</a>]
 
 Exposure ID. Value from Environment Exposure Ontology.
 
@@ -107,11 +108,11 @@ Exposure ID. Value from Environment Exposure Ontology.
 }
 ```
 
-#### units
+#### unit
 
-* type: ../common/commonDefinitions.json#/definitions/Units
+* type: ../common/commonDefinitions.json#/definitions/Unit
 
-Units of the exposure. Recommended from NCIT Unit of Category ontology term (NCIT:C42568) descendants.
+Unit of the exposure. Recommended from NCIT Unit of Category ontology term (NCIT:C42568) descendants.
 
 
 #### value

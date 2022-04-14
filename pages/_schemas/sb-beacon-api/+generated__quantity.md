@@ -24,7 +24,8 @@ tags:
 <td><div id="schema-header-status">proposed</div></td>
 </tr>
 <tr><th>Provenance</th><td><ul>
-<li><a href="https://github.com/ga4gh-beacon/">Beacon v2 provisional version</a></li>
+<li><a href="https://github.com/ga4gh-beacon/beacon-v2">Beacon v2</a></li>
+<li><a href="http://docs.genomebeacons.org">Beacon v2 documentation</a></li>
 </ul></td></tr>
 <tr><th>Used by</th><td><ul>
 <li><a href="https://ga4gh-approval-service-registry.ega-archive.org">Beacon v2 frontline implementers</a></li>
@@ -36,9 +37,9 @@ tags:
 <tr><th>Contributors</th><td><ul>
 <li><a href="https://beacon-project.io/categories/people.html">ELIXIR Beacon project team</a></li>
 </ul></td></tr>
-<tr><th>Source (2.0.0-draft.4)</th><td><ul>
+<tr><th>Source (2.0.0)</th><td><ul>
 <li><a href="current/quantity.json" target="_BLANK">raw source [JSON]</a></li>
-<li><a href="https://github.com/ga4gh-schemablocks/sb-beacon-api/blob/master/schemas/models/common/quantity.yaml" target="_BLANK">Github</a></li>
+<li><a href="https://github.com/ga4gh-schemablocks/sb-beacon-api/blob/master/schemas/beacon-v2-default-model/common/quantity.yaml" target="_BLANK">Github</a></li>
 </ul></td></tr>
 </table>
 
@@ -46,13 +47,13 @@ tags:
 
   
 __Type:__ object  
-__Description:__ Definition of a quantity class
+__Description:__ Definition of a quantity class. Provenance: GA4GH Phenopackets v2 `Quantity`
 ### Properties
 
 <table id="schema-properties-table">
 <tr><th>Property</th><th>Type</th></tr>
 <tr><th>referenceRange</th><td>./referenceRange.json</td></tr>
-<tr><th>units</th><td>./commonDefinitions.json#/definitions/Units</td></tr>
+<tr><th>unit</th><td>./commonDefinitions.json#/definitions/Unit</td></tr>
 <tr><th>value</th><td>number</td></tr>
 </table>
 
@@ -69,9 +70,9 @@ The normal range for the value
 {}
 ```
 
-#### units
+#### unit
 
-* type: ./commonDefinitions.json#/definitions/Units
+* type: ./commonDefinitions.json#/definitions/Unit
 
 
 

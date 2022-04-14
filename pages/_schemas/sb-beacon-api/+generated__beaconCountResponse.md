@@ -24,7 +24,8 @@ tags:
 <td><div id="schema-header-status">proposed</div></td>
 </tr>
 <tr><th>Provenance</th><td><ul>
-<li><a href="https://github.com/ga4gh-beacon/">Beacon v2 provisional version</a></li>
+<li><a href="https://github.com/ga4gh-beacon/beacon-v2">Beacon v2</a></li>
+<li><a href="http://docs.genomebeacons.org">Beacon v2 documentation</a></li>
 </ul></td></tr>
 <tr><th>Used by</th><td><ul>
 <li><a href="https://ga4gh-approval-service-registry.ega-archive.org">Beacon v2 frontline implementers</a></li>
@@ -36,7 +37,7 @@ tags:
 <tr><th>Contributors</th><td><ul>
 <li><a href="https://beacon-project.io/categories/people.html">ELIXIR Beacon project team</a></li>
 </ul></td></tr>
-<tr><th>Source (2.0.0-draft.4)</th><td><ul>
+<tr><th>Source (2.0.0)</th><td><ul>
 <li><a href="current/beaconCountResponse.json" target="_BLANK">raw source [JSON]</a></li>
 <li><a href="https://github.com/ga4gh-schemablocks/sb-beacon-api/blob/master/schemas/framework/responses/beaconCountResponse.yaml" target="_BLANK">Github</a></li>
 </ul></td></tr>
@@ -54,7 +55,7 @@ __Description:__ Complete definition for a Response that does not include record
 <tr><th>beaconHandovers</th><td>../common/beaconCommonComponents.json#/definitions/ListOfHandovers</td></tr>
 <tr><th>info</th><td>../common/beaconCommonComponents.json#/definitions/Info</td></tr>
 <tr><th>meta</th><td>./sections/beaconResponseMeta.json</td></tr>
-<tr><th>responseSummary</th><td>./sections/beaconSummaryResponseSection.json</td></tr>
+<tr><th>responseSummary</th><td>./sections/beaconCountResponseSection.json</td></tr>
 </table>
 
 
@@ -81,7 +82,7 @@ Information about the response that could be relevant for the Beacon client in o
 
 #### responseSummary
 
-* type: ./sections/beaconSummaryResponseSection.json
+* type: ./sections/beaconCountResponseSection.json
 
 Response summary, including Boolean and optionally results count.
 

@@ -24,7 +24,8 @@ tags:
 <td><div id="schema-header-status">proposed</div></td>
 </tr>
 <tr><th>Provenance</th><td><ul>
-<li><a href="https://github.com/ga4gh-beacon/">Beacon v2 provisional version</a></li>
+<li><a href="https://github.com/ga4gh-beacon/beacon-v2">Beacon v2</a></li>
+<li><a href="http://docs.genomebeacons.org">Beacon v2 documentation</a></li>
 </ul></td></tr>
 <tr><th>Used by</th><td><ul>
 <li><a href="https://ga4gh-approval-service-registry.ega-archive.org">Beacon v2 frontline implementers</a></li>
@@ -36,9 +37,9 @@ tags:
 <tr><th>Contributors</th><td><ul>
 <li><a href="https://beacon-project.io/categories/people.html">ELIXIR Beacon project team</a></li>
 </ul></td></tr>
-<tr><th>Source (2.0.0-draft.4)</th><td><ul>
+<tr><th>Source (2.0.0)</th><td><ul>
 <li><a href="current/disease.json" target="_BLANK">raw source [JSON]</a></li>
-<li><a href="https://github.com/ga4gh-schemablocks/sb-beacon-api/blob/master/schemas/models/common/disease.yaml" target="_BLANK">Github</a></li>
+<li><a href="https://github.com/ga4gh-schemablocks/sb-beacon-api/blob/master/schemas/beacon-v2-default-model/common/disease.yaml" target="_BLANK">Github</a></li>
 </ul></td></tr>
 </table>
 
@@ -46,32 +47,64 @@ tags:
 
   
 __Type:__ object  
-__Description:__ Diseases diagnosed e.g. to an individual, defined by diseaseID, age of onset, stage, level of severity, outcome and the presence of family history.
+__Description:__ Diseases diagnosed e.g. to an individual, defined by diseaseID, age of onset, stage, level of severity, outcome and the presence of family history. Similarities to GA4GH Phenopackets v2 `Disease`
 ### Properties
 
 <table id="schema-properties-table">
 <tr><th>Property</th><th>Type</th></tr>
-<tr><th>ageOfOnset</th><td>./age.json</td></tr>
-<tr><th>diseaseCode</th><td>https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json">LINK</a>]</td></tr>
+<tr><th>ageOfOnset</th><td>./timeElement.json</td></tr>
+<tr><th>diseaseCode</th><td>https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json">LINK</a>]</td></tr>
 <tr><th>familyHistory</th><td>boolean</td></tr>
 <tr><th>notes</th><td>string</td></tr>
-<tr><th>severityLevel</th><td>./commonDefinitions.json#/definitions/SeverityLevel</td></tr>
-<tr><th>stage</th><td>https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json">LINK</a>]</td></tr>
+<tr><th>severity</th><td>./commonDefinitions.json#/definitions/SeverityLevel</td></tr>
+<tr><th>stage</th><td>https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json">LINK</a>]</td></tr>
 </table>
 
 
 #### ageOfOnset
 
-* type: ./age.json
+* type: ./timeElement.json
 
 
 
+##### `ageOfOnset` Value Examples  
+
+```
+{
+   "age" : {
+      "iso8601duration" : "P32Y6M1D"
+   },
+   "ageGroup" : {
+      "id" : "NCIT:C49685",
+      "label" : "Adult 18-65 Years Old"
+   }
+}
+```
+```
+{
+   "ageRange" : {
+      "end" : {
+         "iso8601duration" : "P59Y"
+      },
+      "start" : {
+         "iso8601duration" : "P18Y"
+      }
+   }
+}
+```
+```
+{
+   "age" : {
+      "iso8601duration" : "P2M4D"
+   }
+}
+```
 
 #### diseaseCode
 
-* type: https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json">LINK</a>]
+* type: https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json">LINK</a>]
 
-Disease identifier. Value from disease ontologies such as HPO, OMIM, Orphanet, MONDO, e.g. lactose intolerance (HP:0004789, ICD10CM:E73).
+Disease identifier. Value from disease ontologies such as HPO, OMIM, Orphanet, MONDO, e.g. lactose intolerance (HP:0004789, ICD10CM:E73). Provenance: GA4GH Phenopackets v2 `Disease.term`
 
 ##### `diseaseCode` Value Examples  
 
@@ -118,18 +151,32 @@ Unstructured text to describe additional properties of this disease instance.
 "Some free text"
 ```
 
-#### severityLevel
+#### severity
 
 * type: ./commonDefinitions.json#/definitions/SeverityLevel
 
 
 
+##### `severity` Value Examples  
+
+```
+{
+   "id" : "HP:0012828",
+   "label" : "Severe"
+}
+```
+```
+{
+   "id" : "HP:0012826",
+   "label" : "Moderate"
+}
+```
 
 #### stage
 
-* type: https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json">LINK</a>]
+* type: https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json [<a href="https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/common/ontologyTerm.json">LINK</a>]
 
-Ontology term from Ontology for General Medical Science (OGMS), e.g. acute onset (OGMS:0000119).
+Ontology term from Ontology for General Medical Science (OGMS), e.g. acute onset (OGMS:0000119). Provenance: GA4GH Phenopackets v2 `Disease.disease_stage`
 
 ##### `stage` Value Examples  
 
