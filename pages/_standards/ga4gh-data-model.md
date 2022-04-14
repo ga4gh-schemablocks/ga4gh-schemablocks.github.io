@@ -100,6 +100,8 @@ _cancer tissue_ biosample (i.e. somatic mutation analysis).
 
 #### Further Reading
 
+* [Beacon v2 Models](http://docs.genomebeacons.org/models/)
+    - **NEW in April 2022**
 * [GA4GH schema documentation](https://ga4gh-schemas.readthedocs.io/en/latest/api/metadata.html)
     - deprecated but informative
 * original [GA4GH schema](https://github.com/ga4gh/ga4gh-schemas/) code repository
