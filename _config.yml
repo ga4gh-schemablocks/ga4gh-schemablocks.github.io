@@ -66,12 +66,13 @@ tags-date-sorted:
 
 related_sites:
   GA4GH: 'http://www.ga4gh.org'
-  'GA4GH::Discovery': 'http://ga4gh-discovery.github.io'
-  'Beacon Project': 'http://ga4gh-beacon.github.io'
-  Phenopackets: 'http://github.com/phenopackets'
-  'GA4GH::CLP': 'http://ga4gh-cp.github.io'
-  'GA4GH::GKS': 'http://ga4gh-gks.github.io'
-  'Beacon<span style="color: red; font-weight: 800;">+</span>': 'http://beacon.progenetix.org/ui/'
+  "GA4GH::Discovery": 'http://ga4gh-discovery.github.io'
+  "GA4GH::CLP": 'http://ga4gh-cp.github.io'
+  "GA4GH::GKS": 'http://ga4gh-gks.github.io'
+  Beacon: 'http://beacon-project.io/'
+  Phenopackets: https://phenopacket-schema.readthedocs.io
+  VRS: https://vrs.ga4gh.org/
+
 
 github_projects:
   'SchemaBlocks': 'http://github.com/ga4gh-schemablocks/'
@@ -80,14 +81,11 @@ github_projects:
 # tag_cloud items
 
 cloud_tags:
-  - Beacon
   - CP
   - Discovery
   - FAQ
   - GA4GH
   - GKS
-  - MME
-  - code
   - admins
   - contacts
   - contributors
@@ -96,10 +94,8 @@ cloud_tags:
   - documentation
   - identifiers
   - issues
-  - howto
   - leads
   - news
-  - phenopackets
   - press
   - tools
   - website
@@ -107,7 +103,6 @@ cloud_tags:
   - proposed        # sb_status
   - implemented     # sb_status
   - core            # sb_status
-  - Beacon-v2
   - sb-beacon-api   # project
   - sb-vr-schema    # project
   - sb-phenopackets # project
