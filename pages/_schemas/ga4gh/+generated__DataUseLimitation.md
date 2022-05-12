@@ -112,7 +112,7 @@ modifier/restriction applicable for the DUO
 
 #### term
 
-* type: https://schemablocks.org/schemas/sb-phenopackets/OntologyClass/v1.0.0
+* type: https://schemablocks.org/schemas/sb-phenopackets/OntologyClass/
 
 DUO - ontology term subclass of either DUO_0000001 or DUO_0000017
 
