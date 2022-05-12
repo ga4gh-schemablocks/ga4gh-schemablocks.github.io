@@ -56,7 +56,7 @@ tags:
     <th>Source (v0.0.1)</th>
     <td>
       <ul>
-        <li><a href="current/DataUseLimitation.json" target="_BLANK">raw source [JSON]</a></li>
+        <li><a href="https://raw.githubusercontent.com/ga4gh-schemablocks/ga4gh-schemablocks.github.io/main/schemas/ga4gh/current/DataUseLimitation.json" target="_BLANK">raw source [JSON]</a></li>
         <li><a href="https://github.com/ga4gh-schemablocks/sb-duo/blob/master/schemas/DataUseLimitation.yaml" target="_BLANK">Github</a></li>
       </ul>
     </td>
