@@ -2,7 +2,7 @@ site_name: 'SchemaBlocks {S}[B]'
 site_description: 'Website of the GA4GH SchemaBlocks community'
 site_author: Michael Baudis
 copyright: '&copy; Copyright 2022 GA4GH SchemaBlocks Members'
-repo_name: 'org.schemablocks.beta'
+repo_name: 'schemablocks.github.io'
 
 repo_url: https://github.com/ga4gh-schemablocks/org.schemablocks.beta
 edit_uri: edit/main/docs/
@@ -15,6 +15,7 @@ nav:
   - Contacts: contacts
   - Schemas: schema_pages
   - Standards & Practices: standards-recommendations.md
+  - '{S}[B] Legacy Site': 'https://legacy.schemablocks.org'
   - Beacon Project: 'https://beacon-project.io'
 
 ###############################################################################

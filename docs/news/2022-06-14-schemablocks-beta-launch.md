@@ -1,5 +1,5 @@
 ---
-title: '{S}[B] Site Relaunch'
+title: '{S}[B] Site Beta Launch'
 description: Re-design & Re-focus
 date: 2022-06-14
 authors:
