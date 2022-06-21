@@ -1,0 +1,54 @@
+:root {
+  --md-accent-fg-color: #8C0500;
+  --md-accent-font-color: #ef5552;
+}
+
+.md-grid {
+  max-width: 800px; 
+}
+
+.md-header {
+  background-color:  var(--md-accent-fg-color);
+}
+
+nav.md-tabs {
+  background-color:  var(--md-accent-fg-color);
+}
+
+/*.md-header__button {
+    padding:  0px; 
+}
+*/
+.md-header__source {
+    background-image: url("/img/logo-schemablocks-no-text-50x50.png");
+    background-repeat: no-repeat;
+    background-position: right; 
+}
+
+h2 {
+    color: var(--md-accent-font-color);
+    border-top:  var(--md-accent-font-color) thin solid;
+    border-bottom:  var(--md-accent-font-color) thin solid;
+}
+
+div.tabbed-set {
+    background-color:  #fafafa;
+}
+
+.tabbed-content {
+    padding:  5px;
+}
+
+li li {
+    list-style-type: circle;
+}
+
+li li li {
+    list-style-type: "–";
+    font-size: 0.9em;
+}
+
+.mermaid {
+  display: flex;
+  justify-content: center;
+}

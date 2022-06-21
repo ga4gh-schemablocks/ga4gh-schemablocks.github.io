@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {{ page.content }}
+  {% set schemas_pages = [] %}
+  {% for this_file in pages %}
+    {% set this_page = this_file.page %}
+    {% if this_page.meta is defined %}
+      {% if this_page.url.startswith(config.extra.schema_pages.dir) and this_page.meta.title is defined %}
+        {{ schemas_pages.append( this_page ) or "" }}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
+  {% for status in ['core', 'community', 'playground'] %}
+
+<h2>Status: {{status}}</h2>
+
+    {% for page in (schemas_pages|sort(attribute="url")) %}
+      {% if page.meta.sb_status == status %}
+
+<h3 class="mdx-author"><a href="{{ page.url|url }}">{{ page.title }}</a></h3>
+
+        {% if page.meta.description is defined %}
+<p>{{ page.meta.description }}</p>
+        {% endif %}
+
+        {% if page.meta.logo is defined %}
+  <img style="float: right; max-width: 160px; max-height: 120px; margin-left: 20px;" src="/img/{{ page.meta.logo}}" />
+        {% endif %}
+
+<!-- Use a hidden p tag to provide a preview -->
+
+        {% if config.extra.schema_pages.extended_preview %}
+          {{ page.content.split(config.extra.schema_pages.excerpt_separator, 1)[0] }}
+  <a href="{{ page.url|url }}#more"><span class="twemoji">
+          {% include ".icons/octicons/arrow-right-24.svg" %}
+  </span>Continue reading</a>
+        {% endif %}
+
+
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,119 @@
+site_name: 'SchemaBlocks {S}[B]'
+site_description: 'Website of the GA4GH SchemaBlocks community'
+site_author: Michael Baudis
+copyright: '&copy; Copyright 2022 GA4GH SchemaBlocks Members'
+repo_name: 'org.schemablocks.beta'
+
+repo_url: https://github.com/ga4gh-schemablocks/org.schemablocks.beta
+edit_uri: edit/main/docs/
+
+###############################################################################
+
+nav:
+  - '{S}[B] Home': index.md
+  - About SchemaBlocks: schemablocks-principles.md
+  - Contacts: contacts
+  - Schemas: schema_pages
+  - Standards & Practices: standards-recommendations.md
+  - Beacon Project: 'https://beacon-project.io'
+
+###############################################################################
+
+markdown_extensions:
+  - toc:
+      toc_depth: 2-3
+      permalink: true
+  - admonition
+  - attr_list
+  - footnotes
+  - md_in_html
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      hide_protocol: true
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.saneheaders
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid   
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - tables
+  - mdx_gh_links:
+      user: hCNV
+      repo: hcnv.github.io
+  - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+        options:
+          custom_icons:
+            - mkdocs_overrides/.icons
+
+###############################################################################
+
+theme:
+  name: material
+  palette:
+    primary: red
+    scheme: slate
+  favicon: img/site-logo-topright.png
+  # logo: img/site-logo-topright.png
+  icon:
+    repo: fontawesome/brands/github-alt
+    admonition:
+      example: octicons/list-ordered-24
+  features:
+    - content.tabs.link
+    - search.highlight
+    - search.share
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - toc.integrate
+  custom_dir: mkdocs_overrides
+      
+plugins:
+    - search
+    # - with-pdf:
+    #     author: Progenetix
+    #     output_path: pdf/progenetix-documentation.pdf
+    - macros
+    # - mermaid2
+
+extra:
+  news:
+    dir: news
+    author: hCNV
+    list_length: 50
+    extended_preview: true
+    excerpt_separator: <!--more-->
+  contacts:
+    dir: contacts
+    author: hCNV
+    list_length: 50
+    extended_preview: true
+    excerpt_separator: <!--more-->
+  schema_pages:
+    dir: schema_pages
+    author: hCNV
+    list_length: 50
+    extended_preview: true
+    excerpt_separator: <!--more-->
+  social:
+    # - icon: fontawesome/brands/twitter 
+    #   link: https://twitter.com/progenetix
+    - icon: fontawesome/brands/github 
+      link: https://github.com/ga4gh-schemablocks
+extra_css:
+  - css/theme_overrides.css
+# extra_javascript:
+  # - https://unpkg.com/mermaid/dist/mermaid.min.js
+  # - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+    

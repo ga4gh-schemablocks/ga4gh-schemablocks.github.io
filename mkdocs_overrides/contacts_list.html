@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {{ page.content }}
+  {% set contacts_pages = [] %}
+    {% for this_file in pages %}
+      {% set this_page = this_file.page %}
+      {% if this_page.meta is defined %}
+        {% if this_page.url.startswith(config.extra.contacts.dir) and this_page.meta.name_tag is defined %}
+          {{ contacts_pages.append( this_page ) or "" }}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
+<h2>Contacts</h2>
+
+  {% for page in (contacts_pages|sort(attribute="meta.name_tag")) %}
+    {% if page.meta.is_contact %}
+
+<h3 class="mdx-author"><a href="{{ page.url|url }}">{{ page.title }}</a></h3>
+      {% if page.meta.description is defined %}
+<h5>{{ page.meta.description }}</h5>
+      {% endif %}
+      <!-- Use a hidden p tag to provide a preview -->
+      {% if config.extra.contacts.extended_preview %}
+        {{ page.content.split(config.extra.contacts.excerpt_separator, 1)[0] }}
+<a href="{{ page.url|url }}#more"><span class="twemoji">
+    {% include ".icons/octicons/arrow-right-24.svg" %}
+</span>Continue reading</a>
+        {% endif %}
+<hr>
+      {% endif %}
+  {% endfor %}
+
+<h2>Contributors</h2>
+
+  {% for page in (contacts_pages|sort(attribute="meta.name_tag")) %}
+    {% if not page.meta.is_contact %}
+<h3 class="mdx-author"><a href="{{ page.url|url }}">{{ page.title }}</a></h3>
+      {% if page.meta.description is defined %}
+<h5>{{ page.meta.description }}</h5>
+      {% endif %}
+      <!-- Use a hidden p tag to provide a preview -->
+      {% if config.extra.contacts.extended_preview %}
+        {{ page.content.split(config.extra.contacts.excerpt_separator, 1)[0] }}
+<a href="{{ page.url|url }}#more"><span class="twemoji">
+    {% include ".icons/octicons/arrow-right-24.svg" %}
+</span>Continue reading</a>
+        {% endif %}
+<hr>
+      {% endif %}
+  {% endfor %}
+
+
+
+{% endblock %}
