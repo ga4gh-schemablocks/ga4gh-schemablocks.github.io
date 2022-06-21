@@ -15,11 +15,15 @@ permalink: /index.html
 ################################################################################
 {% endcomment %}
 
+---
+
+# Please visit [beta.schemablocks.org](http://beta.schemablocks.org) for the updated  verion of the {S}[B] website
+
+---
+
 ## GA4GH SchemaBlocks Home
 
-SchemaBlocks is a "__cross-workstreams, cross-drivers__" initiative to document 
-GA4GH object standards and prototypes, as well as common data formats and 
-semantics.
+SchemaBlocks is a "__cross-workstreams, cross-drivers__" community which works on the documentation of data schema components, standards and procedures with consensus support from GA4GH members.
 
 <img style="float: left; margin: 20px 20px 10px 0px; width: 60px; clear: none;" src="{{ "assets/img/logo-schemablocks-120x120-no-logo.png" | relative_url}}" />Launched in December 2018, this project is still to be considered a "community 
 initiative", with developing participation, leadership and governance 
