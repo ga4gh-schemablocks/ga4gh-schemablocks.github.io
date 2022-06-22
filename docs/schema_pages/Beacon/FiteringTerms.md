@@ -21,9 +21,10 @@ inside the `filteringTerms` array).
 * [FilteringTerm.json](/schema_files/json/Beacon/FilteringTerm.json) schema
 * [original source](https://github.com/ga4gh-beacon/beacon-v2/tree/main/framework/src/requests) :fontawesome-brands-github:
 
-#### {S}[B] Contributors
+#### {S}[B] & Source Contributors
 
-* Michael Baudis ([0000-0002-9551-6370](https://orcid.org/0000-0002-9551-6370)) :ORCID-icon-green:
+* Tim Beck [0000-0002-0292-7972](https://orcid.org/0000-0002-0292-7972) :ORCID-icon-green:
+* Michael Baudis [0000-0002-9551-6370](https://orcid.org/0000-0002-9551-6370) :ORCID-icon-green:
 
 <!--schema_block_start-->
 ```yaml
