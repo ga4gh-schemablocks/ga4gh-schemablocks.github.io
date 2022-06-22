@@ -1,7 +1,7 @@
 ---
 title: Beacon - FilteringTerm
 sb_status: community
-logo: logo_beacon.png
+logo: logo-beacon.png
 ---
 
 The `FilteringTerm` is a core concept of the Beacon information exchange concepts.

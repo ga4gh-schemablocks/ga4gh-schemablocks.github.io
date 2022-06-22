@@ -1,7 +1,7 @@
 ---
 title: DUO - DataUseLimitation
 sb_status: core
-logo: DUO_logo_white_background.png
+logo: logo-DUO-white-background.png
 ---
 
 The Data Use Limitation is a component of the GA4GH DUO standard and used
