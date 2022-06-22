@@ -1,5 +1,5 @@
 BASEDIR=$(dirname $0)
-BYCONSCHEMAS=$BASEDIR/../docs/schemas
+BYCONSCHEMAS=$BASEDIR/../docs/schema_files
 
 BEACONROOT=/Users/$USER/GitHub/beta.schemablocks.org
 
