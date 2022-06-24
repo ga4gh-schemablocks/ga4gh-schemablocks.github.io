@@ -1,7 +1,8 @@
 ---
 title: Phenopackets - OntologyClass
 sb_status: core
-logo: logo-phenopackets-200x200.png
+logos:
+  - logo-phenopackets-200x200.png
 ---
 
 OntologyClass is an essential core core elementin GA4GH schemas.

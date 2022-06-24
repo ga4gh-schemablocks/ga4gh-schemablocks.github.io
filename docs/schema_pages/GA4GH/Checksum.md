@@ -1,7 +1,8 @@
 ---
 title: GA4GH - Checksum
 sb_status: core
-logo: logo-ga4gh-circle-420x420.png
+logos:
+  - logo-ga4gh-circle-420x420.png
 ---
 
 The `Checksum` standard provides a simple schema for defining a checksum value

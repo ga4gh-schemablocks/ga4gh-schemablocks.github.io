@@ -28,6 +28,17 @@
         {% if page.meta.logo is defined %}
   <img style="float: right; max-width: 160px; max-height: 120px; margin-left: 20px;" src="/img/{{ page.meta.logo}}" />
         {% endif %}
+        {% if page.meta.logos is defined %}
+          {% set lw = "160px" %}
+          {% set lh = "120px" %}
+          {% if page.meta.logos|length > 1 %}
+            {% set lw = "80px" %}
+            {% set lh = "60px" %}
+          {% endif %}
+          {% for logo in page.meta.logos %}
+  <img style="float: right; max-width: {{ lw }}; max-height: {{ lh }}; margin-left: 20px;" src="/img/{{ logo }}" /> 
+          {% endfor %}
+        {% endif %}
 
 <!-- Use a hidden p tag to provide a preview -->
 

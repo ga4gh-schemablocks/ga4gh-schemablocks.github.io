@@ -1,7 +1,8 @@
 ---
 title: DUO - DataUseModifier
 sb_status: core
-logo: logo-DUO-white-background.png
+logos:
+  - logo-DUO-white-background.png
 ---
 
 The Data Use Modifier is a component of the GA4GH DUO standard and used
