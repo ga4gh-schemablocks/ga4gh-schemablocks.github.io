@@ -4,11 +4,15 @@ sb_status: core
 logo: logo-phenopackets-200x200.png
 ---
 
-The OntologyClass core element had been defined by the GA4GH Metadata Task Team
-in conjunction with Phenopackets developers. It represents an essential core
-element in many GA4GH schemas.
+OntologyClass is an essential core core elementin GA4GH schemas.
+It essentially defines the standard way to terms or classes
+by their `id` - which _should_ be a CURIE - and optionally a `label`
+for informative purposes.
 
 <!--more-->
+
+The dual term/label use had been defined by the GA4GH Metadata Task Team
+in conjunction with Phenopackets developers.
 
 #### Link(s)
 
