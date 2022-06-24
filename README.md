@@ -1,3 +1,3 @@
-# org.schemablocks.beta
+# Schemablocks Website
 
-Mkdocs version of the [revised {S}[B] site](http://beta.schemablocks.org).
+Mkdocs version of the [revised {S}[B] site](http://schemablocks.org).
