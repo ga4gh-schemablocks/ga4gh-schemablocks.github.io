@@ -26,7 +26,7 @@ to describe limitations in the ways data items can be re-used.
 <!--schema_block_start-->
 ```yaml
 $schema: http://json-schema.org/draft-07/schema#
-$id: https://beta.schemablocks.org/schemas/json/DUO/DataUseLimitation.json
+$id: https://schemablocks.org/schemas/json/DUO/DataUseLimitation.json
 title: DataUseLimitation
 meta:
 description: >-

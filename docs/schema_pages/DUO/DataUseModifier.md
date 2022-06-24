@@ -26,7 +26,7 @@ as optional refinement of the limitations defined in [DataUseLimitation](/schema
 <!--schema_block_start-->
 ```yaml
 $schema: http://json-schema.org/draft-07/schema#
-$id: https://beta.schemablocks.org/schemas/json/DUO/DataUseModifier.json
+$id: https://schemablocks.org/schemas/json/DUO/DataUseModifier.json
 title: DataUseModifier
 description: >-
   The (GA4GH) Data Use Ontology (DUO) includes terms describing data use conditions,

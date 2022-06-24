@@ -32,7 +32,7 @@ in conjunction with Phenopackets developers.
 <!--schema_block_start-->
 ```yaml
 $schema: http://json-schema.org/draft-07/schema#
-$id: https://beta.schemablocks.org/schemas/json/phenopackets/OntologyClass.json
+$id: https://schemablocks.org/schemas/json/phenopackets/OntologyClass.json
 title: OntologyClass
 description: >-
   This element is used to represent classes (terms) from ontologies, and is used
