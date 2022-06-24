@@ -17,12 +17,14 @@ of start and end age values or through the use of an ontology class.
 #### Link(s)
 
 * [Age.json](/schema_files/json/Phenopackets/Age.json) schema
-* [source](https://github.com/Phenopackets/phenopacket-schema) :fontawesome-brands-github:
+* [source](https://github.com/phenopackets/phenopacket-schema) :fontawesome-brands-github:
 * [Phenopackets documentation](https://phenopacket-schema.readthedocs.io)
 
 #### {S}[B] Contributors
 
-* Michael Baudis ([0000-0002-9551-6370](https://orcid.org/0000-0002-9903-4248)) :ORCID-icon-green:
+* Peter Robinson [0000-0002-0736-91998](https://orcid.org/0000-0002-0736-91998) :ORCID-icon-green:
+* Jules Jacobsen [0000-0002-3265-15918](https://orcid.org/0000-0002-3265-15918) :ORCID-icon-green:
+* Michael Baudis [0000-0002-9903-4248](https://orcid.org/0000-0002-9903-4248) :ORCID-icon-green:
 
 <!--schema_block_start-->
 ```yaml

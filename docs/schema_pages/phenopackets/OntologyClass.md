@@ -3,6 +3,8 @@ title: Phenopackets - OntologyClass
 sb_status: core
 logos:
   - logo-phenopackets-200x200.png
+  - logo-DUO-white-background.png
+  - logo-beacon.png
 ---
 
 OntologyClass is an essential core core elementin GA4GH schemas.
@@ -17,14 +19,14 @@ in conjunction with Phenopackets developers.
 
 #### Link(s)
 
-* [OntologyClass.json](/schema_files/json/phenopackets/OntologyClass.json) schema
+* [OntologyClass.json](/schema_files/json/Phenopackets/OntologyClass.json) schema
 * [source](https://github.com/phenopackets/phenopacket-schema) :fontawesome-brands-github:
 * [Phenopackets documentation](https://phenopacket-schema.readthedocs.io)
 
 #### {S}[B] Contributors
 
 * Christopher Mungall ([0000-0002-6601-2165](https://orcid.org/0000-0002-6601-2165)) :ORCID-icon-green:
-* Michael Baudis ([0000-0002-9551-6370](https://orcid.org/0000-0002-9903-4248)) :ORCID-icon-green:
+* Michael Baudis ([0000-0002-9903-4248](https://orcid.org/0000-0002-9903-4248)) :ORCID-icon-green:
 * Melanie Courtot ([0000-0002-9551-6370](https://orcid.org/0000-0002-9551-6370)) :ORCID-icon-green:
 
 <!--schema_block_start-->

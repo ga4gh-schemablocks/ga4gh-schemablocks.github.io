@@ -25,12 +25,9 @@
 <p>{{ page.meta.description }}</p>
         {% endif %}
 
-        {% if page.meta.logo is defined %}
-  <img style="float: right; max-width: 160px; max-height: 120px; margin-left: 20px;" src="/img/{{ page.meta.logo}}" />
-        {% endif %}
         {% if page.meta.logos is defined %}
-          {% set lw = "160px" %}
-          {% set lh = "120px" %}
+          {% set lw = "120px" %}
+          {% set lh = "90px" %}
           {% if page.meta.logos|length > 1 %}
             {% set lw = "80px" %}
             {% set lh = "60px" %}
@@ -48,7 +45,6 @@
           {% include ".icons/octicons/arrow-right-24.svg" %}
   </span>Continue reading</a>
         {% endif %}
-
 
       {% endif %}
     {% endfor %}
