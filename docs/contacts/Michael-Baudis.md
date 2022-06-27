@@ -18,3 +18,4 @@ name_tag: baudis_m
 * web [UZH](https://www.imls.uzh.ch/en/research/baudis.html)  
 * web [SIB](https://www.sib.swiss/michael-baudis-group)  
 * web [group](https://info.baudisgroup.org)  
+* [@mbaudis :fontawesome-brands-github:](https://github.com/mbaudis)
