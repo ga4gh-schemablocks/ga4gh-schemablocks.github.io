@@ -5,7 +5,7 @@ logos:
   - logo-progenetix-white_180x50.png
 ---
 
-A GeoLocation object represents a geographic location formatted as a
+A `GeoLocation` object is a geographic location formatted as a
 *GeoJSON feature*. The format is compatible with RFC 7946, while currently
 limiting its scope to features of type "Point". Also, the schema defines some
 optional parameters compatible with the GeoJSON feature *properties* wrapper
