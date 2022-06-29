@@ -5,7 +5,7 @@ logos:
   - logo-ga4gh-circle-420x420.png
 ---
 
-A CURIES is a [W3C Compact URI](https://www.w3.org/TR/curie/) formatted string.
+A CURIE is a [W3C Compact URI](https://www.w3.org/TR/curie/) formatted string.
 It has the structure `prefix`:`reference`, as defined by the W3C syntax.
 
 <!--more-->
