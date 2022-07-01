@@ -16,7 +16,7 @@ contexts.
 
 #### Link(s)
 
-* [ChromosomeLocation.json](/schema_files/json/VRS/ChromosomeLocation.json) schema
+* [ChromosomeLocation.json](/schema_files/json/VRS/ChromosomeLocation.json) {S}[B] schema
 * [source](https://github.com/ga4gh/vrs/tree/main) :fontawesome-brands-github:
 * [ChromosomeLocation in VRS](https://vrs.ga4gh.org/en/stable/terms_and_model.html#chromosomelocation)
 
@@ -111,5 +111,5 @@ definitions:
 <!--schema_block_end-->
 
 [^1]: Please note that the schema here is provided for illustration purposes,
-may represent an approximation and possibly exclude technical components of a
+may represent an approximation and possibly excludes technical components of a
 proper JSON Schema format.

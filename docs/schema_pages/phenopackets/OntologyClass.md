@@ -19,7 +19,7 @@ in conjunction with Phenopackets developers.
 
 #### Link(s)
 
-* [OntologyClass.json](/schema_files/json/Phenopackets/OntologyClass.json) schema
+* [OntologyClass.json](/schema_files/json/Phenopackets/OntologyClass.json) {S}[B] schema
 * [source](https://github.com/phenopackets/phenopacket-schema) :fontawesome-brands-github:
 * [Phenopackets documentation](https://phenopacket-schema.readthedocs.io)
 
@@ -69,5 +69,5 @@ examples:
 <!--schema_block_end-->
 
 [^1]: Please note that the schema here is provided for illustration purposes,
-may represent an approximation and possibly exclude technical components of a
+may represent an approximation and possibly excludes technical components of a
 proper JSON Schema format.

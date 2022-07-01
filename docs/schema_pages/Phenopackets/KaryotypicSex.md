@@ -14,7 +14,7 @@ of their phenotypic sex or gender.
 
 #### Link(s)
 
-* [KaryotypicSex.json](/schema_files/json/Phenopackets/KaryotypicSex.json) schema
+* [KaryotypicSex.json](/schema_files/json/Phenopackets/KaryotypicSex.json) {S}[B] schema
 * [source](https://github.com/phenopackets/phenopacket-schema) :fontawesome-brands-github:
 * [Phenopackets documentation](https://phenopacket-schema.readthedocs.io)
 
@@ -67,6 +67,6 @@ The values correspond to the ordinal values in the Phenopackets schema where:
 
 
 [^1]: Please note that the schema here is provided for illustration purposes,
-may represent an approximation and possibly exclude technical components of a
+may represent an approximation and possibly excludes technical components of a
 proper JSON Schema format.
 

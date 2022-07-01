@@ -12,7 +12,7 @@ together with a default type.
 
 #### Link(s)
 
-* [Checksum.json](/schema_files/json/GA4GH/Checksum.json) schema
+* [Checksum.json](/schema_files/json/GA4GH/Checksum.json) {S}[B] schema
 * [Table of Hash Algorithms](https://github.com/ga4gh-discovery/ga4gh-checksum/tree/master)
 * [source](https://github.com/ga4gh-schemablocks/sb-checksum) :fontawesome-brands-github:
 * [GA4GH DRS](https://github.com/ga4gh/data-repository-service-schemas/)
@@ -85,6 +85,6 @@ ID | Hash Name String | Value Length | Reference | Status
 
 
 [^1]: Please note that the schema here is provided for illustration purposes,
-may represent an approximation and possibly exclude technical components of a
+may represent an approximation and possibly excludes technical components of a
 proper JSON Schema format.
 

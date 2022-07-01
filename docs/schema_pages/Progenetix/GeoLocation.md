@@ -28,7 +28,7 @@ resource and its BeaconPlus implementation of the Beacon v2 protocol.
 
 #### Link(s)
 
-* [GeoLocation.json](/schema_files/json/Progenetix/GeoLocation.json) schema
+* [GeoLocation.json](/schema_files/json/Progenetix/GeoLocation.json) {S}[B] schema
 * [source](https://github.com/progenetix/bycon/tree/main/schemas/src/progenetix-model/common/) :fontawesome-brands-github:
 * [Progenetix documentation](http://docs.progenetix.org) :fontawesome-brands-github:
 
@@ -143,5 +143,5 @@ definitions:
 <!--schema_block_end-->
 
 [^1]: Please note that the schema here is provided for illustration purposes,
-may represent an approximation and possibly exclude technical components of a
+may represent an approximation and possibly excludes technical components of a
 proper JSON Schema format.

@@ -12,7 +12,7 @@ as optional refinement of the limitations defined in [DataUseLimitation](/schema
 
 #### Link(s)
 
-* [DataUseModifier.json](/schema_files/json/DUO/DataUseModifier.json) schema
+* [DataUseModifier.json](/schema_files/json/DUO/DataUseModifier.json) {S}[B] schema
 * [source](https://github.com/ga4gh-schemablocks/sb-duo) :fontawesome-brands-github:
 * [DUO Ontology](https://github.com/EBISPOT/DUO) :fontawesome-brands-github:
 * _data use modifier_ in [OLS](http://purl.obolibrary.org/obo/DUO_0000017)
@@ -56,5 +56,5 @@ examples:
 <!--schema_block_end-->
 
 [^1]: Please note that the schema here is provided for illustration purposes,
-may represent an approximation and possibly exclude technical components of a
+may represent an approximation and possibly excludes technical components of a
 proper JSON Schema format.

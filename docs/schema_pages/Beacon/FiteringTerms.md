@@ -19,7 +19,7 @@ inside the `filteringTerms` array).
 
 #### Link(s)
 
-* [FilteringTerm.json](/schema_files/json/Beacon/FilteringTerm.json) schema
+* [FilteringTerm.json](/schema_files/json/Beacon/FilteringTerm.json) {S}[B] schema
 * [original source](https://github.com/ga4gh-beacon/beacon-v2/tree/main/framework/src/requests) :fontawesome-brands-github:
 
 #### {S}[B] & Source Contributors
@@ -133,5 +133,5 @@ definitions:
 <!--schema_block_end-->
 
 [^1]: Please note that the schema here is provided for illustration purposes,
-may represent an approximation and possibly exclude technical components of a
+may represent an approximation and possibly excludes technical components of a
 proper JSON Schema format.

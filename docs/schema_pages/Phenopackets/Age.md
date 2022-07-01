@@ -16,7 +16,7 @@ of start and end age values or through the use of an ontology class.
 
 #### Link(s)
 
-* [Age.json](/schema_files/json/Phenopackets/Age.json) schema
+* [Age.json](/schema_files/json/Phenopackets/Age.json) {S}[B] schema
 * [source](https://github.com/phenopackets/phenopacket-schema) :fontawesome-brands-github:
 * [Phenopackets documentation](https://phenopacket-schema.readthedocs.io)
 
@@ -44,5 +44,5 @@ properties:
 <!--schema_block_end-->
 
 [^1]: Please note that the schema here is provided for illustration purposes,
-may represent an approximation and possibly exclude technical components of a
+may represent an approximation and possibly excludes technical components of a
 proper JSON Schema format.
