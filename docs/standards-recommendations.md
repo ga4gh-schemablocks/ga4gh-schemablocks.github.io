@@ -58,31 +58,33 @@ The "0-start, half-open" scheme is also know by the following names:
 
 All of these names refer to identical representations of coordinates. Interbase has a different interpretation of the representation useful when considering insertion events. Care should be taken when using these alterative names as they combine representation and interpretation.
 
-#### How "0-start, half-open" works
 
-```
-         G A G T G C
- G G T G G A G T G C G C C G C C A T G G
-                    1 1 1 1 1 1 1 1 1 1 2
-0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0
-```
+??? info "How '0-start, half-open' works"
 
-"0-start, half-open" breaks down into two integer positions. The first, "0-start", refers to the start coordinate and uses an indexing scheme starting at 0 to refer to bases within a sequence, similar to array indexes in most C based programming languages. The second, "half-open", refers to the end coordinate and is one higher than the start (effectively using an indexing system starting at 1).
+    ```
+             G A G T G C
+     G G T G G A G T G C G C C G C C A T G G
+                        1 1 1 1 1 1 1 1 1 1 2
+    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0
+    ```
 
-This scheme makes sub-sequences very easy to define. In the above example we have highlighted the subsequence `GAGTGC`, which starts at position 4 and ends at position 10. Calculating the length of this subsequence is easily done by subtracting start from end e.g. (10-4) = 6. Other transformations are less prone to programming errors than the alternative system "1-start, fully-closed".
+    "0-start, half-open" breaks down into two integer positions. The first, "0-start", refers to the start coordinate and uses an indexing scheme starting at 0 to refer to bases within a sequence, similar to array indexes in most C based programming languages. The second, "half-open", refers to the end coordinate and is one higher than the start (effectively using an indexing system starting at 1).
 
-This same coordinate system can be used to flag insertions and deletions as a start and an end which equal each other refers to a space between two residues e.g. 4,4 would flag an event occurring between `GGTG` and `GAGTGC`.
+    This scheme makes sub-sequences very easy to define. In the above example we have highlighted the subsequence `GAGTGC`, which starts at position 4 and ends at position 10. Calculating the length of this subsequence is easily done by subtracting start from end e.g. (10-4) = 6. Other transformations are less prone to programming errors than the alternative system "1-start, fully-closed".
 
-#### What is "1-start, fully-closed"?
+    This same coordinate system can be used to flag insertions and deletions as a start and an end which equal each other refers to a space between two residues e.g. 4,4 would flag an event occurring between `GGTG` and `GAGTGC`.
 
-```
-    GAGTGC
-GGTGGAGTGCGCCGCCATGG
-         11111111112
-12345678901234567890
-```
 
-"1-start, fully-closed" is the human readable coordinate system used in all genomic data displays and reports. It indexes sequences starting at 1. This system should be used when displaying genomic data to a human because it is the correct way to refer to positions. The subsequence `GAGTGC` in "1-start, fully-closed" starts at position 5 and ends at position 10. Length is calculated by subtracting start from end plus one e.g. ((10+1)-5) = 6.
+??? info "What is '1-start, fully-closed'?"
+
+    ```
+        GAGTGC
+    GGTGGAGTGCGCCGCCATGG
+             11111111112
+    12345678901234567890
+    ```
+
+    "1-start, fully-closed" is the human readable coordinate system used in all genomic data displays and reports. It indexes sequences starting at 1. This system should be used when displaying genomic data to a human because it is the correct way to refer to positions. The subsequence `GAGTGC` in "1-start, fully-closed" starts at position 5 and ends at position 10. Length is calculated by subtracting start from end plus one e.g. ((10+1)-5) = 6.
 
 #### GA4GH Products and their coordinate systems
 
