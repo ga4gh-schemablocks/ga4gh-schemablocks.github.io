@@ -22,10 +22,10 @@ together with a default type.
 
 * Sushil Varma [0000-0003-1687-2754](https://orcid.org/0000-0003-1687-2754) :ORCID-icon-green:
 
+#### Schema Overview[^1]
+
 <!--schema_block_start-->
 ```yaml
-$schema: http://json-schema.org/draft-07/schema#
-$id: https://schemablocks.org/schemas/sb-checksum/Checksum/v0.0.1
 title: Checksum
 description: Checksum
 type: object
@@ -81,3 +81,10 @@ ID | Hash Name String | Value Length | Reference | Status
 19-31 | Unassigned |  |  | 
 32 | Reserved |  | [RFC6920](http://www.iana.org/go/rfc6920) | 
 33-63 | Unassigned |  |  | 
+
+
+
+[^1]: Please note that the schema here is provided for illustration purposes,
+may represent an approximation and possibly exclude technical components of a
+proper JSON Schema format.
+

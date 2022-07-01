@@ -23,10 +23,10 @@ to describe limitations in the ways data items can be re-used.
 * Melanie Courtot ([0000-0002-9551-6370](https://orcid.org/0000-0002-9551-6370)) :ORCID-icon-green:
 * Isuru Liyanage ([0000-0002-4839-5158](https://orcid.org/0000-0002-4839-5158)) :ORCID-icon-green:
 
+#### Schema Overview[^1]
+
 <!--schema_block_start-->
 ```yaml
-$schema: http://json-schema.org/draft-07/schema#
-$id: https://schemablocks.org/schemas/json/DUO/DataUseLimitation.json
 title: DataUseLimitation
 meta:
 description: >-
@@ -63,3 +63,7 @@ examples:
       text: "UK"
 ```
 <!--schema_block_end-->
+
+[^1]: Please note that the schema here is provided for illustration purposes,
+may represent an approximation and possibly exclude technical components of a
+proper JSON Schema format.

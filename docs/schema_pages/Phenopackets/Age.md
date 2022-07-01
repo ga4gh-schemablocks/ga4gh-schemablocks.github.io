@@ -26,9 +26,10 @@ of start and end age values or through the use of an ontology class.
 * Jules Jacobsen [0000-0002-3265-15918](https://orcid.org/0000-0002-3265-15918) :ORCID-icon-green:
 * Michael Baudis [0000-0002-9903-4248](https://orcid.org/0000-0002-9903-4248) :ORCID-icon-green:
 
+#### Schema Overview[^1]
+
 <!--schema_block_start-->
 ```yaml
-hema: https://json-schema.org/draft/2020-12/schema
 title: Age
 description: 'Age value definition'
 type: object
@@ -41,3 +42,7 @@ properties:
       - P12DT6H24M
 ```
 <!--schema_block_end-->
+
+[^1]: Please note that the schema here is provided for illustration purposes,
+may represent an approximation and possibly exclude technical components of a
+proper JSON Schema format.

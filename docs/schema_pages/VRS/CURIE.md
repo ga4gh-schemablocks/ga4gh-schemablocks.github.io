@@ -23,6 +23,8 @@ resources.
 
 * Reece Hart [0000-0003-3463-0775](https://orcid.org/0000-0003-3463-0775) :ORCID-icon-green:
 
+#### Schema Overview[^1]
+
 <!--schema_block_start-->
 ```yaml
 title: CURIE
@@ -35,3 +37,7 @@ properties:
 additionalProperties: false
 ```
 <!--schema_block_end-->
+
+[^1]: Please note that the schema here is provided for illustration purposes,
+may represent an approximation and possibly exclude technical components of a
+proper JSON Schema format.

@@ -36,10 +36,10 @@ resource and its BeaconPlus implementation of the Beacon v2 protocol.
 
 * Michael Baudis [0000-0002-9551-6370](https://orcid.org/0000-0002-9551-6370) :ORCID-icon-green:
 
+#### Schema Overview[^1]
+
 <!--schema_block_start-->
 ```yaml
-"$schema": https://json-schema.org/draft/2020-12/schema
-"$id": https://progenetix.org/services/schemas/GeoLocation/v2022-06-28
 title: GeoLocation
 type: object
 properties:
@@ -141,3 +141,7 @@ definitions:
           - city
 ```
 <!--schema_block_end-->
+
+[^1]: Please note that the schema here is provided for illustration purposes,
+may represent an approximation and possibly exclude technical components of a
+proper JSON Schema format.

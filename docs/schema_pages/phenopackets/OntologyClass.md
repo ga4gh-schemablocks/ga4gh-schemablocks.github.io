@@ -29,10 +29,10 @@ in conjunction with Phenopackets developers.
 * Michael Baudis ([0000-0002-9903-4248](https://orcid.org/0000-0002-9903-4248)) :ORCID-icon-green:
 * Melanie Courtot ([0000-0002-9551-6370](https://orcid.org/0000-0002-9551-6370)) :ORCID-icon-green:
 
+#### Schema Overview[^1]
+
 <!--schema_block_start-->
 ```yaml
-$schema: http://json-schema.org/draft-07/schema#
-$id: https://schemablocks.org/schemas/json/phenopackets/OntologyClass.json
 title: OntologyClass
 description: >-
   This element is used to represent classes (terms) from ontologies, and is used
@@ -67,3 +67,7 @@ examples:
 
 ```
 <!--schema_block_end-->
+
+[^1]: Please note that the schema here is provided for illustration purposes,
+may represent an approximation and possibly exclude technical components of a
+proper JSON Schema format.

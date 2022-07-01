@@ -24,9 +24,10 @@ of their phenotypic sex or gender.
 * Jules Jacobsen [0000-0002-3265-15918](https://orcid.org/0000-0002-3265-15918) :ORCID-icon-green:
 * Michael Baudis [0000-0002-9903-4248](https://orcid.org/0000-0002-9903-4248) :ORCID-icon-green:
 
+#### Schema Overview[^1]
+
 <!--schema_block_start-->
 ```yaml
-$schema: https://json-schema.org/draft/2020-12/schema
 title: KaryotypicSex
 description: >-
   The chromosomal sex of an individual represented from a selection
@@ -62,3 +63,10 @@ The values correspond to the ordinal values in the Phenopackets schema where:
 * 8 - XXXX (Four X chromosomes)
 * 9 - XYY (One X and two Y chromosomes)
 * 10 - OTHER_KARYOTYPE (None of the above types)
+
+
+
+[^1]: Please note that the schema here is provided for illustration purposes,
+may represent an approximation and possibly exclude technical components of a
+proper JSON Schema format.
+
