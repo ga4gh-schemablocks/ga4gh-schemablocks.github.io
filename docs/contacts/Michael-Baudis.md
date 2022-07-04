@@ -1,6 +1,7 @@
 ---
 title: "Michael Baudis"
 description: SchemaBlocks Community Organizer
+excerpt_link: 'https://info.baudisgroup.org/group/Michael_Baudis/'
 is_contact: true
 name_tag: baudis_m
 ---
