@@ -2,7 +2,6 @@
 title: "Ben Hutton"
 description: SchemaBlocks Contributor
 is_contact: false
-name_tag: hutton_b
 ---
 
 * Senior Web Developer, Wellcome Sanger Institute, Hinxton

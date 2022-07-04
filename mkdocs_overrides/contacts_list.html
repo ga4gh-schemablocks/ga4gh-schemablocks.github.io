@@ -5,16 +5,19 @@
   {% set contacts_pages = [] %}
     {% for this_file in pages %}
       {% set this_page = this_file.page %}
-      {% if this_page.meta is defined %}
-        {% if this_page.url.startswith(config.extra.contacts.dir) and this_page.meta.name_tag is defined %}
-          {{ contacts_pages.append( this_page ) or "" }}
+      {% if this_page.meta is defined %} 
+        {% if this_page.url.startswith(config.extra.contacts.dir) %}
+          <!-- avoiding integration of the index page -->
+          {% if not this_page.url.endswith(config.extra.contacts.dir+"/") %}
+            {{ contacts_pages.append( this_page ) or "" }}
+          {% endif %}
       {% endif %}
     {% endif %}
   {% endfor %}
 
 <h2>Contacts</h2>
 
-  {% for page in (contacts_pages|sort(attribute="url")) %}
+  {% for page in contacts_pages %}
     {% if page.meta.is_contact %}
       {% include "partials/blog_contact.html" %}
     {% endif %}
@@ -22,7 +25,7 @@
 
 <h2>Contributors</h2>
 
-  {% for page in (contacts_pages|sort(attribute="url")) %}
+  {% for page in contacts_pages %}
     {% if not page.meta.is_contact %}
       {% include "partials/blog_contact.html" %}
       {% endif %}
