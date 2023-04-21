@@ -109,12 +109,12 @@ and the discussions that led to it:
 and [#121](https://github.com/ga4gh/ga4gh-schemas/issues/121).
 * a [nice explanation of coordinate systems](https://www.biostars.org/p/84686/) at _Biostars.org_ by Obi Griffith
 * [Chado Interbase documentation](http://gmod.org/wiki/Introduction_to_Chado#Interbase_Coordinates)
+* _Why numbering should start at zero_, by Edsger Dijkstra (1982; [PDF](http://www.cs.utexas.edu/users/EWD/ewd08xx/EWD831.PDF) | [HTML](https://www.cs.utexas.edu/users/EWD/transcriptions/EWD08xx/EWD831.html))
 * [Interbase primer](http://bergmanlab.genetics.uga.edu/?p=36)
 * [Beacon’s support for coordinate systems](https://github.com/ga4gh-beacon/specification/issues/251)
 * [Refget’s support for coordinate systems](https://github.com/samtools/hts-specs/pull/327#issuecomment-411458808)
 * [UCSC information on “0-start, half-open”](http://genome.ucsc.edu/blog/the-ucsc-genome-browser-coordinate-counting-systems/)
 * [Transforming between coordinates in “0-start, half open”](http://genomewiki.ucsc.edu/index.php/Coordinate_Transforms)
-
 
 ---
 
