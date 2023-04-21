@@ -21,7 +21,7 @@
 .md-grid {
   max-width: 1024px; 
 }
-
+/*
 .md-header {
   background-color:  var(--md-accent-fg-color);
 }
@@ -30,7 +30,7 @@ nav.md-tabs {
   background-color:  var(--md-accent-fg-color);
 }
 
-/*.md-header__button {
+*//*.md-header__button {
     padding:  0px; 
 }
 */
@@ -41,7 +41,7 @@ nav.md-tabs {
 }
 */
 h2 {
-    color: var(--md-accent-font-color);
+/*    color: var(--md-accent-font-color);*/
     border-top:  var(--md-accent-font-color) thin solid;
     border-bottom:  var(--md-accent-font-color) thin solid;
 }
