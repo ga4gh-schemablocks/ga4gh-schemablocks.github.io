@@ -63,7 +63,7 @@ markdown_extensions:
 theme:
   name: material
   palette:
-    primary: red
+    primary: light blue
     # scheme: slate
   # favicon: img/logo-schemablocks-no-text-50x50.png
   # logo: img/logo-GA4GH-white-text-670x160.png
