@@ -34,12 +34,12 @@ nav.md-tabs {
     padding:  0px; 
 }
 */
-.md-header__source {
+/*.md-header__source {
     background-image: url("/img/logo-schemablocks-40x40-no-logo.png");
     background-repeat: no-repeat;
     background-position: right; 
 }
-
+*/
 h2 {
     color: var(--md-accent-font-color);
     border-top:  var(--md-accent-font-color) thin solid;
