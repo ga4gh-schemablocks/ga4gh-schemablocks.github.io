@@ -12,9 +12,9 @@ edit_uri: edit/main/docs/
 nav:
   - 'Home': index.md
 #  - About SchemaBlocks: schemablocks-principles.md
-  - Contacts: contacts
   - Standards & Practices: standards-recommendations.md
   - Schemas: schema_pages
+  - Contacts: contacts
   - '{S}[B] Legacy Site &#8599;': https://legacy.schemablocks.org
   - Beacon Project &#8599;: https://beacon-project.io
   - Phenopacket Docs &#8599;: https://phenopacket-schema.readthedocs.io/en/latest/

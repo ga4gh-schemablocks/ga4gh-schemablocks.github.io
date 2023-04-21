@@ -1,14 +1,14 @@
 ---
 title: "Michael Baudis"
-description: SchemaBlocks Community Organizer
-excerpt_link: 'https://info.baudisgroup.org/group/Michael_Baudis/'
+description: Discovery Workstream Co-Lead
+excerpt_link: 'https://info.baudisgroup.org/'
 is_contact: true
 ---
 
 * Professor of Bioinformatics, University of Zurich & Swiss Institute of Bioinformatics  
 * Co-chair GA4GH Discovery Work Stream  
 * Co-lead ELIXIR hCNV Community  
-* ELIXIR Beacon Project  
+* Co-lead ELIXIR Beacon Project  
 
 <!--more-->
 
