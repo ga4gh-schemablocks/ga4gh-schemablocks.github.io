@@ -1,4 +1,4 @@
-site_name: 'GenomeStandards'
+site_name: 'Genome Standards and Schema Blocks'
 site_description: 'Standards Collection Website of the GA4GH community'
 site_author: Michael Baudis
 copyright: '&copy; Copyright 2023 GA4GH Contributors'
@@ -15,9 +15,9 @@ nav:
   - Standards & Practices: standards-recommendations.md
   - Schemas: schema_pages
   - Contacts: contacts
-  - '{S}[B] Legacy Site &#8599;': https://legacy.schemablocks.org
+  - '{S}[B] Legacy Site &#8599;': https://schemablocks.genomestandards.org
   - Beacon Project &#8599;: https://beacon-project.io
-  - Phenopacket Docs &#8599;: https://phenopacket-schema.readthedocs.io/en/latest/
+  - Phenopackets &#8599;: https://phenopackets.org
 
 ###############################################################################
 
