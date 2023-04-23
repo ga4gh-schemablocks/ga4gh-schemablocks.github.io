@@ -1,8 +1,7 @@
 ---
 title: "Michael Baudis"
 description: Discovery Workstream Co-Lead
-excerpt_link: 'https://info.baudisgroup.org/'
-is_contact: true
+template: post.html
 ---
 
 * Professor of Bioinformatics, University of Zurich & Swiss Institute of Bioinformatics  

@@ -4,10 +4,7 @@ description: A New Hope
 date: 2023-04-21
 authors:
   - "@mbaudis"
-template: blog_post.html
-hide:
-  # - navigation
-  # - toc
+template: post.html
 ---
 
 Based on the widespread interest of more general documentation of best practices
@@ -20,4 +17,4 @@ we encourage contributions from GA4GH members.
 
 <!--more-->
 
-The previous SchemaBlockse site is accessible through [legacy.schemablocks.org](http://legacy.schemablocks.org), although it may degrade over time ...
+The previous SchemaBlockse site is accessible through [legacy.schemablocks.org](http://schemablocks.genomestandards.org), although it may degrade over time ...

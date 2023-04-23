@@ -1,8 +1,6 @@
 ---
-template: news_list.html
-date: 2023-04-21
-authors:
-  - '@mbaudis'
+template: post_list.html
+path_element: news
 ---
 
 # GA4GH Data Standards, Conventions & Practices

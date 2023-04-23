@@ -4,10 +4,7 @@ description: Re-design & Re-focus
 date: 2022-06-14
 authors:
   - "@mbaudis"
-template: blog_post.html
-hide:
-  # - navigation
-  # - toc
+template: post.html
 ---
 
 After some low-level activity, the SchemaBlocks site has been

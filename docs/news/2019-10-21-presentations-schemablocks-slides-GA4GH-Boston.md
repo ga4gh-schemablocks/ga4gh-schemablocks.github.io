@@ -4,6 +4,7 @@ date: 2019-10-21
 description: Presentations in the Discovery Work Stream Session
 authors:
   - "@mbaudis"
+template: post.html
 ---
 
 At the Discovery work stream session of the 7th GA4GH plenary, several 

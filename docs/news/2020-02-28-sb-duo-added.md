@@ -4,6 +4,7 @@ date: 2020-02-28
 description: DUO Data Use Ontology in {S}[B]
 authors:
   - "@mbaudis"
+template: post.html
 ---
 
 [Isuru Liyanage](/contacts/Isuru-Liyanage/) and 

@@ -1,9 +1,9 @@
 ---
-template: contacts_list.html
+template: page_list.html
 authors:
   - '@mbaudis'
 ---
 
 # Community Contacts & Contributors
 
-===TBD===
+

@@ -4,6 +4,7 @@ date: 2020-01-28
 layout: default
 authors:
   - "@mbaudis"
+template: post.html
 ---
 
 At the January 28 call of the [Human Cell Atlas](https://www.humancellatlas.org), Michael Baudis gave a brief introduction about the SchemaBlocks project and its role in [GA4GH](http://ga4gh.org).

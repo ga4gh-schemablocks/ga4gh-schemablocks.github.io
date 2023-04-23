@@ -1,6 +1,7 @@
 ---
 title: "Ben Hutton"
 description: SchemaBlocks Contributor
+template: post.html
 is_contact: false
 ---
 

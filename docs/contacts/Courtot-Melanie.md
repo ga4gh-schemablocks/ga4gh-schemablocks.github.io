@@ -1,7 +1,7 @@
 ---
 title: "Melanie Courtot"
 description: SchemaBlocks Community Organizer
-is_contact: true
+template: post.html
 ---
 
 * Director of Genome Informatics, Ontario Institute for Cancer Research (OICR)

@@ -6,7 +6,7 @@
   {% for this_file in pages %}
     {% set this_page = this_file.page %}
     {% if this_page.meta is defined %}
-      {% if this_page.url.startswith(config.extra.schema_pages.dir) and this_page.meta.title is defined %}
+      {% if this_page.url.startswith("schema_pages") and this_page.meta.title is defined %}
         {{ schemas_pages.append( this_page ) or "" }}
       {% endif %}
     {% endif %}
@@ -39,12 +39,13 @@
 
 <!-- Use a hidden p tag to provide a preview -->
 
-        {% if config.extra.schema_pages.extended_preview %}
-          {{ page.content.split(config.extra.schema_pages.excerpt_separator, 1)[0] }}
-  <a href="{{ page.url|url }}#more"><span class="twemoji">
+      {{ page.content.split(config.extra.excerpt_separator, 1)[0] }}
+    <a href="/{{ page.url }}">
+      <span class="twemoji">
           {% include ".icons/octicons/arrow-right-24.svg" %}
-  </span>Continue reading</a>
-        {% endif %}
+      </span>
+      Continue reading
+    </a>
 
       {% endif %}
     {% endfor %}

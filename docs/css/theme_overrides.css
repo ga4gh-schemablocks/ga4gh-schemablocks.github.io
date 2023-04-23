@@ -3,24 +3,21 @@
   --md-accent-font-color: #ef5552;
 */}
 
-@media only screen and (min-width: 76.25em) {
-  .md-main__inner {
-    max-width: none;
-  }
-  .md-sidebar--primary {
-    left: 0;
-  }
-  .md-sidebar--secondary {
-    right: 0;
-    margin-left: 0;
-    -webkit-transform: none;
-    transform: none;   
-  }
-}
 
 .md-grid {
   max-width: 1024px; 
 }
+
+.blog-post-aside {
+  margin-top: 20px;
+  margin-bottom: -30px;
+  border-top:  var(--md-accent-font-color) thin solid;
+}
+
+.blog-post-preview {
+  margin-bottom: 50px;
+}
+
 /*
 .md-header {
   background-color:  var(--md-accent-fg-color);

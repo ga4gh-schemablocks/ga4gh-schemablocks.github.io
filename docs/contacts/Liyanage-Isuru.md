@@ -1,6 +1,7 @@
 ---
 title: "Isuru Liyanage"
 description: SchemaBlocks Contributor
+template: post.html
 is_contact: false
 ---
 

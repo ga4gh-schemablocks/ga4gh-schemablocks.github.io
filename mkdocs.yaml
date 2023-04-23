@@ -11,8 +11,12 @@ edit_uri: edit/main/docs/
 
 nav:
   - 'Home': index.md
+#  - News: news
 #  - About SchemaBlocks: schemablocks-principles.md
-  - Standards & Practices: standards-recommendations.md
+  - Standards & Practices: standards-recommendations
+    # - Genome Coordinates: standards-recommendations/genome-coordinates
+    # - Dates & Times: standards-recommendations/dates-times
+    # - Identifiers: standards-recommendations/identifiers
   - Schemas: schema_pages
   - Contacts: contacts
   - '{S}[B] Legacy Site &#8599;': https://schemablocks.genomestandards.org
@@ -38,11 +42,7 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.tilde
   - pymdownx.saneheaders
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:mermaid2.fence_mermaid   
+  - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
@@ -56,7 +56,7 @@ markdown_extensions:
         emoji_generator: !!python/name:materialx.emoji.to_svg
         options:
           custom_icons:
-            - mkdocs_overrides/.icons
+            - extra/.icons
 
 ###############################################################################
 
@@ -65,8 +65,8 @@ theme:
   palette:
     primary: light blue
     # scheme: slate
-  # favicon: img/logo-schemablocks-no-text-50x50.png
-  # logo: img/logo-GA4GH-white-text-670x160.png
+  favicon: img/logo-schemablocks-no-text-50x50.png
+  logo: img/logo-GA4GH-white-text-670x160.png
   icon:
     repo: fontawesome/brands/github-alt
     admonition:
@@ -79,35 +79,15 @@ theme:
     - navigation.tracking
     - navigation.sections
     - toc.integrate
-  custom_dir: mkdocs_overrides
+  custom_dir: extra
       
 plugins:
     - search
-    # - with-pdf:
-    #     author: Progenetix
-    #     output_path: pdf/progenetix-documentation.pdf
     - macros
-    - mermaid2
 
 extra:
-  news:
-    dir: news
-    author: hCNV
-    list_length: 50
-    extended_preview: true
-    excerpt_separator: <!--more-->
-  contacts:
-    dir: contacts
-    author: hCNV
-    list_length: 50
-    extended_preview: true
-    excerpt_separator: <!--more-->
-  schema_pages:
-    dir: schema_pages
-    author: hCNV
-    list_length: 50
-    extended_preview: true
-    excerpt_separator: <!--more-->
+  excerpt_separator: <!--more-->
+  blog_list_length: 100
   social:
     # - icon: fontawesome/brands/twitter 
     #   link: https://twitter.com/progenetix
@@ -115,7 +95,3 @@ extra:
       link: https://github.com/ga4gh-schemablocks
 extra_css:
   - css/theme_overrides.css
-# extra_javascript:
-  # - https://unpkg.com/mermaid/dist/mermaid.min.js
-  # - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
-    
