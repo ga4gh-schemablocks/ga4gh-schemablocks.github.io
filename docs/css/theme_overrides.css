@@ -18,27 +18,7 @@
   margin-bottom: 50px;
 }
 
-/*
-.md-header {
-  background-color:  var(--md-accent-fg-color);
-}
-
-nav.md-tabs {
-  background-color:  var(--md-accent-fg-color);
-}
-
-*//*.md-header__button {
-    padding:  0px; 
-}
-*/
-/*.md-header__source {
-    background-image: url("/img/logo-schemablocks-40x40-no-logo.png");
-    background-repeat: no-repeat;
-    background-position: right; 
-}
-*/
 h2 {
-/*    color: var(--md-accent-font-color);*/
     border-top:  var(--md-accent-font-color) thin solid;
     border-bottom:  var(--md-accent-font-color) thin solid;
 }

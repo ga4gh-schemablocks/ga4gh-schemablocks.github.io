@@ -16,7 +16,7 @@ template: post.html
 
 ### Units of time
 
-<a href="https://xkcd.com/1179/" target="_blank"><img src="https://imgs.xkcd.com/comics/iso_8601.png"  align="right" style="margin 20px 0px 30px 20px; width: 200px; clear:none;" /></a>
+<a href="https://xkcd.com/1179/" target="_blank"><img src="https://imgs.xkcd.com/comics/iso_8601.png"  align="right" style="margin-top: -40px; width: 220px; clear:none;" /></a>
 
 * *Y* = year
 * *M* = month
