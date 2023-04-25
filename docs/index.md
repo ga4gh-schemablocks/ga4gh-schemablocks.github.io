@@ -3,12 +3,9 @@ template: post_list.html
 path_element: news
 ---
 
-# GA4GH Data Standards, Conventions & Practices
+# GA4GH SchemaBlocks {S}[B] Community
 
-This [website](http://genomestandards.org) from the GA4GH Community represents information about data standards, computational conventions and procedures, "biodata" mappings and schema components which have found some consensus among GA4GH members or have been used in approved GA4GH standards. It does not aim to represent complete stand-alone standards such
-as [VRS](https://vrs.ga4gh.org/en/stable/), [Phenopackets](http://phenopackets.org) or
-[Beacon](http://docs.genomebeacons.org) though parts or methods related to those
-will contribute to the content of the site.
+The [website](http://schemablocks.org) of the _GA4GH SchemaBlocks Community_ ({S}[B]) represents information about data schema components, standards and procedures with consensus support from GA4GH members. The documents should __not__ be considered "__authoritative GA4GH recommendations__" but rather represent community-provide documentation and implementation examples. For more information on GA4GH, please visit the [GA4GH Website](https://ga4gh.org).
 
 !!! warning "Non-authorative documentation"
 
