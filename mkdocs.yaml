@@ -12,10 +12,6 @@ edit_uri: edit/main/docs/
 nav:
   - 'Home': index.md
   # - News: news
-#  - About SchemaBlocks: schemablocks-principles.md
-    # - Genome Coordinates: standards-recommendations/genome-coordinates
-    # - Dates & Times: standards-recommendations/dates-times
-    # - Identifiers: standards-recommendations/identifiers
   - Schemas: schema_pages
   - Contacts: contacts
   - GA4GH Community Best Practices &#8599;: https://ga4gh-community-standards.github.io
