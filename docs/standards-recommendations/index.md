@@ -1,11 +1,11 @@
 ---
-template: page_list.html
 title: Standards, Conventions and Best Practices
-description: GA4GH standards and recommendations
+description: GA4GH community standards and recommendations
 ---
 
-# Standards, Conventions and Best Practices
+The documentation of GA4GH "best practices" is now accessible under
+the [ga4gh-community-standards.github.io](http://ga4gh-community-standards.github.io)
+domain[^1]. While only a few recommendations are available there at this time
+we encourage contributions from GA4GH members.
 
-This documentation collects some standards and recommendations with "broad overall agreement
-among GA4GH contributors. This is by no means exhaustive; additions and corrections are welcome!
-
+[^1]: The site is also available through [genomestandards.org](https://genomestandards.org)

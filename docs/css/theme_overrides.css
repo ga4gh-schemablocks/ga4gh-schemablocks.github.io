@@ -3,27 +3,12 @@
   --md-accent-font-color: #ef5552;
 }
 
-@media only screen and (min-width: 76.25em) {
-  .md-main__inner {
-    max-width: none;
-  }
-  .md-sidebar--primary {
-    left: 0;
-  }
-  .md-sidebar--secondary {
-    right: 0;
-    margin-left: 0;
-    -webkit-transform: none;
-    transform: none;   
-  }
-}
-
 .md-grid {
-  max-width: 1024px; 
+  max-width: 1200px; 
 }
 
 .md-header {
-  background-color:  var(--md-accent-fg-color);
+  background-color:  #8C0500;
 }
 
 nav.md-tabs {
@@ -42,8 +27,8 @@ nav.md-tabs {
 
 h2 {
     color: var(--md-accent-font-color);
-    border-top:  var(--md-accent-font-color) thin solid;
-    border-bottom:  var(--md-accent-font-color) thin solid;
+    border-top:  #8C0500 thin solid;
+    border-bottom:  #8C0500 thin solid;
 }
 
 div.tabbed-set {
