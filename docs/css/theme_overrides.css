@@ -26,9 +26,24 @@ nav.md-tabs {
 }
 
 h2 {
-    color: var(--md-accent-font-color);
     border-top:  #8C0500 thin solid;
     border-bottom:  #8C0500 thin solid;
+}
+
+aside.blog-post-aside {
+    border-top:  #8C0500 thin solid;
+    margin-top:  24px;
+    padding-top:  12px;
+}
+
+div.contact_spacer {
+    display:  block;
+    height:  20px;
+}
+
+h3.title_news {
+    margin-top:  10px;
+    margin-bottom:  0px;
 }
 
 div.tabbed-set {
