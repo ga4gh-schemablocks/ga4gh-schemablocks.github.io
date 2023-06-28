@@ -1,3 +1,3 @@
-# GA4GH GenomeStandards Website
+# GA4GH SchemaBlocks Website
 
-Mkdocs version of the [GenomeStandards site](http://genomestandards.org) - based on the previous SchemaBlocks community project.
+Mkdocs version of the [Schemablocks site](http://schemablocks.org) - the SchemaBlocks community project.
