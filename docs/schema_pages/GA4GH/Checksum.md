@@ -18,40 +18,10 @@ together with a default type.
 * [GA4GH DRS](https://github.com/ga4gh/data-repository-service-schemas/)
 * [GA4GH TRS](https://github.com/ga4gh/tool-registry-service-schemas/)
 
-#### {S}[B] Contributors
-
-* Sushil Varma [0000-0003-1687-2754](https://orcid.org/0000-0003-1687-2754) :ORCID-icon-green:
-
-#### Schema Overview[^1]
-
 <!--schema_block_start-->
-```yaml
-title: Checksum
-description: Checksum
-type: object
-required:
-  - checksum
-  - type
-properties:
-  checksum:
-    type: string
-    description: >-
-      The hexadecimal encoded ([Base16](https://tools.ietf.org/html/rfc4648#section-8)) checksum for the data
-    examples:
-      - 77af4d6b9913e693e8d0b4b294fa62ade6054e6b2f1ffb617ac955dd63fb0182
-  type:
-    type: string
-    description: >-
-      The digest method used to create the checksum.
-      The value (e.g. `sha-256`) SHOULD be listed as `Hash Name String` in the 
-      [GA4GH Hash Algorithm Registry](https://github.com/ga4gh-discovery/ga4gh-checksum/blob/master/hash-alg.csv).
-      Other values MAY be used |  as long as implementors are aware of the issues
-      discussed in [RFC6920](https://tools.ietf.org/html/rfc6920#section-9.4).
-      
-      GA4GH may provide more explicit guidance for use of non-IANA-registered
-      algorithms in the future.
-    examples:
-      - 'sha-256'
+
+``` yaml title="Schema (YAML version)"
+--8<-- "./docs/schema_files/src/GA4GH/Checksum.yaml"
 ```
 <!--schema_block_end-->
 
@@ -82,9 +52,7 @@ ID | Hash Name String | Value Length | Reference | Status
 32 | Reserved |  | [RFC6920](http://www.iana.org/go/rfc6920) | 
 33-63 | Unassigned |  |  | 
 
+#### {S}[B] Contributors
 
-
-[^1]: Please note that the schema here is provided for illustration purposes,
-may represent an approximation and possibly excludes technical components of a
-proper JSON Schema format.
+* Sushil Varma [0000-0003-1687-2754](https://orcid.org/0000-0003-1687-2754) :ORCID-icon-green:
 

@@ -18,35 +18,10 @@ of their phenotypic sex or gender.
 * [source](https://github.com/phenopackets/phenopacket-schema) :fontawesome-brands-github:
 * [Phenopackets documentation](https://phenopacket-schema.readthedocs.io)
 
-#### {S}[B] Contributors
-
-* Peter Robinson [0000-0002-0736-91998](https://orcid.org/0000-0002-0736-91998) :ORCID-icon-green:
-* Jules Jacobsen [0000-0002-3265-15918](https://orcid.org/0000-0002-3265-15918) :ORCID-icon-green:
-* Michael Baudis [0000-0002-9903-4248](https://orcid.org/0000-0002-9903-4248) :ORCID-icon-green:
-
-#### Schema Overview[^1]
-
 <!--schema_block_start-->
-```yaml
-title: KaryotypicSex
-description: >-
-  The chromosomal sex of an individual represented from a selection
-  of options.
-$comments: Compares to https://github.com/phenopackets/phenopacket-schema/blob/master/docs/karyotypicsex.rst
-type: string
-enum:
-  - UNKNOWN_KARYOTYPE
-  - XX
-  - XY
-  - XO
-  - XXY
-  - XXX
-  - XXYY
-  - XXXY
-  - XXXX
-  - XYY
-  - OTHER_KARYOTYPE
-default: UNKNOWN_KARYOTYPE
+
+``` yaml title="Schema (YAML version)"
+--8<-- "./docs/schema_files/src/Phenopackets/KaryotypicSex.yaml"
 ```
 <!--schema_block_end-->
 
@@ -65,8 +40,8 @@ The values correspond to the ordinal values in the Phenopackets schema where:
 * 10 - OTHER_KARYOTYPE (None of the above types)
 
 
+#### {S}[B] Contributors
 
-[^1]: Please note that the schema here is provided for illustration purposes,
-may represent an approximation and possibly excludes technical components of a
-proper JSON Schema format.
-
+* Peter Robinson [0000-0002-0736-91998](https://orcid.org/0000-0002-0736-91998) :ORCID-icon-green:
+* Jules Jacobsen [0000-0002-3265-15918](https://orcid.org/0000-0002-3265-15918) :ORCID-icon-green:
+* Michael Baudis [0000-0002-9903-4248](https://orcid.org/0000-0002-9903-4248) :ORCID-icon-green:
