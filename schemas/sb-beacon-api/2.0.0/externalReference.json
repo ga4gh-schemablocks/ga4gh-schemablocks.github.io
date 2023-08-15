@@ -1,0 +1,56 @@
+{
+   "$schema" : "https://json-schema.org/draft/2020-12/schema",
+   "additionalProperties" : "1",
+   "description" : "Definition of an external reference class. Provenance: GA4GH Phenopackets v2 `ExternalReference`",
+   "examples" : [],
+   "meta" : {
+      "contributors" : [
+         {
+            "id" : "https://beacon-project.io/categories/people.html",
+            "label" : "ELIXIR Beacon project team"
+         }
+      ],
+      "provenance" : [
+         {
+            "id" : "https://github.com/ga4gh-beacon/beacon-v2",
+            "label" : "Beacon v2"
+         },
+         {
+            "id" : "http://docs.genomebeacons.org",
+            "label" : "Beacon v2 documentation"
+         }
+      ],
+      "sb_status" : "proposed",
+      "used_by" : [
+         {
+            "id" : "https://ga4gh-approval-service-registry.ega-archive.org",
+            "label" : "Beacon v2 frontline implementers"
+         },
+         {
+            "id" : "https://docs.progenetix.org/beaconplus/",
+            "label" : "Progenetix database schema (Beacon+ backend)"
+         }
+      ]
+   },
+   "properties" : {
+      "id" : {
+         "description" : "An application specific identifier. RECOMMENDED.",
+         "example" : "PMID:34054918",
+         "type" : "string"
+      },
+      "notes" : {
+         "description" : "An optional text descriptor. Renamed compared to GA4GH Phenopackets v2 `ExternalReference.description`",
+         "example" : "Signatures of Discriminative Copy Number Aberrations in 31 Cancer Subtypes",
+         "type" : "string"
+      },
+      "reference" : {
+         "description" : "A url.",
+         "example" : "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8155688/",
+         "type" : "string"
+      }
+   },
+   "required" : [],
+   "title" : "ExternalReference",
+   "type" : "object"
+}
+

@@ -1,0 +1,47 @@
+{
+   "$id" : "https://schemablocks.org/schemas/sb-vr-spec/Interval/v1.0",
+   "$schema" : "http://json-schema.org/draft-07/schema#",
+   "description" : "An Interval represents a span of sequence. Positions are always represented \nby contiguous spans using interbase coordinates.\n\nThis definition of Interval is intended to be compatible with that in Sequence\nOntology ([SO:0000001](http://www.sequenceontology.org/browser/current_svn/term/SO:0000001)),\nwith the exception that the GA4GH VR Interval may be zero-width. The SO \ndefinition is for an \"extent greater than zero\".\n",
+   "discriminator" : {
+      "propertyName" : "type"
+   },
+   "examples" : [
+      {
+         "end" : "22",
+         "start" : "11",
+         "type" : "SimpleInterval"
+      }
+   ],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "Reece Hart",
+            "id" : "orcid:0000-0003-3463-0775"
+         },
+         {
+            "description" : "Michael Baudis",
+            "id" : "orcid:0000-0002-9903-4248"
+         }
+      ],
+      "provenance" : [
+         {
+            "description" : "vr-spec",
+            "id" : "https://github.com/ga4gh/vr-spec/blob/1.0/schema/vr.yaml"
+         }
+      ],
+      "sb_status" : "implemented",
+      "used_by" : [
+         {
+            "description" : "vr-spec",
+            "id" : "https://github.com/ga4gh/vr-spec/blob/1.0/schema/vr.yaml"
+         }
+      ]
+   },
+   "oneOf" : [
+      {
+         "$ref" : "./SimpleInterval"
+      }
+   ],
+   "title" : "Interval"
+}
+

@@ -1,0 +1,82 @@
+{
+   "$id" : "https://schemablocks.org/schemas/sb-phenopackets/Update/v1.0.0",
+   "$schema" : "http://json-schema.org/draft-07/schema#",
+   "additionalProperties" : "",
+   "description" : "Information about when an update to a record occurred, who or what made the update and any pertinent information\nregarding the content and/or reason for the update\n",
+   "examples" : [
+      {
+         "comment" : "Match with current schema",
+         "timestamp" : "2007-12-03T10:15:30.00Z",
+         "updatedBy" : "GA4GHData working group"
+      }
+   ],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "GA4GH Data Working Group"
+         },
+         {
+            "description" : "Jules Jacobsen",
+            "id" : "orcid:0000-0002-3265-15918"
+         },
+         {
+            "description" : "Peter Robinson",
+            "id" : "orcid:0000-0002-0736-91998"
+         },
+         {
+            "description" : "Michael Baudis",
+            "id" : "orcid:0000-0002-9903-4248"
+         },
+         {
+            "description" : "Melanie Courtot",
+            "id" : "orcid:0000-0002-9551-6370"
+         },
+         {
+            "description" : "Isuru Liyanage",
+            "id" : "orcid:0000-0002-4839-5158"
+         }
+      ],
+      "provenance" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/update.rst"
+         }
+      ],
+      "sb_status" : "implemented",
+      "used_by" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/update.rst"
+         }
+      ]
+   },
+   "properties" : {
+      "comment" : {
+         "description" : "Textual comment about the changes made to the content and/or reason for the update",
+         "examples" : [
+            "Match with current schema"
+         ],
+         "type" : "string"
+      },
+      "timestamp" : {
+         "description" : "ISO8601 UTC timestamps at which this record was updated",
+         "examples" : [
+            "2007-12-03T10:15:30.00Z"
+         ],
+         "type" : "string"
+      },
+      "updatedBy" : {
+         "description" : "Information about the person/organisation/network that has updated the phenopacket",
+         "examples" : [
+            "GA4GHData working group"
+         ],
+         "type" : "string"
+      }
+   },
+   "required" : [
+      "timestamp"
+   ],
+   "title" : "Update",
+   "type" : "object"
+}
+

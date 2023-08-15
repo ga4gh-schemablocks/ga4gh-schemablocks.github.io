@@ -1,0 +1,80 @@
+{
+   "$id" : "https://schemablocks.org/schemas/beacon-v2/IndividualResponseContent/2.0.0-draft.3",
+   "$schema" : "http://json-schema.org/draft-07/schema#",
+   "description" : "TBD\n",
+   "examples" : [],
+   "meta" : {
+      "contributors" : [
+         {
+            "id" : "https://beacon-project.io/categories/people.html",
+            "label" : "ELIXIR Beacon project team"
+         },
+         {
+            "id" : "github:@jrambla",
+            "label" : "Jordi Rambla"
+         },
+         {
+            "id" : "github:@sdelatorrep",
+            "label" : "Sabele de la Torre"
+         },
+         {
+            "id" : "github:@mamanambiya",
+            "label" : "Mamana Mbiyavanga"
+         },
+         {
+            "id" : "orcid:0000-0002-9903-4248",
+            "label" : "Michael Baudis"
+         }
+      ],
+      "provenance" : [
+         {
+            "id" : "https://github.com/ga4gh-beacon/specification-v2",
+            "label" : "Beacon v2 provisional / developer version"
+         }
+      ],
+      "sb_status" : "proposed",
+      "used_by" : [
+         {
+            "id" : "https://github.com/progenetix/schemas/",
+            "label" : "Progenetix database schema (Beacon+ backend)"
+         }
+      ]
+   },
+   "properties" : {
+      "beaconHandover" : {
+         "$ref" : "Handover.yaml#/"
+      },
+      "error" : {
+         "$ref" : "BeaconError.yaml#/"
+      },
+      "exists" : {
+         "description" : "Indicator of whether any individual was observed in any of the\ndatasets queried. This should be non-null, unless there was an\nerror, in which case `error` has to be non-null.\n",
+         "type" : "boolean"
+      },
+      "info" : {
+         "type" : "object"
+      },
+      "numTotalResults" : {
+         "minimum" : "0",
+         "type" : "integer"
+      },
+      "results" : {
+         "items" : {
+            "$ref" : "IndividualResponseResults.yaml#/"
+         },
+         "type" : "array"
+      },
+      "resultsHandover" : {
+         "$ref" : "Handover.yaml#/"
+      }
+   },
+   "required" : [
+      "exists",
+      "numTotalResults",
+      "results"
+   ],
+   "title" : "IndividualResponseContent",
+   "type" : "object",
+   "version" : "2.0.0-draft.3"
+}
+

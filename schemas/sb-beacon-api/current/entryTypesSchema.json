@@ -1,0 +1,57 @@
+{
+   "$schema" : "https://json-schema.org/draft/2020-12/schema",
+   "additionalProperties" : "1",
+   "definitions" : {
+      "EntryTypes" : {
+         "additionalProperties" : {
+            "$ref" : "./entryTypeDefinition.json",
+            "type" : "object"
+         },
+         "description" : "This is a dictionary of the entry types implemented in this Beacon instance.",
+         "minProperties" : "1"
+      }
+   },
+   "description" : "Schema for the Enrty Types list.",
+   "examples" : [],
+   "meta" : {
+      "contributors" : [
+         {
+            "id" : "https://beacon-project.io/categories/people.html",
+            "label" : "ELIXIR Beacon project team"
+         }
+      ],
+      "provenance" : [
+         {
+            "id" : "https://github.com/ga4gh-beacon/beacon-v2",
+            "label" : "Beacon v2"
+         },
+         {
+            "id" : "http://docs.genomebeacons.org",
+            "label" : "Beacon v2 documentation"
+         }
+      ],
+      "sb_status" : "proposed",
+      "used_by" : [
+         {
+            "id" : "https://ga4gh-approval-service-registry.ega-archive.org",
+            "label" : "Beacon v2 frontline implementers"
+         },
+         {
+            "id" : "https://docs.progenetix.org/beaconplus/",
+            "label" : "Progenetix database schema (Beacon+ backend)"
+         }
+      ]
+   },
+   "properties" : {
+      "entryTypes" : {
+         "$ref" : "#/definitions/EntryTypes",
+         "description" : "List of entry types."
+      }
+   },
+   "required" : [
+      "entryTypes"
+   ],
+   "title" : "List of Entry Types schema",
+   "type" : "object"
+}
+

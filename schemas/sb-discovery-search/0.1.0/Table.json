@@ -1,0 +1,58 @@
+{
+   "$id" : "https://schemablocks.org/schemas/sb-discovery-search/Table/0.1.0",
+   "$schema" : "http://json-schema.org/draft-07/schema#",
+   "description" : "Describes a Table hosted by this search node.\n",
+   "examples" : [],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "Miro Cupak"
+         },
+         {
+            "description" : "Marc Fiume",
+            "id" : "orcid:0000-0002-9769-375X"
+         },
+         {
+            "description" : "Michael Baudis",
+            "id" : "orcid:0000-0002-9903-4248"
+         },
+         {
+            "description" : "GA4GH Discovery developers..."
+         }
+      ],
+      "provenance" : [
+         {
+            "description" : "Discovery Search",
+            "id" : "https://github.com/ga4gh-discovery/ga4gh-discovery-search"
+         }
+      ],
+      "sb_status" : "playground",
+      "used_by" : [
+         {
+            "description" : "Discovery Search",
+            "id" : "https://github.com/ga4gh-discovery/ga4gh-discovery-search/tree/develop/spec"
+         }
+      ]
+   },
+   "properties" : {
+      "data_model" : {
+         "$ref" : "http://json-schema.org/draft-07/schema#"
+      },
+      "description" : {
+         "description" : "Optional description of the Table",
+         "type" : "string"
+      },
+      "name" : {
+         "description" : "Table name",
+         "type" : "string"
+      }
+   },
+   "required" : [
+      "name",
+      "data_model"
+   ],
+   "title" : "Table",
+   "type" : "object",
+   "version" : "0.1.0"
+}
+

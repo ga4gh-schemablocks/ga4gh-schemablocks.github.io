@@ -1,0 +1,171 @@
+{
+   "$id" : "https://schemablocks.org/schemas/sb-phenopackets/Variant/v1.0.0",
+   "$schema" : "http://json-schema.org/draft-07/schema#",
+   "additionalProperties" : "",
+   "description" : "A variant allele. Alleles can be listed using HGVS, VCF, SPDI or ISCN notation.\nSPDI format is the exchange standard used for ClinVar, dbSNP and soon the EVA\nTools for interconversion between SPDI, HGVS and VCF exist at https://api.ncbi.nlm.nih.gov/variation/v0/\n",
+   "examples" : [
+      {
+         "description" : "description of variant",
+         "id" : "ID_12345",
+         "vcfAllele" : {
+            "alt" : "G",
+            "chr" : "10",
+            "genomeAssembly" : "GRCh37",
+            "pos" : "123256215",
+            "ref" : "T"
+         }
+      }
+   ],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "Jules Jacobsen",
+            "id" : "orcid:0000-0002-3265-15918"
+         },
+         {
+            "description" : "Peter Robinson",
+            "id" : "orcid:0000-0002-0736-91998"
+         },
+         {
+            "description" : "Michael Baudis",
+            "id" : "orcid:0000-0002-9903-4248"
+         },
+         {
+            "description" : "Melanie Courtot",
+            "id" : "orcid:0000-0002-9551-6370"
+         },
+         {
+            "description" : "Isuru Liyanage",
+            "id" : "orcid:0000-0002-4839-5158"
+         }
+      ],
+      "provenance" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/variant.rst"
+         }
+      ],
+      "sb_status" : "implemented",
+      "used_by" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/variant.rst"
+         }
+      ]
+   },
+   "oneof" : [
+      {
+         "properties" : [
+            "hgvsAllele"
+         ]
+      },
+      {
+         "properties" : [
+            "vcfAllele"
+         ]
+      },
+      {
+         "properties" : [
+            "spdiAllele"
+         ]
+      },
+      {
+         "properties" : [
+            "iscnAllele"
+         ]
+      },
+      {
+         "properties" : [
+            "murineAllele"
+         ]
+      }
+   ],
+   "properties" : {
+      "hgvsAllele" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/HgvsAllele.json"
+            },
+            {
+               "description" : "HGVS version of describing a sequence variation",
+               "examples" : [
+                  "add example"
+               ]
+            }
+         ]
+      },
+      "iscnAllele" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/IscnAllele.json"
+            },
+            {
+               "description" : "Cytogenetic variation in ISCN format",
+               "examples" : [
+                  "t(8;14)(q24;q32)"
+               ]
+            }
+         ]
+      },
+      "spdiAllele" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/SpdiAllele.json"
+            },
+            {
+               "description" : "add description",
+               "examples" : [
+                  {
+                     "deletedSequence" : "T",
+                     "id" : "id_abc_123",
+                     "insertedSequence" : "G",
+                     "position" : "123256214",
+                     "seqId" : "NC_000010.10"
+                  }
+               ]
+            }
+         ]
+      },
+      "vcfAllele" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/VcfAllele.json"
+            },
+            {
+               "description" : "add description",
+               "examples" : [
+                  {
+                     "alt" : "G",
+                     "chr" : "10",
+                     "genomeAssembly" : "GRCh37",
+                     "pos" : "123256215",
+                     "ref" : "T"
+                  }
+               ]
+            }
+         ]
+      },
+      "zygosity" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/OntologyClass.json"
+            },
+            {
+               "description" : "add description",
+               "examples" : [
+                  {
+                     "id" : "GENO:0000135",
+                     "label" : "heterozygous"
+                  }
+               ]
+            }
+         ]
+      }
+   },
+   "required" : [
+      "id"
+   ],
+   "title" : "Variant",
+   "type" : "object"
+}
+

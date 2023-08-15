@@ -1,0 +1,77 @@
+{
+   "$id" : "https://schemablocks.org/schemas/sb-phenopackets/Pedigree/v1.0.0",
+   "$schema" : "http://json-schema.org/draft-07/schema#",
+   "additionalProperties" : "",
+   "description" : "https://software.broadinstitute.org/gatk/documentation/article?id=11016\n",
+   "examples" : [
+      {
+         "person" : [
+            {
+               "individualId" : "add example"
+            }
+         ]
+      }
+   ],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "GA4GH Data Working Group"
+         },
+         {
+            "description" : "Jules Jacobsen",
+            "id" : "orcid:0000-0002-3265-15918"
+         },
+         {
+            "description" : "Peter Robinson",
+            "id" : "orcid:0000-0002-0736-91998"
+         },
+         {
+            "description" : "Michael Baudis",
+            "id" : "orcid:0000-0002-9903-4248"
+         },
+         {
+            "description" : "Melanie Courtot",
+            "id" : "orcid:0000-0002-9551-6370"
+         },
+         {
+            "description" : "Isuru Liyanage",
+            "id" : "orcid:0000-0002-4839-5158"
+         }
+      ],
+      "provenance" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/pedigree.rst"
+         }
+      ],
+      "sb_status" : "implemented",
+      "used_by" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/pedigree.rst"
+         }
+      ]
+   },
+   "properties" : {
+      "person" : {
+         "description" : "add description",
+         "examples" : [
+            [
+               {
+                  "individualId" : "add example"
+               }
+            ]
+         ],
+         "items" : {
+            "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Person.json"
+         },
+         "type" : "array"
+      }
+   },
+   "required" : [
+      "person"
+   ],
+   "title" : "Pedigree",
+   "type" : "object"
+}
+

@@ -1,0 +1,120 @@
+{
+   "$id" : "https://schemablocks.org/schemas/schemablocks/BlockMeta/v0.0.1",
+   "$schema" : "http://json-schema.org/draft-07/schema#",
+   "description" : "BlockMeta defines the format of the SchemaBlocks metadata, used to describe\ne.g. the given block's provenance, scope, external usage.\n",
+   "examples" : [
+      {
+         "contributors" : [
+            {
+               "description" : "Michael Baudis",
+               "id" : "orcid:0000-0002-9903-4248"
+            },
+            {
+               "description" : "Ben Hutton",
+               "id" : "https://github.com/Relequestual"
+            }
+         ],
+         "provenance" : [
+            {
+               "description" : "Developer branch of original GA4GH schema",
+               "id" : "https://github.com/ga4gh-metadata/metadata-schemas/blob/master/schemas/shared.proto#L60"
+            }
+         ],
+         "sb_status" : "playground",
+         "used_by" : [
+            {
+               "description" : "Phenopackets",
+               "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/geolocation.rst"
+            },
+            {
+               "description" : "Progenetix database schema (Beacon+ backend)",
+               "id" : "https://github.com/progenetix/schemas/tree/master/main/yaml"
+            }
+         ]
+      }
+   ],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "Michael Baudis",
+            "id" : "orcid:0000-0002-9903-4248"
+         }
+      ],
+      "provenance" : [
+         {
+            "description" : "Original development for SchemaBlocks project",
+            "id" : "https://schemablocks.org"
+         }
+      ],
+      "sb_status" : "proposed",
+      "used_by" : [
+         {
+            "description" : "SchemaBlocks",
+            "id" : "https://schemablocks.org"
+         }
+      ]
+   },
+   "properties" : {
+      "contributors" : {
+         "description" : "The `contributors` attribute provides a list of one or more contributors\nwhich had been involved in the block's definition or support its format.\n",
+         "examples" : [
+            {
+               "description" : "Michael Baudis",
+               "id" : "orcid:0000-0002-9903-4248"
+            }
+         ],
+         "items" : {
+            "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/ExternalReference.json"
+         },
+         "type" : "array"
+      },
+      "provenance" : {
+         "description" : "The `provenance` attribute provides a list of pointers to e.g. external\nschemas, predecessors of the current schema or external documentation\ndescribing the schema's genesis.\n",
+         "examples" : [
+            {
+               "description" : "Original GA4GH schema",
+               "id" : "https://github.com/ga4gh/ga4gh-schemas/blob/master/src/main/proto/ga4gh/bio_metadata.proto#L111"
+            }
+         ],
+         "items" : {
+            "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/ExternalReference.json"
+         },
+         "type" : "array"
+      },
+      "sb_status" : {
+         "description" : "With `sb_status` the current support level of the schema block inside\nthe {S}[B] ecosystem has to be demonstrated. A first recommendation of\nlevels is:\n\n* `playground`\n  - early development or import stage, of any quality\n  - no recommendation; existence does not mean any current or future\n  {S}[B] support\n* `proposed`\n  - at least some {S}[B] contributors are in favour of such a block\n  - the code may undergo considerable maturation\n  - not recommended for integration into products w/o close tracking\n  - contributions and discussions are encouraged\n* `implementation`\n  - mature block which is implemented in one or more {S}[B] aligned\n  schemas\n  - may be extended from a core block or be too specific for general\n  (\"core\") usability\n* `core`\n  - a schema block with recommended use\n  - stable through minor version changes\n  - has to be used in at least 2 approved / under review GA4GH products\n",
+         "examples" : [
+            "core",
+            "implementation",
+            "proposed",
+            "playground"
+         ],
+         "type" : "string"
+      },
+      "use_cases" : {
+         "description" : "With the `use_cases` attribute one can provide links and descriptions\nfor the use of a given block in an external implementation.\nThis is not intended to provide a catalogue of all known implementations\nof the schema.\n",
+         "examples" : [
+            {
+               "description" : "Phenopackets",
+               "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/age.rst"
+            },
+            {
+               "description" : "Progenetix database schema (Beacon+ backend)",
+               "id" : "https://github.com/progenetix/schemas/tree/master/main/yaml"
+            }
+         ],
+         "items" : {
+            "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/ExternalReference.json"
+         },
+         "type" : "array"
+      }
+   },
+   "required" : [
+      "sb_status",
+      "contributors",
+      "provenance"
+   ],
+   "title" : "BlockMeta",
+   "type" : "object"
+}
+

@@ -1,0 +1,135 @@
+{
+   "$id" : "https://schemablocks.org/schemas/sb-phenopackets/Cohort/v1.0.0",
+   "$schema" : "http://json-schema.org/draft-07/schema#",
+   "additionalProperties" : "",
+   "description" : "A group of individuals related in some phenotypic or genotypic aspect\n",
+   "examples" : [
+      {
+         "id" : "cohort-id-123",
+         "metaData" : {
+            "created" : "2016-06-29T12:03:03.240Z",
+            "updates" : [
+               {
+                  "timestamp" : "2007-12-03T10:15:30.00Z"
+               }
+            ]
+         }
+      }
+   ],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "GA4GH Data Working Group"
+         },
+         {
+            "description" : "Jules Jacobsen",
+            "id" : "orcid:0000-0002-3265-15918"
+         },
+         {
+            "description" : "Peter Robinson",
+            "id" : "orcid:0000-0002-0736-91998"
+         },
+         {
+            "description" : "Michael Baudis",
+            "id" : "orcid:0000-0002-9903-4248"
+         },
+         {
+            "description" : "Melanie Courtot",
+            "id" : "orcid:0000-0002-9551-6370"
+         },
+         {
+            "description" : "Isuru Liyanage",
+            "id" : "orcid:0000-0002-4839-5158"
+         }
+      ],
+      "provenance" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/cohort.rst"
+         }
+      ],
+      "sb_status" : "implemented",
+      "used_by" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/cohort.rst"
+         }
+      ]
+   },
+   "properties" : {
+      "description" : {
+         "description" : "description about the cohort",
+         "examples" : [
+            "this is a description about the cohort"
+         ],
+         "type" : "string"
+      },
+      "htsFiles" : {
+         "description" : "Pointer to the relevant HTS file(s) for the cohort\n",
+         "examples" : [
+            {
+               "htsFormat" : "GVCF",
+               "uri" : "file://data/genomes/file1.vcf.gz"
+            }
+         ],
+         "items" : {
+            "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/HtsFile.json"
+         },
+         "type" : "array"
+      },
+      "id" : {
+         "description" : "An identifier specific to the cohort",
+         "examples" : [
+            "cohort-id-123"
+         ],
+         "type" : "string"
+      },
+      "members" : {
+         "description" : "add description",
+         "examples" : [
+            {
+               "id" : "phenopacketid-123",
+               "metaData" : {
+                  "created" : "2016-06-29T12:03:03.240Z",
+                  "updates" : [
+                     {
+                        "timestamp" : "2007-12-03T10:15:30.00Z"
+                     }
+                  ]
+               }
+            }
+         ],
+         "items" : {
+            "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Phenopacket.json"
+         },
+         "type" : "array"
+      },
+      "metaData" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/MetaData.json"
+            },
+            {
+               "description" : "Structured definitions of the resources and ontologies used within the phenopacket. REQUIRED\n",
+               "examples" : [
+                  {
+                     "created" : "2016-06-29T12:03:03.240Z",
+                     "updates" : [
+                        {
+                           "timestamp" : "2007-12-03T10:15:30.00Z"
+                        }
+                     ]
+                  }
+               ]
+            }
+         ]
+      }
+   },
+   "required" : [
+      "id",
+      "metaData"
+   ],
+   "title" : "Cohort",
+   "type" : "object"
+}
+

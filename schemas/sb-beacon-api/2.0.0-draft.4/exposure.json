@@ -1,0 +1,77 @@
+{
+   "$schema" : "https://json-schema.org/draft/2020-12/schema",
+   "additionalProperties" : "1",
+   "description" : "Exposures (lifestyle, behavioural exposures) occurred to individual,defined by exposure ID, date and age of onset, dose, and duration.",
+   "examples" : [],
+   "meta" : {
+      "contributors" : [
+         {
+            "id" : "https://beacon-project.io/categories/people.html",
+            "label" : "ELIXIR Beacon project team"
+         }
+      ],
+      "provenance" : [
+         {
+            "id" : "https://github.com/ga4gh-beacon/",
+            "label" : "Beacon v2 provisional version"
+         }
+      ],
+      "sb_status" : "proposed",
+      "used_by" : [
+         {
+            "id" : "https://ga4gh-approval-service-registry.ega-archive.org",
+            "label" : "Beacon v2 frontline implementers"
+         },
+         {
+            "id" : "https://docs.progenetix.org/beaconplus/",
+            "label" : "Progenetix database schema (Beacon+ backend)"
+         }
+      ]
+   },
+   "properties" : {
+      "ageAtExposure" : {
+         "$ref" : "../common/age.json"
+      },
+      "date" : {
+         "description" : "Date of the exposure in ISO8601 format.",
+         "format" : "date",
+         "type" : "string"
+      },
+      "duration" : {
+         "description" : "Exposure duration in ISO8601 format",
+         "example" : "P32Y6M1D",
+         "type" : "string"
+      },
+      "exposureCode" : {
+         "$ref" : "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
+         "description" : "Exposure ID. Value from Environment Exposure Ontology.",
+         "examples" : [
+            {
+               "id" : "CHEBI:46661",
+               "label" : "asbestos"
+            },
+            {
+               "id" : "ENVO:21001217",
+               "label" : "X-ray radiation"
+            }
+         ]
+      },
+      "units" : {
+         "$ref" : "../common/commonDefinitions.json#/definitions/Units",
+         "description" : "Units of the exposure. Recommended from NCIT Unit of Category ontology term (NCIT:C42568) descendants."
+      },
+      "value" : {
+         "description" : "Quantification of the exposure.",
+         "type" : "number"
+      }
+   },
+   "required" : [
+      "exposureCode",
+      "ageAtExposure",
+      "units",
+      "duration"
+   ],
+   "title" : "Procedure",
+   "type" : "object"
+}
+

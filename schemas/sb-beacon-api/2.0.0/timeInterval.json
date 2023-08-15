@@ -1,0 +1,58 @@
+{
+   "$comments" : "From https://github.com/phenopackets/phenopacket-schema/blob/v2/docs/time-interval.rst",
+   "$schema" : "https://json-schema.org/draft/2020-12/schema",
+   "additionalProperties" : "",
+   "description" : "Time interval with start and end defined as ISO8601 time stamps.",
+   "examples" : [],
+   "meta" : {
+      "contributors" : [
+         {
+            "id" : "https://beacon-project.io/categories/people.html",
+            "label" : "ELIXIR Beacon project team"
+         }
+      ],
+      "provenance" : [
+         {
+            "id" : "https://github.com/ga4gh-beacon/beacon-v2",
+            "label" : "Beacon v2"
+         },
+         {
+            "id" : "http://docs.genomebeacons.org",
+            "label" : "Beacon v2 documentation"
+         }
+      ],
+      "sb_status" : "proposed",
+      "used_by" : [
+         {
+            "id" : "https://ga4gh-approval-service-registry.ega-archive.org",
+            "label" : "Beacon v2 frontline implementers"
+         },
+         {
+            "id" : "https://docs.progenetix.org/beaconplus/",
+            "label" : "Progenetix database schema (Beacon+ backend)"
+         }
+      ]
+   },
+   "properties" : {
+      "end" : {
+         "$ref" : "./commonDefinitions.json#/definitions/Timestamp",
+         "examples" : [
+            "2022-03-10T15:25:07Z"
+         ]
+      },
+      "start" : {
+         "$ref" : "./commonDefinitions.json#/definitions/Timestamp",
+         "examples" : [
+            "1999-08-05T17:21:00+01:00",
+            "2002-09-21T02:37:00-08:00"
+         ]
+      }
+   },
+   "required" : [
+      "start",
+      "end"
+   ],
+   "title" : "TimeInterval",
+   "type" : "object"
+}
+

@@ -1,0 +1,14 @@
+"$schema": http://json-schema.org/draft-07/schema#
+"$id": https://schemablocks.org/schemas/json/VRS/CURIE.json
+title: CURIE
+properties:
+  description: >-
+    A [W3C Compact URI](https://www.w3.org/TR/curie/) formatted string.
+    A CURIE string has the structure `prefix`:`reference`, as defined by the
+    W3C syntax.
+  type: string
+  pattern: ^\w[^:]*:.+$
+  examples:
+    - ensembl:ENSG00000139618
+    - NCIT:C9280
+additionalProperties: false

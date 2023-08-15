@@ -1,0 +1,63 @@
+{
+   "$comments" : "TODO: Add other values from https://github.com/phenopackets/phenopacket-schema/blob/v2/docs/time-element.rst",
+   "$schema" : "https://json-schema.org/draft/2020-12/schema",
+   "description" : "Definition of a wrapper for various time descriptors.",
+   "examples" : [],
+   "meta" : {
+      "contributors" : [
+         {
+            "id" : "https://beacon-project.io/categories/people.html",
+            "label" : "ELIXIR Beacon project team"
+         }
+      ],
+      "provenance" : [
+         {
+            "id" : "https://github.com/ga4gh-beacon/",
+            "label" : "Beacon v2 provisional version"
+         }
+      ],
+      "sb_status" : "proposed",
+      "used_by" : [
+         {
+            "id" : "https://ga4gh-approval-service-registry.ega-archive.org",
+            "label" : "Beacon v2 frontline implementers"
+         },
+         {
+            "id" : "https://docs.progenetix.org/beaconplus/",
+            "label" : "Progenetix database schema (Beacon+ backend)"
+         }
+      ]
+   },
+   "properties" : {
+      "age" : {
+         "$ref" : "./age.json",
+         "description" : "Represents age as a ISO8601 duration (e.g., P40Y10M05D).",
+         "example" : "P32Y6M1D"
+      },
+      "ageGroup" : {
+         "$ref" : "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
+         "description" : "Indicates the age of the individual as an ontology class. Recommended from NCIT Age Group ontology term (NCIT:C20587) descendants.",
+         "examples" : [
+            {
+               "id" : "NCIT:C27954",
+               "label" : "Adolescent"
+            },
+            {
+               "id" : "NCIT:C49685",
+               "label" : "Adult 18-65 Years Old"
+            }
+         ]
+      },
+      "ageRange" : {
+         "$ref" : "./ageRange.json",
+         "description" : "Represents age as a ISO8601 duration (e.g., P40Y10M05D).",
+         "example" : {
+            "end" : "P59Y",
+            "start" : "P18Y"
+         }
+      }
+   },
+   "title" : "TimeElement",
+   "type" : "object"
+}
+

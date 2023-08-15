@@ -1,0 +1,43 @@
+{
+   "$schema" : "https://json-schema.org/draft/2020-12/schema",
+   "description" : "Age range definition.",
+   "examples" : [],
+   "meta" : {
+      "contributors" : [
+         {
+            "id" : "https://beacon-project.io/categories/people.html",
+            "label" : "ELIXIR Beacon project team"
+         }
+      ],
+      "provenance" : [
+         {
+            "id" : "https://github.com/ga4gh-beacon/",
+            "label" : "Beacon v2 provisional version"
+         }
+      ],
+      "sb_status" : "proposed",
+      "used_by" : [
+         {
+            "id" : "https://ga4gh-approval-service-registry.ega-archive.org",
+            "label" : "Beacon v2 frontline implementers"
+         },
+         {
+            "id" : "https://docs.progenetix.org/beaconplus/",
+            "label" : "Progenetix database schema (Beacon+ backend)"
+         }
+      ]
+   },
+   "properties" : {
+      "end" : {
+         "$ref" : "./age.json",
+         "description" : "Represents age as a ISO8601 duration (e.g., P59Y)."
+      },
+      "start" : {
+         "$ref" : "./age.json",
+         "description" : "Represents age as a ISO8601 duration (e.g., P18Y)."
+      }
+   },
+   "title" : "AgeRange",
+   "type" : "object"
+}
+

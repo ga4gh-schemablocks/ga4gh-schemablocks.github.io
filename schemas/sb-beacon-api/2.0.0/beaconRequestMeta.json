@@ -1,0 +1,53 @@
+{
+   "$schema" : "https://json-schema.org/draft/2020-12/schema",
+   "description" : "Meta section of the Beacon request. It includes request context details relevant for the Beacon server when processing the request.",
+   "examples" : [],
+   "meta" : {
+      "contributors" : [
+         {
+            "id" : "https://beacon-project.io/categories/people.html",
+            "label" : "ELIXIR Beacon project team"
+         }
+      ],
+      "provenance" : [
+         {
+            "id" : "https://github.com/ga4gh-beacon/beacon-v2",
+            "label" : "Beacon v2"
+         },
+         {
+            "id" : "http://docs.genomebeacons.org",
+            "label" : "Beacon v2 documentation"
+         }
+      ],
+      "sb_status" : "proposed",
+      "used_by" : [
+         {
+            "id" : "https://ga4gh-approval-service-registry.ega-archive.org",
+            "label" : "Beacon v2 frontline implementers"
+         },
+         {
+            "id" : "https://docs.progenetix.org/beaconplus/",
+            "label" : "Progenetix database schema (Beacon+ backend)"
+         }
+      ]
+   },
+   "properties" : {
+      "$schema" : {
+         "$ref" : "../common/beaconCommonComponents.json#/definitions/$schema"
+      },
+      "apiVersion" : {
+         "$ref" : "../common/beaconCommonComponents.json#/definitions/ApiVersion",
+         "description" : "API version expected by the client to be supported by the server and used in the response format."
+      },
+      "requestedSchemas" : {
+         "$ref" : "../common/beaconCommonComponents.json#/definitions/ListOfSchemas",
+         "description" : "Set of schemas to be used in the response."
+      }
+   },
+   "required" : [
+      "apiVersion"
+   ],
+   "title" : "beaconRequestMeta",
+   "type" : "object"
+}
+

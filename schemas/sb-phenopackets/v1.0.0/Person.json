@@ -1,0 +1,110 @@
+{
+   "$id" : "https://schemablocks.org/schemas/sb-phenopackets/Person/v1.0.0",
+   "$schema" : "http://json-schema.org/draft-07/schema#",
+   "additionalProperties" : "",
+   "description" : "Person",
+   "examples" : [
+      {
+         "individualId" : "add example"
+      }
+   ],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "GA4GH Data Working Group"
+         },
+         {
+            "description" : "Jules Jacobsen",
+            "id" : "orcid:0000-0002-3265-15918"
+         },
+         {
+            "description" : "Peter Robinson",
+            "id" : "orcid:0000-0002-0736-91998"
+         },
+         {
+            "description" : "Michael Baudis",
+            "id" : "orcid:0000-0002-9903-4248"
+         },
+         {
+            "description" : "Melanie Courtot",
+            "id" : "orcid:0000-0002-9551-6370"
+         },
+         {
+            "description" : "Isuru Liyanage",
+            "id" : "orcid:0000-0002-4839-5158"
+         }
+      ],
+      "provenance" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/person.rst"
+         }
+      ],
+      "sb_status" : "implemented",
+      "used_by" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/person.rst"
+         }
+      ]
+   },
+   "properties" : {
+      "affectedStatus" : {
+         "description" : "one of MISSING, UNAFFECTED, AFFECTED",
+         "enum" : [
+            "MISSING",
+            "UNAFFECTED",
+            "AFFECTED"
+         ],
+         "examples" : [
+            "MISSING"
+         ]
+      },
+      "familyId" : {
+         "description" : "add description",
+         "examples" : [
+            "add example"
+         ],
+         "type" : "string"
+      },
+      "individualId" : {
+         "description" : "add description",
+         "examples" : [
+            "add example"
+         ],
+         "type" : "string"
+      },
+      "maternalId" : {
+         "description" : "add description",
+         "examples" : [
+            "add example"
+         ],
+         "type" : "string"
+      },
+      "paternalId" : {
+         "description" : "add description",
+         "examples" : [
+            "add example"
+         ],
+         "type" : "string"
+      },
+      "sex" : {
+         "description" : "one of UNKNOWN_SEX, FEMALE, MALE, OTHER_SEX",
+         "enum" : [
+            "UNKNOWN_SEX",
+            "FEMALE",
+            "MALE",
+            "OTHER_SEX"
+         ],
+         "examples" : [
+            "FEMALE"
+         ]
+      }
+   },
+   "required" : [
+      "individualId"
+   ],
+   "title" : "Person",
+   "type" : "object"
+}
+

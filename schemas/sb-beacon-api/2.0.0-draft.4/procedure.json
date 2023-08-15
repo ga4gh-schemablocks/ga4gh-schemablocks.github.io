@@ -1,0 +1,79 @@
+{
+   "$schema" : "https://json-schema.org/draft/2020-12/schema",
+   "description" : "Class describing a clinical procedure or intervention.",
+   "examples" : [],
+   "meta" : {
+      "contributors" : [
+         {
+            "id" : "https://beacon-project.io/categories/people.html",
+            "label" : "ELIXIR Beacon project team"
+         }
+      ],
+      "provenance" : [
+         {
+            "id" : "https://github.com/ga4gh-beacon/",
+            "label" : "Beacon v2 provisional version"
+         }
+      ],
+      "sb_status" : "proposed",
+      "used_by" : [
+         {
+            "id" : "https://ga4gh-approval-service-registry.ega-archive.org",
+            "label" : "Beacon v2 frontline implementers"
+         },
+         {
+            "id" : "https://docs.progenetix.org/beaconplus/",
+            "label" : "Progenetix database schema (Beacon+ backend)"
+         }
+      ]
+   },
+   "properties" : {
+      "ageAtProcedure" : {
+         "$ref" : "./timeElement.json"
+      },
+      "bodySite" : {
+         "$ref" : "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
+         "description" : "Specific body site where the procedure was performed. Recommended valuee from Uber-anatomy ontology (UBERON)",
+         "examples" : [
+            {
+               "id" : "UBERON:0003403",
+               "label" : "Skin of forearm"
+            },
+            {
+               "id" : "UBERON:0003214",
+               "label" : "mammary gland alveolus"
+            }
+         ]
+      },
+      "dateOfProcedure" : {
+         "description" : "Date of procedure, in ISO8601 format",
+         "example" : "2010-07-10",
+         "format" : "date",
+         "type" : "string"
+      },
+      "procedureCode" : {
+         "$ref" : "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
+         "description" : "Clinical procedure performed with recommended values from Medical Action Ontology (MAXO) 'Medical action' term tree (MAXO:0000001)",
+         "examples" : [
+            {
+               "id" : "MAXO:0001175",
+               "label" : "liver transplantation"
+            },
+            {
+               "id" : "MAXO:0000136",
+               "label" : "high-resolution microendoscopy"
+            },
+            {
+               "id" : "OBI:0002654",
+               "label" : "needle biopsy"
+            }
+         ]
+      }
+   },
+   "required" : [
+      "procedureCode"
+   ],
+   "title" : "Procedure",
+   "type" : "object"
+}
+

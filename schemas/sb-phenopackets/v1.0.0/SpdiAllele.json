@@ -1,0 +1,95 @@
+{
+   "$id" : "https://schemablocks.org/schemas/sb-phenopackets/SpdiAllele/v1.0.0",
+   "$schema" : "http://json-schema.org/draft-07/schema#",
+   "additionalProperties" : "",
+   "description" : "A single SPDI allele.\nThe SPDI notation uses four fields and is written out as four elements delimited by colons S:P:D:I, where\nS = SequenceId\nP = Position , a 0-based coordinate for where the Deleted Sequence starts\nD = DeletedSequence , sequence for the deletion, can be empty\nI = InsertedSequence , sequence for the insertion, can be empty\nThe SPDI notation represents variation as deletion of a sequence (D) at a given position (P) in reference sequence (S)\nfollowed by insertion of a replacement sequence (I) at that same position. Position 0 indicates a deletion that\nstarts immediately before the first nucleotide, and position 1 represents a deletion interval that starts between the\nfirst and second residues, and so on. Either the deleted or the inserted interval can be empty, resulting a pure\ninsertion or deletion.\nThe deleted and inserted sequences in SPDI are all written on the positive strand for two-stranded molecules.\nSee https://www.ncbi.nlm.nih.gov/variation/notation/\n",
+   "examples" : [
+      {
+         "deletedSequence" : "T",
+         "id" : "id_abc_123",
+         "insertedSequence" : "G",
+         "position" : "123256214",
+         "seqId" : "NC_000010.10"
+      }
+   ],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "Jules Jacobsen",
+            "id" : "orcid:0000-0002-3265-15918"
+         },
+         {
+            "description" : "Peter Robinson",
+            "id" : "orcid:0000-0002-0736-91998"
+         },
+         {
+            "description" : "Michael Baudis",
+            "id" : "orcid:0000-0002-9903-4248"
+         },
+         {
+            "description" : "Melanie Courtot",
+            "id" : "orcid:0000-0002-9551-6370"
+         },
+         {
+            "description" : "Isuru Liyanage",
+            "id" : "orcid:0000-0002-4839-5158"
+         }
+      ],
+      "provenance" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/variant.rst"
+         }
+      ],
+      "sb_status" : "implemented",
+      "used_by" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/variant.rst"
+         }
+      ]
+   },
+   "properties" : {
+      "deletedSequence" : {
+         "description" : "add description",
+         "examples" : [
+            "T"
+         ],
+         "type" : "string"
+      },
+      "id" : {
+         "description" : "add description",
+         "examples" : [
+            "add example"
+         ],
+         "type" : "string"
+      },
+      "insertedSequence" : {
+         "description" : "add description",
+         "examples" : [
+            "G"
+         ],
+         "type" : "string"
+      },
+      "position" : {
+         "description" : "add description",
+         "examples" : [
+            "123256214"
+         ],
+         "type" : "integer"
+      },
+      "seqId" : {
+         "description" : "add description",
+         "examples" : [
+            "NC_000010.10"
+         ],
+         "type" : "string"
+      }
+   },
+   "required" : [
+      "id"
+   ],
+   "title" : "SpdiAllele",
+   "type" : "object"
+}
+

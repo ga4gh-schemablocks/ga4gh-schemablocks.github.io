@@ -1,0 +1,44 @@
+{
+   "$schema" : "https://json-schema.org/draft/2020-12/schema",
+   "description" : "Age value definition. Provenance: GA4GH Phenopackets v2 `Age`",
+   "examples" : [],
+   "meta" : {
+      "contributors" : [
+         {
+            "id" : "https://beacon-project.io/categories/people.html",
+            "label" : "ELIXIR Beacon project team"
+         }
+      ],
+      "provenance" : [
+         {
+            "id" : "https://github.com/ga4gh-beacon/beacon-v2",
+            "label" : "Beacon v2"
+         },
+         {
+            "id" : "http://docs.genomebeacons.org",
+            "label" : "Beacon v2 documentation"
+         }
+      ],
+      "sb_status" : "proposed",
+      "used_by" : [
+         {
+            "id" : "https://ga4gh-approval-service-registry.ega-archive.org",
+            "label" : "Beacon v2 frontline implementers"
+         },
+         {
+            "id" : "https://docs.progenetix.org/beaconplus/",
+            "label" : "Progenetix database schema (Beacon+ backend)"
+         }
+      ]
+   },
+   "properties" : {
+      "iso8601duration" : {
+         "description" : "Represents age as a ISO8601 duration (e.g., P40Y10M05D).",
+         "example" : "P32Y6M1D",
+         "type" : "string"
+      }
+   },
+   "title" : "Age",
+   "type" : "object"
+}
+

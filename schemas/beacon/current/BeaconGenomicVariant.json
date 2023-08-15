@@ -1,0 +1,244 @@
+{
+   "$id" : "https://schemablocks.org/schemas/beacon/BeaconGenomicVariant/v0.0.1",
+   "$schema\"" : "http://json-schema.org/draft-07/schema#",
+   "description" : "The document describes attributes of the _BeaconGenomicVariant_ object.\nIn its current implementation, _BeaconGenomicVariant_ (and related genomic\nobjects such as _callset_) represent extended versions of the original,\nVCF-derived GA4GH _variant_ schema.\n\nCompared to the VCF model it was derived from, this schema includes some\nchanges:\n\n* the definition of an optional `end` position, to support e.g. structural\nvariants w/o definition of the sequence\n* the use of arrays for `start` and `end` positions, to describe positions\nwith uncertain exact location (again, important for structural variants and\ndata derived from array based experiments)\n    - this corresponds to the use of `CIPOS` and `CIEND` intervals around\n    `pos` and `END` positions in VCF, where the begin of e.g. the `pos`\n    interval is given by `pos - CIPOS[0]` and the end of the `pos` estimate\n    by `pos + CIPOS[0]`\n* an additional 'mateName'\n\nThis format may be superseeded or augmented based on current developments in\nthe GA4GH::GKS work stream.\n",
+   "examples" : [
+      {
+         "alternate_bases" : [
+            "AC",
+            "ACC"
+         ],
+         "callset_id" : "DIPG_CS_0290",
+         "digest" : "2:203420136:A>AC,ACC",
+         "genotype" : [
+            "2",
+            "1"
+         ],
+         "id" : "5be1840772798347f0ed9e8b",
+         "reference_bases" : "A",
+         "reference_name" : "2",
+         "start" : [
+            "203420136"
+         ]
+      },
+      {
+         "biosample_id" : "fcl-bs-0099615",
+         "callset_id" : "structdb-cs-nhl-0009876",
+         "digest" : "8,14:20867740-21977798,21978106:BND",
+         "end" : [
+            "21977798",
+            "21978106"
+         ],
+         "id" : "structdb-var-123456789",
+         "mate_name" : "14",
+         "reference_bases" : "N",
+         "reference_name" : "8",
+         "start" : [
+            "20867740"
+         ],
+         "variant_type" : "BND"
+      },
+      {
+         "callset_id" : "structdb-cs-nhl-0009876",
+         "digest" : "6:63450000,63550000-63450000,63550000:DEL",
+         "end" : [
+            "63450000",
+            "63550000"
+         ],
+         "id" : "structdb-var-123456790",
+         "info" : {
+            "cnv_length" : "85500000",
+            "cnv_value" : "-0.294"
+         },
+         "reference_bases" : "N",
+         "reference_name" : "6",
+         "start" : [
+            "63450000",
+            "63550000"
+         ],
+         "variant_type" : "DEL"
+      }
+   ],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "GA4GH Data Working Group"
+         },
+         {
+            "description" : "ELIXIR Beacon team"
+         },
+         {
+            "description" : "Michael Baudis",
+            "id" : "orcid:0000-0002-9903-4248"
+         }
+      ],
+      "provenance" : [
+         {
+            "description" : "Original GA4GH schema",
+            "id" : "https://github.com/ga4gh/ga4gh-schemas/blob/master/src/main/proto/ga4gh/variants.proto#L145"
+         },
+         {
+            "description" : "Modifications for Beacon v2",
+            "id" : "https://github.com/ga4gh-beacon/specification-v2"
+         }
+      ],
+      "sb_status" : "playground",
+      "used_by" : [
+         {
+            "description" : "Beacon, in modified form as basis for query model and for Beacon v2 response testing",
+            "id" : "https://github.com/ga4gh-beacon/specification-v2"
+         },
+         {
+            "description" : "Progenetix database schema (Beacon+ backend)",
+            "id" : "https://github.com/progenetix/schemas/tree/master/main/yaml"
+         }
+      ]
+   },
+   "properties" : {
+      "alternateBases" : {
+         "description" : "* one or more single or multi-base sequences, replacing the  the \n`reference_bases` value\n* more than one `alternate_bases` values is used for differing \nreplacements involving the different alleles\n* used for precise variants; not used for structural (e.g. DUP, DEL) \nalterations\n\nTODO: Redefine for single-allele use?\n",
+         "examples" : [
+            [
+               "C"
+            ],
+            [
+               "TA",
+               "TAA"
+            ]
+         ],
+         "items" : "string",
+         "pattern" : "^[ACGTN]+$",
+         "type" : "array"
+      },
+      "biosampleId" : {
+         "description" : "The optional identifier (\"biosample.id\") of the biosample this variant was\nreported from. This is a shortcut to variant -> callset -> biosample\nchaining or replaces this in data models w/o separate callset level.\n",
+         "examples" : [
+            "pgx-bs-987647"
+         ],
+         "type" : "string"
+      },
+      "callsetId" : {
+         "description" : "* the identifier (\"callset.id\") of the callset (i.e. \"VCF column\") this\nvariant is part of\n* optional, if another provenance method is provided (e.g. if variants\nare nested with the parental object as in a Phenopacket)\n",
+         "examples" : [
+            "PGX_AM_CS_GSM1690424"
+         ],
+         "type" : "string"
+      },
+      "digest" : {
+         "description" : "* Concatenated unique specific elements of the variant.\n* Optional, convenience element to derive unique variants in \"individual\nvariant from callset\" storage systems\n* Possible use of e.g. HGVS-style annotations, but _not_ defined as such\n",
+         "examples" : [
+            "4:12282-46465:DEL"
+         ],
+         "type" : "string"
+      },
+      "end" : {
+         "description" : "array of 0 (for presise sequence variants), 1 or 2 (for imprecise end\nposition of structural variant) integers\n",
+         "examples" : [
+            [
+               "21977798",
+               "21978106"
+            ]
+         ],
+         "items" : "int64",
+         "type" : "array"
+      },
+      "genotype" : {
+         "description" : "* list of strings, using the natural index of the corresponding \n`alternate_bases` values for the (optionally phased) indication of \nobserved allelic replacements\n* the dot `.` value is used for indicating the reference allele or unknown \nvalue\n\nThe genotype parameter is largely redundant for single-sample variant \nannotations in contrast to VCF, where the `alternat_bases` calls have to \nbe indicated for multiple callsets.\n\nTODO: Remove for single-allele definition of `BeaconGenomicVariant`?\n",
+         "examples" : [
+            [
+               "1",
+               "."
+            ],
+            [
+               "2",
+               "1"
+            ]
+         ],
+         "items" : "string",
+         "type" : "array"
+      },
+      "id" : {
+         "description" : "* local-unique identifier of this variant (referenced as \"variant_id\")\n* Optional\n",
+         "examples" : [
+            "amvar-8754-7751-1119-8539"
+         ],
+         "type" : "string"
+      },
+      "info" : {
+         "description" : "additional variant information, as defined in the example and accompanying \ndocumentation\n",
+         "examples" : [
+            {
+               "cnv_length" : "1205290",
+               "cnv_value" : "-0.294"
+            }
+         ],
+         "type" : "object"
+      },
+      "mateName" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/beacon/v1.1.0/Chromosome.json"
+            },
+            {
+               "description" : "Mate name (chromosome) for fusion (BND) events; otherwise left empty. \nAccepting values 1-22, X, Y.\nCompared to the VCF specification, where a fusion is defined from 2 \nBND variants and verbose annotations for describing fusion partners, \nthe use of the `mate_name` attribute allows to treat fusion events as \nsingle \"variant\". Conventions: \n\n* the lower sorted chromosome (e.g. \"8\") is annotated for `reference_name` \nand the higher (e.g. \"14\") becomes the `mate_name`\n* if a `mate_name` parameter exists, the `end` position refers to this\n* for intrachromosomal events, `mate_name` is identical to \n`reference_name` and the higher base values are assigned to `end`\n",
+               "examples" : [
+                  "14",
+                  "18"
+               ]
+            }
+         ]
+      },
+      "referenceBases" : {
+         "description" : "one or more bases at start position in the reference genome, which have\nbeen replaced by the `alternate_bases` value\n",
+         "examples" : [
+            "G"
+         ],
+         "pattern" : "^[ACGTN]+$",
+         "type" : "string"
+      },
+      "referenceName" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/beacon/v1.1.0/Chromosome.json"
+            },
+            {
+               "description" : "Chromosome as string\n",
+               "examples" : [
+                  "22",
+                  "Y"
+               ]
+            }
+         ]
+      },
+      "start" : {
+         "description" : "array of 1 or 2 (for imprecise end position of structural variant) integers\n",
+         "examples" : [
+            [
+               "20867740"
+            ]
+         ],
+         "items" : "int64",
+         "type" : "array"
+      },
+      "variantType" : {
+         "description" : "the variant type in case of a named (structural) variant (e.g. DUP, DEL, BND ...)\n",
+         "examples" : [
+            "DEL"
+         ],
+         "type" : "string"
+      }
+   },
+   "required" : [
+      "referenceName",
+      "start",
+      {
+         "oneof" : [
+            "alternateBases",
+            "variantType"
+         ]
+      }
+   ],
+   "title" : "BeaconGenomicVariant",
+   "type" : "object"
+}
+

@@ -1,0 +1,233 @@
+{
+   "$id" : "https://schemablocks.org/schemas/sb-phenopackets/PhenotypicFeature/v1.0.0",
+   "$schema" : "http://json-schema.org/draft-07/schema#",
+   "additionalProperties" : "",
+   "description" : "An individual phenotypic feature, observed as either present or absent (negated),\nwith possible onset, modifiers and frequency.\nFHIR mapping: Condition (https://www.hl7.org/fhir/condition.html) or\nObservation (https://www.hl7.org/fhir/observation.html)\n",
+   "examples" : [
+      {
+         "ageOfOnset" : {
+            "id" : "HP:0003596",
+            "label" : "Middle age onset"
+         },
+         "description" : "add example",
+         "evidence" : {
+            "evidenceCode" : {
+               "id" : "add example",
+               "label" : "add example"
+            },
+            "reference" : {
+               "description" : "add example",
+               "id" : "add example"
+            }
+         },
+         "modifiers" : [
+            {
+               "id" : "HP:0025282",
+               "label" : "Dull"
+            }
+         ],
+         "negated" : "",
+         "severity" : {
+            "id" : "HP:0012825",
+            "label" : "Mild"
+         },
+         "type" : {
+            "id" : "add example",
+            "label" : "add example"
+         }
+      }
+   ],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "Jules Jacobsen",
+            "id" : "orcid:0000-0002-3265-15918"
+         },
+         {
+            "description" : "Peter Robinson",
+            "id" : "orcid:0000-0002-0736-91998"
+         },
+         {
+            "description" : "Michael Baudis",
+            "id" : "orcid:0000-0002-9903-4248"
+         },
+         {
+            "description" : "Melanie Courtot",
+            "id" : "orcid:0000-0002-9551-6370"
+         },
+         {
+            "description" : "Isuru Liyanage",
+            "id" : "orcid:0000-0002-4839-5158"
+         }
+      ],
+      "provenance" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/PhenotypicFeature.rst"
+         }
+      ],
+      "sb_status" : "implemented",
+      "used_by" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/PhenotypicFeature.rst"
+         }
+      ]
+   },
+   "oneof" : [
+      {
+         "properties" : [
+            "ageOfOnset"
+         ]
+      },
+      {
+         "properties" : [
+            "ageRangeOfOnset"
+         ]
+      },
+      {
+         "properties" : [
+            "classOfOnset"
+         ]
+      }
+   ],
+   "properties" : {
+      "ageOfOnset" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Age.json"
+            },
+            {
+               "description" : "The age at disease onset.\nFHIR mapping: Condition.onset\n",
+               "examples" : [
+                  {
+                     "age" : "P35Y"
+                  }
+               ]
+            }
+         ]
+      },
+      "ageRangeOfOnset" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/AgeRange.json"
+            },
+            {
+               "description" : "the values of this will come from the HPO onset hierarchy i.e. subclasses of HP:0003674\nFHIR mapping: Condition.onset\n",
+               "examples" : [
+                  {
+                     "start" : {
+                        "age" : "P35Y"
+                     }
+                  }
+               ]
+            }
+         ]
+      },
+      "classOfOnset" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/OntologyClass.json"
+            },
+            {
+               "description" : "The values of this will come from the HPO onset hierarchy i.e. \nsubclasses of HP:0003674\nFHIR mapping: Condition.onset\n",
+               "examples" : [
+                  {
+                     "id" : "HP:0003596",
+                     "label" : "Middle age onset"
+                  }
+               ]
+            }
+         ]
+      },
+      "description" : {
+         "description" : "Free-text description of the phenotype. Note this is not a acceptable place to document/describe the\nphenotype - the type and onset etc... fields should be used for this purpose.\n",
+         "examples" : [
+            "Pancreatic Adenocarcinoma"
+         ],
+         "type" : "string"
+      },
+      "evidence" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Evidence.json"
+            },
+            {
+               "description" : "Evidences for how the phenotype was determined.",
+               "examples" : [
+                  {
+                     "evidenceCode" : {
+                        "id" : "add example",
+                        "label" : "add example"
+                     },
+                     "reference" : {
+                        "description" : "add example",
+                        "id" : "add example"
+                     }
+                  }
+               ]
+            }
+         ]
+      },
+      "modifiers" : {
+         "description" : "subclasses of HP:0012823 ! Clinical modifier apart from Severity HP:0012824 - Severity",
+         "examples" : [
+            [
+               {
+                  "id" : "HP:0025282",
+                  "label" : "Dull"
+               }
+            ]
+         ],
+         "items" : {
+            "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/OntologyClass.json"
+         },
+         "type" : "array"
+      },
+      "negated" : {
+         "description" : "Flag to indicate whether the phenotype was observed or not. Default is 'false',\nin other words the phenotype was observed. Therefore it is only required in cases to indicate that\nthe phenotype was looked for, but found to be absent. More formally, this modifier indicates\nthe logical negation of the OntologyClass used in the 'type' field.\n*CAUTION* It is imperative to check this field for correct interpretation of the phenotype!\n",
+         "examples" : [
+            "false"
+         ],
+         "type" : "boolean"
+      },
+      "severity" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/OntologyClass.json"
+            },
+            {
+               "description" : "Severity of the condition e.g. subclasses of HP:0012824-Severity or SNOMED:272141005-Severities\nFHIR mapping: Condition.severity\n",
+               "examples" : [
+                  {
+                     "id" : "HP:0012825",
+                     "label" : "Mild"
+                  }
+               ]
+            }
+         ]
+      },
+      "type" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/OntologyClass.json"
+            },
+            {
+               "description" : "The primary ontology class which describes the phenotype.\nFHIR mapping: Condition.identifier\n",
+               "examples" : [
+                  {
+                     "id" : "add example",
+                     "label" : "Craniosynostosis"
+                  }
+               ]
+            }
+         ]
+      }
+   },
+   "required" : [
+      "type"
+   ],
+   "title" : "PhenotypicFeature",
+   "type" : "object"
+}
+
