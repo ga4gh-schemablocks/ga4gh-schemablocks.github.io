@@ -1,7 +1,5 @@
 {
-    "$id": "https://progenetix.org/services/schemas/GeoLocation/v2025-08-26",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "definitions": {
+    "$defs": {
         "GeoGeometry": {
             "additionalProperties": false,
             "description": "The geographic point object uses the default units (but not the properties) from the [DCMI point scheme](https://www.dublincore.org/specifications/dublin-core/dcmi-point/) and avoids optional representation in non-standard units. It consists of an array with at least 2 ordered numbers for\n- longitude/Easting (decimal degrees) - latitude/Northing (decimal degrees) - optionally altitude/elevation (in meters above/below sea level)\nGeoJSON uses the World Geodetic System of 1984 with units of decimal degrees as described in [RFC 7946](https://datatracker.ietf.org/doc/html/rfc7946).\nIn case of a conflict `GeoGeometry` takes precedence over `GeoLabels`.\n",
@@ -96,18 +94,25 @@
             "type": "object"
         }
     },
+    "$id": "https://progenetix.org/services/schemas/GeoLocation/v2025-08-26",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "additionalProperties": false,
     "description": "A GeoLocation object represents a geographic location formatted as a *GeoJSON feature*. The format is compatible with [RFC 7946](https://datatracker.ietf.org/doc/html/rfc7946), while (currently) imiting its scope to features of type \"Point\". Also, the schema defines some optional parameters compatible with the `GeoJSON Feature` `properties` wrapper object. Examples could be:   * an address, e.g. of a lab performing an analysis * provenance of an individual, obfuscated to a larger order administrative\n  entity (Suffolk, U.K.)\n* a lat/long position where an environmental sample was collected * altitude/elevation MAY be included as an optional/third element.",
     "properties": {
         "geometry": {
-            "$ref": "#/definitions/GeoGeometry"
+            "$ref": "#/$defs/GeoGeometry"
         },
         "properties": {
-            "$ref": "#/definitions/GeoLabels"
+            "$ref": "#/$defs/GeoLabels"
         },
         "type": {
             "const": "Feature"
         }
     },
+    "required": [
+        "type",
+        "geometry"
+    ],
     "title": "GeoLocation",
     "type": "object"
 }

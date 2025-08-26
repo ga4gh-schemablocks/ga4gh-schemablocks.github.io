@@ -22,11 +22,17 @@ properties:
   type:
     const: "Feature"
   geometry:
-    $ref: "#/definitions/GeoGeometry"
+    $ref: "#/$defs/GeoGeometry"
   properties:
-    $ref: "#/definitions/GeoLabels"
+    $ref: "#/$defs/GeoLabels"
 
-definitions:
+required:
+  - type
+  - geometry
+
+additionalProperties: False
+
+$defs:
   GeoGeometry:
     description: >
       The geographic point object uses the default units (but not the properties)
