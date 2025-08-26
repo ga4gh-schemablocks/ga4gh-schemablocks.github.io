@@ -86,7 +86,7 @@ definitions:
         type: string
         description: >-
           The optional name of the city the point location maps to. While this
-          is a commonly used the point location, it should be considered
+          is a commonly used for point locations, it should be considered
           secondary to the `geometry` values in interpreting the geographic location.
       country:
         type: string
@@ -95,14 +95,14 @@ definitions:
           checks and procedural convenience (see notes for "city").
         examples:
           - Switzerland
-      ISO3166alpha_3:
+      ISO3166alpha3:
         description: >-
           The optional ISO 3166-1 alpha-3 code for the country the location maps to.     
         type: string
         examples:
           - USA
           - CHE
-      ISO3166alpha_2:
+      ISO3166alpha2:
         description: >-
           The optional ISO 3166-1 alpha-2 code for the country the location maps to.     
         type: string

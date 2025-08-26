@@ -41,7 +41,7 @@
             "additionalProperties": true,
             "description": "GeoLabels represent an instance of the GeoJSON `properties` object. The parameters provide additional information for the interpretation of the location parameters.\nIn case of a conflict `GeoGeometry` takes precedence over `GeoLabels`.",
             "properties": {
-                "ISO3166alpha_2": {
+                "ISO3166alpha2": {
                     "description": "The optional ISO 3166-1 alpha-2 code for the country the location maps to.     ",
                     "examples": [
                         "US",
@@ -49,7 +49,7 @@
                     ],
                     "type": "string"
                 },
-                "ISO3166alpha_3": {
+                "ISO3166alpha3": {
                     "description": "The optional ISO 3166-1 alpha-3 code for the country the location maps to.     ",
                     "examples": [
                         "USA",
@@ -66,7 +66,7 @@
                     "type": "string"
                 },
                 "city": {
-                    "description": "The optional name of the city the point location maps to. While this is a commonly used the point location, it should be considered secondary to the `geometry` values in interpreting the geographic location.",
+                    "description": "The optional name of the city the point location maps to. While this is a commonly used for point locations, it should be considered secondary to the `geometry` values in interpreting the geographic location.",
                     "type": "string"
                 },
                 "country": {
