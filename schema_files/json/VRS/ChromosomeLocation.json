@@ -1,0 +1,83 @@
+{
+    "$id": "https://schemablocks.org/schemas/json/VRS/ChromosomeLocation.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "additionalProperties": false,
+    "definitions": {
+        "CytobandInterval": {
+            "additionalProperties": false,
+            "description": "A contiguous span on a chromosome defined by cytoband features. The span includes the constituent regions described by the start and end cytobands, as well as any intervening regions. **Implementation Note**: The `type` property is required when used as part of the VRS specification",
+            "examples": [
+                {
+                    "end": "q22.3",
+                    "start": "q22.2",
+                    "type": "CytobandInterval"
+                }
+            ],
+            "properties": {
+                "end": {
+                    "$ref": "#/definitions/HumanCytoband",
+                    "description": "The end cytoband region. MUST specify a region nearer the terminal end (telomere) of the chromosome q-arm than `start`."
+                },
+                "start": {
+                    "$ref": "#/definitions/HumanCytoband",
+                    "description": "The start cytoband region. MUST specify a region nearer the terminal end (telomere) of the chromosome p-arm than `end`."
+                },
+                "type": {
+                    "const": "CytobandInterval",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "start",
+                "end"
+            ],
+            "type": "object"
+        },
+        "HumanCytoband": {
+            "additionalProperties": false,
+            "description": "A character string representing cytobands derived from the *International System for Human Cytogenomic Nomenclature* (ISCN) [guidelines](http://doi.org/10.1159/isbn.978-3-318-06861-0).",
+            "example": "q22.3",
+            "pattern": "^cen|[pq](ter|([1-9][0-9]*(\\.[1-9][0-9]*)?))$",
+            "type": "string"
+        }
+    },
+    "description": "A Location on a chromosome defined by the chromosome name and cytobands. **Implementation Note**: The `type` and `species_id` properties are required when used as part of the VRS specification.",
+    "examples": [
+        {
+            "chr": 8,
+            "interval": {
+                "end": "q24.1",
+                "start": "q22"
+            }
+        }
+    ],
+    "properties": {
+        "_id": {
+            "$ref": "./CURIE.json",
+            "description": "Location Id. MUST be unique within document."
+        },
+        "chr": {
+            "description": "The symbolic chromosome name. For humans, For humans, chromosome names MUST be one of 1..22, X, Y (case-sensitive)",
+            "type": "string"
+        },
+        "interval": {
+            "$ref": "#/definitions/CytobandInterval",
+            "description": "The chromosome region defined by a CytobandInterval"
+        },
+        "species_id": {
+            "$ref": "#/definitions/CURIE",
+            "default": "taxonomy:9606",
+            "description": "CURIE representing a species from the [NCBI species taxonomy](https://registry.identifiers.org/registry/taxonomy). Default: \"taxonomy:9606\" (human)"
+        },
+        "type": {
+            "const": "ChromosomeLocation",
+            "type": "string"
+        }
+    },
+    "required": [
+        "chr",
+        "interval"
+    ],
+    "title": "ChromosomeLocation",
+    "type": "object"
+}

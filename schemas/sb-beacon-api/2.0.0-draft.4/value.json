@@ -1,0 +1,41 @@
+{
+   "$schema" : "https://json-schema.org/draft/2020-12/schema",
+   "description" : "Definition of a value class.",
+   "examples" : [],
+   "meta" : {
+      "contributors" : [
+         {
+            "id" : "https://beacon-project.io/categories/people.html",
+            "label" : "ELIXIR Beacon project team"
+         }
+      ],
+      "provenance" : [
+         {
+            "id" : "https://github.com/ga4gh-beacon/",
+            "label" : "Beacon v2 provisional version"
+         }
+      ],
+      "sb_status" : "proposed",
+      "used_by" : [
+         {
+            "id" : "https://ga4gh-approval-service-registry.ega-archive.org",
+            "label" : "Beacon v2 frontline implementers"
+         },
+         {
+            "id" : "https://docs.progenetix.org/beaconplus/",
+            "label" : "Progenetix database schema (Beacon+ backend)"
+         }
+      ]
+   },
+   "oneOf" : [
+      {
+         "$ref" : "./quantity.json"
+      },
+      {
+         "$ref" : "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json"
+      }
+   ],
+   "title" : "Value",
+   "type" : "object"
+}
+

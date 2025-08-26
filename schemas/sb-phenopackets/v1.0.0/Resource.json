@@ -1,0 +1,128 @@
+{
+   "$id" : "https://schemablocks.org/schemas/sb-phenopackets/Resource/v1.0.0",
+   "$schema" : "http://json-schema.org/draft-07/schema#",
+   "additionalProperties" : "",
+   "description" : "Description of an external resource used for referencing an object. For example the resource may be an ontology such\nas the HPO or SNOMED.\nFHIR mapping: CodeSystem (http://www.hl7.org/fhir/codesystem.html)\n",
+   "examples" : [
+      {
+         "id" : "pato",
+         "name" : "PhenotypicFeature And Trait Ontology",
+         "namespacePrefix" : "PATO",
+         "url" : "http://purl.obolibrary.org/obo/pato.owl",
+         "version" : "2018-03-28"
+      },
+      {
+         "id" : "efo",
+         "name" : "Experimental Factor Ontology",
+         "namespacePrefix" : "EFO",
+         "url" : "http://purl.obolibrary.org/obo/pato.owl",
+         "version" : "2.97"
+      },
+      {
+         "id" : "ncbitaxon",
+         "name" : "NCBI organismal classification",
+         "namespacePrefix" : "NCBITaxon",
+         "url" : "http://purl.obolibrary.org/obo/ncbitaxon.owl",
+         "version" : "2018-03-02"
+      },
+      {
+         "id" : "hp",
+         "iriPrefix" : "http://purl.obolibrary.org/obo/HP_",
+         "name" : "human phenotype ontology",
+         "namespacePrefix" : "HP",
+         "url" : "http://purl.obolibrary.org/obo/hp.owl",
+         "version" : "2018-03-08"
+      }
+   ],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "GA4GH Data Working Group"
+         },
+         {
+            "description" : "Jules Jacobsen",
+            "id" : "orcid:0000-0002-3265-15918"
+         },
+         {
+            "description" : "Peter Robinson",
+            "id" : "orcid:0000-0002-0736-91998"
+         },
+         {
+            "description" : "Michael Baudis",
+            "id" : "orcid:0000-0002-9903-4248"
+         },
+         {
+            "description" : "Melanie Courtot",
+            "id" : "orcid:0000-0002-9551-6370"
+         },
+         {
+            "description" : "Isuru Liyanage",
+            "id" : "orcid:0000-0002-4839-5158"
+         }
+      ],
+      "provenance" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/resource.rst"
+         }
+      ],
+      "sb_status" : "implemented",
+      "used_by" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/resource.rst"
+         }
+      ]
+   },
+   "properties" : {
+      "id" : {
+         "description" : "for OBO Ontologies, the value of this string MUST always be the official\nOBO ID, which is always equivalent to the ID prefix in lower case.\nExamples: hp, go, mp, mondo\nConsult http://obofoundry.org for a complete list\nFor other ontologies (e.g. SNOMED), use the prefix in identifiers.org\n",
+         "examples" : [
+            "pato"
+         ],
+         "type" : "string"
+      },
+      "iriPrefix" : {
+         "description" : "Full IRI prefix which can be used with the namespacePrefix and the OntologyClass::id to resolve to an IRI for a\nterm. Tools such as the curie-util (https://github.com/prefixcommons/curie-util) can utilise this to produce\nfully-resolvable IRIs for an OntologyClass.\ne.g. Using the HPO term encoding the concept of 'Severe'\n  OntologyClass:\n    id: 'HP:0012828'\n    label: 'Severe'\n  Resource:\n    namespacePrefix: 'HP'\n    iriPrefix: 'http://purl.obolibrary.org/obo/HP_'\nthe term can be resolved to http://purl.obolibrary.org/obo/HP_0012828\n",
+         "examples" : [
+            "http://purl.obolibrary.org/obo/HP_"
+         ],
+         "type" : "string"
+      },
+      "name" : {
+         "description" : "for OBO Ontologies, the value of this string SHOULD be the same as the title\nfield on http://obofoundry.org\nhowever, this field is purely for information purposes and software\nshould not encode any assumptions\n",
+         "examples" : [
+            "The Human Phenotype Ontology"
+         ],
+         "type" : "string"
+      },
+      "namespacePrefix" : {
+         "description" : "The prefix used in the CURIE of an OntologyClass e.g. HP, MP, ECO\nFor example an HPO term will have a CURIE like this - HP:0012828 which should be used in combination with\nhe iriPrefix to form a fully-resolvable IRI\n",
+         "examples" : [
+            "HP"
+         ],
+         "type" : "string"
+      },
+      "url" : {
+         "description" : "For OBO ontologies, this should always be the PURL\n",
+         "examples" : [
+            "http://purl.obolibrary.org/obo/hp.owl",
+            "http://purl.obolibrary.org/obo/hp.obo"
+         ],
+         "type" : "string"
+      },
+      "version" : {
+         "description" : "for OBO ontologies, this should be the versionIRI",
+         "examples" : [
+            "2.97"
+         ],
+         "type" : "string"
+      }
+   },
+   "required" : [
+      "id"
+   ],
+   "title" : "Resource",
+   "type" : "object"
+}
+

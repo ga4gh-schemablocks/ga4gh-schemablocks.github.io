@@ -1,0 +1,76 @@
+{
+    "$id": "https://schemablocks.org/schemas/ga4gh/DataUseLimitation/v0.0.1",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "additionalProperties": false,
+    "description": "The (GA4GH) Data Use Ontology (DUO) includes terms describing data use conditions,\nparticularly for research data in the health/clinical/biomedical domain.\n",
+    "examples": [
+        {
+            "modifier": {
+                "ontology": {
+                    "id": "MONDO:0004992",
+                    "label": "cancer"
+                }
+            },
+            "term": {
+                "id": "DUO:0000007",
+                "label": "disease specific research"
+            }
+        },
+        {
+            "modifier": {
+                "text": "UK"
+            },
+            "term": {
+                "id": "DUO:0000022",
+                "label": "geographical restriction"
+            }
+        }
+    ],
+    "meta": {
+        "contributors": [
+            {
+                "description": "Melanie Courtot",
+                "id": "orcid:0000-0002-9551-6370"
+            },
+            {
+                "description": "DUO group"
+            },
+            {
+                "description": "Isuru Liyanage",
+                "id": "orcid:0000-0002-4839-5158"
+            }
+        ],
+        "provenance": [
+            {
+                "description": "DUO",
+                "id": "https://github.com/EBISPOT/DUO"
+            }
+        ],
+        "sb_status": "implemented",
+        "used_by": [
+            {
+                "description": "DUO",
+                "url": "https://github.com/EBISPOT/DUO"
+            }
+        ]
+    },
+    "properties": {
+        "description": {
+            "description": "free text description mainly to encapsulate those conditions that wouldn't be described by DUO terms or modifiers\n",
+            "type": "string"
+        },
+        "modifier": {
+            "$ref": "./DataUseModifier",
+            "description": "modifier/restriction applicable for the DUO"
+        },
+        "term": {
+            "$ref": "https://schemablocks.org/schemas/sb-phenopackets/OntologyClass/v1.0.0",
+            "description": "DUO - ontology term subclass of either DUO_0000001 or DUO_0000017"
+        }
+    },
+    "required": [
+        "term"
+    ],
+    "title": "DataUseLimitation",
+    "type": "object"
+}

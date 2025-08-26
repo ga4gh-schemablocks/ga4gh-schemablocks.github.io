@@ -1,0 +1,69 @@
+{
+   "$schema" : "https://json-schema.org/draft/2020-12/schema",
+   "additionalProperties" : "1",
+   "description" : "Definition of a range class.",
+   "examples" : [],
+   "meta" : {
+      "contributors" : [
+         {
+            "id" : "https://beacon-project.io/categories/people.html",
+            "label" : "ELIXIR Beacon project team"
+         }
+      ],
+      "provenance" : [
+         {
+            "id" : "https://github.com/ga4gh-beacon/beacon-v2",
+            "label" : "Beacon v2"
+         },
+         {
+            "id" : "http://docs.genomebeacons.org",
+            "label" : "Beacon v2 documentation"
+         }
+      ],
+      "sb_status" : "proposed",
+      "used_by" : [
+         {
+            "id" : "https://ga4gh-approval-service-registry.ega-archive.org",
+            "label" : "Beacon v2 frontline implementers"
+         },
+         {
+            "id" : "https://docs.progenetix.org/beaconplus/",
+            "label" : "Progenetix database schema (Beacon+ backend)"
+         }
+      ]
+   },
+   "properties" : {
+      "high" : {
+         "description" : "Upper range end of normal",
+         "examples" : [
+            "135"
+         ],
+         "type" : "number"
+      },
+      "low" : {
+         "description" : "Lower range end of normal",
+         "examples" : [
+            "85"
+         ],
+         "type" : "number"
+      },
+      "unit" : {
+         "$ref" : "./commonDefinitions.json#/definitions/Unit",
+         "description" : "The kind of unit.",
+         "examples" : [
+            {
+               "id" : "NCIT:C49670",
+               "label" : "Millimeter of Mercury"
+            }
+         ]
+      }
+   },
+   "required" : [
+      "unit",
+      "low",
+      "high"
+   ],
+   "title" : "ReferenceRange",
+   "type" : "object"
+}
+

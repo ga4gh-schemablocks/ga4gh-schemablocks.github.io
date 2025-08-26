@@ -1,0 +1,191 @@
+{
+   "$id" : "https://schemablocks.org/schemas/sb-phenopackets/Family/v1.0.0",
+   "$schema" : "http://json-schema.org/draft-07/schema#",
+   "additionalProperties" : "",
+   "description" : "Phenotype, sample and pedigree data required for a genomic diagnosis.\nEquivalent to the Genomics England InterpretationRequestRD\nhttps://github.com/genomicsengland/GelReportModels/blob/master/schemas/IDLs/org.gel.models.report.avro/5.0.0/InterpretationRequestRD.avdl\n",
+   "examples" : [
+      {
+         "htsFiles" : [
+            {
+               "htsFormat" : "GVCF",
+               "uri" : "file://data/genomes/file1.vcf.gz"
+            }
+         ],
+         "id" : "family-id-123",
+         "metaData" : {
+            "created" : "2016-06-29T12:03:03.240Z",
+            "updates" : [
+               {
+                  "timestamp" : "2007-12-03T10:15:30.00Z"
+               }
+            ]
+         },
+         "proband" : {
+            "id" : "phenopacketid-123",
+            "metaData" : {
+               "created" : "2016-06-29T12:03:03.240Z",
+               "updates" : [
+                  {
+                     "timestamp" : "2007-12-03T10:15:30.00Z"
+                  }
+               ]
+            }
+         }
+      }
+   ],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "GA4GH Data Working Group"
+         },
+         {
+            "description" : "Jules Jacobsen",
+            "id" : "orcid:0000-0002-3265-15918"
+         },
+         {
+            "description" : "Peter Robinson",
+            "id" : "orcid:0000-0002-0736-91998"
+         },
+         {
+            "description" : "Michael Baudis",
+            "id" : "orcid:0000-0002-9903-4248"
+         },
+         {
+            "description" : "Melanie Courtot",
+            "id" : "orcid:0000-0002-9551-6370"
+         },
+         {
+            "description" : "Isuru Liyanage",
+            "id" : "orcid:0000-0002-4839-5158"
+         }
+      ],
+      "provenance" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/family.rst"
+         }
+      ],
+      "sb_status" : "implemented",
+      "used_by" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/family.rst"
+         }
+      ]
+   },
+   "properties" : {
+      "htsFiles" : {
+         "description" : "Pointer to the relevant HTS file(s) for the family. These should be files relating to one or more of the family\nmembers e.g a multi-sample VCF\n",
+         "examples" : [
+            [
+               {
+                  "htsFormat" : "GVCF",
+                  "uri" : "file://data/genomes/file1.vcf.gz"
+               }
+            ]
+         ],
+         "items" : {
+            "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/HtsFile.json"
+         },
+         "type" : "array"
+      },
+      "id" : {
+         "description" : "An identifier specific for this family",
+         "examples" : [
+            "family-id-123"
+         ],
+         "type" : "string"
+      },
+      "metaData" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/MetaData.json"
+            },
+            {
+               "description" : "Structured definitions of the resources and ontologies used within the phenopacket. REQUIRED\n",
+               "examples" : [
+                  {
+                     "created" : "2016-06-29T12:03:03.240Z",
+                     "updates" : [
+                        {
+                           "timestamp" : "2007-12-03T10:15:30.00Z"
+                        }
+                     ]
+                  }
+               ]
+            }
+         ]
+      },
+      "pedigree" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Pedigree.json"
+            },
+            {
+               "description" : "The pedigree defining the relations between the proband and their relatives. Pedigree.individual_id should\nmap to the PhenoPacket.Individual.id\n",
+               "examples" : [
+                  {
+                     "person" : [
+                        {
+                           "individualId" : "add example"
+                        }
+                     ]
+                  }
+               ]
+            }
+         ]
+      },
+      "proband" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Phenopacket.json"
+            },
+            {
+               "description" : "The individual representing the focus of this packet - e.g. the proband in rare disease cases or cancer patient\n",
+               "examples" : [
+                  {
+                     "id" : "phenopacketid-123",
+                     "metaData" : {
+                        "created" : "2016-06-29T12:03:03.240Z",
+                        "updates" : [
+                           {
+                              "timestamp" : "2007-12-03T10:15:30.00Z"
+                           }
+                        ]
+                     }
+                  }
+               ]
+            }
+         ]
+      },
+      "relatives" : {
+         "description" : "Individuals related in some way to the patient. For instance, the individuals may be genetically related or may\nbe members of a cohort. If this field is used, then  it is expected that a pedigree will be included for\ngenetically related individuals for use cases such as genomic diagnostics. If a phenopacket is being used to\ndescribe one member of a cohort, then in general one phenopacket will be created for each of the individuals in\nthe cohort.\n",
+         "examples" : [
+            [
+               {
+                  "id" : "phenopacketid-123",
+                  "metaData" : {
+                     "created" : "2016-06-29T12:03:03.240Z",
+                     "updates" : [
+                        {
+                           "timestamp" : "2007-12-03T10:15:30.00Z"
+                        }
+                     ]
+                  }
+               }
+            ]
+         ],
+         "items" : {
+            "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Phenopacket.json"
+         },
+         "type" : "array"
+      }
+   },
+   "required" : [
+      "id",
+      "metaData"
+   ],
+   "title" : "Family",
+   "type" : "object"
+}
+

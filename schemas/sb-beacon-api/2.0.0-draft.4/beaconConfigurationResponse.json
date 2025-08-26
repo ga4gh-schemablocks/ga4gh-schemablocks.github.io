@@ -1,0 +1,48 @@
+{
+   "$schema" : "https://json-schema.org/draft/2020-12/schema",
+   "additionalProperties" : "1",
+   "description" : "Information about the Beacon. Aimed to Beacon clients like web pages or Beacon networks.",
+   "examples" : [],
+   "meta" : {
+      "contributors" : [
+         {
+            "id" : "https://beacon-project.io/categories/people.html",
+            "label" : "ELIXIR Beacon project team"
+         }
+      ],
+      "provenance" : [
+         {
+            "id" : "https://github.com/ga4gh-beacon/",
+            "label" : "Beacon v2 provisional version"
+         }
+      ],
+      "sb_status" : "proposed",
+      "used_by" : [
+         {
+            "id" : "https://ga4gh-approval-service-registry.ega-archive.org",
+            "label" : "Beacon v2 frontline implementers"
+         },
+         {
+            "id" : "https://docs.progenetix.org/beaconplus/",
+            "label" : "Progenetix database schema (Beacon+ backend)"
+         }
+      ]
+   },
+   "properties" : {
+      "meta" : {
+         "$ref" : "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/sections/beaconInformationalResponseMeta.json",
+         "description" : "Information about the response that could be relevant for the Beacon client in order to interpret the results."
+      },
+      "response" : {
+         "$ref" : "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/configuration/beaconConfigurationSchema.json",
+         "description" : "Returning the Beacon configuration."
+      }
+   },
+   "required" : [
+      "meta",
+      "response"
+   ],
+   "title" : "beaconConfigurationResponse",
+   "type" : "object"
+}
+

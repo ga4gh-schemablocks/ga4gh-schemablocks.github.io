@@ -1,0 +1,178 @@
+{
+   "$id" : "https://schemablocks.org/schemas/sb-phenopackets/Individual/v1.0.0",
+   "$schema" : "http://json-schema.org/draft-07/schema#",
+   "additionalProperties" : "",
+   "description" : "An individual is a single organism (here typically a human).\n",
+   "examples" : [
+      {
+         "id" : "SAMN05324082-individual",
+         "sex" : "MALE",
+         "taxonomy" : {
+            "id" : "NCBITaxon:9606",
+            "label" : "Homo sapiens"
+         }
+      }
+   ],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "GA4GH Data Working Group"
+         },
+         {
+            "description" : "Jules Jacobsen",
+            "id" : "orcid:0000-0002-3265-15918"
+         },
+         {
+            "description" : "Peter Robinson",
+            "id" : "orcid:0000-0002-0736-91998"
+         },
+         {
+            "description" : "Michael Baudis",
+            "id" : "orcid:0000-0002-9903-4248"
+         },
+         {
+            "description" : "Melanie Courtot",
+            "id" : "orcid:0000-0002-9551-6370"
+         },
+         {
+            "description" : "Isuru Liyanage",
+            "id" : "orcid:0000-0002-4839-5158"
+         }
+      ],
+      "provenance" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/individual.rst"
+         }
+      ],
+      "sb_status" : "implemented",
+      "used_by" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/individual.rst"
+         }
+      ]
+   },
+   "oneof" : [
+      {
+         "properties" : [
+            "ageAtCollection"
+         ]
+      },
+      {
+         "properties" : [
+            "ageRangeAtCollection"
+         ]
+      }
+   ],
+   "properties" : {
+      "ageAtCollection" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Age.json"
+            },
+            {
+               "description" : "An age object describing the age of the individual at the time of collection.\nThe Age object allows the encoding of the age either as ISO8601 duration or\ntime interval (preferred), or as ontology term object.\n",
+               "examples" : [
+                  {
+                     "age" : "P14Y"
+                  }
+               ]
+            }
+         ]
+      },
+      "ageRangeAtCollection" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/AgeRange.json"
+            },
+            {
+               "description" : "An age object describing the age of the individual at the time of collection.\nThe Age object allows the encoding of the age either as ISO8601 duration or\ntime interval (preferred), or as ontology term object.\n",
+               "examples" : [
+                  {
+                     "start" : {
+                        "age" : "P14Y"
+                     }
+                  }
+               ]
+            }
+         ]
+      },
+      "alternateIds" : {
+         "description" : "An optional list of alternative identifiers for this individual. This field is provided\nfor the convenience of users who may have multiple mappings to an individual which they need to track.\n",
+         "examples" : [
+            [
+               "another_id"
+            ]
+         ],
+         "items" : "string",
+         "type" : "array"
+      },
+      "dateOfBirth" : {
+         "description" : "The date of birth of the individual as an ISO8601 UTC timestamp - rounded down to the closest known\nyear/month/day/hour/minute\n",
+         "examples" : [
+            "2018-03-01T00:00:00Z"
+         ],
+         "type" : "string"
+      },
+      "id" : {
+         "description" : "The local-unique identifier of this individual",
+         "examples" : [
+            "AM_BS__NCBISKYCGH-1993"
+         ],
+         "type" : "string"
+      },
+      "karyotypicSex" : {
+         "description" : "Karyotypic sex of the individual,\none of UNKNOWN_KARYOTYPE, XX, XY, XO, XXY, XXX, XXYY, XXXY, XXXX, XYY, OTHER_KARYO,\n",
+         "enum" : [
+            "XX",
+            "XY",
+            "XO",
+            "XXY",
+            "XXX",
+            "XXYY",
+            "XXXY",
+            "XXXX",
+            "XYY",
+            "OTHER_KARYO"
+         ],
+         "examples" : [
+            "XX"
+         ]
+      },
+      "sex" : {
+         "description" : "The phenotypic/ administrative sex of the individual, one of UNKNOWN_SEX, FEMALE, MALE, OTHER_SEX",
+         "enum" : [
+            "UNKNOWN_SEX",
+            "FEMALE",
+            "MALE",
+            "OTHER_SEX"
+         ],
+         "examples" : [
+            "FEMALE"
+         ]
+      },
+      "taxonomy" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/OntologyClass.json"
+            },
+            {
+               "description" : "NCBI taxonomic identifier. For resources where there may be more than one organism being studied\nit is advisable to indicate the taxonomic identifier of that organism, to its most specific level\n",
+               "examples" : [
+                  {
+                     "id" : "NCBITaxon:9606",
+                     "label" : "Homo sapiens"
+                  }
+               ]
+            }
+         ]
+      }
+   },
+   "required" : [
+      "id"
+   ],
+   "title" : "Individual",
+   "type" : "object"
+}
+

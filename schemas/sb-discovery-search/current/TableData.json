@@ -1,0 +1,60 @@
+{
+   "$id" : "https://schemablocks.org/schemas/sb-discovery-search/TableData/0.1.0",
+   "$schema" : "http://json-schema.org/draft-07/schema#",
+   "description" : "A paginated collection of tabular data",
+   "examples" : [],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "Miro Cupak"
+         },
+         {
+            "description" : "Marc Fiume",
+            "id" : "orcid:0000-0002-9769-375X"
+         },
+         {
+            "description" : "Michael Baudis",
+            "id" : "orcid:0000-0002-9903-4248"
+         },
+         {
+            "description" : "GA4GH Discovery developers..."
+         }
+      ],
+      "provenance" : [
+         {
+            "description" : "Discovery Search",
+            "id" : "https://github.com/ga4gh-discovery/ga4gh-discovery-search"
+         }
+      ],
+      "sb_status" : "playground",
+      "used_by" : [
+         {
+            "description" : "Discovery Search",
+            "id" : "https://github.com/ga4gh-discovery/ga4gh-discovery-search/tree/develop/spec"
+         }
+      ]
+   },
+   "properties" : {
+      "data" : {
+         "description" : "Page of JSON values, each adhering to the schema given in the \"data_model\" property",
+         "items" : {
+            "type" : "object"
+         },
+         "type" : "array"
+      },
+      "data_model" : {
+         "$ref" : "http://json-schema.org/draft-07/schema#"
+      },
+      "pagination" : {
+         "$ref" : "./Pagination"
+      }
+   },
+   "required" : [
+      "data_model",
+      "data"
+   ],
+   "title" : "TableData",
+   "type" : "object",
+   "version" : "0.1.0"
+}
+

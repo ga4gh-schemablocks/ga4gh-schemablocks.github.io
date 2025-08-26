@@ -1,0 +1,160 @@
+{
+   "$id" : "https://schemablocks.org/schemas/search/Study/v0.0.1",
+   "$schema" : "http://json-schema.org/draft-07/schema#",
+   "description" : "Attributes relating to any kind of medical study or data collection effort.\n",
+   "examples" : [],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "GA4GH Search Team"
+         },
+         {
+            "description" : "Jonathan Fuerth",
+            "id" : "orcid:0000-0001-9135-2164"
+         }
+      ],
+      "sb_status" : "proposed",
+      "used_by" : [
+         {
+            "description" : "Super Simple Study Schema"
+         }
+      ]
+   },
+   "properties" : {
+      "data_use" : {
+         "$comment" : "TODO OntologyClass on its own uses CURIEs without defining the prefixes. It may also not permit\nor adequately describe the use of paired terms as required by DUO:0000007.\nShould define something that specifies what the CURIE prefix means, allows for paired terms, and can restrict\nto be a subclass of DUO:0000001 (data use permission).\n",
+         "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/OntologyClass/v1.0.0",
+         "description" : "Conditions and restrictions on the use of data associated with this study.\n",
+         "examples" : [
+            {
+               "id" : "DUO:0000042",
+               "label" : "general research use"
+            },
+            {
+               "id" : "DUO:0000007; MONDO:0007263",
+               "label" : "disease specific research; cardiac rhythm disease"
+            }
+         ]
+      },
+      "design" : {
+         "$comment" : "Examples taken from https://research.library.gsu.edu/c.php?g=115595&p=755213.\nTODO identify a study design & methods vocabulary/ontology we can reference\n",
+         "description" : "Design of the study. Use as an array member in a study with a compound design.\n",
+         "examples" : [
+            "Meta-Analysis",
+            "Systematic Review",
+            "Randomized Controlled Trial",
+            "Prospective Observational",
+            "Case-control",
+            "Cross-sectional",
+            "Case Reports and Series",
+            "Ideas, Editorials, Opinions",
+            "Animal Research",
+            "Test Tube Lab Research"
+         ],
+         "type" : "string"
+      },
+      "disease_area" : {
+         "description" : "A disease area that is a focus of the study.\n",
+         "oneOf" : [
+            {
+               "$comment" : "TODO OntologyClass on its own uses CURIEs without defining the prefixes. Should define something\nthat specifies what the CURIE prefix means.\n",
+               "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/OntologyClass/v1.0.0",
+               "description" : "A term from an ontology with accompanying label.",
+               "examples" : [
+                  {
+                     "id" : "HP:0011675",
+                     "label" : "Arrhythmia"
+                  },
+                  {
+                     "id" : "HP:0011675; HP:0011010",
+                     "label" : "Arrhythmia; Chronic"
+                  },
+                  {
+                     "id" : "MONDO:0007263",
+                     "label" : "cardiac rhythm disease"
+                  }
+               ]
+            },
+            {
+               "description" : "Free-form description of disease area",
+               "examples" : [
+                  "Arrhythmia"
+               ],
+               "type" : "string"
+            }
+         ]
+      },
+      "end_date" : {
+         "description" : "Date that the study began or is planned to begin.\n",
+         "oneOf" : [
+            {
+               "description" : "Preferred format for studies that span multiple days.",
+               "examples" : [
+                  "2018-04-02"
+               ],
+               "type" : "date"
+            },
+            {
+               "description" : "Preferred format for studies that start and end on the same day.",
+               "examples" : [
+                  "2018-02-02T16:00:00Z",
+                  "2018-02-02T12:00:00-04:00"
+               ],
+               "type" : "date-time"
+            }
+         ]
+      },
+      "geo_location" : {
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/GeoLocation.json",
+         "description" : "The geographic location where the study takes place. Use as an array item type for studies that take\nplace in multiple discrete locations.\n"
+      },
+      "id" : {
+         "description" : "Uniquely identifies a study. Should ideally be a namespaced globally unique identifier such as a URI, but this\nis not required.\n",
+         "examples" : [
+            "https://research.example.com/study/4783506",
+            "phs045346-2"
+         ],
+         "type" : "string",
+         "unique_identifier" : "1"
+      },
+      "name" : {
+         "description" : "Brief natural language description of the study.\n",
+         "examples" : [
+            "A two month case-control study that evaluates the impact of changes in caffeine consumption on adults with irregular heartbeats."
+         ],
+         "type" : "string"
+      },
+      "objectives" : {
+         "description" : "Objectives of the study, described in natural language.\n",
+         "examples" : [
+            "Evaluate the effects of one week reduction of caffeine intake on patients with chronic arrhythmia."
+         ],
+         "type" : "string"
+      },
+      "start_date" : {
+         "description" : "Date that the study began or is planned to begin.\n",
+         "oneOf" : [
+            {
+               "description" : "Preferred format for studies that span multiple days.",
+               "examples" : [
+                  "2018-02-02"
+               ],
+               "format" : "date",
+               "type" : "string"
+            },
+            {
+               "description" : "Preferred format for studies that start and end on the same day.",
+               "examples" : [
+                  "2018-02-02T12:00:00Z",
+                  "2018-02-02T08:00:00-04:00"
+               ],
+               "format" : "date-time",
+               "type" : "string"
+            }
+         ]
+      }
+   },
+   "title" : "Study",
+   "type" : "object"
+}
+

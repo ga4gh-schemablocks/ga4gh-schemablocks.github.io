@@ -1,0 +1,113 @@
+{
+   "$id" : "https://schemablocks.org/schemas/search/Observation/v0.0.1",
+   "$schema" : "http://json-schema.org/draft-07/schema#",
+   "description" : "Attributes relating to an observation, assessment, or sample collection in any kind of medical study.\n",
+   "examples" : [],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "GA4GH Search Team"
+         },
+         {
+            "description" : "Jonathan Fuerth",
+            "id" : "orcid:0000-0001-9135-2164"
+         }
+      ],
+      "sb_status" : "proposed",
+      "used_by" : [
+         {
+            "description" : "Super Simple Study Schema"
+         }
+      ]
+   },
+   "properties" : {
+      "assessment_type" : {
+         "description" : "The type of assessment that was performed.\n",
+         "examples" : [
+            "Physical examination",
+            "Structured questionnaire",
+            "Interview",
+            "Observation"
+         ],
+         "type" : "string"
+      },
+      "collected_by" : {
+         "description" : "The role of the person who made the observation or collected the sample.\n",
+         "examples" : [
+            {
+               "id" : "NCIT:C51863",
+               "label" : "Research Clinician"
+            },
+            {
+               "id" : "NCIT:C51864",
+               "label" : "Research Nurse"
+            },
+            {
+               "id" : "NCIT:C51798",
+               "label" : "Admitting Physician"
+            },
+            "X-Ray technician",
+            "Lab phlebotomist",
+            "Self"
+         ],
+         "oneOf" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/OntologyClass/v1.0.0"
+            },
+            {
+               "description" : "Free text description of the role",
+               "type" : "string"
+            }
+         ]
+      },
+      "collection_date" : {
+         "description" : "The date the observation was made or the sample was collected.\n",
+         "oneOf" : [
+            {
+               "examples" : [
+                  "2000-04-15T14:23:06-04:00",
+                  "2000-04-15T18:23:06+00:00"
+               ],
+               "format" : "date-time"
+            },
+            {
+               "examples" : [
+                  "2000-04-15"
+               ],
+               "format" : "date"
+            }
+         ],
+         "type" : "string"
+      },
+      "geo_location" : {
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/GeoLocation.json",
+         "description" : "The geographical location where the observation, assessment, or sample collection took place.\n"
+      },
+      "id" : {
+         "description" : "Uniquely identifies the observation, assessment, or sample collected.\n",
+         "examples" : [
+            "1837603",
+            "obs00053",
+            "sam55447.6"
+         ],
+         "type" : "string",
+         "unique_identifier" : "1"
+      },
+      "imaging_procedure" : {
+         "description" : "The type of imaging that was performed. Only makes sense if this observation is an imaging procedure.\n",
+         "examples" : [
+            "X-Ray",
+            "CT Scan",
+            "Ultrasound"
+         ],
+         "type" : "string"
+      },
+      "tissue_type" : {
+         "description" : "The type of sample that was collected. Only makes sense if this observation is a sample collection.\n",
+         "type" : "string"
+      }
+   },
+   "title" : "Observation",
+   "type" : "object"
+}
+

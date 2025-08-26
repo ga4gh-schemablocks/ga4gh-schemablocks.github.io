@@ -1,0 +1,94 @@
+{
+   "$id" : "https://schemablocks.org/schemas/sb-phenopackets/HtsFile/v1.0.0",
+   "$schema" : "http://json-schema.org/draft-07/schema#",
+   "additionalProperties" : "",
+   "description" : "A file in one of the HTS formats (https://samtools.github.io/hts-specs)\n",
+   "examples" : [
+      {
+         "htsFormat" : "GVCF",
+         "uri" : "file://data/genomes/file1.vcf.gz"
+      }
+   ],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "Jules Jacobsen",
+            "id" : "orcid:0000-0002-3265-15918"
+         },
+         {
+            "description" : "Peter Robinson",
+            "id" : "orcid:0000-0002-0736-91998"
+         }
+      ],
+      "provenance" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/file.rst"
+         }
+      ],
+      "sb_status" : "implemented",
+      "used_by" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/file.rst"
+         }
+      ]
+   },
+   "properties" : {
+      "description" : {
+         "description" : "description of the file contents\n",
+         "examples" : [
+            "this is the description for the file"
+         ],
+         "type" : "string"
+      },
+      "genomeAssembly" : {
+         "description" : "Genome assembly the contents of this file was called against. We recommend using the Genome Reference Consortium\nnomenclature e.g. GRCh37, GRCh38\n",
+         "examples" : [
+            "GRCh37"
+         ],
+         "type" : "string"
+      },
+      "htsFormat" : {
+         "description" : "one of UNKNOWN, SAM, BAM, CRAM, VCF, BCF, GVCF\n",
+         "enum" : [
+            "UNKNOWN",
+            "SAM",
+            "BAM",
+            "CRAM",
+            "VCF",
+            "BCF",
+            "GVCF",
+            "FASTQ"
+         ],
+         "examples" : [
+            "SAM"
+         ]
+      },
+      "individualToSampleIdentifiers" : {
+         "description" : "A map of identifiers mapping an individual to a sample in the file. The key values must correspond to the\nIndividual::id for the individuals in the message, the values must map to the samples in the file.\n",
+         "examples" : [
+            {
+               "individual1" : "add example",
+               "individual2" : "add example"
+            }
+         ],
+         "type" : "object"
+      },
+      "uri" : {
+         "description" : "URI for the file\n",
+         "examples" : [
+            "file://data/genomes/file1.vcf.gz",
+            "https://opensnp.org/data/60.23andme-exome-vcf.231?1341012444"
+         ],
+         "type" : "string"
+      }
+   },
+   "required" : [
+      "uri",
+      "htsFormat"
+   ],
+   "title" : "HtsFile",
+   "type" : "object"
+}
+

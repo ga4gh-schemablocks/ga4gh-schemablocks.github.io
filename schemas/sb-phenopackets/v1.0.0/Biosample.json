@@ -1,0 +1,371 @@
+{
+   "$id" : "https://schemablocks.org/schemas/sb-phenopackets/Biosample/v1.0.0",
+   "$schema" : "http://json-schema.org/draft-07/schema#",
+   "additionalProperties" : "",
+   "description" : "A Biosample refers to a unit of biological material from which the substrate\n  molecules (e.g. genomic DNA, RNA, proteins) for molecular analyses (e.g.\n  sequencing, array hybridisation, mass-spectrometry) are extracted.\n\n  Examples would be a tissue biopsy, a single cell from a culture for single\n  cell genome sequencing or a protein fraction from a gradient centrifugation.\n\n  Several instances (e.g. technical replicates) or types of experiments (e.g.\n  genomic array as well as RNA-seq experiments) may refer to the same Biosample.\n\n  FHIR mapping: [Specimen](http://www.hl7.org/fhir/specimen.html).\n",
+   "examples" : [
+      {
+         "ageOfIndividualAtCollection" : {
+            "age" : "P1Y"
+         },
+         "description" : "THP-1; 6 hours; DMSO; Replicate 1",
+         "histologicalDiagnosis" : {
+            "id" : "EFO:0000221",
+            "label" : "Acute Monocytic Leukemia"
+         },
+         "id" : "SAMN05324082",
+         "individualId" : "SAMN05324082-individual",
+         "phenotypicFeature" : [
+            {
+               "type" : {
+                  "id" : "EFO:0001253",
+                  "label" : "THP-1"
+               }
+            }
+         ],
+         "sampledTissue" : {
+            "id" : "UBERON:0000178",
+            "label" : "peripheral blood"
+         },
+         "taxonomy" : {
+            "id" : "NCBITaxon:9606",
+            "label" : "Homo sapiens"
+         }
+      },
+      {
+         "ageOfIndividualAtCollection" : {
+            "age" : "P1Y"
+         },
+         "diagnosticMarkers" : [
+            {
+               "id" : "NCIT:C131711",
+               "label" : "Human Papillomavirus-18 Positive"
+            }
+         ],
+         "histologicalDiagnosis" : {
+            "id" : "EFO:0000221",
+            "label" : "Acute Monocytic Leukemia"
+         },
+         "id" : "SAMN05324083",
+         "individualId" : "SAMN05324083-individual",
+         "procedure" : {
+            "code" : {
+               "id" : "NCIT:C15189",
+               "label" : "Biopsy"
+            }
+         },
+         "sampledTissue" : {
+            "id" : "NCIT:C139196",
+            "label" : "Esophageal Lymph Node"
+         },
+         "tumorProgression" : {
+            "id" : "NCIT:C84509",
+            "label" : "Primary Malignant Neoplasm"
+         },
+         "tumorStage" : [
+            {
+               "id" : "NCIT:C48724",
+               "label" : "T2 Stage Finding"
+            },
+            {
+               "id" : "NCIT:C48706",
+               "label" : "N1 Stage Finding"
+            },
+            {
+               "id" : "NCIT:C48699",
+               "label" : "M0 Stage Finding"
+            }
+         ]
+      }
+   ],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "GA4GH Data Working Group"
+         },
+         {
+            "description" : "Jules Jacobsen",
+            "id" : "orcid:0000-0002-3265-15918"
+         },
+         {
+            "description" : "Peter Robinson",
+            "id" : "orcid:0000-0002-0736-91998"
+         },
+         {
+            "description" : "Michael Baudis",
+            "id" : "orcid:0000-0002-9903-4248"
+         },
+         {
+            "description" : "Melanie Courtot",
+            "id" : "orcid:0000-0002-9551-6370"
+         },
+         {
+            "description" : "Isuru Liyanage",
+            "id" : "orcid:0000-0002-4839-5158"
+         }
+      ],
+      "provenance" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/biosample.rst"
+         }
+      ],
+      "sb_status" : "implemented",
+      "used_by" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/biosample.rst"
+         }
+      ]
+   },
+   "oneof" : [
+      {
+         "properties" : [
+            "ageOfIndividualAtCollection"
+         ]
+      },
+      {
+         "properties" : [
+            "ageRangeOfIndividualAtCollection"
+         ]
+      }
+   ],
+   "properties" : {
+      "ageOfIndividualAtCollection" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Age.json"
+            },
+            {
+               "description" : "An age object describing the age of the individual this biosample was\nderived from at the time of collection. The Age object allows the encoding\nof the age either as ISO8601 duration or time interval (preferred), or\nas ontology term object.\nSee http://build.fhir.org/datatypes\n",
+               "examples" : [
+                  {
+                     "age" : "P48Y3M"
+                  }
+               ]
+            }
+         ]
+      },
+      "ageRangeOfIndividualAtCollection" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/AgeRange.json"
+            },
+            {
+               "description" : "An age range object describing the age of the individual this biosample was\nderived from at the time of collection. The Age object allows the encoding\nof the age either as ISO8601 duration or time interval (preferred), or\nas ontology term object.\nSee http://build.fhir.org/datatypes\n",
+               "examples" : [
+                  {
+                     "end" : {
+                        "age" : "P18Y"
+                     },
+                     "start" : {
+                        "age" : "P12Y"
+                     }
+                  }
+               ]
+            }
+         ]
+      },
+      "description" : {
+         "description" : "The biosample's description. This attribute contains human readable text.\nThe \"description\" attributes should not contain any structured data.\n",
+         "examples" : [
+            "THP-1; 6 hours; DMSO; Replicate 1"
+         ],
+         "type" : "string"
+      },
+      "diagnosticMarkers" : {
+         "description" : "Clinically relevant bio markers. Most of the assays such as IHC are covered by the NCIT under the sub-hierarchy\nNCIT:C25294 (Laboratory Procedure).\ne.g. NCIT:C68748 (HER2/Neu Positive), NCIT:C131711 (Human Papillomavirus-18 Positive)\n",
+         "examples" : [
+            [
+               {
+                  "id" : "NCIT:C131711",
+                  "label" : "Human Papillomavirus-18 Positive"
+               }
+            ]
+         ],
+         "items" : {
+            "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/OntologyClass.json"
+         },
+         "type" : "array"
+      },
+      "histologicalDiagnosis" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/OntologyClass.json"
+            },
+            {
+               "description" : "This is the pathologist’s diagnosis and may often represent a refinement of the clinical diagnosis given in the\nPatient/Clinical module. Should use the same terminology as diagnosis, but represent the pathologist’s findings.\nNormal samples would be tagged with the term \"NCIT:C38757\", \"Negative Finding\"\n",
+               "examples" : [
+                  {
+                     "id" : "EFO:0000221",
+                     "label" : "Acute Monocytic Leukemia"
+                  }
+               ]
+            }
+         ]
+      },
+      "htsFiles" : {
+         "description" : "Pointer to the relevant HTS file(s) for the biosample\n",
+         "examples" : [
+            [
+               {
+                  "file" : {
+                     "path" : "/data/genomes/file1.vcf.gz",
+                     "uri" : "file://data/genomes/file1.vcf.gz"
+                  },
+                  "htsFormat" : "GVCF"
+               }
+            ]
+         ],
+         "items" : {
+            "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/HtsFile.json"
+         },
+         "type" : "array"
+      },
+      "id" : {
+         "description" : "The local-unique identifier of this biosample (referenced as\n\"biosample_id\"). This is unique in the context of the local (e.g.\nserver, resource) instance.\n",
+         "examples" : [
+            "SAMN05324082"
+         ],
+         "type" : "string"
+      },
+      "individualId" : {
+         "description" : "In a complete data model \"individual_id\" points to the \"id\" of the\nindividual (\"donor\", \"subjerct\"...) this _Biosample_ was derived from.\n\nIn a local context this could be the _id_ attribute in a corresponding\n\"individuals\" collection.\n",
+         "examples" : [
+            "SAMN05324082-individual"
+         ],
+         "type" : "string"
+      },
+      "isControlSample" : {
+         "description" : "if true, this sample is being use as a normal control, often in combination with\nanother sample that is thought to contain a pathological finding the default value is false\n",
+         "examples" : [
+            ""
+         ],
+         "type" : "boolean"
+      },
+      "phenotypicFeatures" : {
+         "description" : "Phenotypic characteristics of the BioSample, for example histological findings of a biopsy",
+         "examples" : [
+            [
+               {
+                  "type" : {
+                     "id" : "EFO:0001253",
+                     "label" : "THP-1"
+                  }
+               }
+            ]
+         ],
+         "items" : {
+            "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/PhenotypicFeature.json"
+         },
+         "type" : "array"
+      },
+      "procedure" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Procedure.json"
+            },
+            {
+               "description" : "Clinical procedure performed on the subject in order to extract the biosample.\n",
+               "examples" : [
+                  {
+                     "bodySite" : {
+                        "id" : "UBERON:0003403",
+                        "label" : "skin of forearm"
+                     },
+                     "code" : {
+                        "id" : "NCIT:C28743",
+                        "label" : "Funch Biopsy"
+                     }
+                  }
+               ]
+            }
+         ]
+      },
+      "sampledTissue" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/OntologyClass.json"
+            },
+            {
+               "description" : "UBERON class describing the tissue from which the specimen was collected.\nPDX-MI mapping: 'Specimen tumor tissue'\nFHIR mapping: Specimen.type\n",
+               "examples" : [
+                  {
+                     "id" : "UBERON:0000178",
+                     "label" : "peripheral blood"
+                  }
+               ]
+            }
+         ]
+      },
+      "taxonomy" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/OntologyClass.json"
+            },
+            {
+               "description" : "NCBI taxonomic identifier (NCBITaxon) of the sample e.g. NCBITaxon:9606",
+               "examples" : [
+                  {
+                     "description" : "Homo sapiens",
+                     "type" : "NCBITaxon:9606"
+                  }
+               ]
+            }
+         ]
+      },
+      "tumorGrade" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/OntologyClass.json"
+            },
+            {
+               "description" : "Potentially a child term of NCIT:C28076 (Disease Grade Qualifier) or equivalent\nSee https://www.cancer.gov/about-cancer/diagnosis-staging/prognosis/tumor-grade-fact-sheet\n",
+               "examples" : [
+                  {
+                     "id" : "NCIT:C28091",
+                     "label" : "Gleason Score 7"
+                  }
+               ]
+            }
+         ]
+      },
+      "tumorProgression" : {
+         "allof" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/OntologyClass.json"
+            },
+            {
+               "description" : "Is the specimen tissue from the primary tumor, a metastasis or a recurrence?\nMost likely a child term of NCIT:C7062 (Neoplasm by Special Category)\nNCIT:C3677 (Benign Neoplasm)\nNCIT:C84509 (Primary Malignant Neoplasm)\nNCIT:C95606 (Second Primary Malignant Neoplasm)\nNCIT:C3261 (Metastatic Neoplasm)\nNCIT:C4813 (Recurrent Malignant Neoplasm)\n",
+               "examples" : [
+                  {
+                     "id" : "NCIT:C84509",
+                     "label" : "Primary Malignant Neoplasm"
+                  }
+               ]
+            }
+         ]
+      },
+      "variants" : {
+         "description" : "Field for variants relevant to this biosample\n",
+         "examples" : [
+            [
+               {
+                  "background" : "add example",
+                  "hgvsAllele" : "add example"
+               }
+            ]
+         ],
+         "items" : {
+            "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/v1.0.0/Variant.json"
+         },
+         "type" : "array"
+      }
+   },
+   "required" : [
+      "id"
+   ],
+   "title" : "Biosample",
+   "type" : "object"
+}
+

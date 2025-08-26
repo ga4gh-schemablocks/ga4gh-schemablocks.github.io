@@ -1,0 +1,52 @@
+{
+   "$schema" : "https://json-schema.org/draft/2020-12/schema",
+   "additionalProperties" : "1",
+   "description" : "Response including a list of Entry types definitions.",
+   "examples" : [],
+   "meta" : {
+      "contributors" : [
+         {
+            "id" : "https://beacon-project.io/categories/people.html",
+            "label" : "ELIXIR Beacon project team"
+         }
+      ],
+      "provenance" : [
+         {
+            "id" : "https://github.com/ga4gh-beacon/beacon-v2",
+            "label" : "Beacon v2"
+         },
+         {
+            "id" : "http://docs.genomebeacons.org",
+            "label" : "Beacon v2 documentation"
+         }
+      ],
+      "sb_status" : "proposed",
+      "used_by" : [
+         {
+            "id" : "https://ga4gh-approval-service-registry.ega-archive.org",
+            "label" : "Beacon v2 frontline implementers"
+         },
+         {
+            "id" : "https://docs.progenetix.org/beaconplus/",
+            "label" : "Progenetix database schema (Beacon+ backend)"
+         }
+      ]
+   },
+   "properties" : {
+      "meta" : {
+         "$ref" : "https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/responses/sections/beaconInformationalResponseMeta.json",
+         "description" : "Information about the response that could be relevant for the Beacon client in order to interpret the results."
+      },
+      "response" : {
+         "$ref" : "https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2/main/framework/json/configuration/entryTypesSchema.json",
+         "description" : "Returning the Beacon Entry Types."
+      }
+   },
+   "required" : [
+      "meta",
+      "response"
+   ],
+   "title" : "beaconEntryTypesResponse",
+   "type" : "object"
+}
+

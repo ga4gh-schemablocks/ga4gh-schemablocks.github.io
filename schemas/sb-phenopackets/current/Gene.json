@@ -1,0 +1,88 @@
+{
+   "$id" : "https://schemablocks.org/schemas/sb-phenopackets/Gene/v1.0.0",
+   "$schema" : "http://json-schema.org/draft-07/schema#",
+   "additionalProperties" : "",
+   "description" : "Gene identifier\n",
+   "examples" : [
+      {
+         "id" : "HGNC:3477",
+         "symbol" : "ETF1"
+      },
+      {
+         "id" : "HGNC:3689",
+         "symbol" : "FGFR2"
+      }
+   ],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "GA4GH Data Working Group"
+         },
+         {
+            "description" : "Jules Jacobsen",
+            "id" : "orcid:0000-0002-3265-15918"
+         },
+         {
+            "description" : "Peter Robinson",
+            "id" : "orcid:0000-0002-0736-91998"
+         },
+         {
+            "description" : "Michael Baudis",
+            "id" : "orcid:0000-0002-9903-4248"
+         },
+         {
+            "description" : "Melanie Courtot",
+            "id" : "orcid:0000-0002-9551-6370"
+         },
+         {
+            "description" : "Isuru Liyanage",
+            "id" : "orcid:0000-0002-4839-5158"
+         }
+      ],
+      "provenance" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/gene.rst"
+         }
+      ],
+      "sb_status" : "implemented",
+      "used_by" : [
+         {
+            "description" : "Phenopackets",
+            "id" : "https://github.com/phenopackets/phenopacket-schema/blob/master/docs/gene.rst"
+         }
+      ]
+   },
+   "properties" : {
+      "alternateIds" : {
+         "description" : "alternate identifiers",
+         "examples" : [
+            [
+               "HGNC:3477"
+            ]
+         ],
+         "items" : "string",
+         "type" : "array"
+      },
+      "id" : {
+         "description" : "The official gene identifier as designated by the organism gene nomenclature committee e.g. HGNC:3477 or MGI:2385071\nPreferentially this should be a CURIE, however it is acceptable to use another equivalent resource identifier\nsuch as ENSG00000120705, uc003ldc.6\nrefere to - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:3477\n",
+         "examples" : [
+            "HGNC:3477"
+         ],
+         "type" : "string"
+      },
+      "symbol" : {
+         "description" : "The official gene symbol as designated by the organism gene nomenclature committee e.g. ETF1 or Etf1\n",
+         "examples" : [
+            "ETF1"
+         ],
+         "type" : "string"
+      }
+   },
+   "required" : [
+      "id"
+   ],
+   "title" : "Gene",
+   "type" : "object"
+}
+

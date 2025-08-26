@@ -1,0 +1,128 @@
+{
+   "$id" : "https://schemablocks.org/schemas/search/Participant/v0.0.1",
+   "$schema" : "http://json-schema.org/draft-07/schema#",
+   "description" : "Attributes relating to a participant in any kind of medical study.\n",
+   "examples" : [],
+   "meta" : {
+      "contributors" : [
+         {
+            "description" : "GA4GH Search Team"
+         },
+         {
+            "description" : "Jonathan Fuerth",
+            "id" : "orcid:0000-0001-9135-2164"
+         }
+      ],
+      "sb_status" : "proposed",
+      "used_by" : [
+         {
+            "description" : "Super Simple Study Schema"
+         }
+      ]
+   },
+   "properties" : {
+      "ancestry" : {
+         "description" : "Biological ancestry of the participant. Should be used as an array item to indicate mixed ancestry.\n",
+         "examples" : [
+            {
+               "id" : "HANCESTRO_0552",
+               "label" : "Aboriginal Australian"
+            },
+            {
+               "id" : "HANCESTRO_0010",
+               "label" : "African"
+            },
+            {
+               "id" : "HANCESTRO_0016",
+               "label" : "African American or Afro-Caribbean"
+            },
+            "Aboriginal Australian",
+            "African",
+            "Cree"
+         ],
+         "oneOf" : [
+            {
+               "$ref" : "https://schemablocks.org/schemas/sb-phenopackets/OntologyClass/v1.0.0"
+            },
+            {
+               "description" : "Free text description of ancestry, eg. self-reported values.",
+               "type" : "string"
+            }
+         ]
+      },
+      "date_of_birth" : {
+         "description" : "The participant's date of birth, possibly truncated to preserve anonymity.\n",
+         "oneOf" : [
+            {
+               "description" : "ISO8601 year-month-day",
+               "examples" : [
+                  "2000-04-15"
+               ],
+               "format" : "date"
+            },
+            {
+               "description" : "ISO8601 year-month",
+               "examples" : [
+                  "2000-04"
+               ],
+               "pattern" : "^[0-9]{4}-[0-9]{2}$"
+            },
+            {
+               "description" : "ISO8601 year",
+               "examples" : [
+                  "2000"
+               ],
+               "pattern" : "^[0-9]{4}$"
+            }
+         ],
+         "type" : "string"
+      },
+      "family_group_id" : {
+         "description" : "Unique identifier for the family group that this participant belongs to. Only relevant if the study design\nincludes family groupings.\n",
+         "examples" : [
+            "FAM_123446",
+            "f8476",
+            "17ab6"
+         ],
+         "type" : "string"
+      },
+      "family_group_relation" : {
+         "description" : "Relationship of this participant within the family group. Only makes sense together with a family_group_id.\n",
+         "examples" : [
+            "maternal grandparent",
+            "paternal grandparent",
+            "parent",
+            "child",
+            "grandchild",
+            "cousin"
+         ],
+         "type" : "string"
+      },
+      "geo_location" : {
+         "$ref" : "https://schemablocks.org/schemas/ga4gh/v0.0.1/GeoLocation.json",
+         "description" : "Participant's geographical location during the study period. Can be used as an array item if participants\nmove during the study.\n"
+      },
+      "id" : {
+         "description" : "Uniquely identifies a participant or subject within a particular study.\n",
+         "examples" : [
+            "1837603",
+            "sub18",
+            "S47.6"
+         ],
+         "type" : "string",
+         "unique_identifier" : "1"
+      },
+      "sex" : {
+         "description" : "Physical sex of the participant.\n",
+         "examples" : [
+            "female",
+            "male",
+            "other"
+         ],
+         "type" : "string"
+      }
+   },
+   "title" : "Participant",
+   "type" : "object"
+}
+
