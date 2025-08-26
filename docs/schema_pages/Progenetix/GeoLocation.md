@@ -29,8 +29,8 @@ resource and its BeaconPlus implementation of the Beacon v2 protocol.
 #### Link(s)
 
 * [GeoLocation.json](/schema_files/json/Progenetix/GeoLocation.json) {S}[B] schema
-* [source](https://github.com/progenetix/bycon/tree/main/schemas/src/progenetix-model/common/) :fontawesome-brands-github:
-* [Progenetix documentation](http://docs.progenetix.org) :fontawesome-brands-github:
+* [GeoLocation.yaml](https://github.com/ga4gh-schemablocks/ga4gh-schemablocks.github.io/blob/main/docs/schema_files/src/Progenetix/GeoLocation.yaml) :fontawesome-brands-github:
+* [Progenetix documentation](https://docs.progenetix.org/services/?h=geo#geographic-locations-cities-geolocations) :fontawesome-brands-github:
 
 <!--schema_block_start-->
 
@@ -42,4 +42,9 @@ resource and its BeaconPlus implementation of the Beacon v2 protocol.
 #### {S}[B] Contributors
 
 * Michael Baudis [0000-0002-9551-6370](https://orcid.org/0000-0002-9551-6370) :ORCID-icon-green:
+
+----
+
+Last updated 2025-08-26 by [@mbaudis](https://github.com/mbaudis)
+
 
